@@ -17,4 +17,4 @@ Daftar browser yang memberikan performa optimal (Chrome, Edge, Safari), kompatib
 3. Langganan Integrasi API yang diizinkan dan akses ke API Key yang telah dibuat (untuk integrasi pihak ketiga)
 4. Pemahaman mengenai REST API dan perangkat seperti Postman atau cURL (untuk pengembang)
 
-Setelah persiapan anda bisa masuk ke [halaman utama phoenix](https://phoenix.ginalne.com/), setelah itu anda akan masuk ke [[Antar Muka/antar muka]]
+Setelah persiapan anda bisa masuk ke [halaman utama phoenix](https://phoenix.ginalne.com/), setelah itu anda akan masuk ke [[Docs/Antar Muka]]
