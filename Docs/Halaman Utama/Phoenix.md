@@ -12,7 +12,7 @@ Phoenix adalah platform dinamis yang dirancang untuk membantu anda dan tim dalam
 # Tutorial Phoenix 
 Untuk memulai phoenix anda perlu memastikan sudah memenuh [[Docs/Syarat installasi Phoenix|syaratnya]]. Setelah itu anda bisa buka situs utama [Phoenix dan login](https://phoenix.ginalne.com/), lalu memilih pro list yang sudah anda beli. Setelah itu anda anda akan masuk ke homepage yang dapat dilihat sebagai berikut
 
-![[Halaman Utama/2026-09-26_19-17-11.png]]
+![[assets/halaman+utama.png]]
 Dari Homepage anda bisa mengakses beberapa fitur dari Phoenix secara langsung. Penjelasan singkat dari masing
 Fitur Phoenix
 [[Docs/Data]]
