@@ -1,4 +1,11 @@
-# What is Phoenix?
+---
+    status: released
+    title: What is Phoenix?
+    description: This page briefly telling what is phoenix.
+    tags:
+    - tag1
+    - tag2
+---
 
 Phoenix is a dynamic platform designed to help communities organize and streamline complex workflows, events, and relationships. Whether you're managing a project, running an organization, mapping out a family tree, or coordinating a timeline of events—Phoenix gives you the tools to structure your ideas, automate logic, and keep everything connected.
 
