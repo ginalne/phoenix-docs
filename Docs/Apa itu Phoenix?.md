@@ -5,7 +5,7 @@ Phoenix is a dynamic platform designed to help communities organize and streamli
 With flexible tree-node data structures, smart logic processing, and seamless integration support, Phoenix transforms messy processes into clear, interactive flows. Think of it as your digital brain for organizing, visualizing, and activating the heart of your community.
 
 With Phoenix, you can:
-
+1. 
 <ul\>
 
       <li\>
