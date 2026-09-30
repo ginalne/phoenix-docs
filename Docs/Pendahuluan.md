@@ -4,3 +4,11 @@ Whether you're just getting started or diving deep into our API, this documentat
 
 Our documentation is carefully structured into intuitive sections:
 
+Introduction : Learn what Phoenix is all about and how to get started quickly.
+
+Explore the Docs
+[[Docs/Halaman Utama/Phoenix]]
+[[Docs/Syarat installasi Phoenix]]
+[[Docs/Antar Muka]]
+
+Ready? Jump right in — or scroll through the navigation on the left to explore!
