@@ -4,5 +4,5 @@
     - tag1
     - tag2
 ---
-![[Docs/assets/halaman+utama.png]]
+![[Docs/Halaman Utama/preview.png]]
 test harbi
