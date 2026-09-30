@@ -1,3 +1,9 @@
+---
+    status: released
+    tags:
+    - tag1
+    - tag2
+---
 # Spesifikasi Komputer dan Software
 Daftar browser yang memberikan performa optimal (Chrome, Edge, Safari), kompatibilitas perangkat, serta persyaratan internet minimum agar aplikasi berjalan lancar.
 **Desktop** : Windows 10+, macOS 10.15+

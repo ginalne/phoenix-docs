@@ -1,3 +1,10 @@
+---
+    status: released
+    tags:
+    - tag1
+    - tag2
+    seeAlso: "[[YAML]]"
+---
 # String
 String ada di sini
 
