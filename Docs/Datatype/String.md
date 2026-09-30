@@ -1,5 +1,6 @@
 ---
     status: released
+    displayName: DataAja
     tags:
     - tag1
     - tag2
