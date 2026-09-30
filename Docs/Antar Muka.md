@@ -4,5 +4,5 @@
     - tag1
     - tag2
 ---
-![[assets/halaman+utama.png]]
+![[Docs/assets/halaman+utama.png]]
 test harbi
