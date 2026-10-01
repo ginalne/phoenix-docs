@@ -5,23 +5,9 @@
 
 ```space-lua
 config.set("frontmatterFolding", {
-  foldByDefault = "never",
+  foldByDefault = "long",
+  foldByDefaultLines = 10,
 })
-```
-
-This implements my super awesome hello world library!
-
-```space-lua
-config.set("frontmatterFolding", {
-  foldByDefault = "always",
-})
-
-command.define {
-  name = "Hello world",
-  run = function()
-    editor.flashNotification "Hello world!"
-  end
-}
 ```
 
   
