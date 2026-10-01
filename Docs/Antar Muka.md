@@ -19,9 +19,13 @@ Berikut adalah beberapa bagian antar muka ini:
 ## Bilah Navigasi
 ![[Docs/2026-10-02_03-41-01.png]]
 Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix dengan rincian seperti berikut:
-1. Logo : bagian ini memberikan informasi bentuk logo phoenix dan versi yang sedang berjalan
-2. Pro Tag: bagian ini memberikan informasi saat ini Anda sedang bekerja pada Pro apa.
-3. 
+1. Logo Phoenix : informasi bentuk logo phoenix dan versi yang sedang berjalan
+2. Pengenal Pro: informasi Pro yang sedang digunakan
+3. Dark Mode: tombol mengatur mode gelap atau terang tampilan Phoenix.
+4. Fullscreen Mode: tombol mengatur mode layar penuh tampilan Phoenix.
+5. Documentation Button: tombol navigasi untuk masuk ke halaman dokumentasi
+6. Ginalne Logo: tombol navigasi untuk pergi ke halaman [Ginalne](https://ginalne.com).
+7. Pengenal Akun: tombol sekaligus informasi Akun yang sedang digunakan, 
 ## Area Manajemen Folder
 
 ## Halaman Kerja
