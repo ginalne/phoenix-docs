@@ -1,7 +1,6 @@
 ---
-    status: draft
-    date: "2026-10-02"
+    status: group
     pageDecoration:
       tree:
-        priority: -2
+        priority: -3
 ---

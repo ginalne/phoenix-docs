@@ -1,8 +1,7 @@
 ---
-    status: draft
-    date: "2026-10-02"
+    status: group
     pageDecoration:
-      icon: empty
+      icon: folder
+      tree:
+        priority: 0.3
 ---
-
-

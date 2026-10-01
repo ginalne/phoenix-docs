@@ -3,6 +3,8 @@
     date: "2026-10-02"
     pageDecoration:
       #icon: empty
+      tree:
+        priority: 1
 ---
 # Antar Muka
 
