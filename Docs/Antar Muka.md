@@ -19,7 +19,7 @@ Berikut adalah beberapa bagian antar muka ini:
 3. [[#Halaman Kerja]]
 
 ## Bilah Navigasi
-![[Docs/2026-10-02_03-41-01.png]]
+![[Docs/bilah-navigasi.png]]
 Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix dengan rincian seperti berikut:
 1. Logo Phoenix : informasi bentuk logo phoenix dan versi yang sedang berjalan
 2. Pengenal Pro: informasi Pro yang sedang digunakan
