@@ -5,12 +5,11 @@
     pageDecoration:
       #icon: empty
       tree:
-        priority: 2
+        priority: 3
     tags:
-    - tag1
-    - tag2
+    - introduction
 ---
-
+# Apa itu Phoenix
 Phoenix is a dynamic platform designed to help communities organize and streamline complex workflows, events, and relationships. Whether you're managing a project, running an organization, mapping out a family tree, or coordinating a timeline of events—Phoenix gives you the tools to structure your ideas, automate logic, and keep everything connected.
 
 With flexible tree-node data structures, smart logic processing, and seamless integration support, Phoenix transforms messy processes into clear, interactive flows. Think of it as your digital brain for organizing, visualizing, and activating the heart of your community.
@@ -29,7 +28,7 @@ With Phoenix, you can:
 7. Customize everything to your needs
    Adapt node types, process flows, and logic structures to match your unique use case—no one-size-fits-all here.
 
-# Why the Name "Phoenix"?
+# Mengapa dinamakan "Phoenix"?
 
 ![[Docs/what-is-phoenix.png]]
 

@@ -1,7 +1,8 @@
 ---
     status: draft
     pageDecoration:
-      icon: box
+      icon: empty
+      #icon: box
       tree:
         priority: 0
     title: Data

@@ -5,9 +5,8 @@
     pageDecoration:
       #icon: empty
       tree:
-        priority: 0
+        priority: 2
     tags:
-    - welcome
     - introduction
 ---
 # Spesifikasi Komputer dan Software
