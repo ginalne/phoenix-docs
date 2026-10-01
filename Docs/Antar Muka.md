@@ -21,11 +21,16 @@ Berikut adalah beberapa bagian antar muka ini:
 Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix dengan rincian seperti berikut:
 1. Logo Phoenix : informasi bentuk logo phoenix dan versi yang sedang berjalan
 2. Pengenal Pro: informasi Pro yang sedang digunakan
-3. Dark Mode: tombol mengatur mode gelap atau terang tampilan Phoenix.
+3. Saklar Mode Gelap/Terang: tombol mengatur mode gelap atau terang tampilan Phoenix.
 4. Fullscreen Mode: tombol mengatur mode layar penuh tampilan Phoenix.
 5. Documentation Button: tombol navigasi untuk masuk ke halaman dokumentasi
 6. Ginalne Logo: tombol navigasi untuk pergi ke halaman [Ginalne](https://ginalne.com).
-7. Pengenal Akun: tombol sekaligus informasi Akun yang sedang digunakan, 
-## Area Manajemen Folder
+7. Pengenal Akun: tinformasi Akun yang sedang digunakan serta tombol agar menampilkan rincian Akun serta navigasi tambahan
 
+## Area Manajemen Folder
+![[Docs/area+manajemen+folder.png]]
+Bagian ini merupakan tempat Anda mengatur daftar folder dan komponen dalam Phoenix dengan rincian seperti berikut:
+1. Pengenal Workspace : informasi Workspace yang sedang dibuka saat ini serta tombol agar dapat mengganti ke Workspace lain.
+2. Reload : tombol untuk menyegarkan kembali daftar folder dan komponen.
+3. Move : tombol saklar untuk mengubah mode pemindahan komponen secara drag & drop.
 ## Halaman Kerja
