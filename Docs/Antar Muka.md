@@ -39,3 +39,9 @@ Bagian ini merupakan tempat Anda mengatur daftar folder dan komponen dalam Phoen
 ## Halaman Kerja
 
 ![[Docs/kolom-tab.png]]
+Bagian ini merupakan tempat Anda mengerjakan dan mengelola data Anda melalui komponen yang sedang aktif rincian seperti berikut:
+1. Kolom Tab : bagian di bagian atas jendela yang menampilkan halaman kerja. Masing-masing tab dapat dipindahkan atau dihapus dengan konteks menu seperti berikut:
+   * Close: agar menutup tab
+   * Close All Except This: agar menutup semua tab selain dari tab yang dipilih
+   * Close All: agar menutup semua tab
+3. Kolom Kerja : bagian ini adalah bagian dimana komponen yang aktif muncul. Bagian yang aktif bisa saja seperti [[]]
