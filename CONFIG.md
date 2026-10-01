@@ -1,3 +1,6 @@
+---
+  tags: meta/library
+---
 #meta
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
@@ -20,24 +23,19 @@ The block below is maintained by the ${widgets.commandButton("Configuration Mana
 config.set("markdownPrettify.emphasisMarker", "_")
 ```
 
-```space-lua
-
-/* Style page links */
+```space-style
 a.christmas-decoration {
   background-color: #b4e46e;
 }
 
-/* Style main editor components */
 body.christmas-decoration #sb-top {
   background-color: #b4e46e;
 }
 
-/* Style auto complete items */
 .cm-tooltip-autocomplete li.christmas-decoration {
   background-color: #b4e46e;
 }
 
-/* Style page picker item */
 .sb-result-list .sb-option.christmas-decoration {
   background-color: #b4e46e;
 }
