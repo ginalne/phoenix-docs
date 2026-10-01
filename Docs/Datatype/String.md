@@ -9,32 +9,32 @@
 String adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 65,535 karakter.
 
 ## Format
-* Plain
-* Password
-* Email
-* Phone Number
-* Mobile Number
-* URL
-* Slug
-* Username
-* Full Name
-* First Name
-* Last Name
-* Initial
-* Country Code
-* Postal Code
-* ZIP Code
-* License Plate
-* Vehicle VIN
-* National ID
-* Passport Number
-* Tax ID
-* Bank Account
-* IBAN
-* SWIFT/BIC
-* Credit Card
-* MAC Address
-* IPv4
-* IPv6
-* UUID
-* Emoji
+* [[Format Data/String/Short Text]]
+* [[Format Data/String/Password]]
+* [[Format Data/String/Email]]
+* [[Format Data/String/Phone Number]]
+* [[Format Data/String/Mobile Number]]
+* [[Format Data/String/URL]]
+* [[Format Data/String/Slug]]
+* [[Format Data/String/Username]]
+* [[Format Data/String/Full Name]]
+* [[Format Data/String/First Name]]
+* [[Format Data/String/Last Name]]
+* [[Format Data/String/Initial]]
+* [[Format Data/String/Country Code]]
+* [[Format Data/String/Postal Code]]
+* [[Format Data/String/ZIP Code]]
+* [[Format Data/String/License Plate]]
+* [[Format Data/String/Vehicle VIN]]
+* [[Format Data/String/National ID]]
+* [[Format Data/String/Passport Number]]
+* [[Format Data/String/Tax ID]]
+* [[Format Data/String/Bank Account]]
+* [[Format Data/String/IBAN]]
+* [[Format Data/String/SWIFT/BIC]]
+* [[Format Data/String/Credit Card]]
+* [[Format Data/String/MAC Address]]
+* [[Format Data/String/IPv4]]
+* [[Format Data/String/IPv6]]
+* [[Format Data/String/UUID]]
+* [[Format Data/String/Emoji]]
