@@ -1,6 +1,7 @@
 ---
     status: released
-    displayName: Test123
+    title: Pendahuluan
+    description: Halaman pendahuluan untuk menjelaskan phoenix secara umum.
     tags:
     - tag1
     - tag2

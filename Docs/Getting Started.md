@@ -15,7 +15,7 @@ Our documentation is carefully structured into intuitive sections:
 Introduction : Learn what Phoenix is all about and how to get started quickly.
 
 Explore the Docs
-[[Docs/Halaman Utama/Phoenix]]
+[[Docs/Introduction]]
 [[Docs/Syarat installasi Phoenix]]
 [[Docs/Antar Muka]]
 
