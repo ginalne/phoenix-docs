@@ -21,6 +21,8 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 ## Table View
 Table View merupakan komponen yang dapat mempermudah Anda mengelola data Tabel secara simultan dan efektif. Komponen interface ini dapat meringkas dan menampilkan data yang lebih tepat sasaran sesuai dengan [[Docs/Tipe Data/Query]] yang sudah disiapkan.
 
+lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Table View]].
+
 ## Form
 ## Timeline
 ## Gallery

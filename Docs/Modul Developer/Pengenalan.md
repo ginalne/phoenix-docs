@@ -7,10 +7,13 @@
         priority: 1
 ---
 # Modul Developer
-_Developer_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai antar muka yang membantu Anda mengelola Data yang sudah dibangun agar lebih interaktif, mudah dipahami serta cepat diproses.
+_Developer_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai alat bantu Anda untuk mengatur pengembangan ekosistem dan pengeolaaan akses tim Anda.
 
 Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
-1. [[#Flow]]
+1. [[#Group]]
+2. [[#Workspace]]
+   
+## Group
+_Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi Tim anda serta akses [[Docs/Komponen/Developer/Workspace]] yang diberikan.
 
-## Flow
-Flow merupakan komponen yang dapat digunakan untuk mengatur logika dan proses pengelolaan data dengan pendekatan aliran komposisi. Setiap blok yang dibangun dapat dihubungkan dan dimonitor agar setiap [[Docs/Event]] yang terikat dapat menghasilkan keluaran dan otomasi yang tepat.
+lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Group]].
