@@ -1,7 +1,7 @@
 ---
     status: draft
     pageDecoration:
-      icon: time
+      icon: box
     title: Data
     description: penjelasan tentang data
     tags:
