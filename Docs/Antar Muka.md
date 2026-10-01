@@ -44,4 +44,4 @@ Bagian ini merupakan tempat Anda mengerjakan dan mengelola data Anda melalui kom
    * Close: agar menutup tab
    * Close All Except This: agar menutup semua tab selain dari tab yang dipilih
    * Close All: agar menutup semua tab
-3. Kolom Kerja : bagian ini adalah bagian dimana komponen yang aktif muncul. Bagian yang aktif bisa saja merupakan komponen dari [[Docs/Modul Data/Pengenalan|Modul Data]], [[Docs/Modul Interface/Pengenalan|Modul Interface]], [[Docs/Modul/Logic]] atau [[Docs/Modul/Developer]]
+3. Kolom Kerja : bagian ini adalah bagian dimana komponen yang aktif muncul. Bagian yang aktif bisa saja merupakan komponen dari [[Docs/Modul Data/Pengenalan|Modul Data]], [[Docs/Modul Interface/Pengenalan|Modul Interface]], [[Docs/Modul Logic/Pengenalan]] atau [[Docs/Modul/Developer]]
