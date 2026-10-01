@@ -2,6 +2,9 @@
     status: released
     title: Pendahuluan
     description: Halaman pendahuluan untuk menjelaskan phoenix secara umum.
+    pageDecoration:
+      tree:
+        priority: 1
     tags:
     - tag1
     - tag2

@@ -2,6 +2,8 @@
     status: draft
     pageDecoration:
       icon: box
+      tree:
+        priority: 0
     title: Data
     description: penjelasan tentang data
     tags:
