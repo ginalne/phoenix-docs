@@ -1,6 +1,6 @@
 ---
     status: released
-    title: What is Phoenix?
+    title: Apa itu Phoenix?
     description: This page briefly telling what is phoenix.
     tags:
     - tag1
@@ -25,7 +25,8 @@ With Phoenix, you can:
 7. Customize everything to your needs
    Adapt node types, process flows, and logic structures to match your unique use case—no one-size-fits-all here.
 
-## Why the Name "Phoenix"?
+# Why the Name "Phoenix"?
+
 ![[Docs/what-is-phoenix.png]]
 
 The Phoenix is a mythical bird that regenerates from its own ashes—symbolizing renewal, rebirth, and transformation.

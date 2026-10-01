@@ -1,10 +1,11 @@
 ---
-    status: released
-    displayName: DataAja
+    status: draft
+    title: String
+    description: Hello
     tags:
-    - tag1
-    - tag2
-    seeAlso: "[[YAML]]"
+    - datatype
+    - data
+    - primitive
 ---
 # String
 String ada di sini
