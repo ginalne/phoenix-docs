@@ -1,6 +1,6 @@
 
 ```lua
 config.set("frontmatterFolding", {
-  foldByDefault = "never",
+  foldByDefault = "always",
 })
 ```
