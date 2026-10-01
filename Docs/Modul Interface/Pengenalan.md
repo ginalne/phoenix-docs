@@ -1,8 +1,7 @@
 ---
-    status: released
-    date: "2026-10-02"
+    status: draft
     pageDecoration:
-      #icon: empty
+      icon: x
       tree:
         priority: 1
 ---
@@ -24,8 +23,19 @@ Table View merupakan komponen yang dapat mempermudah Anda mengelola data Tabel s
 lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Table View]].
 
 ## Form
+Form merupakan ...
+
 ## Timeline
+Form merupakan ...
+
 ## Gallery
+Form merupakan ...
+
 ## Kanban
+Form merupakan ...
+
 ## Canvas
+Form merupakan ...
+
 ## Space
+Form merupakan ...
