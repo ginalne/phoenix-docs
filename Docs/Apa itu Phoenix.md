@@ -26,7 +26,7 @@ With Phoenix, you can:
    Adapt node types, process flows, and logic structures to match your unique use case—no one-size-fits-all here.
 
 ## Why the Name "Phoenix"?
-![[Docs/2026-10-01_18-04-45.png]]
+![[Docs/what-is-phoenix.png]]
 
 The Phoenix is a mythical bird that regenerates from its own ashes—symbolizing renewal, rebirth, and transformation.
 
