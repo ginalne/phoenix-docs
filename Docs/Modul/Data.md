@@ -20,4 +20,7 @@ Variable merupaakan komponen yang dikenali semua komponen sebagai satu sumber un
 >Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Komponen/Developer/Workspace]].
 
 ## Enum
-Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. 
+Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Salah satu atribut penting dalam Enum adalah [[Docs/Komponen/Data/Enum/Konfigurasi Ketat]].
+
+## Table
+Table merupakan komponen yang dapat menyimpan data secara kompleks. Sifat data ini dapat digunakan untuk menyimpan data yang transaksional maupun generik. Table dapat memiliki kolom yang masing-masing memiliki format yang berbeda, begitu juga 
