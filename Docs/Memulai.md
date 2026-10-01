@@ -15,7 +15,8 @@ Baik Anda baru mulai menggunakan Phoenix maupun sedang mendalami API kami, dokum
 
 Dokumentasi kami disusun secara terstruktur ke dalam beberapa bagian yang intuitif:
 
-**Pengenalan** : Pelajari apa itu Phoenix dan bagaimana cara memulainya dengan cepat.
+[[Docs/Pengenalan]] : Pelajari apa itu Phoenix dan bagaimana cara memulainya dengan cepat.
+[[Docs/Apa itu Phoenix]] : Pelajari apa itu Phoenix dan bagaimana cara memulainya dengan cepat.
 
 **Jelajahi Dokumentasi**  
 \[\[Docs/Pengenalan\]\]  
