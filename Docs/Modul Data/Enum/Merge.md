@@ -1,13 +1,10 @@
 ---
     status: draft
-    date: "2026-10-02"
     pageDecoration:
       icon: x
-      tree:
-        priority: 4
 ---
-# Konfigurasi Ketat dalam Enum
-Enum memiliki atribut Name dan Description yang muncul ketika pengguna sedang memilih EnumData, namun dalam proses Data Gatehring, terkadang nilai EnumData belum ada yang mewakilkan, sehingga konfigurasi Enum dapat dibuka menjadi tidak ketat agar penambahan data selama input dapat dilakukan.
+# EnumData Merge
+EnumData memiliki atribut Name yang tidak dapat sama, namun dalam proses Data Gatehring, terkadang nilai tersebut bisa bervariatif karena kesalahan input walaupun maksudnya sama. Sehingga diperlukan adanya proses Merge yang aman agar komponen yang telah terleasi dengan variasi tersebut ini dapat mengikuti nilai yang telah dijadikan patokan.
 
 ## Mengatur Konfigurasi
 Anda dapat mengaturnya melalui tombol Edit Enum dalam halaman kerja atau saat membuat [[Docs/Modul Data/Enum/Apa itu Enum|Komponen Enum]] pertama kali.
