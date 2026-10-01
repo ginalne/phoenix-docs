@@ -2,8 +2,6 @@
     status: draft
     pageDecoration:
       icon: x
-      tree:
-        priority: 4
 ---
 # Password
 format dalam [[Docs/Datatype/String]] secara memberikan pengalaman input secara rahasia, karena pengisi tidak dapat melihat nilainya secara langsung. 
