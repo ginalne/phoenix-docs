@@ -1,10 +1,17 @@
 ---
-    status: released
-    tags:
-    - tag1
-    - tag2
+    name: Library/myuser/My Library
+    tags: meta/library
 ---
-  ## This is a section
-  This is content
 
-    
+This implements my super awesome hello world library!
+
+```space-lua
+command.define {
+  name = "Hello world",
+  run = function()
+    editor.flashNotification "Hello world!"
+  end
+}
+```
+
+  
