@@ -11,4 +11,10 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 1. [[#Variable]]
 2. [[#Enum]]
 3. [[#Table]]
-4. 
+4. [[#Tree]]
+
+## Variable
+Variable merupaakan komponen yang dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja baru dan tidak dapat dihapus.
+
+>[!note] Saran
+>Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Komponen/Devloper/]]
