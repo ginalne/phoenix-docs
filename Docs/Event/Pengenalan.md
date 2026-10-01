@@ -3,7 +3,7 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 4
+        priority: 1
 ---
-# String
-String adalah primitive 
+# Event
+_

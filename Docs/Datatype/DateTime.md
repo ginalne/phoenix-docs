@@ -1,8 +1,9 @@
 ---
-    status: released
-    tags:
-    - tag1
-    - tag2
+    status: draft
+    pageDecoration:
+      icon: x
+      tree:
+        priority: 4
 ---
-iya harbi
-[[Docs/Data]]
+# DateTime
+Table merupakan salah satu komponen dalam modul Data di Phoenix. Komponen ini 
