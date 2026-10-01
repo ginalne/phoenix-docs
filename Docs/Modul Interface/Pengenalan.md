@@ -3,18 +3,23 @@
     date: "2026-10-02"
     pageDecoration:
       #icon: empty
+      tree:
+        priority: 1
 ---
-# Modul Data
-Data merupakan salah satu modul dalam Phoenix. Modul ini berfungsi untuk memebangun, mengatur serta menyiapkan integrasi Data yang dapat menjadi pondasi dari ekosistem yang Anda bangun.
+# Modul Interface
+_Interface_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai antar muka yang membantu Anda mengelola Data yang sudah dibangun agar lebih interaktif, mudah dipahami serta cepat diproses.
 
 Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
-1. [[#Variable]]
-2. [[#Enum]]
-3. [[#Table]]
-4. [[#Tree]]
+1. [[#Table View]]
+2. [[#Form]]
+3. [[#Timeline]]
+4. [[#Gallery]]
+5. [[#Kanban]]
+6. [[#Canvas]]
+7. [[#Space]]
 
-## Variabel
-Variabel merupaakan komponen yang dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja (Pro) baru dan tidak dapat dihapus.
+## Table View
+Table View merupakan komponen yang dapat mempermudah Anda mengelola data Tabel secara simultan. 
 
 >[!note] Saran
 >Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Komponen/Developer/Workspace]].
