@@ -1,8 +1,7 @@
 ---
-    status: released
+    status: draft
     tags:
-    - tag1
-    - tag2
+    - draft
 ---
 ![[Docs/Halaman Utama/preview.png]]
 test harbi

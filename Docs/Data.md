@@ -1,5 +1,7 @@
 ---
-    status: released
+    status: draft
+    title: Data
+    description: penjelasan tentang data
     tags:
     - tag1
     - tag2

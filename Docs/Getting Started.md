@@ -16,7 +16,7 @@ Introduction : Learn what Phoenix is all about and how to get started quickly.
 
 Explore the Docs
 [[Docs/Introduction]]
-[[Docs/Syarat installasi Phoenix]]
+[[Docs/Instalasi/Syarat installasi Phoenix]]
 [[Docs/Antar Muka]]
 
 Ready? Jump right in — or scroll through the navigation on the left to explore!
