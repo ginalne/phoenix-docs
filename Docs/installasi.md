@@ -1,8 +1,14 @@
 ---
     status: released
+    title: Installation
+    description: Learn what Phoenix is all about and how to get started quickly.
+    pageDecoration:
+      #icon: empty
+      tree:
+        priority: 0
     tags:
-    - tag1
-    - tag2
+    - welcome
+    - introduction
 ---
 # Spesifikasi Komputer dan Software
 Daftar browser yang memberikan performa optimal (Chrome, Edge, Safari), kompatibilitas perangkat, serta persyaratan internet minimum agar aplikasi berjalan lancar.

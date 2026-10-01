@@ -3,8 +3,9 @@
     title: Pendahuluan
     description: Learn what Phoenix is all about and how to get started quickly.
     pageDecoration:
+      #icon: empty
       tree:
-        priority: 1
+        priority: 3
     tags:
     - welcome
     - introduction
@@ -18,8 +19,8 @@ Our documentation is carefully structured into intuitive sections:
 Introduction : Learn what Phoenix is all about and how to get started quickly.
 
 Explore the Docs
-[[Docs/Introduction]]
-[[Docs/Instalasi/Syarat installasi Phoenix]]
+[[Docs/Pengenalan]]
+[[Docs/installasi]]
 [[Docs/Antar Muka]]
 
 Ready? Jump right in — or scroll through the navigation on the left to explore!

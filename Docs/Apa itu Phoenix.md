@@ -1,10 +1,11 @@
 ---
     status: released
-    title: Apa itu Phoenix?
+    title: What is Phoenix?
     description: This page briefly telling what is phoenix.
     pageDecoration:
+      #icon: empty
       tree:
-        priority: 1
+        priority: 2
     tags:
     - tag1
     - tag2
