@@ -42,3 +42,15 @@ body.christmas-decoration #sb-top {
   background-color: #b4e46e;
 }
 ```
+
+```space-script
+-- Get the current URL
+local url = js.window.location.href
+
+-- Set a timeout
+js.window.setTimeout(function()
+  editor.flashNotification("Timer fired!")
+
+  js.console.log('test');
+end, 3000)
+```

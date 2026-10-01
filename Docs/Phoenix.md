@@ -5,7 +5,7 @@
 
 ```space-lua
 config.set("frontmatterFolding", {
-  foldByDefault = "",
+  foldByDefault = "never",
 })
 ```
 
