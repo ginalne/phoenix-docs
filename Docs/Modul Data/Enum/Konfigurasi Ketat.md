@@ -18,4 +18,7 @@ Kolom _Strict On Selected_ dapat diubah dengan implikasi seperti berikut:
 * _Enable to insert externally_ : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
 
 ## Arti dari “Externally”
-Externally artinya sesuatu yang diluar Enum. 
+Externally artinya sesuatu yang diluar Enum. Saat menentukan sebuah inputan dengan tipe data [[Docs/Tipe Data/EnumData|EnumData]], anda harus memilih header Enum. Input ini dapat muncul dalam [[Docs/Komponen/Table/Pengenalan|Tabel]], komponen dalam [[Docs/Modul Interface]] seperti [[Docs/Modul Interface/Form/Pengenalan|Form]] yang dapat diinput oleh publik.
+
+>[!note]Tips
+>Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam 
