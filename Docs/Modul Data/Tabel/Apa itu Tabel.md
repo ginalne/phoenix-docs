@@ -7,4 +7,4 @@
         priority: 4
 ---
 # Apa itu Tabel?
-Table merupakan salah satu komponen dalam modul Data di Phoenix. Komponen ini 
+Table merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix. Komponen ini 

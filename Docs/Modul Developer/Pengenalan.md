@@ -14,6 +14,11 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 2. [[#Workspace]]
    
 ## Group
-_Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi Tim anda serta akses [[Docs/Modul Developer/Workspace/Pengenalan]] yang diberikan.
+_Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi Tim anda serta akses [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang diberikan.
 
-lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Group]].
+lihat selengkapnya [[Docs/Modul Developer/Group/Apa itu Group]].
+   
+## Workspace
+_Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi Tim anda serta akses [[Docs/Modul Developer/Workspace/Apa itu Workspace]] yang diberikan.
+
+lihat selengkapnya [[Docs/Modul Developer/Workspace/Apa itu Workspace]].
