@@ -8,7 +8,7 @@
 
 Sebelum memulai tahap ini pastikan anda sudah memenuhi [[Docs/Persyaratan|syaratnya]].
 
-![[Docs/preview.png]]
+![[Docs/antar+muka.png]]
 Setelah anda berhasil masuk ke dalam satu Pro, anda bisa mengakses beberapa fitur dari Phoenix secara langsung. 
 
 Berikut adalah beberapa bagian antar muka ini:
@@ -17,7 +17,7 @@ Berikut adalah beberapa bagian antar muka ini:
 3. [[#Halaman Kerja]]
 
 ## Bilah Navigasi
-![[Docs/bilah+navigasi.png]]
+![[Docs/2026-10-02_03-41-01.png]]
 
 ## Area Manajemen Folder
 
