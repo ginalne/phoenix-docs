@@ -20,7 +20,7 @@ The block below is maintained by the ${widgets.commandButton("Configuration Mana
 config.set("markdownPrettify.emphasisMarker", "_")
 ```
 
-```space-style
+```space-lua
 
 /* Style page links */
 a.christmas-decoration {
@@ -41,16 +41,4 @@ body.christmas-decoration #sb-top {
 .sb-result-list .sb-option.christmas-decoration {
   background-color: #b4e46e;
 }
-```
-
-```space-script
--- Get the current URL
-local url = js.window.location.href
-
--- Set a timeout
-js.window.setTimeout(function()
-  editor.flashNotification("Timer fired!")
-
-  js.console.log('test');
-end, 3000)
 ```

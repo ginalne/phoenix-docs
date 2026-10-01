@@ -1,6 +1,5 @@
 ---
     name: Library/myuser/My Library
-    tags: meta/library
 ---
 
 ```space-lua
