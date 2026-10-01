@@ -4,7 +4,7 @@
       icon: x
 ---
 # Password
-format dalam [[Docs/Datatype/String]] secara memberikan pengalaman input secara rahasia, karena pengisi tidak dapat melihat nilainya secara langsung. 
+format dalam [[Docs/Tipe Data/String]] secara memberikan pengalaman input secara rahasia, karena pengisi tidak dapat melihat nilainya secara langsung. 
 
 Format ini bagus untuk penginputan yang bersifat tidak bisa dilihat.
 

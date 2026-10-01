@@ -10,10 +10,6 @@ EnumData memiliki atribut Name yang tidak dapat sama, namun dalam proses Data Ga
 Anda dapat mengaturnya melalui tombol Merge dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Komponen Enum]].
 ![[Docs/Modul Data/Enum/enum-test.png]]
 Setelah Mode Merge aktif, maka Anda dapat memilih EnumData yang ingin digabungkan.
-![[Docs/Modul Data/Enum/merge-select.png]
 
-## Arti dari “Externally”
-Externally artinya sesuatu yang diluar Enum. Saat menentukan sebuah inputan dengan tipe data [[Docs/Tipe Data/EnumData|EnumData]], anda harus memilih header Enum. Input ini dapat muncul dalam [[Docs/Komponen/Table/Pengenalan|Tabel]], komponen dalam [[Docs/Modul Interface]] seperti [[Docs/Modul Interface/Form/Pengenalan|Form]] yang dapat diinput oleh publik.
-
->[!note]Tips
->Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam EnumData tetap tidak dapat terduplikat. Meskipun akan banyak variasi Name yang mirip, Anda dapat menggunakan fitur [[Docs/Modul Data/Enum/EnumData Merge]] agar setiap data yang terelasi dengan EnumData tersebut dapat menjadi satu EnumData.
+![[Docs/Modul Data/Enum/merge-select.png]]
+Lalu jika sudah selesai, selanjutnya klik tombol *Select Merge (Total EnumData yang akan digabungkan)*. 
