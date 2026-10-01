@@ -1,2 +1,6 @@
-#meta
-test
+
+```lua
+config.set("frontmatterFolding", {
+  foldByDefault = "never",
+})
+```
