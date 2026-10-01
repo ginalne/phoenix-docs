@@ -13,7 +13,12 @@ Setelah anda berhasil masuk ke dalam satu Pro, anda bisa mengakses beberapa fitu
 
 Berikut adalah beberapa bagian antar muka ini:
 1. [[#Bilah Navigasi]]
-2. Area Manajemen Folder
-3. Halaman Kerja
+2. [[#Area Manajemen Folder]]
+3. [[#Halaman Kerja]]
 
 ## Bilah Navigasi
+![[Docs/bilah+navigasi.png]]
+
+## Area Manajemen Folder
+
+## Halaman Kerja
