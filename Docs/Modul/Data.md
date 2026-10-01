@@ -14,7 +14,10 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 4. [[#Tree]]
 
 ## Variable
-Variable merupaakan komponen yang dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja baru dan tidak dapat dihapus.
+Variable merupaakan komponen yang dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja (Pro) baru dan tidak dapat dihapus.
 
 >[!note] Saran
->Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Komponen/Devloper/]]
+>Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Komponen/Developer/Workspace]].
+
+## Enum
+Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. 
