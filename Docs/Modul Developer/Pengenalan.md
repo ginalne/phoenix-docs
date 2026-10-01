@@ -19,6 +19,6 @@ _Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi Tim and
 lihat selengkapnya [[Docs/Modul Developer/Group/Apa itu Group]].
    
 ## Workspace
-_Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi Tim anda serta akses [[Docs/Modul Developer/Workspace/Apa itu Workspace]] yang diberikan.
+_Workspace_ merupakan komponen yang dapat digunakan untuk mengatur akses komponen yang dapat dilihat, dikelola, diubah ataupun integrasi.
 
 lihat selengkapnya [[Docs/Modul Developer/Workspace/Apa itu Workspace]].
