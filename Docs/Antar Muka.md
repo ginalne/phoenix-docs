@@ -3,5 +3,5 @@
     tags:
     - draft
 ---
-![[Docs/Halaman Utama/preview.png]]
+![[Docs/preview.png]]
 test harbi

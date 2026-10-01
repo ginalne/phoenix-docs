@@ -1,5 +1,7 @@
 ---
     status: draft
+    pageDecoration:
+      icon: check-circle
     title: Data
     description: penjelasan tentang data
     tags:
