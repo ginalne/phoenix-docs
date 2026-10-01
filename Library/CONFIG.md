@@ -1,11 +1,10 @@
-
-```lua
-config.set("frontmatterFolding", {
-  foldByDefault = "always",
-})
-
+---
 name: Library/myuser/My Library
 tags: meta/library
+---
+
+```lua
+
 ---
 This implements my super awesome hello world library!
 
@@ -17,3 +16,4 @@ command.define {
   end
 }
 ```
+

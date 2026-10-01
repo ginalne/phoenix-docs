@@ -3,9 +3,19 @@
     tags: meta/library
 ---
 
+```space-lua
+config.set("frontmatterFolding", {
+  foldByDefault = "",
+})
+```
+
 This implements my super awesome hello world library!
 
 ```space-lua
+config.set("frontmatterFolding", {
+  foldByDefault = "always",
+})
+
 command.define {
   name = "Hello world",
   run = function()
