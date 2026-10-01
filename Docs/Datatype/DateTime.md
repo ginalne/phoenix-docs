@@ -6,4 +6,11 @@
         priority: 4
 ---
 # DateTime
-Table merupakan salah satu komponen dalam modul Data di Phoenix. Komponen ini 
+String adalah tipe data yang dapat menyimpan data tanggal dan waktu dengan presisi detik.
+
+## Penggunaan dalam Interface
+DateTime cukup baik dalam menyimpan data waktu secara presisi, sehingga dapat digunakan secara interaktif dengan [[Docs/Modul Interface/Timeline/Pengenalan]]
+
+## Format
+DateTime
+>[!note] Tipe data ini tidak memiliki format khusus.
