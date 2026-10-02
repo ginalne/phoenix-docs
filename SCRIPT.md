@@ -1,5 +1,9 @@
 ---
-    test:123
+    status: released
+pageDecoration:
+  icon: x
+  tree:
+    priority: 0
 ---
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
@@ -12,37 +16,83 @@ The block below is maintained by the ${widgets.commandButton("Configuration Mana
 config.set("markdownPrettify.emphasisMarker", "_")
 ```
 
+
 ```space-lua
 -- priority: 10
 slashCommand.define {
   name = "draft",
   run = function()
     local text = editor.getText()
-    if text:match("^%-%-%-[\r\n]") then
-      text = text:gsub("^(%-%-%-.-[\r\n])    status:[^\r\n]*([\r\n].-%-%-%-)", "%1    status: draft%2")
 
-      editor.flashNotification(text)
-      if not text:match("^%-%-%-.-[\r\n]    status:") then
-        text = text:gsub("^(%-%-%-[\r\n])", "%1    status: draft\n")
-      end
-      
-      if text:match("pageDecoration:%s*[\r\n]%s+icon:") then
-        text = text:gsub("(pageDecoration:%s*[\r\n]%s+icon:%s*)[^\r\n]*", "%1x")
-      else
-        text = text:gsub("^(%-%-%-.-[\r\n])", "%1pageDecoration:\n  icon: x\n  tree:\n    priority: 0\n")
-      end
-      
-      editor.setText(text)
-    else
+    -- Existing frontmatter
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+    if not fmStart then
+      -- No frontmatter: create it
       editor.insertAtPos([==[---
-    status: draft
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 0
+status: draft
+pageDecoration:
+  icon: x
+  tree:
+    priority: 0
 ---
 ]==], 0, true)
+      return
     end
+
+    local contentStart = fmEnd + 1
+    local endStart, endEnd = string.find(text, "\n%-%-%-", contentStart)
+
+    if not endStart then
+      -- Invalid/incomplete frontmatter, don't modify it
+      return
+    end
+
+    local frontmatter = string.sub(text, contentStart, endStart - 1)
+
+    -- status: draft
+    if string.match(frontmatter, "\n?status%s*:") or string.match(frontmatter, "^status%s*:") then
+      frontmatter = string.gsub(
+        frontmatter,
+        "([^\n]*status%s*:%s*)[^\n]*",
+        "%1draft",
+        1
+      )
+    else
+      frontmatter = "status: draft\n" .. frontmatter
+    end
+
+    -- pageDecoration exists
+    if string.match(frontmatter, "pageDecoration%s*:") then
+      -- icon exists somewhere under pageDecoration
+      local before, decoration, after =
+        string.match(frontmatter, "^(.-pageDecoration%s*:\n)(.-)(\n[^%s].*)?$")
+
+      if decoration and string.match(decoration, "\n%s+icon%s*:") then
+        decoration = string.gsub(
+          decoration,
+          "(\n%s+icon%s*:%s*)[^\n]*",
+          "%1x",
+          1
+        )
+      else
+        decoration = "  icon: x\n" .. decoration
+      end
+
+      frontmatter = before .. decoration .. (after or "")
+    else
+      frontmatter = frontmatter ..
+        "\npageDecoration:\n" ..
+        "  icon: x\n" ..
+        "  tree:\n" ..
+        "    priority: 0"
+    end
+
+    local newText =
+      string.sub(text, 1, contentStart - 1) ..
+      frontmatter ..
+      string.sub(text, endStart)
+
+    editor.setText(newText)
   end
 }
 
