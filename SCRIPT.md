@@ -123,8 +123,9 @@ slashCommand.define {
         if check_text == "<!--" then
           break
         end
-        editor.flashNotification(check_text)
+      
         username = string.match(check_text, "@([%w_-]+)")
+      
         if username then
             break
         end
@@ -133,26 +134,15 @@ slashCommand.define {
     end
     
     if username then
-      local line = editor.getCurrentLine()
-      local current_text = line.text
-      local start_pos, end_pos = string.find(current_text, "-->", 1, true)
-      
-      if start_pos then
-          -- Tentukan indentasi/spasi awal baris jika dibutuhkan (ws)
-          local ws = "" 
-          
-          -- 3. Ambil teks SEBELUM "-->" dan teks SESUDAH "-->" (termasuk panahnya)
-          local before_arrow = string.sub(current_text, 1, start_pos - 1)
-          local arrow_and_rest = string.sub(current_text, start_pos)
-          
-          -- 4. Sisipkan teks jawaban Anda tepat sebelum panah
-          local insert_text = ws .. "here the answer : |^|"
-          local new_line_text = before_arrow .. insert_text .. arrow_and_rest
-          
-          -- 5. Perbarui baris di editor
-          editor.replaceRange(line.from, line.to, new_line_text, true)
-      else
-          editor.flashNotification("Tanda '-->' tidak ditemukan di baris ini!", "warn")
+      editor.flashNotification("we got you " .. idx .. "/" .. lines.length .. " " .. username)
+      while idx < lines.length do
+          local check_text = lines[idx]
+          editor.flashNotification(check_text)
+          if check_text == "-->" then
+            editor.flashNotification(idx)
+            break
+          end
+          idx = idx - 1
       end
     else
         editor.flashNotification("Tidak ditemukan pertanyaan apapun")
