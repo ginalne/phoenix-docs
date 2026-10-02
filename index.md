@@ -5,7 +5,7 @@
         priority: -3
 ---
 # Welcome to Phoenix Docs
-Sebagai pembaca saya harap anda dapat mengabaikan pesan ini, berikut adalah aturan yang berlaku saat menulis dokumentasi ini:
+Sebagai pembaca saya harap anda dapat mengabaikan halaman ini, berikut adalah tips dan aturan yang berlaku saat menulis dokumentasi ini:
 
 >[!warning] Wajib dibaca oleh penulis!
 >Anda boleh mengedit halaman ini jika diperlukan.
@@ -39,7 +39,7 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
 -->
 
 >[!note] Kelebihan Comment
->Comment tidak akan tampil diwebsite, jadi gunakan section ini untuk berdiskusi
+>Comment tidak akan tampil di website, jadi gunakan section ini untuk berdiskusi
 
 ---
 
@@ -84,14 +84,14 @@ Task dapat Anda gunakan sebagai catatan mark yang hanya boleh digunakan dalam [[
 
 Ada beberapa jenis task yang bisa digunakan:
 
-### Checbox Task
+### Checkbox Task
 Dengan syntax `* [ ]`. contohnya:
 
 * [ ] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
 * [ ] task menjadi kabur ketika selesai
 
 ## State Task
-Dengan syntax `* [IN PROGRESS]`. status bisa PROGRESS , DONE atau TODO. contohnya:
+Dengan syntax `* [STATE]`. state bisa diisi PROGRESS , DONE atau TODO. contohnya:
 
 * [TODO] Ini task dengan sifat dikerjakan [priority: high] [assignee: @ginalne]
 * [PROGRESS] Ini task dengan sifat belum dikerjakan
@@ -108,7 +108,7 @@ Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>`, contohny
 ---
 
 ## Penutup
-Sekian aturan yang wajib diikuti oleh Penulis. Harap di ingat.
+Sekian tips dan aturan yang wajib diikuti oleh Penulis. Harap di ingat.
 Terimakasih
 
 Selamat Menulis~
