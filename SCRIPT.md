@@ -72,6 +72,15 @@ slashCommand.define {
 }
 
 slashCommand.define {
+  name = "asking",
+  run = function()
+    local line = editor.getCurrentLine()
+    local ws, prefix, rest = string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.+)$")
+    editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest, true)
+  end
+}
+
+slashCommand.define {
   name = "todo task",
   run = function()
     local line = editor.getCurrentLine()
