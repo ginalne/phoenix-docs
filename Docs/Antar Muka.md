@@ -1,7 +1,8 @@
 ---
     status: release
+    title: "Antar Muka"
+    description: 
     pageDecoration:
-      #icon: empty
       tree:
         priority: 1
 ---
