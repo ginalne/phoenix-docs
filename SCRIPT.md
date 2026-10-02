@@ -1,6 +1,10 @@
 ---
     status: draft
     description: 
+    pageDecoration:
+      icon: x
+      tree:
+        priority: 0
     tags:
       meta
 ---
@@ -29,12 +33,14 @@ slashCommand.define {
       or string.match(text, "^#%s+([^\n]+)")
       or string.match(text, "\n%*%s+([^\n]+)")
       or string.match(text, "^%*%s+([^\n]+)")
-    title = title:gsub("\\", "\\\\"):gsub('"', '\\"')
-
+    title = title or ""
+    title = string.format("%q", title)
+    
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
     if not fmStart then
       local newFrontmatter = "---\n"
         .. "    status: release\n"
-        .. "    title: " .. (title or "") .. "\n"
+        .. "    title: " .. title .. "\n"
         .. "    description: \n"
         .. "    pageDecoration: \n"
         .. "      tree: \n"
@@ -81,7 +87,7 @@ slashCommand.define {
       frontmatter = string.gsub(
         frontmatter,
         "(status%s*:%s*[^\n]*)",
-        "%1\n    title: " .. (title or ""),
+        "%1\n    title: " .. title,
         1
       )
     end

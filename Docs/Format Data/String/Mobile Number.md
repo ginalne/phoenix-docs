@@ -1,6 +1,6 @@
 ---
     status: release
-    title: Format Data : Mobile Number
+    title: "Format Data : Mobile Number"
     description:
 ---
 # Format Data : Mobile Number
