@@ -1,6 +1,6 @@
 ---
     status: release
-    title: ## Apa itu Workspace?
+    title: Apa itu Workspace?
     description: 
     pageDecoration:
       tree:
