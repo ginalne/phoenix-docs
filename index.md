@@ -80,12 +80,22 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan “<!--”
   some other comment or replied...
 -->
 
-## Text Formatting
+## Info dan Warning
+info dan warning adalah section dalam penulisan dokumentasi yang dibuka dengan “>[!note]” untuk info, dan “>[!warning]“, isi dari info atau warning dapat ditulis dengan format berikut:
+
+>[!note] Judul Info
+>Silahkan isi deskripsi info secara bebas
+
+>[!warning] Judul Warning
+>Silahkan isi deskripsi warning secara bebas
+
+## Text Decoration
 Sebagai Penulis baru tentu menggunakan Silverbullet tidaklah mudah, berikut adalah hint yang perlu diingat agar mudah mengetik:
 
 1. Huruf Miring (_italic_), dengan cara ketik underscore (_) dipembuka dan penutup, seperti contoh *ini adalah teks miring*.
-2. Huruf Tebal (**bold**), dengan cara ketik bintang 2zx (**) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
-3. Huruf Miring + Tebal (***italic + bold***), dengan cara ketik bintang (***) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
+2. Huruf Tebal (**bold**), dengan cara ketik bintang 2x (**) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
+3. Huruf Miring + Tebal (***italic + bold***), dengan cara ketik bintang 3x (***) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
+4. 
 
 ## Penutup
 Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
