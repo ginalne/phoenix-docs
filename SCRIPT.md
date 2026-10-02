@@ -1,7 +1,5 @@
 ---
     status: draft
-    title: huhuehuehue
-    description: wkeoawke
     pageDecoration:
       icon: x
       tree:
@@ -194,17 +192,17 @@ slashCommand.define {
     -- title
     ----------------------------------------------------------------
 
-    if not string.match(frontmatter, "^title%s*:") and
-       not string.match(frontmatter, "\ntitle%s*:") then
+    if not string.match(frontmatter, "^%s+title%s*:") and
+       not string.match(frontmatter, "\n%s+title%s*:") then
 
       frontmatter =
         frontmatter
-        .. "\ntitle: "
+        .. "\n    title: "
         .. (title or "")
     end
 
-    if not string.match(frontmatter, "^description%s*:") and
-       not string.match(frontmatter, "\ndescription%s*:") then
+    if not string.match(frontmatter, "^%s+description%s*:") and
+       not string.match(frontmatter, "\n%s+description%s*:") then
 
       frontmatter =
         frontmatter
