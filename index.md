@@ -70,11 +70,11 @@ Task dapat Anda gunakan sebagai catatan mark yang hanya boleh digunakan dalam [[
 
 Ada beberapa jenis task yang bisa digunakan:
 
-* [ ] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
-* [ ] task menjadi kabur ketika selesai
+* [x] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
+* [x] task menjadi kabur ketika selesai
 
-* [IN PROGRESS] Ini task dengan sifat dikerjakan
-* [TO DO] Ini task dengan sifat belum dikerjakan
+* [TO DO] Ini task dengan sifat dikerjakan [priority: high] [assignee: @ginalne]
+* [IN PROGRESS] Ini task dengan sifat belum dikerjakan
 * [DONE] Ini task dengan sifat selesai
   
 (dengan syntax `* [IN PROGRESS]`. status bisa IN PROGRESS , DONE atau TO DO)
@@ -90,6 +90,3 @@ Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
 Terimakasih
 
 Selamat Menulis~
-
-* [STARTED] first state
-* [NOT STARTED] second state 
