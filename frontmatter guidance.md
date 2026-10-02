@@ -39,6 +39,20 @@ Contoh basic untuk dokumen released:
 >**note** Tips Command
 >Anda bisa ketik ***`/released`*** untuk mengubah dokumen menjadi released
 
+Contoh basic untuk dokumen group:
+```yaml
+---
+    status: group
+    pageDecoration:
+      icon: folder
+      tree:
+        priority: 0
+---
+```
+
+>**note** Tips Command
+>Anda bisa ketik ***`/group`*** untuk mengubah dokumen menjadi released
+
 Secara contoh berikut adalah atribut penting untuk frontmatter:
 1. [[frontmatter guidance#status|status]]
 2. [[frontmatter guidance#title|title]]
@@ -52,7 +66,8 @@ Berikut penjelasan atribut penting yang bisa atau wajib digunakan.
 ### status
    *status* adalah atribut untuk penanda status halaman dengan nilai seperti berikut:
    * draft    : jika halaman belum dipublish ke website.
-   * released : jika halaman dipublish ke website
+   * released : jika halaman dipublish ke website.
+   * group    : jika halaman sebagai group (group perlu diisi jika ingin menentukan tree.priority)
 
 ### title
    *title* adalah atribut untuk menamakan dokumen dan akan tampil di judul tab website (jika diisi dengan ***“Some Title”***, maka hasil diwebsite akan seperti **Some Title | Phoenix Documentation**), jika tidak diisi, maka Heading 1 akan dijadikan sebagai Judul. Judul akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.

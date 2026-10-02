@@ -1,13 +1,6 @@
 ---
-    status: release
-    title: Hello
-    description: 
-    pageDecoration:
-      tree:
-        priority: 0
-    tags:
-      metax
-      metas
+    status: draft
+    tags: meta
 ---
 
 # Hello
@@ -87,7 +80,7 @@ slashCommand.define {
       block = string.gsub(
         block,
         "(%s+icon%s*:%s*)[^\n]*",
-        "%1x",
+        "%1folder",
         1
       )
     elseif string.match(block, "^%s+#%s*icon%s*:") or
@@ -96,7 +89,7 @@ slashCommand.define {
       block = string.gsub(
         block,
         "(%s+#%s*icon%s*:%s*)[^\n]*",
-        "      icon: x",
+        "      icon: folder",
         1
       )
     
@@ -114,7 +107,7 @@ slashCommand.define {
 else
   frontmatter = frontmatter ..
     "\n    pageDecoration:\n" ..
-    "      icon: x\n" ..
+    "      icon: folder\n" ..
     "      tree:\n" ..
     "        priority: 0"
 end
@@ -125,7 +118,7 @@ end
       string.sub(text, endStart)
 
     editor.setText(newText)
-    editor.flashNotification("Set Document to Draft")
+    editor.flashNotification("Set Document as Group")
   end
 }
 
