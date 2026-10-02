@@ -3,7 +3,7 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 4
+        priority: 0
 ---
 # Query
 Tipe data yang dapat menyimpan konfigurasi penampilan data dengan kombinasi yang kompleks seperti meringkas, menyaring, menyortir serta menghitung jumlah hingga rata-rata ataupun akumulasi dari beberapa dataset sesuai dengan kondisi yang diinginkan.
@@ -14,3 +14,4 @@ Query cukup baik dalam menyimpan konfigurasi penampilan data sehingga digunakan 
 ## Format
 DateTime
 >**note** Tipe data ini tidak memiliki format khusus.
+

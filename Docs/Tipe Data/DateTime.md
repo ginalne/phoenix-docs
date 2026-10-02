@@ -3,7 +3,7 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 4
+        priority: 0
 ---
 # DateTime
 String adalah tipe data yang dapat menyimpan data tanggal dan waktu dengan presisi detik.
@@ -14,3 +14,4 @@ DateTime cukup baik dalam menyimpan data waktu secara presisi, sehingga dapat di
 ## Format
 DateTime
 >**note** Tipe data ini tidak memiliki format khusus.
+

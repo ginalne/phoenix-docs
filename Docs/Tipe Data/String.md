@@ -3,7 +3,7 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 4
+        priority: 0
 ---
 # String
 String adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 65,535 karakter.
@@ -38,3 +38,4 @@ String adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 65,5
 * [[Format Data/String/IPv6]]
 * [[Format Data/String/UUID]]
 * [[Format Data/String/Emoji]]
+

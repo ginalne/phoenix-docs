@@ -10,6 +10,10 @@ Sebagai pembaca saya harap anda dapat mengabaikan halaman ini, berikut adalah ti
 >**warning** Wajib dibaca oleh penulis!
 >Anda boleh mengedit halaman ini jika diperlukan.
 
+ATURAN:
+1. Penulis wajib menulis [[index#Frontmatter|Frontmatter]] diawal dokumen.
+2. Penulis wajib membuat urutan [[index#Heading|Heading]] yang tepat.
+3. Penulis tidak boleh menulis [[index#Task|Task]] kecuali digunakan dalam [[index#Comment|Comment]]
 ---
 
 ## Frontmatter
@@ -113,6 +117,11 @@ Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>`, contohny
 
 > “If you don’t know where you’re going, you may not get there.”
 > — Yogi Berra
+
+---
+
+## Tambahan
+Harap isi enter 2x diakhir dokumen.
 
 ---
 
