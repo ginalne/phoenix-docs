@@ -482,27 +482,29 @@ slashCommand.define {
   run = function()
     local line = editor.getCurrentLine()
     local ws, prefix, rest = string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.+)$")
-    
-      editor.flashNotification(#ws)
-      editor.flashNotification(prefix)
-      editor.flashNotification(rest)
     local me = identity.own()
     local username = me and me.name or "unknown"
     if username == "unknown" then
       
     editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest, true)
     else
-      local finalRest = string.gsub(rest, "|%^|", "")
-      editor.flashNotification(finalRest)
-    editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. finalRest .. "[assignee: @" .. username .. "]|^|", true)
+      editor.flashNotification(rest)
+      local final = ""
+      local space = " "
+      if rest ~= "|^|" then
+        rest = string.gsub(rest, "|%^|", "")
+        final = "|^|"
+        final = "|^|"
+      end
+    editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest .. space .. "[assignee: @" .. username .. "]" .. final, true)
     end
   end
 }
 ```
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-* [TODO] hallo [assignee: @ginalne]
-* [TODO] hallo [assignee: @ginalne] |^|
-* [TODO] Hallo guys [assignee: @ginalne]|^|
-* [TODO] dijamin enak [assignee: @ginalne]
-* 
+* [TODO] [assignee: @ginalne]
+* [TODO] hallo d/todo [assignee: @ginalne]
+* [TODO] bajian[assignee: @ginalne]|^|
+* [TODO] todo [assignee: @ginalne]
+* [TODO] bajingan lah [assignee: @ginalne]
