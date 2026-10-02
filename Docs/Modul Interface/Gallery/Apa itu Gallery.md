@@ -1,6 +1,6 @@
 ---
     status: release
-    title: # Apa itu Gallery?
+    title: "Apa itu Gallery?"
     description: 
     pageDecoration:
       tree:
