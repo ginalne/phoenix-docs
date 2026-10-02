@@ -50,8 +50,12 @@ function orphanAttachmentsLinks()
     from tags.page
     where not table.find(_.tags, function(t) return t:startsWith("meta") end)
     select _.name ]] do
-    table.insert(checkedText, name)
     -- orphans[name] = true
+  end
+
+  
+  for linked in query[[from tags.link select _.toPage]] do
+    table.insert(checkedText, linked)
   end
 
   table.insert(checkedText, "Empty bro")
