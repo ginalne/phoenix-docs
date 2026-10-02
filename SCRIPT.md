@@ -1,9 +1,16 @@
 ---
     status: draft
+    title: Hello
+    description:
+    tags:
+      meta
     pageDecoration:
       icon: x
+      tree:
+        priority: 0
 ---
 # Hello
+
 
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
@@ -116,7 +123,6 @@ slashCommand.define {
           rest = ""
         end
         
-        editor.flashNotification(block)
         block = string.gsub(
           block,
           "%s*icon%s*:%s*x%f[%s\n]\n",
@@ -124,7 +130,6 @@ slashCommand.define {
           1
         )
         
-        editor.flashNotification(block)
         block = string.gsub(
           block,
           "^(%s*icon%s*:%s*x)$",
@@ -132,18 +137,16 @@ slashCommand.define {
           1
         )
 
-        if block = "" then
+        if block == "" then
           editor.flashNotification(before)
           before = string.gsub(
             before,
-            "^(%s*pageDecoration%s*:%s*)$",
+          "%s*pageDecoration%s*:%f[%s\n]\n",
             "",
             1
           )
         end
         
-        
-        editor.flashNotification(block)
         frontmatter = before .. block
         if rest ~= "" then
           frontmatter = frontmatter .. rest
