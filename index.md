@@ -11,9 +11,11 @@ Sebagai pembaca saya harap anda dapat mengabaikan halaman ini, berikut adalah ti
 >Anda boleh mengedit halaman ini jika diperlukan.
 
 ATURAN:
-1. Penulis wajib menulis [[index#Frontmatter|Frontmatter]] diawal dokumen.
+1. Penulis wajib menulis [[index#Frontmatter|Frontmatter]] disetiap awal dokumen.
 2. Penulis wajib membuat urutan [[index#Heading|Heading]] yang tepat.
 3. Penulis tidak boleh menulis [[index#Task|Task]] kecuali digunakan dalam [[index#Comment|Comment]]
+4. Penulis wajib menyisipkan ruang dengan Enter 2x diakhir dokumen (agar ada space dengan kolom Linked Mentions)
+
 ---
 
 ## Frontmatter
@@ -53,17 +55,17 @@ Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan `>**not
 >**note** Judul Info
 >Silahkan isi deskripsi info secara bebas
 
-Anda dapat menggunakan perintah `/note-insert` untuk membuat info.
+Anda dapat menggunakan perintah `/note-admonition` lalu Enter untuk membuat info.
 
 >**warning** Judul Warning
 >Silahkan isi deskripsi warning secara bebas
 
-Anda dapat menggunakan perintah `/warning-insert` untuk membuat peringatan.
+Anda dapat menggunakan perintah `/warning-admonition` lalu Enter untuk membuat peringatan.
 
 >**danger** Judul Danger
 >Silahkan isi deskripsi danger secara bebas
 
-Anda dapat menggunakan perintah `/warning-insert` untuk membuat larangan.
+Anda dapat menggunakan perintah `/danger-admonition` lalu Enter` untuk membuat larangan.
 
 ---
 
@@ -117,6 +119,15 @@ Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>`, contohny
 
 > “If you don’t know where you’re going, you may not get there.”
 > — Yogi Berra
+
+---
+
+## Table
+Tambahkan table jika ingin membuat informasi dengan ketik `/table` lalu Enter, contohnya:
+
+| Header A | Header B |
+|----------|----------|
+| Cell A | Cell B |
 
 ---
 
