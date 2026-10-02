@@ -84,7 +84,7 @@ slashCommand.define {
     local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
 
-    local text = ws .. "<!--\n @" .. username .. " at " .. datetime .. " ${widgets.commandButton \"toggle mention\"}\n |^|\n-->"
+    local text = ws .. "<!--\n `@" .. username .. "` at " .. datetime .. " ${widgets.commandButton \"toggle mention\"}\n |^|\n-->"
     editor.replaceRange(line.from, line.to, text, true)
   end
 }
@@ -123,14 +123,8 @@ slashCommand.define {
         if check_text == "<!--" then
           break
         end
-      
         editor.flashNotification(check_text)
-      
-        username = string.match(check_text, "@([%w_-]+)$")
-      
-        editor.flashNotification(username)
-
-      
+        username = string.match(check_text, "@([%w_-]+)")
         if username then
             break
         end
@@ -138,17 +132,34 @@ slashCommand.define {
         idx = idx - 1
     end
     
-    -- Hasil pencarian
     if username then
-        editor.flashNotification("Username ditemukan di baris ke-" .. idx .. ": " .. username)
+      local line = editor.getCurrentLine()
+      local current_text = line.text
+      local start_pos, end_pos = string.find(current_text, "-->", 1, true)
+      
+      if start_pos then
+          -- Tentukan indentasi/spasi awal baris jika dibutuhkan (ws)
+          local ws = "" 
+          
+          -- 3. Ambil teks SEBELUM "-->" dan teks SESUDAH "-->" (termasuk panahnya)
+          local before_arrow = string.sub(current_text, 1, start_pos - 1)
+          local arrow_and_rest = string.sub(current_text, start_pos)
+          
+          -- 4. Sisipkan teks jawaban Anda tepat sebelum panah
+          local insert_text = ws .. "here the answer : |^|"
+          local new_line_text = before_arrow .. insert_text .. arrow_and_rest
+          
+          -- 5. Perbarui baris di editor
+          editor.replaceRange(line.from, line.to, new_line_text, true)
+      else
+          editor.flashNotification("Tanda '-->' tidak ditemukan di baris ini!", "warn")
+      end
     else
-        editor.flashNotification("Username tidak ditemukan di baris-baris atas.")
+        editor.flashNotification("Tidak ditemukan pertanyaan apapun")
     end
 
   end
 }
-
-
 
 slashCommand.define {
   name = "todo task",
@@ -161,12 +172,8 @@ slashCommand.define {
 
 ```
 
-
-
 <!--
- ginalne at 2026-10-02 19:29 ${widgets.commandButton "reply"}
- yes kenapa bang
- 
+ `@ginalne` at 2026-10-02 20:01 ${widgets.commandButton "toggle mention"}
  
 -->
 
