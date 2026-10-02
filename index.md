@@ -10,7 +10,6 @@ Sebagai pembaca saya harap anda dapat mengabaikan pesan ini, berikut adalah atur
 >[!warning] Wajib dibaca oleh penulis!
 >Anda boleh mengedit halaman ini jika diperlukan.
 
-
 <!--
 HARBIIIIIIII KOK BISA DI INTEGRASIKAN DENGAN GINALNE?? @yohanes300
 
@@ -34,9 +33,10 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
    * released : jika halaman dipublish ke website
 
 ### title
-   *title* adalah atribut untuk :
-   * draft    : jika halaman belum dipublish ke website.
-   * released : jika halaman dipublish ke website
+   *title* adalah atribut untuk menamakan dokumen dan akan tampil di judul tab website (dengan contoh seperti **Some Title | Phoenix Documentation**), jika tidak diisi, maka Heading 1 akan dijadikan sebagai Judul. Judul akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.
+
+### description
+   *description* adalah atribut untuk menjelaskan deskripsi dokumen dan akan tampil di SEO tag website (dengan contoh seperti **Halaman yang menjelaskan aturan dalam penulisan dokumentasi**), jika tidak diisi, maka deskripsi akan kosong. Deskripsi akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.
 
 ### pageDecoration.icon
    ditulis dengan format seperti berikut
