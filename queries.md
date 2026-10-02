@@ -1,3 +1,10 @@
+---
+    status: draft
+    pageDecoration:
+      icon: check
+      tree:
+        priority: 0
+---
 # List of Queries
 
 ## Berikut adalah daftar TODO

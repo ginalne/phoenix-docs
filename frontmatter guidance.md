@@ -1,6 +1,7 @@
 ---
     status: draft
     pageDecoration:
+      icon: guidance
       tree:
         priority: -2
 ---
