@@ -43,41 +43,60 @@ function orphanPages()
 end
 
 function orphanAttachments()
-  local orphans = {}
+  local allDocs = {}
   
   for doc in query[[ from tags.document select _.name ]] do
     if not doc:endsWith(".md") then
-      orphans[doc] = true
+      allDocs[doc] = true
     end
   end
 
-  for linked in query[[ from tags.link select _.toPage ]] do
-    orphans[linked] = nil
+  for page in query[[ from tags.page select _.text ]] do
+    if page.text then
+      for docName, _ in pairs(allDocs) do
+        if string.find(page.text, docName, 1, true) then
+          allDocs[docName] = nil
+        end
+      end
+    end
   end
 
   local clickableLinks = {}
-  for name, _ in pairs(orphans) do
-    table.insert(clickableLinks, "![[" .. name .. "]]")
+  for name, _ in pairs(allDocs) do
+    table.insert(clickableLinks, "[[" .. name .. "]]")
   end
 
   return clickableLinks
 end
 
 function orphanAttachmentsLinks()
-  local orphans = {}
+  local images = {}
+  local imgExts = { [".png"]=true, [".jpg"]=true, [".jpeg"]=true, [".gif"]=true, [".webp"]=true, [".svg"]=true }
   
   for doc in query[[ from tags.document select _.name ]] do
-    if not doc:endsWith(".md") then
-      orphans[doc] = true
+    local lowerName = doc:lower()
+    for ext, _ in pairs(imgExts) do
+      if lowerName:endsWith(ext) then
+        images[doc] = true
+        break
+      end
     end
   end
 
-  for linked in query[[ from tags.link select _.toPage ]] do
-    orphans[linked] = nil
+  for page in query[[ from tags.page select _.text ]] do
+    if page.text then
+      -- Jika nama gambar tertulis di dalam halaman, hapus dari daftar yatim
+      for imgName, _ in pairs(images) do
+        if string.find(page.text, imgName, 1, true) then
+          images[imgName] = nil
+        end
+      end
+    end
   end
 
+  -- 3. Ubah hasil akhir menjadi tautan teks murni [[nama_gambar.ext]]
   local clickableLinks = {}
-  for name, _ in pairs(orphans) do
+  for name, _ in pairs(images) do
     table.insert(clickableLinks, "[[" .. name .. "]]")
   end
 
