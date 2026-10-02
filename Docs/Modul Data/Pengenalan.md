@@ -29,12 +29,12 @@ Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering
 lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Enum]].
 
 ## Tabel
-Table merupakan komponen yang dapat menyimpan data secara kompleks. Sifat data ini dapat digunakan untuk menyimpan data yang transaksional maupun generik. Table dapat memiliki beberapa [[Docs/Tipe Data/Column]] yang masing-masing memiliki format yang berbeda, dan memiliki [[Docs/Tipe Data/Row]] yang masing-masing memiliki  begitu juga [[Docs/Tipe Data/Expression]] dapat digunakan oleh data ini secara langsung.
+Table merupakan komponen yang dapat menyimpan data secara kompleks. Sifat data ini dapat digunakan untuk menyimpan data yang transaksional maupun generik. Table dapat memiliki beberapa [[Docs/Tipe Data/Column]] yang masing-masing memiliki format yang berbeda, dan memiliki [[Docs/Tipe Data/Row]] yang masing-masing memiliki [[Docs/Tipe Data/TableData]] sesuai kolom yang tersedia. [[Docs/Tipe Data/Expression]] dapat berfungsi oleh komponen ini secara langsung.
 
 lihat selengkapnya [[Docs/Modul Data/Tabel/Apa itu Tabel]].
 
-## Tabel
-Tree merupakan komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini dapat digunakan untuk menyimpan data relasional yang bercabang. Tree dapat memiliki beberapa [[Docs/Modul Data/Table/TableColumn]] yang masing-masing memiliki format yang berbeda, begitu juga [[Docs/Tipe Data/Expression]] dapat digunakan oleh data ini secara langsung.
+## Tree
+Tree merupakan komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini dapat digunakan untuk menyimpan data relasional yang bercabang. Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu kelas penting dalam Tree ada [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].
 
-lihat selengkapnya [[Docs/Modul Data/Tabel/Apa itu Tabel]].
+lihat selengkapnya [[Docs/Modul Data/Tree/Apa itu Tree]].
 
