@@ -6,17 +6,32 @@
 ---
 # Frontmatter Guidance
 
->Contoh basic untuk dokumen draft
+Contoh basic untuk dokumen draft
 ```yaml
 ---
     status: draft
     pageDecoration:
+      icon: x
       tree:
-        priority: -2
+        priority: 0
 ---
 ```
 
-
+Contoh basic untuk dokumen released
+```yaml
+---
+    status: released
+    title: #isi judul disini
+    desciption: #isi deskripsi disini
+    pageDecoration:
+      #icon: x #(hapus simbol pagar jika diubah menjadi draft)
+      tree:
+        priority: 0
+    tags:
+      - example
+      #isi tag disini
+---
+```
 
 Berikut penjelasan atribut penting yang bisa atau wajib digunakan.
 
