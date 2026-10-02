@@ -83,7 +83,25 @@ slashCommand.define {
     local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
 
-    local text = ws .. "<!--\n `@" .. username .. "` at " .. datetime .. "\n |^|\n-->"
+    local text = ws .. "<!--\n @" .. username .. " at " .. datetime .. " ${widgets.commandButton \"toggle mention\"}\n |^|\n-->"
+    editor.replaceRange(line.from, line.to, text, true)
+  end
+}
+
+slashCommand.define {
+  name = "toggle mention",
+  run = function()
+    local line = editor.getCurrentLine()
+
+    local text = line.textWithCursor
+
+    if string.find(text, "@") then
+      text = string.gsub(text, "@([%w_%-]+)", "%1", 1)
+    else
+      -- If you want to turn it back on, you'll need to know
+      -- which word should become the mention.
+    end
+
     editor.replaceRange(line.from, line.to, text, true)
   end
 }
@@ -100,9 +118,11 @@ slashCommand.define {
 
 ```
 
+
+
 <!--
- `@ginalne` at 2026-10-02 19:23
- ini gimana bang? @yohanes300
+ @ginalne at 2026-10-02 19:29 ${widgets.commandButton "toggle mention"}
+ 
 -->
 
 Run ${widgets.commandButton "System: Reload"} to reload.
