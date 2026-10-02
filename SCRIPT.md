@@ -470,11 +470,10 @@ slashCommand.define {
     
     if username then
       --editor.flashNotification("we got you " .. idx .. "/" .. #lines .. " " .. username)
-      while idx < #lines do
+      while idx <= #lines do
+          idx = idx + 1
           local check_text = lines[idx]
-          editor.flashNotification(idx)
-          editor.flashNotification(#lines)
-          editor.flashNotification(check_text)
+          editor.flashNotification(idx .. #lines .. check_text)
           if check_text == "-->" then
               local line = editor.getCurrentLine()
               local ws, prefix, rest =
@@ -488,7 +487,6 @@ slashCommand.define {
               found = true
             break
           end
-          idx = idx + 1
       end
     else
         editor.flashNotification("Tidak ditemukan pertanyaan apapun")
