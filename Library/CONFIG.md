@@ -21,22 +21,3 @@ The block below is maintained by the ${widgets.commandButton("Configuration Mana
 ```space-lua
 -- managed-by: configuration-manager
 config.set("markdownPrettify.emphasisMarker", "_")
-```
-_test_
-```space-style
-a.christmas-decoration {
-  background-color: #b4e46e;
-}
-
-body {
-  background-color: #b4e46e;
-}
-
-.cm-tooltip-autocomplete li.christmas-decoration {
-  background-color: #b4e46e;
-}
-
-.sb-result-list .sb-option.christmas-decoration {
-  background-color: #b4e46e;
-}
-```

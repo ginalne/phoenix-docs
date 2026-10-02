@@ -7,7 +7,7 @@
 # Welcome to Phoenix Docs
 Sebagai pembaca saya harap anda dapat mengabaikan halaman ini, berikut adalah tips dan aturan yang berlaku saat menulis dokumentasi ini:
 
->[!warning] Wajib dibaca oleh penulis!
+>**warning** Wajib dibaca oleh penulis!
 >Anda boleh mengedit halaman ini jika diperlukan.
 
 ---
@@ -38,15 +38,15 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
   
 -->
 
->[!note] Kelebihan Comment
+>**note** Kelebihan Comment
 >Comment tidak akan tampil di website, jadi gunakan section ini untuk berdiskusi
 
 ---
 
 ## Admonition
-Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan “>[!note]” untuk info, dan “>[!warning]“, dan “>[!danger]“, isi dari info atau warning dapat ditulis dengan format berikut:
+Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan `>**note**`, `>**warning**`, atau `>**danger**`, isi dari info atau warning dapat ditulis dengan format berikut:
 
->[!note] Judul Info
+***note*** Judul Info
 >Silahkan isi deskripsi info secara bebas
 
 Anda dapat menggunakan perintah `/note-insert` untuk membuat info.
@@ -60,9 +60,6 @@ Anda dapat menggunakan perintah `/warning-insert` untuk membuat peringatan.
 >Silahkan isi deskripsi danger secara bebas
 
 Anda dapat menggunakan perintah `/warning-insert` untuk membuat larangan.
-
->**[!note]** hallo
->test
 
 ---
 

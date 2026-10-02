@@ -2,6 +2,7 @@
   tags: meta/library
 ---
 
+Run ${widgets.commandButton "System: Reload"} to reload.
 ```space-style
 /* Coret teks task dengan status DONE */
 #sb-main .cm-editor [data-task-state="DONE"] ~ .sb-task {
@@ -27,10 +28,10 @@
 slashCommand.define {
   name = "timestamp",
   run = function()
-    editor.insertAtCursor(mvm_get_timestamp())
+    editor.insertAtCursor('test123')
   end
 }
 ```
 
-> **danger** Danger
-> What?
+> **note** Note
+> 
