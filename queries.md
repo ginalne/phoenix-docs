@@ -19,9 +19,10 @@ ${query[[
 
 ## Berikut adalah daftar link tapi halamannya masih kosong
 
-${query[[
+>**danger** bahaya
+>${query[[
   from p = index.aspiringPages()
-  select "- " .. p.name .. " " .. "[[" .. p.page .. "|" .. p.page .. "]]"
+  select "- <i style=\"color:#a00\">" .. p.name .. "</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
 ]]}
 
 ---
