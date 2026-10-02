@@ -33,7 +33,7 @@ Sebagai penulis Anda wajib menambahkan judul pada baris pertama diawali dengan m
 Harap pastikan urutan heading tidak salah. Heading 1 diawali #, Heading 2 diawali ##, Heading 3 diawali ###. Jangan gunakan Heading 1 lebih dari 1 kali.
 
 ## Comment
-comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan ditutup dengan `-->`, isi dari frontmatter ditulis dengan format berikut:
+comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan ditutup dengan `-->`, isi dari comment ditulis dengan format berikut:
 
 <!--
   `@your_username` 
@@ -43,6 +43,9 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
   
   
 -->
+
+>[!note] Kelebihan Comment
+>Comment tidak akan tampil diwebsite, jadi gunakan section ini untuk berdiskusi
 
 ## Info dan Warning
 info dan warning adalah section dalam penulisan dokumentasi yang dibuka dengan “>[!note]” untuk info, dan “>[!warning]“, isi dari info atau warning dapat ditulis dengan format berikut:
@@ -70,6 +73,18 @@ Ada 2 jenis list yang digunakan:
   adalah dengan nomor diawal ditambah spasi:
   1. Ini item pertama
   2. Ini item kedua
+
+### Task
+Task dapat Anda gunakan sebagai catatan mark yang hanya boleh digunakan dalam [[index#Comment|Comment]], karena tidak bagus ditampilkan di website.
+
+Ada beberapa jenis task yang bisa digunakan:
+
+* [ ] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
+
+* [IN PROGRESS] Ini task dengan judul
+(dengan syntax `* [IN PROGRESS] ` bisa IN PROGRESS , DONE atau TO DO)
+
+* [TO DO] test 
 
 ## Penutup
 Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
