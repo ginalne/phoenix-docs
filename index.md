@@ -125,12 +125,16 @@ Dengan mengetik syntax `* [STATE]`. Nilainya bisa diisi dengan PROGRESS, DONE at
 * [DONE] Ini task dengan sifat selesai
   
 >**note** Tips Command
->Anda bisa ketikan perintah ***`/todo task`*** untuk menambahkan .
+>Anda bisa ketikan perintah ***`/todo task`*** untuk menambahkan item TODO.
+>bisa juga dengan mengetik task nya terlebih dahulu lalu menutup ***/todo task*** lalu Enter diakhir.
+>
+>Seperti contoh : Ini pekerjaan baru `/todo task`
+>lalu Enter 
 
 ---
 
 ## Quotes
-Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>`, contohnya:
+Tambahkan quotes jika ingin mengutip sesuatu dengan mengetik simbol `>` diawal, contohnya:
 
 > “If you don’t know where you’re going, you may not get there.”
 > — Yogi Berra
@@ -138,7 +142,7 @@ Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>`, contohny
 ---
 
 ## Table
-Tambahkan table jika ingin membuat informasi dengan ketik `/table` lalu Enter, contohnya:
+Tambahkan table jika ingin membuat informasi berbentuk tabel dengan cara ketik `/table` lalu Enter, contohnya:
 
 | Header A | Header B |
 |----------|----------|
@@ -147,7 +151,7 @@ Tambahkan table jika ingin membuat informasi dengan ketik `/table` lalu Enter, c
 ---
 
 ## Tambahan
-Harap isi enter 2x diakhir dokumen.
+Harap isi enter 2x disetiap akhir dokumen.
 
 ---
 
