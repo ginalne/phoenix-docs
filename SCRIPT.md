@@ -24,45 +24,20 @@ config.set("markdownPrettify.emphasisMarker", "_")
 function orphanPages()
   local orphans = {}
   -- Mengambil semua nama halaman non-meta
-  for name in query[[ from tags.page where not table.find(_.tags, function(t) return t:startsWith("meta") end) select _.name ]] do
+  for name in query[[
+    from tags.page
+    where not table.find(_.tags,
+    function(t) return t:startsWith("meta") end)
+    select _.name ]] do
     orphans[name] = true
   end
 
-  -- Menghapus halaman dari daftar jika ada halaman lain yang menautkannya
   for linked in query[[from tags.link select _.toPage]] do
     orphans[linked] = nil
   end
 
-  -- Mengubah daftar menjadi tautan markdown yang bisa diklik
   local clickableLinks = {}
   for name, _ in pairs(orphans) do
-    table.insert(clickableLinks, "[[" .. name .. "]]")
-  end
-
-  return clickableLinks
-end
-
-function orphanAttachments()
-  local allDocs = {}
-  
-  for doc in query[[ from tags.document select _.name ]] do
-    if not doc:endsWith(".md") then
-      allDocs[doc] = true
-    end
-  end
-
-  for page in query[[ from tags.page select _.text ]] do
-    if page.text then
-      for docName, _ in pairs(allDocs) do
-        if string.find(page.text, docName, 1, true) then
-          allDocs[docName] = nil
-        end
-      end
-    end
-  end
-
-  local clickableLinks = {}
-  for name, _ in pairs(allDocs) do
     table.insert(clickableLinks, "[[" .. name .. "]]")
   end
 
@@ -85,16 +60,15 @@ function orphanAttachmentsLinks()
 
   for page in query[[ from tags.page select _.text ]] do
     if page.text then
-      -- Jika nama gambar tertulis di dalam halaman, hapus dari daftar yatim
-      for imgName, _ in pairs(images) do
-        if string.find(page.text, imgName, 1, true) then
-          images[imgName] = nil
+      for fullPath, _ in pairs(images) do
+        local fileNameOnly = fullPath:match("([^/]+)$") or fullPath
+        if string.find(page.text, fileNameOnly, 1, true) then
+          images[fullPath] = nil
         end
       end
     end
   end
 
-  -- 3. Ubah hasil akhir menjadi tautan teks murni [[nama_gambar.ext]]
   local clickableLinks = {}
   for name, _ in pairs(images) do
     table.insert(clickableLinks, "[[" .. name .. "]]")
