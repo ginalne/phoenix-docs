@@ -1,6 +1,6 @@
 ---
     status: released
-    title: Introduction
+    title: Pengenalan
     description: Halaman pendahuluan untuk menjelaskan phoenix secara umum.
     pageDecoration:
       #icon: empty
@@ -9,7 +9,7 @@
     tags:
     - introduction
 ---
-# Pengenalan
+# Apa itu Phoenix?
 Phoenix dirancang dengan satu filosofi yaitu sebagai “the Ultimate digital canvas” untuk membangun ekosistem data Anda. Untuk mencapai tujuan ini, kami membuat sebuah platform dinamis yang dapat dibentuk dan dikembangkan oleh end-user sesuai dengan keperluan Tim mereka.
 
 Phoenix adalah platform dinamis yang dirancang untuk membantu anda dan tim dalam mengelola dan mengefisienkan alur kerja, acara, serta hubungan yang kompleks. Baik saat Anda mengelola proyek, menjalankan organisasi, menyusun database komunitas, maupun mengoordinasikan jadwal acara, Phoenix menyediakan perangkat untuk membangun pondasi data, mengotomatisasi logika, dan menjaga segala sesuatunya tetap terhubung. Berbekal model data yang fleksibel, pemrosesan logika cerdas, dan dukungan integrasi yang mulus, Phoenix mengubah proses yang rumit menjadi alur yang jelas dan interaktif. Anggaplah Phoenix sebagai otak digital Anda untuk menata, memvisualisasikan, dan menggerakkan inti dari komunitas Anda.
