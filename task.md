@@ -1,4 +1,7 @@
-# Berikut adalah daftar pekerjaan
+# Berikut adalah daftar minta tolong...
 
-${query[[from index.tasks("todo") select templates.taskItem(_)]]}
+${query[[from index.tasks("help") select templates.taskItem(_)]]}
+
+# Berikut adalah daftar halaman kosong
+${query[[from index.tasks()]]}
 
