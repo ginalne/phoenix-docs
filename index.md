@@ -37,19 +37,27 @@ Harap pastikan urutan heading tidak salah. Heading 1 diawali #, Heading 2 diawal
 comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan ditutup dengan `-->`, isi dari comment ditulis dengan format berikut:
 
 <!--
-  `@your_username` at date
+  `@your_username` <small style="opacity: 0.5">at your time</small>
   Some Comment... `@free` mention some here...
 
   some other comment or replied...
-  
+-->
+
+>**note** Tips command
+>Anda bisa ketika perintah **`/asking`** untuk memulai komen, dan **`/answer`** untuk menjawab (harap kursor perlu didalam comment).
+>
+>seperti contoh:
+
+<!--
+  `@ginalne` <small style="opacity: 0.5">at 2026-10-02 21:21</small>
+  Hallo semua @everynyaw
+
+  *ketik `/answer` disini*
   
 -->
 
-
-
 >**note** Kelebihan
 >Comment tidak akan tampil di website, jadi gunakan section ini untuk berdiskusi
-
 
 ---
 
