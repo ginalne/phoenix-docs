@@ -12,17 +12,17 @@ frontmatter adalah section dalam penulisan dokumentasi yang dibuka dengan “---
 
 Berikut adalah atribut penting yang bisa atau wajib digunakan.
 
-1. Status
+### status
    *status* adalah atribut untuk penanda status halaman dengan nilai seperti berikut:
    * draft    : jika halaman belum dipublish ke website.
    * released : jika halaman dipublish ke website
 
-2. Title
+### title
    *title* adalah atribut untuk :
    * draft    : jika halaman belum dipublish ke website.
    * released : jika halaman dipublish ke website
 
-2. pageDecoration.icon
+### pageDecoration.icon
    ditulis dengan format seperti berikut
    ```yaml
    pageDecoration:
@@ -30,7 +30,7 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
    ```
    wajib diisi dengan “x” jika status draft, atau diisi “folder” untuk folder. jangan gunakan jika release atau tidak dibutuhkan (dapat gunakan # agar bersifat notes)
 
-3. pageDecoration.tree.priority
+### pageDecoration.tree.priority
    ditulis dengan format seperti berikut:
    ```yaml
    pageDecoration:
@@ -39,7 +39,7 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
    ```
    jika Anda ingin mengubah urutan halaman di Navigation : Tree. Anda dapat mengisi nilai angka besar agar keatas, atau kecil untuk kebawah.
    
-4. tags
+### tags
    ditulis dengan format seperti berikut:
    ```yaml
    tags:
@@ -48,4 +48,8 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
    ```
    jika anda ingin menambahkan penanda tags yang relevan agar membantu pembaca menemukan halaman yang relevan bisa gunakan atribut ini.
 
-   
+
+## Heading
+Sebagai penulis Anda wajib menambahkan judul pada baris pertama diawali dengan mengetik # dan spasi.
+
+Harap pastikan 
