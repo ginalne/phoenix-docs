@@ -29,17 +29,8 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
       icon: something...
    ```
    wajib diisi dengan “x” jika status draft, atau diisi “folder” untuk folder. jangan gunakan jika release atau tidak dibutuhkan (dapat gunakan # agar bersifat notes)
-   
-3. pageDecoration.icon
-   ditulis dengan format seperti berikut:
-   ```yaml
-   pageDecoration:
-      tree:
-        priority: some number...
-   ```
-   jika Anda ingin mengubah urutan halaman di Navigation : Tree. Anda dapat mengisi nilai angka besar agar keatas, atau kecil untuk kebawah.
 
-4. pageDecoration.icon
+3. pageDecoration.tree.priority
    ditulis dengan format seperti berikut:
    ```yaml
    pageDecoration:
@@ -48,7 +39,7 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
    ```
    jika Anda ingin mengubah urutan halaman di Navigation : Tree. Anda dapat mengisi nilai angka besar agar keatas, atau kecil untuk kebawah.
    
-5 pageDecoration.icon
+4. tags
    ditulis dengan format seperti berikut:
    ```yaml
    tags:
