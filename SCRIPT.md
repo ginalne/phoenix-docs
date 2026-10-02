@@ -99,16 +99,25 @@ slashCommand.define {
     end
     
     local total_text = editor.getText()
-    local text_before = string.sub(total_text, 1, line.from - 1)
+    
+    local idx = line.from - 1
+    local username = nil
+    local text_before = string.sub(total_text, 1, idx)
     local previous_line_text = string.match(text_before, "[^\n]*$")
     
-    editor.flashNotification(previous_line_text)
-    
-    local username = string.match(previous_line_text, "@([%w_-]+)$")
+    while idx >= 1 do
+      editor.flashNotification(previous_line_text)
+      username = string.match(previous_line_text, "@([%w_-]+)$")
+      if username then
+          break
+      end
+      idx = idx - 1
+    end
+
     if username then
-        editor.flashNotification("Username ditemukan: " .. username)
+        editor.flashNotification("Username ditemukan di baris ke-" .. idx .. ": " .. username)
     else
-        editor.flashNotification("Tidak ada username @ di akhir baris sebelumnya", "warn")
+        editor.flashNotification("Username tidak ditemukan di baris-baris atas.")
     end
   end
 }
