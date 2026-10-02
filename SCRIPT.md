@@ -158,20 +158,9 @@ slashCommand.define {
       
     editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest, true)
     else
-    editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest .. " [assignee: @" .. username .. "]", true)
+    editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest .. "[assignee: @" .. username .. "]", true)
     end
   end
 }
 ```
-<!--
-  `@ginalne` <small style="opacity: 0.5">at 2026-10-02 20:47</small>
-  apa sih bro @everynyaw
-
-  `@ginalne` <small style="opacity: 0.5">at 2026-10-02 20:49</small>
-  ya gimana yak wkwkk @ginalne
-
-  `@ginalne` <small style="opacity: 0.5">at 2026-10-02 20:49</small>
-  bacot ihh @harbimartin
--->
 Run ${widgets.commandButton "System: Reload"} to reload.
-* [TODO]  [assignee: @ginalne]tolong kerjain ini ya |^|
