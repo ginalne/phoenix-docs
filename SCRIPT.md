@@ -1,8 +1,12 @@
 ---
-    status: release
+    status: draft
     title: Hello
     description: 
     tags:
+    pageDecoration:
+      icon: x
+      tree:
+        priority: 0
       meta
 ---
 # Hello
@@ -349,20 +353,19 @@ slashCommand.define {
     end
   end
 else
-  if (string.match(frontmatter, "(description%s*:%s*[^\n]*)")) then
-    
-    editor.flashNotification("Set Document as Group")
+  if (string.match(frontmatter, "(description%s*:%s*[^\r\n]*)")) then
+    editor.flashNotification(frontmatter)
     frontmatter = string.gsub(
       frontmatter,
-      "(description%s*:%s*[^\n]*)",
-      "%1\n    pageDecoration:\n" ..
+      "(description%s*:%s*[^\r\n]*)",
+      "%1\n" ..
+      "    pageDecoration:\n" ..
       "      icon: x\n" ..
       "      tree:\n" ..
       "        priority: 0",
       1
     )
-    editor.flashNotification("Set Document as Group")
-    editor.flashNotification("Set Document as Group")
+    editor.flashNotification(frontmatter)
   elseif (string.match(frontmatter, "(title%s*:%s*[^\n]*)")) then
     frontmatter = string.gsub(
       frontmatter,
