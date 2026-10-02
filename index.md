@@ -40,7 +40,7 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
   Some Comment... `@free` mention some here...
 
   some other comment or replied...
-  *[ ] test 
+  
   
 -->
 
@@ -59,7 +59,17 @@ Sebagai Penulis baru tentu menggunakan Silverbullet tidaklah mudah, berikut adal
 1. Huruf Miring (_italic_), dengan cara ketik underscore (_) dipembuka dan penutup, seperti contoh *ini adalah teks miring*.
 2. Huruf Tebal (**bold**), dengan cara ketik bintang 2x (**) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
 3. Huruf Miring + Tebal (***italic + bold***), dengan cara ketik bintang 3x (***) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
-4. 
+
+### List
+Ada 2 jenis list yang digunakan:
+#### List tanpa nomor
+  adalah dengan * atau - diawal ditambah spasi:
+  * ini list tanpa nomor
+  * ini daftar selanjutnya
+#### List dengan nomor
+  adalah dengan nomor diawal ditambah spasi:
+  1. Ini item pertama
+  2. Ini item kedua
 
 ## Penutup
 Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
