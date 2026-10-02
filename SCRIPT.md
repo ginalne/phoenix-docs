@@ -126,7 +126,7 @@ slashCommand.define {
         editor.flashNotification(block)
         block = string.gsub(
           block,
-          "(%s*icon%s*:%s*x{1})[\n]*",
+          "(%s*icon%s*:%s*x$)[\n]*",
           "",
           1
         )
