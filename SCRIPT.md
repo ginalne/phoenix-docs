@@ -60,6 +60,7 @@ slashCommand.define {
 ]==], 0, true)
   end
 }
+
 slashCommand.define {
   name = "asking",
   run = function()
@@ -70,10 +71,11 @@ slashCommand.define {
     
     local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
-    local text = ws .. "<!--\n `@" .. username .. "` at " .. datetime .. " ${widgets.commandButton \"toggle mention\"}\n \n-->"
+    local text = ws .. "<!--\n   `@" .. username .. "` at " .. datetime .. "to @everynyaw\n   |^|@everynyaw\n-->"
     editor.replaceRange(line.from, line.to, text, true)
   end
 }
+
 slashCommand.define {
   name = "answer",
   run = function()
@@ -129,7 +131,7 @@ slashCommand.define {
               
               local myUserName = me and me.name or "unknown"
               local datetime = os.date("%Y-%m-%d %H:%M")
-              local text = ws .. "\n `@" .. myUserName .. "` at " .. datetime .. " replied to " .. username .. "\n"
+              local text = ws .. "\n `@" .. myUserName .. "` at " .. datetime .. " replied to @" .. username .. "\n"
               editor.replaceRange(line.from, line.to, text, true)
             break
           end
@@ -154,10 +156,11 @@ slashCommand.define {
   end
 }
 ```
-<!--
- `@ginalne` at 2026-10-02 20:01 ${widgets.commandButton "toggle mention"}
- 
- `@ginalne` at 2026-10-02 20:25 replied to ginalne `@ginalne` at 2026-10-02 20:25 replied to ginalne
 
+<!--
+   `@ginalne` at 2026-10-02 20:30 to 
+   
 -->
+
+
 Run ${widgets.commandButton "System: Reload"} to reload.
