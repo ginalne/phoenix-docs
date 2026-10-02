@@ -16,7 +16,7 @@ ${query[[
 
 ---
 
-## Berikut adalah daftar link tapi halaman kosong
+## Berikut adalah daftar link tapi halamannya masih kosong
 ${query[[
   from p = index.aspiringPages()
   select "- [[" .. p.name .. "]] " .. p.page
