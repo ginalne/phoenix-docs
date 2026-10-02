@@ -1,8 +1,5 @@
 ---
     status: draft
-    tags:
-      tete
-      tetes
     pageDecoration:
       icon: x
       tree:
@@ -27,30 +24,75 @@ slashCommand.define {
   run = function()
     local text = editor.getText()
 
-    local frontmatter, startPos, endPos = editor.getFrontmatter()
-
-    if not frontmatter then
-      frontmatter = {}
-      startPos = 0
-      endPos = 0
+    -- Existing frontmatter
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+    if not fmStart then
+      -- No frontmatter: create it
+      editor.insertAtPos([==[---
+    status: draft
+    pageDecoration:
+      icon: x
+      tree:
+        priority: 0
+---
+]==], 0, true)
+      return
     end
 
-    -- Update values
-    frontmatter.status = "draft"
+    local contentStart = fmEnd + 1
+    local endStart, endEnd = string.find(text, "\n%-%-%-", contentStart)
 
-    frontmatter.pageDecoration = frontmatter.pageDecoration or {}
-    frontmatter.pageDecoration.icon = "x"
+    if not endStart then
+      -- Invalid/incomplete frontmatter, don't modify it
+      return
+    end
 
-    -- Keep existing tree/etc.
-    local yaml = yaml.stringify(frontmatter)
+    local frontmatter = string.sub(text, contentStart, endStart - 1)
 
-    local replacement = "---\n" .. yaml .. "---\n"
-
-    if endPos == 0 then
-      editor.insertAtPos(replacement, 0, true)
+    -- status: draft
+    if string.match(frontmatter, "\n?status%s*:") or string.match(frontmatter, "^status%s*:") then
+      frontmatter = string.gsub(
+        frontmatter,
+        "([^\n]*status%s*:%s*)[^\n]*",
+        "%1draft",
+        1
+      )
     else
-      editor.replaceRange(replacement, startPos, endPos)
+      frontmatter = "status: draft\n" .. frontmatter
     end
+
+    -- pageDecoration exists
+    if string.match(frontmatter, "pageDecoration%s*:") then
+      -- icon exists somewhere under pageDecoration
+      local before, decoration, after =
+        string.match(frontmatter, "^(.-pageDecoration%s*:\n)(.-)(\n[^%s].*)?$")
+
+      if decoration and string.match(decoration, "\n%s+icon%s*:") then
+        decoration = string.gsub(
+          decoration,
+          "(\n%s+icon%s*:%s*)[^\n]*",
+          "%1x",
+          1
+        )
+      else
+        decoration = "  icon: x\n" .. decoration
+      end
+
+      frontmatter = before .. decoration .. (after or "")
+    else
+      frontmatter = frontmatter ..
+        "\n    pageDecoration:\n" ..
+        "      icon: x\n" ..
+        "      tree:\n" ..
+        "        priority: 0"
+    end
+
+    local newText =
+      string.sub(text, 1, contentStart - 1) ..
+      frontmatter ..
+      string.sub(text, endStart)
+
+    editor.setText(newText)
   end
 }
 
