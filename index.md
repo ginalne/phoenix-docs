@@ -12,10 +12,16 @@ Sebagai pembaca saya harap anda dapat mengabaikan pesan ini, berikut adalah atur
 
 
 <!--
-HARBIIIIIIII KOK BISA DI INTEGRASIKAN DENGAN GINALNE??
+HARBIIIIIIII KOK BISA DI INTEGRASIKAN DENGAN GINALNE?? @yohanes300
 
 bisa dong wkwkwk kan emng dia ngijinin itu, biar gaada username password.
-tolong tambahkan @ginalne diakhir agar orang tau siapa yg nulis wkwk
+tolong tambahkan @ginalne diawal agar orang tau siapa yg nulis wkwk
+
+@yo
+padahal gw ketemu satu apps lagi yang keren bi wkwkwk tp lebih cocok untuk kolaborasi sih 
+
+@ginalne
+apa itu? 
 -->
 ## Frontmatter
 frontmatter adalah section dalam penulisan dokumentasi yang dibuka dengan “---” dan ditutup dengan “---”, isi dari frontmatter ditulis dengan format YAML. 
@@ -68,8 +74,14 @@ Harap pastikan urutan heading tidak salah. Heading 1 diawali #, Heading 2 diawal
 comment adalah section dalam penulisan dokumentasi yang dibuka dengan “<!--” dan ditutup dengan “-(-)>”, isi dari frontmatter ditulis dengan format berikut:
 
 <!--
-  @your_username 
-  Some Comment... 
+  (@)your_username 
+  Some Comment... (@)free mention some here...
+
+  some other comment or replied...
 -->
 
-## 
+## Penutup
+Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
+Terimakasih
+
+Selamat Menulis~
