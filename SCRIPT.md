@@ -482,15 +482,27 @@ slashCommand.define {
   run = function()
     local line = editor.getCurrentLine()
     local ws, prefix, rest = string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.+)$")
+    
+      editor.flashNotification(#ws)
+      editor.flashNotification(prefix)
+      editor.flashNotification(rest)
     local me = identity.own()
     local username = me and me.name or "unknown"
     if username == "unknown" then
       
     editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest, true)
     else
-    editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest .. "[assignee: @" .. username .. "]", true)
+      local finalRest = string.gsub(rest, "|%^|", "")
+      editor.flashNotification(finalRest)
+    editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. finalRest .. "[assignee: @" .. username .. "]|^|", true)
     end
   end
 }
 ```
 Run ${widgets.commandButton "System: Reload"} to reload.
+
+* [TODO] hallo [assignee: @ginalne]
+* [TODO] hallo [assignee: @ginalne] |^|
+* [TODO] Hallo guys [assignee: @ginalne]|^|
+* [TODO] dijamin enak [assignee: @ginalne]
+* 

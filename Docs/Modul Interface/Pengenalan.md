@@ -32,7 +32,7 @@ lihat selengkapnya [[Docs/Modul Interface/Table View/Apa itu Table View]].
 Tolong buatkan deskripsi ini:
 * [TODO] form [assignee: @ginalne]
 * [TODO] timeline [assignee: @ginalne]
-* /
+* [TODO] gallery [assignee: @ginalne]
 -->
 lihat selengkapnya [[Docs/Modul Interface/Form/Apa itu Form]]
 
