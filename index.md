@@ -80,6 +80,7 @@ Task dapat Anda gunakan sebagai catatan mark yang hanya boleh digunakan dalam [[
 Ada beberapa jenis task yang bisa digunakan:
 
 * [ ] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
+* [x] task menjadi kabur ketika selesai
 
 * [IN PROGRESS] Ini task dengan sifat dikerjakan
 * [TO DO] Ini task dengan sifat belum dikerjakan
@@ -87,14 +88,7 @@ Ada beberapa jenis task yang bisa digunakan:
   
 (dengan syntax `* [IN PROGRESS] ` bisa IN PROGRESS , DONE atau TO DO)
 
-```space-style
-#sb-main .cm-editor [data-task-state="DONE"] .sb-task {
-  text-decoration: line-through !important;
-}
-#sb-main .cm-editor [data-task-state="DONE"]>.sb-task {
-  text-decoration: line-through !important;
-}
-```
+
 
 * [] test 
 
