@@ -99,26 +99,52 @@ slashCommand.define {
     end
     
     local total_text = editor.getText()
+    local lines = {}
+    for s in string.gmatch(total_text, "[^\r\n]+") do
+        table.insert(lines, s)
+    end
     
-    local idx = line.from - 1
+    local current_line = editor.getCurrentLine()
+    local current_line_text = current_line.text
+
+    local current_line_index = 1
+    for idx, text in ipairs(lines) do
+        if text == current_line_text then
+            current_line_index = idx
+            break
+        end
+    end
+    
+    local idx = current_line_index - 1
     local username = nil
-    local text_before = string.sub(total_text, 1, idx)
-    local previous_line_text = string.match(text_before, "[^\n]*$")
     
     while idx >= 1 do
-      editor.flashNotification(previous_line_text)
-      username = string.match(previous_line_text, "@([%w_-]+)$")
-      if username then
+        local check_text = lines[idx]
+        if check_text == "<!--" then
           break
-      end
-      idx = idx - 1
-    end
+        end
+      
+        editor.flashNotification(check_text)
+      
+        username = string.match(check_text, "@([%w_-]+)$")
+      
+        editor.flashNotification(username)
 
+      
+        if username then
+            break
+        end
+        
+        idx = idx - 1
+    end
+    
+    -- Hasil pencarian
     if username then
         editor.flashNotification("Username ditemukan di baris ke-" .. idx .. ": " .. username)
     else
         editor.flashNotification("Username tidak ditemukan di baris-baris atas.")
     end
+
   end
 }
 
@@ -139,8 +165,8 @@ slashCommand.define {
 
 <!--
  ginalne at 2026-10-02 19:29 ${widgets.commandButton "reply"}
- yes kenapa bang  
-
+ yes kenapa bang
+ 
  
 -->
 
