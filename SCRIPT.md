@@ -80,7 +80,7 @@ slashCommand.define {
         1
       )
     else
-      frontmatter = "status: release\n" .. frontmatter
+      frontmatter = "    status: release\n" .. frontmatter
     end
 
     ----------------------------------------------------------------
@@ -89,19 +89,24 @@ slashCommand.define {
 
     if not string.match(frontmatter, "^%s+title%s*:") and
        not string.match(frontmatter, "\n%s+title%s*:") then
-      
-      frontmatter =
-        frontmatter
-        .. "\n    title: "
-        .. (title or "")
+    
+      frontmatter = string.gsub(
+        frontmatter,
+        "(status%s*:%s*[^\n]*)",
+        "%1\n    title: " .. (title or ""),
+        1
+      )
     end
-
+    
     if not string.match(frontmatter, "^%s+description%s*:") and
        not string.match(frontmatter, "\n%s+description%s*:") then
-
-      frontmatter =
-        frontmatter
-        .. "\n    description: "
+    
+      frontmatter = string.gsub(
+        frontmatter,
+        "(title%s*:%s*[^\n]*)",
+        "%1\n    description: ",
+        1
+      )
     end
 
     if string.match(frontmatter, "pageDecoration%s*:%s*\n") then
