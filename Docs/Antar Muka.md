@@ -10,7 +10,7 @@
 
 Sebelum memulai tahap ini pastikan anda sudah memenuhi [[Docs/Persyaratan|syaratnya]].
 
-![[Docs/antar+muka1.png]]
+![[Docs/antar+muka1.png|Hallo]]
 Setelah anda berhasil masuk ke dalam satu Pro, anda bisa mengakses beberapa fitur dari Phoenix secara langsung. 
 
 Berikut adalah beberapa bagian antar muka ini:
