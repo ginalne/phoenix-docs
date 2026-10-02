@@ -9,7 +9,7 @@
       metas
 ---
 
-
+# Hello
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
 Run ${widgets.commandButton "System: Reload"} to reload.
@@ -41,9 +41,12 @@ slashCommand.define {
     if not fmStart then
       -- No frontmatter: create it
       local newFrontmatter = "---\n"
-        .. "status: release\n"
-        .. "title: " .. (title or "") .. "\n"
-        .. "description: \n"
+        .. "    status: release\n"
+        .. "    title: " .. (title or "") .. "\n"
+        .. "    description: \n"
+        .. "    pageDecoration: \n"
+        .. "      tree: \n"
+        .. "        priority: 0 \n"
         .. "---\n"
 
       editor.insertAtPos(newFrontmatter, 0, true)
@@ -62,22 +65,18 @@ slashCommand.define {
     local frontmatter =
       string.sub(text, contentStart, endStart - 1)
 
-    ----------------------------------------------------------------
-    -- status: release
-    ----------------------------------------------------------------
-
-    if string.match(frontmatter, "^status%s*:") then
+    if string.match(frontmatter, "^%s+status%s*:") then
       frontmatter = string.gsub(
         frontmatter,
-        "^status%s*:%s*[^\n]*",
-        "status: release",
+        "^%s+status%s*:%s*[^\n]*",
+        "    status: release",
         1
       )
-    elseif string.match(frontmatter, "\nstatus%s*:") then
+    elseif string.match(frontmatter, "\n%s+status%s*:") then
       frontmatter = string.gsub(
         frontmatter,
-        "\nstatus%s*:%s*[^\n]*",
-        "\nstatus: release",
+        "\n%s+status%s*:%s*[^\n]*",
+        "\n    status: release",
         1
       )
     else
@@ -90,7 +89,7 @@ slashCommand.define {
 
     if not string.match(frontmatter, "^%s+title%s*:") and
        not string.match(frontmatter, "\n%s+title%s*:") then
-
+      
       frontmatter =
         frontmatter
         .. "\n    title: "
