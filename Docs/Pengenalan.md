@@ -36,3 +36,4 @@ The Phoenix is a mythical bird that regenerates from its own ashes—symbolizing
 We chose this name because that's exactly what this app empowers you to do: Take outdated, messy, or overwhelming processes… and rebirth them into clean, structured flows.
 
 Phoenix isn’t just a tool—it’s a system that adapts, grows, and evolves with your needs. It’s not about starting from scratch—it's about rising from where you are, better than before.
+

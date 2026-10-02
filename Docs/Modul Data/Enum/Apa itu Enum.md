@@ -8,3 +8,4 @@
 ---
 # Apa itu Enum?
 Enum merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix. Komponen ini 
+

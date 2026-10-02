@@ -8,3 +8,4 @@
 ---
 # Apa itu Variabel?
 _Variabel_ merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix. Komponen ini 
+

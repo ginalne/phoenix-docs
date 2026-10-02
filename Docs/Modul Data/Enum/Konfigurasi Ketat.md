@@ -22,3 +22,4 @@ Externally artinya sesuatu yang diluar Enum. Saat menentukan sebuah inputan deng
 
 >[!note]Tips
 >Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam EnumData tetap tidak dapat terduplikat. Meskipun akan banyak variasi Name yang mirip, Anda dapat menggunakan fitur [[Docs/Modul Data/Enum/EnumData Merge]] agar setiap data yang terelasi dengan EnumData tersebut dapat menjadi satu EnumData.
+

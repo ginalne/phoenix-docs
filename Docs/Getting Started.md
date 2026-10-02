@@ -15,11 +15,14 @@ Baik Anda baru mulai menggunakan Phoenix maupun sedang mendalami API kami, dokum
 Dokumentasi kami disusun secara terstruktur ke dalam beberapa bagian yang intuitif:
 
 [[Docs/Pengenalan]] : Pelajari apa itu Phoenix dan bagaimana cara memulainya dengan cepat.
-[[Docs/Apa itu Phoenix]] : Pelajari apa itu Phoenix dan bagaimana cara memulainya dengan cepat.
+[[Docs/Persyaratan]] : Pelajari persyaratan apa yang diperlukan untuk menggunakan Phoenix.
+[[Docs/Antar Muka]] : Pelajari antar muka saat anda telah memasuki halaman Phoenix.
 
 **Jelajahi Dokumentasi**  
-\[\[Docs/Pengenalan\]\]  
-\[\[Docs/Installasi\]\]  
-\[\[Docs/Antar Muka\]\]
+${query[[
+  from p = index.contentPages()
+  select templates.pageItem(p)
+]]}
 
 Sudah siap? Langsung mulai saja — atau gunakan navigasi di sebelah kiri untuk menjelajahi seluruh dokumentasi!
+

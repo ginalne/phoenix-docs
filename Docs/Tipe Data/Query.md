@@ -13,4 +13,4 @@ Query cukup baik dalam menyimpan konfigurasi penampilan data sehingga digunakan 
 
 ## Format
 DateTime
->[!note] Tipe data ini tidak memiliki format khusus.
+>**note** Tipe data ini tidak memiliki format khusus.

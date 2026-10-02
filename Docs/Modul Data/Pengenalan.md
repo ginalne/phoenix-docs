@@ -32,3 +32,4 @@ lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Enum]].
 Table merupakan komponen yang dapat menyimpan data secara kompleks. Sifat data ini dapat digunakan untuk menyimpan data yang transaksional maupun generik. Table dapat memiliki beberapa [[Docs/Modul Data/Table/TableColumn]] yang masing-masing memiliki format yang berbeda, begitu juga [[Docs/Tipe Data/Expression]] dapat digunakan oleh data ini secara langsung.
 
 lihat selengkapnya [[Docs/Modul Data/Tabel/Apa itu Tabel]].
+

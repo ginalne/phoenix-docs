@@ -23,3 +23,4 @@ Daftar browser yang memberikan performa optimal (Chrome, Edge, Safari), kompatib
 4. Pemahaman mengenai REST API dan perangkat seperti Postman atau cURL (untuk pengembang)
 
 Setelah persiapan anda bisa masuk ke [halaman utama phoenix](https://phoenix.ginalne.com/), setelah itu anda akan masuk ke [[Docs/Antar Muka]]
+

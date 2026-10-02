@@ -46,17 +46,17 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
 ## Admonition
 Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan `>**note**`, `>**warning**`, atau `>**danger**`, isi dari info atau warning dapat ditulis dengan format berikut:
 
-***note*** Judul Info
+>**note** Judul Info
 >Silahkan isi deskripsi info secara bebas
 
 Anda dapat menggunakan perintah `/note-insert` untuk membuat info.
 
->[!warning] Judul Warning
+>**warning** Judul Warning
 >Silahkan isi deskripsi warning secara bebas
 
 Anda dapat menggunakan perintah `/warning-insert` untuk membuat peringatan.
 
->[!danger] Judul Danger
+>**danger** Judul Danger
 >Silahkan isi deskripsi danger secara bebas
 
 Anda dapat menggunakan perintah `/warning-insert` untuk membuat larangan.

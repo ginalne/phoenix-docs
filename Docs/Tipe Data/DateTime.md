@@ -13,4 +13,4 @@ DateTime cukup baik dalam menyimpan data waktu secara presisi, sehingga dapat di
 
 ## Format
 DateTime
->[!note] Tipe data ini tidak memiliki format khusus.
+>**note** Tipe data ini tidak memiliki format khusus.
