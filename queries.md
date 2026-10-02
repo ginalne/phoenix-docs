@@ -17,8 +17,19 @@ ${query[[
 ---
 
 ## Berikut adalah daftar link tapi halamannya masih kosong
+
 ${query[[
   from p = index.aspiringPages()
   select "- [[" .. p.name .. "]] " .. p.page
 ]]}
 
+## Halaman Yatim
+
+${orphanPages()}
+
+## Aspiring Page
+${query[[
+  from tags.aspiring-page
+  select { Halaman = "[[" .. _.name .. "]]" }
+  render "table"
+]]}

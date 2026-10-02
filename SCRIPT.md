@@ -21,6 +21,29 @@ config.set("markdownPrettify.emphasisMarker", "_")
 ```
 
 ```space-lua
+function orphanPages()
+  local orphans = {}
+  -- Mengambil semua nama halaman non-meta
+  for name in query[[ from tags.page where not table.find(_.tags, function(t) return t:startsWith("meta") end) select _.name ]] do
+    orphans[name] = true
+  end
+
+  -- Menghapus halaman dari daftar jika ada halaman lain yang menautkannya
+  for linked in query[[from tags.link select _.toPage]] do
+    orphans[linked] = nil
+  end
+
+  -- Mengubah daftar menjadi tautan markdown yang bisa diklik
+  local clickableLinks = {}
+  for name, _ in pairs(orphans) do
+    table.insert(clickableLinks, "[[" .. name .. "]]")
+  end
+
+  return clickableLinks
+end
+```
+
+```space-lua
 taskState.define {
   name = "TODO"
 }
