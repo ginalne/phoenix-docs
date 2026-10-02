@@ -1,9 +1,15 @@
 ---
     status: draft
+    title: huhuehuehue
+    description: wkeoawke
     pageDecoration:
-      icon: x
+  icon: x
+      #icon: x
       tree:
         priority: 0
+    tags:
+      metax
+      metas
 ---
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
@@ -43,7 +49,6 @@ slashCommand.define {
     local endStart, endEnd = string.find(text, "\n%-%-%-", contentStart)
 
     if not endStart then
-      -- Invalid/incomplete frontmatter, don't modify it
       return
     end
 
@@ -60,32 +65,51 @@ slashCommand.define {
     else
       frontmatter = "status: draft\n" .. frontmatter
     end
-
+    
     -- pageDecoration exists
     if string.match(frontmatter, "pageDecoration%s*:") then
-      -- icon exists somewhere under pageDecoration
-      local before, decoration, after =
-        string.match(frontmatter, "^(.-pageDecoration%s*:\n)(.-)(\n[^%s].*)?$")
+  local before, decoration, after =
+    string.match(
+      frontmatter,
+      "^(.-pageDecoration%s*:\n)(.*)$"
+    )
 
-      if decoration and string.match(decoration, "\n%s+icon%s*:") then
-        decoration = string.gsub(
-          decoration,
-          "(\n%s+icon%s*:%s*)[^\n]*",
-          "%1x",
-          1
-        )
-      else
-        decoration = "  icon: x\n" .. decoration
-      end
+  if decoration then
+    -- Find the end of the pageDecoration block.
+    local block, rest =
+      string.match(decoration, "^(.-)\n([^%s].*)$")
 
-      frontmatter = before .. decoration .. (after or "")
-    else
-      frontmatter = frontmatter ..
-        "\n    pageDecoration:\n" ..
-        "      icon: x\n" ..
-        "      tree:\n" ..
-        "        priority: 0"
+    if not block then
+      block = decoration
+      rest = ""
     end
+
+    if string.match(block, "^%s+icon%s*:") or
+       string.match(block, "\n%s+icon%s*:") then
+
+      block = string.gsub(
+        block,
+        "(%s+icon%s*:%s*)[^\n]*",
+        "%1x",
+        1
+      )
+    else
+      block = "  icon: x\n" .. block
+    end
+
+    frontmatter = before .. block
+
+    if rest ~= "" then
+      frontmatter = frontmatter .. "\n" .. rest
+    end
+  end
+else
+  frontmatter = frontmatter ..
+    "\n    pageDecoration:\n" ..
+    "      icon: x\n" ..
+    "      tree:\n" ..
+    "        priority: 0"
+end
 
     local newText =
       string.sub(text, 1, contentStart - 1) ..
