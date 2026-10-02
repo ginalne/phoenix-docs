@@ -21,11 +21,10 @@ Dokumentasi kami disusun secara terstruktur ke dalam beberapa bagian yang intuit
 
 **Jelajahi Dokumentasi**  
 
-* [[Docs/Modul Data]] Dokumentasi Modul Data
-* [[Docs/Modul Developer]] Dokumentasi Modul Developer
-* [[Docs/Modul Interface]] Dokumentasi Modul Interface
-* [[Docs/Modul Logic]] Dokumentasi Modul Logic
-* [[Docs/Modul Logic]] Dokumentasi Modul Logic
+* [[Docs/Modul Data/Pengenalan|Modul Data]] Dokumentasi Modul Data
+* [[Docs/Modul Developer/Pengenalan|Module Developer]] Dokumentasi Modul Developer
+* [[Docs/Modul Interface/Pengenalan|Module Interface]] Dokumentasi Modul Interface
+* [[Docs/Modul Logic/Pengenalan|Modul Logic]] Dokumentasi Modul Logic
 
 Sudah siap? Langsung mulai saja — atau gunakan navigasi di sebelah kiri untuk menjelajahi seluruh dokumentasi!
 
