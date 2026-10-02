@@ -75,6 +75,7 @@ slashCommand.define {
   name = "asking",
   run = function()
     local line = editor.getCurrentLine()
+
     local ws, prefix, rest =
       string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.*)$")
 
@@ -92,11 +93,23 @@ slashCommand.define {
   name = "answer",
   run = function()
     local line = editor.getCurrentLine()
-    
-    local beforeCursor = string.sub(line.textWithCursor, 1, line.cursorPos)
-    local username = string.match(beforeCursor, "@([%w_%-]+)$")
 
-    editor.flashNotification(line.textWithCursor)
+    if line.from <= 1 then
+        return
+    end
+    
+    local total_text = editor.getText()
+    local text_before = string.sub(total_text, 1, line.from - 1)
+    local previous_line_text = string.match(text_before, "[^\n]*$")
+    
+    editor.flashNotification(previous_line_text)
+    
+    local username = string.match(previous_line_text, "@([%w_-]+)$")
+    if username then
+        editor.flashNotification("Username ditemukan: " .. username)
+    else
+        editor.flashNotification("Tidak ada username @ di akhir baris sebelumnya", "warn")
+    end
   end
 }
 
@@ -117,7 +130,7 @@ slashCommand.define {
 
 <!--
  ginalne at 2026-10-02 19:29 ${widgets.commandButton "reply"}
- yes kenapa bang 
+ yes kenapa bang  
 
  
 -->
