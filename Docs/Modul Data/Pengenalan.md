@@ -24,12 +24,17 @@ Variabel merupaakan komponen yang dikenali semua komponen sebagai satu sumber un
 lihat selengkapnya [[Docs/Modul Data/Variabel/Apa itu Variabel]].
 
 ## Enum
-Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Salah satu atribut penting dalam Enum adalah [[Docs/Modul Data/Enum/Konfigurasi Ketat]].
+Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Setiap Enum memiliki banyak [[Docs/Tipe Data/EnumData]] didalamnya. Salah satu atribut penting dalam Enum adalah [[Docs/Modul Data/Enum/Konfigurasi Ketat]].
 
 lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Enum]].
 
 ## Tabel
-Table merupakan komponen yang dapat menyimpan data secara kompleks. Sifat data ini dapat digunakan untuk menyimpan data yang transaksional maupun generik. Table dapat memiliki beberapa [[Docs/Modul Data/Table/TableColumn]] yang masing-masing memiliki format yang berbeda, begitu juga [[Docs/Tipe Data/Expression]] dapat digunakan oleh data ini secara langsung.
+Table merupakan komponen yang dapat menyimpan data secara kompleks. Sifat data ini dapat digunakan untuk menyimpan data yang transaksional maupun generik. Table dapat memiliki beberapa [[Docs/Tipe Data/Column]] yang masing-masing memiliki format yang berbeda, dan memiliki [[Docs/Tipe Data/Row]] yang masing-masing memiliki  begitu juga [[Docs/Tipe Data/Expression]] dapat digunakan oleh data ini secara langsung.
+
+lihat selengkapnya [[Docs/Modul Data/Tabel/Apa itu Tabel]].
+
+## Tabel
+Tree merupakan komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini dapat digunakan untuk menyimpan data relasional yang bercabang. Tree dapat memiliki beberapa [[Docs/Modul Data/Table/TableColumn]] yang masing-masing memiliki format yang berbeda, begitu juga [[Docs/Tipe Data/Expression]] dapat digunakan oleh data ini secara langsung.
 
 lihat selengkapnya [[Docs/Modul Data/Tabel/Apa itu Tabel]].
 

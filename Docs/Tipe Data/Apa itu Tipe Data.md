@@ -6,3 +6,4 @@
         priority: 1
 ---
 # Apa itu Tipe Data
+
