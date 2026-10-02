@@ -469,7 +469,7 @@ slashCommand.define {
     end
     
     if username then
-      editor.flashNotification("we got you " .. idx .. "/" .. #lines .. " " .. username)
+      --editor.flashNotification("we got you " .. idx .. "/" .. #lines .. " " .. username)
       while idx < #lines do
           local check_text = lines[idx]
           if check_text == "-->" then
@@ -496,6 +496,7 @@ slashCommand.define {
     end
   end
 }
+
 slashCommand.define {
   name = "todo task",
   run = function()
