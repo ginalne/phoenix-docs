@@ -33,7 +33,7 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
    * released : jika halaman dipublish ke website
 
 ### title
-   *title* adalah atribut untuk menamakan dokumen dan akan tampil di judul tab website (dengan contoh seperti **Some Title | Phoenix Documentation**), jika tidak diisi, maka Heading 1 akan dijadikan sebagai Judul. Judul akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.
+   *title* adalah atribut untuk menamakan dokumen dan akan tampil di judul tab website (jika diisi dengan ***“Some Title”***, maka hasil diwebsite akan seperti **Some Title | Phoenix Documentation**), jika tidak diisi, maka Heading 1 akan dijadikan sebagai Judul. Judul akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.
 
 ### description
    *description* adalah atribut untuk menjelaskan deskripsi dokumen dan akan tampil di SEO tag website (dengan contoh seperti **Halaman yang menjelaskan aturan dalam penulisan dokumentasi**), jika tidak diisi, maka deskripsi akan kosong. Deskripsi akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.
@@ -79,6 +79,13 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan “<!--”
 
   some other comment or replied...
 -->
+
+## Text Formatting
+Sebagai Penulis baru tentu menggunakan Silverbullet tidaklah mudah, berikut adalah hint yang perlu diingat agar mudah mengetik:
+
+1. Huruf Miring (_italic_), dengan cara ketik underscore (_) dipembuka dan penutup, seperti contoh *ini adalah teks miring*.
+2. Huruf Tebal (**bold**), dengan cara ketik bintang 2zx (**) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
+3. Huruf Miring + Tebal (***italic + bold***), dengan cara ketik bintang (***) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
 
 ## Penutup
 Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
