@@ -81,10 +81,17 @@ Ada beberapa jenis task yang bisa digunakan:
 
 * [ ] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
 
-* [IN PROGRESS] Ini task dengan judul
+* [IN PROGRESS] Ini task dengan sifat dikerjakan
+* [TO DO] Ini task dengan sifat belum dikerjakan
+* [DONE] Ini task dengan sifat selesai
+  
 (dengan syntax `* [IN PROGRESS] ` bisa IN PROGRESS , DONE atau TO DO)
-
-* [TO DO] test 
+```css
+#sb-main .cm-editor [data-task-state="DONE"] {
+  text-decoration: line-through !important;
+}
+```
+* [] test 
 
 ## Penutup
 Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
