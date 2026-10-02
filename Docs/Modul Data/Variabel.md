@@ -1,6 +1,7 @@
 ---
     status: group
     pageDecoration:
+      icon: folder
       tree:
-        priority: -1
+        priority: 0
 ---
