@@ -10,18 +10,6 @@ Sebagai pembaca saya harap anda dapat mengabaikan pesan ini, berikut adalah atur
 >[!warning] Wajib dibaca oleh penulis!
 >Anda boleh mengedit halaman ini jika diperlukan.
 
-<!--
-HARBIIIIIIII KOK BISA DI INTEGRASIKAN DENGAN GINALNE?? @yohanes300
-
-bisa dong wkwkwk kan emng dia ngijinin itu, biar gaada username password.
-tolong tambahkan @ginalne diawal agar orang tau siapa yg nulis wkwk
-
-@yo
-padahal gw ketemu satu apps lagi yang keren bi wkwkwk tp lebih cocok untuk kolaborasi sih 
-
-@ginalne
-apa itu? 
--->
 ## Frontmatter
 frontmatter adalah section dalam penulisan dokumentasi yang dibuka dengan `---` dan ditutup dengan `---`, isi dari frontmatter ditulis dengan format YAML. 
 
