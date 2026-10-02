@@ -1,13 +1,9 @@
 ---
-    status: draft
+    status: release
     title: Hello
-    description:
+    description: 
     tags:
       meta
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 0
 ---
 # Hello
 
@@ -307,11 +303,11 @@ slashCommand.define {
     end
     
     if string.match(frontmatter, "pageDecoration%s*:") then
-  local before, decoration, after =
-    string.match(
-      frontmatter,
-      "^(.-pageDecoration%s*:\n)(.*)$"
-    )
+      local before, decoration, after =
+        string.match(
+          frontmatter,
+          "^(.-pageDecoration%s*:\n)(.*)$"
+        )
 
   if decoration then
     local block, rest =
@@ -353,11 +349,27 @@ slashCommand.define {
     end
   end
 else
-  frontmatter = frontmatter ..
-    "\n    pageDecoration:\n" ..
-    "      icon: x\n" ..
-    "      tree:\n" ..
-    "        priority: 0"
+  if (string.match(frontmatter, "(description%s*:%s*[^\n]*)")) then
+    frontmatter = string.gsub(
+      frontmatter,
+      "(description%s*:%s*[^\n]*)",
+      "%1\n    pageDecoration:\n" ..
+      "      icon: x\n" ..
+      "      tree:\n" ..
+      "        priority: 0",
+      1
+    )
+  else
+    frontmatter = string.gsub(
+      frontmatter,
+      "(status%s*:%s*[^\n]*)",
+      "%1\n    pageDecoration:\n" ..
+      "      icon: x\n" ..
+      "      tree:\n" ..
+      "        priority: 0",
+      1
+    )
+  end
 end
 
     local newText =
