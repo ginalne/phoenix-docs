@@ -14,7 +14,8 @@ Sebagai pembaca saya harap anda dapat mengabaikan pesan ini, berikut adalah atur
 <!--
 HARBIIIIIIII KOK BISA DI INTEGRASIKAN DENGAN GINALNE??
 
-bisa dong wkwkwk kan emng dia ngijinin itu, biar gaada username password. @
+bisa dong wkwkwk kan emng dia ngijinin itu, biar gaada username password.
+tolong tambahkan @ginalne diakhir agar orang tau siapa yg nulis wkwk
 -->
 ## Frontmatter
 frontmatter adalah section dalam penulisan dokumentasi yang dibuka dengan “---” dan ditutup dengan “---”, isi dari frontmatter ditulis dengan format YAML. 
@@ -62,5 +63,13 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
 Sebagai penulis Anda wajib menambahkan judul pada baris pertama diawali dengan mengetik # dan spasi.
 
 Harap pastikan urutan heading tidak salah. Heading 1 diawali #, Heading 2 diawali ##, Heading 3 diawali ###. Jangan gunakan Heading 1 lebih dari 1 kali.
+
+## Comment
+comment adalah section dalam penulisan dokumentasi yang dibuka dengan “<!--” dan ditutup dengan “-(-)>”, isi dari frontmatter ditulis dengan format berikut:
+
+<!--
+  @your_username 
+  Some Comment... 
+-->
 
 ## 
