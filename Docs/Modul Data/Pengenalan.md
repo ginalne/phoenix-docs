@@ -24,7 +24,7 @@ Variabel merupakan komponen yang dikenali semua komponen sebagai satu sumber uni
 lihat selengkapnya [[Docs/Modul Data/Variabel/Apa itu Variabel]].
 
 ## Enum
-Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Setiap Enum memiliki banyak [[Docs/Tipe Data/EnumData]] didalamnya. Salah satu atribut penting dalam Enum adalah [[Docs/Modul Data/Enum/Konfigurasi Ketat]].
+Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Setiap Enum memiliki banyak [[Docs/Tipe Data/EnumData]] didalamnya. Salah satu atribut penting dalam Enum adalah [[Docs/Modul Data/Enum/Konfigurasi Tegas]].
 
 lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Enum]].
 
