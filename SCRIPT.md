@@ -88,15 +88,18 @@ slashCommand.define {
   end
 }
 
-slashCommand.define {
-  name = "toggle mention",
+command.define {
+  name = "reply",
   run = function()
     local line = editor.getCurrentLine()
 
     local text = line.textWithCursor
+    
+    editor.flashNotification(text)
 
     if string.find(text, "@") then
       text = string.gsub(text, "@([%w_%-]+)", "%1", 1)
+      editor.flashNotification(text)
     else
       -- If you want to turn it back on, you'll need to know
       -- which word should become the mention.
@@ -121,7 +124,7 @@ slashCommand.define {
 
 
 <!--
- @ginalne at 2026-10-02 19:29 ${widgets.commandButton "toggle mention"}
+ ginalne at 2026-10-02 19:29 ${widgets.commandButton "reply"}
  
 -->
 
