@@ -4,7 +4,7 @@
     tags:
       meta
 ---
-# Hello...
+# Hello...:test
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
 Run ${widgets.commandButton "System: Reload"} to reload.
@@ -24,12 +24,12 @@ slashCommand.define {
   run = function()
     local text = editor.getText()
 
-    local title = string.match(text, "\n#%s+([^\n]+)")
+    local title =
+      string.match(text, "\n#%s+([^\n]+)")
       or string.match(text, "^#%s+([^\n]+)")
       or string.match(text, "\n%*%s+([^\n]+)")
       or string.match(text, "^%*%s+([^\n]+)")
-
-    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+    title = title:gsub("\\", "\\\\"):gsub('"', '\\"')
 
     if not fmStart then
       local newFrontmatter = "---\n"
