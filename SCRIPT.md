@@ -83,10 +83,8 @@ slashCommand.define {
     local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
 
-    local text = ws .. "<!--\n `@" .. username .. "` at " .. datetime .. "\n-->"
+    local text = ws .. "<!--\n `@" .. username .. "` at " .. datetime .. "\n |^|\n-->"
     editor.replaceRange(line.from, line.to, text, true)
-    editor.flashNotification(tostring(#ws))
-    editor.setCursor(line.from + #ws + 4)
   end
 }
 
@@ -102,6 +100,9 @@ slashCommand.define {
 
 ```
 
-
+<!--
+ `@ginalne` at 2026-10-02 19:23
+ ini gimana bang? @yohanes300
+-->
 
 Run ${widgets.commandButton "System: Reload"} to reload.
