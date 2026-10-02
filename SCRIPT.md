@@ -2,35 +2,51 @@
   tags: meta/library
 ---
 
+
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
 Run ${widgets.commandButton "System: Reload"} to reload.
-## User configuration
-Anything you add to the block below is yours, edit freely.
-```space-lua
--- Add custom configuration here, e.g.:
--- config.set("shortWikiLinks", false)
-```
+
 ## Managed by the Configuration Manager
 The block below is maintained by the ${widgets.commandButton("Configuration Manager", "Configuration: Open")}. Prefer editing it through the UI, although simple hand edits should survive.
 ```space-lua
 -- managed-by: configuration-manager
 config.set("markdownPrettify.emphasisMarker", "_")
 ```
+
 ```space-lua
 -- priority: 10
 slashCommand.define {
   name = "draft",
   run = function()
-    editor.insertAtPos([==[---
-    status: draft
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 0
----
-]==], 0, true)
+    local text = editor.getText()
+    if text:match("^%-%-%-[\r\n]") then
+      text = text:gsub("^(%-%-%-.-[\r\n])  status:[^\r\n]*([\r\n].-%-%-%-)", "%1  status: draft%2")
+
+      -- tambahin status kalo gaada
+      if not text:match("^%-%-%-.-[\r\n]  status:") then
+        text = text:gsub("^(%-%-%-[\r\n])", "%1  status: draft\n")
+      end
+      
+      if text:match("pageDecoration:%s*[\r\n]%s+icon:") then
+        text = text:gsub("(pageDecoration:%s*[\r\n]%s+icon:%s*)[^\r\n]*", "%1x")
+      else
+        text = text:gsub("^(%-%-%-.-[\r\n])", "%1pageDecoration:\n  icon: x\n  tree:\n    priority: 0\n")
+      end
+      
+      editor.setText(text)
+    else
+      editor.insertAtPos([==[---
+      status: draft
+      pageDecoration:
+        icon: x
+        tree:
+          priority: 0
+      ---
+      ]==], 0, true)
+    end
   end
 }
+
 slashCommand.define {
   name = "released",
   run = function()
@@ -53,7 +69,7 @@ slashCommand.define {
     editor.insertAtPos([==[---
     status: group
     pageDecoration:
-      icon: folder
+      icon: x
       tree:
         priority: 0
 ---
