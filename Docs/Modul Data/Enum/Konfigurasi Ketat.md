@@ -13,7 +13,7 @@ Enum memiliki atribut Name dan Description yang muncul ketika pengguna sedang me
 ## Mengatur Konfigurasi
 Anda dapat mengaturnya melalui tombol Edit Enum dalam halaman kerja atau saat membuat [[Docs/Modul Data/Enum/Apa itu Enum|Komponen Enum]] pertama kali.
 
-![[Docs/Modul Data/Enum/create-new-enum.png]]
+![[Docs/Modul Data/Enum/create-new-enum.png|Halaman Tambah Enum]]
 Kolom _Strict On Selected_ dapat diubah dengan implikasi seperti berikut:
 * Disabled to insert externally : Ketat, EnumData tidak bisa ditambahkan saat pengguna atau Anda melakukan input bebas terhadap Enum ini.
 * _Enable to insert externally_ : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.

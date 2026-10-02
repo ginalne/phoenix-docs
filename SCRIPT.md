@@ -21,56 +21,6 @@ config.set("markdownPrettify.emphasisMarker", "_")
 ```
 
 ```space-lua
-function orphanPages()
-  local orphans = {}
-  -- Mengambil semua nama halaman non-meta
-  for name in query[[
-    from tags.page
-    where not table.find(_.tags,
-    function(t) return t:startsWith("meta") end)
-    select _.name ]] do
-    orphans[name] = true
-  end
-
-  for linked in query[[from tags.link select _.toPage]] do
-    orphans[linked] = nil
-  end
-
-  local clickableLinks = {}
-  for name, _ in pairs(orphans) do
-    table.insert(clickableLinks, "[[" .. name .. "]]")
-  end
-
-  return clickableLinks
-end
-
-function orphanAttachmentsLinks()
-  local checkedText = {}
-  for name in query[[
-    from tags.page
-    where not table.find(_.tags, function(t) return t:startsWith("meta") end)
-    select _.name ]] do
-    -- orphans[name] = true
-  end
-
-  
-  for linked in query[[from  select _.toPage]] do
-    table.insert(checkedText, linked)
-  end
-
-  table.insert(checkedText, "Empty bro")
-
-  --local clickableLinks = {}
---for name, _ in pairs(images) do
-  --  table.insert(clickableLinks, "[[" .. name .. "]]")
-  --end
-
-  return checkedText
-end
-
-```
-
-```space-lua
 taskState.define {
   name = "TODO"
 }

@@ -19,25 +19,8 @@ ${query[[
 
 ## Berikut adalah daftar link tapi halamannya masih kosong
 
->**danger** bahaya
+>**danger** Cepet bikin!
 >${query[[
   from p = index.aspiringPages()
-  select "- <i style=\"color:#a00\">" .. p.name .. "</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
+  select "- <i style=\"color:#c22\">" .. p.name .. "</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
 ]]}
-
----
-
-${query[[
-  from tags.page select _.text
-]]}
-
-## Attachment Yatim
-${orphanAttachmentsLinks()}
-
----
-
-## Halaman Yatim
-
-${orphanPages()}
-
----
