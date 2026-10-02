@@ -494,7 +494,7 @@ slashCommand.define {
       if rest ~= "|^|" then
         rest = string.gsub(rest, "|%^|", "")
         final = "|^|"
-        final = "|^|"
+        space = ""
       end
     editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest .. space .. "[assignee: @" .. username .. "]" .. final, true)
     end
@@ -502,9 +502,3 @@ slashCommand.define {
 }
 ```
 Run ${widgets.commandButton "System: Reload"} to reload.
-
-* [TODO] [assignee: @ginalne]
-* [TODO] hallo d/todo [assignee: @ginalne]
-* [TODO] bajian[assignee: @ginalne]|^|
-* [TODO] todo [assignee: @ginalne]
-* [TODO] bajingan lah [assignee: @ginalne]
