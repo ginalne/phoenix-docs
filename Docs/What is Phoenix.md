@@ -1,9 +1,8 @@
 ---
-    status: released
+    status: release
     title: Apa itu Phoenix
     description: Halaman pendahuluan untuk menjelaskan phoenix secara umum.
-    pageDecoration:
-      #icon: empty
+    pageDecoration: 
       tree:
         priority: 3
     tags:
