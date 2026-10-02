@@ -142,7 +142,7 @@ slashCommand.define {
         )
         block = string.gsub(
           block,
-          "(%s+icon%s*:%s*)[^\n]*",
+          "%s+icon%s*:%s*x%s*$",
           "",
           1
         )
