@@ -62,17 +62,18 @@ Sebagai Penulis baru tentu menggunakan Silverbullet tidaklah mudah, berikut adal
 1. Huruf Miring (_italic_), dengan cara ketik underscore (_) dipembuka dan penutup, seperti contoh *ini adalah teks miring*.
 2. Huruf Tebal (**bold**), dengan cara ketik bintang 2x (**) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
 3. Huruf Miring + Tebal (***italic + bold***), dengan cara ketik bintang 3x (***) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
+4. Penerangan (==Highlighting==), dengan cara ketik simbol sama dengan 2x `==` dipembuka dan penutup, seperti contoh ==highlight saya==.
 
 ## List
 Ada 2 jenis list yang digunakan:
 
 ### List tanpa nomor
-  adalah dengan * atau - diawal ditambah spasi:
+  adalah dengan * atau - diawal lalu ditambah spasi:
   * ini list tanpa nomor
   * ini daftar selanjutnya
     
 ### List dengan nomor
-  adalah dengan nomor diawal ditambah spasi:
+  adalah dengan nomor diawal lalu ditambah spasi:
   1. Ini item pertama
   2. Ini item kedua
 
@@ -88,7 +89,7 @@ Ada beberapa jenis task yang bisa digunakan:
 * [TO DO] Ini task dengan sifat belum dikerjakan
 * [DONE] Ini task dengan sifat selesai
   
-(dengan syntax `* [IN PROGRESS] ` bisa IN PROGRESS , DONE atau TO DO)
+(dengan syntax `* [IN PROGRESS]`. status bisa IN PROGRESS , DONE atau TO DO)
 
 ## Quotes
 Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>` :
