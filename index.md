@@ -23,7 +23,7 @@ padahal gw ketemu satu apps lagi yang keren bi wkwkwk tp lebih cocok untuk kolab
 apa itu? 
 -->
 ## Frontmatter
-frontmatter adalah section dalam penulisan dokumentasi yang dibuka dengan “---” dan ditutup dengan “---”, isi dari frontmatter ditulis dengan format YAML. 
+frontmatter adalah section dalam penulisan dokumentasi yang dibuka dengan `---` dan ditutup dengan `---`, isi dari frontmatter ditulis dengan format YAML. 
 
 Lihat lebih lengkap [[frontmatter guidance| atribute penting frontmatter]].
 
@@ -33,13 +33,15 @@ Sebagai penulis Anda wajib menambahkan judul pada baris pertama diawali dengan m
 Harap pastikan urutan heading tidak salah. Heading 1 diawali #, Heading 2 diawali ##, Heading 3 diawali ###. Jangan gunakan Heading 1 lebih dari 1 kali.
 
 ## Comment
-comment adalah section dalam penulisan dokumentasi yang dibuka dengan “<!--” dan ditutup dengan “-(-)>”, isi dari frontmatter ditulis dengan format berikut:
+comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan ditutup dengan `-->`, isi dari frontmatter ditulis dengan format berikut:
 
 <!--
-  (@)your_username 
-  Some Comment... (@)free mention some here...
+  `@your_username` 
+  Some Comment... `@free` mention some here...
 
   some other comment or replied...
+  *[ ] test 
+  
 -->
 
 ## Info dan Warning

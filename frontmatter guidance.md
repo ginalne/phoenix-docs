@@ -33,6 +33,14 @@ Contoh basic untuk dokumen released
 ---
 ```
 
+Secara contoh berikut adalah atribut penting untuk frontmatter:
+1. [[frontmatter guidance#status|status]]
+2. [[frontmatter guidance#title|title]]
+3. [[frontmatter guidance#description|description]]
+4. [[frontmatter guidance#pageDecoration.icon|pageDecoration.icon]]
+5. [[frontmatter guidance#pageDecoration.tree.priority|pageDecoration.tree.priority]]
+6. [[frontmatter guidance#tags|tags]]
+
 Berikut penjelasan atribut penting yang bisa atau wajib digunakan.
 
 ### status
