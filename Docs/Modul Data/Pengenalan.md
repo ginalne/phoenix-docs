@@ -16,9 +16,9 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 4. [[#Tree]]
 
 ## Variabel
-Variabel merupaakan komponen yang dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja (Pro) baru dan tidak dapat dihapus.
+Variabel merupakan komponen yang dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja (Pro) baru dan tidak dapat dihapus.
 
->**note** Saran
+>**warning** Harap hati-hati
 >Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Modul Developer/Workspace/Apa itu Workspace]].
 
 lihat selengkapnya [[Docs/Modul Data/Variabel/Apa itu Variabel]].
@@ -31,7 +31,7 @@ lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Enum]].
 ## Tabel
 Table merupakan komponen yang dapat menyimpan data secara kompleks. Sifat data ini dapat digunakan untuk menyimpan data yang transaksional maupun generik. Table dapat memiliki beberapa [[Docs/Tipe Data/Column]] yang masing-masing memiliki format yang berbeda, dan memiliki [[Docs/Tipe Data/Row]] yang masing-masing memiliki [[Docs/Tipe Data/TableData]] sesuai kolom yang tersedia. [[Docs/Tipe Data/Expression]] dapat berfungsi oleh komponen ini secara langsung.
 
-lihat selengkapnya [[Docs/Modul Data/Tabel/Apa itu Tabel]].
+lihat selengkapnya [[Docs/Modul Data/Table/Apa itu Table]].
 
 ## Tree
 Tree merupakan komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini dapat digunakan untuk menyimpan data relasional yang bercabang. Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu atribut penting dalam Tree adalah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].

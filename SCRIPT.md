@@ -1,17 +1,10 @@
 ---
     status: draft
-    title: Hello
     description: 
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 0
     tags:
       meta
 ---
-# Hello
-
-
+# Hello...
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
 Run ${widgets.commandButton "System: Reload"} to reload.
@@ -354,7 +347,6 @@ slashCommand.define {
   end
 else
   if (string.match(frontmatter, "(description[ \t]*:[ \t]*[^\r\n]*)")) then
-    editor.flashNotification(frontmatter)
     frontmatter = string.gsub(
       frontmatter,
       "(description[ \t]*:[ \t]*[^\r\n]*)",
@@ -365,7 +357,6 @@ else
       "        priority: 0",
       1
     )
-    editor.flashNotification(frontmatter)
   elseif (string.match(frontmatter, "(title[ \t]*:[ \t]*[^\r\n]*)")) then
     frontmatter = string.gsub(
       frontmatter,
