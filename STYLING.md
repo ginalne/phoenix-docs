@@ -22,3 +22,15 @@
   opacity: .5 !important;
 }
 ```
+
+```space-lua
+slashCommand.define {
+  name = "timestamp",
+  run = function()
+    editor.insertAtCursor(mvm_get_timestamp())
+  end
+}
+```
+
+> **danger** Danger
+> What?
