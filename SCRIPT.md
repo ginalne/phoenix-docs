@@ -92,20 +92,10 @@ command.define {
   name = "reply",
   run = function()
     local line = editor.getCurrentLine()
-
-    local text = line.textWithCursor
+    local beforeCursor = string.sub(line.textWithCursor, 1, line.cursorPos)
+    local username = string.match(beforeCursor, "`@([%w_%-]+)$")
     
-    editor.flashNotification(text)
-
-    if string.find(text, "@") then
-      text = string.gsub(text, "@([%w_%-]+)", "%1", 1)
-      editor.flashNotification(text)
-    else
-      -- If you want to turn it back on, you'll need to know
-      -- which word should become the mention.
-    end
-
-    editor.replaceRange(line.from, line.to, text, true)
+    editor.flashNotification(username)
   end
 }
 
@@ -125,6 +115,8 @@ slashCommand.define {
 
 <!--
  ginalne at 2026-10-02 19:29 ${widgets.commandButton "reply"}
+ yes kenapa bang
+
  
 -->
 
