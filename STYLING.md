@@ -10,11 +10,11 @@
   color: #AF2 !important;
 }
 /* Warnai orange terang */
-#sb-main .cm-editor [data-task-state="TO DO"] ~ .sb-task {
+#sb-main .cm-editor [data-task-state="TODO"] ~ .sb-task {
   color: #FF5 !important;
 }
 /* Warnai kuning terang */
-#sb-main .cm-editor [data-task-state="IN PROGRESS"] ~ .sb-task {
+#sb-main .cm-editor [data-task-state="PROGRESS"] ~ .sb-task {
   color: #FA2 !important;
 }
 /* Buat task yang diceklist menjadi redup */

@@ -70,23 +70,28 @@ Task dapat Anda gunakan sebagai catatan mark yang hanya boleh digunakan dalam [[
 
 Ada beberapa jenis task yang bisa digunakan:
 
-* [x] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
-* [x] task menjadi kabur ketika selesai
+### Checbox Task
+Dengan syntax `* [ ]`. contohnya:
 
-* [TO DO] Ini task dengan sifat dikerjakan [priority: high] [assignee: @ginalne]
-* [IN PROGRESS] Ini task dengan sifat belum dikerjakan
+* [ ] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
+* [ ] task menjadi kabur ketika selesai
+      
+## State Task
+Dengan syntax `* [IN PROGRESS]`. status bisa PROGRESS , DONE atau TODO. contohnya:
+
+* [TODO] Ini task dengan sifat dikerjakan [priority: high] [assignee: @ginalne]
+* [PROGRESS] Ini task dengan sifat belum dikerjakan
 * [DONE] Ini task dengan sifat selesai
   
-(dengan syntax `* [IN PROGRESS]`. status bisa IN PROGRESS , DONE atau TO DO)
 
 ## Quotes
-Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>` :
+Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>`, contohnya:
 
 > “If you don’t know where you’re going, you may not get there.”
 > — Yogi Berra
 
 ## Penutup
-Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
+Sekian aturan yang wajib diikuti oleh Penulis. Harap di ingat.
 Terimakasih
 
 Selamat Menulis~
