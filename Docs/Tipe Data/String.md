@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "String"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
 ---

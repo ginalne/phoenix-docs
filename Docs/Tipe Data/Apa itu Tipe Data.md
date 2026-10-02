@@ -1,9 +1,9 @@
 ---
-    status: draft
+    status: release
+    title: "Apa itu Tipe Data"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 1
 ---
 # Apa itu Tipe Data
-

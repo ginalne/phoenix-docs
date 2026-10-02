@@ -28,12 +28,6 @@ Table View merupakan komponen yang dapat mempermudah Anda mengelola data Tabel s
 lihat selengkapnya [[Docs/Modul Interface/Table View/Apa itu Table View]].
 
 ## Form
-<!--
-Tolong buatkan deskripsi ini:
-* [TODO] form [assignee: @ginalne]
-* [TODO] timeline [assignee: @ginalne]
-* [TODO] gallery [assignee: @ginalne]
--->
 lihat selengkapnya [[Docs/Modul Interface/Form/Apa itu Form]]
 
 ## Timeline
@@ -50,3 +44,16 @@ lihat selengkapnya [[Docs/Modul Interface/Canvas/Apa itu Canvas]]
 
 ## Space
 lihat selengkapnya [[Docs/Modul Interface/Space/Apa itu Space]]
+
+<!--
+  `@ginalne` <small style="opacity: 0.5">at 2026-10-03 01:13</small>
+  Tolong sih bantu @everynyaw
+  
+  Tolong buatkan deskripsi ini:
+* [TODO] form [assignee: @ginalne]
+* [TODO] timeline [assignee: @ginalne]
+* [TODO] gallery [assignee: @ginalne]
+* [TODO] kanban [assignee: @ginalne]
+* [TODO] canvas [assignee: @ginalne]
+* [TODO] space [assignee: @ginalne]
+-->
