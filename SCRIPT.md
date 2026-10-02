@@ -78,10 +78,12 @@ slashCommand.define {
     local ws, prefix, rest =
       string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.*)$")
 
-    local username = "test"--system.getCurrentUser()
+    local me = identity.own()
+    local name = me and JSON.stringify(me) or "unknown"
+    local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
 
-    local text = ws .. "<!--\ntest @" .. username .. " - " .. datetime .. "\n-->"
+    local text = ws .. "<!--\n" .. name .. " @" .. username .. " - " .. datetime .. "\n-->"
     editor.replaceRange(line.from, line.to, text, true)
     editor.setCursor(line.from + #ws + 4)
   end
@@ -99,10 +101,6 @@ slashCommand.define {
 
 ```
 
-<!--
-test @test - 2026-10-02 19:10
-----
-test @test - 2026-10-02 19:10
--->
+
 
 Run ${widgets.commandButton "System: Reload"} to reload.
