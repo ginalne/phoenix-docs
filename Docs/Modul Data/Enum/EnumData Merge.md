@@ -1,5 +1,7 @@
 ---
-    status: draft
+    status: release
+    title: EnumData Merge
+    description: 
     pageDecoration:
       icon: x
 ---

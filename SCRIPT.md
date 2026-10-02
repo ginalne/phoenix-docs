@@ -1,8 +1,8 @@
 ---
     status: draft
-    tags: meta
+    pageDecoration:
+      icon: x
 ---
-
 # Hello
 
 
