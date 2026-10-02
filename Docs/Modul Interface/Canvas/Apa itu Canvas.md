@@ -1,7 +1,7 @@
 ---
     status: release
     title: "Apa itu Canvas?"
-    description: Canvas_ merupakan salah satu komponen dalam modul Interface di Phoenix.
+    description: Canvas merupakan salah satu komponen dalam modul Interface di Phoenix.
     pageDecoration:
       tree:
         priority: 4
