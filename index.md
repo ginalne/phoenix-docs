@@ -86,11 +86,16 @@ Ada beberapa jenis task yang bisa digunakan:
 * [DONE] Ini task dengan sifat selesai
   
 (dengan syntax `* [IN PROGRESS] ` bisa IN PROGRESS , DONE atau TO DO)
-```css
-#sb-main .cm-editor [data-task-state="DONE"] {
+
+```space-style
+#sb-main .cm-editor [data-task-state="DONE"] .sb-task {
+  text-decoration: line-through !important;
+}
+#sb-main .cm-editor [data-task-state="DONE"]>.sb-task {
   text-decoration: line-through !important;
 }
 ```
+
 * [] test 
 
 ## Penutup
