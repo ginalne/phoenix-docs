@@ -79,12 +79,13 @@ slashCommand.define {
       string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.*)$")
 
     local me = identity.own()
-    local name = me and JSON.stringify(me) or "unknown"
+    
     local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
 
-    local text = ws .. "<!--\n" .. name .. " @" .. username .. " - " .. datetime .. "\n-->"
+    local text = ws .. "<!--\n `@" .. username .. "` at " .. datetime .. "\n-->"
     editor.replaceRange(line.from, line.to, text, true)
+    editor.flashNotification(tostring(#ws))
     editor.setCursor(line.from + #ws + 4)
   end
 }
