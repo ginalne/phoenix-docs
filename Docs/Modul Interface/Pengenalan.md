@@ -50,7 +50,7 @@ lihat selengkapnya [[Docs/Modul Interface/Space/Apa itu Space]]
   Tolong sih bantu @everynyaw
   
   Tolong buatkan deskripsi ini:
-* [DONE] form [assignee: @ginalne]
+* [TODO] form [assignee: @ginalne]
 * [TODO] timeline [assignee: @ginalne]
 * [TODO] gallery [assignee: @ginalne]
 * [TODO] kanban [assignee: @ginalne]
