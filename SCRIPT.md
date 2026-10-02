@@ -20,6 +20,19 @@ The block below is maintained by the ${widgets.commandButton("Configuration Mana
 config.set("markdownPrettify.emphasisMarker", "_")
 ```
 
+```space-lua
+taskState.define {
+  name = "TODO"
+}
+
+taskState.define {
+  name = "PROGRESS"
+}
+
+taskState.define {
+  name = "DONE"
+}
+```
 
 ```space-lua
 -- priority: 10

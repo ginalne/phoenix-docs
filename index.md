@@ -120,8 +120,8 @@ Dengan syntax `* [ ]`. contohnya:
 ## State Task
 Dengan mengetik syntax `* [STATE]`. Nilainya bisa diisi dengan PROGRESS, DONE atau TODO. contohnya:
 
-* [TODO] Ini task dengan sifat dikerjakan [priority: high] [assignee: @ginalne]
-* [PROGRESS] Ini task dengan sifat belum dikerjakan
+* [DONE] Ini task dengan sifat dikerjakan [priority: high] [assignee: @ginalne]
+* [DONE] Ini task dengan sifat belum dikerjakan
 * [DONE] Ini task dengan sifat selesai
   
 >**note** Tips Command
