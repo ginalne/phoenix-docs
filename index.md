@@ -17,6 +17,11 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
    * draft    : jika halaman belum dipublish ke website.
    * released : jika halaman dipublish ke website
 
+2. Title
+   *title* adalah atribut untuk :
+   * draft    : jika halaman belum dipublish ke website.
+   * released : jika halaman dipublish ke website
+
 2. pageDecoration.icon
    ditulis dengan format seperti berikut
    ```yaml
@@ -26,12 +31,30 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
    wajib diisi dengan “x” jika status draft, atau diisi “folder” untuk folder. jangan gunakan jika release atau tidak dibutuhkan (dapat gunakan # agar bersifat notes)
    
 3. pageDecoration.icon
-   ditulis dengan format seperti berikut
+   ditulis dengan format seperti berikut:
    ```yaml
    pageDecoration:
       tree:
         priority: some number...
    ```
-   wajib diisi dengan “x” jika status draft, atau diisi “folder” untuk folder. jangan gunakan jika release atau tidak dibutuhkan (dapat gunakan # agar bersifat notes)
+   jika Anda ingin mengubah urutan halaman di Navigation : Tree. Anda dapat mengisi nilai angka besar agar keatas, atau kecil untuk kebawah.
+
+4. pageDecoration.icon
+   ditulis dengan format seperti berikut:
+   ```yaml
+   pageDecoration:
+      tree:
+        priority: some number...
+   ```
+   jika Anda ingin mengubah urutan halaman di Navigation : Tree. Anda dapat mengisi nilai angka besar agar keatas, atau kecil untuk kebawah.
+   
+5 pageDecoration.icon
+   ditulis dengan format seperti berikut:
+   ```yaml
+   tags:
+    - some tags
+    - another tags
+   ```
+   jika anda ingin menambahkan penanda tags yang relevan agar membantu pembaca menemukan halaman yang relevan bisa gunakan atribut ini.
 
    

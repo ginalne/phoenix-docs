@@ -2,7 +2,7 @@
     status: released
     description: Learn what Phoenix is all about and how to get started quickly.
     pageDecoration:
-      #icon: empty
+      #icon: x
       tree:
         priority: 4
     tags:
