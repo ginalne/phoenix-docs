@@ -1,7 +1,6 @@
 ---
   tags: meta/library
 ---
-#meta
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
 
@@ -22,6 +21,7 @@ The block below is maintained by the ${widgets.commandButton("Configuration Mana
 -- managed-by: configuration-manager
 config.set("markdownPrettify.emphasisMarker", "_")
 ```
+
 
 ```space-lua
 -- priority: 10
@@ -75,15 +75,18 @@ slashCommand.define {
   name = "asking",
   run = function()
     local line = editor.getCurrentLine()
-    local ws, prefix, rest = string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.+)$")
-    editor.replaceRange(
-      line.from,
-      line.to,
-      ws .. "<!--\n\n-->" .. rest,
-      true
-    )
+    local ws, prefix, rest =
+      string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.*)$")
+
+    local username = "test"--system.getCurrentUser()
+    local datetime = os.date("%Y-%m-%d %H:%M")
+
+    local text = ws .. "<!--\ntest @" .. username .. " - " .. datetime .. "\n-->"
+    editor.replaceRange(line.from, line.to, text, true)
+    editor.setCursor(line.from + #ws + 4)
   end
 }
+
 
 slashCommand.define {
   name = "todo task",
@@ -95,3 +98,11 @@ slashCommand.define {
 }
 
 ```
+
+<!--
+test @test - 2026-10-02 19:10
+----
+test @test - 2026-10-02 19:10
+-->
+
+Run ${widgets.commandButton "System: Reload"} to reload.
