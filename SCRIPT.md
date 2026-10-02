@@ -131,32 +131,141 @@ end
 }
 
 slashCommand.define {
-  name = "released",
+  name = "release",
   run = function()
-    editor.insertAtPos([==[---
-    status: released
-    title: 
-    desciption: 
-    pageDecoration:
-      #icon: x
-      tree:
-        priority: 0
-    tags:
----
-]==], 0, true)
-  end
-}
-slashCommand.define {
-  name = "group",
-  run = function()
-    editor.insertAtPos([==[---
-    status: group
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 0
----
-]==], 0, true)
+    local text = editor.getText()
+
+    -- Get title from first H1 or first "* value"
+    local title = string.match(text, "\n#%s+([^\n]+)")
+      or string.match(text, "^#%s+([^\n]+)")
+      or string.match(text, "\n%*%s+([^\n]+)")
+      or string.match(text, "^%*%s+([^\n]+)")
+
+    -- Existing frontmatter
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+
+    if not fmStart then
+      -- No frontmatter: create it
+      local newFrontmatter = "---\n"
+        .. "status: release\n"
+        .. "title: " .. (title or "") .. "\n"
+        .. "description: \n"
+        .. "---\n"
+
+      editor.insertAtPos(newFrontmatter, 0, true)
+      return
+    end
+
+    local contentStart = fmEnd + 1
+
+    local endStart, endEnd =
+      string.find(text, "\n%-%-%-", contentStart)
+
+    if not endStart then
+      return
+    end
+
+    local frontmatter =
+      string.sub(text, contentStart, endStart - 1)
+
+    ----------------------------------------------------------------
+    -- status: release
+    ----------------------------------------------------------------
+
+    if string.match(frontmatter, "^status%s*:") then
+      frontmatter = string.gsub(
+        frontmatter,
+        "^status%s*:%s*[^\n]*",
+        "status: release",
+        1
+      )
+    elseif string.match(frontmatter, "\nstatus%s*:") then
+      frontmatter = string.gsub(
+        frontmatter,
+        "\nstatus%s*:%s*[^\n]*",
+        "\nstatus: release",
+        1
+      )
+    else
+      frontmatter = "status: release\n" .. frontmatter
+    end
+
+    ----------------------------------------------------------------
+    -- title
+    ----------------------------------------------------------------
+
+    if not string.match(frontmatter, "^title%s*:") and
+       not string.match(frontmatter, "\ntitle%s*:") then
+
+      frontmatter =
+        frontmatter
+        .. "\ntitle: "
+        .. (title or "")
+    end
+
+    if not string.match(frontmatter, "^description%s*:") and
+       not string.match(frontmatter, "\ndescription%s*:") then
+
+      frontmatter =
+        frontmatter
+        .. "\n    description: "
+    end
+
+    if string.match(frontmatter, "pageDecoration%s*:%s*\n") then
+      local before, decoration =
+        string.match(
+          frontmatter,
+          "^(.-pageDecoration%s*:\n)(.*)$"
+        )
+
+      if decoration then
+        local block, rest =
+          string.match(
+            decoration,
+            "^(.-)\n([^%s].*)$"
+          )
+
+        if not block then
+          block = decoration
+          rest = ""
+        end
+        block = string.gsub(
+          block,
+          "\n%s+icon%s*:%s*x%s*$",
+          "",
+          1
+        )
+        block = string.gsub(
+          block,
+          "^%s+icon%s*:%s*x%s*$",
+          "",
+          1
+        )
+        block = string.gsub(
+          block,
+          "\n%s+#%s*icon%s*:%s*x%s*$",
+          "",
+          1
+        )
+        block = string.gsub(
+          block,
+          "^%s+#%s*icon%s*:%s*x%s*$",
+          "",
+          1
+        )
+        frontmatter = before .. block
+        if rest ~= "" then
+          frontmatter = frontmatter .. "\n" .. rest
+        end
+      end
+    end
+
+    local newText =
+      string.sub(text, 1, contentStart - 1)
+      .. frontmatter
+      .. string.sub(text, endStart)
+
+    editor.setText(newText)
   end
 }
 
