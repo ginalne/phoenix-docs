@@ -350,9 +350,23 @@ slashCommand.define {
   end
 else
   if (string.match(frontmatter, "(description%s*:%s*[^\n]*)")) then
+    
+    editor.flashNotification("Set Document as Group")
     frontmatter = string.gsub(
       frontmatter,
       "(description%s*:%s*[^\n]*)",
+      "%1\n    pageDecoration:\n" ..
+      "      icon: x\n" ..
+      "      tree:\n" ..
+      "        priority: 0",
+      1
+    )
+    editor.flashNotification("Set Document as Group")
+    editor.flashNotification("Set Document as Group")
+  elseif (string.match(frontmatter, "(title%s*:%s*[^\n]*)")) then
+    frontmatter = string.gsub(
+      frontmatter,
+      "(title%s*:%s*[^\n]*)",
       "%1\n    pageDecoration:\n" ..
       "      icon: x\n" ..
       "      tree:\n" ..
