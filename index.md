@@ -43,14 +43,26 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
 
 ---
 
-## Info dan Warning
-info dan warning adalah section dalam penulisan dokumentasi yang dibuka dengan “>[!note]” untuk info, dan “>[!warning]“, isi dari info atau warning dapat ditulis dengan format berikut:
+## Admonition
+Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan “>[!note]” untuk info, dan “>[!warning]“, dan “>[!danger]“, isi dari info atau warning dapat ditulis dengan format berikut:
 
 >[!note] Judul Info
 >Silahkan isi deskripsi info secara bebas
 
+Anda dapat menggunakan perintah `/note-insert` untuk membuat info.
+
 >[!warning] Judul Warning
 >Silahkan isi deskripsi warning secara bebas
+
+Anda dapat menggunakan perintah `/warning-insert` untuk membuat peringatan.
+
+>[!danger] Judul Danger
+>Silahkan isi deskripsi danger secara bebas
+
+Anda dapat menggunakan perintah `/warning-insert` untuk membuat larangan.
+
+>**[!note]** hallo
+>test
 
 ---
 
