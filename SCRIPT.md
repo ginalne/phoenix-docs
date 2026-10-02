@@ -20,6 +20,137 @@ config.set("markdownPrettify.emphasisMarker", "_")
 ```space-lua
 -- priority: 10
 slashCommand.define {
+  name = "release",
+  run = function()
+    local text = editor.getText()
+
+    local title = string.match(text, "\n#%s+([^\n]+)")
+      or string.match(text, "^#%s+([^\n]+)")
+      or string.match(text, "\n%*%s+([^\n]+)")
+      or string.match(text, "^%*%s+([^\n]+)")
+
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+
+    if not fmStart then
+      local newFrontmatter = "---\n"
+        .. "    status: release\n"
+        .. "    title: " .. (title or "") .. "\n"
+        .. "    description: \n"
+        .. "    pageDecoration: \n"
+        .. "      tree: \n"
+        .. "        priority: 0 \n"
+        .. "---\n"
+
+      editor.insertAtPos(newFrontmatter, 0, true)
+      return
+    end
+
+    local contentStart = fmEnd + 1
+
+    local endStart, endEnd =
+      string.find(text, "\n%-%-%-", contentStart)
+
+    if not endStart then
+      return
+    end
+
+    local frontmatter =
+      string.sub(text, contentStart, endStart - 1)
+
+    if string.match(frontmatter, "^%s+status%s*:") then
+      frontmatter = string.gsub(
+        frontmatter,
+        "^%s+status%s*:%s*[^\n]*",
+        "    status: release",
+        1
+      )
+    elseif string.match(frontmatter, "\n%s+status%s*:") then
+      frontmatter = string.gsub(
+        frontmatter,
+        "\n%s+status%s*:%s*[^\n]*",
+        "\n    status: release",
+        1
+      )
+    else
+      frontmatter = "    status: release\n" .. frontmatter
+    end
+
+    if not string.match(frontmatter, "^%s+title%s*:") and
+       not string.match(frontmatter, "\n%s+title%s*:") then
+    
+      frontmatter = string.gsub(
+        frontmatter,
+        "(status%s*:%s*[^\n]*)",
+        "%1\n    title: " .. (title or ""),
+        1
+      )
+    end
+    
+    if not string.match(frontmatter, "^%s+description%s*:") and
+       not string.match(frontmatter, "\n%s+description%s*:") then
+    
+      frontmatter = string.gsub(
+        frontmatter,
+        "(title%s*:%s*[^\n]*)",
+        "%1\n    description: ",
+        1
+      )
+    end
+
+    if string.match(frontmatter, "pageDecoration%s*:%s*\n") then
+      local before, decoration =
+        string.match(
+          frontmatter,
+          "^(.-pageDecoration%s*:\n)(.*)$"
+        )
+
+      if decoration then
+        local block, rest =
+          string.match(
+            decoration,
+            "^(.-)\n([^%s].*)$"
+          )
+
+        if not block then
+          block = decoration
+          rest = ""
+        end
+        
+        editor.flashNotification(block)
+        block = string.gsub(
+          block,
+          "%s*icon%s*:%s*x%f[%s\n]\n",
+          "",
+          1
+        )
+        
+        editor.flashNotification(block)
+        block = string.gsub(
+          block,
+          "(%s*icon%s*:%s*x%f[%s\n])[\n]*",
+          "",
+          1
+        )
+        
+        editor.flashNotification(block)
+        frontmatter = before .. block
+        if rest ~= "" then
+          frontmatter = frontmatter .. rest
+        end
+      end
+    end
+
+    local newText =
+      string.sub(text, 1, contentStart - 1)
+      .. frontmatter
+      .. string.sub(text, endStart)
+
+    editor.setText(newText)
+    editor.flashNotification("Set Document to Released")
+  end
+}
+
+slashCommand.define {
   name = "group",
   run = function()
     local text = editor.getText()
@@ -119,128 +250,6 @@ end
 
     editor.setText(newText)
     editor.flashNotification("Set Document as Group")
-  end
-}
-
-
-slashCommand.define {
-  name = "release",
-  run = function()
-    local text = editor.getText()
-
-    local title = string.match(text, "\n#%s+([^\n]+)")
-      or string.match(text, "^#%s+([^\n]+)")
-      or string.match(text, "\n%*%s+([^\n]+)")
-      or string.match(text, "^%*%s+([^\n]+)")
-
-    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
-
-    if not fmStart then
-      local newFrontmatter = "---\n"
-        .. "    status: release\n"
-        .. "    title: " .. (title or "") .. "\n"
-        .. "    description: \n"
-        .. "    pageDecoration: \n"
-        .. "      tree: \n"
-        .. "        priority: 0 \n"
-        .. "---\n"
-
-      editor.insertAtPos(newFrontmatter, 0, true)
-      return
-    end
-
-    local contentStart = fmEnd + 1
-
-    local endStart, endEnd =
-      string.find(text, "\n%-%-%-", contentStart)
-
-    if not endStart then
-      return
-    end
-
-    local frontmatter =
-      string.sub(text, contentStart, endStart - 1)
-
-    if string.match(frontmatter, "^%s+status%s*:") then
-      frontmatter = string.gsub(
-        frontmatter,
-        "^%s+status%s*:%s*[^\n]*",
-        "    status: release",
-        1
-      )
-    elseif string.match(frontmatter, "\n%s+status%s*:") then
-      frontmatter = string.gsub(
-        frontmatter,
-        "\n%s+status%s*:%s*[^\n]*",
-        "\n    status: release",
-        1
-      )
-    else
-      frontmatter = "    status: release\n" .. frontmatter
-    end
-
-    if not string.match(frontmatter, "^%s+title%s*:") and
-       not string.match(frontmatter, "\n%s+title%s*:") then
-    
-      frontmatter = string.gsub(
-        frontmatter,
-        "(status%s*:%s*[^\n]*)",
-        "%1\n    title: " .. (title or ""),
-        1
-      )
-    end
-    
-    if not string.match(frontmatter, "^%s+description%s*:") and
-       not string.match(frontmatter, "\n%s+description%s*:") then
-    
-      frontmatter = string.gsub(
-        frontmatter,
-        "(title%s*:%s*[^\n]*)",
-        "%1\n    description: ",
-        1
-      )
-    end
-
-    if string.match(frontmatter, "pageDecoration%s*:%s*\n") then
-      local before, decoration =
-        string.match(
-          frontmatter,
-          "^(.-pageDecoration%s*:\n)(.*)$"
-        )
-
-      if decoration then
-        local block, rest =
-          string.match(
-            decoration,
-            "^(.-)\n([^%s].*)$"
-          )
-
-        if not block then
-          block = decoration
-          rest = ""
-        end
-        
-        block = string.gsub(
-          block,
-          "%s*icon%s*:%s*x%f[%s\n]\n",
-          "",
-          1
-        )
-        
-        frontmatter = before .. block
-        if rest ~= "" then
-          frontmatter = frontmatter .. rest
-        end
-      end
-    end
-
-    local newText =
-      string.sub(text, 1, contentStart - 1)
-      .. frontmatter
-      .. string.sub(text, endStart)
-
-    editor.setText(newText)
-    editor.flashNotification("Set Document to Released")
   end
 }
 
