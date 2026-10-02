@@ -45,27 +45,16 @@ function orphanPages()
 end
 
 function orphanAttachmentsLinks()
-  local images = {}
-  local imgExts = { [".png"]=true, [".jpg"]=true, [".jpeg"]=true, [".gif"]=true, [".webp"]=true, [".svg"]=true }
-  
-  for doc in query[[ from tags.document select _.name ]] do
-    local lowerName = doc:lower()
-    for ext, _ in pairs(imgExts) do
-      if lowerName:endsWith(ext) then
-        images[doc] = true
-        break
-      end
-    end
-  end
-
   local checkedText = {}
   for name in query[[
     from tags.page
     where not table.find(_.tags, function(t) return t:startsWith("meta") end)
-    select _.text ]] do
-    table.insert(checkedText, text)
+    select _.name ]] do
+    table.insert(checkedText, name)
     -- orphans[name] = true
   end
+
+  table.insert(checkedText, "Empty bro")
 
   --local clickableLinks = {}
 --for name, _ in pairs(images) do
