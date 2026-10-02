@@ -21,3 +21,4 @@ ${query[[
   from p = index.aspiringPages()
   select "- [[" .. p.name .. "]] " .. p.page
 ]]}
+
