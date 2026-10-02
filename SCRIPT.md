@@ -134,15 +134,14 @@ slashCommand.define {
     end
     
     if username then
-      editor.flashNotification("we got you " .. idx .. "/" .. lines.length .. " " .. username)
-      while idx < lines.length do
+      editor.flashNotification("we got you " .. idx .. "/" .. #lines .. " " .. username)
+      while idx < #lines do
           local check_text = lines[idx]
-          editor.flashNotification(check_text)
           if check_text == "-->" then
-            editor.flashNotification(idx)
+            editor.replaceRange(0, string.len(total_text), updated_document, true)
             break
           end
-          idx = idx - 1
+          idx = idx + 1
       end
     else
         editor.flashNotification("Tidak ditemukan pertanyaan apapun")
