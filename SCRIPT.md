@@ -58,23 +58,21 @@ function orphanAttachmentsLinks()
     end
   end
 
-  for page in query[[ from tags.page select _.text ]] do
-    if page.text then
-      for fullPath, _ in pairs(images) do
-        local fileNameOnly = fullPath:match("([^/]+)$") or fullPath
-        if string.find(page.text, fileNameOnly, 1, true) then
-          images[fullPath] = nil
-        end
-      end
-    end
+  local checkedText = {}
+  for name in query[[
+    from tags.page
+    where not table.find(_.tags, function(t) return t:startsWith("meta") end)
+    select _.name ]] do
+    table.insert(checkedText, "[[" .. name .. "]]")
+    -- orphans[name] = true
   end
 
-  local clickableLinks = {}
-  for name, _ in pairs(images) do
-    table.insert(clickableLinks, "[[" .. name .. "]]")
-  end
+  --local clickableLinks = {}
+--for name, _ in pairs(images) do
+  --  table.insert(clickableLinks, "[[" .. name .. "]]")
+  --end
 
-  return clickableLinks
+  return checkedText
 end
 
 ```
