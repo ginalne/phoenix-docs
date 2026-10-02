@@ -38,13 +38,13 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
 
 <!--
   `@your_username` <small style="opacity: 0.5">at your time</small>
-  Some Comment... `@free` mention some here...
+  Tulis komen... `@free` untuk mention siapapun...
 
-  some other comment or replied...
+  tulis disini balasannya...
 -->
 
->**note** Tips command
->Anda bisa ketika perintah **`/asking`** untuk memulai komen, dan **`/answer`** untuk menjawab (harap kursor perlu didalam comment).
+>**note** Tips Command
+>Anda bisa ketikan perintah ***`/asking`*** untuk memulai komen, dan ***`/answer`*** untuk menjawab (harap kursor perlu didalam comment).
 >
 >seperti contoh:
 
@@ -52,7 +52,7 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
   `@ginalne` <small style="opacity: 0.5">at 2026-10-02 21:21</small>
   Hallo semua @everynyaw
 
-  *ketik `/answer` disini*
+  <small>*ketik ***`/answer`*** dibawah ini*</small>
   
 -->
 
@@ -67,17 +67,17 @@ Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan `>**not
 >**note** Judul Info
 >Silahkan isi deskripsi info secara bebas
 
-Anda dapat menggunakan ketik `/note-admonition` lalu Enter untuk membuat info.
+Anda dapat menggunakan ketik ***`/note-admonition`*** lalu Enter untuk membuat info.
 
 >**warning** Judul Warning
 >Silahkan isi deskripsi warning secara bebas
 
-Anda dapat menggunakan ketik `/warning-admonition` lalu Enter untuk membuat peringatan.
+Anda dapat menggunakan ketik ***`/warning-admonition`*** lalu Enter untuk membuat peringatan.
 
 >**danger** Judul Danger
 >Silahkan isi deskripsi danger secara bebas
 
-Anda dapat menggunakan ketik `/danger-admonition` lalu Enter untuk membuat larangan.
+Anda dapat menggunakan ketik ***`/danger-admonition`*** lalu Enter untuk membuat larangan.
 
 ---
 

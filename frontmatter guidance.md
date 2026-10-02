@@ -6,7 +6,7 @@
 ---
 # Frontmatter Guidance
 
-Contoh basic untuk dokumen draft, anda bisa ketik `/draft` lalu Enter.
+Contoh basic untuk dokumen draft:
 ```yaml
 ---
     status: draft
@@ -17,7 +17,10 @@ Contoh basic untuk dokumen draft, anda bisa ketik `/draft` lalu Enter.
 ---
 ```
 
-Contoh basic untuk dokumen released, anda bisa ketik `/released` lalu Enter.
+>**note** Tips Command
+>Anda bisa ketik ***`/draft`*** untuk mengubah dokumen menjadi draft
+
+Contoh basic untuk dokumen released:
 ```yaml
 ---
     status: released
@@ -32,6 +35,9 @@ Contoh basic untuk dokumen released, anda bisa ketik `/released` lalu Enter.
       #isi tag disini
 ---
 ```
+
+>**note** Tips Command
+>Anda bisa ketik ***`/released`*** untuk mengubah dokumen menjadi released
 
 Secara contoh berikut adalah atribut penting untuk frontmatter:
 1. [[frontmatter guidance#status|status]]
