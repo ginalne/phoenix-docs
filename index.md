@@ -15,6 +15,9 @@ ATURAN:
 2. Penulis wajib membuat urutan [[index#Heading|Heading]] yang tepat.
 3. Penulis tidak boleh menulis [[index#Task|Task]] kecuali digunakan dalam [[index#Comment|Comment]]
 4. Penulis wajib menyisipkan ruang dengan Enter 2x diakhir dokumen (agar ada space dengan kolom Linked Mentions)
+<!--
+
+-->
 
 ---
 

@@ -76,7 +76,12 @@ slashCommand.define {
   run = function()
     local line = editor.getCurrentLine()
     local ws, prefix, rest = string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.+)$")
-    editor.replaceRange(line.from, line.to, ws .. "" .. rest, true)
+    editor.replaceRange(
+      line.from,
+      line.to,
+      ws .. "<!--\n\n-->" .. rest,
+      true
+    )
   end
 }
 
