@@ -13,7 +13,7 @@ Phoenix dirancang dengan satu filosofi yaitu sebagai “the Ultimate digital can
 
 Phoenix adalah platform dinamis yang dirancang untuk membantu anda dan tim dalam mengelola dan mengefisienkan alur kerja, acara, serta hubungan yang kompleks. Baik saat Anda mengelola proyek, menjalankan organisasi, menyusun database komunitas, maupun mengoordinasikan jadwal acara, Phoenix menyediakan perangkat untuk membangun pondasi data, mengotomatisasi logika, dan menjaga segala sesuatunya tetap terhubung. Berbekal model data yang fleksibel, pemrosesan logika cerdas, dan dukungan integrasi yang mulus, Phoenix mengubah proses yang rumit menjadi alur yang jelas dan interaktif. Anggaplah Phoenix sebagai otak digital Anda untuk menata, memvisualisasikan, dan menggerakkan inti dari komunitas Anda.
 
-# Apa kelebihannya?
+## Apa kelebihannya?
 Phoenix memiliki beberapa kelebihan yang ditawarkan dibanding menggunakan aplikasi konvensional:
 
 * Meningkatkan alur kerja: Membuat bagan alur dan pohon logika yang jelas serta visual untuk mengelola tugas, persetujuan, dan jadwal.
@@ -28,7 +28,7 @@ Phoenix memiliki beberapa kelebihan yang ditawarkan dibanding menggunakan aplika
     
 * Menyesuaikan segalanya dengan kebutuhan Anda: Mengatur jenis node, alur proses, dan struktur logika agar sesuai dengan kasus penggunaan unik Anda—tidak ada pendekatan yang dipaksakan seragam untuk semua orang.
 
-# Mengapa dinamakan "Phoenix"?
+## Mengapa dinamakan "Phoenix"?
 ![[Docs/what-is-phoenix.png]]
 The Phoenix is a mythical bird that regenerates from its own ashes—symbolizing renewal, rebirth, and transformation.
 
