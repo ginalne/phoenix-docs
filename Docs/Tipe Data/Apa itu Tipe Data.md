@@ -9,5 +9,5 @@
 # Apa itu Tipe Data
 <!--
   `@ginalne` <small style="opacity: 0.5">at 2026-10-03 01:44</small>
-  masih kosong @everynyaw #empty
+  #empty masih kosong @everynyaw 
 -->
