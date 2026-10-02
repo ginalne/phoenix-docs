@@ -1,8 +1,9 @@
 ---
-    status: draft
+    status: release
+    title: "Konfigurasi Merger Mode"
+    description: 
     date: "2026-10-02"
     pageDecoration:
-      icon: x
       tree:
         priority: 4
 ---

@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Apa itu Variable?"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 4
 ---
@@ -10,6 +11,6 @@ Variable adalah salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Dat
 
 Variabel dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja (Pro) baru dan tidak dapat dihapus.
 
-
 >**note** Saran
 >Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Modul Developer/Workspace/Apa itu Workspace]].
+

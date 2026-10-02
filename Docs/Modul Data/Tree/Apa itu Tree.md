@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Apa itu Tree?"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 4
 ---
