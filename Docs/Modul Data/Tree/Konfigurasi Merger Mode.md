@@ -13,7 +13,7 @@ Tree memiliki [[Docs/Tipe Data/Node]] dengan atribut Order dan Name yang muncul 
 ## Mengatur Konfigurasi
 Anda dapat mengaturnya hanya ketika saat membuatnya pertama kali.
 
-![[Docs/Modul Data/Tree/create-new-tree.png]]
+![[Docs/Modul Data/Tree/create-new-tree.png|Modal Tambah Tree Baru]]
 Kolom _Merger Mode_ dapat diubah dengan implikasi seperti berikut:
 * Active : Tree tidak akan memiliki Node sendiri, namun akan menambahkan Node sesuai dengan Tree lain yang tersedia.
 * _Non Active_ : Tree akan memiliki Node-nya sendiri, namun tidak bisa menambahkan Node dari Tree lain.

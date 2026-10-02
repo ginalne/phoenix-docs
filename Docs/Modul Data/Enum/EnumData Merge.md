@@ -8,9 +8,9 @@ EnumData memiliki atribut Name yang tidak dapat sama, namun dalam proses Data Ga
 
 ## Melakukan Merge
 Anda dapat mengaturnya melalui tombol Merge dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Komponen Enum]].
-![[Docs/Modul Data/Enum/enum-test.png|]]
+![[Docs/Modul Data/Enum/enum-test.png|EnumData Merge]]
 Setelah Mode Merge aktif, maka Anda dapat memilih EnumData yang ingin digabungkan.
 
-![[Docs/Modul Data/Enum/merge-select.png]]
-Lalu jika sudah selesai, selanjutnya klik tombol *Select Merge (Total EnumData yang akan digabungkan)*.
+![[Docs/Modul Data/Enum/merge-select.png|EnumData Merge Select]]
+Lalu jika sudah selesai, selanjutnya klik tombol *Select Merge (Total EnumData terpilih)*.
 
