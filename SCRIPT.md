@@ -1,5 +1,5 @@
 ---
-    status: released
+    test:123
 ---
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
@@ -20,8 +20,8 @@ slashCommand.define {
     local text = editor.getText()
     if text:match("^%-%-%-[\r\n]") then
       text = text:gsub("^(%-%-%-.-[\r\n])    status:[^\r\n]*([\r\n].-%-%-%-)", "%1    status: draft%2")
-      
-      editor.flashNotification(text:match("^%-%-%-.-[\r\n]    status:")) 
+
+      editor.flashNotification(text)
       if not text:match("^%-%-%-.-[\r\n]    status:") then
         text = text:gsub("^(%-%-%-[\r\n])", "%1    status: draft\n")
       end
@@ -31,6 +31,8 @@ slashCommand.define {
       else
         text = text:gsub("^(%-%-%-.-[\r\n])", "%1pageDecoration:\n  icon: x\n  tree:\n    priority: 0\n")
       end
+      
+      editor.setText(text)
     else
       editor.insertAtPos([==[---
     status: draft

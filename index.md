@@ -37,7 +37,7 @@ Harap pastikan urutan heading tidak salah. Heading 1 diawali #, Heading 2 diawal
 comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan ditutup dengan `-->`, isi dari comment ditulis dengan format berikut:
 
 <!--
-  `@your_username` 
+  `@your_username` at date
   Some Comment... `@free` mention some here...
 
   some other comment or replied...
@@ -45,8 +45,11 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
   
 -->
 
+
+
 >**note** Kelebihan
 >Comment tidak akan tampil di website, jadi gunakan section ini untuk berdiskusi
+
 
 ---
 
