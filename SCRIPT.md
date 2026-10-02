@@ -2,11 +2,11 @@
     status: draft
     title: Hello
     description: 
-    tags:
     pageDecoration:
       icon: x
       tree:
         priority: 0
+    tags:
       meta
 ---
 # Hello
@@ -353,11 +353,11 @@ slashCommand.define {
     end
   end
 else
-  if (string.match(frontmatter, "(description%s*:%s*[^\r\n]*)")) then
+  if (string.match(frontmatter, "(description[ \t]*:[ \t]*[^\r\n]*)")) then
     editor.flashNotification(frontmatter)
     frontmatter = string.gsub(
       frontmatter,
-      "(description%s*:%s*[^\r\n]*)",
+      "(description[ \t]*:[ \t]*[^\r\n]*)",
       "%1\n" ..
       "    pageDecoration:\n" ..
       "      icon: x\n" ..
@@ -366,10 +366,10 @@ else
       1
     )
     editor.flashNotification(frontmatter)
-  elseif (string.match(frontmatter, "(title%s*:%s*[^\n]*)")) then
+  elseif (string.match(frontmatter, "(title[ \t]*:[ \t]*[^\r\n]*)")) then
     frontmatter = string.gsub(
       frontmatter,
-      "(title%s*:%s*[^\n]*)",
+      "(title[ \t]*:[ \t]*[^\r\n]*)",
       "%1\n    pageDecoration:\n" ..
       "      icon: x\n" ..
       "      tree:\n" ..
