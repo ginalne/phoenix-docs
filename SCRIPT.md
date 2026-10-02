@@ -41,6 +41,49 @@ function orphanPages()
 
   return clickableLinks
 end
+
+function orphanAttachments()
+  local orphans = {}
+  
+  for doc in query[[ from tags.document select _.name ]] do
+    if not doc:endsWith(".md") then
+      orphans[doc] = true
+    end
+  end
+
+  for linked in query[[ from tags.link select _.toPage ]] do
+    orphans[linked] = nil
+  end
+
+  local clickableLinks = {}
+  for name, _ in pairs(orphans) do
+    table.insert(clickableLinks, "![[" .. name .. "]]")
+  end
+
+  return clickableLinks
+end
+
+function orphanAttachmentsLinks()
+  local orphans = {}
+  
+  for doc in query[[ from tags.document select _.name ]] do
+    if not doc:endsWith(".md") then
+      orphans[doc] = true
+    end
+  end
+
+  for linked in query[[ from tags.link select _.toPage ]] do
+    orphans[linked] = nil
+  end
+
+  local clickableLinks = {}
+  for name, _ in pairs(orphans) do
+    table.insert(clickableLinks, "[[" .. name .. "]]")
+  end
+
+  return clickableLinks
+end
+
 ```
 
 ```space-lua

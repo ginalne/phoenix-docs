@@ -8,6 +8,7 @@
 # List of Queries
 
 ## Berikut adalah daftar TODO
+
 ${query[[
   from p = index.tasks(_)
   where p.page != "index"
@@ -23,9 +24,18 @@ ${query[[
   select "- [[" .. p.name .. "]] " .. p.page
 ]]}
 
+---
+
+## Attachment Yatim
+${orphanAttachmentsLinks()}
+
+---
+
 ## Halaman Yatim
 
 ${orphanPages()}
+
+---
 
 ## Aspiring Page
 ${query[[
