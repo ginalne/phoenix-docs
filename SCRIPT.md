@@ -127,10 +127,21 @@ slashCommand.define {
         editor.flashNotification(block)
         block = string.gsub(
           block,
-          "(%s*icon%s*:%s*x%f[%s\n])[\n]*",
+          "^(%s*icon%s*:%s*x)$",
           "",
           1
         )
+
+        if block = "" then
+          editor.flashNotification(before)
+          before = string.gsub(
+            before,
+            "^(%s*pageDecoration%s*:%s*)$",
+            "",
+            1
+          )
+        end
+        
         
         editor.flashNotification(block)
         frontmatter = before .. block
@@ -231,7 +242,7 @@ slashCommand.define {
 
     frontmatter = before .. block
 
-    if rest ~= "" then
+    if rest == "" then
       frontmatter = frontmatter .. "\n" .. rest
     end
   end
