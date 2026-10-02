@@ -12,14 +12,11 @@ Tree memiliki [[Docs/Tipe Data/Node]] dengan atribut Order dan Name yang muncul 
 ## Mengatur Konfigurasi
 Anda dapat mengaturnya hanya ketika saat membuatnya pertama kali.
 
-![[Docs/Modul Data/Enum/create-new-enum.png]]
-Kolom _Strict On Selected_ dapat diubah dengan implikasi seperti berikut:
-* Disabled to insert externally : Ketat, EnumData tidak bisa ditambahkan saat pengguna atau Anda melakukan input bebas terhadap Enum ini.
-* _Enable to insert externally_ : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
+![[Docs/Modul Data/Tree/create-new-tree.png]]
+Kolom _Merger Mode_ dapat diubah dengan implikasi seperti berikut:
+* Active : Tree tidak akan memiliki Node sendiri, namun akan menambahkan Node sesuai dengan Tree lain yang tersedia.
+* _Non Active_ : Tree akan memiliki Node-nya sendiri, namun tidak bisa menambahkan Node dari Tree lain.
 
-## Arti dari “Externally”
-Externally artinya sesuatu yang diluar Enum. Saat menentukan sebuah inputan dengan tipe data [[Docs/Tipe Data/EnumData|EnumData]], anda harus memilih header Enum. Input ini dapat muncul dalam [[Docs/Komponen/Table/Pengenalan|Tabel]], komponen dalam [[Docs/Modul Interface]] seperti [[Docs/Modul Interface/Form/Pengenalan|Form]] yang dapat diinput oleh publik.
-
->[!note]Tips
->Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam EnumData tetap tidak dapat terduplikat. Meskipun akan banyak variasi Name yang mirip, Anda dapat menggunakan fitur [[Docs/Modul Data/Enum/EnumData Merge]] agar setiap data yang terelasi dengan EnumData tersebut dapat menjadi satu EnumData.
+>**danger** Harap pastikan
+>Anda tidak dapat mengubah kolom *merger mode* ketika Tree sudah dibuat.
 
