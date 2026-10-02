@@ -6,7 +6,7 @@
 ---
 # Frontmatter Guidance
 
-Contoh basic untuk dokumen draft
+Contoh basic untuk dokumen draft, anda bisa ketik `/draft` lalu Enter.
 ```yaml
 ---
     status: draft
@@ -17,7 +17,7 @@ Contoh basic untuk dokumen draft
 ---
 ```
 
-Contoh basic untuk dokumen released
+Contoh basic untuk dokumen released, anda bisa ketik `/released` lalu Enter.
 ```yaml
 ---
     status: released

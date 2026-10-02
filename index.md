@@ -44,7 +44,7 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
   
 -->
 
->**note** Kelebihan Comment
+>**note** Kelebihan
 >Comment tidak akan tampil di website, jadi gunakan section ini untuk berdiskusi
 
 ---
@@ -55,17 +55,17 @@ Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan `>**not
 >**note** Judul Info
 >Silahkan isi deskripsi info secara bebas
 
-Anda dapat menggunakan perintah `/note-admonition` lalu Enter untuk membuat info.
+Anda dapat menggunakan ketik `/note-admonition` lalu Enter untuk membuat info.
 
 >**warning** Judul Warning
 >Silahkan isi deskripsi warning secara bebas
 
-Anda dapat menggunakan perintah `/warning-admonition` lalu Enter untuk membuat peringatan.
+Anda dapat menggunakan ketik `/warning-admonition` lalu Enter untuk membuat peringatan.
 
 >**danger** Judul Danger
 >Silahkan isi deskripsi danger secara bebas
 
-Anda dapat menggunakan perintah `/danger-admonition` lalu Enter` untuk membuat larangan.
+Anda dapat menggunakan ketik `/danger-admonition` lalu Enter untuk membuat larangan.
 
 ---
 
@@ -140,5 +140,5 @@ Harap isi enter 2x diakhir dokumen.
 Sekian tips dan aturan yang wajib diikuti oleh Penulis. Harap di ingat.
 Terimakasih
 
-Selamat Menulis~
+Selamat Menulis ~
 

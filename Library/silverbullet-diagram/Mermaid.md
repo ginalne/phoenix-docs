@@ -42,8 +42,11 @@ Besides static ` ```mermaid ` blocks, this library exposes a [Space Lua](https:/
 
 # Quick start
 A raw Mermaid string:
-
-${mermaid.diagram("flowchart LR\n  A[\"Hello\"] --> B[\"World\"]")}
+```mermaid
+flowchart LR
+  A["Hello"] --> B["World"]
+```
+<!--/lua-->
 
 A relation graph built live from frontmatter:
 
