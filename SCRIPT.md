@@ -117,20 +117,16 @@ slashCommand.define {
             "^(.-)\n([^%s].*)$"
           )
         
-        editor.flashNotification(block)
-        editor.flashNotification(rest)
 
         if not block then
           block = decoration
           rest = ""
         end
         
-        editor.flashNotification(before)
         editor.flashNotification(block)
-        editor.flashNotification(rest)
         block = string.gsub(
           block,
-          "\n%s+icon%s*:%s*x%s*$",
+          "(%s*icon%s*:%s*x%s*)[\n]*",
           "",
           1
         )
@@ -138,7 +134,7 @@ slashCommand.define {
         editor.flashNotification(block)
         block = string.gsub(
           block,
-          "^%s*icon%s*:%s*x%s*$",
+          "^%s*icon%s*:%s*x%s*\n$",
           "",
           1
         )
@@ -167,7 +163,7 @@ slashCommand.define {
         editor.flashNotification(block)
         frontmatter = before .. block
         if rest ~= "" then
-          frontmatter = frontmatter .. "\n" .. rest
+          frontmatter = frontmatter .. rest
         end
       end
     end
