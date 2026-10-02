@@ -1,10 +1,9 @@
 ---
-    status: released
+    status: release
     title: Memulai
     description: Learn what Phoenix is all about and how to get started quickly.
     pageDecoration:
-      #icon: x
-      tree:
+      #      tree:
         priority: 4
     tags:
     - welcome

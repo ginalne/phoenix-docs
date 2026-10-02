@@ -1,5 +1,5 @@
 ---
-    status: released
+    status: release
     title: Pengenalan
     desciption: Penjelasan Module Interface di Phoenix
     pageDecoration:

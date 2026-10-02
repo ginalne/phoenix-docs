@@ -1,5 +1,5 @@
 ---
-    status: released
+    status: release
     date: "2026-10-02"
     pageDecoration:
       #icon: empty
