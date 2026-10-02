@@ -26,6 +26,10 @@ ${query[[
 
 ---
 
+${query[[
+  from tags.page select _.text
+]]}
+
 ## Attachment Yatim
 ${orphanAttachmentsLinks()}
 
@@ -36,10 +40,3 @@ ${orphanAttachmentsLinks()}
 ${orphanPages()}
 
 ---
-
-## Aspiring Page
-${query[[
-  from tags.aspiring-page
-  select { Halaman = "[[" .. _.name .. "]]" }
-  render "table"
-]]}
