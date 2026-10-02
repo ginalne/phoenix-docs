@@ -71,7 +71,7 @@ slashCommand.define {
     
     local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
-    local text = ws .. "<!--\n   `@" .. username .. "` at " .. datetime .. "\n   |^| (to @everynyaw)\n-->"
+    local text = ws .. "<!--\n   `@" .. username .. "` at " .. datetime .. "\n   |^| *~to @everynyaw*\n-->"
     editor.replaceRange(line.from, line.to, text, true)
   end
 }
@@ -110,7 +110,7 @@ slashCommand.define {
           break
         end
       
-        username = string.match(check_text, "@([%w_-]+)")
+        username = string.match(check_text, "`@([%w_-]+)")
       
         if username then
             break
@@ -131,7 +131,7 @@ slashCommand.define {
               
               local myUserName = me and me.name or "unknown"
               local datetime = os.date("%Y-%m-%d %H:%M")
-              local text = ws .. "\n   `@" .. myUserName .. "` at " .. datetime .. " replied\n   |^| @" .. username
+              local text = ws .. "`@" .. myUserName .. "` at " .. datetime .. " replied\n   |^| *~re @" .. username .. "*"
               editor.replaceRange(line.from, line.to, text, true)
             break
           end
@@ -156,9 +156,12 @@ slashCommand.define {
   end
 }
 ```
-<!--
-   `@ginalne` at 2026-10-02 20:34 ini kenapa bro (to @everynyaw)
-   
--->
 
+<!--
+   `@ginalne` at 2026-10-02 20:37
+   minta tolong sih ini dibenerin *~to @everynyaw*
+
+   `@ginalne` at 2026-10-02 20:40 replied
+   apasih bro *~re @ginalne*
+-->
 Run ${widgets.commandButton "System: Reload"} to reload.
