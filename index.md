@@ -62,7 +62,7 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
 ---
 
 ## Admonition
-Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan `>**note**`, `>**warning**`, atau `>**danger**`, isi dari info atau warning dapat ditulis dengan format berikut:
+Admonition adalah section dalam penulisan dokumentasi yang dibuka dengan `>**note**`, `>**warning**`, atau `>**danger**`, isi dari info, warning, atau danger dapat ditulis dengan format berikut:
 
 >**note** Judul Info
 >Silahkan isi deskripsi info secara bebas
@@ -84,7 +84,7 @@ Anda dapat menggunakan ketik ***`/danger-admonition`*** lalu Enter untuk membuat
 ## Text Decoration
 Sebagai Penulis baru tentu menggunakan Silverbullet tidaklah mudah, berikut adalah hint yang perlu diingat agar mudah mengetik:
 
-1. Huruf Miring (_italic_), dengan cara ketik underscore (_) dipembuka dan penutup, seperti contoh *ini adalah teks miring*.
+1. Huruf Miring (_italic_), dengan cara ketik underscore (*) dipembuka dan penutup, seperti contoh *ini adalah teks miring*.
 2. Huruf Tebal (**bold**), dengan cara ketik bintang 2x (**) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
 3. Huruf Miring + Tebal (***italic + bold***), dengan cara ketik bintang 3x (***) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
 4. Penerangan (==Highlighting==), dengan cara ketik simbol sama dengan 2x `==` dipembuka dan penutup, seperti contoh ==highlight saya==.
@@ -107,23 +107,26 @@ Ada 2 jenis list yang digunakan:
 ---
 
 ## Task
-Task dapat Anda gunakan sebagai catatan mark yang hanya boleh digunakan dalam [[index#Comment|Comment]], karena tidak bagus ditampilkan di website.
+Task hanya boleh digunakan dalam [[index#Comment|Comment]], karena tidak bagus ditampilkan di website.
 
 Ada beberapa jenis task yang bisa digunakan:
 
 ### Checkbox Task
 Dengan syntax `* [ ]`. contohnya:
 
-* [ ] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
-* [ ] task menjadi kabur ketika selesai
+* [ ] Ini task hanya ceklist (dengan syntax `* [ ] Nama task` )
+* [x] task menjadi kabur ketika diceklis
 
 ## State Task
-Dengan syntax `* [STATE]`. state bisa diisi PROGRESS , DONE atau TODO. contohnya:
+Dengan mengetik syntax `* [STATE]`. Nilainya bisa diisi dengan PROGRESS, DONE atau TODO. contohnya:
 
 * [TODO] Ini task dengan sifat dikerjakan [priority: high] [assignee: @ginalne]
 * [PROGRESS] Ini task dengan sifat belum dikerjakan
 * [DONE] Ini task dengan sifat selesai
   
+>**note** Tips Command
+>Anda bisa ketikan perintah ***`/todo task`*** untuk menambahkan .
+
 ---
 
 ## Quotes
