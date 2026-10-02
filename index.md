@@ -7,6 +7,15 @@
 # Welcome to Phoenix Docs
 Sebagai pembaca saya harap anda dapat mengabaikan pesan ini, berikut adalah aturan yang berlaku saat menulis dokumentasi ini:
 
+>[!warning] Wajib dibaca oleh penulis!
+>Anda boleh mengedit halaman ini jika diperlukan.
+
+
+<!--
+HARBIIIIIIII KOK BISA DI INTEGRASIKAN DENGAN GINALNE??
+
+bisa dong wkwkwk kan emng dia ngijinin itu, biar gaada username password. @
+-->
 ## Frontmatter
 frontmatter adalah section dalam penulisan dokumentasi yang dibuka dengan “---” dan ditutup dengan “---”, isi dari frontmatter ditulis dengan format YAML. 
 
@@ -52,4 +61,6 @@ Berikut adalah atribut penting yang bisa atau wajib digunakan.
 ## Heading
 Sebagai penulis Anda wajib menambahkan judul pada baris pertama diawali dengan mengetik # dan spasi.
 
-Harap pastikan 
+Harap pastikan urutan heading tidak salah. Heading 1 diawali #, Heading 2 diawali ##, Heading 3 diawali ###. Jangan gunakan Heading 1 lebih dari 1 kali.
+
+## 
