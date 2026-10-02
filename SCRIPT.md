@@ -129,8 +129,9 @@ slashCommand.define {
           rest = ""
         end
         
+        editor.flashNotification(before)
         editor.flashNotification(block)
-        
+        editor.flashNotification(rest)
         block = string.gsub(
           block,
           "\n%s+icon%s*:%s*x%s*$",
@@ -138,26 +139,35 @@ slashCommand.define {
           1
         )
         
-        editor.flashNotification(block)
+        block = string.gsub(
+          block,
+          "(%s+#%s*icon%s*:%s*)[^\n]*",
+          "      icon: zz",
+          1
+        )
         
+        editor.flashNotification(block)
         block = string.gsub(
           block,
           "^%s+icon%s*:%s*x%s*$",
           "",
           1
         )
+        editor.flashNotification(block)
         block = string.gsub(
           block,
           "\n%s+#%s*icon%s*:%s*x%s*$",
           "",
           1
         )
+        editor.flashNotification(block)
         block = string.gsub(
           block,
           "^%s+#%s*icon%s*:%s*x%s*$",
           "",
           1
         )
+        editor.flashNotification(block)
         frontmatter = before .. block
         if rest ~= "" then
           frontmatter = frontmatter .. "\n" .. rest
