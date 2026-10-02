@@ -152,7 +152,14 @@ slashCommand.define {
   run = function()
     local line = editor.getCurrentLine()
     local ws, prefix, rest = string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.+)$")
+    local me = identity.own()
+    local username = me and me.name or "unknown"
+    if username == "unknown" then
+      
     editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest, true)
+    else
+    editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest .. " [assignee: @" .. username .. "]", true)
+    end
   end
 }
 ```
@@ -167,3 +174,4 @@ slashCommand.define {
   bacot ihh @harbimartin
 -->
 Run ${widgets.commandButton "System: Reload"} to reload.
+* [TODO]  [assignee: @ginalne]tolong kerjain ini ya |^|
