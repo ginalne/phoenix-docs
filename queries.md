@@ -12,7 +12,7 @@
 ${query[[
   from p = index.tasks(_)
   where p.page != "index"
-  select templates.taskItem(p) .. " — " .. p.page
+  select templates.taskItem(p) .. " — <small style=\"opacity:.7;color:#ffa\">" .. p.page .. "</small>"
 ]]}
 
 ---
@@ -21,7 +21,7 @@ ${query[[
 
 ${query[[
   from p = index.aspiringPages()
-  select "- " .. p.name .. " " .. "[[" .. p.page .. "]]"
+  select "- " .. p.name .. " " .. "[[" .. p.page .. "|" .. p.page .. "]]"
 ]]}
 
 ---
