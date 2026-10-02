@@ -1,6 +1,6 @@
 ---
     status: release
-    title: Installation
+    title: Persyaratan
     description: Learn what Phoenix is all about and how to get started quickly.
     pageDecoration:
       #icon: empty

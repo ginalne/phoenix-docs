@@ -3,7 +3,7 @@
     title: Memulai
     description: Learn what Phoenix is all about and how to get started quickly.
     pageDecoration:
-      #      tree:
+      tree:
         priority: 4
     tags:
     - welcome

@@ -1,6 +1,6 @@
 ---
     status: released
-    title: Pengenalan
+    title: Apa itu Phoenix
     description: Halaman pendahuluan untuk menjelaskan phoenix secara umum.
     pageDecoration:
       #icon: empty
