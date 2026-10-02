@@ -3,7 +3,6 @@
     title: huhuehuehue
     description: wkeoawke
     pageDecoration:
-  icon: x
       #icon: x
       tree:
         priority: 0
@@ -86,15 +85,25 @@ slashCommand.define {
 
     if string.match(block, "^%s+icon%s*:") or
        string.match(block, "\n%s+icon%s*:") then
-
+    
       block = string.gsub(
         block,
         "(%s+icon%s*:%s*)[^\n]*",
         "%1x",
         1
       )
+    elseif string.match(block, "^%s*#%s*icon%s*$") or
+           string.match(block, "\n%s*#%s*icon%s*$") then
+      block = string.gsub(
+        block,
+        "([^\n]*)#%s*icon%s*$",
+        "      icon: x",
+        1
+      )
+    
     else
-      block = "  icon: x\n" .. block
+      editor.flashNotification("Add x icon")
+      block = "      icon: x\n" .. block
     end
 
     frontmatter = before .. block
