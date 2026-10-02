@@ -1,7 +1,6 @@
 ---
-  tags: meta/library
+    status: draft
 ---
-
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
 Run ${widgets.commandButton "System: Reload"} to reload.
@@ -20,12 +19,13 @@ slashCommand.define {
   run = function()
     local text = editor.getText()
     if text:match("^%-%-%-[\r\n]") then
-      text = text:gsub("^(%-%-%-.-[\r\n])  status:[^\r\n]*([\r\n].-%-%-%-)", "%1  status: draft%2")
+      text = text:gsub("^(%-%-%-.-[\r\n])    status:[^\r\n]*([\r\n].-%-%-%-)", "%1    status: draft%2")
 
       -- tambahin status kalo gaada
-      if not text:match("^%-%-%-.-[\r\n]  status:") then
-        text = text:gsub("^(%-%-%-[\r\n])", "%1  status: draft\n")
+      if not text:match("^%-%-%-.-[\r\n]    status:") then
+        text = text:gsub("^(%-%-%-[\r\n])", "%1    status: draft\n")
       end
+
       
       if text:match("pageDecoration:%s*[\r\n]%s+icon:") then
         text = text:gsub("(pageDecoration:%s*[\r\n]%s+icon:%s*)[^\r\n]*", "%1x")
@@ -36,13 +36,13 @@ slashCommand.define {
       editor.setText(text)
     else
       editor.insertAtPos([==[---
-      status: draft
-      pageDecoration:
-        icon: x
-        tree:
-          priority: 0
-      ---
-      ]==], 0, true)
+    status: draft
+    pageDecoration:
+      icon: x
+      tree:
+        priority: 0
+---
+]==], 0, true)
     end
   end
 }
