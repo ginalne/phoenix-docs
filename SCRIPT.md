@@ -54,7 +54,7 @@ function orphanAttachmentsLinks()
   end
 
   
-  for linked in query[[from tags.link select _.toPage]] do
+  for linked in query[[from  select _.toPage]] do
     table.insert(checkedText, linked)
   end
 
