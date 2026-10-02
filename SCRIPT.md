@@ -472,6 +472,9 @@ slashCommand.define {
       --editor.flashNotification("we got you " .. idx .. "/" .. #lines .. " " .. username)
       while idx < #lines do
           local check_text = lines[idx]
+          editor.flashNotification(idx)
+          editor.flashNotification(#lines)
+          editor.flashNotification(check_text)
           if check_text == "-->" then
               local line = editor.getCurrentLine()
               local ws, prefix, rest =
@@ -482,6 +485,7 @@ slashCommand.define {
               local datetime = os.date("%Y-%m-%d %H:%M")
               local text = ws .. "`@" .. myUserName .. "` <small style=\"opacity: 0.5\">at " .. datetime .. "</small>\n  |^| @" .. username
               editor.replaceRange(line.from, line.to, text, true)
+              found = true
             break
           end
           idx = idx + 1
