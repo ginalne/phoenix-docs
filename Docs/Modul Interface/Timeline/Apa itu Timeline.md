@@ -1,9 +1,11 @@
 ---
-    status: draft
+    status: release
+    title: # Apa itu Timeline?
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 1
 ---
 # # Apa itu Timeline?
-_Timeline_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix. Komponen ini 
+_Timeline_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
+

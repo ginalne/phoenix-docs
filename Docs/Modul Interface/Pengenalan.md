@@ -28,31 +28,25 @@ Table View merupakan komponen yang dapat mempermudah Anda mengelola data Tabel s
 lihat selengkapnya [[Docs/Modul Interface/Table View/Apa itu Table View]].
 
 ## Form
-Form merupakan ...
-
+<!--
+Tolong buatkan deskripsi ini:
+* [TODO] form [assignee: @ginalne]
+* [TODO] timeline [assignee: @ginalne]
+* /
+-->
 lihat selengkapnya [[Docs/Modul Interface/Form/Apa itu Form]]
 
 ## Timeline
-Form merupakan ...
-
 lihat selengkapnya [[Docs/Modul Interface/Form/Apa itu Form]]
 
 ## Gallery
-Form merupakan ...
-
 lihat selengkapnya [[Docs/Modul Interface/Gallery/Apa itu Gallery]]
 
 ## Kanban
-Form merupakan ...
-
 lihat selengkapnya [[Docs/Modul Interface/Kanban/Apa itu Kanban]]
 
 ## Canvas
-Form merupakan ...
-
 lihat selengkapnya [[Docs/Modul Interface/Canvas/Apa itu Canvas]]
 
 ## Space
-Form merupakan ...
-
 lihat selengkapnya [[Docs/Modul Interface/Space/Apa itu Space]]

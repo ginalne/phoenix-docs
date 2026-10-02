@@ -1,10 +1,10 @@
 ---
-    status: released
-    date: "2026-10-02"
+    status: release
+    title: Modul Logic
+    description: 
     pageDecoration:
-      #icon: empty
       tree:
-        priority: 1
+        priority: 4
 ---
 # Modul Logic
 _Interface_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai antar muka yang membantu Anda mengelola Data yang sudah dibangun agar lebih interaktif, mudah dipahami serta cepat diproses.
@@ -17,3 +17,4 @@ Flow merupakan komponen yang dapat digunakan untuk mengatur logika dan proses pe
 
 
 lihat selengkapnya [[Docs/Modul Logic/Flow/Apa itu Flow]]
+
