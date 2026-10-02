@@ -30,7 +30,6 @@ slashCommand.define {
   name = "draft",
   run = function()
     editor.insertAtPos([==[---
-|^|
     status: draft
     pageDecoration:
       icon: x
@@ -45,7 +44,6 @@ slashCommand.define {
   name = "released",
   run = function()
     editor.insertAtPos([==[---
-|^|
     status: released
     title: 
     desciption: 
@@ -63,8 +61,6 @@ slashCommand.define {
   name = "group",
   run = function()
     editor.insertAtPos([==[---
-|^|
-    
     status: group
     pageDecoration:
       icon: folder
@@ -81,16 +77,6 @@ slashCommand.define {
     local line = editor.getCurrentLine()
     local ws, prefix, rest = string.match(line.textWithCursor, "^(%s*)([%-%*]?)%s*(.+)$")
     editor.replaceRange(line.from, line.to, ws .. "* [TODO] " .. rest, true)
-  end
-}
-
-slashCommand.define {
-  name = "space-lua",
-  description = "Insert Space Lua script",
-  run = function()
-    editor.insertAtCursor([==[```space-lua
-|^|
-```]==], false, true)
   end
 }
 

@@ -1,10 +1,14 @@
 ---
-    status: draft
+    status: released
+    title: Pengenalan
+    desciption: Penjelasan Module Interface di Phoenix
     pageDecoration:
-      icon: x
+      #icon: x
       tree:
-        priority: 1
+        priority: 4
+    tags:
 ---
+
 # Modul Interface
 _Interface_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai antar muka yang membantu Anda mengelola Data yang sudah dibangun agar lebih interaktif, mudah dipahami serta cepat diproses.
 

@@ -23,15 +23,3 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   opacity: .5 !important;
 }
 ```
-
-```space-lua
-slashCommand.define {
-  name = "timestamp",
-  run = function()
-    editor.insertAtCursor('test123')
-  end
-}
-```
-
-> **note** Note
-> 

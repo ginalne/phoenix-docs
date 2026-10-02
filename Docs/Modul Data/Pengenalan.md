@@ -4,7 +4,7 @@
     pageDecoration:
       #icon: empty
       tree:
-        priority: 1
+        priority: 4
 ---
 # Modul Data
 Data merupakan salah satu modul dalam Phoenix. Modul ini berfungsi untuk memebangun, mengatur serta menyiapkan integrasi Data yang dapat menjadi pondasi dari ekosistem yang Anda bangun.
