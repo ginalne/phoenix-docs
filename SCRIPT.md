@@ -8,6 +8,7 @@
       metax
       metas
 ---
+
 # Hello
 
 
@@ -29,17 +30,14 @@ slashCommand.define {
   run = function()
     local text = editor.getText()
 
-    -- Get title from first H1 or first "* value"
     local title = string.match(text, "\n#%s+([^\n]+)")
       or string.match(text, "^#%s+([^\n]+)")
       or string.match(text, "\n%*%s+([^\n]+)")
       or string.match(text, "^%*%s+([^\n]+)")
 
-    -- Existing frontmatter
     local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
 
     if not fmStart then
-      -- No frontmatter: create it
       local newFrontmatter = "---\n"
         .. "    status: release\n"
         .. "    title: " .. (title or "") .. "\n"
@@ -82,10 +80,6 @@ slashCommand.define {
     else
       frontmatter = "    status: release\n" .. frontmatter
     end
-
-    ----------------------------------------------------------------
-    -- title
-    ----------------------------------------------------------------
 
     if not string.match(frontmatter, "^%s+title%s*:") and
        not string.match(frontmatter, "\n%s+title%s*:") then
@@ -139,10 +133,17 @@ slashCommand.define {
           1
         )
         
+        editor.flashNotification(block)
         block = string.gsub(
           block,
           "(%s+#%s*icon%s*:%s*)[^\n]*",
-          "      icon: zz",
+          "",
+          1
+        )
+        block = string.gsub(
+          block,
+          "(%s+icon%s*:%s*)[^\n]*",
+          "",
           1
         )
         
@@ -193,7 +194,6 @@ slashCommand.define {
     -- Existing frontmatter
     local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
     if not fmStart then
-      -- No frontmatter: create it
       editor.insertAtPos([==[---
     status: draft
     pageDecoration:
@@ -214,7 +214,6 @@ slashCommand.define {
 
     local frontmatter = string.sub(text, contentStart, endStart - 1)
 
-    -- status: draft
     if string.match(frontmatter, "\n?status%s*:") or string.match(frontmatter, "^status%s*:") then
       frontmatter = string.gsub(
         frontmatter,
@@ -226,7 +225,6 @@ slashCommand.define {
       frontmatter = "status: draft\n" .. frontmatter
     end
     
-    -- pageDecoration exists
     if string.match(frontmatter, "pageDecoration%s*:") then
   local before, decoration, after =
     string.match(
@@ -235,7 +233,6 @@ slashCommand.define {
     )
 
   if decoration then
-    -- Find the end of the pageDecoration block.
     local block, rest =
       string.match(decoration, "^(.-)\n([^%s].*)$")
 
