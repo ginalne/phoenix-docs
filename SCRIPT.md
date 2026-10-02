@@ -71,7 +71,7 @@ slashCommand.define {
     
     local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
-    local text = ws .. "<!--\n   `@" .. username .. "` at " .. datetime .. "to @everynyaw\n   |^|@everynyaw\n-->"
+    local text = ws .. "<!--\n   `@" .. username .. "` at " .. datetime .. "\n   |^| (to @everynyaw)\n-->"
     editor.replaceRange(line.from, line.to, text, true)
   end
 }
@@ -131,7 +131,7 @@ slashCommand.define {
               
               local myUserName = me and me.name or "unknown"
               local datetime = os.date("%Y-%m-%d %H:%M")
-              local text = ws .. "\n `@" .. myUserName .. "` at " .. datetime .. " replied to @" .. username .. "\n"
+              local text = ws .. "\n   `@" .. myUserName .. "` at " .. datetime .. " replied\n   |^| @" .. username
               editor.replaceRange(line.from, line.to, text, true)
             break
           end
@@ -156,11 +156,9 @@ slashCommand.define {
   end
 }
 ```
-
 <!--
-   `@ginalne` at 2026-10-02 20:30 to 
+   `@ginalne` at 2026-10-02 20:34 ini kenapa bro (to @everynyaw)
    
 -->
-
 
 Run ${widgets.commandButton "System: Reload"} to reload.
