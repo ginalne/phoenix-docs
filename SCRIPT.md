@@ -71,7 +71,7 @@ slashCommand.define {
     
     local username = me and me.name or "unknown"
     local datetime = os.date("%Y-%m-%d %H:%M")
-    local text = ws .. "<!--\n   `@" .. username .. "` at " .. datetime .. "\n   |^| *~to @everynyaw*\n-->"
+    local text = ws .. "<!--\n  `@" .. username .. "` <small style=\"opacity: 0.5\">at " .. datetime .. "</small>\n  |^| <small>*~to @everynyaw*</small>\n-->"
     editor.replaceRange(line.from, line.to, text, true)
   end
 }
@@ -131,7 +131,7 @@ slashCommand.define {
               
               local myUserName = me and me.name or "unknown"
               local datetime = os.date("%Y-%m-%d %H:%M")
-              local text = ws .. "`@" .. myUserName .. "` at " .. datetime .. " replied\n   |^| *~re @" .. username .. "*"
+              local text = ws .. "`@" .. myUserName .. "` <small style=\"opacity: 0.5\">at " .. datetime .. "</small>\n  |^| <small>*~re @" .. username .. "*</small>"
               editor.replaceRange(line.from, line.to, text, true)
             break
           end
@@ -158,10 +158,10 @@ slashCommand.define {
 ```
 
 <!--
-   `@ginalne` at 2026-10-02 20:37
-   minta tolong sih ini dibenerin *~to @everynyaw*
+  `@ginalne` <small style="opacity: 0.5">at 2026-10-02 20:44</small>
+  hallo guys mau nanya dong ini kenapa ya? <small>*~to @everynyaw*</small>
 
-   `@ginalne` at 2026-10-02 20:40 replied
-   apasih bro *~re @ginalne*
+  `@ginalne` <small style="opacity: 0.5">at 2026-10-02 20:46</small>
+   <small>*~re @ginalne*</small>
 -->
 Run ${widgets.commandButton "System: Reload"} to reload.
