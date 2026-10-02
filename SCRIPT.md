@@ -88,16 +88,18 @@ slashCommand.define {
   end
 }
 
-command.define {
-  name = "reply",
+slashCommand.define {
+  name = "answer",
   run = function()
     local line = editor.getCurrentLine()
-    local beforeCursor = string.sub(line.textWithCursor, 1, line.cursorPos)
-    local username = string.match(beforeCursor, "`@([%w_%-]+)$")
     
-    editor.flashNotification(username)
+    local beforeCursor = string.sub(line.textWithCursor, 1, line.cursorPos)
+    local username = string.match(beforeCursor, "@([%w_%-]+)$")
+
+    editor.flashNotification(line.textWithCursor)
   end
 }
+
 
 
 slashCommand.define {
@@ -115,7 +117,7 @@ slashCommand.define {
 
 <!--
  ginalne at 2026-10-02 19:29 ${widgets.commandButton "reply"}
- yes kenapa bang
+ yes kenapa bang 
 
  
 -->
