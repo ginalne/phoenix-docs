@@ -90,3 +90,6 @@ Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.
 Terimakasih
 
 Selamat Menulis~
+
+* [STARTED] first state
+* [NOT STARTED] second state 
