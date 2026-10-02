@@ -63,24 +63,26 @@ Sebagai Penulis baru tentu menggunakan Silverbullet tidaklah mudah, berikut adal
 2. Huruf Tebal (**bold**), dengan cara ketik bintang 2x (**) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
 3. Huruf Miring + Tebal (***italic + bold***), dengan cara ketik bintang 3x (***) dipembuka dan penutup, seperti contoh **ini adalah teks tebal**.
 
-### List
+## List
 Ada 2 jenis list yang digunakan:
-#### List tanpa nomor
+
+### List tanpa nomor
   adalah dengan * atau - diawal ditambah spasi:
   * ini list tanpa nomor
   * ini daftar selanjutnya
-#### List dengan nomor
+    
+### List dengan nomor
   adalah dengan nomor diawal ditambah spasi:
   1. Ini item pertama
   2. Ini item kedua
 
-### Task
+## Task
 Task dapat Anda gunakan sebagai catatan mark yang hanya boleh digunakan dalam [[index#Comment|Comment]], karena tidak bagus ditampilkan di website.
 
 Ada beberapa jenis task yang bisa digunakan:
 
 * [ ] Ini task hanya ceklist (dengan syntax `* [ ] Isi task` )
-* [x] task menjadi kabur ketika selesai
+* [ ] task menjadi kabur ketika selesai
 
 * [IN PROGRESS] Ini task dengan sifat dikerjakan
 * [TO DO] Ini task dengan sifat belum dikerjakan
@@ -88,9 +90,11 @@ Ada beberapa jenis task yang bisa digunakan:
   
 (dengan syntax `* [IN PROGRESS] ` bisa IN PROGRESS , DONE atau TO DO)
 
+## Quotes
+Tambahkan quotes jika ingin mengutip sesuatu dengan diawali simbol `>` :
 
-
-* [] test 
+> “If you don’t know where you’re going, you may not get there.”
+> — Yogi Berra
 
 ## Penutup
 Sekian aturan yang wajib diikuti oleh Penulis. Harap di inget.

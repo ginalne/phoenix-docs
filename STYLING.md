@@ -1,3 +1,6 @@
+---
+  tags: meta/library
+---
 ```space-style
 /* Coret teks task dengan status DONE */
 #sb-main .cm-editor [data-task-state="DONE"] ~ .sb-task {
