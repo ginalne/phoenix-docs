@@ -65,14 +65,14 @@ Jika ingin mendalami format frontmatter berikut adalah penjelasan atribut pentin
 ### status
    *status* adalah atribut untuk penanda status halaman dengan nilai seperti berikut:
    * draft    : jika halaman belum dipublish ke website.
-   * released : jika halaman dipublish ke website.
+   * release  : jika halaman dipublish ke website.
    * group    : jika halaman sebagai group (group perlu diisi jika ingin menentukan tree.priority)
 
 ### title
    *title* adalah atribut untuk menamakan dokumen dan akan tampil di judul tab website (jika diisi dengan ***“Some Title”***, maka hasil diwebsite akan seperti **Some Title | Phoenix Documentation**), jika tidak diisi, maka Heading 1 akan dijadikan sebagai Judul. Judul akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.
 
 ### description
-   *description* adalah atribut untuk menjelaskan deskripsi dokumen dan akan tampil di SEO tag website (dengan contoh seperti **Halaman yang menjelaskan aturan dalam penulisan dokumentasi**), jika tidak diisi, maka deskripsi akan kosong. Deskripsi akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.
+   *description* adalah atribut untuk menjelaskan deskripsi dokumen dan akan tampil di SEO (dengan contoh seperti **Halaman yang menjelaskan aturan dalam penulisan dokumentasi**), jika tidak diisi, maka deskripsi akan kosong. Deskripsi akan muncul dalam mesin pencarian seperti Google, jadi harap hati-hati.
 
 ### pageDecoration.icon
    ditulis dengan format seperti berikut
@@ -89,7 +89,7 @@ Jika ingin mendalami format frontmatter berikut adalah penjelasan atribut pentin
       tree:
         priority: some number...
    ```
-   jika Anda ingin mengubah urutan halaman di Navigation : Tree. Anda dapat mengisi nilai angka besar agar keatas, atau kecil untuk kebawah.
+   jika Anda ingin mengubah urutan halaman di Navigation : Tree. Anda dapat mengisi nilai angka besar agar urutan keatas dan sebaliknya.
    
 ### tags
    ditulis dengan format seperti berikut:
