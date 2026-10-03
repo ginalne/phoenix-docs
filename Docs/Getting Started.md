@@ -15,8 +15,7 @@ Baik Anda baru mulai menggunakan Phoenix maupun sedang mendalami API kami, dokum
 Dokumentasi kami disusun secara terstruktur ke dalam beberapa bagian yang intuitif:
 
 [[Docs/What is Phoenix]] : Pelajari apa itu Phoenix dan bagaimana cara memulainya dengan cepat.<br>
-[[Docs/Persyaratan]] : Pelajari persyaratan apa yang diperlukan untuk menggunakan Phoenix.
-
+[[Docs/Persyaratan]] : Pelajari persyaratan apa yang diperlukan untuk menggunakan Phoenix.<br>
 [[Docs/Antar Muka]] : Pelajari antar muka saat anda telah memasuki halaman Phoenix.
 
 ## Jelajahi Dokumentasi
