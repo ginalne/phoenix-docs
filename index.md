@@ -51,7 +51,7 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
 
 <!--
   `@ginalne` <small style="opacity: 0.5">at 2026-10-02 21:21</small>
-  Hallo semua @everynyaw
+  Hallo semua `@everynyaw`
 
   <small>*ketik ***`/answer`*** dibawah ini*</small>
   
