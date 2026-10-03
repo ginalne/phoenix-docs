@@ -15,7 +15,7 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 3. [[#Table]]
 4. [[#Tree]]
 
-## Variabel
+## Variable
 Variabel merupakan komponen yang dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja (Pro) baru dan tidak dapat dihapus.
 
 >**warning** Harap hati-hati
