@@ -13,4 +13,3 @@ Variabel dikenali semua komponen sebagai satu sumber universal. Komponen ini sec
 
 >**note** Saran
 >Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Modul Developer/Workspace/Apa itu Workspace]].
-

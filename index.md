@@ -80,6 +80,11 @@ Anda dapat menggunakan ketik ***`/warning-admonition`*** lalu Enter untuk membua
 
 Anda dapat menggunakan ketik ***`/danger-admonition`*** lalu Enter untuk membuat larangan.
 
+>**success** Judul Success
+>Silahkan isi deskripsi success secara bebas
+
+Anda dapat menggunakan ketik ***`/success-admonition`*** lalu Enter untuk membuat tip/sukses.
+
 ---
 
 ## Text Decoration
