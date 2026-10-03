@@ -7,7 +7,15 @@
         priority: 1
 ---
 # Apa itu Tipe Data
-<!--
-  `@ginalne` <small style="opacity: 0.5">at 2026-10-03 01:44</small>
-  #empty masih kosong @everynyaw 
--->
+
+>**note** Judul Info
+>Silahkan isi deskripsi info
+
+>**warning** Judul Warning
+>Silahkan isi deskripsi warning
+
+>**danger** Judul Danger
+>Silahkan isi deskripsi danger
+
+>**success** Judul Success
+>Silahkan isi deskripsi success
