@@ -19,7 +19,7 @@ Contoh basic untuk dokumen draft:
 ```
 
 >**note** Tips Command
->Anda bisa ketik ***`/draft`*** untuk mengubah dokumen menjadi draft
+>Anda bisa ketik ***`/draft`*** dimanapun di dokumen tersebut untuk mengubahnya menjadi draft
 
 Contoh basic untuk dokumen released:
 ```yaml
@@ -38,7 +38,7 @@ Contoh basic untuk dokumen released:
 ```
 
 >**note** Tips Command
->Anda bisa ketik ***`/released`*** untuk mengubah dokumen menjadi released
+>Anda bisa ketik ***`/release`*** dimanapun di dokumen tersebut untuk mengubahnya menjadi draft
 
 Contoh basic untuk dokumen group:
 ```yaml
@@ -52,17 +52,15 @@ Contoh basic untuk dokumen group:
 ```
 
 >**note** Tips Command
->Anda bisa ketik ***`/group`*** untuk mengubah dokumen menjadi released
+>Anda bisa ketik ***`/group`*** untuk mengubah dokumen menjadi group (hanya boleh dilakukan di level folder)
 
-Secara contoh berikut adalah atribut penting untuk frontmatter:
+Jika ingin mendalami format frontmatter berikut adalah penjelasan atribut penting yang perlu diketahui:
 1. [[frontmatter guidance#status|status]]
 2. [[frontmatter guidance#title|title]]
 3. [[frontmatter guidance#description|description]]
 4. [[frontmatter guidance#pageDecoration.icon|pageDecoration.icon]]
 5. [[frontmatter guidance#pageDecoration.tree.priority|pageDecoration.tree.priority]]
 6. [[frontmatter guidance#tags|tags]]
-
-Berikut penjelasan atribut penting yang bisa atau wajib digunakan.
 
 ### status
    *status* adalah atribut untuk penanda status halaman dengan nilai seperti berikut:

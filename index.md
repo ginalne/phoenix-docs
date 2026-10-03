@@ -132,7 +132,7 @@ Dengan mengetik syntax `* [STATE]`. Nilainya bisa diisi dengan PROGRESS, DONE at
   
 >**note** Tips Command
 >Anda bisa ketikan perintah ***`/todo task`*** untuk menambahkan item TODO.
->bisa juga dengan mengetik task nya terlebih dahulu lalu menutup ***/todo task*** lalu Enter diakhir.
+>bisa juga dengan mengetik task nya terlebih dahulu lalu menutup ***/todo task*** lalu Enter diakhir kalimat.
 >
 >Seperti contoh : Ini pekerjaan baru `/todo task`
 >lalu Enter 
