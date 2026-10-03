@@ -17,7 +17,7 @@ ${query[[
 
 ---
 
-## Berikut adalah daftar link tapi halamannya masih kosong
+## Berikut adalah daftar link yang sudah dimention tapi belum ada halamannya
 
 >**danger** Cepet bikin!
 >${query[[

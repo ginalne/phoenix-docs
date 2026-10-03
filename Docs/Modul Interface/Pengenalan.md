@@ -47,7 +47,7 @@ lihat selengkapnya [[Docs/Modul Interface/Space/Apa itu Space]]
 
 <!--
   `@ginalne` <small style="opacity: 0.5">at 2026-10-03 01:13</small>
-  Tolong sih bantu @everynyaw
+  Tolong bantu @everynyaw
   
   Tolong buatkan deskripsi ini:
 * [TODO] form [assignee: @ginalne]
