@@ -116,19 +116,19 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   background-color: #161616;
   pointer-events: none;
   white-space: nowrap !important;
+  text-decoration: none;
 }
 #sb-main .cm-editor td a[href^="mode/"] {
   display:block !important;
 }
 #sb-main .cm-editor a[href^="mode/"]::before {
-  position:absolute;
   left: 12px;
   top: 3px;
-  content: "mode";
+  content: "mode ";
   font-size: 1rem;
   font-weight: 100;
 }
-#sb-main .cm-editor a[href^="mode/"]::after {
+#sb-main .cm-editor a[href^="mode/"]:has(span)::after {
   position:absolute;
   left: 60px;
   top: 1px;
@@ -138,16 +138,18 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   opacity:.5;
 }
 #sb-main .cm-editor a[href^="mode/"] span {
-  padding: 0rem .3rem 0rem 3.7rem;
+  padding: 0rem .3rem 0rem 0.5rem;
 }
 #sb-main .cm-editor td:has(a[href^="mode/"]) {
   white-space:nowrap !important;
 }
 ```
 
+|  |  |
+|----------|----------|
+| [[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
 
-[[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
-[[mode/edit|Edit]] | Saklar dengan mode Edit agar  konten Form hanya bisa dilihat |
+[[mode/edit|Edit]]
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
