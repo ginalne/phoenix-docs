@@ -106,13 +106,13 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   display:inline-block !important;
   position:relative;
   font-family:"Segoe UI";
-  padding: 0.1rem 1rem 0.2rem 0.9rem;
   margin: 0.3rem 0.3rem;
   color: #bdbdbd !important;
+  padding: 0.1rem 1rem 0.2rem 0.9rem;
   border: 1px solid rgb(63 63 70);
   font-weight: 500;
   font-size: 1.125rem;
-  border-radius: 9999px;
+  border-radius: 999px;
   background-color: #161616;
   pointer-events: none;
   white-space: nowrap !important;
@@ -122,9 +122,8 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   display:block !important;
 }
 #sb-main .cm-editor a[href^="mode/"]::before {
-  left: 12px;
-  top: 3px;
   content: "mode ";
+  margin-right:10px;
   font-size: 1rem;
   font-weight: 100;
 }
@@ -138,7 +137,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   opacity:.5;
 }
 #sb-main .cm-editor a[href^="mode/"] span {
-  padding: 0rem .3rem 0rem 0.5rem;
+  padding: 0rem .3rem 0rem 0.3rem;
 }
 #sb-main .cm-editor td:has(a[href^="mode/"]) {
   white-space:nowrap !important;
