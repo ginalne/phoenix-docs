@@ -48,25 +48,24 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-[[button/edit|Strict On Selected]]
+[[button/edit|Edit]]
 
 ```space-style
 /* Style links starting with button: */
 #sb-main .cm-editor a[href^="button/"] {
   font-family:arial;
   padding: 0.5rem 1.25rem 0.5rem 3rem;
-  color: white;
+  color: #ddd !important;
+  border: 1px solid rgb(63 63 70);
   font-weight: 600;
   font-size: 1.125rem;
   border-radius: 9999px;
-  transition:
-    color 0.3s,
-    background-color 0.3s;
-  pointer-events: none;
+  background-color: #000;
   background-image: url('https://phoenix.ginalne.com/assets/icons/edit.svg');
   background-repeat: no-repeat;
-  background-position: left 15px top 8px;
+  background-position: left 15px top 6px;
   background-size: 22px 22px;
+  pointer-events: none;
 }
 #sb-main .cm-editor div:has(a[href^="button/ed"]) {
   display: inline-block;
