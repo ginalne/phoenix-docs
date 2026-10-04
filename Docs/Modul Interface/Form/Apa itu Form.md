@@ -23,7 +23,7 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 
 | Tombol | Penjelasan|
 |-------------------|----------|
-| Edit | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
+| [[button/ed]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
 
 
 
