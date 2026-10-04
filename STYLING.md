@@ -31,11 +31,12 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   /*font-family: "Inter", sans-serif !important;*/
 }
 
-@import url('https://fonts.googleapis.com');
-
 #sb-root {
-  --ui-font: "Inter", sans-serif !important;
+  --ui-font: "Inter", sans-serif;
   /*--editor-font: "Inter", monospace !important;*/
+}
+#sb-root .cm-editor .sb-line-fenced-code {
+  font-family: monospace !important;
 }
 #sb-root .sb-nav-primary {
   font-weight:500 !important;
