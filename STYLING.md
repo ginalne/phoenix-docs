@@ -33,8 +33,9 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 ```space-style
 #sb-main .cm-editor a[href="field"] {
-  margin:2px;
-  padding: 2px 8px;
+  display:inline-block !important;
+  margin:4px;
+  padding: 6px 8px;
   border: 1px solid #555;
   border-radius: 5px;
   background: #333;
