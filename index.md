@@ -46,7 +46,6 @@ comment adalah section dalam penulisan dokumentasi yang dibuka dengan `<!--` dan
 
 >**note** Tips Command
 >Anda bisa ketikan perintah ***`/asking`*** untuk memulai komen, dan ***`/answer`*** untuk menjawab (harap kursor perlu didalam comment).
->
 >seperti contoh:
 
 <!--
