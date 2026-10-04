@@ -54,20 +54,16 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 /* Style links starting with button: */
 #sb-main .cm-editor a[href^="button/"] {
   font-family:arial;
-  padding: 0.5rem 1.25rem 0.5rem 3rem;
-  color: #ddd !important;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  color: #adadad !important;
   border: 1px solid rgb(63 63 70);
   font-weight: 600;
   font-size: 1.125rem;
   border-radius: 9999px;
-  background-color: #000;
-  background-image: url('https://phoenix.ginalne.com/assets/icons/edit.svg');
-  background-repeat: no-repeat;
-  background-position: left 15px top 6px;
-  background-size: 22px 22px;
+  background-color: #161616;
   pointer-events: none;
 }
-#sb-main .cm-editor div:has(a[href^="button/ed"]) {
+#sb-main .cm-editor div:has(a[href^="button"]) {
   display: inline-block;
   cursor: pointer;
 }
