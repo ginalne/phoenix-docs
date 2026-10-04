@@ -23,4 +23,8 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 | [[button/publish|Publish]]  | Tombol yang berfungsi untuk membuka modal Publish Form untuk memperbarui konfigurasi publish Form. |
 |  [[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
 |  [[mode/edit|Edit]] | Saklar dengan mode Edit agar  konten Form hanya bisa dilihat |
-| [[button/save|Save]]  | Tombol yang berfungsi untuk membuka modal Publish Form untuk memperbarui konfigurasi publish Form. |
+| [[button/save|Save]]  | Tombol yang berfungsi untuk menyimpan perubahan Form. |
+| [[button/refresh|Refresh]]  | Tombol yang berfungsi untuk menyegarkan lagi halaman Form. |
+
+> **warning** Warning
+> Harap hati-hati saat [[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.

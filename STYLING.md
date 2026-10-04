@@ -154,12 +154,16 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 test [[button/edit|Edit]]
 
+> **warning** Warning
+> Harap hati-hati saat [[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
+
 ```space-style
 /* Style links starting with button: */
 #sb-main .cm-editor a[href^="button/"] {
+  display:inline-block !important;
   font-family:"Segoe UI";
   padding: 0.1rem 1rem 0.2rem 0.9rem;
-  margin: 0rem 0.3rem;
+  margin: 0.1rem 0.3rem;
   color: #bdbdbd !important;
   border: 1px solid rgb(63 63 70);
   font-weight: 500;
