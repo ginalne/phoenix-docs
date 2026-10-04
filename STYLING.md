@@ -28,6 +28,9 @@ html{
       white-space: pre-wrap !important;
     }
 }
+#sb-main .sb-strong{
+  font-weight: 600;
+}
 ```
 
 Run ${widgets.commandButton "System: Reload"} to reload.
