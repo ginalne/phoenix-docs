@@ -12,9 +12,10 @@
     icon: assets/icons/type/-f.svg
 ---
 # Apa itu Form?
-_Form_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix. 
+>**note**Info
+>_Form_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 
-Komponen untuk menginput, melihat, dan mengubah data secara terstruktur. Setiap kolom ditampilkan sebagai field yang jelas dan terarah, sehingga proses pengisian data menjadi lebih rapi, konsisten, dan minim kesalahan. Anda juga dapat membagikan Form kepada publik agar proses pengumpulan data bisa lebih cepat dan efektif.
+Form adalah komponen untuk menginput, melihat, dan mengubah data secara terstruktur. Setiap kolom ditampilkan sebagai field yang jelas dan terarah, sehingga proses pengisian data menjadi lebih rapi, konsisten, dan minim kesalahan. Anda juga dapat membagikan Form kepada publik agar proses pengumpulan data bisa lebih cepat dan efektif.
 
 ## Antar Muka
 Berikut adalah tampilan form saat pertama kali dibuat:

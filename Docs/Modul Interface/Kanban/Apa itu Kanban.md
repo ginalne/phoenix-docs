@@ -14,5 +14,8 @@
     icon: assets/icons/type/-1.svg
 ---
 # Apa itu Kanban?
-_Kanban_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
+>**note**Info
+>_Kanban_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
+
+Kanban menampilkan data dalam bentuk kolom-kolom berdasarkan status atau kategori, dan setiap data direpresentasikan sebagai kartu yang dapat dipindahkan antar kolom. Komponen ini membantu Anda memvisualisasikan alur kerja dan memantau progres tugas secara intuitif.
 

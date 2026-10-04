@@ -7,7 +7,7 @@
         priority: 4
 ---
 # Modul Logic
-_Interface_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai antar muka yang membantu Anda mengelola Data yang sudah dibangun agar lebih interaktif, mudah dipahami serta cepat diproses.
+_Logic_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai antar muka yang membantu Anda mengelola Data yang sudah dibangun agar lebih interaktif, mudah dipahami serta cepat diproses.
 
 Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 1. [[#Flow]]

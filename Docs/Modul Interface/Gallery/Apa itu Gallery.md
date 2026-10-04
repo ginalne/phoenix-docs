@@ -11,7 +11,8 @@
     icon: assets/icons/type/-0.svg
 ---
 # # Apa itu Gallery?
-_Gallery_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
+>**note**Info
+>_Gallery_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 
-Menyajikan data dalam bentuk kartu visual yang menonjolkan gambar atau konten utama dari setiap data. Komponen ini ideal untuk koleksi yang bersifat visual, seperti katalog, portofolio, atau daftar aset, sehingga data lebih mudah dikenali sekilas.
+Gallery menyajikan data dalam bentuk kartu visual yang menonjolkan gambar atau konten utama dari setiap data. Komponen ini ideal untuk koleksi yang bersifat visual, seperti katalog, portofolio, atau daftar aset, sehingga data lebih mudah dikenali sekilas.
 
