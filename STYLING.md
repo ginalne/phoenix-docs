@@ -64,5 +64,10 @@ Run ${widgets.commandButton "System: Reload"} to reload.
     color 0.3s,
     background-color 0.3s;
   pointer-events: none;
+  background-image: url('path-to-your-file.svg');
+}
+#sb-main .cm-editor div:has(a[href^="button/"]) {
+  display: inline-block;
+  cursor: pointer;
 }
 ```
