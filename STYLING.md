@@ -32,24 +32,8 @@ html{
   font-weight: 600;
   color: #fdc;
 }
-#sb-main .sb-admonition:has(.sb-quote sb-strong){
-  padding-bottom:0rem !important;
-}
 
 ```
-
-
->**faq**
->**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
->Tidak. Akses yang dimiliki anggota akan sesuai dengan Group-nya.
->**Apa yang terjadi jika anggota dikeluarkan dari Group?**
->Anggota tersebut kehilangan akses Workspace yang diberikan melalui Group itu.
->**Apakah sebuah Workspace dapat diakses oleh banyak Group?**
->Ya. Satu Workspace dapat diberikan kepada beberapa Group.
->**Siapa yang dapat membuat dan mengelola Group?**
->Pengguna dengan kewenangan pengelolaan di modul Developer.
-
-
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 ```space-style
@@ -234,4 +218,25 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 #sb-main .cm-editor .sb-quote {
   margin: 0rem 0rem 0rem 0.5rem;
 }
+#sb-main .sb-admonition[admonition="faq"]:has(.sb-quote.sb-strong){
+  padding-top:1rem !important;
+  padding-bottom:1rem !important;
+}
+#sb-main .sb-admonition[admonition="faq"]:has(.sb-quote){
+  padding-top:0rem !important;
+  padding-bottom:1rem !important;
+  color:#fff;
+}
 ```
+
+
+>**FAQ**
+>**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
+>Tidak. Akses yang dimiliki anggota akan sesuai dengan Group-nya.
+>**Apa yang terjadi jika anggota dikeluarkan dari Group?**
+>Anggota tersebut kehilangan akses Workspace yang diberikan melalui Group itu.
+>**Apakah sebuah Workspace dapat diakses oleh banyak Group?**
+>Ya. Satu Workspace dapat diberikan kepada beberapa Group.
+>**Siapa yang dapat membuat dan mengelola Group?**
+>Pengguna dengan kewenangan pengelolaan di modul Developer.
+
