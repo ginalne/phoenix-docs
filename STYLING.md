@@ -89,7 +89,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 ```space-style
 #sb-main .cm-editor .sb-admonition {
-  padding: 3rem;
+  padding: 1rem 1.5rem;
 }
 #sb-main .cm-editor .sb-admonition-title {
   padding: 0.8rem 1.5rem;
