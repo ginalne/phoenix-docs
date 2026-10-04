@@ -3,5 +3,5 @@
     meta/library
     mode
   pageDecoration:
-    icon: eye
+    icon: edit-2
 ---

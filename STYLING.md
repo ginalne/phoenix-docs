@@ -1,10 +1,6 @@
 ---
   tags: meta/library
 ---
-| Tombol | Penjelasan|
-|-------------------|----------|
-| [[button/edit|Edit]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
-| [[button/edit|Edit]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
 
 ```space-style
 table {
@@ -104,6 +100,33 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 }
 
 ```
+
+```space-style
+/* Style links starting with button: */
+#sb-main .cm-editor a[href^="mode/"] {
+  font-family:"Segoe UI";
+  padding: 0.1rem 1rem 0.2rem 0.9rem;
+  margin: 0rem 0.3rem;
+  color: #bdbdbd !important;
+  border: 1px solid rgb(63 63 70);
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  background-color: #161616;
+  pointer-events: none;
+  white-space: nowrap !important;
+}
+#sb-main .cm-editor a[href^="mode/"] span {
+  padding: 0rem 0.3rem 0rem 0rem;
+}
+#sb-main .cm-editor td:has(a[href^="mode/"]) {
+  white-space:nowrap !important;
+}
+```
+
+
+[[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
+[[mode/edit|Edit]] | Saklar dengan mode Edit agar  konten Form hanya bisa dilihat |
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
