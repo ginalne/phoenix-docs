@@ -19,7 +19,6 @@ Text adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 65,535
 * [[Docs/Format Data/String/Username]]
 * [[Docs/Format Data/String/Full Name]]
 * [[Docs/Format Data/String/First Name]]
-* [[Docs/Format Data/String/Last Name]]
 * [[Docs/Format Data/String/Initial]]
 * [[Docs/Format Data/String/Country Code]]
 * [[Docs/Format Data/String/Postal Code]]
