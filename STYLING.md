@@ -33,6 +33,7 @@ html{
 }
 ```
 
+
 Run ${widgets.commandButton "System: Reload"} to reload.
 ```space-style
 /* Coret teks task dengan status DONE */
@@ -105,8 +106,19 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   display:inline !important;
   padding: 1.5px 8px;
 }
+#sb-main .cm-editor .sb-line-li {
+  
+  line-height: ;
+}
 
 ```
+
+1. Klik kanan pada [[Docs/Antar Muka#Area Manajemen Folder]].
+2. Pilih [[field/add|Add]] > [[field|Developer]] > [[field/group| Group]]
+3. Isi [[field|Name]] dan [[field|Description]] Group.
+4. Tambahkan anggota ke dalam Group dengan cara *drag and drop*.
+5. Isi [[field|Search workspace to add...]]  dan pilih Workspace yang ingin ditambahkan.
+6. Selesai
 
 ```space-style
 #sb-main .cm-editor a[href^="mode/"] {
