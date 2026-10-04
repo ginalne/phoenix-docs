@@ -19,11 +19,6 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 1. [[button/edit|Edit]] : Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form.
 2. [[button/publish|Publish]] :
 
-<table><tr>
-<td>test</td><td>test123</td>
-</tr>
-</table>
-
 
 | Tombol | Penjelasan|
 |-------------------|----------|
