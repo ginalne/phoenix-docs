@@ -8,9 +8,11 @@
         priority: 4
 ---
 # Konfigurasi Tegas dalam Enum
+
 [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] memiliki atribut Name dan Description yang muncul ketika pengguna sedang memilih [[Docs/Tipe Data/EnumData]] , namun dalam proses Data Gathering, terkadang nilai [[Docs/Tipe Data/EnumData]] belum ada yang mewakilkan, sehingga konfigurasi Enum dapat dibuka menjadi tidak ketat agar penambahan data selama input dapat dilakukan.
 
 ## Mengatur Konfigurasi
+
 Anda dapat mengaturnya melalui tombol [[button/edit|Edit]] dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] atau saat membuat komponen [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] pertama kali.
 
 ![[Docs/Modul Data/Enum/create-new-enum.png|Modal Tambah Enum Baru]]
@@ -19,6 +21,7 @@ Kolom [[field|Strict On Selected]] dapat diubah dengan implikasi seperti berikut
 2. [[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
 
 ## Arti dari “Externally”
+
 _Externally_ artinya sesuatu yang diluar Enum. Saat menentukan sebuah inputan dengan tipe data [[Docs/Tipe Data/EnumData|EnumData]], anda harus memilih header Enum. Input ini dapat muncul dalam [[Docs/Modul Data/Table/Apa itu Table|Tabel]], komponen dalam [[Docs/Modul Interface/Pengenalan|Modul Interface]] seperti [[Docs/Modul Interface/Form/Apa itu Form|Form]] yang dapat diinput oleh publik.
 
 >**note**Tips

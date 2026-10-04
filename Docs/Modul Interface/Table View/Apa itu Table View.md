@@ -7,6 +7,7 @@
         priority: 1
 ---
 # Apa itu Table View?
+
 >**note**Info
 >_Table View_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 

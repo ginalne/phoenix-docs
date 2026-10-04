@@ -6,20 +6,24 @@
       tree:
         priority: 1
 ---
-# Modul Developer
-_Developer_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai alat bantu Anda untuk mengatur pengembangan ekosistem dan pengeolaaan akses tim Anda.
+# # Modul Developer
 
-Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
+_Developer_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai alat bantu untuk mengelola pengembangan ekosistem Anda sekaligus mengatur akses tim, sehingga setiap anggota hanya dapat melihat dan mengerjakan bagian yang memang menjadi tanggung jawabnya.
+
+Berikut adalah komponen yang tersedia dalam modul ini:
+
 1. [[#Group]]
 2. [[#Workspace]]
-   
+
 ## Group
-_Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi Tim anda serta akses [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang diberikan.
 
-lihat selengkapnya [[Docs/Modul Developer/Group/Apa itu Group]].
-   
+_Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi tim Anda serta akses [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang diberikan kepada setiap anggota.
+
+Lihat selengkapnya [[Docs/Modul Developer/Group/Apa itu Group]].
+
 ## Workspace
-_Workspace_ merupakan komponen yang dapat digunakan untuk mengatur akses komponen yang dapat dilihat, dikelola, diubah ataupun integrasi.
 
-lihat selengkapnya [[Docs/Modul Developer/Workspace/Apa itu Workspace]].
+_Workspace_ merupakan komponen yang dapat digunakan untuk mengatur ruang kerja pengembangan Anda, termasuk komponen apa saja yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan. Akses ke setiap Workspace dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
+
+Lihat selengkapnya [[Docs/Modul Developer/Workspace/Apa itu Workspace]].
 

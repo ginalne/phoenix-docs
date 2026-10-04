@@ -14,6 +14,7 @@
     icon: assets/icons/type/-1.svg
 ---
 # Apa itu Kanban?
+
 >**note**Info
 >_Kanban_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 

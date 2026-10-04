@@ -8,6 +8,7 @@
         priority: 4
 ---
 # Konfigurasi Merger Mode
+
 Tree memiliki [[Docs/Tipe Data/Node]] dengan atribut Order dan Name yang muncul ketika pengguna memilih atau menambahkannya, namun dalam proses pengelolaan data, sifat Tree ini cukup sulit untuk difiltrasi ataupun digabungkan.
 
 ## Mengatur Konfigurasi
