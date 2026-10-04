@@ -30,9 +30,10 @@ html{
 }
 #sb-main .sb-strong{
   font-weight: 600;
+  color: #fca;
 }
 ```
-
+**ttttst**
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 ```space-style
@@ -107,8 +108,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   padding: 1.5px 8px;
 }
 #sb-main .cm-editor .sb-line-li {
-  
-  line-height: ;
+  line-height: 22pt;
 }
 
 ```

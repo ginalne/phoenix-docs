@@ -12,6 +12,7 @@
 Modul Interface adalah kumpulan komponen tampilan di Phoenix yang membantu Anda menyajikan, mengelola, dan berinteraksi dengan data sesuai kebutuhan kerja. Setiap komponen memiliki cara pandang yang berbeda terhadap data yang sama, sehingga Anda dapat memilih tampilan yang paling tepat untuk setiap konteks: tabel untuk analisis, form untuk input, timeline untuk alur waktu, dan seterusnya.
 
 Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
+
 1. [[#Table View]]
 2. [[#Form]]
 3. [[#Timeline]]
