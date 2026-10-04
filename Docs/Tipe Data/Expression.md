@@ -1,13 +1,13 @@
 ---
     status: release
-    title: "EnumData"
+    title: "Expression"
     description: 
     pageDecoration:
       tree:
         priority: 0
 ---
-# EnumData
-Tipe data yang berisi data dari [[Docs/Modul Data/Enum/Apa itu Enum|Enum]].
+# Expression
+Tipe data yang dapat menyimpan konfigurasi penampilan data dengan kombinasi yang kompleks seperti meringkas, menyaring, menyortir serta menghitung jumlah hingga rata-rata ataupun akumulasi dari beberapa dataset sesuai dengan kondisi yang diinginkan.
 
 ## Attribute
 ![[Docs/Tipe Data/enum-data.png|Contoh halaman kerja Enum]]
