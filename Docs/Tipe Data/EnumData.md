@@ -8,10 +8,17 @@
 # EnumData
 EnumData adalah tipe data yang berisi data dari [[Docs/Modul Data/Enum/Apa itu Enum|Enum]].
 
+## Attribute
+[[]]
+Setiap EnumData memiliki atribut sebagai berikut:
+* [[#Name]]
+* [[#Description]]
+* [[#Value]]
+* [[#Selectable]]
+
 ## Penggunaan dalam Interface
-EnumData cukup baik dalam menyimpan data waktu secara presisi, sehingga dapat digunakan secara interaktif dengan [[Docs/Modul Interface/Timeline/Apa itu Timeline]]
+EnumData cukup baik dalam menyimpan data opsional, sehingga dapat digunakan secara interaktif dengan interface [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]]
 
 ## Format
-DateTime
 >**note** Tipe data ini tidak memiliki format khusus.
 
