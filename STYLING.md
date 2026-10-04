@@ -27,9 +27,9 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-* [[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
+* [[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna...
 
-[[field|Disabled to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
+[[field|Disabled to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna...
 
 ```space-style
 #sb-main .cm-editor a[href="field"] {
@@ -53,7 +53,6 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 #sb-main .cm-editor .sb-line-ul a[href="field"] {
   display:inline !important;
   padding: 1.5px 8px;
-  margin: 0px;
 }
 ```
 
@@ -80,5 +79,22 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 #sb-main .cm-editor div:has(a[href^="button"]) {
   display: inline-block;
   cursor: pointer;
+}
+```
+
+Run ${widgets.commandButton "System: Reload"} to reload.
+
+>**note**Tips
+>Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam EnumData tetap tidak dapat terduplikat. Meskipun akan banyak variasi Name yang mirip, Anda dapat menggunakan fitur [[Docs/Modul Data/Enum/EnumData Merge]] agar setiap data yang terelasi dengan EnumData tersebut dapat menjadi satu EnumData.
+
+```space-style
+#sb-main .cm-editor .sb-admonition {
+  padding: 3rem;
+}
+#sb-main .cm-editor .sb-admonition-title {
+  padding: 0.8rem 1.5rem;
+}
+#sb-main .cm-editor .sb-quote {
+  margin: 0rem 0rem 0rem 0.5rem;
 }
 ```
