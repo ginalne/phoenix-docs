@@ -102,11 +102,11 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 ```
 
 ```space-style
-/* Style links starting with button: */
 #sb-main .cm-editor a[href^="mode/"] {
+  display:inline-block;
   font-family:"Segoe UI";
   padding: 0.1rem 1rem 0.2rem 0.9rem;
-  margin: 0rem 0.3rem;
+  margin: 0.3rem 0.3rem;
   color: #bdbdbd !important;
   border: 1px solid rgb(63 63 70);
   font-weight: 500;
@@ -116,8 +116,16 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   pointer-events: none;
   white-space: nowrap !important;
 }
+#sb-main .cm-editor a[href^="mode/"]::before {
+  display: inline-block;
+  content: "mode  |";
+  font-size: 1rem;
+  font-weight: 100;
+  margin-right: 5px;
+  margin-right: 5px;
+}
 #sb-main .cm-editor a[href^="mode/"] span {
-  padding: 0rem 0.3rem 0rem 0rem;
+  padding: 0rem 0.3rem 0rem 0.3rem;
 }
 #sb-main .cm-editor td:has(a[href^="mode/"]) {
   white-space:nowrap !important;
