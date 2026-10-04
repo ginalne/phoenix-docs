@@ -229,6 +229,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 }
 #sb-main .sb-admonition-title[admonition="faq"]{
   padding-top:1rem !important;
+  display:none;
 }
 #sb-main .sb-admonition[admonition="faq"] .sb-quote{
   color:#fff;
@@ -240,7 +241,6 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   padding-bottom:2.5rem !important;
 }
 ```
-
 
 >**FAQ**
 >**Apakah satu anggota dapat tergabung di lebih dari satu Group?**

@@ -86,7 +86,6 @@ Dengan pembagian ini, setiap tim hanya bekerja di Workspace yang relevan, dan pe
 - Group hanya mengatur akses anggota ke Workspace.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
-
 >**FAQ** 
 >**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
 >Tidak. Akses yang dimiliki anggota akan sesuai dengan Group-nya.
