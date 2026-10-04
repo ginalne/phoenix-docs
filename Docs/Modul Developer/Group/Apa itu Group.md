@@ -43,12 +43,13 @@ Anggota hanya boleh tergabung dalam satu Group, akses yang dimilikinya merupakan
 <!--  
   * [TODO] sesuaikan nama menu, tombol, dan urutan langkah dengan antarmuka Phoenix yang sebenarnya. [assignee: @ginalne]
 -->
-1. Buka modul **Developer**, lalu pilih komponen **Group**.
-2. Klik tombol **Buat Group**.
-3. Isi **nama** dan **deskripsi** Group.
-4. Tambahkan anggota ke dalam Group.
-5. Tentukan Workspace dan hak akses yang diberikan.
-6. Simpan Group.
+1. Klik kanan pada [[Docs/Antar Muka#Area Manajemen Folder]].
+2. Pilih [[field|Add]] > [[field|Developer]] > [[field/form| Group]]
+4. Klik tombol **Buat Group**.
+5. Isi **nama** dan **deskripsi** Group.
+6. Tambahkan anggota ke dalam Group.
+7. Tentukan Workspace dan hak akses yang diberikan.
+8. Simpan Group.
 
 ## Mengelola Anggota
 
