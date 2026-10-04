@@ -64,7 +64,11 @@ Run ${widgets.commandButton "System: Reload"} to reload.
     color 0.3s,
     background-color 0.3s;
   pointer-events: none;
-  background-image: url('path-to-your-file.svg');
+  background-image: url('https://phoenix.ginalne.com/assets/icons/edit.svg');
+  background-repeat: no-repeat;
+  background-position: left 15px top 8px;
+  background-size: 22px 22px;
+  background-blend-mode: hard-light;
 }
 #sb-main .cm-editor div:has(a[href^="button/"]) {
   display: inline-block;
