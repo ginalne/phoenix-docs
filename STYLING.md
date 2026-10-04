@@ -53,11 +53,10 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 ```space-style
 /* Style links starting with button: */
 #sb-main .cm-editor a[href^="button/"] {
-  padding: 0.5rem 1.25rem;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-family:arial;
+  padding: 0.5rem 1.25rem 0.5rem 3rem;
   color: white;
   font-weight: 600;
-  cursor: pointer;
   font-size: 1.125rem;
   border-radius: 9999px;
   transition:
@@ -68,9 +67,8 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   background-repeat: no-repeat;
   background-position: left 15px top 8px;
   background-size: 22px 22px;
-  background-blend-mode: hard-light;
 }
-#sb-main .cm-editor div:has(a[href^="button/"]) {
+#sb-main .cm-editor div:has(a[href^="button/ed"]) {
   display: inline-block;
   cursor: pointer;
 }
