@@ -1,6 +1,27 @@
 ---
   tags: meta/library
 ---
+| Tombol | Penjelasan|
+|-------------------|----------|
+| [[button/edit|Edit]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
+
+```space-style
+table {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #666;
+}
+html{
+    body table {--editor-wiki-link-page-color: #818181;}
+    body thead td {
+      border: 1px solid #666;
+      background: #444;
+      padding:6px 12px !important;
+    }
+    body tbody tr:nth-child(even) {background-color: #333;}
+    body tbody tr:nth-child(odd) {background-color: #222;}
+}
+```
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 ```space-style
