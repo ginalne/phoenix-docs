@@ -24,21 +24,24 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 }
 ```
 
+
+Run ${widgets.commandButton "System: Reload"} to reload.
+[[field|Strict On Selected]]
 ```space-style
 /* =========================
 
    Documentation components
    ========================= */
-a[href*="field:"] {
+#sb-main .cm-editor a[href="field"] {
   display: inline-block;
-  padding: 2px 7px;
+  padding: 4px 7px;
   margin: 0 2px;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #555;
   border-radius: 5px;
-  background: #f4f4f5;
-  color: #27272a !important;
+  background: #333;
+  color: #fff !important;
   font-size: 0.88em;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none !important;
 }
 
