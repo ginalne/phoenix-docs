@@ -128,7 +128,7 @@ test [[button/edit|Edit]]
   padding: 0rem 0.3rem 0rem 0rem;
 }
 #sb-main .cm-editor td:has(a[href^="button/"]) {
-  white-space:nowrap;
+  white-space:nowrap !important;
 }
 ```
 
