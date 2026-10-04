@@ -102,19 +102,13 @@ Dengan pembagian ini, setiap tim hanya bekerja di Workspace yang relevan, dan pe
 
 ## Pertanyaan yang Sering Diajukan
 
-**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
-Ya. Akses yang dimiliki anggota merupakan gabungan dari seluruh Group-nya.
+>**faq**
+>**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
+>Ya. Akses yang dimiliki anggota merupakan gabungan dari seluruh Group-nya.
+>**Apa yang terjadi jika anggota dikeluarkan dari Group?**
+>Anggota tersebut kehilangan akses Workspace yang diberikan melalui Group itu.
+>**Apakah sebuah Workspace dapat diakses oleh banyak Group?**
+>Ya. Satu Workspace dapat diberikan kepada beberapa Group dengan tingkat akses yang berbeda.
+>**Siapa yang dapat membuat dan mengelola Group?**
+>Pengguna dengan kewenangan pengelolaan di modul Developer.
 
-**Apa yang terjadi jika anggota dikeluarkan dari Group?**
-Anggota tersebut kehilangan akses Workspace yang diberikan melalui Group itu.
-
-**Apakah sebuah Workspace dapat diakses oleh banyak Group?**
-Ya. Satu Workspace dapat diberikan kepada beberapa Group dengan tingkat akses yang berbeda.
-
-**Siapa yang dapat membuat dan mengelola Group?**
-Pengguna dengan kewenangan pengelolaan di modul Developer.
-
-## Lihat Juga
-
-- [[Docs/Modul Developer/Pengenalan|Modul Developer]]
-- [[Docs/Modul Developer/Workspace/Apa itu Workspace|Apa itu Workspace]]
