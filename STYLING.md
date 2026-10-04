@@ -27,13 +27,13 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-[[field|Strict On Selected]]
+* [[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
+
+[[field|Disabled to insert externally]]
 
 ```space-style
 #sb-main .cm-editor a[href="field"] {
-  display: inline-block;
   padding: 4px 7px;
-  margin: 0 2px;
   border: 1px solid #555;
   border-radius: 5px;
   background: #333;
@@ -41,8 +41,8 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   font-size: 0.88em;
   font-weight: 400;
   text-decoration: none !important;
-  white-space: nowrap;
   pointer-events: none;
+  white-space: nowrap;
 }
 ```
 
@@ -54,7 +54,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 /* Style links starting with button: */
 #sb-main .cm-editor a[href^="button/"] {
   font-family:"Segoe UI";
-  padding: 0.2rem 1rem 0.25rem .8em;
+  padding: 0.2rem 1rem 0.3rem 0.9em;
   color: #adadad !important;
   border: 1px solid rgb(63 63 70);
   font-weight: 500;
@@ -64,7 +64,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   pointer-events: none;
 }
 #sb-main .cm-editor a[href^="button/"] span {
-  padding: 0rem 0.2rem 0rem 0rem;
+  padding: 0rem 0.3rem 0rem 0rem;
 }
 #sb-main .cm-editor div:has(a[href^="button"]) {
   display: inline-block;
