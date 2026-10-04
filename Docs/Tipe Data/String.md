@@ -31,7 +31,7 @@ String adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 255 
 * [[Docs/Format Data/String/Tax ID]]
 * [[Docs/Format Data/String/Bank Account]]
 * [[Docs/Format Data/String/IBAN]]
-* [[Docs/Format Data/String/SWIFT\BIC]]
+* [[Docs/Format Data/String/SWIFT or BIC]]
 * [[Docs/Format Data/String/Credit Card]]
 * [[Docs/Format Data/String/MAC Address]]
 * [[Docs/Format Data/String/IPv4]]
