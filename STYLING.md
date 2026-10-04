@@ -39,7 +39,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   border: 1px solid #555;
   border-radius: 5px;
   background: #333;
-  color: #fff !important;
+  color: #ddd !important;
   font-size: 0.88em;
   font-weight: 400;
   text-decoration: none !important;
