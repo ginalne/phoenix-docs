@@ -5,6 +5,7 @@
     pageDecoration:
       tree:
         priority: 4
+
 ---
 # Apa itu Form?
 _Form_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix. 
@@ -17,8 +18,13 @@ Berikut adalah tampilan form saat pertama kali dibuat:
 Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 1. [[button/edit|Edit]] : Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form.
 2. [[button/publish|Publish]] :
-| Header A | Header B |
-|----------|----------|
-| Cell A | Cell B |
+
+
+
+| Tombol | Penjelasan|
+|-------------------|----------|
+| Edit | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
+
+
 
 
