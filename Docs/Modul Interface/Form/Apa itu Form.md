@@ -19,9 +19,10 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 
 |    Tombol      |                                   Penjelasan                                                                 |
 |-------------------|---------------------------------------------------------------------------------------------------|
-| [[button/edit|Edit]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
-| [[button/publish|Publish]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
-| mode  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
+| [[button/edit|Edit]]  | Tombol yang berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
+| [[button/publish|Publish]]  | Tombol yang berfungsi untuk membuka modal Publish Form untuk memperbarui konfigurasi publish Form. |
+| mode  [[button/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
+| mode  [[button/edit|Edit]] | Saklar dengan mode Edit agar konten Form hanya bisa dilihat |
 
 
 
