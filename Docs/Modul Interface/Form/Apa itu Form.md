@@ -25,6 +25,8 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 |  [[mode/edit|Edit]] | Saklar dengan mode Edit agar  konten Form hanya bisa dilihat |
 | [[button/save|Save]]  | Tombol yang berfungsi untuk menyimpan perubahan Form. |
 | [[button/refresh|Refresh]]  | Tombol yang berfungsi untuk menyegarkan lagi halaman Form. |
+|[[button/submission]]}
 
 > **warning** Warning
 > Harap hati-hati saat [[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
+

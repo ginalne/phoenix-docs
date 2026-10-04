@@ -1,7 +1,7 @@
 ---
   tags:
     meta/library
-    mode
+    button
   pageDecoration:
-    icon: rotate-cw
+    icon: globe
 ---

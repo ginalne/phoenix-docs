@@ -168,12 +168,12 @@ test [[button/edit|Edit]]
   border: 1px solid rgb(63 63 70);
   font-weight: 500;
   font-size: 1.125rem;
-  border-radius: 9999px;
+  border-radius: 9999px !important;
   background-color: #161616;
   pointer-events: none;
   white-space: nowrap !important;
 }
-#sb-main .cm-editor i:has(a[href^="button/"]) {
+#sb-main .cm-editor i a[href^="button/"] {
   pointer-events: auto !important;
 }
 #sb-main .cm-editor a[href^="button/"] span {
