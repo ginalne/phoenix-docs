@@ -1,5 +1,7 @@
 ---
-  tags: meta/library
+  tags:
+    meta/library
+    button
   pageDecoration:
     icon: edit-2
 ---
