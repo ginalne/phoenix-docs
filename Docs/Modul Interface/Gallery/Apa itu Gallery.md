@@ -11,6 +11,7 @@
     icon: assets/icons/type/-0.svg
 ---
 # # Apa itu Gallery?
+
 >**note**Info
 >_Gallery_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 

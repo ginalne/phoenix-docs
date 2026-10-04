@@ -8,6 +8,7 @@
     tags:
 ---
 # Apa itu Canvas?
+
 >**note**Info
 >_Canvas_ merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 
