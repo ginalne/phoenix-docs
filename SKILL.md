@@ -14,7 +14,7 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 - Tulis nama komponen dan modul dalam huruf kapital di awal kata (Group, Workspace, Flow), dan cetak miring (`_Group_`) saat pertama kali diperkenalkan di paragraf pembuka.
 - Istilah asing yang bukan nama fitur ditulis miring dengan `*...*`, misalnya `*drag and drop*`, `*least privilege*`.
 - Gunakan tanda kutip lengkung untuk contoh nama: “Engineering”, “Analytics”.
-- Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik dan tandai dengan komentar `<!-- TODO: ... -->`, lalu sebutkan di akhir balasan apa saja yang perlu dicek penulis. Penulis akan memperbaiki isinya sendiri, jadi struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
+- Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik dan tandai dengan komentar `<!-- * [TODO] Deskripsi Task -->`, Penulis akan memperbaiki isinya sendiri, jadi struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
 - Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
 
 ## Konvensi tautan
@@ -29,7 +29,7 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 | Menu atau tombol antarmuka | `[[field/<nama>\|<Label>]]` | `[[field/add\|Add]]` |
 | Kolom isian antarmuka | `[[field\|<Label>]]` | `[[field\|Name]]`, `[[field\|Description]]` |
 
-Tautkan komponen lain pada kemunculan pertamanya di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi (bahasa Inggris), bukan diterjemahkan. Jika path tautan hanya tebakan, tandai dengan `<!-- TODO -->`.
+Tautkan komponen lain pada kemunculan pertamanya di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi (bahasa Inggris), bukan diterjemahkan. Jika path tautan hanya tebakan, tandai dengan `<!-- * [TODO] Deskripsi Task -->`.
 
 ## Templat halaman komponen ("Apa itu <Komponen>?")
 
