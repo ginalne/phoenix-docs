@@ -26,12 +26,10 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 
 Run ${widgets.commandButton "System: Reload"} to reload.
-[[field|Strict On Selected]]
-```space-style
-/* =========================
 
-   Documentation components
-   ========================= */
+[[field|Strict On Selected]]
+
+```space-style
 #sb-main .cm-editor a[href="field"] {
   display: inline-block;
   padding: 4px 7px;
@@ -43,8 +41,16 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   font-size: 0.88em;
   font-weight: 400;
   text-decoration: none !important;
+  white-space: nowrap;
+  pointer-events: none;
 }
+```
 
+Run ${widgets.commandButton "System: Reload"} to reload.
+
+[[button:edit|Strict On Selected]]
+
+```space-style
 /* Style links starting with button: */
 a[href*="button:"] {
   display: inline-block;
@@ -58,18 +64,6 @@ a[href*="button:"] {
 
 /* Field labels */
 .phx-field {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 7px;
-  margin: 0 2px;
-  border: 1px solid var(--editor-widget-border, #d4d4d8);
-  border-radius: 5px;
-  background: var(--editor-widget-background, #f4f4f5);
-  color: var(--editor-fg, #27272a);
-  font-size: 0.88em;
-  font-weight: 600;
-  line-height: 1.5;
-  white-space: nowrap;
 }
 
 /* Button references */
