@@ -32,6 +32,9 @@ html{
   font-weight: 600;
   color: #fdc;
 }
+#sb-main .sb-wiki-link {
+  white-space:nowrap;
+}
 
 ```
 

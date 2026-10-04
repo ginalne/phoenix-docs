@@ -10,7 +10,11 @@
 
 >**note** _Workspace_ merupakan salah satu komponen dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.
 
-_Workspace_ merupakan komponen yang dapat digunakan untuk menyediakan ruang kerja terpisah bagi tim, tempat Anda mengelola seluruh sumber daya dan pekerjaan dalam satu lingkup yang jelas. <!-- * [TODO] Pastikan definisi Workspace sesuai: apa saja yang dapat dikelompokkan di dalamnya -->
+_Workspace_ merupakan komponen yang dapat digunakan untuk menyediakan ruang kerja terpisah bagi tim, tempat Anda mengelola seluruh sumber daya dan pekerjaan dalam satu lingkup yang jelas.
+
+<!--
+* [TODO] Pastikan definisi Workspace sesuai: apa saja yang dapat dikelompokkan di dalamnya
+-->
 
 Alih-alih mencampur semua pekerjaan dalam satu tempat, Anda cukup membuat Workspace untuk setiap tim atau proyek, lalu mengatur siapa saja yang dapat mengaksesnya melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
 
@@ -41,13 +45,23 @@ Setiap anggota hanya tergabung di satu Group, sehingga akses anggota ke Workspac
 
 ## Membuat Workspace
 1. Klik kanan pada [[Docs/Antar Muka#Area Manajemen Folder]].
-2. Pilih [[field/add|Add]] > [[field|Developer]] > [[field/workspace|Workspace]] <!-- * [TODO] Cek path menu dan nama menu sesuai aplikasi -->
-3. Isi [[field|Name]] dan [[field|Description]].
-4. Pilih Group yang akan diberi akses ke Workspace. <!-- * [TODO] Cek apakah akses diatur saat pembuatan atau setelahnya -->
-5. Selesai
+2. Pilih [[field/add|Add]] > [[field|Developer]] > [[field/workspace|Workspace]]
+<!--
+ * [TODO] Cek path menu dan nama menu sesuai aplikasi
+-->
+5. Isi [[field|Name]] dan [[field|Description]].
+6. Pilih Group yang akan diberi akses ke Workspace.
+<!--
+* [TODO] Cek apakah akses diatur saat pembuatan atau setelahnya
+-->
+8. Selesai
 
 ## Mengelola Anggota dan Akses
-Akses Workspace diatur melalui Group. Untuk memberi akses kepada seorang anggota, pindahkan anggota tersebut ke Group yang sudah memiliki akses ke Workspace yang dituju. <!-- * [TODO] Jelaskan menu untuk menambah atau mencabut akses Group pada Workspace -->
+Akses Workspace diatur melalui Group. Untuk memberi akses kepada seorang anggota, pindahkan anggota tersebut ke Group yang sudah memiliki akses ke Workspace yang dituju.
+
+<!--
+* [TODO] Jelaskan menu untuk menambah atau mencabut akses Group pada Workspace
+ -->
 
 ## Mengatur Workspace
 Anda dapat mengubah [[field|Name]] dan [[field|Description]] Workspace kapan saja agar tetap sesuai dengan fungsinya.
@@ -99,4 +113,6 @@ Dengan pemisahan ini, setiap tim hanya melihat dan mengelola pekerjaan yang menj
 >**Apakah Workspace sama dengan Space?**
 >Tidak. Workspace adalah komponen modul Developer untuk mengatur ruang kerja dan akses tim, sedangkan Space adalah komponen modul Interface yang mengorganisasi data dalam bentuk 3D. 
 
-<!-- * [TODO] Konfirmasi perbandingan ini -->
+<!--
+* [TODO] Konfirmasi perbandingan ini
+-->
