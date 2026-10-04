@@ -13,6 +13,5 @@ String adalah tipe data yang dapat menyimpan data tanggal dan waktu dengan presi
 DateTime cukup baik dalam menyimpan data waktu secara presisi, sehingga dapat digunakan secara interaktif dengan [[Docs/Modul Interface/Timeline/Apa itu Timeline]]
 
 ## Format
-DateTime
 >**note** Tipe data ini tidak memiliki format khusus.
 
