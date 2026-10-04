@@ -36,6 +36,52 @@ taskState.define {
 
 ```space-lua
 -- priority: 10
+
+slashCommand.define {
+  name = "button",
+  run = function()
+    local text = editor.getText()
+
+    -- Existing frontmatter
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+    if not fmStart then
+      editor.insertAtPos([==[---
+  tags:
+    meta/library
+    button
+  pageDecoration:
+    icon: x
+---
+]==], 0, true)
+    editor.flashNotification("Add Frontmatter button succeed!")
+    else
+    editor.flashNotification("Frontmatter is exists!")
+    end
+  end
+}
+slashCommand.define {
+  name = "value",
+  run = function()
+    local text = editor.getText()
+
+    -- Existing frontmatter
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+    if not fmStart then
+      editor.insertAtPos([==[---
+  tags:
+    meta/library
+    value
+  pageDecoration:
+    icon: x
+---
+]==], 0, true)
+    editor.flashNotification("Add Frontmatter value succeed!")
+    else
+    editor.flashNotification("Frontmatter is exists!")
+    end
+  end
+}
+
 slashCommand.define {
   name = "release",
   run = function()
