@@ -29,6 +29,29 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
    Documentation components
    ========================= */
+a[href*="field:"] {
+  display: inline-block;
+  padding: 2px 7px;
+  margin: 0 2px;
+  border: 1px solid #d4d4d8;
+  border-radius: 5px;
+  background: #f4f4f5;
+  color: #27272a !important;
+  font-size: 0.88em;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+/* Style links starting with button: */
+a[href*="button:"] {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
 
 /* Field labels */
 .phx-field {
