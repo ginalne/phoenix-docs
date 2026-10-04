@@ -103,7 +103,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 ```space-style
 #sb-main .cm-editor a[href^="mode/"] {
-  display:inline-block;
+  display:inline-block !important;
   position:relative;
   font-family:"Segoe UI";
   padding: 0.1rem 1rem 0.2rem 0.9rem;
@@ -116,6 +116,9 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   background-color: #161616;
   pointer-events: none;
   white-space: nowrap !important;
+}
+#sb-main .cm-editor td a[href^="mode/"] {
+  display:block !important;
 }
 #sb-main .cm-editor a[href^="mode/"]::before {
   position:absolute;
@@ -135,7 +138,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   opacity:.5;
 }
 #sb-main .cm-editor a[href^="mode/"] span {
-  padding: 0rem .5rem 0rem 3.7rem;
+  padding: 0rem .3rem 0rem 3.7rem;
 }
 #sb-main .cm-editor td:has(a[href^="mode/"]) {
   white-space:nowrap !important;

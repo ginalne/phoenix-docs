@@ -17,7 +17,7 @@ Berikut adalah tampilan form saat pertama kali dibuat:
 ![[Docs/Modul Interface/Form/form-new.png]]
 Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 
-|    Tombol      |                                   Penjelasan                                                                 |
+| | |
 |-------------------|---------------------------------------------------------------------------------------------------|
 | [[button/edit|Edit]]  | Tombol yang berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
 | [[button/publish|Publish]]  | Tombol yang berfungsi untuk membuka modal Publish Form untuk memperbarui konfigurasi publish Form. |
