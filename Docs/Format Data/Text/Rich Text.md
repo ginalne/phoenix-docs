@@ -4,6 +4,6 @@
     description:
 ---
 # Format Data : Rich Text
-format dalam [[Docs/Tipe Data/Text]] yang dapat memberikan alat-alat seperti dekorasi teks, highlight, perubahan font dan list.
+Format dalam [[Docs/Tipe Data/Text]] yang dapat memberikan alat-alat seperti dekorasi teks, highlight, perubahan font dan list.
 
 ![[Docs/Format Data/Text/rich-text.png|Rich Text Editor]]

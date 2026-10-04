@@ -4,4 +4,5 @@
     description:
 ---
 # Format Data : Chat
-Format dalam [[Docs/Tipe Data/Text]] yang dapat menambahkan pesan dengan nama dan tanggal inputnya. Setiap isi akan terus bertambah dan pesan tidak dapat diedit.
+Format dalam [[Docs/Tipe Data/Text]] yang dapat menambahkan pesan dengan nama dan tanggal inputnya. Setiap isi akan terus bertambah dan pesan lama tidak dapat diubah.
+
