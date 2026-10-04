@@ -14,7 +14,18 @@ Enum memiliki atribut Name dan Description yang muncul ketika pengguna sedang me
 Anda dapat mengaturnya melalui tombol Edit Enum dalam halaman kerja atau saat membuat [[Docs/Modul Data/Enum/Apa itu Enum|Komponen Enum]] pertama kali.
 
 ![[Docs/Modul Data/Enum/create-new-enum.png|Modal Tambah Enum Baru]]
-Kolom {{field:Strict On Selected}} dapat diubah dengan implikasi seperti berikut:
+Kolom {{field:Strict On Selected}}Enter your <span class="phx-field">Email Address</span>
+to continue.
+
+Click
+<span class="phx-button">
+  <span class="phx-button-icon">＋</span>
+  Create Project
+</span>
+to get started.
+
+Press <kbd class="phx-key">Ctrl</kbd> +
+<kbd class="phx-key">S</kbd> to save. dapat diubah dengan implikasi seperti berikut:
 * Disabled to insert externally : Ketat, EnumData tidak bisa ditambahkan saat pengguna atau Anda melakukan input bebas terhadap Enum ini.
 * _Enable to insert externally_ : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
 
