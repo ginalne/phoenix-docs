@@ -10,7 +10,7 @@
 ---
 
 # Modul Interface
-_Interface_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai antar muka yang membantu Anda mengelola Data yang sudah dibangun agar lebih interaktif, mudah dipahami serta cepat diproses.
+Modul Interface adalah kumpulan komponen tampilan di Phoenix yang membantu Anda menyajikan, mengelola, dan berinteraksi dengan data sesuai kebutuhan kerja. Setiap komponen memiliki cara pandang yang berbeda terhadap data yang sama, sehingga Anda dapat memilih tampilan yang paling tepat untuk setiap konteks: tabel untuk analisis, form untuk input, timeline untuk alur waktu, dan seterusnya.
 
 Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 1. [[#Table View]]
@@ -25,10 +25,12 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 ## Table View
 Table View merupakan komponen yang dapat mempermudah Anda mengelola data Tabel secara simultan dan efektif. Komponen interface ini dapat meringkas dan menampilkan data yang lebih tepat sasaran sesuai dengan [[Docs/Tipe Data/Query]] yang sudah disiapkan.
 
-lihat selengkapnya [[Docs/Modul Interface/Table View/Apa itu Table View]].
+Lihat selengkapnya [[Docs/Modul Interface/Table View/Apa itu Table View]].
 
 ## Form
-lihat selengkapnya [[Docs/Modul Interface/Form/Apa itu Form]]
+Form adalah komponen untuk menginput, melihat, dan mengubah data secara terstruktur. Setiap kolom ditampilkan sebagai field yang jelas dan terarah, sehingga proses pengisian data menjadi lebih rapi, konsisten, dan minim kesalahan. Anda juga dapat membagikan Form kepada publik agar proses pengumpulan data bisa lebih cepat dan efektif.
+
+Lihat selengkapnya [[Docs/Modul Interface/Form/Apa itu Form]].
 
 ## Timeline
 lihat selengkapnya [[Docs/Modul Interface/Form/Apa itu Form]]
