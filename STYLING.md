@@ -85,7 +85,7 @@ test [[button/edit|Edit]]
   font-family:"Segoe UI";
   padding: 0.1rem 1rem 0.2rem 0.9rem;
   margin: 0rem 0.3rem;
-  color: #adadad !important;
+  color: #bdbdbd !important;
   border: 1px solid rgb(63 63 70);
   font-weight: 500;
   font-size: 1.125rem;
