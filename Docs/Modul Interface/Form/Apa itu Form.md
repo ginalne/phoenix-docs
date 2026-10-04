@@ -19,6 +19,7 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 
 | | |
 |-------------------|---------------------------------------------------------------------------------------------------|
+|[[field/form|Judul Form]]| Ikon Form dalam phoenix serta [[field|Header Name]] Form.  
 | [[button/edit|Edit]]  | Tombol yang berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
 | [[button/publish|Publish]]  | Tombol yang berfungsi untuk membuka modal Publish Form untuk memperbarui konfigurasi publish Form. |
 |  [[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
@@ -28,9 +29,8 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 |[[button/submission|Submission]]| Tombol yang berfungsi untuk membuka bilik submission.
 
 >**note** Perbedaan Icon
->Dalam mode dekstop tombol submission terlihat dengan susunan informasi submission yaitu submitted, waiting dan failure
+>Dalam mode dekstop tombol [[button/submission|Submission]]sedikit berbeda, tombol terlihat dengan susunan informasi submission yaitu submitted, waiting dan failure
 
-
-> **warning** Warning
-> Harap hati-hati saat [[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
+> **warning** Harap hati-hati
+> Saat melakukan[[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
 
