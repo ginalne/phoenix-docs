@@ -52,7 +52,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 ```space-style
 /* Style links starting with button: */
-a[href*="button:"] {
+#sb-main .cm-editor a[href="button:edit"] {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 6px;
@@ -61,70 +61,4 @@ a[href*="button:"] {
   font-weight: 600;
   text-decoration: none !important;
 }
-
-/* Field labels */
-.phx-field {
-}
-
-/* Button references */
-.phx-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  margin: 0 2px;
-  border: 1px solid #2563eb;
-  border-radius: 6px;
-  background: #2563eb;
-  color: #fff !important;
-  font-size: 0.88em;
-  font-weight: 600;
-  line-height: 1.5;
-  white-space: nowrap;
-}
-
-/* Button icon */
-.phx-button-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
-}
-
-/* Keyboard keys */
-.phx-key {
-  display: inline-block;
-  min-width: 1.6em;
-  padding: 1px 6px;
-  border: 1px solid #a1a1aa;
-  border-bottom-width: 2px;
-  border-radius: 5px;
-  background: var(--editor-widget-background, #f4f4f5);
-  color: var(--editor-fg, #27272a);
-  font-family: monospace;
-  font-size: 0.85em;
-  font-weight: 600;
-  text-align: center;
-  white-space: nowrap;
-}
-
-/* Navigation path */
-.phx-nav {
-  display: inline;
-  font-size: 0.92em;
-  font-weight: 500;
-}
-
-.phx-nav-separator {
-  padding: 0 5px;
-  color: #a1a1aa;
-}
-
-/* Dark theme adjustments */
-/*.phx-field,
-.phx-key {
-  border-color: #52525b;
-  background: #27272a;
-  color: #e4e4e7;
-}*/
 ```
