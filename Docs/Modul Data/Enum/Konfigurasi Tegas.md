@@ -14,7 +14,7 @@ Enum memiliki atribut Name dan Description yang muncul ketika pengguna sedang me
 Anda dapat mengaturnya melalui tombol Edit Enum dalam halaman kerja atau saat membuat [[Docs/Modul Data/Enum/Apa itu Enum|Komponen Enum]] pertama kali.
 
 ![[Docs/Modul Data/Enum/create-new-enum.png|Modal Tambah Enum Baru]]
-Kolom {{field:Strict On Selected}}Enter your <span class="phx-field">Email Address</span>
+Kolom [[field:|Strict On Selected]] Enter your <span class="phx-field">Email Address</span>
 to continue.
 
 Click
