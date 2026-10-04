@@ -52,23 +52,11 @@ Anggota hanya boleh tergabung dalam satu Group, akses yang dimilikinya merupakan
 
 ## Mengelola Anggota
 
-Anda dapat mengatur komposisi tim di dalam Group dengan cara berikut:
-
-- **Menambahkan anggota** ke Group.
-- **Memindahkan anggota** dari satu Group ke Group lain.
+Anda dapat mengatur komposisi tim di dalam Group dengan cara memindahkan anggota dari satu Group ke Group lain.
 
 ## Mengatur Akses Workspace
 
-Setiap Group dapat diberikan akses ke satu atau beberapa Workspace. Untuk setiap Workspace, Anda dapat menentukan tingkat akses yang diberikan:
-
-| Tingkat Akses | Kemampuan |
-| --- | --- |
-| **Lihat** | Dapat melihat komponen di dalam Workspace tanpa mengubahnya. |
-| **Kelola** | Dapat mengelola komponen di dalam Workspace. |
-| **Ubah** | Dapat mengubah konfigurasi komponen di dalam Workspace. |
-| **Integrasi** | Dapat mengatur integrasi yang terhubung ke Workspace. |
-
-<!-- TODO: sesuaikan daftar tingkat akses dengan yang benar-benar tersedia di Workspace. -->
+Setiap Group dapat diberikan akses ke satu atau beberapa Workspace.
 
 ## Contoh Penggunaan
 
@@ -76,9 +64,10 @@ Setiap Group dapat diberikan akses ke satu atau beberapa Workspace. Untuk setiap
 
 | Group | Anggota | Akses |
 | --- | --- | --- |
-| Engineering | Para pengembang | Kelola dan ubah seluruh Workspace pengembangan |
-| Design | Para desainer | Lihat dan ubah Workspace antarmuka |
-| Analytics | Para analis | Lihat Workspace data saja |
+| Admin | Administrator | Workspace pengembangan, antarmuka dan data
+| Engineering | Para pengembang | Workspace pengembangan |
+| Design | Para desainer | Workspace antarmuka |
+| Analytics | Para analis | Workspace data |
 
 Dengan pembagian ini, setiap tim hanya bekerja di Workspace yang relevan, dan penambahan anggota baru cukup dilakukan dengan memasukkannya ke Group yang sesuai.
 
@@ -86,9 +75,8 @@ Dengan pembagian ini, setiap tim hanya bekerja di Workspace yang relevan, dan pe
 
 - Buat Group berdasarkan **peran atau fungsi tim**, bukan berdasarkan nama individu.
 - Berikan akses **seminimal yang dibutuhkan** (prinsip *least privilege*).
-- Gunakan **nama Group yang jelas dan konsisten**, misalnya `Engineering` atau `Analytics`.
+- Gunakan **nama Group yang jelas dan konsisten**, misalnya “Engineering” atau “Analytics”.
 - **Tinjau keanggotaan secara berkala**, terutama saat ada perubahan tim.
-- Hindari memberikan akses langsung kepada individu jika dapat diwakili oleh sebuah Group.
 
 ## Batasan dan Catatan
 
