@@ -3,11 +3,122 @@
     title: Apa itu Group?
     description:
 ---
-# Apa itu Group?
+# # Apa itu Group?
 
->**note**Info
->_Table View_ merupakan salah satu komponen dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
+>**note** _Group_ merupakan salah satu komponen dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.
 
 _Group_ merupakan komponen yang dapat digunakan untuk mengatur komposisi tim Anda serta akses [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang diberikan kepada setiap anggota.
 
+Alih-alih mengatur akses satu per satu untuk setiap orang, Anda cukup mengelompokkan anggota ke dalam Group, lalu menentukan Workspace apa saja yang dapat diakses oleh Group tersebut.
 
+## Mengapa Menggunakan Group?
+
+- **Pengaturan akses lebih cepat.** Cukup atur sekali untuk satu Group, dan seluruh anggotanya otomatis mengikuti.
+- **Konsisten.** Anggota dengan peran yang sama memiliki hak akses yang sama, sehingga mengurangi kesalahan konfigurasi.
+- **Mudah dikelola saat tim berubah.** Anggota baru tinggal dimasukkan ke Group yang sesuai, dan anggota yang keluar cukup dikeluarkan dari Group.
+- **Lebih aman.** Setiap anggota hanya mendapatkan akses sesuai kebutuhan kerjanya.
+
+## Konsep Utama
+
+| Istilah | Penjelasan |
+| --- | --- |
+| **Group** | Kumpulan anggota tim yang berbagi hak akses yang sama. |
+| **Anggota** | Pengguna yang tergabung di dalam satu Group. |
+| **Peran** | Tingkat kewenangan anggota di dalam Group, misalnya pengelola atau anggota biasa. |
+| **Hak Akses** | Izin yang diberikan kepada Group terhadap sebuah Workspace, seperti melihat, mengelola, atau mengubah. |
+| **Workspace** | Ruang kerja yang aksesnya diatur melalui Group. Lihat [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]]. |
+
+## Cara Kerja Group
+
+Akses seorang anggota ke sebuah Workspace ditentukan oleh Group tempat ia bergabung.
+
+```mermaid
+flowchart LR
+    A[Anggota] --> B[Group]
+    B --> C[Hak Akses]
+    C --> D[Workspace]
+```
+
+Jika seorang anggota tergabung di lebih dari satu Group, akses yang dimilikinya merupakan gabungan dari seluruh Group tersebut.
+
+<!-- TODO: pastikan aturan penggabungan akses, apakah gabungan (union) atau ada prioritas tertentu. -->
+
+## Membuat Group
+
+1. Buka modul **Developer**, lalu pilih komponen **Group**.
+2. Klik tombol **Buat Group**.
+3. Isi **nama** dan **deskripsi** Group.
+4. Tambahkan anggota ke dalam Group.
+5. Tentukan Workspace dan hak akses yang diberikan.
+6. Simpan Group.
+
+<!-- TODO: sesuaikan nama menu, tombol, dan urutan langkah dengan antarmuka Phoenix yang sebenarnya. -->
+
+## Mengelola Anggota
+
+Anda dapat mengatur komposisi tim di dalam Group dengan cara berikut:
+
+- **Menambahkan anggota** ke Group.
+- **Mengeluarkan anggota** dari Group.
+- **Mengubah peran** anggota di dalam Group.
+- **Memindahkan anggota** dari satu Group ke Group lain.
+
+## Mengatur Akses Workspace
+
+Setiap Group dapat diberikan akses ke satu atau beberapa Workspace. Untuk setiap Workspace, Anda dapat menentukan tingkat akses yang diberikan:
+
+| Tingkat Akses | Kemampuan |
+| --- | --- |
+| **Lihat** | Dapat melihat komponen di dalam Workspace tanpa mengubahnya. |
+| **Kelola** | Dapat mengelola komponen di dalam Workspace. |
+| **Ubah** | Dapat mengubah konfigurasi komponen di dalam Workspace. |
+| **Integrasi** | Dapat mengatur integrasi yang terhubung ke Workspace. |
+
+<!-- TODO: sesuaikan daftar tingkat akses dengan yang benar-benar tersedia di Workspace. -->
+
+## Contoh Penggunaan
+
+**Tim pengembang, desainer, dan analis**
+
+| Group | Anggota | Akses |
+| --- | --- | --- |
+| Engineering | Para pengembang | Kelola dan ubah seluruh Workspace pengembangan |
+| Design | Para desainer | Lihat dan ubah Workspace antarmuka |
+| Analytics | Para analis | Lihat Workspace data saja |
+
+Dengan pembagian ini, setiap tim hanya bekerja di Workspace yang relevan, dan penambahan anggota baru cukup dilakukan dengan memasukkannya ke Group yang sesuai.
+
+## Praktik Terbaik
+
+- Buat Group berdasarkan **peran atau fungsi tim**, bukan berdasarkan nama individu.
+- Berikan akses **seminimal yang dibutuhkan** (prinsip *least privilege*).
+- Gunakan **nama Group yang jelas dan konsisten**, misalnya `Engineering` atau `Analytics`.
+- **Tinjau keanggotaan secara berkala**, terutama saat ada perubahan tim.
+- Hindari memberikan akses langsung kepada individu jika dapat diwakili oleh sebuah Group.
+
+## Batasan dan Catatan
+
+- Perubahan pada Group berlaku untuk seluruh anggotanya.
+- Menghapus Group akan mencabut akses yang diberikan melalui Group tersebut.
+- Group hanya mengatur akses ke Workspace, bukan akses di luar modul Developer.
+
+<!-- TODO: konfirmasi batasan jumlah anggota/Group dan dampak penghapusan Group. -->
+
+## Pertanyaan yang Sering Diajukan
+
+**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
+Ya. Akses yang dimiliki anggota merupakan gabungan dari seluruh Group-nya.
+
+**Apa yang terjadi jika anggota dikeluarkan dari Group?**
+Anggota tersebut kehilangan akses Workspace yang diberikan melalui Group itu.
+
+**Apakah sebuah Workspace dapat diakses oleh banyak Group?**
+Ya. Satu Workspace dapat diberikan kepada beberapa Group dengan tingkat akses yang berbeda.
+
+**Siapa yang dapat membuat dan mengelola Group?**
+Pengguna dengan kewenangan pengelolaan di modul Developer.
+
+## Lihat Juga
+
+- [[Docs/Modul Developer/Pengenalan|Modul Developer]]
+- [[Docs/Modul Developer/Workspace/Apa itu Workspace|Apa itu Workspace]]
