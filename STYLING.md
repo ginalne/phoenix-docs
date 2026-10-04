@@ -27,13 +27,9 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   /*font-family:"Segoe UI" !important;*/
   font-family: "Inter", sans-serif !important;
 }
-#sb-main .cm-editor .sb-wiki-link {
-  /*font-family: "Inter", sans-serif !important;*/
-}
 
 #sb-root {
   --ui-font: "Inter", sans-serif;
-  /*--editor-font: "Inter", monospace !important;*/
 }
 #sb-root .cm-editor .sb-line-fenced-code {
   font-family: monospace !important;
@@ -96,10 +92,6 @@ test [[button/edit|Edit]]
 }
 #sb-main .cm-editor a[href^="button/"] span {
   padding: 0rem 0.3rem 0rem 0rem;
-}
-#sb-main .cm-editor div:has(a[href^="button"]) {
-  display: inline-block;
-  cursor: pointer;
 }
 ```
 
