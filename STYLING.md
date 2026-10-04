@@ -102,6 +102,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   display:inline !important;
   padding: 1.5px 8px;
 }
+
 ```
 
 Run ${widgets.commandButton "System: Reload"} to reload.
@@ -125,6 +126,9 @@ test [[button/edit|Edit]]
 }
 #sb-main .cm-editor a[href^="button/"] span {
   padding: 0rem 0.3rem 0rem 0rem;
+}
+#sb-main .cm-editor td:has(a[href^="button/"]) {
+  white-space:nowrap;
 }
 ```
 
