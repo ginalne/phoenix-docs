@@ -29,15 +29,13 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 * [[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
 
-[[field|Disabled to insert externally]]
+[[field|Disabled to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
 
 ```space-style
-#sb-main .cm-editor .sb-meta {
-  display:inline !important;
-}
 #sb-main .cm-editor a[href="field"] {
-  display:inline !important;
+  display:inline-block !important;
   padding: 6px 8px;
+  margin: 2px 0px 6px 0px;
   border: 1px solid #555;
   border-radius: 5px;
   background: #333;
@@ -48,6 +46,14 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   pointer-events: none;
   white-space: nowrap;
   line-height: 1rem;
+}
+
+#sb-main .cm-editor .sb-line-h1 a[href="field"],
+#sb-main .cm-editor .sb-line-li a[href="field"],
+#sb-main .cm-editor .sb-line-ul a[href="field"] {
+  display:inline !important;
+  padding: 1.5px 8px;
+  margin: 0px;
 }
 ```
 
