@@ -1,13 +1,12 @@
 ---
-    status: release
-    title: "String"
-    description: 
+    status: draft
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---
-# String
-String adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 65,535 karakter.
+# Text
+Text adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 65,535 karakter.
 
 ## Format
 * [[Docs/Format Data/String/Short Text]]
