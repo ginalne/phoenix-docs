@@ -25,7 +25,11 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 |  [[mode/edit|Edit]] | Saklar dengan mode Edit agar  konten Form hanya bisa dilihat |
 | [[button/save|Save]]  | Tombol yang berfungsi untuk menyimpan perubahan Form. |
 | [[button/refresh|Refresh]]  | Tombol yang berfungsi untuk menyegarkan lagi halaman Form. |
-|[[button/submission]]}
+|[[button/submission|Submission]]| Tombol yang berfungsi untuk membuka bilik submission.
+
+>**note** Perbedaan Icon
+>Dalam mode dekstop tombol submission terlihat dengan susunan informasi submission yaitu submitted, waiting dan failure
+
 
 > **warning** Warning
 > Harap hati-hati saat [[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
