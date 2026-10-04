@@ -55,8 +55,6 @@ Anggota hanya boleh tergabung dalam satu Group, akses yang dimilikinya merupakan
 Anda dapat mengatur komposisi tim di dalam Group dengan cara berikut:
 
 - **Menambahkan anggota** ke Group.
-- **Mengeluarkan anggota** dari Group.
-- **Mengubah peran** anggota di dalam Group.
 - **Memindahkan anggota** dari satu Group ke Group lain.
 
 ## Mengatur Akses Workspace
@@ -95,20 +93,18 @@ Dengan pembagian ini, setiap tim hanya bekerja di Workspace yang relevan, dan pe
 ## Batasan dan Catatan
 
 - Perubahan pada Group berlaku untuk seluruh anggotanya.
-- Menghapus Group akan mencabut akses yang diberikan melalui Group tersebut.
-- Group hanya mengatur akses ke Workspace, bukan akses di luar modul Developer.
+- Menghapus Group akan mencabut akses yang diberikan melalui Group tersebut, namun setiap anggota harus dipindahkan ke Group lain terlebih dahulu.
+- Group hanya mengatur akses anggota ke Workspace.
 
-<!-- TODO: konfirmasi batasan jumlah anggota/Group dan dampak penghapusan Group. -->
-
-## Pertanyaan yang Sering Diajukan
+## FAQ : Pertanyaan yang Sering Diajukan
 
 >**faq**
 >**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
->Ya. Akses yang dimiliki anggota merupakan gabungan dari seluruh Group-nya.
+>Tidak. Akses yang dimiliki anggota akan sesuai dengan Group-nya.
 >**Apa yang terjadi jika anggota dikeluarkan dari Group?**
 >Anggota tersebut kehilangan akses Workspace yang diberikan melalui Group itu.
 >**Apakah sebuah Workspace dapat diakses oleh banyak Group?**
->Ya. Satu Workspace dapat diberikan kepada beberapa Group dengan tingkat akses yang berbeda.
+>Ya. Satu Workspace dapat diberikan kepada beberapa Group.
 >**Siapa yang dapat membuat dan mengelola Group?**
 >Pengguna dengan kewenangan pengelolaan di modul Developer.
 
