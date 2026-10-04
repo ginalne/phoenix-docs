@@ -7,7 +7,7 @@
 
 ${query[[
   from p = index.tag "button"
-  select "- " .. p.name .. " <div>[[" .. p.name .. "]]</div>" 
+  select "- " .. p.name .. " <div style=\"padding:0rem 10rem\">[[" .. p.name .. "]]</div>" 
 ]]}
 
 ## mentioned but not exists button
