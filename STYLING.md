@@ -27,14 +27,14 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-* [[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
+[[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
 
 [[field|Disabled to insert externally]]
 
 ```space-style
 #sb-main .cm-editor a[href="field"] {
   display:inline-block !important;
-  margin:4px;
+  margin:4px 0px;
   padding: 6px 8px;
   border: 1px solid #555;
   border-radius: 5px;
