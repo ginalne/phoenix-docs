@@ -24,9 +24,7 @@ Alih-alih mengatur akses satu per satu untuk setiap orang, Anda cukup mengelompo
 | --- | --- |
 | **Group** | Kumpulan anggota tim yang berbagi hak akses yang sama. |
 | **Anggota** | Pengguna yang tergabung di dalam satu Group. |
-| **Peran** | Tingkat kewenangan anggota di dalam Group, misalnya pengelola atau anggota biasa. |
-| **Hak Akses** | Izin yang diberikan kepada Group terhadap sebuah Workspace, seperti melihat, mengelola, atau mengubah. |
-| **Workspace** | Ruang kerja yang aksesnya diatur melalui Group. Lihat [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]]. |
+| **Workspace** | Ruang kerja yang aksesnya diatur melalui komponen [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]]. |
 
 ## Cara Kerja Group
 
@@ -35,24 +33,22 @@ Akses seorang anggota ke sebuah Workspace ditentukan oleh Group tempat ia bergab
 ```mermaid
 flowchart LR
     A[Anggota] --> B[Group]
-    B --> C[Hak Akses]
-    C --> D[Workspace]
+    B --> C[Workspace]
+    C --> D[Hak Akses]
 ```
 
-Jika seorang anggota tergabung di lebih dari satu Group, akses yang dimilikinya merupakan gabungan dari seluruh Group tersebut.
-
-<!-- TODO: pastikan aturan penggabungan akses, apakah gabungan (union) atau ada prioritas tertentu. -->
+Anggota hanya boleh tergabung dalam satu Group, akses yang dimilikinya merupakan gabungan dari seluruh Workspace dalam Group tersebut.
 
 ## Membuat Group
-
+<!--  
+  * [TODO] sesuaikan nama menu, tombol, dan urutan langkah dengan antarmuka Phoenix yang sebenarnya. [assignee: @ginalne]
+-->
 1. Buka modul **Developer**, lalu pilih komponen **Group**.
 2. Klik tombol **Buat Group**.
 3. Isi **nama** dan **deskripsi** Group.
 4. Tambahkan anggota ke dalam Group.
 5. Tentukan Workspace dan hak akses yang diberikan.
 6. Simpan Group.
-
-<!-- TODO: sesuaikan nama menu, tombol, dan urutan langkah dengan antarmuka Phoenix yang sebenarnya. -->
 
 ## Mengelola Anggota
 
