@@ -26,8 +26,23 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 #sb-main .cm-editor .sb-nav-content {
   /*font-family:"Segoe UI" !important;*/
 }
+
+#sb-main .cm-editor .cm-line,
+#sb-main .cm-editor .sb-nav-content {
+  font-family:"Inconsolata" !important;;
+}
+#sb-main .cm-editor .sb-wiki-link  {
+  font-family: var(--ui-font);
+}
+@import url('https://googleapis.com');
+
+#sb-root {
+  --ui-font: "JetBrains Mono", monospace !important;
+  --editor-font: "JetBrains Mono", monospace !important;
+}
 ```
 
+lihat selengkapnya [[Docs/Modul Interface/Table View/Apa itu Table View]].
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
