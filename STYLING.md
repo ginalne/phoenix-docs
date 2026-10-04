@@ -22,6 +22,10 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 #sb-main .cm-editor .cm-task-checked .sb-task {
   opacity: .5 !important;
 }
+#sb-main .cm-editor .cm-line,
+#sb-main .cm-editor .sb-nav-content {
+  /*font-family:"Segoe UI" !important;*/
+}
 ```
 
 
