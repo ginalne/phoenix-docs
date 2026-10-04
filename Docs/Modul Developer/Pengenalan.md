@@ -23,7 +23,7 @@ Lihat selengkapnya [[Docs/Modul Developer/Group/Apa itu Group]].
 
 ## Workspace
 
-_Workspace_ merupakan komponen yang dapat digunakan untuk mengatur ruang kerja pengembangan Anda, termasuk komponen apa saja yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan. Akses ke setiap Workspace dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
+_Workspace_ merupakan komponen yang dapat digunakan untuk mengatur ruang kerja pengembangan Anda, termasuk komponen apa saja yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan. Akses Workspace ke setiap anggota dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
 
 Lihat selengkapnya [[Docs/Modul Developer/Workspace/Apa itu Workspace]].
 
