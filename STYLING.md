@@ -48,17 +48,21 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-[[button:edit|Strict On Selected]]
+[[button/edit|Strict On Selected]]
 
 ```space-style
 /* Style links starting with button: */
-#sb-main .cm-editor a[href="button:edit"] {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 6px;
-  background: #2563eb;
-  color: white !important;
+#sb-main .cm-editor a[href^="button/"] {
+  padding: 0.5rem 1.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: white;
   font-weight: 600;
-  text-decoration: none !important;
+  cursor: pointer;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+  pointer-events: none;
 }
 ```
