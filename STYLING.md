@@ -33,16 +33,18 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 ```space-style
 #sb-main .cm-editor a[href="field"] {
-  padding: 4px 7px;
+  margin:2px;
+  padding: 2px 8px;
   border: 1px solid #555;
   border-radius: 5px;
   background: #333;
   color: #ddd !important;
-  font-size: 0.88em;
+  font-size: 0.95em;
   font-weight: 400;
   text-decoration: none !important;
   pointer-events: none;
   white-space: nowrap;
+  line-height: 1rem;
 }
 ```
 
