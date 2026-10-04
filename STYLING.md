@@ -218,17 +218,17 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 #sb-main .cm-editor .sb-quote {
   margin: 0rem 0rem 0rem 0.5rem;
 }
-#sb-main .sb-admonition[admonition="faq"]:has(.sb-quote.sb-strong){
-  padding-top:1rem;
-  padding-bottom:1rem !important;
-}
 #sb-main .sb-admonition[admonition="faq"]:has(.sb-quote){
   padding-top:0rem;
-  padding-bottom:0.2rem !important;
+  padding-bottom:0.2rem;
   color:#ff8;
 }
-#sb-main .sb-admonition-title[admonition="faq"]){
-  padding-top:0rem !important;
+#sb-main .sb-admonition[admonition="faq"]:has(.sb-quote.sb-strong){
+  padding-top:2.5rem;
+  padding-bottom:1rem;
+}
+#sb-main .sb-admonition-title[admonition="faq"]{
+  padding-top:1rem !important;
 }
 #sb-main .sb-admonition[admonition="faq"] .sb-quote{
   color:#fff;
@@ -237,7 +237,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   color:#fec;
 }
 #sb-main .sb-admonition[admonition="faq"]:nth-last-child(1 of .sb-admonition[admonition="faq"]) {
-  padding-bottom:2rem !important;
+  padding-bottom:2.5rem !important;
 }
 ```
 

@@ -87,9 +87,9 @@ Dengan pembagian ini, setiap tim hanya bekerja di Workspace yang relevan, dan pe
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
->**faq**
+>**FAQ** 
 >**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
-Tidak. Akses yang dimiliki anggota akan sesuai dengan Group-nya.
+>Tidak. Akses yang dimiliki anggota akan sesuai dengan Group-nya.
 >**Apa yang terjadi jika anggota dikeluarkan dari Group?**
 >Anggota tersebut kehilangan akses Workspace yang diberikan melalui Group itu.
 >**Apakah sebuah Workspace dapat diakses oleh banyak Group?**
