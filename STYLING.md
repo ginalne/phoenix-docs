@@ -173,8 +173,8 @@ test [[button/edit|Edit]]
   pointer-events: none;
   white-space: nowrap !important;
 }
-#sb-main .cm-editor i a[href^="button/"] {
-  pointer-events: auto;
+#sb-main .cm-editor i:has(a[href^="button/"]) {
+  pointer-events: auto !important;
 }
 #sb-main .cm-editor a[href^="button/"] span {
   padding: 0rem 0.3rem 0rem 0rem;
