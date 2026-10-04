@@ -11,14 +11,14 @@ TableData adalah tipe data khusus yang digunakan oleh komponen [[Docs/Modul Data
 
 ## Attribute
 ![[Docs/Tipe Data/enum-data.png|Contoh halaman kerja Enum]]
-Setiap EnumData memiliki atribut sebagai berikut:
+Setiap [[Docs/Tipe Data/TableData]] memiliki atribut sebagai berikut:
 * [[#Name]]
 * [[#Description]]
 * [[#Value]]
 * [[#Selectable]]
 
 ### Name
-Atribut Enum sebagai *Key* dalam item EnumData, setiap EnumData tidak boleh memiliki nama yang sama. Atribut ini akan tampil saat dalam pilihan.
+Atribut Enum sebagai *Key* dalam item [[Docs/Tipe Data/EnumData]], setiap EnumData tidak boleh memiliki nama yang sama. Atribut ini akan tampil saat dalam pilihan.
 
 ### Description
 Atribut Enum berbentuk [[Docs/Tipe Data/Text]] yang menjadi keterangan pada item EnumData, setiap EnumData boleh memiliki deskripsi yang sama. Atribut ini akan tampil saat dalam pilihan (terkadang opsional).

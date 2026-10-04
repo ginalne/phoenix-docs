@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "EnumData"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
 ---
