@@ -30,10 +30,26 @@ html{
 }
 #sb-main .sb-strong{
   font-weight: 600;
-  color: #fca;
+  color: #fdc;
 }
+#sb-main .sb-admonition:has(.sb-quote sb-strong){
+  padding-bottom:0rem !important;
+}
+
 ```
-**ttttst**
+
+
+>**faq**
+>**Apakah satu anggota dapat tergabung di lebih dari satu Group?**
+>Tidak. Akses yang dimiliki anggota akan sesuai dengan Group-nya.
+>**Apa yang terjadi jika anggota dikeluarkan dari Group?**
+>Anggota tersebut kehilangan akses Workspace yang diberikan melalui Group itu.
+>**Apakah sebuah Workspace dapat diakses oleh banyak Group?**
+>Ya. Satu Workspace dapat diberikan kepada beberapa Group.
+>**Siapa yang dapat membuat dan mengelola Group?**
+>Pengguna dengan kewenangan pengelolaan di modul Developer.
+
+
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 ```space-style

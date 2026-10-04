@@ -63,8 +63,6 @@ Setiap Group dapat diberikan akses ke satu atau beberapa Workspace.
 
 ## Contoh Penggunaan
 
-**Tim pengembang, desainer, dan analis**
-
 | Group | Anggota | Akses |
 | --- | --- | --- |
 | Admin | Administrator | Workspace pengembangan, antarmuka dan data
