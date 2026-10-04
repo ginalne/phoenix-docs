@@ -25,13 +25,18 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 #sb-main .cm-editor .cm-line,
 #sb-main .cm-editor .sb-nav-content {
   /*font-family:"Segoe UI" !important;*/
+  font-family: "Inter", sans-serif !important;
+}
+#sb-main .cm-editor .sb-wiki-link {
+  /*font-family: "Inter", sans-serif !important;*/
 }
 
 @import url('https://fonts.googleapis.com');
 
 #sb-root {
   --ui-font: "Inter", sans-serif !important;
-  --editor-font: "Roboto Mono", monospace !important;
+  font-weight:100 !important;
+  /*--editor-font: "Inter", monospace !important;*/
 }
 ```
 
