@@ -12,6 +12,6 @@ Anda dapat mengaturnya melalui tombol Merge dalam halaman kerja [[Docs/Modul Dat
 Setelah Mode Merge aktif, maka Anda dapat memilih EnumData yang ingin digabungkan.
 
 ![[Docs/Modul Data/Enum/merge-select.png|EnumData Merge Select]]
-Lalu jika sudah selesai, selanjutnya klik tombol [[field|Select Merge (*)]] 
+Lalu jika sudah selesai, selanjutnya klik tombol  [[button/merge|Select Merge (*)]] 
 (`*` adalah total EnumData yang akan dimerge).
 

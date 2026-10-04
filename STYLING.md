@@ -35,8 +35,10 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 #sb-root {
   --ui-font: "Inter", sans-serif !important;
-  font-weight:100 !important;
   /*--editor-font: "Inter", monospace !important;*/
+}
+#sb-root .sb-nav-primary {
+  font-weight:500 !important;
 }
 ```
 
@@ -75,13 +77,14 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-[[button/edit|Edit]]
+test [[button/edit|Edit]]
 
 ```space-style
 /* Style links starting with button: */
 #sb-main .cm-editor a[href^="button/"] {
   font-family:"Segoe UI";
-  padding: 0.2rem 1rem 0.3rem 0.9em;
+  padding: 0.1rem 1rem 0.2rem 0.9rem;
+  margin: 0rem 0.3rem;
   color: #adadad !important;
   border: 1px solid rgb(63 63 70);
   font-weight: 500;
