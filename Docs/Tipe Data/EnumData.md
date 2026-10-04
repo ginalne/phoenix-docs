@@ -33,5 +33,5 @@ Atribut Enum berbentuk [[Docs/Tipe Data/Boolean]] dalam EnumData sebagai status 
 EnumData cukup baik dalam menyimpan data opsional, sehingga dapat digunakan secara interaktif dengan interface seperti [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]]
 
 ## Format
->**note** Tipe data ini tidak memiliki format khusus.
-
+* [[Docs/Format Data/EnumData/Dropdown]]
+* [[Docs/Format Data/EnumData/Multiple Choices]]
