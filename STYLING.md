@@ -219,13 +219,19 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   margin: 0rem 0rem 0rem 0.5rem;
 }
 #sb-main .sb-admonition[admonition="faq"]:has(.sb-quote.sb-strong){
-  padding-top:1rem !important;
+  padding-top:2rem !important;
   padding-bottom:1rem !important;
 }
 #sb-main .sb-admonition[admonition="faq"]:has(.sb-quote){
   padding-top:0rem !important;
-  padding-bottom:1rem !important;
+  padding-bottom:0.2rem !important;
+  color:#ff8;
+}
+#sb-main .sb-admonition[admonition="faq"] .sb-quote{
   color:#fff;
+}
+#sb-main .sb-admonition[admonition="faq"] .sb-strong{
+  color:#fec;
 }
 ```
 
@@ -239,4 +245,6 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 >Ya. Satu Workspace dapat diberikan kepada beberapa Group.
 >**Siapa yang dapat membuat dan mengelola Group?**
 >Pengguna dengan kewenangan pengelolaan di modul Developer.
+
+
 
