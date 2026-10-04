@@ -16,15 +16,12 @@ Komponen untuk menginput, melihat, dan mengubah data secara terstruktur. Setiap 
 Berikut adalah tampilan form saat pertama kali dibuat:
 ![[Docs/Modul Interface/Form/form-new.png]]
 Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
-1. [[button/edit|Edit]] : Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form.
-2. [[button/publish|Publish]] :
 
-
-| Tombol | Penjelasan|
-|-------------------|----------|
+|    Tombol      |                                   Penjelasan                                                                 |
+|-------------------|---------------------------------------------------------------------------------------------------|
 | [[button/edit|Edit]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
-
-
+| [[button/publish|Publish]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
+| mode  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
 
 
 

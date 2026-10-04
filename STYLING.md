@@ -10,24 +10,24 @@
 table {
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid #666;
+  border: 1px solid #333;
 }
 html{
     body table {--editor-wiki-link-page-color: #818181;}
     body thead td {
       border: 1px solid #666;
-      background: #3a3a3a;
+      background: #2a2a2a;
       padding:6px 12px !important;
       color: #bbb;
     }
     body tbody tr:nth-child(even) {
-      background-color: #1a1a1a;
+      background-color: #161616;
     }
     body tbody tr:nth-child(odd) {
-      background-color: #222;
+      background-color: #141414;
     }
     body tbody td {
-      border: 1px solid #666;
+      border: 1px solid #333;
       padding:12px !important;
       white-space: pre-wrap !important;
     }
