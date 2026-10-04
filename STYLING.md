@@ -76,7 +76,7 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 [[field|Disabled to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna...
 
 ```space-style
-#sb-main .cm-editor a[href="field"] {
+#sb-main .cm-editor a[href^="field"] {
   display:inline-block !important;
   padding: 6px 8px;
   margin: 2px 0px 6px 0px;
@@ -92,9 +92,9 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   line-height: 1rem;
 }
 
-#sb-main .cm-editor .sb-line-h1 a[href="field"],
-#sb-main .cm-editor .sb-line-li a[href="field"],
-#sb-main .cm-editor .sb-line-ul a[href="field"] {
+#sb-main .cm-editor .sb-line-h1 a[href^="field"],
+#sb-main .cm-editor .sb-line-li a[href^="field"],
+#sb-main .cm-editor .sb-line-ul a[href^="field"] {
   display:inline !important;
   padding: 1.5px 8px;
 }

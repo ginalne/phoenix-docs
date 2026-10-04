@@ -3,7 +3,6 @@
     title: Pengenalan
     desciption: Penjelasan Module Interface di Phoenix
     pageDecoration:
-      #icon: x
       tree:
         priority: 4
     tags:
