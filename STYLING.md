@@ -92,6 +92,10 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   line-height: 1rem;
 }
 
+#sb-main .cm-editor i a[href^="field/"] {
+  pointer-events: auto !important;
+}
+
 #sb-main .cm-editor .sb-line-h1 a[href^="field"],
 #sb-main .cm-editor .sb-line-li a[href^="field"],
 #sb-main .cm-editor .sb-line-ul a[href^="field"] {

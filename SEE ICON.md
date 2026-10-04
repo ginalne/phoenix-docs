@@ -33,3 +33,19 @@ ${query[[
   select "- <i style=\"color:#faa\">" .. p.name .. "</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
   where string.startsWith(p.name, "mode")
 ]]}
+
+
+## mentioned field
+
+${query[[
+  from p = index.tag "field"
+  select "- " .. p.name .. "         [[" .. p.name .. "]]" 
+]]}
+
+## mentioned field but not exists button
+
+${query[[
+  from p = index.aspiringPages()
+  select "- <i style=\"color:#faa\">[[" .. p.name .. "]]</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
+  where string.startsWith(p.name, "field")
+]]}

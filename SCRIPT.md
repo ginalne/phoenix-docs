@@ -60,6 +60,28 @@ slashCommand.define {
   end
 }
 slashCommand.define {
+  name = "field",
+  run = function()
+    local text = editor.getText()
+
+    -- Existing frontmatter
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+    if not fmStart then
+      editor.insertAtPos([==[---
+  tags:
+    meta/library
+    field
+  pageDecoration:
+    icon: ''
+---
+]==], 0, true)
+    editor.flashNotification("Add Frontmatter value succeed!")
+    else
+    editor.flashNotification("Frontmatter is exists!")
+    end
+  end
+}
+slashCommand.define {
   name = "value",
   run = function()
     local text = editor.getText()
