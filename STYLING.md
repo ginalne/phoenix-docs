@@ -4,6 +4,7 @@
 | Tombol | Penjelasan|
 |-------------------|----------|
 | [[button/edit|Edit]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
+| [[button/edit|Edit]]  | Tombol ini berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
 
 ```space-style
 table {
@@ -15,11 +16,21 @@ html{
     body table {--editor-wiki-link-page-color: #818181;}
     body thead td {
       border: 1px solid #666;
-      background: #444;
+      background: #3a3a3a;
       padding:6px 12px !important;
+      color: #bbb;
     }
-    body tbody tr:nth-child(even) {background-color: #333;}
-    body tbody tr:nth-child(odd) {background-color: #222;}
+    body tbody tr:nth-child(even) {
+      background-color: #1a1a1a;
+    }
+    body tbody tr:nth-child(odd) {
+      background-color: #222;
+    }
+    body tbody td {
+      border: 1px solid #666;
+      padding:12px !important;
+      white-space: pre-wrap !important;
+    }
 }
 ```
 
@@ -110,6 +121,7 @@ test [[button/edit|Edit]]
   border-radius: 9999px;
   background-color: #161616;
   pointer-events: none;
+  white-space: nowrap !important;
 }
 #sb-main .cm-editor a[href^="button/"] span {
   padding: 0rem 0.3rem 0rem 0rem;
