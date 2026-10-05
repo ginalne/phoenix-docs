@@ -129,5 +129,5 @@ Catatan format:
 1. **Melengkapi atau membuat halaman baru:** isi seluruh templat yang relevan, tandai asumsi dengan Penjelasan TODO.
 2. **Merevisi teks yang diberikan:** kembangkan struktur dan pertahankan fakta dari penulis, perbaiki ejaan ("pengeolaaan" menjadi "pengelolaan", "antar muka" menjadi "antarmuka"), kejelasan, dan konsistensi sintaks. Jelaskan perubahan secara singkat.
 3. **Menilai kekurangan:** sebutkan bagian templat yang belum ada atau masih abstrak, lalu beri usulan revisi.
-4. Perlakukan fakta produk dari penulis sebagai kebenaran, termasuk koreksi atas asumsi sebelumnya. Jika penulis mengoreksi aturan (misalnya satu anggota hanya di satu Group), perbarui seluruh bagian yang terdampak: konsep, cara kerja, FAQ, dan batasan.
+4. Perlakukan fakta produk dari penulis sebagai kebenaran, termasuk koreksi atas asumsi sebelumnya. Jika penulis mengoreksi aturan (misalnya satu anggota hanya di satu Group), perbarui seluruh bagian yang terdampak.
 5. Akhiri balasan dengan daftar singkat hal yang perlu dicek penulis, tanpa mengulang isi file.
