@@ -21,6 +21,7 @@ _Workspace_ adalah komponen yang dapat digunakan untuk mengatur ruang kerja peng
 Dengan Workspace, Anda tidak perlu mengatur hak akses di banyak tempat. Seluruh folder dan komponen tersaji dalam satu halaman kerja berbentuk pohon, dan setiap hak akses cukup ditentukan dengan memilih **allow** atau **disallow**. Pengaturan ini berlaku sampai ke level data, sehingga Anda dapat menerapkan prinsip *least privilege* tanpa harus membuat komponen baru.
 
 ## Mengapa Menggunakan Workspace?
+
 - **Akses terpusat.** Seluruh hak akses folder dan komponen diatur dalam satu halaman kerja.
 - **Kontrol sampai level data.** Anda dapat menentukan siapa yang boleh menambah, mengubah, atau menghapus data, bukan hanya siapa yang boleh melihat komponen.
 - **Mengikuti struktur folder.** Pengaturan pada folder otomatis memengaruhi seluruh isi di dalamnya.
@@ -28,6 +29,7 @@ Dengan Workspace, Anda tidak perlu mengatur hak akses di banyak tempat. Seluruh 
 - **Terhubung dengan Group.** Cukup petakan pengguna ke Group, maka akses Workspace mengikuti.
 
 ## Konsep Utama
+
 | Istilah | Penjelasan |
 | --- | --- |
 | **Workspace** | Komponen untuk mengatur ruang kerja pengembangan, yaitu komponen yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan. |
@@ -43,6 +45,7 @@ Dengan Workspace, Anda tidak perlu mengatur hak akses di banyak tempat. Seluruh 
 
 
 ## Cara Kerja Workspace
+
 Ketika komponen Group berhasil memetakan pengguna dengan Workspace, maka Workspace dapat digunakan. Saat pengguna membuka Phoenix, mereka akan masuk ke dalam satu Workspace yang sudah memiliki struktur folder.
 ```mermaid
 flowchart TD
@@ -63,6 +66,7 @@ Aturan penting:
 - Hak akses bersifat **berjenjang**: jika sebuah folder (induk) diatur **disallow** pada **Visible**, seluruh isinya tidak dapat diakses meskipun pengaturannya **allow**.
 
 ## Membuat Workspace
+
 1. Buka folder tempat Workspace akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan > [[field/add|Add]] > [[field|Developer]] > [[field/workspace| Workspace]]
 4. Isi [[field|Name]] dan [[field|Description]]
@@ -71,15 +75,18 @@ Aturan penting:
 Folder tempat Workspace ditempatkan akan menjadi root dari Workspace tersebut.
 
 ## Mengubah Workspace
+
 1. Buka halaman kerja Workspace
 2. Klik [[button/edit|Edit]]
 4. Perbarui isian [[field|Name]] dan [[field|Description]]
 5. Klik [[button|Update]]
 
 ## Menyegarkan
+
 Klik [[button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 ## Menghapus Workspace
+
 1. Buka folder yang berisi Workspace
 2. Klik kanan Workspace, lalu pilih [[button/delete|Delete]]
 3. Konfirmasi penghapusan dengan klik [[button|Delete]]
@@ -89,6 +96,7 @@ Klik [[button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 ## Halaman Kerja Workspace
 
+![[Docs/Modul Developer/Workspace/antarmuka-workspace.png]]
 Halaman kerja Workspace menampilkan seluruh struktur ruang kerja dalam satu tabel. Kolom paling kiri berisi daftar **Folder/ Component**, sedangkan kolom di sebelah kanannya berisi hak akses yang dikelompokkan menjadi **Comp. Access**, **Data Access**, dan **Function Access**.
 
 Navbar Workspace hanya memiliki dua tombol:
