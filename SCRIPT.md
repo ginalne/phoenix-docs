@@ -361,7 +361,7 @@ slashCommand.define {
       icon: x
       tree:
         priority: 0
-    tags
+    tags:
       draft
 ---
 ]==], 0, true)

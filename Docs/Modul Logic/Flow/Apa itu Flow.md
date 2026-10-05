@@ -24,12 +24,12 @@ _Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pen
 
 | Istilah | Penjelasan |
 | --- | --- |
-| **Flow Block** | Unit terkecil penyusun Flow. Setiap block memiliki fungsi tertentu dan dapat dihubungkan dengan block lain. |
-| **Blueprint** | Area kerja tempat Anda menambahkan, menata, dan menghubungkan Flow Block. Posisi kursor (x, y) dan *scale* tampil di sudut kiri bawah halaman. |
-| **Input dan Output** | Titik penghubung pada Flow Block. Output berada di sisi kanan block, input berada di sisi kiri block. |
-| **Koneksi** | Garis penghubung dari output sebuah block ke input block lain. Koneksi menentukan arah aliran proses. |
-| **Event Flow Block** | Flow Block pemicu proses, misalnya Pulser dan Variable Event. Block ini juga memiliki tombol untuk eksekusi manual. Selengkapnya lihat [[Docs/Event/Apa itu Event\|Event]]. |
-| **Activity** | Tampilan pemantauan proses yang sedang atau sudah berjalan di dalam Flow. |
+| [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] | Unit terkecil penyusun Flow. Setiap block memiliki fungsi tertentu dan dapat dihubungkan dengan block lain. |
+| [[#Antarmuka Flow| Blueprint]] | Area kerja tempat Anda menambahkan, menata, dan menghubungkan Flow Block. Posisi kursor (x, y) dan *scale* tampil di sudut kiri bawah halaman. |
+| [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Antarmuka Flow Block|Input dan Output]] | Titik penghubung pada Flow Block. Output berada di sisi kanan block, input berada di sisi kiri block. |
+| [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Antarmuka Flow Block|Koneksi]] | Garis penghubung dari output sebuah block ke input block lain. Koneksi menentukan arah aliran proses. |
+| [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Event Flow Block]] | Flow Block pemicu proses, misalnya Pulser dan Variable Event. Block ini juga memiliki tombol untuk eksekusi manual. Selengkapnya lihat [[Docs/Event/Apa itu Event\|Event]]. |
+| [[Docs/Modul Logic/Flow/Flow Activity]] | Tampilan pemantauan proses yang sedang atau sudah berjalan di dalam Flow. |
 
 ## Cara Kerja Flow
 Block Event memicu proses, lalu hasilnya mengalir lewat koneksi dari satu Flow Block ke Flow Block berikutnya hingga menghasilkan keluaran.
@@ -96,147 +96,82 @@ Anda bisa berinteraksi pada blueprint Flow untuk memudahkan proses pengembangan 
 
 | Fungsi | Aksi |
 | --- | --- |
-| Mengubah posisi panning | Tekan dan tahan pada bagian yang kosong lalu gerakan kursor. | 
+| Mengubah posisi panning | Tekan dan tahan pada bagian yang kosong dalam blueprint lalu gerakan kursor. Lepas untuk selesai | 
 | Mengubah skala panning (_zoom in/zoom out_) | Scroll pada bagian blueprint |
 | Mengembalikan posisi panning ke tengah | Klik pada informasi koordinate [[^field|x _ y _]]
-| Mengembalikan skala panning ke awal | Klik pada informasi skala [[^field|scale _]]
+| Mengembalikan skala panning ke awal | Klik pada informasi skala [[^field|scale _]]|
+| Membuka konteks menu | Klik kanan pada bagian yang kosong dalam blueprint
 
-## Menambahkan Flow Block
+## Membangun Logika Flow
 
-![[Docs/Modul Logic/Flow/add-flow-block.png]]
-1. Buka halaman kerja Flow
-2. Klik kanan pada blueprint > [[^field/add|Add]]
-3. Pilih kategori Flow Block, misalnya [[^field/event|Event]]
-4. Pilih Flow Block, misalnya [[^field/event|Pulser]]
+Membangun proses logika Flow dilakukan dengan cara pengelolaan Flow Block dengan aspek sebagai berikut:
 
-Flow Block akan muncul pada blueprint dan siap dihubungkan dengan block lain.
-
-### Kategori Flow Block
-Menu Add mengelompokkan Flow Block ke dalam kategori berikut.
-
-| Kategori | Isi |
-| --- | --- |
-| **Event** | Enum Data Event, Pulser, Table Row Event, Tree Node Event, Variable Event |
-| **Data** | Variable, Enum, Table, dan Tree beserta block pengelolaan datanya (misalnya Add Variable, Variable Getter, Add Row, Add Node) |
-| **I/O** | Branch, Passer |
-| **Query** | Condition, Execute |
-| **Operator** | Number (Increment), String (Concatenate, Implode, Pad Left, Pad Right), Table (TableRow Parse), Object (Assign, Merge, Parse, Stringify), Boolean (If), Tree (Node Parse) |
-| **Modular** | API (HTTP Request), AI (OpenAI 4) |
-| **Misc.** | Chrono (Delay), Error (Error Message) |
-
-Penjelasan lengkap setiap Flow Block ada di [[Docs/Modul Logic/Flow/Flow Block]].
-
-## Menghubungkan Flow Block
-```excalidraw
-url:Docs/Modul Logic/Flow/connecting-flow-block.excalidraw
-height:312px
-```
-1. Arahkan kursor ke titik output pada Flow Block asal, misalnya Result pada Pulser
-2. Klik dan tahan (*hold press*) titik output tersebut
-3. Seret ke titik input pada Flow Block tujuan
-4. Lepaskan (*release*) tombol di atas titik input
-
-Garis koneksi akan muncul di antara kedua block.
-
-## Menghapus Koneksi Flow Block
-```excalidraw
-url:Docs/Modul Logic/Flow/remove-connection-block-flow.excalidraw
-height:500px
-```
-1. Arahkan kursor ke titik output pada Flow Block asal
-2. Klik dan tahan (*hold press*) titik output tersebut
-3. Seret ke titik input ke tempat kosong
-4. Lepaskan (*release*) tombol
-5. Konfirmasi dengan [[^button|Remove]]
-
-Garis koneksi akan terhapus di antara kedua block.
-
-## Menghubungkan Block Event dari Komponen
-Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^button/event|Event]] pada masing-masing komponen. Selengkapnya lihat [[Docs/Event/Menghubungkan Event]].
+* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block|Menambahkan Flow Block]]
+* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Konfigurasi Flow Block|Mengatur Konfigurasi Flow Block]]
+* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menghubungkan Koneksi|Menghubungkan Koneksi]]
+* [[#Menjalankan Flow Secara Manual]]
+* [[#Memantau Proses]]
+* [[#Menghubungkan Block Event dari Komponen]]
 
 ## Menjalankan Flow Secara Manual
 Anda dapat mengeksekusi proses secara manual melalui antarmuka Flow dengan menekan tombol pada Block Event, misalnya [[^button/event|Trigger]] pada Pulser.
 
 1. Buka halaman kerja Flow
-2. Cari Block Event yang akan dijalankan
-3. Klik tombol pada block tersebut, misalnya [[^button/empty|Trigger]]
+2. Cari [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang akan dijalankan
+3. Klik tombol [[^button/empty|Trigger]]  pada block tersebut
 
 Setelah dijalankan, Anda dapat melihat prosesnya pada [[#Memantau Proses]].
 
-<!--
-  * [TODO] Konfirmasi apakah semua Block Event memiliki tombol eksekusi manual dengan label yang sama (Trigger), atau labelnya berbeda untuk Variable Event, Enum Data Event, Table Row Event, dan Tree Node Event.
--->
+## Menghubungkan Block Event dari Komponen
+Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^button/event|Event]] pada masing-masing komponen. Selengkapnya lihat [[Docs/Event/Menghubungkan Event]].
 
 ## Memantau Proses
-1. Pada halaman kerja Flow, klik [[^button|Activity]] di sebelah kanan [[^button/refresh|Refresh]] (mode desktop)
-2. Panel **Activity List** akan terbuka
-3. Klik [[^button|Refresh List]] untuk memuat ulang daftar, atau gunakan [[field|Search Activity]] untuk mencari proses
+1. Pada halaman kerja Flow, klik menu [[^button/activity|Activity]] atau tombol di sebelah kanan [[^button/refresh|Refresh]] (mode desktop)
+2. Panel [[Docs/Modul Logic/Flow/Flow Activity]] akan terbuka
+3. Klik [[^button/refresh|Refresh List]] untuk memuat ulang daftar, atau gunakan [[field|Search Activity]] untuk mencari proses
 
-Panel Activity List menampilkan kolom berikut.
+Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Activity]].
 
-| Kolom | Penjelasan |
-| --- | --- |
-| **ID/Name** | Pengenal atau nama proses. |
-| **Status/Type** | Status dan jenis proses. |
-| **Start At** | Waktu proses dimulai. |
-| **Updated At** | Waktu terakhir proses diperbarui. |
-
-Jika belum ada proses yang berjalan, panel menampilkan keterangan **No Activity**.
-
-<!--
-  * [TODO] Tambahkan gambar panel Activity List. Anotasi yang disarankan: (1) tombol Activity, (2) panel Activity List, (3) tombol Refresh List dan Search Activity, (4) header kolom, (5) keterangan No Activity. Saat ini screenshot masih menampilkan daftar kosong. Bila memungkinkan, ganti dengan screenshot yang berisi minimal satu proses.
-  * [TODO] Pada tombol Activity terdapat empat penghitung dengan ikon berbeda (angka 0, 0, 0, 0). Mohon jelaskan arti masing-masing ikon (misalnya proses aktif, menunggu, selesai, dibatalkan?) dan tambahkan ke dokumentasi.
-  * [TODO] Penjelasan isi kolom Status/Type dan ID/Name masih berdasarkan nama kolom saja. Mohon dilengkapi nilai status yang mungkin muncul.
-  * [TODO] Konfirmasi letak tombol Activity pada mode mobile dan cara menutup panel Activity List (ikon di kiri atas panel?).
--->
+>**note** Info
+>Jika belum ada proses yang berjalan, panel menampilkan keterangan [[^field|No Activity]]
 
 ## Contoh Penggunaan
-**Menguji alur secara manual**
+
+**Mengirim informasi ke sistem lain ketika ada perubahan data**
 
 | Langkah | Tindakan | Hasil |
 | --- | --- | --- |
-| 1 | Tambahkan Pulser dari kategori Event | Block Pulser muncul pada kanvas |
-| 2 | Tambahkan Flow Block lanjutan, misalnya Passer dari kategori I/O | Block kedua muncul pada kanvas |
-| 3 | Hubungkan Result pada Pulser ke input block kedua | Garis koneksi terbentuk |
-| 4 | Klik [[^button|Trigger]] pada Pulser | Proses berjalan melalui kedua block |
-| 5 | Buka [[^button|Activity]] | Proses terlihat pada Activity List |
+| 1 | ... | ... |
 
 Dengan alur ini, Anda dapat memastikan rangkaian block bekerja dengan benar sebelum bergantung pada Event yang sebenarnya.
 
-<!--
-  * [TODO] Contoh skenario ini hanya ilustrasi berdasarkan block yang terlihat pada screenshot. Mohon diganti dengan skenario nyata yang lebih relevan (misalnya Variable Event yang memicu pengolahan data).
--->
-
 ## Praktik Terbaik
-- **Mulai dari Block Event.** Tentukan pemicu terlebih dahulu, baru tambahkan block pemrosesan.
+- **Mulai dari Flow Block Event.** Tentukan pemicu terlebih dahulu, baru tambahkan block pemrosesan.
 - **Uji secara manual dahulu.** Gunakan tombol pada Block Event sebelum mengandalkan pemicu otomatis.
 - **Cek Activity setelah menjalankan.** Pastikan proses berjalan sesuai harapan.
 - **Tata block dari kiri ke kanan.** Output berada di kanan dan input di kiri, sehingga alur lebih mudah dibaca.
 - **Beri nama dan deskripsi Flow yang jelas.** Anggota lain dapat memahami tujuan Flow tanpa membuka isinya.
 
 ## Batasan dan Catatan
-- Koneksi dibuat dari **output** ke **input**.
-- Panel Activity List kosong bila belum ada proses yang berjalan.
-- Tombol [[^button|Activity]] berada di sebelah kanan [[^button/refresh|Refresh]] pada mode desktop.
-- Daftar Flow Block yang tersedia mengikuti menu [[^field/add|Add]] pada kanvas.
+- Koneksi dibuat dari **output** ke **input**. (lihat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menghubungkan Flow Block]])
+- Tombol [[^button/activity|Activity]] berada di sebelah kanan [[^button/refresh|Refresh]] pada mode desktop.
+- Daftar Flow Block yang tersedia mengikuti menu [[^field/add|Add]] pada blueprint.
 
 ## TL:DR
-- _Flow_ mengatur logika dan proses data dengan menghubungkan Flow Block, mirip *composition* di Blender.
-- Tambahkan block lewat klik kanan pada kanvas > [[^field/add|Add]].
-- Hubungkan block dengan menahan klik pada output, lalu lepaskan di input.
-- Jalankan manual dengan tombol pada Block Event, lalu pantau lewat [[^button|Activity]].
+- _Flow_ mengatur logika dan proses data dengan menghubungkan [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]].
+- Jalankan manual dengan tombol pada Block Event, lalu pantau lewat [[^button/activity|Activity]].
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
 >**faq**
 >**Apa bedanya Flow dengan Event?**
->[[Docs/Event/Apa itu Event|Event]] adalah pemicu proses. Flow adalah tempat Anda menyusun dan menghubungkan Flow Block, termasuk Block Event, agar pemicu tersebut menghasilkan keluaran dan otomasi.
+>[[Docs/Event/Apa itu Event|Event]] adalah pemicu proses. Flow adalah tempat Anda menyusun dan menghubungkan Flow Block, agar pemicu tersebut menghasilkan keluaran dan otomasi.
 >**Bagaimana menjalankan Flow tanpa menunggu Event?**
->Klik tombol pada Block Event di antarmuka Flow, misalnya [[^button|Trigger]] pada Pulser.
+>Klik tombol pada Block Event di antarmuka Flow, misalnya [[^button/empty|Trigger]] pada block.
 >**Mengapa Activity List kosong?**
->Panel menampilkan **No Activity** bila belum ada proses yang berjalan atau tercatat.
+>Panel menampilkan [[^field|No Activity]] bila belum ada proses yang berjalan atau tercatat.
 >**Bagaimana menambahkan Flow Block?**
->Klik kanan pada kanvas, pilih [[^field/add|Add]], lalu pilih kategori dan Flow Block yang diinginkan.
+>Klik kanan pada blueprint, pilih [[^field/add|Add]], lalu pilih kategori dan Flow Block yang diinginkan.
 >**Bagaimana menghubungkan dua Flow Block?**
 >Klik dan tahan titik output pada block asal, seret ke titik input block tujuan, lalu lepaskan.
 
