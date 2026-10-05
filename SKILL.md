@@ -85,7 +85,8 @@ _<Komponen>_ merupakan komponen yang dapat digunakan untuk <fungsi utama>.
 ## Menghapus <Komponen>
 <Langkah-langkah>
 
-## Mengelola <objek>
+<Sesi pengelolaan komponen. Konfirmasi apa saja isi komponen. Jika dirasa topik ini akan dalam, buat intro dan arahkan ke halaman lain>
+
 ## Mengatur <aspek>
 
 ## Contoh Penggunaan
@@ -101,6 +102,8 @@ _<Komponen>_ merupakan komponen yang dapat digunakan untuk <fungsi utama>.
 
 ## Batasan dan Catatan
 - <Poin singkat.>
+
+## TL:DR
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
