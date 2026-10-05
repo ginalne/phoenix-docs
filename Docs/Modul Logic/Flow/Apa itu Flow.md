@@ -97,11 +97,11 @@ Anda bisa berinteraksi pada blueprint Flow untuk memudahkan proses pengembangan 
 
 | Fungsi | Aksi |
 | --- | --- |
-| Mengubah posisi panning | Tekan dan tahan pada bagian yang kosong dalam blueprint lalu gerakkan kursor. Lepas untuk selesai. |
-| Mengubah skala panning (_zoom in/zoom out_) | Scroll pada bagian blueprint. |
-| Mengembalikan posisi panning ke tengah | Klik pada informasi koordinat [[^field|x _ y _]]. |
-| Mengembalikan skala panning ke awal | Klik pada informasi skala [[^field|scale _]]. |
-| Membuka konteks menu | Klik kanan pada bagian yang kosong dalam blueprint. |
+| Menggeser tampilan (_pan_) | Tekan dan tahan pada bagian yang kosong dalam blueprint lalu gerakkan kursor. Lepas untuk selesai. |
+| Mengubah skala tampilan (_zoom_) | gulir pada bagian blueprint. |
+| Mengembalikan tampilan ke tengah | Klik pada informasi koordinat [[^field|x _ y _]]. |
+| Mengembalikan skala tampilan | Klik pada informasi skala [[^field|scale _]]. |
+| Membuka menu konteks | Klik kanan pada bagian yang kosong dalam blueprint. |
 
 ## Membangun Logika Flow
 
