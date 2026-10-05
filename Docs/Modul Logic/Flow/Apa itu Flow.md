@@ -20,8 +20,8 @@ _Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pen
 * **Proses dapat dipantau.** Setiap proses yang berjalan tercatat dan dapat dilihat melalui Activity.
 * **Terhubung dengan data Phoenix.** Flow Block tersedia untuk terhubung dengan [[Docs/Modul Data/Variable/Apa itu Variable|Variable]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], [[Docs/Modul Data/Table/Apa itu Table|Table]], dan [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].
 
-
 ## Konsep Utama
+
 | Istilah | Penjelasan |
 | --- | --- |
 | **Flow Block** | Unit terkecil penyusun Flow. Setiap block memiliki fungsi tertentu dan dapat dihubungkan dengan block lain. |
@@ -30,7 +30,6 @@ _Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pen
 | **Koneksi** | Garis penghubung dari output sebuah block ke input block lain. Koneksi menentukan arah aliran proses. |
 | **Event Flow Block** | Flow Block pemicu proses, misalnya Pulser dan Variable Event. Block ini juga memiliki tombol untuk eksekusi manual. Selengkapnya lihat [[Docs/Event/Apa itu Event\|Event]]. |
 | **Activity** | Tampilan pemantauan proses yang sedang atau sudah berjalan di dalam Flow. |
-
 
 ## Cara Kerja Flow
 Block Event memicu proses, lalu hasilnya mengalir lewat koneksi dari satu Flow Block ke Flow Block berikutnya hingga menghasilkan keluaran.
@@ -55,44 +54,33 @@ Flow Block hanya terhubung dari output ke input. Garis putus-putus menandakan re
 3. Isi [[field|Name]] dan [[field|Description]]
 4. Klik [[^button|Create]]
 
-<!--
-  * [TODO] Langkah Membuat Flow mengikuti pola komponen lain (Add > Logic > Flow). Mohon dikonfirmasi, termasuk atribut isian selain Name dan Description.
--->
-
 ## Mengubah Flow
 1. Buka halaman kerja Flow
 2. Klik [[^button/edit|Edit]]
-3. Perbarui isian
+4. Perbarui isian [[^field|Name]] dan [[^field|Description]]
 4. Klik [[^button|Update]]
 
-<!--
-  * [TODO] Konfirmasi fungsi tombol Edit pada Flow. Apakah mengubah atribut Flow (Name, Description) seperti pada komponen lain, atau ada fungsi lain pada kanvas?
--->
-
-## Menyegarkan
+## Menyegarkan Flow
 Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 ## Menghapus Flow
-1. Klik kanan Flow
-2. Pilih [[^button/delete|Delete]]
-3. Konfirmasi dengan [[^button|Delete]]
+1. Buka folder yang berisi Flow
+2. Klik kanan Workspace
+3. Pilih [[^button/delete|Delete]]
+4. Konfirmasi dengan [[^button|Delete]]
 
-<!--
-  * [TODO] Konfirmasi dampak penghapusan Flow terhadap Event yang terikat. Bila ada dampak, tambahkan callout **warning** setelah langkah Menghapus.
--->
+>**warning** Harap hati-hati
+>Menghapus Flow dapat menghilangkan Flow Block dan riwayat Activity. Flow Block Action yang sudah digunakan oleh komponen akan terputus.
 
 ## Menambahkan Flow Block
+
+![[Docs/Modul Logic/Flow/add-flow-block.png]]
 1. Buka halaman kerja Flow
 2. Klik kanan pada kanvas > [[^field/add|Add]]
 3. Pilih kategori Flow Block, misalnya [[^field|Event]]
 4. Pilih Flow Block, misalnya [[^field|Pulser]]
 
-Flow Block akan muncul pada kanvas dan siap dihubungkan dengan block lain.
-
-<!--
-  * [TODO] Tambahkan gambar menu Add pada kanvas (screenshot menu Add yang terbuka sampai level Flow Block). Anotasi yang disarankan: (1) menu Add, (2) kategori Flow Block, (3) daftar Flow Block pada kategori yang dipilih, (4) contoh block Pulser pada kanvas.
-  * [TODO] Pada screenshot, nama Flow ("New Flow") sebaiknya diganti atau di-*crop* agar tidak memuat nama kasus pribadi.
--->
+Flow Block akan muncul pada blueprint dan siap dihubungkan dengan block lain.
 
 ### Kategori Flow Block
 Menu Add mengelompokkan Flow Block ke dalam kategori berikut.
