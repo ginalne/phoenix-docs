@@ -16,7 +16,8 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 -  Struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
 -  Pahami konteks halaman yang diminta, silahkan buat struktur yang terbaik untuk halaman tersebut, jangan terlalu kaku, agar penulis tahu kemungkinan terbaik dalam menjelaskan konteks halaman tersebut.
 -  Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
--  Perbarui skill /phoenix-docs-knowledge jika 
+-  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill phoenix-docs-silverbullet"**. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
+-  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill phoenix-docs-knowledge"**. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
 
 ## Konvensi tautan
 
