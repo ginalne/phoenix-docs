@@ -88,6 +88,7 @@ Klik [[button/refresh|Refresh]] untuk memuat ulang tampilan.
 >Sebelum menghapus pastikan setiap [[Docs/Modul Developer/Group/Apa itu Group|Group]] tetap memiliki Workspace selain daripada yang akan dihapus. Sehingga pengalaman pengguna tetap lancar menggunakan Phoenix. 
 
 ## Halaman Kerja Workspace
+
 Halaman kerja Workspace menampilkan seluruh struktur ruang kerja dalam satu tabel. Kolom paling kiri berisi daftar **Folder/ Component**, sedangkan kolom di sebelah kanannya berisi hak akses yang dikelompokkan menjadi **Comp. Access**, **Data Access**, dan **Function Access**.
 
 Navbar Workspace hanya memiliki dua tombol:
