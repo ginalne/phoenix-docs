@@ -57,7 +57,7 @@ Gunakan urutan berikut. Bagian yang tidak relevan boleh dihilangkan, tetapi jang
 
 _<Komponen>_ merupakan komponen yang dapat digunakan untuk <fungsi utama>.
 
-<keunikan komponen ini dari segi kemudahan, .
+<penjelasan dari segi kemudahan, solusi dan keunikan komponen ini>.
 
 ## Mengapa Menggunakan <Komponen>?
 - **<Manfaat singkat>.** <Penjelasan satu kalimat.>
@@ -68,21 +68,22 @@ _<Komponen>_ merupakan komponen yang dapat digunakan untuk <fungsi utama>.
 | **<Istilah>** | <Penjelasan.> |
 
 ## Cara Kerja <Komponen>
-<Satu kalimat inti.>
+<Satu kalimat inti. Konfirmasi jika bingung.>
 
 ```mermaid
-flowchart LR
-    A[...] --> B[...]
+<jelaskan hubungan dalam Phoenix. Konfirmasi jika bingung.>
 ```
 
 <Aturan penting tentang relasi atau batasan alur.>
 
 ## Membuat <Komponen>
-1. Klik kanan pada [[Docs/Antar Muka#Area Manajemen Folder]].
-2. Pilih [[field/add|Add]] > [[field|<Modul>]] > [[field/<komponen>|<Komponen>]]
-3. Isi [[field|Name]] dan [[field|Description]].
-4. ...
-5. Selesai
+<Langkah-langkah. Konfirmasi atribut jika bingung.>
+
+## Mengubah <Komponen>
+<Langkah-langkah>
+
+## Menghapus <Komponen>
+<Langkah-langkah>
 
 ## Mengelola <objek>
 ## Mengatur <aspek>
