@@ -6,7 +6,7 @@
       tree:
         priority: 1
 ---
-# # Apa itu Flow
+# Apa itu Flow
 
 >**note** _Flow_ merupakan salah satu komponen dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
 
@@ -51,7 +51,7 @@ Flow Block hanya terhubung dari output ke input. Garis putus-putus menandakan re
 ## Membuat Flow
 1. Buka folder tempat Flow akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan > [[^field/add|Add]] > [[^field|Logic]] > [[^field/flow|Flow]]
-3. Isi [[field|Name]] dan [[field|Description]]
+3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Klik [[^button|Create]]
 
 ## Mengubah Flow
@@ -81,14 +81,14 @@ Bilah navigasi Flow terdiri dari:
 
 | Tombol | Fungsi |
 | --- | --- |
-|[[field/flow|Judul Flow]]| Ikon Flow dalam Phoenix serta [[field|Header Name]] Flow.  
-| [[^button/edit|Edit]] | Mengubah atribut Flow seperti [[field|Directory]], [[^field|Name]] dan [[^field|Description]]. |
+|[[^field/flow|Judul Flow]]| Ikon Flow dalam Phoenix serta [[^field|Header Name]] Flow.  
+| [[^button/edit|Edit]] | Mengubah atribut Flow seperti [[^field|Directory]], [[^field|Name]] dan [[^field|Description]]. |
 | [[^button/refresh|Refresh]] | Memuat ulang halaman kerja. |
-|[[button/submission|Submission]]| Tombol yang berfungsi untuk membuka bilik submission.
+|[[^button/submission|Submission]]| Tombol yang berfungsi untuk membuka bilik submission.
 | [[^field|Search]] | Kolom pencarian untuk mencari Flow Block 
 
 >**note** Perbedaan Icon
->Dalam mode dekstop tombol [[button/submission|Submission]]sedikit berbeda, tombol terlihat dengan susunan informasi submission yaitu total activity, done, waiting dan  failure
+>Dalam mode dekstop tombol [[^button/submission|Submission]]sedikit berbeda, tombol terlihat dengan susunan informasi submission yaitu total activity, done, waiting dan  failure
 
 ## Interaksi Antarmuka Flow
 
@@ -128,7 +128,7 @@ Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^butto
 ## Memantau Proses
 1. Pada halaman kerja Flow, klik menu [[^button/activity|Activity]] atau tombol di sebelah kanan [[^button/refresh|Refresh]] (mode desktop)
 2. Panel [[Docs/Modul Logic/Flow/Flow Activity]] akan terbuka
-3. Klik [[^button/refresh|Refresh List]] untuk memuat ulang daftar, atau gunakan [[field|Search Activity]] untuk mencari proses
+3. Klik [[^button/refresh|Refresh List]] untuk memuat ulang daftar, atau gunakan [[^field|Search Activity]] untuk mencari proses
 
 Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Activity]].
 
