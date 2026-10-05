@@ -22,8 +22,8 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 - Saat penulis mengembalikan halaman yang sudah direvisi dengan jawaban pada TODO (format `* jawaban:`), perlakukan jawaban itu sebagai fakta, perbarui seluruh bagian yang terdampak, dan hapus blok TODO yang sudah terjawab.
 - Jika topik komponen cukup dalam (misalnya Data Access), tulis ringkasan di halaman utama dan arahkan ke subhalaman dengan tautan, lalu tandai dengan TODO bahwa subhalaman perlu dibuat.
 -  Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
--  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update /phoenix-docs-silverbullet SKILL.md"**. Isinya alasan pembaharuannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Jika tidak ada yang relevan, jangan tulis bagian itu.
--  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill /phoenix-docs-silverbullet KNOWLEDGE.md"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
+-  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update /phoenix-docs-silverbullet"**. Isinya alasan pembaharuannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Jika tidak ada yang relevan, jangan tulis bagian itu.
+-  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill /phoenix-docs-knowledge"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
 
 ## Konvensi tautan
 
