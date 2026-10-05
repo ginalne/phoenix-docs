@@ -10,7 +10,7 @@
 
 >**note** _Flow_ merupakan salah satu komponen dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
 
-_Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pengelolaan data dengan pendekatan aliran komposit, yaitu menyusun logika dengan menghubungkan blok demi blok (*block diagram*). Setiap blok yang Anda bangun dapat dihubungkan dan dimonitor, sehingga setiap [[Docs/Event/Apa itu Event|Event]] yang terikat dapat menghasilkan keluaran dan otomasi yang tepat.
+_Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pengelolaan data dengan pendekatan alur komposit, yaitu menyusun logika dengan menghubungkan blok demi blok. Setiap blok yang Anda bangun dapat dihubungkan dan dimonitor, sehingga setiap [[Docs/Event/Apa itu Event|Event]] yang terikat dapat menghasilkan keluaran dan otomasi yang tepat.
 
 ## Mengapa Menggunakan Flow?
 
@@ -72,6 +72,35 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 >**warning** Harap hati-hati
 >Menghapus Flow dapat menghilangkan Flow Block dan riwayat Activity. Flow Block Action yang sudah digunakan oleh komponen akan terputus.
 
+## Antarmuka Flow
+
+![[Docs/Modul Logic/Flow/blueprint-flow.png]]
+Antarmuka Flow menampilkan seluruh struktur ruang kerja, yaitu bilah navigasi dibagian atas, dan kolom blueprint dibagian bawah.
+
+Bilah navigasi Flow terdiri dari:
+
+| Tombol | Fungsi |
+| --- | --- |
+|[[field/flow|Judul Flow]]| Ikon Flow dalam Phoenix serta [[field|Header Name]] Flow.  
+| [[^button/edit|Edit]] | Mengubah atribut Flow seperti [[field|Directory]], [[^field|Name]] dan [[^field|Description]]. |
+| [[^button/refresh|Refresh]] | Memuat ulang halaman kerja. |
+|[[button/submission|Submission]]| Tombol yang berfungsi untuk membuka bilik submission.
+| [[^field|Search]] | Kolom pencarian untuk mencari Flow Block 
+
+>**note** Perbedaan Icon
+>Dalam mode dekstop tombol [[button/submission|Submission]]sedikit berbeda, tombol terlihat dengan susunan informasi submission yaitu total activity, done, waiting dan  failure
+
+## Interaksi Antarmuka Flow
+
+Anda bisa berinteraksi pada blueprint Flow untuk memudahkan proses pengembangan logika dan alur komposit dengan aksi seperti berikut:
+
+| Fungsi | Aksi |
+| --- | --- |
+| Mengubah posisi panning | Tekan dan tahan pada bagian yang kosong lalu gerakan kursor. | 
+| Mengubah skala panning (_zoom in/zoom out_) | Scroll pada bagian blueprint |
+| Mengembalikan posisi panning ke tengah | Klik pada informasi koordinate [[^field|x _ y _]]
+| Mengembalikan skala panning ke awal | Klik pada informasi skala [[^field|scale _]]
+
 ## Menambahkan Flow Block
 
 ![[Docs/Modul Logic/Flow/add-flow-block.png]]
@@ -98,22 +127,10 @@ Menu Add mengelompokkan Flow Block ke dalam kategori berikut.
 Penjelasan lengkap setiap Flow Block ada di [[Docs/Modul Logic/Flow/Flow Block]].
 
 ## Menghubungkan Flow Block
-
-![[Docs/Modul Logic/Flow/connecting-flow-block.png]]
-1. Arahkan kursor ke titik output pada Flow Block asal, misalnya Result pada Pulser
-2. Klik dan tahan (*hold press*) titik output tersebut
-3. Seret ke titik input pada Flow Block tujuan
-4. Lepaskan (*release*) tombol di atas titik input
-
-Garis koneksi akan muncul di antara kedua block.
-
-## Menghapus Hubungan Flow Block
 ```excalidraw
 url:Docs/Modul Logic/Flow/connecting-flow-block.excalidraw
-height:500px
+height:312px
 ```
-
-![[Docs/Modul Logic/Flow/connecting-flow-block.png]]
 1. Arahkan kursor ke titik output pada Flow Block asal, misalnya Result pada Pulser
 2. Klik dan tahan (*hold press*) titik output tersebut
 3. Seret ke titik input pada Flow Block tujuan
@@ -121,21 +138,28 @@ height:500px
 
 Garis koneksi akan muncul di antara kedua block.
 
+## Menghapus Koneksi Flow Block
+```excalidraw
+url:Docs/Modul Logic/Flow/remove-connection-block-flow.excalidraw
+height:500px
+```
+1. Arahkan kursor ke titik output pada Flow Block asal
+2. Klik dan tahan (*hold press*) titik output tersebut
+3. Seret ke titik input ke tempat kosong
+4. Lepaskan (*release*) tombol
+5. Konfirmasi dengan [[^button|Remove]]
+
+Garis koneksi akan terhapus di antara kedua block.
 
 ## Menghubungkan Block Event dari Komponen
-Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^button|Event]] pada masing-masing komponen. Selengkapnya lihat [[Docs/Event/Apa itu Event|Event]].
-
-<!--
-  * [TODO] Konfirmasi detail fitur ini: komponen mana saja yang memiliki tombol Event (Variable, Enum, Table, Tree?), letak tombol, dan langkah menghubungkannya ke Block Event. Setelah dikonfirmasi, tulis langkah bernomor di bagian ini.
-  * [TODO] Tambahkan gambar tombol Event pada salah satu komponen.
--->
+Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^button/event|Event]] pada masing-masing komponen. Selengkapnya lihat [[Docs/Event/Menghubungkan Event]].
 
 ## Menjalankan Flow Secara Manual
-Anda dapat mengeksekusi proses secara manual melalui antarmuka Flow dengan menekan tombol pada Block Event, misalnya [[^button|Trigger]] pada Pulser.
+Anda dapat mengeksekusi proses secara manual melalui antarmuka Flow dengan menekan tombol pada Block Event, misalnya [[^button/event|Trigger]] pada Pulser.
 
 1. Buka halaman kerja Flow
 2. Cari Block Event yang akan dijalankan
-3. Klik tombol pada block tersebut, misalnya [[^button|Trigger]]
+3. Klik tombol pada block tersebut, misalnya [[^button/empty|Trigger]]
 
 Setelah dijalankan, Anda dapat melihat prosesnya pada [[#Memantau Proses]].
 

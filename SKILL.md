@@ -15,15 +15,14 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 - Gunakan kalimat aktif, singkat, dan konkret. Jelaskan manfaat, bukan hanya definisi.
 - Istilah asing yang bukan nama fitur ditulis miring dengan `*...*`, misalnya `*drag and drop*`, `*least privilege*`.
 - Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik dan tandai serta tambahkan usul perlunya gambar melalui Penjelasan TODO (lihat cara penulisan [[#Penulisan TODO]],  Penulis akan memperbaiki isinya sendiri.
--  Struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
+-  Asumsikan detail yang terbaik sesuai dengan konteks halamannya, jika ragu tetap lakukan dan jelaskan dalam TODO.
 -  Pahami konteks halaman yang diminta, silahkan buat struktur yang terbaik untuk halaman tersebut, jangan terlalu kaku, agar penulis tahu kemungkinan terbaik dalam menjelaskan konteks halaman tersebut.
 - Untuk konsep yang sudah punya halaman sendiri (Komponen, Folder, Pro), jangan mendaftar contoh di tabel Konsep Utama. Cukup beri satu kalimat singkat dan tautkan ke halamannya ("Selengkapnya lihat [[...]]").
 - Gunakan istilah "bilah navigasi", bukan "navbar".
-- Saat penulis mengembalikan halaman yang sudah direvisi dengan jawaban pada TODO (format `* jawaban:`), perlakukan jawaban itu sebagai fakta, perbarui seluruh bagian yang terdampak, dan hapus blok TODO yang sudah terjawab.
 - Jika topik komponen cukup dalam (misalnya Data Access), tulis ringkasan di halaman utama dan arahkan ke subhalaman dengan tautan, lalu tandai dengan TODO bahwa subhalaman perlu dibuat.
 -  Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
--  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update /phoenix-docs-silverbullet"**. Isinya alasan pembaharuannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Jika tidak ada yang relevan, jangan tulis bagian itu.
--  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill /phoenix-docs-knowledge"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
+-  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update /phoenix-docs-silverbullet"**. Isinya alasan pembaharuannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah. Jika tidak ada yang relevan, jangan tulis bagian itu.
+-  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill /phoenix-docs-knowledge"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
 
 ## Konvensi tautan
 
@@ -61,6 +60,10 @@ Penulisan TODO sebagai catatan untuk diperhatikan kepada penulis harus dibuat da
 Pembuka `<!--` dan penutup `-->` harus dalam line nya sendiri, serta tambahkan baris kosong agar memastikan format terbaca dengan baik.
 
 Deskripsi Task harus jelas, dan jika comment ini letak cukup jauh dari tulisan yang dimaksud, silahkan buat link dengan tagar untuk seperti ini: [[#Penjelasan TODO]].
+
+## Jika butuh konfirmasi
+
+Bertindaklah sebagai ahli/konsultan penulisan dokumentasi aplikasi Phoenix. Jika ada hal yang masih perlu dikonfirmasi, silahkan ajukan pertanyaan melalui fitur claude kepada saya satu per satu untuk menggali informasi, detail dan preferensi yang Anda butuhkan sebelum mulai mengerjakan tugas ini agar hasilnya lebih akurat dan detail.
 
 ## Templat halaman
 
@@ -102,7 +105,7 @@ _<Komponen>_ adalah komponen yang dapat digunakan untuk <fungsi utama>.
 ## Menghapus <Komponen>
 <Langkah-langkah>
 
-<Sesi pengelolaan komponen. Konfirmasi apa saja isi komponen. Jika dirasa topik ini akan dalam, buat intro dan arahkan ke halaman lain>
+<Sesi pengelolaan konten komponen. Konfirmasi apa saja isi komponen. Jika dirasa topik ini akan dalam, buat intro dan arahkan ke halaman lain>
 
 ## Mengatur <aspek>
 
@@ -112,7 +115,7 @@ _<Komponen>_ adalah komponen yang dapat digunakan untuk <fungsi utama>.
 | ... | ... | ... |
 | --- | --- | --- |
 
-<Satu kalimat penutup tentang manfaat skenario ini.>
+<Satu kalimat penutup tentang manfaat skenario ini. Buat teknis yang benar-benar relevan dengan kebutuhan Phoenix>
 
 ## Praktik Terbaik
 - <Saran dengan frasa kunci dicetak **tebal**.>
@@ -152,8 +155,6 @@ Catatan format:
     `>Isi peringatan.
 *   **Mermaid.** Penulis memperluas diagram saya menjadi diagram relasi, bukan hierarki lurus. Usulan: gambarkan juga jenis relasi (misalnya label `Akses` pada garis) dan gunakan garis putus-putus untuk relasi yang tidak berlaku pada semua komponen.
 *   **Konsep Utama.** Judul bagian "Halaman Kerja" dan "Membaca Baris" boleh ditambahkan bila komponen memiliki halaman kerja berbentuk tabel.
-
-  
 
 ## Cara bekerja dengan permintaan pengguna
 
