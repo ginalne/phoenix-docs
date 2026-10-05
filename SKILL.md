@@ -12,8 +12,10 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 - Tulis dalam Bahasa Indonesia baku dan sapa pembaca dengan **"Anda"** (selalu huruf kapital).
 - Gunakan kalimat aktif, singkat, dan konkret. Jelaskan manfaat, bukan hanya definisi.
 - Istilah asing yang bukan nama fitur ditulis miring dengan `*...*`, misalnya `*drag and drop*`, `*least privilege*`.
-- Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik dan tandai dengan tambahkan TODO (lihat cara penulisan [[#Penulisan TODO]], Penulis akan memperbaiki isinya sendiri, jadi struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
-- Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
+- Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik dan tandai dengan tambahkan TODO (lihat cara penulisan [[#Penulisan TODO]], Penulis akan memperbaiki isinya sendiri.
+-  Struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
+-  Pahami konteks halaman yang diminta, silahkan buat struktur yang terbaik untuk halaman tersebut, jangan terlalu kaku, agar penulis tahu kemungkinan terbaik dalam menjelaskan konteks halaman tersebut.
+-  Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
 
 ## Konvensi tautan
 
@@ -37,7 +39,10 @@ Penulisan TODO sebagai catatan untuk diperhatikan kepada penulis harus dibuat da
   * [TODO] Deskripsi Task
 -->
 
-Pembuka `<!--` harus dalam 
+Pembuka `<!--` dan penutup `-->` harus dalam line nya sendiri, serta tambahkan baris kosong agar memastikan format terbaca dengan baik.
+
+Deskripsi Task harus jelas, dan jika comment ini letak cukup jauh dari tulisan yang dimaksud, silahkan buat link dengan tagar untuk seperti ini: [[#Penjelasan TODO]].
+
 ## Templat halaman komponen ("Apa itu <Komponen>?")
 
 Gunakan urutan berikut. Bagian yang tidak relevan boleh dihilangkan, tetapi jangan mengubah urutan atau nama judulnya.
