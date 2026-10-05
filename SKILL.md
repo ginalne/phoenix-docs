@@ -19,12 +19,13 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 
 ## Konvensi tautan
 
-| Jenis | Format | Contoh |
-| --- | --- | --- |
-| Halaman pengenalan modul | `[[Docs/Modul <Nama>/Pengenalan\|<Nama>]]` | `[[Docs/Modul Developer/Pengenalan\|Developer]]` |
-| Halaman komponen | `[[Docs/Modul <Nama>/<Komponen>/Apa itu <Komponen>]]` | `[[Docs/Modul Logic/Flow/Apa itu Flow]]` |
+| Halaman | Format | Variasi | Contoh |
+| --- | --- | --- | --- |
+| Modul <Nama> | `[[Docs/Modul <Nama>/Pengenalan\|<Nama>]]` | Data, Interface, Logic, Developer `[[Docs/Modul Developer/Pengenalan\|Developer]]` |
+| Komponen | `[[Docs/Modul <Nama>/<Komponen>/Apa itu <Komponen>]]` | Data: Variable, Enum, Table, Tree. Interface: Table View, Gallery, Canvas, Kanban, Space, Timeline, Form. Logic: Flow. Developer: Group, Workspace | `[[Docs/Modul Logic/Flow/Apa itu Flow]]` |
+| Anchor di halaman yang sama | `[[#Nama Bagian]]` |  `[[#Flow]]` |
+
 | Tautan dengan teks lain | tambahkan alias setelah `\|` | `[[Docs/Event/Pengenalan\|Event]]` |
-| Anchor di halaman yang sama | `[[#Nama Bagian]]` | `[[#Flow]]` |
 | Anchor di halaman lain | `[[Docs/Antar Muka#Area Manajemen Folder]]` | |
 | Menu atau tombol antarmuka | `[[field/<nama>\|<Label>]]` | `[[field/add\|Add]]` |
 | Kolom isian antarmuka | `[[field\|<Label>]]` | `[[field\|Name]]`, `[[field\|Description]]` |
