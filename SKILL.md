@@ -17,6 +17,10 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 - Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik dan tandai serta tambahkan usul perlunya gambar melalui Penjelasan TODO (lihat cara penulisan [[#Penulisan TODO]],  Penulis akan memperbaiki isinya sendiri.
 -  Struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
 -  Pahami konteks halaman yang diminta, silahkan buat struktur yang terbaik untuk halaman tersebut, jangan terlalu kaku, agar penulis tahu kemungkinan terbaik dalam menjelaskan konteks halaman tersebut.
+- Untuk konsep yang sudah punya halaman sendiri (Komponen, Folder, Pro), jangan mendaftar contoh di tabel Konsep Utama. Cukup beri satu kalimat singkat dan tautkan ke halamannya ("Selengkapnya lihat [[...]]").
+- Gunakan istilah "bilah navigasi", bukan "navbar".
+- Saat penulis mengembalikan halaman yang sudah direvisi dengan jawaban pada TODO (format `* jawaban:`), perlakukan jawaban itu sebagai fakta, perbarui seluruh bagian yang terdampak, dan hapus blok TODO yang sudah terjawab.
+- Jika topik komponen cukup dalam (misalnya Data Access), tulis ringkasan di halaman utama dan arahkan ke subhalaman dengan tautan, lalu tandai dengan TODO bahwa subhalaman perlu dibuat.
 -  Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
 -  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update /phoenix-docs-silverbullet SKILL.md"**. Isinya alasan pembaharuannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Jika tidak ada yang relevan, jangan tulis bagian itu.
 -  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill /phoenix-docs-silverbullet KNOWLEDGE.md"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
@@ -25,6 +29,10 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 
 | Halaman | Format | Variasi | Contoh |
 | --- | --- | --- | --- |
+| Halaman konsep umum | `[[Inisialisasi/Apa itu Pro?\|Pro]]`, `[[Docs/Apa itu Komponen?]]`, `[[Docs/Folder/Apa itu Folder?]]` | Pro, Komponen, Folder | `[[Docs/Folder/Apa itu Folder?#Informasi Data]]` |
+| Event | `[[Docs/Event/Apa itu Event\|Event]]` | Menggantikan `Docs/Event/Pengenalan` | - |
+| Subhalaman komponen | `[[Docs/Modul <Nama>/<Komponen>/<Subhalaman>]]` | Data Access, TimelineData | `[[Docs/Modul Developer/Workspace/Data Access]]` |
+| Tipe data milik komponen | `[[Docs/Modul <Nama>/<Komponen>/<Tipe>]]` | TimelineData | `[[Docs/Modul Interface/Timeline/TimelineData]]` |
 | Modul <Nama> | `[[Docs/Modul <Nama>/Pengenalan\|<Nama>]]` | Data, Interface, Logic, Developer `[[Docs/Modul Developer/Pengenalan\|Developer]]` |
 | Komponen | `[[Docs/Modul <Nama>/<Komponen>/Apa itu <Komponen>]]` | Data: Variable, Enum, Table, Tree. Interface: Table View, Gallery, Canvas, Kanban, Space, Timeline, Form. Logic: Flow. Developer: Group, Workspace | `[[Docs/Modul Logic/Flow/Apa itu Flow]]` |
 | Tipe Data | `[[Docs/Tipe Data/<Nama>]]` | Color, Tree, Expression, Mixed, Array, Boolean, Column, Number, Enum, EnumData, Complex, Month, Thing, Year, MonthYear, Text, Matrices, Node, Object, File, Query, Row, String, Table, TableData, Variable, Date, Time, DateTime, DateTimeZone | `[[Docs/Tipe Data/String]]` |
@@ -32,10 +40,13 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 | Anchor di halaman yang sama | `[[#Nama Bagian]]` | - | `[[#Flow]]` |
 | Tautan dengan teks lain | tambahkan alias setelah `\|` | Tidak ada. Silahkan sarankan ide untuk penjelasan jika dibutuhkan | `[[Docs/Event/Pengenalan\|Event]]` |
 | Anchor di halaman lain | `[[Docs/Antar Muka#Area Manajemen Folder]]`| [[Docs/Antarmuka#Bilah Navigasi]]` Header Navigation Phoenix. `[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antarmuka kerja komponen | |
-| Menu atau contextmenu antarmuka | `[[field/<icon>\|<Label>]]` | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [komponen slug seperti form, tableview, canvas dan lain-lain] | `[[field/add\|Add]]`
+| Menu atau contextmenu antarmuka | `[[^field/<icon>\|<Label>]]` | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [slug komponen] | `[[^field/add\|Add]]` |
 | Kolom isian antarmuka | `[[field\|<Label>]]` | - | `[[field\|Name]]`, `[[field\|Description]]`
-| Tombol Ikon antarmuka | `[[button/<icon>\|<Label>]]` | edit, merge, publish, refresh, save, submission | `[[button/save\|Save]]`
-| Tombol antarmuka | `[[button\|<Label>]]` | - | `[[button\|Create]]`, `[[button\|Update]]`
+| Tombol antarmuka | `[[^button/<icon>\|<Label>]]` atau `[[^button\|<Label>]]` | icon: edit, delete, merge, publish, refresh, save, submission. Tanpa icon untuk tombol aksi umum seperti Create, Update, Delete (konfirmasi) | `[[^button/edit\|Edit]]`, `[[^button\|Create]]` |
+| Nilai Boolean | `[[^value/boolean/allow]]`, `[[^value/boolean/disallow]]`, `[[^value/boolean/true]]`, `[[^value/boolean/disallow]]` | Gunakan di dalam tabel dan kalimat, bukan teks tebal | `[[^value/boolean/false]]` |
+| Nama komponen/folder/data pada baris tabel | `[[^field/<slug>\|<Nama>]]` | slug: workspace, group, folder, variable, enum, table, tableview, tree, canvas, dan slug komponen lain | `[[^field/tableview\|Daftar Pelanggan]]` |
+
+Catatan: alias tidak boleh diawali spasi (contoh salah: [[^field/workspace| Workspace]]).
 
 Tautkan komponen lain pada kemunculan pertamanya di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi, bukan diterjemahkan. Jika path tautan hanya tebakan, tandai dengan [[#Penjelasan TODO]].
 
@@ -126,6 +137,23 @@ Catatan format:
 - Judul FAQ ditulis persis: `## FAQ : Pertanyaan yang Sering Diajukan`.
 - Langkah bernomor berisi satu tindakan per baris. Jangan menambahkan titik atau spasi ekstra setelah nomor.
 - Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris.
+* **Langkah Membuat.** Pola yang dipakai penulis:
+    1.  `Buka folder tempat <Komponen> akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]`
+    2.  `Klik kanan > [[^field/add|Add]] > [[^field|<Modul>]] > [[^field/<slug>|<Komponen>]]`
+    3.  `Isi [[^field|Name]] dan [[^field|Description]]`
+    4.  `Klik [[^button|Create]]`
+* **Langkah Mengubah.** Buka halaman kerja, klik `[[^button/edit|Edit]]`, perbarui isian, klik `[[^button|Update]]`. Tombol Save tidak dipakai.
+* **Langkah Menghapus.** Klik kanan komponen, pilih `[[^button/delete|Delete]]`, lalu konfirmasi dengan `[[^button|Delete]]`.
+* **Bagian baru "Menyegarkan"** (opsional, untuk komponen yang punya Refresh), ditempatkan setelah Mengubah:
+ ` *   ## Menyegarkan
+  Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.`
+  * **Callout peringatan.** Format baru yang dipakai penulis, ditempatkan setelah langkah Menghapus bila ada dampak:
+    `* **warning** <Judul singkat>`
+    `>Isi peringatan.
+*   **Mermaid.** Penulis memperluas diagram saya menjadi diagram relasi, bukan hierarki lurus. Usulan: gambarkan juga jenis relasi (misalnya label `Akses` pada garis) dan gunakan garis putus-putus untuk relasi yang tidak berlaku pada semua komponen.
+*   **Konsep Utama.** Judul bagian "Halaman Kerja" dan "Membaca Baris" boleh ditambahkan bila komponen memiliki halaman kerja berbentuk tabel.
+
+  
 
 ## Cara bekerja dengan permintaan pengguna
 
