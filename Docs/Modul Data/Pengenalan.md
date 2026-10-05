@@ -24,7 +24,7 @@ Variabel merupakan komponen yang dikenali semua komponen sebagai satu sumber uni
 >**warning** Harap hati-hati
 >Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].
 
-lihat selengkapnya [[Docs/Modul Data/Variabel/Apa itu Variabel]].
+lihat selengkapnya [[Docs/Modul Data/Variable/Apa itu Variable]].
 
 ## Enum
 

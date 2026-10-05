@@ -115,15 +115,6 @@ Bilah navigasi Workspace hanya memiliki dua tombol:
 | [[^field/folder|Folder]] | Contoh [[/Docs/Folder/Apa itu Folder?|Folder]], klik untuk melihat komponen di dalamnya.  |
 | [[^field/variable|Variable]], [[^field/enum|Role]], [[^field/table|Employee]], [[^field/tree|Organizational Structures]] | Contoh [[Docs/Apa itu Komponen?|Komponen]], setiap komponen memiliki ikon sesuai jenisnya dan informasi datanya di samping nama. Llihat [[Docs/Folder/Apa itu Folder?#Informasi Data]] |
 
-<!--
-  * [TODO] Konfirmasi arti angka dan ikon di samping nama komponen (jumlah data? jumlah isi?).
-  * jawaban: Penjelasannya ada di `[[Docs/Folder/Apa itu Folder?#Informasi Data]]`
-  * [TODO] Konfirmasi apakah baris Group menampilkan akses untuk anggota Group tersebut, dan bagaimana jika ada lebih dari satu Group.
-  * jawaban: Tidak, bagian ini hanya untuk mengatur akses dari Workspace ke komponen Group tersebut.
-  * [TODO] Sel kosong pada tabel (misalnya Add pada komponen, atau Function Access pada komponen tertentu) diasumsikan berarti tidak berlaku untuk jenis komponen tersebut. Mohon konfirmasi.
-  * Jawaban: Ya betul, berarti komponen tersebut tidak relevan dengan akses tersebut.
--->
-
 ## Mengatur Hak Akses
 
 Hak akses diatur per baris dan per kolom pada halaman kerja. Setiap sel memiliki nilai [[^value/boolean/allow]] atau [[^value/boolean/disallow]].
