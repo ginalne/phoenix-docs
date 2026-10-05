@@ -28,7 +28,6 @@ Contoh basic untuk dokumen released:
     title: #isi judul disini
     desciption: #isi deskripsi disini
     pageDecoration:
-      #icon: x #(hapus simbol pagar jika diubah menjadi draft)
       tree:
         priority: 0
     tags:

@@ -13,7 +13,7 @@
 
 ## Mengatur Konfigurasi
 
-Anda dapat mengaturnya melalui tombol [[button/edit|Edit]] dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] atau saat membuat komponen [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] pertama kali.
+Anda dapat mengaturnya melalui tombol [[button/edit|Edit]] dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] atau saat membuat [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] pertama kali.
 
 ![[Docs/Modul Data/Enum/create-new-enum.png|Modal Tambah Enum Baru]]
 Kolom [[field|Strict On Selected]] dapat diubah dengan implikasi seperti berikut:

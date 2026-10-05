@@ -6,7 +6,7 @@
       tree:
         priority: 1
 ---
-# # Modul Developer
+# Modul Developer
 
 _Developer_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai alat bantu untuk mengelola pengembangan ekosistem Anda sekaligus mengatur akses tim, sehingga setiap anggota hanya dapat melihat dan mengerjakan bagian yang memang menjadi tanggung jawabnya.
 
