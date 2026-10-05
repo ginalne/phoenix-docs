@@ -26,3 +26,12 @@ ${query[[
 where not string.startsWith(p.name, "button")
 where not string.startsWith(p.name, "value")
 ]]}
+
+---
+
+## Berikut adalah daftar link yang sudah dimention tapi masih draft
+
+${query[[
+  from p = index.tag "draft"
+  select "- " .. p.name .. "         [[" .. p.name .. "]]" 
+]]}

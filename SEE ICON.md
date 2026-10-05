@@ -11,7 +11,7 @@ ${query[[
   select "- " .. p.name .. "         [[" .. p.name .. "]]" 
 ]]}
 
-## mentioned button but not exists button
+## mentioned button but not exists
 
 ${query[[
   from p = index.aspiringPages()
@@ -26,7 +26,7 @@ ${query[[
   select "- " .. p.name .. "         [[" .. p.name .. "]]" 
 ]]}
 
-## mentioned mode but not exists button
+## mentioned mode but not exists
 
 ${query[[
   from p = index.aspiringPages()
@@ -42,7 +42,7 @@ ${query[[
   select "- " .. p.name .. "         [[" .. p.name .. "]]" 
 ]]}
 
-## mentioned field but not exists button
+## mentioned field but not exists
 
 ${query[[
   from p = index.aspiringPages()
