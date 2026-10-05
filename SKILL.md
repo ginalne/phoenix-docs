@@ -12,10 +12,11 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 - Tulis dalam Bahasa Indonesia baku dan sapa pembaca dengan **"Anda"** (selalu huruf kapital).
 - Gunakan kalimat aktif, singkat, dan konkret. Jelaskan manfaat, bukan hanya definisi.
 - Istilah asing yang bukan nama fitur ditulis miring dengan `*...*`, misalnya `*drag and drop*`, `*least privilege*`.
-- Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik dan tandai dengan tambahkan TODO (lihat cara penulisan [[#Penulisan TODO]], Penulis akan memperbaiki isinya sendiri.
+- Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik dan tandai serta tambahkan usul perlunya gambar melalui Penjelasan TODO (lihat cara penulisan [[#Penulisan TODO]],  Penulis akan memperbaiki isinya sendiri.
 -  Struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
 -  Pahami konteks halaman yang diminta, silahkan buat struktur yang terbaik untuk halaman tersebut, jangan terlalu kaku, agar penulis tahu kemungkinan terbaik dalam menjelaskan konteks halaman tersebut.
 -  Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
+-  Perbarui 
 
 ## Konvensi tautan
 
@@ -27,7 +28,7 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 | Format Data | `[[Docs/Format Data/<Tipe Data>/<Nama>]]` | String: Short Text, Password, Email, Phone Number, Mobile Number, URL, Slug, Username, Full Name, First Name, Initial, Country Code, Postal Code, License Plate, National ID, Passport Number, Tax ID, Bank Account, IBAN, Credit Card, MAC Address, IPv4, IPv6, UUID, Emoji. Number: Number, Integer, Decimal, Percentage, Rating. Text: Long Text, Rich Text, Markdown, Note, Chat. Complex: Numeration Unit, Length Unit, Area Unit, Volume Unit, Quaternion Unit, 1D Vector, 2D Vector, 3D Vector, 4D Vector, Geo, Currency. File: Attachment, Document, Media, Image, Photo, Audio, Video, Icon. Array: Popup List, Checkboxes, Direct List, Multiple Select. EnumData: Dropdown, Multiple Choices. | `[[Docs/Format Data/String/Short Text]]`
 | Anchor di halaman yang sama | `[[#Nama Bagian]]` | - | `[[#Flow]]` |
 | Tautan dengan teks lain | tambahkan alias setelah `\|` | Tidak ada. Silahkan sarankan ide untuk penjelasan jika dibutuhkan | `[[Docs/Event/Pengenalan\|Event]]` |
-| Anchor di halaman lain | `[[Docs/Antar Muka#Area Manajemen Folder]]`| [[Docs/Antar Muka#Bilah Navigasi]]` Header Navigation Phoenix. `[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antar muka kerja komponen | |
+| Anchor di halaman lain | `[[Docs/Antar Muka#Area Manajemen Folder]]`| [[Docs/Antarmuka#Bilah Navigasi]]` Header Navigation Phoenix. `[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antarmuka kerja komponen | |
 | Menu atau contextmenu antarmuka | `[[field/<icon>\|<Label>]]` | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [komponen slug seperti form, tableview, canvas dan lain-lain] | `[[field/add\|Add]]` |
  Kolom isian antarmuka | `[[field\|<Label>]]` | - | `[[field\|Name]]`, `[[field\|Description]]` |
 Tombol antarmuka | `[[button/<icon>\|<Label>]]` | edit, merge, publish, refresh, save, submission | `[[button/save\|Save]]`
@@ -143,8 +144,8 @@ Pengantar modul harus menjelaskan peran modul dibanding modul lain (misalnya Int
 
 ## Cara bekerja dengan permintaan pengguna
 
-1. **Melengkapi atau membuat halaman baru:** isi seluruh templat yang relevan, tandai asumsi dengan `<!-- * [TODO] Deskripsi Task -->`.
-2. **Merevisi teks yang diberikan:** pertahankan struktur dan fakta dari penulis, perbaiki ejaan ("pengeolaaan" menjadi "pengelolaan", "antar muka" menjadi "antarmuka"), kejelasan, dan konsistensi sintaks. Jelaskan perubahan secara singkat.
+1. **Melengkapi atau membuat halaman baru:** isi seluruh templat yang relevan, tandai asumsi dengan Penjelasan TODO.
+2. **Merevisi teks yang diberikan:** kembangkan struktur dan pertahankan fakta dari penulis, perbaiki ejaan ("pengeolaaan" menjadi "pengelolaan", "antar muka" menjadi "antarmuka"), kejelasan, dan konsistensi sintaks. Jelaskan perubahan secara singkat.
 3. **Menilai kekurangan:** sebutkan bagian templat yang belum ada atau masih abstrak, lalu beri usulan revisi.
 4. Perlakukan fakta produk dari penulis sebagai kebenaran, termasuk koreksi atas asumsi sebelumnya. Jika penulis mengoreksi aturan (misalnya satu anggota hanya di satu Group), perbarui seluruh bagian yang terdampak: konsep, cara kerja, FAQ, dan batasan.
 5. Akhiri balasan dengan daftar singkat hal yang perlu dicek penulis, tanpa mengulang isi file.

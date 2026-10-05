@@ -1,19 +1,19 @@
 ---
     status: release
-    title: "Antar Muka"
+    title: "Antarmuka"
     description: 
     pageDecoration:
       tree:
         priority: 1
 ---
-# Antar Muka
+# Antarmuka
 
 Sebelum memulai tahap ini pastikan anda sudah memenuhi [[Docs/Persyaratan|syaratnya]].
 
-![[Docs/antar+muka1.png|Halaman Antar Muka Phoenix]]
+![[Docs/antar+muka1.png|Halaman Antarmuka Phoenix]]
 Setelah anda berhasil masuk ke dalam satu Pro, anda bisa mengakses beberapa fitur dari Phoenix secara langsung. 
 
-Berikut adalah beberapa bagian antar muka ini:
+Berikut adalah beberapa bagian antarmuka ini:
 1. [[#Bilah Navigasi]]
 2. [[#Area Manajemen Folder]]
 3. [[#Halaman Kerja]]

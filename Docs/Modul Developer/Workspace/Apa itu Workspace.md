@@ -44,7 +44,7 @@ flowchart LR
 Setiap anggota hanya tergabung di satu Group, sehingga akses anggota ke Workspace mengikuti Group tempat ia berada. Satu Workspace dapat diakses oleh beberapa Group, dan satu Group dapat memiliki akses ke beberapa Workspace. <!-- * [TODO] Konfirmasi relasi Group dan Workspace: apakah banyak ke banyak -->
 
 ## Membuat Workspace
-1. Klik kanan pada [[Docs/Antar Muka#Area Manajemen Folder]].
+1. Klik kanan pada [[Docs/Antarmuka#Area Manajemen Folder]].
 2. Pilih [[field/add|Add]] > [[field|Developer]] > [[field/workspace|Workspace]]
 <!--
  * [TODO] Cek path menu dan nama menu sesuai aplikasi
