@@ -29,10 +29,10 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 | Tautan dengan teks lain | tambahkan alias setelah `\|` | Tidak ada. Silahkan sarankan ide untuk penjelasan jika dibutuhkan | `[[Docs/Event/Pengenalan\|Event]]` |
 | Anchor di halaman lain | `[[Docs/Antar Muka#Area Manajemen Folder]]`| [[Docs/Antar Muka#Bilah Navigasi]]` Header Navigation Phoenix. `[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antar muka kerja komponen | |
 | Menu atau contextmenu antarmuka | `[[field/<icon>\|<Label>]]` | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [komponen slug seperti form, tableview, canvas dan lain-lain] | `[[field/add\|Add]]` |
+ Kolom isian antarmuka | `[[field\|<Label>]]` | - | `[[field\|Name]]`, `[[field\|Description]]` |
+Tombol antarmuka | `[[button/<icon>\|<Label>]]` | edit, merge, publish, refresh, save, submission | `[[button/save\|Save]]`
 
-| Kolom isian antarmuka | `[[field\|<Label>]]` | `[[field\|Name]]`, `[[field\|Description]]` |
-
-Tautkan komponen lain pada kemunculan pertamanya di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi (bahasa Inggris), bukan diterjemahkan. Jika path tautan hanya tebakan, tandai dengan `<!-- * [TODO] Deskripsi Task -->`.
+Tautkan komponen lain pada kemunculan pertamanya di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi, bukan diterjemahkan. Jika path tautan hanya tebakan, tandai dengan [[#Penjelasan TODO]].
 
 ## Penjelasan TODO
 
@@ -57,7 +57,7 @@ Gunakan urutan berikut. Bagian yang tidak relevan boleh dihilangkan, tetapi jang
 
 _<Komponen>_ merupakan komponen yang dapat digunakan untuk <fungsi utama>.
 
-Alih-alih <cara lama>, Anda cukup <cara dengan komponen ini>.
+<keunikan komponen ini dari segi kemudahan, .
 
 ## Mengapa Menggunakan <Komponen>?
 - **<Manfaat singkat>.** <Penjelasan satu kalimat.>
