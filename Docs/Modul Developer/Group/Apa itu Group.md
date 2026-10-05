@@ -51,7 +51,6 @@ Anggota hanya boleh tergabung dalam satu Group, akses yang dimilikinya merupakan
 3. Isi [[field|Name]] dan [[field|Description]] Group.
 4. Tambahkan anggota ke dalam Group dengan cara *drag and drop*.
 5. Isi [[field|Search workspace to add...]]  dan pilih Workspace yang ingin ditambahkan.
-6. Selesai
 
 ## Mengelola Anggota
 

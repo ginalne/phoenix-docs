@@ -48,16 +48,17 @@ Pembuka `<!--` dan penutup `-->` harus dalam line nya sendiri, serta tambahkan b
 
 Deskripsi Task harus jelas, dan jika comment ini letak cukup jauh dari tulisan yang dimaksud, silahkan buat link dengan tagar untuk seperti ini: [[#Penjelasan TODO]].
 
-## Templat halaman komponen ("Apa itu <Komponen>?")
+## Templat halaman
 
 Gunakan urutan berikut. Bagian yang tidak relevan boleh dihilangkan, tetapi jangan mengubah urutan atau nama judulnya.
 
 ````markdown
-# Apa itu <Komponen>?
+# Judul
 
+<callout untuk Pengenalan Komponen>
 >**note** _<Komponen>_ merupakan salah satu komponen dalam modul [[Docs/Modul <Modul>/Pengenalan|<Modul>]] di Phoenix.
 
-_<Komponen>_ merupakan komponen yang dapat digunakan untuk <fungsi utama>.
+_<Komponen>_ adalah komponen yang dapat digunakan untuk <fungsi utama>.
 
 <penjelasan dari segi kemudahan, solusi dan keunikan komponen ini>.
 
@@ -117,31 +118,11 @@ _<Komponen>_ merupakan komponen yang dapat digunakan untuk <fungsi utama>.
 ````
 
 Catatan format:
-- Callout pembuka memakai `>**note**` diikuti spasi dan teks, bukan sintaks `> [!info]`.
+- Callout pembuka bisa memakai `>**note**` diikuti spasi dan teks.
 - Blok FAQ memakai `>**faq**`, lalu setiap pertanyaan dan jawaban berada di baris `>` sendiri. Pertanyaan dicetak tebal, jawaban tidak.
 - Judul FAQ ditulis persis: `## FAQ : Pertanyaan yang Sering Diajukan`.
 - Langkah bernomor berisi satu tindakan per baris dan selalu ditutup dengan "Selesai". Jangan menambahkan titik atau spasi ekstra setelah nomor.
 - Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris.
-- Bagian "Mengelola ..." dan "Mengatur ..." boleh singkat (satu atau dua kalimat) bila fiturnya sederhana.
-
-## Templat halaman modul ("Modul <Nama>")
-
-```markdown
-# Modul <Nama>
-
-_<Nama>_ merupakan salah satu modul dalam Phoenix. Modul ini berfungsi sebagai <peran modul>, sehingga <manfaat bagi pengguna>.
-
-Berikut adalah komponen yang tersedia dalam modul ini:
-1. [[#<Komponen A>]]
-2. [[#<Komponen B>]]
-
-## <Komponen A>
-_<Komponen A>_ merupakan komponen yang dapat digunakan untuk <fungsi>.
-
-Lihat selengkapnya [[Docs/Modul <Nama>/<Komponen A>/Apa itu <Komponen A>]].
-```
-
-Pengantar modul harus menjelaskan peran modul dibanding modul lain (misalnya Interface mengatur tampilan data, Logic mengatur proses dan otomasi, Developer mengatur ekosistem dan akses tim). Satu paragraf pembanding dengan modul lain boleh ditambahkan bila membantu pembaca membedakan keduanya.
 
 ## Cara bekerja dengan permintaan pengguna
 
