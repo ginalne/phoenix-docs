@@ -1,5 +1,5 @@
 ---
-name: phoenix-docs-silverbullet
+name: phoenix-docs-knowledge
 pageDecoration: 
   icon: info
 description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi phoenix.
