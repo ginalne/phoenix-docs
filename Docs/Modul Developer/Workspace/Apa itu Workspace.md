@@ -126,7 +126,7 @@ Bilah navigasi Workspace hanya memiliki dua tombol:
 
 ## Mengatur Hak Akses
 
-Hak akses diatur per baris dan per kolom pada halaman kerja. Setiap sel memiliki nilai **allow** atau **disallow**.
+Hak akses diatur per baris dan per kolom pada halaman kerja. Setiap sel memiliki nilai [[value/boolean/allow]] atau [[value/boolean/disallow]].
 
 ### Comp. Access
 
@@ -158,17 +158,13 @@ Function Access mengatur fungsi tambahan pada komponen.
 | Hak Akses | Penjelasan |
 | --- | --- |
 | **Merge** | Mengizinkan penggabungan data. |
-| **Modify Event** | Mengizinkan perubahan *event* pada komponen. |
-| **View Publish** | Hanya dapat melihat konfigurasi publikasi, misalnya menyalin alamat *share*. |
+| **Modify Event** | Mengizinkan perubahan [[Docs/Event/Apa itu Event|Event]] pada komponen. |
+| **View Publish** | Hanya dapat melihat konfigurasi publikasi, misalnya menyalin [[field|Publish Link]]. |
 | **Publish** | Dapat memperbarui konfigurasi publikasi. |
-
-<!--
-  * [TODO] Penjelasan Merge dan Modify Event adalah tebakan. Mohon sesuaikan dan tautkan ke halaman Event jika ada, misalnya [[Docs/Event/Pengenalan|Event]].
--->
 
 ### Aturan Pewarisan Akses
 
-Hak akses folder memengaruhi seluruh isinya. Jika **Visible** pada folder diatur **disallow**, komponen di dalamnya tidak dapat diakses meskipun komponen tersebut diatur **allow**. Hal ini karena folder induknya tidak dapat dilihat.
+Hak akses folder memengaruhi seluruh isinya. Jika **Visible** pada folder diatur [[, komponen di dalamnya tidak dapat diakses meskipun komponen tersebut diatur **allow**. Hal ini karena folder induknya tidak dapat dilihat.
 
 Pengaturan **disallow** juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan komponen Tree.
 

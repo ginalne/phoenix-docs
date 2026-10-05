@@ -18,7 +18,7 @@ Berikut adalah komponen yang tersedia dalam modul ini:
 
 ## Flow
 
-Flow merupakan komponen yang dapat digunakan untuk mengatur logika dan proses pengelolaan data dengan pendekatan aliran komposisi. Setiap blok yang dibangun dapat dihubungkan dan dimonitor agar setiap [[Docs/Event/Pengenalan|Event]] yang terikat dapat menghasilkan keluaran dan otomasi yang tepat.
+Flow merupakan komponen yang dapat digunakan untuk mengatur logika dan proses pengelolaan data dengan pendekatan aliran komposisi. Setiap blok yang dibangun dapat dihubungkan dan dimonitor agar setiap [[Docs/Event/Apa itu Event|Event]] yang terikat dapat menghasilkan keluaran dan otomasi yang tepat.
 
 Lihat selengkapnya [[Docs/Modul Logic/Flow/Apa itu Flow]].
 
