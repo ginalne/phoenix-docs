@@ -23,7 +23,8 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 | --- | --- | --- | --- |
 | Modul <Nama> | `[[Docs/Modul <Nama>/Pengenalan\|<Nama>]]` | Data, Interface, Logic, Developer `[[Docs/Modul Developer/Pengenalan\|Developer]]` |
 | Komponen | `[[Docs/Modul <Nama>/<Komponen>/Apa itu <Komponen>]]` | Data: Variable, Enum, Table, Tree. Interface: Table View, Gallery, Canvas, Kanban, Space, Timeline, Form. Logic: Flow. Developer: Group, Workspace | `[[Docs/Modul Logic/Flow/Apa itu Flow]]` |
-| Anchor di halaman yang sama | `[[#Nama Bagian]]` |  `[[#Flow]]` |
+| Tipe Data | `[[Docs/Tipe Data/<Nama>]]` | Color, Tree, Expression, Mixed, Array, Boolean, Column, Number, Enum, EnumData, Complex, Month, Thing, Year, MonthYear, Text, Matrices, Node, Object, File, Query, Row, String, Table, TableData, Variable, Date, Time, DateTime, DateTimeZone | `[[Docs/Tipe Data/String]]` |
+| Anchor di halaman yang sama | `[[#Nama Bagian]]` | - | `[[#Flow]]` |
 
 | Tautan dengan teks lain | tambahkan alias setelah `\|` | `[[Docs/Event/Pengenalan\|Event]]` |
 | Anchor di halaman lain | `[[Docs/Antar Muka#Area Manajemen Folder]]` | |
