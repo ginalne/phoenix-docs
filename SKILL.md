@@ -24,6 +24,8 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 | Modul <Nama> | `[[Docs/Modul <Nama>/Pengenalan\|<Nama>]]` | Data, Interface, Logic, Developer `[[Docs/Modul Developer/Pengenalan\|Developer]]` |
 | Komponen | `[[Docs/Modul <Nama>/<Komponen>/Apa itu <Komponen>]]` | Data: Variable, Enum, Table, Tree. Interface: Table View, Gallery, Canvas, Kanban, Space, Timeline, Form. Logic: Flow. Developer: Group, Workspace | `[[Docs/Modul Logic/Flow/Apa itu Flow]]` |
 | Tipe Data | `[[Docs/Tipe Data/<Nama>]]` | Color, Tree, Expression, Mixed, Array, Boolean, Column, Number, Enum, EnumData, Complex, Month, Thing, Year, MonthYear, Text, Matrices, Node, Object, File, Query, Row, String, Table, TableData, Variable, Date, Time, DateTime, DateTimeZone | `[[Docs/Tipe Data/String]]` |
+| Format Data | [[Docs/Format Data/<Tipe Data>/<Nama>]] | String: Short Text, Password, Email, Phone Number, Mobile Number, URL, Slug, Username, Full Name, First Name, Initial, Country Code, Postal Code, License Plate, National ID, Passport Number, Tax ID, Bank Account, IBAN, Credit Card, MAC Address, IPv4, IPv6, UUID, Emoji. Number: Number, Integer, Decimal, Percentage, Rating. Text: Long Text, Rich Text, Markdown, Note, Chat. Complex: Numeration Unit, Length Unit, Area Unit, Volume Unit, Quaternion Unit, 1D Vector, 2D Vector, 3D Vector, 4D Vector, Geo, Currency. File: Attachment, Document, Media, Image, Photo, Audio, Video, Icon. Array: Popup List, Checkboxes, Direct List, Multiple Select. EnumData: Dropdown, Multiple Choices. | `[[Docs/Format Data/String/Short Text]]`
+
 | Anchor di halaman yang sama | `[[#Nama Bagian]]` | - | `[[#Flow]]` |
 
 | Tautan dengan teks lain | tambahkan alias setelah `\|` | `[[Docs/Event/Pengenalan\|Event]]` |
