@@ -1,5 +1,7 @@
 ---
 name: phoenix-docs-silverbullet
+pageDecoration: 
+  icon: info
 description: Menulis, melengkapi, merevisi, atau mereview dokumentasi produk Phoenix dalam format Silverbullet berbahasa Indonesia. Gunakan skill ini setiap kali pengguna meminta konten dokumentasi Phoenix. Output selalu berupa file .md.
 ---
 
@@ -16,8 +18,8 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 -  Struktur yang kuat lebih penting daripada detail yang meyakinkan tapi salah.
 -  Pahami konteks halaman yang diminta, silahkan buat struktur yang terbaik untuk halaman tersebut, jangan terlalu kaku, agar penulis tahu kemungkinan terbaik dalam menjelaskan konteks halaman tersebut.
 -  Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
--  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill phoenix-docs-silverbullet"**. Isinya alasan pembaharuannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Jika tidak ada yang relevan, jangan tulis bagian itu.
--  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill phoenix-docs-knowledge"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
+-  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update /phoenix-docs-silverbullet SKILL.md"**. Isinya alasan pembaharuannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Jika tidak ada yang relevan, jangan tulis bagian itu.
+-  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill /phoenix-docs-silverbullet KNOWLEDGE.md"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah diclaude. Isinya alasan pembaharuannya. Jika tidak ada yang relevan, jangan tulis bagian itu.
 
 ## Konvensi tautan
 
@@ -30,9 +32,10 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 | Anchor di halaman yang sama | `[[#Nama Bagian]]` | - | `[[#Flow]]` |
 | Tautan dengan teks lain | tambahkan alias setelah `\|` | Tidak ada. Silahkan sarankan ide untuk penjelasan jika dibutuhkan | `[[Docs/Event/Pengenalan\|Event]]` |
 | Anchor di halaman lain | `[[Docs/Antar Muka#Area Manajemen Folder]]`| [[Docs/Antarmuka#Bilah Navigasi]]` Header Navigation Phoenix. `[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antarmuka kerja komponen | |
-| Menu atau contextmenu antarmuka | `[[field/<icon>\|<Label>]]` | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [komponen slug seperti form, tableview, canvas dan lain-lain] | `[[field/add\|Add]]` |
- Kolom isian antarmuka | `[[field\|<Label>]]` | - | `[[field\|Name]]`, `[[field\|Description]]` |
-Tombol antarmuka | `[[button/<icon>\|<Label>]]` | edit, merge, publish, refresh, save, submission | `[[button/save\|Save]]`
+| Menu atau contextmenu antarmuka | `[[field/<icon>\|<Label>]]` | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [komponen slug seperti form, tableview, canvas dan lain-lain] | `[[field/add\|Add]]`
+| Kolom isian antarmuka | `[[field\|<Label>]]` | - | `[[field\|Name]]`, `[[field\|Description]]`
+| Tombol Ikon antarmuka | `[[button/<icon>\|<Label>]]` | edit, merge, publish, refresh, save, submission | `[[button/save\|Save]]`
+| Tombol antarmuka | `[[button\|<Label>]]` | - | `[[button\|Create]]`, `[[button\|Update]]`
 
 Tautkan komponen lain pada kemunculan pertamanya di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi, bukan diterjemahkan. Jika path tautan hanya tebakan, tandai dengan [[#Penjelasan TODO]].
 
@@ -121,7 +124,7 @@ Catatan format:
 - Callout pembuka bisa memakai `>**note**` diikuti spasi dan teks.
 - Blok FAQ memakai `>**faq**`, lalu setiap pertanyaan dan jawaban berada di baris `>` sendiri. Pertanyaan dicetak tebal, jawaban tidak.
 - Judul FAQ ditulis persis: `## FAQ : Pertanyaan yang Sering Diajukan`.
-- Langkah bernomor berisi satu tindakan per baris dan selalu ditutup dengan "Selesai". Jangan menambahkan titik atau spasi ekstra setelah nomor.
+- Langkah bernomor berisi satu tindakan per baris. Jangan menambahkan titik atau spasi ekstra setelah nomor.
 - Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris.
 
 ## Cara bekerja dengan permintaan pengguna
@@ -130,4 +133,5 @@ Catatan format:
 2. **Merevisi teks yang diberikan:** kembangkan struktur dan pertahankan fakta dari penulis, perbaiki ejaan ("pengeolaaan" menjadi "pengelolaan", "antar muka" menjadi "antarmuka"), kejelasan, dan konsistensi sintaks. Jelaskan perubahan secara singkat.
 3. **Menilai kekurangan:** sebutkan bagian templat yang belum ada atau masih abstrak, lalu beri usulan revisi.
 4. Perlakukan fakta produk dari penulis sebagai kebenaran, termasuk koreksi atas asumsi sebelumnya. Jika penulis mengoreksi aturan (misalnya satu anggota hanya di satu Group), perbarui seluruh bagian yang terdampak.
-5. Akhiri balasan dengan daftar singkat hal yang perlu dicek penulis, tanpa mengulang isi file.
+5. Gambar dan contoh penamaan: nama folder, komponen, atau data pada gambar/screenshot yang diberikan penulis adalah kasus pribadi penulis dan tidak boleh disebut di dokumentasi. Jika perlu contoh penamaan, buat penamaan generik sendiri dan tandai dengan TODO agar penulis menyesuaikan gambarnya. Tambahkan TODO penempatan gambar beserta anotasi yang disarankan (nomor penanda untuk setiap bagian yang dijelaskan). Jika screenshot memuat salah ketik pada label aplikasi (misalnya "Pubilsh" yang seharusnya "Publish"), tulis label yang benar di dokumentasi dan sebutkan temuan itu di daftar cek penulis.
+6. Akhiri balasan dengan daftar singkat hal yang perlu dicek penulis, tanpa mengulang isi file.

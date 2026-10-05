@@ -1,223 +1,220 @@
+---
+    status: release
+    title: Apa itu Workspace?
+    description:
+    pageDecoration:
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#aaa" viewBox="0 0 16 16">
+  <path
+    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"
+  />
+</svg>
+'
+      tree:
+        priority: 4
+---
 # Apa itu Workspace
 
 >**note** _Workspace_ merupakan salah satu komponen dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.
 
-_Workspace_ adalah komponen yang dapat digunakan untuk mengatur ruang kerja pengembangan Anda, termasuk komponen apa saja yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan.
+_Workspace_ adalah komponen yang dapat digunakan untuk mengatur ruang kerja pengembangan Anda, termasuk komponen apa saja yang dapat dilihat, dikelola, dan diubah, serta fungsi didalamnya. Akses Workspace ke setiap anggota dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
 
-Dengan _Workspace_, Anda tidak perlu mengatur hak akses komponen satu per satu di tempat yang tersebar. Seluruh aturan akses folder dan komponen terkumpul dalam satu tabel yang mudah dibaca, sehingga Anda bisa langsung melihat siapa boleh melakukan apa. Akses _Workspace_ ke setiap anggota dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
+Dengan Workspace, Anda tidak perlu mengatur hak akses di banyak tempat. Seluruh folder dan komponen tersaji dalam satu halaman kerja berbentuk pohon, dan setiap hak akses cukup ditentukan dengan memilih **allow** atau **disallow**. Pengaturan ini berlaku sampai ke level data, sehingga Anda dapat menerapkan prinsip *least privilege* tanpa harus membuat komponen baru.
 
 ## Mengapa Menggunakan Workspace?
-- **Akses terpusat.** Aturan akses folder dan komponen diatur di satu halaman, bukan tersebar di tiap komponen.
-- **Ruang kerja sesuai peran.** Setiap tim hanya melihat folder dan komponen yang relevan dengan pekerjaannya.
-- **Kontrol berlapis.** Akses diatur terpisah pada tingkat komponen, data, dan fungsi, sehingga Anda bisa menerapkan prinsip *least privilege*.
-- **Struktur folder siap pakai.** Pengguna langsung bekerja di dalam struktur folder yang sudah disiapkan saat membuka Phoenix.
+- **Akses terpusat.** Seluruh hak akses folder dan komponen diatur dalam satu halaman kerja.
+- **Kontrol sampai level data.** Anda dapat menentukan siapa yang boleh menambah, mengubah, atau menghapus data, bukan hanya siapa yang boleh melihat komponen.
+- **Mengikuti struktur folder.** Pengaturan pada folder otomatis memengaruhi seluruh isi di dalamnya.
+- **Aman untuk tim.** Anggota hanya melihat dan mengelola bagian yang memang menjadi tanggung jawabnya.
+- **Terhubung dengan Group.** Cukup petakan pengguna ke Group, maka akses Workspace mengikuti.
 
 ## Konsep Utama
-
 | Istilah | Penjelasan |
 | --- | --- |
-| **Workspace** | Komponen yang mengatur ruang kerja pengembangan, yaitu komponen yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan. |
-| **Group** | Komponen yang memetakan pengguna ke *Workspace*. Tanpa pemetaan ini, *Workspace* tidak bisa digunakan oleh pengguna. |
-| **Origin** | *Workspace* bawaan. Setiap Pro memiliki satu rangkaian folder yang berawal dari Origin. |
-| **Folder** | Wadah komponen di dalam *Workspace*. Satu folder dapat berisi banyak komponen dan folder lain. |
-| **Hierarki akses** | Aturan akses mengikuti struktur folder. Jika sebuah folder *disallow* pada **Visible**, seluruh isinya tidak dapat diakses meskipun isinya bernilai *allow*. |
-| **Root** | Folder awal yang menjadi titik mulai *Workspace*. Jika komponen *Workspace* ditempatkan di folder yang lebih dalam, folder tersebut menjadi *root*. |
-| **Comp. Access** | Hak akses pada tingkat komponen (header): Visible, Add, Update, Delete. |
-| **Data Access** | Hak akses pada tingkat data di bawah komponen: Add, Update, Delete. Jenis datanya bergantung pada komponen. |
-| **Function Access** | Hak akses pada fungsi tertentu: Merge, Modify Event, View Publish, Publish. |
-| **allow / disallow** | Nilai izin pada setiap hak akses. *allow* berarti diizinkan, *disallow* berarti tidak diizinkan. |
+| **Workspace** | Komponen untuk mengatur ruang kerja pengembangan, yaitu komponen yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan. |
+| **Origin** | Workspace utama sekaligus folder paling atas yang dimiliki setiap [[Inisialisasi/Apa itu Pro?|Pro]]. |
+| **Root** | Folder paling atas pada halaman kerja Workspace. Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itulah yang menjadi root. |
+| **Group** | Kumpulan pengguna yang dipetakan ke Workspace. Pada halaman kerja, Group tampil sebagai baris dengan angka jumlah anggotanya. |
+| **Folder** | Wadah yang berisi banyak komponen dan dapat diperluas atau dilipat. |
+| **Komponen** | Selengkapnya lihat  [[Docs/Apa itu Komponen?]]
+| **Comp. Access** | Hak akses pada level komponen (header): **Visible**, **Add**, **Update**, **Delete**. |
+| **Data Access** | Hak akses pada level data : **Add**, **Update**, **Delete**. |
+| **Function Access** | Hak akses pada fungsi komponen: **Merge**, **Modify Event**, **View Publish**, **Publish**. |
+| **allow / disallow** | Nilai pengaturan akses. **allow** berarti diizinkan, **disallow** berarti tidak diizinkan. |
+
 
 ## Cara Kerja Workspace
-
-Pengguna masuk ke satu *Workspace* melalui *Group*, lalu aturan akses pada *Workspace* menentukan apa yang bisa mereka lihat dan lakukan di setiap folder dan komponen.
-
+Ketika komponen Group berhasil memetakan pengguna dengan Workspace, maka Workspace dapat digunakan. Saat pengguna membuka Phoenix, mereka akan masuk ke dalam satu Workspace yang sudah memiliki struktur folder.
 ```mermaid
-flowchart LR
+flowchart TD
     U[Pengguna] --> G[Group]
+    W --> |Akses| F[Folder]
     G --> W[Workspace]
-    W --> F[Folder]
+    W --> |Akses| K[Komponen]
     F --> K[Komponen]
     F --> C[Comp. Access]
     K --> C
     K --> D[Data Access]
-    K --> FN[Function Access]
+    K -.-> FN[Function Access]
 ```
-
-<!--
-  * [TODO] Konfirmasi diagram Cara Kerja Workspace. Dari gambar, folder hanya memiliki Comp. Access, sedangkan Data Access dan Function Access tampil pada komponen (dan baris Workspace/Group). Mohon pastikan hubungan ini benar.
--->
-
 Aturan penting:
-- Pengguna hanya dapat memakai *Workspace* setelah *Group* berhasil memetakan mereka ke *Workspace* tersebut. Lihat [[Docs/Modul Developer/Group/Apa itu Group|Group]].
-- Saat Phoenix dibuka, pengguna langsung masuk ke satu *Workspace* yang sudah memiliki struktur folder.
-- Jika komponen *Workspace* ditempatkan di folder yang lebih dalam, folder tersebut menjadi *root* dari *Workspace*.
-- Akses bersifat berjenjang. Jika folder (*parent*) diatur **Visible = disallow**, komponen di dalamnya (*child*) tetap tidak dapat diakses meskipun bernilai *allow*.
+- Pengguna hanya dapat memakai Workspace setelah dipetakan melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
+- Setiap Pro memiliki satu rangkaian folder yang berawal dari **Origin**.
+- Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itu menjadi **root** dari Workspace tersebut.
+- Hak akses bersifat **berjenjang**: jika sebuah folder (induk) diatur **disallow** pada **Visible**, seluruh isinya tidak dapat diakses meskipun pengaturannya **allow**.
 
 ## Membuat Workspace
-
-Setiap Pro sudah memiliki satu rangkaian folder yang berawal dari Origin, sehingga Anda dapat langsung memakai *Workspace* bawaan. Untuk membuat *Workspace* baru pada folder tertentu:
-
-1. Buka folder tempat *Workspace* akan ditempatkan
-2. Klik [[field/add|Add]] pada [[#Area Manajemen Folder]]
-3. Pilih komponen **Workspace**
+1. Buka folder tempat Workspace akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
+2. Klik kanan > [[field/add|Add]] > [[field|Developer]] > [[field/workspace| Workspace]]
 4. Isi [[field|Name]] dan [[field|Description]]
-5. Klik [[button/save|Save]]
+5. Klik [[button|Create]]
 
-Selesai
-
-<!--
-  * [TODO] Langkah membuat Workspace hanya tebakan. Mohon konfirmasi alur sebenarnya (menu, nama field, apakah ada pilihan root) dan tambahkan gambar tiap langkah. Link [[#Area Manajemen Folder]] juga perlu dicek, sebaiknya mengarah ke [[Docs/Antarmuka#Area Manajemen Folder]].
--->
+Folder tempat Workspace ditempatkan akan menjadi root dari Workspace tersebut.
 
 ## Mengubah Workspace
+1. Buka halaman kerja Workspace
+2. Klik [[button/edit|Edit]]
+4. Perbarui isian [[field|Name]] dan [[field|Description]]
+5. Klik [[button|Update]]
 
-1. Buka halaman kerja *Workspace*
-2. Klik [[button/edit|Edit]] pada navbar
-3. Ubah nilai akses (*allow* atau *disallow*) sesuai kebutuhan
-4. Klik [[button/save|Save]]
-
-Selesai
-
-<!--
-  * [TODO] Konfirmasi alur Edit: apakah tabel berubah menjadi mode edit lalu ada tombol Save, atau perubahan langsung tersimpan? Tambahkan gambar tampilan mode Edit.
--->
+## Menyegarkan
+Klik [[button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 ## Menghapus Workspace
+1. Buka folder yang berisi Workspace
+2. Klik kanan Workspace, lalu pilih [[button/delete|Delete]]
+3. Konfirmasi penghapusan dengan klik [[button|Delete]]
 
-1. Buka folder tempat *Workspace* berada
-2. Klik kanan pada komponen *Workspace*
-3. Pilih [[field/delete|Delete]]
-4. Konfirmasi penghapusan
-
-Selesai
-
-<!--
-  * [TODO] Konfirmasi aturan penghapusan Workspace. Apakah Workspace bawaan Origin bisa dihapus? Apa dampaknya terhadap Group yang terhubung dan pengguna yang sedang aktif di dalamnya?
--->
+>**warning** Harap pastikan
+>Sebelum menghapus pastikan setiap [[Docs/Modul Developer/Group/Apa itu Group|Group]] tetap memiliki Workspace selain daripada yang akan dihapus. Sehingga pengalaman pengguna tetap lancar menggunakan Phoenix. 
 
 ## Halaman Kerja Workspace
+Halaman kerja Workspace menampilkan seluruh struktur ruang kerja dalam satu tabel. Kolom paling kiri berisi daftar **Folder/ Component**, sedangkan kolom di sebelah kanannya berisi hak akses yang dikelompokkan menjadi **Comp. Access**, **Data Access**, dan **Function Access**.
 
-Halaman kerja *Workspace* menampilkan tabel hak akses. Setiap baris adalah *Workspace*, *Group*, folder, atau komponen, dan setiap kolom adalah jenis hak akses yang dapat diatur.
-
-<!--
-  * [TODO] Sisipkan gambar contoh halaman kerja Workspace (lampiran Origin). Beri penanda pada navbar (Edit dan Refresh), kelompok kolom Comp. Access, Data Access, dan Function Access, serta baris Origin, Administrator, dan folder Raven.
--->
-
-Pada navbar hanya tersedia dua tombol:
+Navbar Workspace hanya memiliki dua tombol:
 
 | Tombol | Fungsi |
 | --- | --- |
-| [[button/edit\|Edit]] | Mengubah pengaturan akses pada tabel. |
-| [[button/refresh\|Refresh]] | Memuat ulang data tabel agar menampilkan kondisi terbaru. |
+| [[button/edit|Edit]] | Mengubah pengaturan hak akses. |
+| [[button/refresh|Refresh]] | Memuat ulang halaman kerja. |
 
-### Membaca Baris pada Tabel
-
-Pada contoh *Workspace* Origin, tabel disusun berjenjang seperti berikut:
-
-| Baris | Jenis | Penjelasan |
-| --- | --- | --- |
-| **Origin** | *Workspace* | Baris paling atas, yaitu *Workspace* itu sendiri. |
-| **Administrator** | *Group* | Group yang terhubung ke *Workspace*. Angka di sampingnya menunjukkan jumlah anggota. Lihat [[Docs/Modul Developer/Group/Apa itu Group\|Group]]. |
-| **Agenda Team**, **Raven**, **Phoenix** | Folder | Baris dengan tanda panah di kirinya dapat diperluas untuk melihat komponen di dalamnya. |
-| **Resource**, **Kanban Raven**, **Catatan Raven**, dan seterusnya | Komponen | Komponen yang berada di dalam folder, dengan ikon sesuai jenisnya (misalnya Table, Kanban, Data Tree). |
+### Membaca Baris
+| Baris | Penjelasan |
+| --- | --- |
+| **Origin** | Workspace. Menjadi baris paling atas. |
+| **Group** (misalnya **Administrator**) | Group yang terhubung ke Workspace. Angka di samping nama menunjukkan jumlah anggota. |
+| **Folder** | Dapat dibuka dengan ikon panah untuk melihat komponen di dalamnya. |
+| **Komponen** | Berada di dalam folder. Setiap komponen memiliki ikon sesuai jenisnya dan angka di samping nama. |
 
 <!--
-  * [TODO] Konfirmasi arti angka di samping komponen (misalnya Resource 4, Kanban Raven 36, Raven Report Notif 206) dan ikon di sebelahnya. Apakah itu jumlah data? Konfirmasi juga jenis komponen "Raven Report Notif..." dan "Title Documentation" (ikon berbeda).
-  * [TODO] Konfirmasi mengapa kolom Comp. Access Add hanya terisi pada baris folder. Apakah Add di folder berarti menambah komponen ke dalam folder tersebut?
-  * [TODO] Konfirmasi mengapa Function Access kosong pada komponen tertentu (misalnya Kanban dan Raven Report Notif). Apakah fungsi tersebut memang tidak tersedia untuk jenis komponen itu?
+  * [TODO] Tambahkan gambar halaman kerja Workspace di sini dan beri anotasi: (1) Origin sebagai workspace, (2) Group, (3) Folder, (4) Komponen, (5) contoh disallow pada folder, (6) contoh disallow pada komponen Workspace dan Tree. Gunakan penamaan contoh dari penulis, bukan nama kasus pribadi.
+  * [TODO] Konfirmasi arti angka dan ikon di samping nama komponen (jumlah data? jumlah isi?).
+  * [TODO] Konfirmasi apakah baris Group menampilkan akses untuk anggota Group tersebut, dan bagaimana jika ada lebih dari satu Group.
+  * [TODO] Sel kosong pada tabel (misalnya Add pada komponen, atau Function Access pada komponen tertentu) diasumsikan berarti tidak berlaku untuk jenis komponen tersebut. Mohon konfirmasi.
 -->
 
-## Mengatur Akses
-
-Pengaturan akses dibagi menjadi tiga tingkat. Setiap hak akses memiliki nilai *allow* atau *disallow*.
+## Mengatur Hak Akses
+Hak akses diatur per baris dan per kolom pada halaman kerja. Setiap sel memiliki nilai **allow** atau **disallow**.
 
 ### Comp. Access
+Comp. Access berlaku pada level komponen (header).
 
-*Comp. Access* adalah akses pada tingkat komponen (header).
-
-| Akses | Penjelasan |
+| Hak Akses | Penjelasan |
 | --- | --- |
-| **Visible** | Menentukan apakah komponen terlihat. Jika *disallow*, pengguna tidak dapat melihat komponen tersebut, bahkan saat ingin memilihnya, misalnya ketika membuat komponen [[Docs/Modul Interface/Pengenalan\|Interface]]. |
-| **Add** | Menentukan apakah pengguna boleh menambahkan komponen. |
-| **Update** | Menentukan apakah pengguna boleh mengubah komponen. |
-| **Delete** | Menentukan apakah pengguna boleh menghapus komponen. |
-
-### Data Access
-
-*Data Access* adalah akses pada tingkat data, yaitu di bawah header komponen. Jenis datanya bergantung pada komponennya. Contohnya, pada [[Docs/Modul Data/Table/Apa itu Table|Table]] datanya adalah [[Docs/Tipe Data/Row|Row]], sedangkan pada [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] datanya adalah *Timeline Data*. Sama seperti *Workspace*, setiap komponen memiliki konfigurasi *allow* atau *disallow* untuk datanya masing-masing.
-
-| Akses | Penjelasan |
-| --- | --- |
-| **Add** | Menentukan apakah pengguna boleh menambahkan data. |
-| **Update** | Menentukan apakah pengguna boleh mengubah data. |
-| **Delete** | Menentukan apakah pengguna boleh menghapus data. |
-
-### Function Access
-
-*Function Access* mengatur akses ke fungsi tertentu.
-
-| Akses | Penjelasan |
-| --- | --- |
-| **Merge** | Menentukan apakah pengguna boleh melakukan *merge*. |
-| **Modify Event** | Menentukan apakah pengguna boleh mengubah [[Docs/Event/Pengenalan\|Event]]. |
-| **View Publish** | Hanya melihat konfigurasi publish, misalnya menyalin alamat *share*. |
-| **Publish** | Memperbarui konfigurasi publish. |
+| **Visible** | Jika **disallow**, pengguna tidak dapat melihat komponen tersebut, bahkan ketika ingin memilihnya, misalnya saat membuat komponen Interface. |
+| **Add** | Mengizinkan penambahan folder atau komponen baru. |
+| **Update** | Mengizinkan perubahan pada komponen. |
+| **Delete** | Mengizinkan penghapusan komponen. |
 
 <!--
-  * [TODO] Konfirmasi arti Merge dan Modify Event (apa yang di-merge, event apa yang diubah) serta tautan ke halaman Event. Cek juga bahwa Function Access terlihat di halaman kerja sebagai kelompok kolom ketiga (pada gambar terpotong).
+  * [TODO] Penjelasan Add, Update, dan Delete pada Comp. Access adalah tebakan. Mohon sesuaikan, terutama apakah Add hanya berlaku pada folder.
 -->
 
-## Contoh Penggunaan
+### Data Access
+Data Access berlaku pada level data, yaitu di bawah header komponen. Jenis datanya bergantung pada komponen: pada [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] datanya adalah **Row**, sedangkan pada [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] datanya adalah **Timeline Data**.
 
-**Menyembunyikan folder dan melindungi komponen penting**
+| Hak Akses | Penjelasan |
+| --- | --- |
+| **Add** | Mengizinkan penambahan data. |
+| **Update** | Mengizinkan perubahan data. |
+| **Delete** | Mengizinkan penghapusan data. |
 
-| Baris | Jenis | Pengaturan | Hasil |
-| --- | --- | --- | --- |
-| Raven | Folder | **Visible** = *disallow* | Folder dan seluruh isinya tidak dapat diakses, meskipun komponen di dalamnya bernilai *allow*. |
-| Phoenix | *Workspace* di dalam folder | **Update**, **Delete**, dan seluruh **Data Access** = *disallow* | *Workspace* tetap terlihat, tetapi tidak dapat diubah, dihapus, atau diubah datanya. |
-| Phoenix Query Logic | [[Docs/Modul Data/Tree/Apa itu Tree\|Data Tree]] | Semua akses = *disallow* kecuali **Visible** | Komponen tetap terlihat, tetapi tidak dapat diubah, dihapus, dikelola datanya, maupun dipakai pada fungsi *Merge*, *Modify Event*, *View Publish*, dan *Publish*. |
+Seperti halnya Workspace, setiap komponen memiliki konfigurasi **allow** atau **disallow** masing-masing.
 
-Dengan pengaturan ini, tim hanya bekerja pada bagian yang memang menjadi tanggung jawabnya, sementara komponen penting tetap terlindungi.
+### Function Access
+Function Access mengatur fungsi tambahan pada komponen.
+
+| Hak Akses | Penjelasan |
+| --- | --- |
+| **Merge** | Mengizinkan penggabungan perubahan. |
+| **Modify Event** | Mengizinkan perubahan *event* pada komponen. |
+| **View Publish** | Hanya dapat melihat konfigurasi publikasi, misalnya menyalin alamat *share*. |
+| **Publish** | Dapat memperbarui konfigurasi publikasi. |
 
 <!--
-  * [TODO] Konfirmasi link Data Tree: [[Docs/Modul Data/Tree/Apa itu Tree]] (di skill tertulis komponen Tree). Pada gambar, komponen Phoenix Query Logic disebut Data Tree, mohon pastikan namanya.
+  * [TODO] Penjelasan Merge dan Modify Event adalah tebakan. Mohon sesuaikan dan tautkan ke halaman Event jika ada, misalnya [[Docs/Event/Pengenalan|Event]].
+-->
+
+### Aturan Pewarisan Akses
+Hak akses folder memengaruhi seluruh isinya. Jika **Visible** pada folder diatur **disallow**, komponen di dalamnya tidak dapat diakses meskipun komponen tersebut diatur **allow**. Hal ini karena folder induknya tidak dapat dilihat.
+
+Pengaturan **disallow** juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan komponen Tree.
+
+## Contoh Penggunaan
+**Menyembunyikan folder Keuangan dari Group tertentu**
+
+| Folder/Komponen | Visible | Hasil |
+| --- | --- | --- |
+| Keuangan (folder) | disallow | Folder tidak dapat dilihat. |
+| Laporan Bulanan (Table View) | allow | Tetap tidak dapat diakses karena folder induknya **disallow**. |
+| Penjualan (folder) | allow | Folder dapat dilihat. |
+| Daftar Pelanggan (Table View) | allow | Komponen dapat dilihat dan dibuka. |
+
+Dengan satu pengaturan pada folder, seluruh komponen keuangan otomatis tersembunyi tanpa perlu mengatur satu per satu.
+
+**Komponen hanya boleh dilihat**
+
+| Komponen | Visible | Update | Delete | Data Access (Add, Update, Delete) | Function Access |
+| --- | --- | --- | --- | --- | --- |
+| Pohon Kategori Produk (Tree) | allow | disallow | disallow | disallow | disallow |
+
+Anggota Group tetap dapat membuka komponen untuk dibaca, tetapi tidak dapat mengubah struktur, data, maupun konfigurasi publikasinya.
+
+<!--
+  * [TODO] Penamaan contoh (Keuangan, Penjualan, Laporan Bulanan, Daftar Pelanggan, Pohon Kategori Produk) hanya usulan. Silakan ganti sesuai gambar yang akan Anda buat.
 -->
 
 ## Praktik Terbaik
-- Terapkan prinsip ***least privilege***, yaitu beri hanya akses yang benar-benar dibutuhkan setiap tim.
-- Pakai **Visible = disallow** pada folder untuk menyembunyikan seluruh isinya sekaligus. Anda tidak perlu mengatur komponen di dalamnya satu per satu.
-- Periksa **parent** terlebih dahulu saat komponen tidak dapat diakses. Folder yang *disallow* menutup akses ke semua turunannya.
-- Pisahkan **Data Access** dan **Comp. Access**. Pengguna bisa mengubah data tanpa boleh mengubah struktur komponen.
-- Batasi akses **Publish** hanya untuk orang yang bertanggung jawab atas konfigurasi publish, dan beri **View Publish** untuk yang hanya perlu menyalin alamat *share*.
-- Klik [[button/refresh|Refresh]] setelah mengubah pengaturan untuk memastikan tabel menampilkan kondisi terbaru.
+- **Atur akses di level folder terlebih dahulu**, baru sesuaikan komponen tertentu bila diperlukan.
+- **Berikan akses seminimal mungkin** (*least privilege*) sesuai kebutuhan kerja setiap Group.
+- **Gunakan Visible = disallow** untuk menyembunyikan komponen yang tidak relevan agar tidak muncul saat memilih komponen.
+- **Pisahkan Function Access** untuk Publish dan View Publish, sehingga tidak semua anggota dapat mengubah konfigurasi publikasi.
+- **Cek hasilnya dengan Refresh** setelah mengubah pengaturan akses.
 
 ## Batasan dan Catatan
-- *Workspace* tidak dapat digunakan sebelum [[Docs/Modul Developer/Group/Apa itu Group|Group]] memetakan pengguna ke *Workspace* tersebut.
-- Jika folder (*parent*) bernilai *disallow* pada **Visible**, komponen di dalamnya tidak dapat diakses meskipun bernilai *allow*.
-- Navbar *Workspace* hanya memiliki tombol [[button/edit|Edit]] dan [[button/refresh|Refresh]].
-- Jenis *Data Access* bergantung pada komponennya, sehingga tidak semua komponen memiliki data yang sama.
+- Akses Workspace untuk setiap anggota dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]], bukan langsung pada pengguna.
+- Folder yang **disallow** pada **Visible** membuat seluruh isinya tidak dapat diakses, meskipun isinya **allow**.
+- Navbar Workspace hanya memiliki tombol [[button/edit|Edit]] dan [[button/refresh|Refresh]].
+- Data Access bergantung pada jenis komponen, misalnya Row pada Table View dan Timeline Data pada Timeline.
 
 ## TL:DR
-
-- *Workspace* mengatur ruang kerja: komponen yang dapat dilihat, dikelola, diubah, serta integrasi yang digunakan.
-- Pengguna masuk ke *Workspace* lewat [[Docs/Modul Developer/Group/Apa itu Group|Group]].
-- Akses diatur di tiga tingkat: **Comp. Access**, **Data Access**, dan **Function Access**.
-- Setiap akses bernilai *allow* atau *disallow*.
-- Akses berjenjang: folder *disallow* menutup akses ke seluruh isinya.
-- Navbar hanya punya [[button/edit|Edit]] dan [[button/refresh|Refresh]].
+- **Workspace** mengatur komponen yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan.
+- Akses anggota dikelola lewat **Group**.
+- Hak akses terbagi tiga: **Comp. Access**, **Data Access**, dan **Function Access**, masing-masing bernilai **allow** atau **disallow**.
+- Pengaturan **berjenjang**: folder **disallow** menutup akses ke seluruh isinya.
+- Halaman kerja memiliki dua tombol: **Edit** dan **Refresh**.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
 >**faq**
->**Mengapa pengguna tidak bisa menggunakan Workspace?**
->Pastikan pengguna sudah dipetakan ke *Workspace* melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]]. *Workspace* hanya bisa digunakan setelah pemetaan berhasil.
->**Apa yang terjadi jika Visible diatur ke disallow?**
->Pengguna tidak dapat melihat komponen tersebut, bahkan saat ingin memilihnya, misalnya ketika membuat komponen Interface.
->**Mengapa komponen tidak bisa diakses padahal bernilai allow?**
->Periksa folder di atasnya. Jika folder (*parent*) bernilai *disallow* pada **Visible**, komponen di dalamnya tetap tidak dapat diakses.
+>**Bagaimana pengguna dapat memakai Workspace?**
+>Pengguna harus dipetakan ke Workspace melalui komponen Group. Setelah itu, saat membuka Phoenix mereka akan masuk ke Workspace tersebut.
+>**Apa yang terjadi jika folder diatur disallow tetapi komponen di dalamnya allow?**
+>Komponen tetap tidak dapat diakses karena folder induknya tidak dapat dilihat.
 >**Apa bedanya Comp. Access dan Data Access?**
->*Comp. Access* mengatur komponen itu sendiri (header), sedangkan *Data Access* mengatur data di dalam komponen, misalnya *Row* pada Table atau *Timeline Data* pada Timeline.
+>Comp. Access mengatur komponen secara keseluruhan (header), sedangkan Data Access mengatur data di dalam komponen, misalnya Row pada Table View.
+>**Apa arti Visible = disallow?**
+>Pengguna tidak dapat melihat komponen tersebut, termasuk ketika memilihnya saat membuat komponen Interface.
 >**Apa bedanya View Publish dan Publish?**
->*View Publish* hanya melihat konfigurasi, misalnya menyalin alamat *share*. *Publish* dapat memperbarui konfigurasi publish.
->**Apa itu root pada Workspace?**
->Folder awal *Workspace*. Jika komponen *Workspace* ditempatkan di folder yang lebih dalam, folder itu menjadi *root*.
+>View Publish hanya untuk melihat konfigurasi publikasi, misalnya menyalin alamat *share*. Publish dapat memperbarui konfigurasi publikasi.
+>**Tombol apa saja yang tersedia pada navbar Workspace?**
+>Hanya Edit dan Refresh.

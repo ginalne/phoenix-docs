@@ -2,6 +2,10 @@
   tags: meta/library
 ---
 
+| Istilah | Penjelasan |
+| --- | --- |
+| **Workspace** | Komponen untuk mengatur ruang kerja pengembangan, yaitu komponen yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan.
+
 ```space-style
 table {
   border-radius: 15px;
@@ -25,7 +29,9 @@ html{
     body tbody td {
       border: 1px solid #333;
       padding:12px !important;
-      white-space: pre-wrap !important;
+      white-space: wrap !important;
+      word-break: normal;
+      overflow-wrap: break-word;
     }
 }
 #sb-main .sb-strong{
@@ -174,8 +180,9 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-test [[button/edit|Edit]]
-
+test [[button/edit|Edit]] [[button|Create]]
+1. Caranya klik [[button/edit|Edit]]
+2. lalu klik [[button|Submit]]
 > **warning** Warning
 > Harap hati-hati saat [[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
 
@@ -194,6 +201,24 @@ test [[button/edit|Edit]]
   background-color: #161616;
   pointer-events: none;
   white-space: nowrap !important;
+}
+#sb-main .cm-editor a[href="button"] {
+  font-family:"Segoe UI";
+  padding: 0.1rem 1rem 0.2rem 0.9rem;
+  margin: 0.1rem 0.3rem;
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-radius: 9999px !important;
+  background-color: #92400e;
+  pointer-events: none;
+  white-space: nowrap !important;
+}
+#sb-main .cm-editor .sb-line-h1 a[href^="button/"],
+#sb-main .cm-editor .sb-line-li a[href^="button/"],
+#sb-main .cm-editor .sb-line-ul a[href^="button/"] {
+  display:inline !important;
+  padding: 1.5px 8px;
 }
 #sb-main .cm-editor i a[href^="button/"] {
   pointer-events: auto !important;
