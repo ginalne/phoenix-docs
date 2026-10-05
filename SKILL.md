@@ -1,6 +1,6 @@
 ---
-  name: phoenix-docs-silverbullet
-  description: Menulis, melengkapi, merevisi, atau mereview dokumentasi produk Phoenix dalam format Silverbullet berbahasa Indonesia (halaman modul, halaman komponen "Apa itu ...", FAQ, langkah penggunaan, contoh kasus). Gunakan skill ini setiap kali pengguna meminta konten dokumentasi Phoenix, menyebut Modul Interface, Modul Logic, Modul Developer, komponen seperti Group, Workspace, Flow, Table View, atau meminta halaman docs, wikilink [[Docs/...]], callout, atau FAQ, meskipun tidak menyebut Silverbullet secara eksplisit. Output selalu berupa file .md.
+name: phoenix-docs-silverbullet
+description: Menulis, melengkapi, merevisi, atau mereview dokumentasi produk Phoenix dalam format Silverbullet berbahasa Indonesia (halaman modul, halaman komponen "Apa itu ...", FAQ, langkah penggunaan, contoh kasus). Gunakan skill ini setiap kali pengguna meminta konten dokumentasi Phoenix, menyebut Modul Interface, Modul Logic, Modul Developer, komponen seperti Group, Workspace, Flow, Table View, atau meminta halaman docs, wikilink [[Docs/...]], callout, atau FAQ, meskipun tidak menyebut Silverbullet secara eksplisit. Output selalu berupa file .md.
 ---
 
 # Dokumentasi Phoenix (format Silverbullet)
