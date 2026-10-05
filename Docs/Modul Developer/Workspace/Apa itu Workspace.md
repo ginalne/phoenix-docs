@@ -69,7 +69,7 @@ Aturan penting:
 
 1. Buka folder tempat Workspace akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan > [[^field/add|Add]] > [[^field|Developer]] > [[^field/workspace| Workspace]]
-4. Isi [[^field|Name]] dan [[^field|Description]]
+3. Isi [[field|Name]] dan [[field|Description]]
 5. Klik [[^button|Create]]
 
 Folder tempat Workspace ditempatkan akan menjadi root dari Workspace tersebut.
@@ -88,8 +88,9 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 ## Menghapus Workspace
 
 1. Buka folder yang berisi Workspace
-2. Klik kanan Workspace, lalu pilih [[^button/delete|Delete]]
-3. Konfirmasi penghapusan dengan klik [[^button|Delete]]
+2. Klik kanan Workspace
+3. Pilih [[^button/delete|Delete]]
+4. Konfirmasi dengan [[^button|Delete]]
 
 >**warning** Harap pastikan
 >Sebelum menghapus pastikan setiap [[Docs/Modul Developer/Group/Apa itu Group|Group]] tetap memiliki Workspace selain daripada yang akan dihapus. Sehingga pengalaman pengguna tetap lancar menggunakan Phoenix. 
