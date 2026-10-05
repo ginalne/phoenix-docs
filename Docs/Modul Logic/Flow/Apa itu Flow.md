@@ -76,9 +76,9 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 ![[Docs/Modul Logic/Flow/add-flow-block.png]]
 1. Buka halaman kerja Flow
-2. Klik kanan pada kanvas > [[^field/add|Add]]
-3. Pilih kategori Flow Block, misalnya [[^field|Event]]
-4. Pilih Flow Block, misalnya [[^field|Pulser]]
+2. Klik kanan pada blueprint > [[^field/add|Add]]
+3. Pilih kategori Flow Block, misalnya [[^field/event|Event]]
+4. Pilih Flow Block, misalnya [[^field/event|Pulser]]
 
 Flow Block akan muncul pada blueprint dan siap dihubungkan dengan block lain.
 
@@ -87,7 +87,7 @@ Menu Add mengelompokkan Flow Block ke dalam kategori berikut.
 
 | Kategori | Isi |
 | --- | --- |
-| **Event** | Pulser, Variable Event, Enum Data Event, Table Row Event, Tree Node Event |
+| **Event** | Enum Data Event, Pulser, Table Row Event, Tree Node Event, Variable Event |
 | **Data** | Variable, Enum, Table, dan Tree beserta block pengelolaan datanya (misalnya Add Variable, Variable Getter, Add Row, Add Node) |
 | **I/O** | Branch, Passer |
 | **Query** | Condition, Execute |
@@ -97,14 +97,9 @@ Menu Add mengelompokkan Flow Block ke dalam kategori berikut.
 
 Penjelasan lengkap setiap Flow Block ada di [[Docs/Modul Logic/Flow/Flow Block]].
 
-<!--
-  * [TODO] Subhalaman [[Docs/Modul Logic/Flow/Flow Block]] perlu dibuat untuk menjelaskan setiap Flow Block (fungsi, input, output). Path masih tebakan.
-  * [TODO] Pada screenshot, kategori terakhir pada menu Add tertulis "Misc.", sedangkan pada data JSON kategori tersebut tidak ada dan yang tersedia adalah Chrono dan Error. Saya menempatkan Chrono dan Error di bawah Misc. berdasarkan tebakan. Mohon dikonfirmasi.
-  * [TODO] Urutan kategori mengikuti screenshot (Event, Data, I/O, Query, Operator, Modular, Misc.). Konfirmasi apakah kategori lain bisa muncul sesuai hak akses atau versi.
-  * [TODO] Pada screenshot, isi kategori Event berurutan alfabetis (Enum Data Event, Pulser, Table Row Event, Tree Node Event, Variable Event). Urutan pada tabel di atas mengikuti JSON. Mohon pilih salah satu agar konsisten.
--->
-
 ## Menghubungkan Flow Block
+
+![[Docs/Modul Logic/Flow/connecting-flow-block.png]]
 1. Arahkan kursor ke titik output pada Flow Block asal, misalnya Result pada Pulser
 2. Klik dan tahan (*hold press*) titik output tersebut
 3. Seret ke titik input pada Flow Block tujuan
@@ -112,10 +107,20 @@ Penjelasan lengkap setiap Flow Block ada di [[Docs/Modul Logic/Flow/Flow Block]]
 
 Garis koneksi akan muncul di antara kedua block.
 
-<!--
-  * [TODO] Tambahkan gambar proses menghubungkan block. Anotasi yang disarankan: (1) titik output, (2) garis koneksi saat diseret, (3) titik input block tujuan.
-  * [TODO] Konfirmasi apakah satu output dapat terhubung ke beberapa input, dan cara menghapus koneksi.
--->
+## Menghapus Hubungan Flow Block
+```excalidraw
+url:Docs/Modul Logic/Flow/connecting-flow-block.excalidraw
+height:500px
+```
+
+![[Docs/Modul Logic/Flow/connecting-flow-block.png]]
+1. Arahkan kursor ke titik output pada Flow Block asal, misalnya Result pada Pulser
+2. Klik dan tahan (*hold press*) titik output tersebut
+3. Seret ke titik input pada Flow Block tujuan
+4. Lepaskan (*release*) tombol di atas titik input
+
+Garis koneksi akan muncul di antara kedua block.
+
 
 ## Menghubungkan Block Event dari Komponen
 Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^button|Event]] pada masing-masing komponen. Selengkapnya lihat [[Docs/Event/Apa itu Event|Event]].
