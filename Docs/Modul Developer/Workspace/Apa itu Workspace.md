@@ -97,49 +97,51 @@ Klik [[button/refresh|Refresh]] untuk memuat ulang tampilan.
 ## Halaman Kerja Workspace
 
 ![[Docs/Modul Developer/Workspace/antarmuka-workspace.png]]
-Halaman kerja Workspace menampilkan seluruh struktur ruang kerja dalam satu tabel. Kolom paling kiri berisi daftar **Folder/ Component**, sedangkan kolom di sebelah kanannya berisi hak akses yang dikelompokkan menjadi **Comp. Access**, **Data Access**, dan **Function Access**.
+Halaman kerja Workspace menampilkan seluruh struktur ruang kerja dalam satu tabel. Kolom paling kiri berisi daftar [[field|Folder/ Component]], sedangkan kolom di sebelah kanannya berisi hak akses yang dikelompokkan menjadi [[field|Comp. Access]], [[field|Data Access]], dan [[field|Function Access]].
 
-Navbar Workspace hanya memiliki dua tombol:
+Bilah navigasi Workspace hanya memiliki dua tombol:
 
 | Tombol | Fungsi |
 | --- | --- |
-| [[button/edit|Edit]] | Mengubah pengaturan hak akses. |
+| [[button/edit|Edit]] | Mengubah atribut Workspace seperti [[field|Name]] dan [[field|Description]]. |
 | [[button/refresh|Refresh]] | Memuat ulang halaman kerja. |
 
 ### Membaca Baris
+
 | Baris | Penjelasan |
 | --- | --- |
-| **Origin** | Workspace. Menjadi baris paling atas. |
-| **Group** (misalnya **Administrator**) | Group yang terhubung ke Workspace. Angka di samping nama menunjukkan jumlah anggota. |
-| **Folder** | Dapat dibuka dengan ikon panah untuk melihat komponen di dalamnya. |
-| **Komponen** | Berada di dalam folder. Setiap komponen memiliki ikon sesuai jenisnya dan angka di samping nama. |
+| [[field/workspace|Origin]] | Workspace. Biasanya baris paling atas. |
+| [[field/group|Administration]] | [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang terhubung ke Workspace. |
+| [[field/folder|Folder]] | Contoh [[/Docs/Folder/Apa itu Folder?|Folder]], klik untuk melihat komponen di dalamnya.  |
+| [[field/variable|Variable]], [[field/enum|Role]], [[field/table|Employee]], [[field/tree|Organizational Structures]] | Contoh [[Docs/Apa itu Komponen?|Komponen]], setiap komponen memiliki ikon sesuai jenisnya dan informasi datanya di samping nama. Llihat [[Docs/Folder/Apa itu Folder?#Informasi Data]] |
 
 <!--
-  * [TODO] Tambahkan gambar halaman kerja Workspace di sini dan beri anotasi: (1) Origin sebagai workspace, (2) Group, (3) Folder, (4) Komponen, (5) contoh disallow pada folder, (6) contoh disallow pada komponen Workspace dan Tree. Gunakan penamaan contoh dari penulis, bukan nama kasus pribadi.
   * [TODO] Konfirmasi arti angka dan ikon di samping nama komponen (jumlah data? jumlah isi?).
+  * jawaban: Penjelasannya ada di `[[Docs/Folder/Apa itu Folder?#Informasi Data]]`
   * [TODO] Konfirmasi apakah baris Group menampilkan akses untuk anggota Group tersebut, dan bagaimana jika ada lebih dari satu Group.
+  * jawaban: Tidak, bagian ini hanya untuk mengatur akses dari Workspace ke komponen Group tersebut.
   * [TODO] Sel kosong pada tabel (misalnya Add pada komponen, atau Function Access pada komponen tertentu) diasumsikan berarti tidak berlaku untuk jenis komponen tersebut. Mohon konfirmasi.
+  * Jawaban: Ya betul, berarti komponen tersebut tidak relevan dengan akses tersebut.
 -->
 
 ## Mengatur Hak Akses
+
 Hak akses diatur per baris dan per kolom pada halaman kerja. Setiap sel memiliki nilai **allow** atau **disallow**.
 
 ### Comp. Access
+
 Comp. Access berlaku pada level komponen (header).
 
 | Hak Akses | Penjelasan |
 | --- | --- |
 | **Visible** | Jika **disallow**, pengguna tidak dapat melihat komponen tersebut, bahkan ketika ingin memilihnya, misalnya saat membuat komponen Interface. |
-| **Add** | Mengizinkan penambahan folder atau komponen baru. |
-| **Update** | Mengizinkan perubahan pada komponen. |
+| **Add** | Mengizinkan penambahan folder atau komponen baru.  |
+| **Update** | Mengizinkan perubahan atribut pada komponen. |
 | **Delete** | Mengizinkan penghapusan komponen. |
 
-<!--
-  * [TODO] Penjelasan Add, Update, dan Delete pada Comp. Access adalah tebakan. Mohon sesuaikan, terutama apakah Add hanya berlaku pada folder.
--->
-
 ### Data Access
-Data Access berlaku pada level data, yaitu di bawah header komponen. Jenis datanya bergantung pada komponen: pada [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] datanya adalah **Row**, sedangkan pada [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] datanya adalah **Timeline Data**.
+
+Data Access berlaku pada level data. Jenis datanya bergantung pada komponen: semisal pada [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] datanya adalah [[Docs/Tipe Data/Row]] dan [[Docs/Tipe Data/TableData]], sedangkan pada [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] datanya adalah [[Docs/Modul Interface/Timeline/TimelineData]].
 
 | Hak Akses | Penjelasan |
 | --- | --- |
@@ -147,14 +149,15 @@ Data Access berlaku pada level data, yaitu di bawah header komponen. Jenis datan
 | **Update** | Mengizinkan perubahan data. |
 | **Delete** | Mengizinkan penghapusan data. |
 
-Seperti halnya Workspace, setiap komponen memiliki konfigurasi **allow** atau **disallow** masing-masing.
+Penjelasan lebih lengkap lihat [[Docs/Modul Developer/Workspace/Data Access]].
 
 ### Function Access
+
 Function Access mengatur fungsi tambahan pada komponen.
 
 | Hak Akses | Penjelasan |
 | --- | --- |
-| **Merge** | Mengizinkan penggabungan perubahan. |
+| **Merge** | Mengizinkan penggabungan data. |
 | **Modify Event** | Mengizinkan perubahan *event* pada komponen. |
 | **View Publish** | Hanya dapat melihat konfigurasi publikasi, misalnya menyalin alamat *share*. |
 | **Publish** | Dapat memperbarui konfigurasi publikasi. |
@@ -164,11 +167,13 @@ Function Access mengatur fungsi tambahan pada komponen.
 -->
 
 ### Aturan Pewarisan Akses
+
 Hak akses folder memengaruhi seluruh isinya. Jika **Visible** pada folder diatur **disallow**, komponen di dalamnya tidak dapat diakses meskipun komponen tersebut diatur **allow**. Hal ini karena folder induknya tidak dapat dilihat.
 
 Pengaturan **disallow** juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan komponen Tree.
 
 ## Contoh Penggunaan
+
 **Menyembunyikan folder Keuangan dari Group tertentu**
 
 | Folder/Komponen | Visible | Hasil |
