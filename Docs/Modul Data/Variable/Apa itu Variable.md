@@ -157,10 +157,12 @@ Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh A
 **Alur di Flow**
 ```mermaid
 flowchart LR
-    A["Table Row Event<br/>Tiket baru masuk"] --> B["Variable Getter<br/>AI_API_KEY"]
-    B --> C["AI OpenAI 4<br/>Ringkas isi tiket"]
-    C --> D["TableData Setter<br/>Simpan ringkasan"]
+    A[**Table Row Event**<br/>Tiket baru masuk] -->|"&nbsp;**<Objek >** Informasi Tiket&nbsp;"| C
+    A -->|" Row ID "| D
+    B["**Variable Getter**<br/>AI_API_KEY"] -->|"Value"| C["**AI OpenAI 4**<br/>Ringkas isi tiket"]
+    C --> D["**TableData Setter**<br/>Simpan ringkasan"]
 ```
+
 
 | Langkah | Flow Block | Peran dalam alur | Hasil |
 | --- | --- | --- | --- |

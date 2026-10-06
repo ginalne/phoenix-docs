@@ -43,6 +43,13 @@ html{
 }
 
 ```
+```mermaid
+flowchart LR
+    A[**Table Row Event**<br/>Tiket baru masuk] -->|"Objek Informasi Tiket"| C
+    A -->|" Row ID "| D
+    B["**Variable Getter**<br/>AI_API_KEY"] -->|"Value"| C["**AI OpenAI 4**<br/>Ringkas isi tiket"]
+    C --> D["**TableData Setter**<br/>Simpan ringkasan"]
+```
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 ```space-style
