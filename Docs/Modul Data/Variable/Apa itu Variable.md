@@ -47,10 +47,18 @@ Ada dua cara komponen merujuk ke Variable:
 - **Field bertipe Variable.** Pada komponen yang memiliki field dengan [[Docs/Tipe Data/Variable|tipe data Variable]], pilihannya adalah daftar [[^field|Name]] dan [[^field|Description]] dari Variable Data.
 - **Komponen di modul Logic.** Komponen dalam [[Docs/Modul Logic]] dapat mengisi field Variable cukup dengan [[^field|Alias]]. Jika [[^field|Alias]] tidak valid di Variable (tidak ada [[^field|Nama]] yang cocok), maka tidak ada nilai yang diterima.
 
-## Membuat Variable
+## Menambahkan Komponen Variable
+>**danger** Komponen Variable tidak bisa dibuat[[Docs/Antarmuka#Area Manajemen Folder]].
 
+## Duplikasi Komponen Variable
+>**danger** Komponen Variable tidak bisa diduplikasi  [[Docs/Antarmuka#Area Manajemen Folder]].
+
+## Menghapus Komponen Variable
+>**danger** Komponen Variable tidak bisa dihapus dalam  [[Docs/Antarmuka#Area Manajemen Folder]].
+
+## Mengganti Nama Variable
 >**note** Tombol Edit tidak tersedia
->Karena nama header tidak dapat diganti, komponen Variable tidak memiliki langkah mengubah atribut komponen. Yang dapat Anda ubah adalah isi data di dalam halaman kerjanya (lihat [[#Mengelola Data Variable]]).
+>Karena nama header tidak dapat diganti, komponen Variable tidak memiliki langkah mengubah atribut komponen. Yang dapat Anda ubah adalah isi data di dalam halaman kerjanya (lihat [[#Mengelola Variable Data]]).
 
 
 ## Membuka Halaman Kerja Variable
@@ -125,27 +133,15 @@ Kolom [[^field|Updated At]] terisi otomatis setelah baris disimpan.
 >**warning** Pastikan Variable tidak lagi dipakai
 >Variable yang dihapus tidak lagi tersedia sebagai pilihan pada field bertipe Variable. Flow atau komponen lain yang masih memanggil Name tersebut tidak akan menemukan nilainya, dan laporan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]]. Periksa dulu komponen yang memakai Variable sebelum menghapusnya.
 
+>**danger** Pertimbangkan Resiko
+>Variable Data yang sudah dihapus tidak dapat dikembalikan.
+
 ## Menyegarkan Daftar Variable Data
 
 Klik [[^button/refresh|Refresh]] untuk memuat ulang data pada tabel Variable.
 
-
-<!--
-  * [TODO] Interaksi tabel saya tebak dari adanya *scroll* horizontal pada screenshot. Mohon koreksi bila ada gestur lain (misalnya mengubah lebar kolom atau mengurutkan baris).
--->
-
-## Menggunakan Variable
-Setelah Anda mengisi tabel, Variable dapat dipakai oleh komponen lain:
-
-- Memilih Variable pada field bertipe Variable, lihat [[Docs/Tipe Data/Variable]]
-- Memanggil Variable dengan Name di Flow, lihat [[Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan|Flow Block kategori Data]]
-- Memantau error saat Name tidak ditemukan, lihat [[Docs/Modul Logic/Flow/Flow Activity]]
-
-<!--
-  * [TODO] Halaman yang diusulkan (path berupa tebakan): (1) `Docs/Modul Data/Variable/Mengelola Data Variable` bila langkah Menambahkan, Mengubah, dan Menghapus perlu dipindah dari halaman ini; (2) `Docs/Modul Data/Variable/Menggunakan Variable` berisi cara memilih Variable di field dan memanggilnya di Flow; (3) `Docs/Tipe Data/Variable` menjelaskan tipe data Variable; (4) `Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan` memuat Flow Block Variable (Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value) dan Variable Event; (5) `Docs/Modul Logic/Flow/Flow Activity`; (6) `Docs/Modul Data/Pengenalan`.
--->
-
 ## Contoh Penggunaan
+
 **Menjaga API Key Penyedia AI Tetap Aman dalam Otomasi Flow**
 
 Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh AI. Layanan AI membutuhkan API Key, tetapi kunci tersebut tidak boleh diketahui seluruh anggota tim. Dengan Variable, kunci disimpan sekali, dan Flow memanggilnya lewat nama untuk kebutuhan integrasi.
@@ -154,19 +150,13 @@ Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh A
 
 | Komponen | Peran |
 | --- | --- |
-| [[^field/variable\|Variables]] | Menyimpan API Key penyedia AI dengan Name `AI_API_KEY`. |
-| [[^field/table\|Daftar Tiket]] | Menyimpan tiket yang masuk dan hasil ringkasannya. |
-| [[^field/flow\|Ringkas Tiket Otomatis]] | Menjalankan proses dari tiket baru sampai ringkasan tersimpan. |
-
-<!--
-  * [TODO] Nama komponen Daftar Tiket dan Ringkas Tiket Otomatis adalah nama generik, sesuaikan dengan gambar. Mohon juga cek nama dan fungsi block yang dipakai pada alur di bawah, terutama cara block AI menerima API Key dari Variable Getter.
--->
+| [[^field/variable|Variables]] | Menyimpan API Key penyedia AI dengan Name `AI_API_KEY`. |
+| [[^field/table|Daftar Tiket]] | Menyimpan tiket yang masuk dan hasil ringkasannya. |
+| [[^field/flow|Ringkas Tiket Otomatis]] | Menjalankan proses dari tiket baru sampai ringkasan tersimpan. |
 
 **Alur di Flow**
-
 ```mermaid
 flowchart LR
-    V["Variable<br/>AI_API_KEY"] -.-> B
     A["Table Row Event<br/>Tiket baru masuk"] --> B["Variable Getter<br/>AI_API_KEY"]
     B --> C["AI OpenAI 4<br/>Ringkas isi tiket"]
     C --> D["TableData Setter<br/>Simpan ringkasan"]
