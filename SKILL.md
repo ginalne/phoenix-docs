@@ -28,14 +28,14 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 
 Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya agar bisa dipakai pada komponen apa pun, bukan hanya komponen yang pernah dibahas.
 
-1. **Halaman komponen adalah peta, bukan manual.** Halaman "Apa itu <Komponen>" memberi orientasi: definisi, manfaat, konsep (sebagai tautan), pengelolaan komponen itu sendiri (Membuat, Mengubah, Menyegarkan, Menghapus), Antarmuka, lalu daftar aspek yang mengarah ke subhalaman. Langkah rinci, katalog opsi menu, tabel isi panel, dan konfigurasi item anak dipindahkan ke subhalaman. Uji sederhana: jika sebuah bagian punya langkah atau tabel sendiri dan bisa dibaca terpisah, bagian itu adalah subhalaman, dan halaman utama hanya menyisakan satu kalimat atau satu daftar tautan (misalnya bagian "Membangun Logika Flow" berisi tautan anchor ke subhalaman). Pembaca halaman pengantar mencari orientasi, dan detail yang menumpuk membuat halaman dalam serta sulit dirawat. Jika ragu, tulis lebih ringkas dan usulkan subhalaman, karena menambah detail lebih mudah daripada memangkasnya.
-2. **Istilah milik produk dan penulis menang.** Pakai label persis seperti di antarmuka dan istilah yang dipakai penulis (misalnya Blueprint, Submission, Flow Block Event). Jangan menciptakan nama untuk area antarmuka yang belum diberi nama; tulis dengan sebutan paling netral dan beri TODO agar penulis menamainya. Analogi dari luar produk (misalnya "seperti composition di Blender") atau kalimat "kalau bingung maksudnya..." adalah bantuan bagi Claude untuk memahami, bukan isi dokumentasi, kecuali penulis memintanya ditulis. Pakai satu istilah yang sama di seluruh halaman. Kata Indonesia umum ("blok") boleh untuk penjelasan non-fitur, sedangkan nama fitur tetap sesuai antarmuka.
+1. **Halaman dokumentasi adalah peta, bukan manual.** Halaman "Apa itu <Konteks>" memberi orientasi: definisi, manfaat, konsep (sebagai tautan), pengelolaan komponen itu sendiri (Membuat, Mengubah, Menyegarkan, Menghapus), Antarmuka, lalu daftar aspek yang mengarah ke subhalaman. Langkah rinci, katalog opsi menu, tabel isi panel, dan konfigurasi item anak dipindahkan ke subhalaman. Uji sederhana: jika sebuah bagian punya langkah atau tabel sendiri dan bisa dibaca terpisah, bagian itu adalah subhalaman, dan halaman utama hanya menyisakan satu kalimat atau satu daftar tautan (misalnya bagian "Membangun Logika Flow" berisi tautan anchor ke subhalaman). Pembaca halaman pengantar mencari orientasi, dan detail yang menumpuk membuat halaman dalam serta sulit dirawat. Jika ragu, tulis lebih ringkas dan usulkan subhalaman, karena menambah detail lebih mudah daripada memangkasnya.
+2. **Istilah milik produk dan penulis menang.** Pakai label persis seperti di antarmuka dan istilah yang dipakai penulis (misalnya Blueprint, Submission, Flow Block Event). Jangan menciptakan nama untuk area antarmuka yang belum diberi nama; tulis dengan sebutan paling netral dan beri TODO agar penulis menamainya. Analogi dari luar produk (misalnya "seperti composition di Blender") atau kalimat "kalau bingung maksudnya..." adalah bantuan bagi Claude untuk memahami, bukan isi dokumentasi, kecuali penulis memintanya ditulis. Pakai satu istilah yang sama di seluruh halaman. Kata Indonesia umum ("blok") boleh untuk penjelasan non-fitur, sedangkan nama fitur tetap menggunakan link.
 3. **Tautkan untuk membuka jalan.** Setiap konsep, aksi, atau istilah yang punya ruang untuk tumbuh dijadikan wikilink, termasuk ke halaman yang belum ada. Wikilink tebakan adalah ide struktur dokumentasi, bukan kesalahan, jadi jangan ragu. Tebakan path mengikuti pola yang sudah ada: setiap folder memiliki halaman`Pengenalan` sebagai pintu masuk, fitur pendamping komponen bernama`<Komponen> <Fitur>` (misalnya`Flow Activity`), item anak berada di bawah folder kategorinya, dan bagian dalam sebuah subhalaman diakses lewat anchor (`#Menambahkan Flow Block`). Tautkan juga aksi yang melintasi komponen (misalnya menghubungkan Event dari komponen lain). Dalam contoh penggunaan, hampir setiap nama block atau komponen yang disebut adalah wikilink. Tandai asumsi halaman baru dengan satu TODO konsolidasi per halaman, bukan satu TODO per tautan.
-4. **Screenshot adalah sinyal struktur.** Screenshot antarmuka berarti penulis ingin ada bagian "Antarmuka <Komponen>": gambar, penjelasan area, tabel tombol bilah navigasi, dan catatan perbedaan tampilan desktop dan mobile. Jika ada gestur, tambahkan "Interaksi Antarmuka" (tabel Fungsi dan Aksi). Screenshot dengan menu terbuka biasanya menunjuk ke subhalaman. Tombol, ikon, atau penghitung yang belum dijelaskan penulis ditandai TODO, bukan ditebak sebagai fakta.
+4. **Screenshot adalah sinyal struktur.** Screenshot antarmuka berarti penulis ingin ada bagian "Antarmuka <Konteks>": gambar, penjelasan area, tabel tombol bilah navigasi, dan catatan perbedaan tampilan desktop dan mobile. Jika ada gestur, tambahkan "Interaksi Antarmuka" (tabel Fungsi dan Aksi). Screenshot dengan menu terbuka biasanya menunjuk ke subhalaman. Tombol, ikon, atau penghitung yang belum dijelaskan penulis ditandai TODO, bukan ditebak sebagai fakta.
 5. **Contoh Penggunaan menjual nilai, bukan menguji fitur.** Skenario berangkat dari kebutuhan nyata dan hasil yang dirasakan pengguna, dengan menonjolkan nilai integrasi Phoenix (data, logika, dan sistem lain tersambung). Hindari contoh yang hanya membuktikan fitur bekerja (misalnya menekan tombol uji). Susunannya: kebutuhan, komponen yang terlibat, alur (diagram mermaid dan tabel langkah dengan nama block yang ditautkan), hasil yang dirasakan, lalu ide skenario lain (variasi pemicu, tujuan, atau komponen) sebagai inspirasi. Judul skenario dari penulis mengikat dan harus diisi rinci. Nama komponen memakai nama generik dan ditandai TODO. Kalimat penutup ditulis ulang untuk skenario itu dan tidak disalin dari contoh lain.
 6. **Draf dulu, TODO kemudian.** TODO tidak menggantikan draf. Setiap bagian, termasuk warning dampak penghapusan, catatan perbedaan mode, dan langkah yang belum pasti, ditulis dalam bentuk terbaik, lalu ditandai untuk konfirmasi. Dampak penghapusan komponen (apa yang hilang dan apa yang terputus) selalu ditulis sebagai callout warning.
 7. **Ringkasan harus mengikuti isi.** Batasan dan Catatan, TL:DR, dan FAQ adalah ringkasan. Setiap kali isi halaman berubah atau dipindah, sinkronkan keempatnya: (a) langkah yang sudah pindah ke subhalaman diganti satu tautan; (b) Batasan berisi perilaku, dampak, dan ketergantungan (warning, perbedaan mode, relasi hak akses, apa yang tidak dicakup sebuah tombol), bukan lokasi tombol atau langkah yang sudah ada di isi halaman; (c) TL:DR berisi 4 sampai 6 poin yang mengikuti peta halaman (definisi, antarmuka, membangun, menjalankan, memantau, hal yang perlu hati-hati); (d) setiap anchor`#...` harus ada di halaman tujuan atau di daftar halaman yang diusulkan.
-8. **Revisi penulis adalah sumber belajar.** Bandingkan halaman yang dikembalikan dengan versi sebelumnya. Yang dihapus biasanya salah level atau bukan konten, yang diganti biasanya istilah atau struktur, dan yang ditambah biasanya bagian yang terlewat. Ubah temuan menjadi aturan di SKILL.md dan fakta di KNOWLEDGE.md (path, istilah, perilaku). Jadikan struktur dan istilah penulis sebagai dasar untuk halaman berikutnya.
+8. **Revisi penulis adalah sumber belajar.** Bandingkan halaman yang dikembalikan dengan versi sebelumnya. Yang dihapus biasanya salah level atau bukan konten, yang diganti biasanya istilah atau struktur, dan yang ditambah biasanya bagian yang terlewat. Ubah temuan menjadi aturan di skill silverbullet.md dan knowledge.md (path, istilah, perilaku). Jadikan struktur dan istilah penulis sebagai dasar untuk halaman berikutnya.
 
 ## Konvensi tautan
 
@@ -84,16 +84,16 @@ Bertindaklah sebagai ahli/konsultan penulisan dokumentasi aplikasi Phoenix. Jika
 
 ## Templat halaman
 
-Templat di bawah adalah kerangka bawaan, bukan aturan baku. Pahami sifat komponen lalu bentuk struktur terbaik untuk halaman tersebut. Yang tetap: callout pengenalan di awal, Mengapa Menggunakan, Konsep Utama, Cara Kerja, Contoh Penggunaan, Praktik Terbaik, Batasan dan Catatan, TL:DR, dan FAQ dengan judul persis. Bagian di antara Cara Kerja dan Contoh Penggunaan bebas disesuaikan.
+Templat di bawah adalah kerangka bawaan, bukan aturan baku. Pahami konteks lalu bentuk struktur terbaik untuk halaman tersebut. Yang tetap: callout pengenalan di awal, Mengapa Menggunakan, Konsep Utama, Cara Kerja, Contoh Penggunaan, Praktik Terbaik, Batasan dan Catatan, TL:DR, dan FAQ dengan judul persis. Bagian di antara Cara Kerja dan Contoh Penggunaan bebas disesuaikan.
 
-Gunakan urutan berikut. Bagian yang tidak relevan boleh dihilangkan, tetapi jangan mengubah urutan atau nama judulnya. Bagian Antarmuka dan Interaksi Antarmuka dipakai bila komponen memiliki halaman kerja atau screenshot dari penulis.
+Gunakan urutan berikut. Bagian yang tidak relevan boleh dihilangkan, tetapi jangan mengubah urutan atau nama judulnya. Bagian Antarmuka dan Interaksi Antarmuka dipakai bila konteks memiliki halaman kerja atau screenshot dari penulis.
 Konteks bisa apapun sesuai permintaan.
 
 ```markdown
 ---
 status: draft
 title: <Sesuaikan dengan Title>
-description: <satu kalimat fungsi komponen>
+description: <satu kalimat penjelasan halaman ini>
 ---
 
 # <Sesuaikan dengan Title>
@@ -233,14 +233,14 @@ Catatan format:
   4. `Klik [[^button|Create]]`
 * **Langkah Mengubah.** Buka halaman kerja, klik`[[^button/edit|Edit]]`, perbarui isian, klik`[[^button|Update]]`. Tombol Save tidak dipakai.
 * **Langkah Menghapus.** Buka folder yang berisi komponen, klik kanan komponen, pilih`[[^button/delete|Delete]]`, lalu konfirmasi dengan`[[^button|Delete]]`.
-* **Bagian "Menyegarkan <Komponen>"** (opsional, untuk komponen yang punya Refresh), ditempatkan setelah Mengubah:
+* **Bagian "Menyegarkan** (opsional, untuk komponen yang punya Refresh), ditempatkan setelah Mengubah:
 `## Menyegarkan <Komponen>`
 `Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.`
 * **Callout peringatan.** Ditempatkan setelah langkah Menghapus bila ada dampak. Format: `>**warning** <Judul singkat>` lalu isi pada baris`>` berikutnya.
 * **Callout berhasil.** Ditempatkan setelah konfirmasi berhasil pengguna, panduan atau hasil yang selesai sempurna, pemberitahuan status positif, dan Praktik Terbaik. Format: `>**success** <Judul singkat>` lalu isi pada baris`>` berikutnya.
 * **Mermaid.** Penulis memperluas diagram saya menjadi diagram relasi, bukan hierarki lurus. Usulan: gambarkan juga jenis relasi (misalnya label`Akses` pada garis) dan gunakan garis putus-putus untuk relasi yang tidak berlaku pada semua komponen.
 * **Konsep Utama.** Judul bagian "Halaman Kerja" dan "Membaca Baris" boleh ditambahkan bila komponen memiliki halaman kerja berbentuk tabel.
-* **Pengelolaan baris di halaman kerja tabel.** Bila isi komponen dikelola per baris, pisahkan dari pengelolaan komponen lewat judul "Mengelola Data <Komponen>" dengan subjudul Menambahkan, Mengubah, dan Menghapus. Tombol yang dipakai: ` (di kolom Action). Dampak penghapusan baris ditulis sebagai callout warning.
+* **Pengelolaan baris di halaman kerja tabel.** Bila isi komponen dikelola per baris, pisahkan dari pengelolaan komponen lewat judul "Mengelola Data <Konteks>" dengan subjudul Menambahkan, Mengubah, dan Menghapus. Tombol yang dipakai: ` (di kolom Action). Dampak penghapusan baris ditulis sebagai callout warning.
 
 ## Diagram alur saat menjelasakan alur Logic Flow
 
@@ -253,47 +253,17 @@ label garis diapit`&nbsp;`.
 Ada dua jenis diagram. Pilih sesuai isi bagian.
 
 **A. Diagram relasi (Cara Kerja):** hubungan konseptual antar komponen atau Group, Workspace, dan sebagainya. Boleh memakai bentuk node sederhana`A["teks"]`. Label garis tetap diberi padding`&nbsp;`.
-**B. Diagram alur Flow (halaman Flow dan Contoh Penggunaan):** urutan blok Flow. Wajib memakai gaya di bawah.
-
-Contoh acuan alur Flow:
-1.  Table: `@{ shape: database, label: "**Table**<br/><Nama Table>" } -.->|&nbsp;<Event Name>&nbsp;|`
-2. Flow Block:  `@{ shape: rounded, label: "**<Jenis Flow Block>**" }`
-3. Flow Block Khusus Operator: `@{ shape: rounded, label: "**<Jenis Flow Block>**<br><keterangan>" }`
-4. 
-```mermaid
-flowchart TB
-    T@{ shape: database, label: "**Table**<br/>Daftar Pesanan" } -.->|&nbsp;Create Event&nbsp;| E@{ shape: rounded, label: "**Table Row Event**" }
-    E --> P@{ shape: rounded, label: "**TableRow Parse**" }
-    P --> I@{ shape: rounded, label: "**If**<br>Status = Siap Dikirim?" }
-    I -->|&nbsp;Ya&nbsp;| A@{ shape: rounded, label: "**OpenAI 4**<br/>Susun pesan"}
-    I -->|&nbsp;Tidak&nbsp;| X@{ shape: circle, label: "Selesai" }
-    A --> S@{ shape: rounded, label: "**Stringify**<br/>Susun pesan"}
-    S --> H@{ shape: rounded, label: "**HTTP Request**<br/>Kirim ke sistem lain"}
-    H --> O@{ shape: processes, label: "Sistem lain<br/>menerima data" }
-    H -.->|Gagal| ER@{ shape: rounded, label: "**Error Message**"}
-```
-
-Aturan:
-
-- **Sintaks node:**`ID@{ shape: <bentuk>, label: "<teks>" }`, didefinisikan pada kemunculan pertama dalam baris garis. ID pendek (T, E, P, I, A, S, H, O, ER). Satu baris untuk satu garis.
-- **Bentuk node (bentuk yang sudah dipakai penulis):**
-  - `database`: komponen data (contoh: Table)
-  - `rounded`: blok Flow (event, parse, If, AI, Stringify, HTTP Request, Error Message)
-  - `circle`: titik akhir alur ("Selesai")
-  - `processes`: sistem atau layanan di luar Phoenix
-- **Isi label node blok:**`**<Nama Blok>**` lalu`<br/>` lalu deskripsi singkat tindakan dalam bahasa bisnis ("Susun pesan", "Kirim ke sistem lain"). Nama blok persis seperti tampil di Flow Block. Deskripsi boleh dihilangkan bila nama blok sudah jelas (Table Row Event, TableRow Parse, Error Message). Node komponen data menulis nama komponen tebal, lalu isinya (contoh: **Table**, Daftar Pesanan). Node akhir dan sistem luar tidak ditebalkan.
-- **Percabangan If:** node If rounded dengan pertanyaan pada deskripsi ("Status = Siap Dikirim?"), dua garis keluar berlabel`&nbsp;Ya&nbsp;` dan`&nbsp;Tidak&nbsp;`. Cabang yang berhenti diarahkan ke node circle "Selesai". Jangan memakai bentuk diamond.
-- **Label garis:** selalu diapit`&nbsp;` di kiri dan kanan agar tidak menempel pada garis, misalnya`|&nbsp;Ya&nbsp;|`. Jika label memuat`**` atau`<br>`, apit dengan tanda kutip.
-- **Garis utuh`-->`:** urutan eksekusi utama.
-- **Garis putus-putus`-.->`:** pemicu dari komponen data (event) dan jalur gagal ("Gagal") menuju Error Message.
-- **Garis yang membawa data:** label`"**[Tipe]**<br>&nbsp;Nama Data&nbsp;"`, misalnya`**[Text]**<br>&nbsp;&nbsp;`. Tipe data ditulis persis seperti nama Tipe Data.
-- **Arah:**`flowchart TB` untuk alur bercabang.`flowchart LR` hanya untuk alur pendek (kira-kira lima blok atau kurang) tanpa banyak cabang. Konfirmasi dengan penulis jika ragu.
-- **Ukuran:** satu skenario per diagram, kira-kira maksimal 9 node. Nama dan hasil tiap blok dijelaskan di tabel pendamping, bukan di dalam diagram.
-- **Tabel pendamping:** setelah diagram alur, sertakan tabel berikut. Tautkan setiap blok ke halaman Flow Block-nya (lihat knowledge).
-
-|Langkah|Flow Block|Peran dalam alur|Hasil|
-|-|-|-|-|
-|1|`[[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan\|Table Row Event]]`|Berjalan saat baris baru ditambahkan.|Flow dimulai otomatis.|
+**B. Diagram alur Flow (halaman Flow dan Contoh Penggunaan):** urutan blok Flow. Wajib memakai gaya di bawah:
+1. Gunakan flowchart LR atau flowchart TB jika diagram panjang.
+2.  Table: `@{ shape: database, label: "**Table**<br/><Nama Table>" } -.->|&nbsp;<Event Name>&nbsp;|`
+3. Flow Block:  `@{ shape: rounded, label: "**<Jenis Flow Block>**" }`
+4. Flow Block Khusus Operator: `@{ shape: rounded, label: "**<Jenis Flow Block>**<br><keterangan>" }`
+5. Flow Block dengan output tipe data : `@{ shape: rounded, label: "**<Jenis Flow Block>**" }-->|"&nbsp;**[<Tipe Data>]**&nbsp;"|`
+6. Flow Block dengan informasi output : `@{ shape: rounded, label: "**<Jenis Flow Block>**" }-->|"&nbsp;**[Text]**&nbsp;<br>Hasil Ringkasan"|`
+7. Selesai: `@{ shape: circle, label: "Selesai" }
+8. Sistem lainnya `{ shape: processes, label: "Sistem lain<br/>menerima data" }`
+9. Garis utuh: `-->`
+10. Garis putus-putus: `-.->
 
 ## Cara bekerja dengan permintaan pengguna
 

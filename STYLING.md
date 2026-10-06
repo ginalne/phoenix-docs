@@ -182,9 +182,6 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 #sb-main .cm-editor a[href^="mode/"] span {
   padding: 0rem .3rem 0rem 0.3rem;
 }
-#sb-main .cm-editor td:has(a[href^="mode/"]) {
-  white-space:nowrap !important;
-}
 ```
 
 |  |  |
@@ -201,10 +198,14 @@ test [[button/edit|Edit]] [[button|Create]]
 > **warning** Warning
 > Harap hati-hati saat [[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
 
+| Langkah | Flow Block | Peran dalam alur | Hasil |
+| --- | --- | --- | --- |
+| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]] | Dihubungkan ke Daftar Pesanan melalui tombol  [[^button/event\|Event Ini Berat banget sih gua gakuat heheehehe]]  pada Table, lalu terpicu ketika baris pesanan berubah. | Data baris pesanan masuk ke Flow. |
+
 ```space-style
 /* Style links starting with button: */
 #sb-main .cm-editor a {
-  white-space: nowrap !important;
+  text-wrap: nowrap !important;
 }
 #sb-main .cm-editor a[href^="button/"] {
   display:inline-block !important;
@@ -241,9 +242,6 @@ test [[button/edit|Edit]] [[button|Create]]
 }
 #sb-main .cm-editor a[href^="button/"] span {
   padding: 0rem 0.3rem 0rem 0rem;
-}
-#sb-main .cm-editor td:has(a[href^="button/"]) {
-  white-space:nowrap !important;
 }
 ```
 
