@@ -28,57 +28,47 @@ Komponen ini sudah tersedia sejak [[Inisialisasi/Apa itu Pro?|Pro]] dimulai.
 | Istilah | Penjelasan |
 | --- | --- |
 | [[Docs/Tipe Data/Variable|Variable Data]] | Data dalam komponen Variable. |
-| [[#Cara Kerja Variable|Alias]] | Istilah untuk atribut [[^field|Name]] dari Variable Data yang berfungsi untuk dipanggil sehingga isi [[^field|Value]]-nya dapat digunakan. |
+| [[#Cara Kerja Variable|Alias]] | Istilah untuk atribut [[^field|Name]] dari Variable Data yang berfungsi untuk dipanggil agar isi [[^field|Value]]-nya dapat diakses. |
 
 ## Cara Kerja Variable
-Variable adalah satu sumber data yang dikenali semua komponen di dalam ruang lingkup Pro. Komponen lain memilih atau memanggil Variable lewat Name-nya, dan nilainya diambil dari tabel Variable.
 
+Variable adalah satu sumber data yang dikenali oleh semua komponen di dalam ruang lingkup Pro.
 ```mermaid
-flowchart LR
-    P["Pro"] -->|"Dibuat otomatis"| V["Variable<br/>(sumber data universal)"]
-    V -->|"Daftar pilihan"| F["Field bertipe Variable<br/>(komponen lain)"]
-    L["Komponen Modul Logic<br/>(misalnya Flow)"] -->|"Name Variable (string)"| V
-    L -.->|"Name tidak ditemukan"| A["Flow Activity<br/>(laporan error)"]
+flowchart TB
+    V -.->|"Value"| L["Komponen di Modul Logic"]
+    P["Pro"] -->|"Membuat otomatis"| V["Komponen Variable"]
+    L -.->|"Alias Valid"| V
+    V -->|"Name dan Desc<br>(pilihan)"| F["Field bertipe Variable (komponen lain)"]
+    L -.->|"Alias tidak valid"| A["Empty Value"]
 ```
 
 Ada dua cara komponen merujuk ke Variable:
 
-- **Field bertipe Variable.** Pada komponen yang memiliki field dengan [[Docs/Tipe Data/Variable|tipe data Variable]], pilihannya adalah daftar baris pada tabel Variable.
-- **Komponen di modul Logic.** Komponen seperti [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dapat mengisi field Variable cukup dengan Name-nya dalam bentuk *string*. Jika Name tidak ditemukan di tabel Variable, laporan error akan tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
-
-Selain sebagai konstanta, Variable berfungsi sebagai *alias*: pemakai memanggil nilai lewat [[^field|Name]], sehingga isi [[^field|Value]] tidak harus diketahui oleh tim, tetapi tetap dapat dipakai untuk kebutuhan integrasi.
-
-<!--
-  * [TODO] Mekanisme "tim tidak dapat mengetahui isi nilai" belum saya jelaskan lebih jauh karena tabel Variable pada gambar menampilkan Value apa adanya. Apakah tersamarnya Value bergantung pada hak akses (misalnya anggota yang tidak punya akses melihat halaman kerja Variable di [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Workspace), atau ada mekanisme lain seperti masking? Mohon dijelaskan agar bagian ini dan Batasan dan Catatan dapat dipertegas.
-    Jawaban : Ya hanya di workspace. Pembatasan akses saat ini hanya berlaku melalui workspace.
--->
+- **Field bertipe Variable.** Pada komponen yang memiliki field dengan [[Docs/Tipe Data/Variable|tipe data Variable]], pilihannya adalah daftar [[^field|Name]] dan [[^field|Description]] dari Variable Data.
+- **Komponen di modul Logic.** Komponen dalam [[Docs/Modul Logic]] dapat mengisi field Variable cukup dengan [[^field|Alias]]. Jika [[^field|Alias]] tidak valid di Variable (tidak ada [[^field|Nama]] yang cocok), maka tidak ada nilai yang diterima.
 
 ## Membuat Variable
-Anda tidak perlu membuat komponen Variable. Komponen ini dibuat otomatis ketika Pro dimulai dan ditempatkan di folder *root* Pro. Karena itu, pada Area Manajemen Folder tidak tersedia pilihan untuk menambahkan komponen Variable baru.
-
-Beberapa hal yang perlu Anda ketahui tentang komponen Variable:
-
-- Hanya ada satu komponen Variable di dalam Pro.
-- Nama header komponen adalah "Variables" dan tidak dapat diganti.
-- Komponen Variable tidak dapat dihapus.
-- Komponen Variable dapat dipindahkan ke folder lain.
 
 >**note** Tombol Edit tidak tersedia
 >Karena nama header tidak dapat diganti, komponen Variable tidak memiliki langkah mengubah atribut komponen. Yang dapat Anda ubah adalah isi data di dalam halaman kerjanya (lihat [[#Mengelola Data Variable]]).
 
-<!--
-  * [TODO] Mohon konfirmasi: (1) "folder root" yang dimaksud sama dengan folder Origin pada Pro; (2) cara memindahkan Variable (saya asumsikan *drag and drop* di Area Manajemen Folder, mirip komponen lain) dan apakah ada batasan folder tujuan; (3) apakah klik kanan pada Variable memunculkan menu, dan apa saja isinya.
--->
 
-## Menyegarkan Variable
-Klik [[^button/refresh|Refresh]] untuk memuat ulang data pada tabel Variable.
+## Membuka Halaman Kerja Variable
 
-## Halaman Kerja
+Klik [[^field/variable|Variables]] di [[Docs/Antarmuka#Area Manajemen Folder]] untuk membuka halaman kerja Variable.
 
-Halaman kerja Variable terdiri dari bilah navigasi di bagian atas dan tabel Variable di bagian bawah. Tombol untuk menambahkan baris berada di bawah tabel.
+## Antarmuka Variable
 
-![[Docs/Modul Data/Variable/halaman-kerja.png]]
-Halaman kerja Variable berbentuk tabel. Isi tabel dimulai dengan kosong, dan Anda perlu membuka halaman kerja ini untuk menambahkan data. Setiap baris pada tabel mewakili satu Variable.
+![[Docs/Modul Data/Variable/interface-variable.png]]
+Halaman kerja Variable terdiri dari bilah navigasi di bagian atas dan tabel Variable di bagian bawah.
+
+Bilah navigasi Variable terdiri dari:
+
+| Tombol | Fungsi |
+| --- | --- |
+| [[^field/variable|Variable]] | Judul komponen, menampilkan ikon Variable dan nama komponen. |
+| [[^button/refresh|Refresh]] | Memuat ulang data pada tabel Variable. |
+| [[^field\|Search Variable Data...]] | Mencari data Variable pada tabel. |
 
 Kolom pada tabel Variable adalah:
 
@@ -91,65 +81,54 @@ Kolom pada tabel Variable adalah:
 | [[^field\|Created At]] | Waktu baris dibuat. | Terisi otomatis |
 | [[^field\|Updated At]] | Waktu baris terakhir diperbarui. | Terisi otomatis |
 
-## Menambahkan Variable
+Pada area tabel terdapat:
 
-1. Buka halaman kerja Variable dengan mengklik [[^field/variable|Variables]] di [[Docs/Antarmuka#Area Manajemen Folder]]
+| Tombol | Fungsi |
+| --- | --- |
+| [[^button/add|Add Row]] | Menambahkan baris [[Docs/Tipe Data/Variable|Variable Data]] baru. |
+| [[^button/save|Save]] | Menyimpan perubahan data. |
+| [[^button/delete|Delete]] | Menghapus data. |
+
+## Interaksi Antarmuka Variable
+
+| Fungsi | Aksi |
+| --- | --- |
+| Melihat kolom di sisi kanan tabel | Geser tabel secara horizontal menggunakan *scroll* di bagian bawah tabel. |
+
+## Mengelola Variable Data
+
+Anda dapat mengelola Variable Data, harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]].
+
+### Menambahkan Variable Data
+
+1. [[#Membuka Halaman Kerja Variable|Buka]] Halaman Kerja Variable
 2. Klik [[^button/add|Add Row]]
 3. Isi [[^field|Name]], [[^field|Type]], [[^field|Value]], dan [[^field|Description]]
 4. Klik [[^button/save|Save]]
 
 Anda dapat klik [[^button/delete|Cancel]] untuk membatalkan penambahan Data Variable
 
-## Mengubah Variable
-1. Buka halaman kerja Variable
+### Mengubah Variable Data
+
+1. [[#Membuka Halaman Kerja Variable|Buka]] Halaman Kerja Variable
 2. Ubah isian pada baris yang ingin diperbarui
 3. Klik [[^button/save|Save]]
 
 Kolom [[^field|Updated At]] terisi otomatis setelah baris disimpan.
 
-### Menghapus Variable
-1. Buka halaman kerja Variable
+### Menghapus Variable Data
+
+1. [[#Membuka Halaman Kerja Variable|Buka]] Halaman Kerja Variable
 2. Pada kolom [[^field|Action]], klik [[^button/delete|Delete]] pada baris yang ingin dihapus
 3. Konfirmasi dengan [[^button|Delete]]
 
 >**warning** Pastikan Variable tidak lagi dipakai
 >Variable yang dihapus tidak lagi tersedia sebagai pilihan pada field bertipe Variable. Flow atau komponen lain yang masih memanggil Name tersebut tidak akan menemukan nilainya, dan laporan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]]. Periksa dulu komponen yang memakai Variable sebelum menghapusnya.
 
+## Menyegarkan Daftar Variable Data
 
-## Antarmuka Variable
-![[Docs/Modul Data/Variable/halaman-kerja-variable.png]]
+Klik [[^button/refresh|Refresh]] untuk memuat ulang data pada tabel Variable.
 
-
-
-Bilah navigasi Variable terdiri dari:
-
-| Tombol | Fungsi |
-| --- | --- |
-| [[^field\|Variable]] | Judul komponen, menampilkan ikon Variable dan nama komponen. |
-| [[^button/refresh\|Refresh]] | Memuat ulang data pada tabel Variable. |
-| [[^field\|Search Variable Data...]] | Mencari data Variable pada tabel. |
-
-Pada area tabel terdapat:
-
-| Tombol | Fungsi |
-| --- | --- |
-| [[^button/add\|Add Row]] | Menambahkan baris Variable baru. |
-| [[^button/save\|Save]] | Menyimpan isian baris pada kolom [[^field\|Action]]. |
-| [[^button/delete\|Delete]] | Menghapus baris pada kolom [[^field\|Action]]. |
-
-<!--
-  * [TODO] Penempatan gambar: gunakan screenshot halaman kerja Variable dengan nama folder dan komponen pribadi diganti contoh generik, serta isi contoh baris diganti (misalnya Name `HUB_SERVER_IP`). Anotasi yang disarankan: (1) bilah navigasi dengan judul, Refresh, dan pencarian; (2) kepala kolom tabel; (3) baris data; (4) kolom Action; (5) Add Row.
--->
-
-<!--
-  * [TODO] Beberapa hal yang perlu dikonfirmasi pada Antarmuka: (1) pada screenshot, judul halaman dan tab tertulis "Variable" sedangkan nama header di Area Manajemen Folder "Variables". Apakah memang berbeda, atau ingin diseragamkan; (2) cakupan pencarian (Name saja atau semua kolom); (3) perbedaan tampilan mobile dan desktop, bila ada.
--->
-
-## Interaksi Antarmuka Variable
-| Fungsi | Aksi |
-| --- | --- |
-| Melihat kolom di sisi kanan tabel | Geser tabel secara horizontal menggunakan *scroll* di bagian bawah tabel. |
-| Mencari Variable | Ketik kata kunci pada kolom [[^field\|Search Variable Data...]]. |
 
 <!--
   * [TODO] Interaksi tabel saya tebak dari adanya *scroll* horizontal pada screenshot. Mohon koreksi bila ada gestur lain (misalnya mengubah lebar kolom atau mengurutkan baris).
