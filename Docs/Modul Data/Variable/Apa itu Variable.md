@@ -144,7 +144,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang data pada tabel Variable.
 
 **Menjaga API Key Penyedia AI Tetap Aman dalam Otomasi Flow**
 
-Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh AI. Layanan AI membutuhkan API Key, tetapi kunci tersebut tidak boleh diketahui seluruh anggota tim. Dengan Variable, kunci disimpan sekali, dan Flow memanggilnya lewat nama untuk kebutuhan integrasi.
+Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh AI. Layanan AI membutuhkan API Key, tetapi kunci tersebut tidak boleh diketahui seluruh anggota tim. Dengan Variable, kunci disimpan sekali, dan [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] memanggilnya lewat nama untuk kebutuhan integrasi.
 
 **Komponen yang terlibat**
 
@@ -171,9 +171,10 @@ flowchart LR
 | 4 | [[Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan\|TableData Setter]] | Menulis ringkasan ke baris tiket yang sama. | Ringkasan tampil di tabel. |
 
 **Hasil yang dirasakan**
+
 - Tiket baru langsung memiliki ringkasan tanpa pekerjaan manual.
 - API Key hanya disimpan di satu tempat dan tidak perlu dibagikan ke anggota tim.
-- Jika API Key diganti, Anda cukup memperbarui satu baris di Variable dan semua Flow yang memanggilnya ikut memakai nilai baru.
+- Jika API Key diganti, Anda cukup memperbarui satu baris di [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dan semua Flow yang memanggilnya ikut memakai nilai baru.
 
 **Ide skenario lain**
 
