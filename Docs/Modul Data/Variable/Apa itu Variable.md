@@ -159,7 +159,7 @@ Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh A
 flowchart LR
     A[**Table Row Event**<br/>Tiket baru masuk] -->|"**[Objek]**<br> &nbsp;Informasi Tiket&nbsp;"| C
     A -->|"&nbsp;**[Row]**&nbsp;"| D
-    B["**Variable Getter**<br/>AI_API_KEY"] -->|"**[Text]**<br>&nbsp;API Key&nbsp;"| C["**AI OpenAI 4**<br/>Ringkas isi tiket"]
+    B["**Variable Getter**<br/>AI_API_KEY"] -->|"**[Text]**<br>&nbsp;API Key&nbsp;"| C["**OpenAI 4**<br/>Ringkas isi tiket"]
     C -->|"&nbsp;**[Text]**&nbsp;<br>Hasil Ringkasan"| D["**TableData Setter**<br/>Simpan ringkasan"]
 ```
 
@@ -180,9 +180,9 @@ flowchart LR
 
 | Jenis nilai | Contoh integrasi |
 | --- | --- |
-| Alamat IP server *hub* | Beberapa Flow mengirim data ke perangkat atau layanan yang sama tanpa menuliskan alamatnya berulang kali. |
-| Alamat layanan atau URL dasar | Flow yang memanggil layanan eksternal merujuk satu Name, sehingga perpindahan alamat cukup diubah sekali. |
-| Parameter bisnis | Ambang batas atau batas waktu dipakai bersama oleh beberapa Flow dan tetap konsisten. |
+| Alamat IP server *hub* | Beberapa [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] mengirim data ke perangkat atau layanan yang sama tanpa menuliskan alamatnya berulang kali. |
+| Alamat layanan atau URL dasar | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] yang memanggil layanan eksternal merujuk satu Name, sehingga perpindahan alamat cukup diubah sekali. |
+| Parameter bisnis | Ambang batas atau batas waktu dipakai bersama oleh beberapa [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dan tetap konsisten. |
 | Konfigurasi notifikasi | data berisi tujuan notifikasi yang dipakai banyak proses. |
 
 ## Praktik Terbaik
@@ -201,7 +201,7 @@ flowchart LR
 - Header [[^field|Name]] "Variables" tidak dapat diganti.
 - Atribut [[^field|Name]] dari Variable Data harus unik.
 - [[^field|Created At]] dan [[^field|Updated At]] terisi otomatis dan tidak perlu Anda isi.
-- Menghapus baris Variable dapat membuat Flow atau komponen yang memanggil Name tersebut menghasilkan error.
+- Menghapus baris Variable dapat membuat [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] atau komponen yang memanggil Name tersebut menghasilkan error.
 - Isi [[^field|Value]] ditampilkan secara terbuka pada halaman kerja komponen Variable, sehingga hanya anggota yang memiliki akses komponen Variable yang dapat melihatnya.
 
 ## TL:DR
@@ -224,7 +224,7 @@ flowchart LR
 >**Apa yang terjadi jika Flow memanggil Name yang tidak ada?**
 >Flow tidak menemukan Variable tersebut, dan laporan error tampil di Flow Activity.
 >**Apakah saya dapat menghapus Variable yang sudah ditambahkan?**
->Ya. Baris pada tabel dapat dihapus, tetapi pastikan tidak ada komponen yang masih memanggilnya.
+>Ya. Data pada tabel dapat dihapus, tetapi pastikan tidak ada komponen yang masih memanggilnya.
 >**Apakah tim dapat melihat isi Value?**
->Tim cukup memakai Name untuk memanggil nilai sehingga tidak perlu mengetahui isinya. Siapa saja yang dapat membuka halaman kerja Variable tetap dapat melihat nilainya.
+>Tim cukup memakai Alias untuk memanggil nilai sehingga tidak perlu mengetahui isinya. Siapa saja yang dapat membuka halaman kerja Variable tetap dapat melihat nilainya.
 
