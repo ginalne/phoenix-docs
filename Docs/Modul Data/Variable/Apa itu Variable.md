@@ -12,32 +12,23 @@
 
 >**note** _Variable_ merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix.
 
-Variable adalah komponen yang dapat digunakan untuk mengelola Data Variable di dalam [[Inisialisasi/Apa itu Pro?|Pro]]. Variable Data bersifat unik sehingga data yang Anda simpan dapat menjadi sumber kebenaran dan dipakai di mana saja.
+Variable adalah komponen yang digunakan untuk mengelola Data Variable di dalam [[Inisialisasi/Apa itu Pro?|Pro]]. [[Docs/Tipe Data/Variable|Variable Data]] bersifat unik sehingga data yang Anda simpan dapat menjadi sumber kebenaran dan dipakai di mana saja.
 
-Komponen ini sudah tersedia sejak Pro dimulai. 
+Komponen ini sudah tersedia sejak [[Inisialisasi/Apa itu Pro?|Pro]] dimulai. 
 
-Lihat selengkapnya tentang [[Docs/Tipe Data/Variable|Variable Data]].
+## Mengapa Menggunakan Komponen Variable?
 
-## Mengapa Menggunakan Variable?
-- **Satu-satunya tempat mengelola Variable Data.** Variable adalah tipe data khusus didalam Phoenix dan semua komponen mengenalnya, namun hanya ada satu tempat untuk mengelolanya yaitu komponen ini.
-- **Satu sumber kebenaran.** Komponen Variable hanya ada satu untuk seluruh ekosistem dalam Pro, tidak dapat diduplikasi dan dihapus, sehingga menjadi *source of truth* yang dirujuk semua komponen.
-- **Sifat Variable Data yang unik** Anda membuat data sekali, lalu komponen lain cukup merujuk ke namanya. Tidak ada lagi salinan nilai yang tersebar dan berisiko tidak sinkron.
-- **Konstanta untuk tim.** Variable menjadi konstanta di lingkungan Pro, misalnya alamat server atau parameter yang dipakai banyak Flow.
-- **Nilainya bisa disamarkan.** Tim cukup memakai nama Variable, sehingga isi nilainya (misalnya alamat IP server *hub* atau API Key penyedia AI) tidak perlu diketahui, tetapi tetap dapat dipakai untuk integrasi.
-- **Dikenali semua komponen.** Field bertipe Variable di komponen mana pun menampilkan daftar dari komponen Variable, dan komponen di modul Logic seperti Flow dapat memanggilnya hanya lewat namanya.
+- **Pintu untuk mengelola Variable Data.** Variable adalah tipe data khusus didalam Phoenix dan semua komponen mengenalnya, namun hanya ada satu tempat untuk mengelolanya yaitu komponen ini.
+- **Satu dan selalu ada.** Komponen Variable hanya ada satu untuk seluruh ekosistem dalam Pro, tidak dapat diduplikasi dan dihapus, sehingga menjadi *source of truth* yang dirujuk semua komponen.
+- **Konstanta untuk tim.** Anda membuat data sekali, lalu komponen lain cukup merujuk ke namanya. Tidak ada lagi salinan nilai yang tersebar dan berisiko tidak sinkron.
+- **Nilainya bisa tersamarkan.** Jika ada anggota yang tidak memiliki akses komponen ini, maka anggota tersebut tidak akan dapat mengetahui nilai yang disimpan pada Variable Data walaupun tetap dapat digunakan untuk otomasi.
 
 ## Konsep Utama
+
 | Istilah | Penjelasan |
 | --- | --- |
-| [[#Halaman Kerja]] | Halaman berbentuk tabel tempat Anda mengelola isi Variable. |
-| [[#Membaca Data]] | Satu data dalam Variable, terdiri dari Name, Type, Value, dan Description. |
-| [[#Membaca Data|Name]] | Nama unik yang dipakai komponen lain untuk memanggil sebuah Variable. |
-| [[#Membaca Data|Type]] | Tipe data dari nilai yang disimpan. |
-| [[#Membaca Data|Value]] | Nilai yang disimpan, menyesuaikan Type. |
-| [[#Cara Kerja Variable|Alias]] | Pemanggilan nilai lewat Name sehingga isi Value tidak perlu diketahui pemakainya. |
-| [[Docs/Tipe Data/Variable|Tipe Data Variable]] | Tipe field yang menampilkan daftar Variable sebagai pilihan. |
-
-Untuk memahami komponen secara umum, lihat [[Docs/Apa itu Komponen?]]. Untuk memahami penempatan di folder, lihat [[Docs/Folder/Apa itu Folder]].
+| [[Docs/Tipe Data/Variable|Variable Data]] | Data dalam komponen Variable. |
+| [[#Cara Kerja Variable|Alias]] | Istilah untuk atribut [[^field|Name]] dari Variable Data yang berfungsi untuk dipanggil sehingga isi [[^field|Value]]-nya dapat digunakan. |
 
 ## Cara Kerja Variable
 Variable adalah satu sumber data yang dikenali semua komponen di dalam ruang lingkup Pro. Komponen lain memilih atau memanggil Variable lewat Name-nya, dan nilainya diambil dari tabel Variable.
@@ -223,32 +214,22 @@ flowchart LR
 | Parameter bisnis | Ambang batas atau batas waktu dipakai bersama oleh beberapa Flow dan tetap konsisten. |
 | Konfigurasi notifikasi | Satu Name berisi tujuan notifikasi yang dipakai banyak proses. |
 
-Dengan Variable, nilai konfigurasi dan nilai sensitif di Pro tersimpan di satu sumber yang terhubung ke semua komponen, tanpa mengorbankan keamanan maupun konsistensi data.
-
 ## Praktik Terbaik
 - **Beri Name yang deskriptif dan konsisten**, misalnya `AI_API_KEY` atau `HUB_SERVER_IP`, agar mudah dikenali saat dipilih atau dipanggil.
 - **Isi Description** untuk menjelaskan kegunaan Variable agar pengelola lain memahami fungsinya.
 - **Pilih Type yang sesuai** dengan Value agar nilai dapat dipakai dengan benar oleh komponen yang memanggilnya.
 - **Simpan satu nilai di satu Variable** dan hindari menyalin nilai yang sama ke komponen lain.
-- **Periksa pemakaian sebelum menghapus** Variable, terutama yang dipanggil oleh Flow.
-- **Batasi pihak yang dapat melihat halaman kerja Variable** bila Value berisi nilai sensitif.
-
-<!--
-  * [TODO] Poin terakhir mengikuti asumsi bahwa kerahasiaan Value dikendalikan lewat hak akses. Hapus bila mekanismenya berbeda.
--->
+- **Periksa pemakaian sebelum menghapus** Variable, terutama yang dipanggil oleh komponen di [[Docs/Modul Logic/Pengenalan|Modul Logic]].
+- **Batasi pihak yang dapat melihat komponen Variable** bila Value berisi nilai sensitif.
 
 ## Batasan dan Catatan
-- Hanya ada satu komponen Variable di dalam Pro, dan tidak dapat ditambah lewat Area Manajemen Folder.
+- Hanya ada satu komponen Variable di dalam Pro, dan tidak dapat ditambah lewat [[Docs/Antarmuka#Area Manajemen Folder]].
 - Komponen Variable tidak dapat dihapus, tetapi dapat dipindahkan ke folder lain.
-- Nama header "Variables" tidak dapat diganti.
-- Name tidak boleh sama antar baris.
+- Header [[^field|Name]] "Variables" tidak dapat diganti.
+- Atribut [[^field|Name]] dari Variable Data harus unik.
 - [[^field|Created At]] dan [[^field|Updated At]] terisi otomatis dan tidak perlu Anda isi.
-- Menghapus baris Variable dapat membuat Flow atau komponen yang memanggil Name tersebut menghasilkan error, yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity]].
-- Isi Value ditampilkan pada halaman kerja Variable, sehingga pihak yang dapat membukanya dapat melihat nilainya.
-
-<!--
-  * [TODO] Poin terakhir di Batasan dan Catatan adalah dugaan saya berdasarkan screenshot. Mohon konfirmasi sesuai mekanisme sebenarnya.
--->
+- Menghapus baris Variable dapat membuat Flow atau komponen yang memanggil Name tersebut menghasilkan error.
+- Isi [[^field|Value]] ditampilkan secara terbuka pada halaman kerja komponen Variable, sehingga hanya anggota yang memiliki akses komponen Variable yang dapat melihatnya.
 
 ## TL:DR
 - Variable adalah komponen bawaan Pro yang menjadi satu sumber data universal, dibuat otomatis di folder root dan tidak dapat dihapus.
