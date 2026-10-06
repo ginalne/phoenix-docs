@@ -19,7 +19,9 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 
 ## Variable
 
-Variabel merupakan komponen yang dikenali semua komponen sebagai satu sumber universal. Komponen ini secara _default_ dibuat ketika memulai halaman kerja (Pro) baru dan tidak dapat dihapus.
+_Variable_ adalah komponen yang dapat digunakan untuk menyimpan nilai konstanta dan konfigurasi sebagai satu sumber data universal di dalam [[Inisialisasi/Apa itu Pro?|Pro]]. Semua komponen mengenali _Variable_, sehingga nilai yang Anda simpan sekali dapat dipakai di mana saja.
+
+Komponen ini sudah tersedia sejak Pro dimulai. Anda cukup membuka halaman kerjanya, mengisi baris pada tabel.
 
 >**warning** Harap hati-hati
 >Karena sifatnya universal, pastikan Anda menyimpan komponen ini secara aman dan dapat mengatur aksesnya dengan hati-hati menggunakan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].

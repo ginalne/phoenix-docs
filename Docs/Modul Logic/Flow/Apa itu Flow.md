@@ -6,7 +6,7 @@
       tree:
         priority: 1
 ---
-# Apa itu Flow
+# Apa itu Flow?
 
 >**note** _Flow_ merupakan salah satu komponen dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
 
