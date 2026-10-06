@@ -3,10 +3,7 @@
     pageDecoration:
       icon: zap
       tree:
-        priority: 1
+        priority: 0
     tags:
       draft
 ---
-# Event
-_
-

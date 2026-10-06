@@ -29,7 +29,7 @@ _Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pen
 | [[#Antarmuka Flow|Blueprint]] | Area kerja tempat Anda menambahkan, menata, dan menghubungkan Flow Block. Posisi kursor (x, y) dan *scale* tampil di sudut kiri bawah halaman. |
 | [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Antarmuka Flow Block|Input dan Output]] | Titik penghubung pada Flow Block. Output berada di sisi kanan block, input berada di sisi kiri block. |
 | [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Antarmuka Flow Block|Koneksi]] | Garis penghubung dari output sebuah block ke input block lain. Koneksi menentukan arah aliran proses. |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] | Flow Block pemicu proses, misalnya Pulser dan Variable Event. Block ini juga memiliki tombol untuk eksekusi manual. Selengkapnya lihat [[Docs/Event/Apa itu Event\|Event]]. |
+| [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] | Flow Block pemicu proses, misalnya Pulser dan Variable Event. Block ini juga memiliki tombol untuk eksekusi manual. Selengkapnya lihat [[Docs/Event/Apa itu Event|Event]]. |
 | [[Docs/Modul Logic/Flow/Flow Activity]] | Tampilan pemantauan proses yang sedang atau sudah berjalan di dalam Flow. |
 
 ## Cara Kerja Flow
@@ -146,9 +146,9 @@ Bayangkan tim operasional Anda mencatat pesanan pelanggan pada sebuah Table. Sel
 
 | Komponen | Peran |
 | --- | --- |
-| [[^field/table\|Daftar Pesanan]] | Sumber data. Setiap baris adalah satu pesanan beserta nomor pesanan, pelanggan, status, dan total. |
-| [[^field/enum\|Status Pesanan]] | Pilihan status yang dipakai pada kolom status, misalnya Baru, Diproses, Siap Dikirim, dan Terkirim. |
-| [[^field/flow\|Notifikasi Pesanan]] | Flow yang berisi rangkaian Flow Block untuk meneruskan data pesanan. |
+| [[^field/table|Daftar Pesanan]] | Sumber data. Setiap baris adalah satu pesanan beserta nomor pesanan, pelanggan, status, dan total. |
+| [[^field/enum|Status Pesanan]] | Pilihan status yang dipakai pada kolom status, misalnya Baru, Diproses, Siap Dikirim, dan Terkirim. |
+| [[^field/flow|Notifikasi Pesanan]] | Flow yang berisi rangkaian Flow Block untuk meneruskan data pesanan. |
 | Sistem lain | Aplikasi logistik atau aplikasi pesan yang menerima data melalui API. |
 
 **Alur di Flow**
@@ -167,14 +167,14 @@ flowchart TB
 
 | Langkah | Flow Block | Peran dalam alur | Hasil |
 | --- | --- | --- | --- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]] | Dihubungkan ke Daftar Pesanan melalui tombol  [[^button/event\|Event]] pada Table, lalu terpicu ketika baris pesanan berubah. | Data baris pesanan masuk ke Flow. |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]] | Dihubungkan ke Daftar Pesanan melalui tombol pada Table, lalu terpicu ketika baris pesanan berubah. | Data baris pesanan masuk ke Flow. |
-| 2 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Table/TableRow Parse\|TableRow Parse]] | Mengurai baris menjadi nilai per kolom: nomor pesanan, pelanggan, status, dan total. | Setiap nilai kolom siap dipakai block berikutnya. |
-| 3 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If\|If]] | Memeriksa apakah status pesanan adalah Siap Dikirim. | Hanya perubahan yang relevan yang dilanjutkan. |
-| 4 | [[Docs/Modul Logic/Flow/Flow Block/Modular/AI/OpenAI 4\|OpenAI 4]] | Menyusun pesan pemberitahuan yang ramah dari data pesanan. | Teks pesan siap kirim. |
-| 5 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Object/Stringify\|Stringify]] | Mengubah data pesanan dan pesan menjadi teks yang siap dikirim. | Muatan data (*payload*) siap dikirim. |
-| 6 | [[Docs/Modul Logic/Flow/Flow Block/Modular/API/HTTP Request\|HTTP Request]] | Mengirim muatan data ke aplikasi logistik atau aplikasi pesan. | Sistem lain menerima pesanan. |
-| 7 | [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message\|Error Message]] | Menampilkan pesan kesalahan bila pengiriman gagal. | Kegagalan terlihat dan dapat ditelusuri di [[Docs/Modul Logic/Flow/Flow Activity\|Flow Activity]]. |
+| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]] | Dihubungkan ke Daftar Pesanan melalui tombol  [[^button/event|Event]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]], lalu terpicu ketika baris pesanan berubah. | Data baris pesanan masuk ke Flow. |
+| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]] | Dihubungkan ke Daftar Pesanan melalui tombol pada Table, lalu terpicu ketika baris pesanan berubah. | Data baris pesanan masuk ke Flow. |
+| 2 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Table/TableRow Parse|TableRow Parse]] | Mengurai baris menjadi nilai per kolom: nomor pesanan, pelanggan, status, dan total. | Setiap nilai kolom siap dipakai block berikutnya. |
+| 3 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If|If]] | Memeriksa apakah status pesanan adalah Siap Dikirim. | Hanya perubahan yang relevan yang dilanjutkan. |
+| 4 | [[Docs/Modul Logic/Flow/Flow Block/Modula/AI/OpenAI]] | Menyusun pesan pemberitahuan yang ramah dari data pesanan. | Teks pesan siap kirim. |
+| 5 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Object/Stringify|Stringify]] | Mengubah data pesanan dan pesan menjadi teks yang siap dikirim. | Muatan data (*payload*) siap dikirim. |
+| 6 | [[Docs/Modul Logic/Flow/Flow Block/Modular/API/HTTP Request|HTTP Request]] | Mengirim muatan data ke aplikasi logistik atau aplikasi pesan. | Sistem lain menerima pesanan. |
+| 7 | [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message|Error Message]] | Menampilkan pesan kesalahan bila pengiriman gagal. | Kegagalan terlihat dan dapat ditelusuri di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. |
 
 **Hasil yang dirasakan**
 
@@ -187,10 +187,10 @@ flowchart TB
 
 | Pemicu | Contoh integrasi |
 | --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event\|Variable Event]] | **Peringatan stok menipis.** Saat nilai Variable stok turun di bawah batas, kirim peringatan ke tim pengadaan melalui aplikasi pesan. |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event\|Enum Data Event]] | **Kabar status layanan.** Saat status tiket berubah, kabari pelanggan melalui sistem komunikasi yang sudah mereka pakai. |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event\|Tree Node Event]] | **Sinkronisasi struktur.** Saat node pada struktur organisasi atau kategori produk berubah, perbarui sistem kepegawaian atau katalog. |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser\|Pulser]] | **Ringkasan berkala.** Ambil data Table, minta [[Docs/Modul Logic/Flow/Flow Block/Modular/AI/OpenAI 4\|OpenAI 4]] meringkasnya menjadi laporan singkat, lalu kirim ke manajemen. |
+| [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event|Variable Event]] | **Peringatan stok menipis.** Saat nilai Variable stok turun di bawah batas, kirim peringatan ke tim pengadaan melalui aplikasi pesan. |
+| [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event|Enum Data Event]] | **Kabar status layanan.** Saat status tiket berubah, kabari pelanggan melalui sistem komunikasi yang sudah mereka pakai. |
+| [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event]] | **Sinkronisasi struktur.** Saat node pada struktur organisasi atau kategori produk berubah, perbarui sistem kepegawaian atau katalog. |
+| [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] | **Ringkasan berkala.** Ambil data Table, minta [[Docs/Modul Logic/Flow/Flow Block/Modular/AI/OpenAI 4|OpenAI 4]] meringkasnya menjadi laporan singkat, lalu kirim ke manajemen. |
 
 Dengan satu Flow, data yang Anda kelola di Phoenix tidak berhenti sebagai catatan, tetapi langsung menjadi tindakan di sistem lain tanpa perlu disalin ulang.
 
@@ -235,4 +235,4 @@ Dengan satu Flow, data yang Anda kelola di Phoenix tidak berhenti sebagai catata
 >**Bagaimana menghubungkan dua Flow Block?**
 >Klik dan tahan titik output pada block asal, seret ke titik input block tujuan, lalu lepaskan. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menghubungkan Koneksi|Menghubungkan Koneksi]].
 >**Apakah Flow dapat mengirim data ke sistem lain?**
->Bisa. Gunakan Flow Block [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Modular]] seperti HTTP Request. Lihat [[#Contoh Penggunaan]] untuk gambaran alurnya.
+>Bisa. Gunakan Flow Block [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP |Modular]] seperti HTTP Request. Lihat [[#Contoh Penggunaan]] untuk gambaran alurnya.

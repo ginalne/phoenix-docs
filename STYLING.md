@@ -200,7 +200,7 @@ test [[button/edit|Edit]] [[button|Create]]
 
 | Langkah | Flow Block | Peran dalam alur | Hasil |
 | --- | --- | --- | --- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]] | Dihubungkan ke Daftar Pesanan melalui tombol  [[^button/event\|Event Ini Berat banget sih gua gakuat heheehehe]]  pada Table, lalu terpicu ketika baris pesanan berubah. | Data baris pesanan masuk ke Flow. |
+| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]] | Dihubungkan ke Daftar Pesanan melalui tombol  [[^button/event|Event Ini Berat banget sih gua gakuat heheehehe]]  pada Table, lalu terpicu ketika baris pesanan berubah. | Data baris pesanan masuk ke Flow. |
 
 ```space-style
 /* Style links starting with button: */

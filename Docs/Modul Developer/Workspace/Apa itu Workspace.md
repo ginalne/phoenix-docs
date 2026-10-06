@@ -203,7 +203,6 @@ Anggota Group tetap dapat membuka komponen untuk dibaca, tetapi tidak dapat meng
 - Halaman kerja Workspace memiliki dua tombol: [[^button/edit|Edit]] dan [[^button/refresh|Refresh]]
 
 ## FAQ : Pertanyaan yang Sering Diajukan
-
 >**faq**
 >**Bagaimana pengguna dapat memakai Workspace?**
 >Pengguna harus dipetakan ke Workspace melalui komponen Group. Setelah itu, saat membuka Phoenix mereka akan masuk ke Workspace tersebut.

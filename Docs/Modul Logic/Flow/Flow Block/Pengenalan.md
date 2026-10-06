@@ -3,18 +3,20 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 0
+        priority: 4
     tags:
       draft
 ---
+# Apa itu Flow Block
+
 ## Menambahkan Flow Block
 
 ![[Docs/Modul Logic/Flow/Flow Block/add-flow-block.png]]
 1. Buka halaman kerja Flow
 2. Klik kanan pada blueprint > [[^field/add|Add]]
 3. Pilih kategori Flow Block, misalnya [[^field/event|Event]]
-4. Pilih Flow Block, misalnya [[^field/event|Pulser]]
-   
+4. Pilih Flow Block, misalnya [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser]]
+
 ## Kategori Flow Block
 
 Pengkategorian Flow Block berfungsi agar memudahkan pencarian block.  Selengkapnya bisa klik tautan per masing-masing kategori atau isinya:

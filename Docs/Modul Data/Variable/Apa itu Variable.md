@@ -76,7 +76,7 @@ Bilah navigasi Variable terdiri dari:
 | --- | --- |
 | [[^field/variable|Variable]] | Judul komponen, menampilkan ikon Variable dan nama komponen. |
 | [[^button/refresh|Refresh]] | Memuat ulang data pada tabel Variable. |
-| [[^field\|Search Variable Data...]] | Mencari data Variable pada tabel. |
+| [[^field|Search Variable Data...]] | Mencari data Variable pada tabel. |
 
 Kolom pada tabel Variable adalah:
 

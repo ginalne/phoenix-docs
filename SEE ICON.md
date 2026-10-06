@@ -46,6 +46,6 @@ ${query[[
 
 ${query[[
   from p = index.aspiringPages()
-  select "- <i style=\"color:#faa\">[[" .. p.name .. "]]</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
+  select "- <i style=\"color:#faa\">[[" .. p.name .. "@" ..  ""]]</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
   where string.startsWith(p.name, "field")
 ]]}

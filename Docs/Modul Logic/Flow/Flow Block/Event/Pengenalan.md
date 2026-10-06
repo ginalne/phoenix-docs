@@ -1,12 +1,11 @@
 ---
     status: draft
     pageDecoration:
-      icon: zap
+      icon: x
       tree:
-        priority: 1
+        priority: 0
     tags:
+      flowblock-category
       draft
 ---
-# Event
-_
-
+# Flow Block Event 
