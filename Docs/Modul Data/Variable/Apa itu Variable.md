@@ -186,6 +186,7 @@ flowchart LR
 | Konfigurasi notifikasi | data berisi tujuan notifikasi yang dipakai banyak proses. |
 
 ## Praktik Terbaik
+
 - **Beri [[^field|Name]] yang deskriptif dan konsisten**, misalnya `AI_API_KEY` atau `HUB_IP_ADDRESS`, agar mudah dikenali saat dipilih atau dipanggil.
 - **Isi [[^field|Description]]** untuk menjelaskan kegunaan Variable agar pengelola lain memahami fungsinya.
 - **Pilih [[^field|Type]] yang sesuai** dengan Value agar nilai dapat dipakai dengan benar oleh komponen yang memanggilnya.
@@ -194,6 +195,7 @@ flowchart LR
 - **Batasi pihak yang dapat melihat komponen Variable** bila [[^field|Value]] berisi nilai sensitif.
 
 ## Batasan dan Catatan
+
 - Hanya ada satu komponen Variable di dalam Pro, dan tidak dapat ditambah lewat [[Docs/Antarmuka#Area Manajemen Folder]].
 - Komponen Variable tidak dapat dihapus, tetapi dapat dipindahkan ke folder lain.
 - Header [[^field|Name]] "Variables" tidak dapat diganti.
@@ -203,6 +205,7 @@ flowchart LR
 - Isi [[^field|Value]] ditampilkan secara terbuka pada halaman kerja komponen Variable, sehingga hanya anggota yang memiliki akses komponen Variable yang dapat melihatnya.
 
 ## TL:DR
+
 - Variable adalah komponen bawaan Pro yang menjadi satu sumber data universal, dibuat otomatis di folder root dan tidak dapat dihapus.
 - Isi Variable dikelola di halaman kerja berbentuk tabel dengan kolom [[^field|Name]], [[^field|Type]], [[^field|Value]], [[^field|Description]], [[^field|Created At]] , dan [[^field|Updated At]].
 - [[^field|Name]] harus unik, sedangkan [[^field|Created At]] dan [[^field|Updated At]] terisi otomatis.
