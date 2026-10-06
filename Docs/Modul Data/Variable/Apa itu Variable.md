@@ -12,16 +12,19 @@
 
 >**note** _Variable_ merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix.
 
-_Variable_ adalah komponen yang dapat digunakan untuk menyimpan nilai konstanta dan konfigurasi sebagai satu sumber data universal di dalam [[Inisialisasi/Apa itu Pro?|Pro]]. Semua komponen mengenali _Variable_, sehingga nilai yang Anda simpan sekali dapat dipakai di mana saja.
+Variable adalah komponen yang dapat digunakan untuk mengelola Data Variable di dalam [[Inisialisasi/Apa itu Pro?|Pro]]. Variable Data bersifat unik sehingga data yang Anda simpan dapat menjadi sumber kebenaran dan dipakai di mana saja.
 
-Komponen ini sudah tersedia sejak Pro dimulai. Anda cukup membuka halaman kerjanya, mengisi baris pada tabel.
+Komponen ini sudah tersedia sejak Pro dimulai. 
+
+Lihat selengkapnya tentang [[Docs/Tipe Data/Variable|Variable Data]].
 
 ## Mengapa Menggunakan Variable?
-- **Satu sumber kebenaran.** Nilai konfigurasi Pro disimpan di satu tempat, sehingga menjadi *source of truth* yang dirujuk semua komponen.
-- **Tidak ada nilai ganda.** Anda menulis nilai sekali, lalu komponen lain cukup merujuk ke namanya. Tidak ada lagi salinan nilai yang tersebar dan berisiko tidak sinkron.
-- **Konstanta untuk seluruh Pro.** Variable menjadi konstanta di lingkungan Pro, misalnya alamat server atau parameter yang dipakai banyak Flow.
+- **Satu-satunya tempat mengelola Variable Data.** Variable adalah tipe data khusus didalam Phoenix dan semua komponen mengenalnya, namun hanya ada satu tempat untuk mengelolanya yaitu komponen ini.
+- **Satu sumber kebenaran.** Komponen Variable hanya ada satu untuk seluruh ekosistem dalam Pro, tidak dapat diduplikasi dan dihapus, sehingga menjadi *source of truth* yang dirujuk semua komponen.
+- **Sifat Variable Data yang unik** Anda membuat data sekali, lalu komponen lain cukup merujuk ke namanya. Tidak ada lagi salinan nilai yang tersebar dan berisiko tidak sinkron.
+- **Konstanta untuk tim.** Variable menjadi konstanta di lingkungan Pro, misalnya alamat server atau parameter yang dipakai banyak Flow.
 - **Nilainya bisa disamarkan.** Tim cukup memakai nama Variable, sehingga isi nilainya (misalnya alamat IP server *hub* atau API Key penyedia AI) tidak perlu diketahui, tetapi tetap dapat dipakai untuk integrasi.
-- **Dikenali semua komponen.** Field bertipe Variable di komponen mana pun menampilkan daftar dari tabel Variable, dan komponen di modul Logic seperti Flow dapat memanggilnya lewat nama.
+- **Dikenali semua komponen.** Field bertipe Variable di komponen mana pun menampilkan daftar dari komponen Variable, dan komponen di modul Logic seperti Flow dapat memanggilnya hanya lewat namanya.
 
 ## Konsep Utama
 | Istilah | Penjelasan |
@@ -52,10 +55,11 @@ Ada dua cara komponen merujuk ke Variable:
 - **Field bertipe Variable.** Pada komponen yang memiliki field dengan [[Docs/Tipe Data/Variable|tipe data Variable]], pilihannya adalah daftar baris pada tabel Variable.
 - **Komponen di modul Logic.** Komponen seperti [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dapat mengisi field Variable cukup dengan Name-nya dalam bentuk *string*. Jika Name tidak ditemukan di tabel Variable, laporan error akan tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
-Selain sebagai konstanta, Variable berfungsi sebagai *alias*: pemakai memanggil nilai lewat Name, sehingga isi Value tidak harus diketahui oleh tim, tetapi tetap dapat dipakai untuk kebutuhan integrasi.
+Selain sebagai konstanta, Variable berfungsi sebagai *alias*: pemakai memanggil nilai lewat [[^field|Name]], sehingga isi [[^field|Value]] tidak harus diketahui oleh tim, tetapi tetap dapat dipakai untuk kebutuhan integrasi.
 
 <!--
   * [TODO] Mekanisme "tim tidak dapat mengetahui isi nilai" belum saya jelaskan lebih jauh karena tabel Variable pada gambar menampilkan Value apa adanya. Apakah tersamarnya Value bergantung pada hak akses (misalnya anggota yang tidak punya akses melihat halaman kerja Variable di [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Workspace), atau ada mekanisme lain seperti masking? Mohon dijelaskan agar bagian ini dan Batasan dan Catatan dapat dipertegas.
+    Jawaban : Ya hanya di workspace. Pembatasan akses saat ini hanya berlaku melalui workspace.
 -->
 
 ## Membuat Variable
@@ -80,7 +84,9 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang data pada tabel Variable.
 
 ## Halaman Kerja
 
-![[Docs/Modul Data/Variable/interface-variable.png]]
+Halaman kerja Variable terdiri dari bilah navigasi di bagian atas dan tabel Variable di bagian bawah. Tombol untuk menambahkan baris berada di bawah tabel.
+
+![[Docs/Modul Data/Variable/halaman-kerja.png]]
 Halaman kerja Variable berbentuk tabel. Isi tabel dimulai dengan kosong, dan Anda perlu membuka halaman kerja ini untuk menambahkan data. Setiap baris pada tabel mewakili satu Variable.
 
 Kolom pada tabel Variable adalah:
@@ -94,26 +100,16 @@ Kolom pada tabel Variable adalah:
 | [[^field\|Created At]] | Waktu baris dibuat. | Terisi otomatis |
 | [[^field\|Updated At]] | Waktu baris terakhir diperbarui. | Terisi otomatis |
 
+## Menambahkan Variable
 
-## Membaca Data Variable
-
-Setiap baris mewakili satu Data Variable. Cara membaca sebuah baris:
-
-- [[^field|Name]] adalah pengenal Variable. Komponen lain memakai Name ini untuk memilih atau memanggil Variable. Antar baris tidak boleh memiliki Name yang sama.
-- [[^field|Type]] menentukan [[Docs/Tipe Data/Apa itu Tipe Data|Tipe Data]] nilai yang disimpan
-- [[^field|Value]] adalah nilai yang disimpan berdasarkan [[^field|Type]] tersebut.
-- [[^field|Description]] membantu pengelola memahami kegunaan Variable tersebut.
-- [[^field|Created At]] dan [[^field|Updated At]] terisi otomatis oleh Phoenix, sehingga Anda tidak perlu mengisinya.
-
-## Mengelola Data Variable
-
-### Menambahkan Variable
 1. Buka halaman kerja Variable dengan mengklik [[^field/variable|Variables]] di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik [[^button/add|Add Row]]
 3. Isi [[^field|Name]], [[^field|Type]], [[^field|Value]], dan [[^field|Description]]
 4. Klik [[^button/save|Save]]
 
-### Mengubah Variable
+Anda dapat klik [[^button/delete|Cancel]] untuk membatalkan penambahan Data Variable
+
+## Mengubah Variable
 1. Buka halaman kerja Variable
 2. Ubah isian pada baris yang ingin diperbarui
 3. Klik [[^button/save|Save]]
@@ -123,18 +119,16 @@ Kolom [[^field|Updated At]] terisi otomatis setelah baris disimpan.
 ### Menghapus Variable
 1. Buka halaman kerja Variable
 2. Pada kolom [[^field|Action]], klik [[^button/delete|Delete]] pada baris yang ingin dihapus
+3. Konfirmasi dengan [[^button|Delete]]
 
 >**warning** Pastikan Variable tidak lagi dipakai
 >Variable yang dihapus tidak lagi tersedia sebagai pilihan pada field bertipe Variable. Flow atau komponen lain yang masih memanggil Name tersebut tidak akan menemukan nilainya, dan laporan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]]. Periksa dulu komponen yang memakai Variable sebelum menghapusnya.
 
-<!--
-  * [TODO] Mohon konfirmasi untuk Mengelola Data Variable: (1) tombol Delete berada di kolom Action di samping Save (pada screenshot tombol ini belum terlihat karena adanya bug yang Anda sebutkan); (2) apakah ada dialog konfirmasi saat Delete; (3) apakah Name pada baris yang sudah tersimpan dapat diubah; (4) pesan yang tampil bila Name sama dengan baris lain; (5) apakah baris yang diubah harus diklik dulu sebelum bisa diedit atau langsung dapat diedit di tabel; (6) ikon tombol Add Row (tanda plus) belum ada di daftar ikon tombol, saya tulis sebagai `[[^button/add|Add Row]]`.
--->
 
 ## Antarmuka Variable
 ![[Docs/Modul Data/Variable/halaman-kerja-variable.png]]
 
-Halaman kerja Variable terdiri dari bilah navigasi di bagian atas dan tabel Variable di bagian bawah. Tombol untuk menambahkan baris berada di bawah tabel.
+
 
 Bilah navigasi Variable terdiri dari:
 
