@@ -36,7 +36,7 @@ _Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pen
 Flow Block Event memicu proses, lalu hasilnya mengalir lewat koneksi dari satu Flow Block ke Flow Block berikutnya hingga menghasilkan keluaran.
 
 ```mermaid
-flowchart LR
+flowchart TB
     Komponen["Komponen Data<br/>(Variable, Enum, Table, Tree)"] -.->|Event| BE["Flow Block (Event)"]
     Manual["Tombol pada Flow Block Event<br/>(eksekusi manual)"] --> BE
     BE -->|Output ke Input| B1["Flow Block"]
@@ -152,18 +152,17 @@ Bayangkan tim operasional Anda mencatat pesanan pelanggan pada sebuah Table. Sel
 | Sistem lain | Aplikasi logistik atau aplikasi pesan yang menerima data melalui API. |
 
 **Alur di Flow**
-
 ```mermaid
-flowchart LR
-    T["Table<br/>Daftar Pesanan"] -.->|Event| E["Table Row Event"]
-    E --> P["TableRow Parse"]
-    P --> I{"If<br/>Status = Siap Dikirim?"}
-    I -->|Ya| A["OpenAI 4<br/>Susun pesan"]
-    I -->|Tidak| X["Selesai"]
-    A --> S["Stringify"]
-    S --> H["HTTP Request<br/>Kirim ke sistem lain"]
-    H --> O["Sistem lain<br/>menerima data"]
-    H -.->|Gagal| ER["Error Message"]
+flowchart TB
+    T@{ shape: database, label: "**Table**<br/>Daftar Pesanan" } -.->|&nbsp;Create Event&nbsp;| E@{ shape: rounded, label: "**Table Row Event**" }
+    E --> P@{ shape: rounded, label: "**TableRow Parse**" }
+    P --> I@{ shape: rounded, label: "**If**<br>Status = Siap Dikirim?" }
+    I -->|&nbsp;Ya&nbsp;| A@{ shape: rounded, label: "**OpenAI 4**<br/>Susun pesan"}
+    I -->|&nbsp;Tidak&nbsp;| X@{ shape: circle, label: "Selesai" }
+    A --> S@{ shape: rounded, label: "**Stringify**<br/>Susun pesan"}
+    S --> H@{ shape: rounded, label: "**HTTP Request**<br/>Kirim ke sistem lain"}
+    H --> O@{ shape: processes, label: "Sistem lain<br/>menerima data" }
+    H -.->|Gagal| ER@{ shape: rounded, label: "**Error Message**"}
 ```
 
 | Langkah | Flow Block | Peran dalam alur | Hasil |

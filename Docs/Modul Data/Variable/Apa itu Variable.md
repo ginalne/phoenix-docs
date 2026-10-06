@@ -18,17 +18,17 @@ Komponen ini sudah tersedia sejak [[Inisialisasi/Apa itu Pro?|Pro]] dimulai.
 
 ## Mengapa Menggunakan Komponen Variable?
 
-- **Pintu untuk mengelola Variable Data.** Variable adalah tipe data khusus didalam Phoenix dan semua komponen mengenalnya, namun hanya ada satu tempat untuk mengelolanya yaitu komponen ini.
+- **Pintu untuk mengelola Variable Data.** Variable Data adalah tipe data khusus didalam Phoenix dan semua komponen mengenalnya, namun hanya ada satu tempat untuk mengelolanya yaitu komponen ini.
 - **Satu dan selalu ada.** Komponen Variable hanya ada satu untuk seluruh ekosistem dalam Pro, tidak dapat diduplikasi dan dihapus, sehingga menjadi *source of truth* yang dirujuk semua komponen.
 - **Konstanta untuk tim.** Anda membuat data sekali, lalu komponen lain cukup merujuk ke namanya. Tidak ada lagi salinan nilai yang tersebar dan berisiko tidak sinkron.
-- **Nilainya bisa tersamarkan.** Jika ada anggota yang tidak memiliki akses komponen ini, maka anggota tersebut tidak akan dapat mengetahui nilai yang disimpan pada Variable Data walaupun tetap dapat digunakan untuk otomasi.
+- **Nilainya bisa tersamarkan.** Jika ada anggota yang tidak memiliki akses komponen ini, maka anggota tersebut tidak akan dapat mengetahui [[^field|Value]] yang disimpan walaupun tetap dapat menggunakannya untuk otomasi atau integrasi.
 
 ## Konsep Utama
 
 | Istilah | Penjelasan |
 | --- | --- |
 | [[Docs/Tipe Data/Variable|Variable Data]] | Data dalam komponen Variable. |
-| [[#Cara Kerja Variable|Alias]] | Istilah untuk atribut [[^field|Name]] dari Variable Data yang berfungsi untuk dipanggil agar isi [[^field|Value]]-nya dapat diakses. |
+| [[#Cara Kerja Variable|Alias]] | Istilah dari komponen lain yang merujuk ke isi [[^field|Name]] dari Variable Data. |
 
 ## Cara Kerja Variable
 
@@ -39,13 +39,13 @@ flowchart TB
     P["Pro"] -->|"Membuat otomatis"| V["Komponen Variable"]
     L -.->|"Alias Valid"| V
     V -->|"Name dan Desc<br>(pilihan)"| F["Field bertipe Variable (komponen lain)"]
-    L -.->|"Alias tidak valid"| A["Empty Value"]
+    L -.->|"Alias tidak valid"| A["Nilai Kosong atau Error"]
 ```
 
 Ada dua cara komponen merujuk ke Variable:
 
 - **Field bertipe Variable.** Pada komponen yang memiliki field dengan [[Docs/Tipe Data/Variable|tipe data Variable]], pilihannya adalah daftar [[^field|Name]] dan [[^field|Description]] dari Variable Data.
-- **Komponen di modul Logic.** Komponen dalam [[Docs/Modul Logic]] dapat mengisi field Variable cukup dengan [[^field|Alias]]. Jika [[^field|Alias]] tidak valid di Variable (tidak ada [[^field|Nama]] yang cocok), maka tidak ada nilai yang diterima.
+- **Komponen di modul Logic.** Komponen dalam [[Docs/Modul Logic]] dapat mengisi field Variable cukup dengan [[^field|Alias]]. Jika [[^field|Alias]] tidak valid di Variable (tidak ada [[^field|Nama]] yang cocok), maka tidak ada nilai yang diterima atau error.
 
 ## Menambahkan Komponen Variable
 >**danger** Komponen Variable tidak bisa dibuat[[Docs/Antarmuka#Area Manajemen Folder]].
@@ -82,12 +82,12 @@ Kolom pada tabel Variable adalah:
 
 | Kolom | Penjelasan | Pengisian |
 | --- | --- | --- |
-| [[^field\|Name]] | Nama Variable. Tidak boleh sama dengan baris lain. | Diisi oleh Anda |
-| [[^field\|Type]] | Tipe data dari nilai yang disimpan, misalnya [[Docs/Tipe Data/String\|String]]. | Diisi oleh Anda |
-| [[^field\|Value]] | Nilai yang disimpan, menyesuaikan Type. | Diisi oleh Anda |
-| [[^field\|Description]] | Keterangan tentang kegunaan Variable. | Diisi oleh Anda |
-| [[^field\|Created At]] | Waktu baris dibuat. | Terisi otomatis |
-| [[^field\|Updated At]] | Waktu baris terakhir diperbarui. | Terisi otomatis |
+| [[^field|Name]] | Nama Variable. Tidak boleh sama dengan baris lain. | Diisi oleh Anda |
+| [[^field|Type]] | Tipe data dari nilai yang disimpan, misalnya [[Docs/Tipe Data/String\|String]]. | Diisi oleh Anda |
+| [[^field|Value]] | Nilai yang disimpan, menyesuaikan Type. | Diisi oleh Anda |
+| [[^field|Description]] | Keterangan tentang kegunaan Variable. | Diisi oleh Anda |
+| [[^field|Created At]] | Waktu baris dibuat. | Terisi otomatis |
+| [[^field|Updated At]] | Waktu baris terakhir diperbarui. | Terisi otomatis |
 
 Pada area tabel terdapat:
 
@@ -157,12 +157,11 @@ Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh A
 **Alur di Flow**
 ```mermaid
 flowchart LR
-    A[**Table Row Event**<br/>Tiket baru masuk] -->|"&nbsp;**<Objek >** Informasi Tiket&nbsp;"| C
-    A -->|" Row ID "| D
-    B["**Variable Getter**<br/>AI_API_KEY"] -->|"Value"| C["**AI OpenAI 4**<br/>Ringkas isi tiket"]
-    C --> D["**TableData Setter**<br/>Simpan ringkasan"]
+    A[**Table Row Event**<br/>Tiket baru masuk] -->|"**[Objek]**<br> &nbsp;Informasi Tiket&nbsp;"| C
+    A -->|"&nbsp;**[Row]**&nbsp;"| D
+    B["**Variable Getter**<br/>AI_API_KEY"] -->|"**[Text]**<br>&nbsp;API Key&nbsp;"| C["**AI OpenAI 4**<br/>Ringkas isi tiket"]
+    C -->|"&nbsp;**[Text]**&nbsp;<br>Hasil Ringkasan"| D["**TableData Setter**<br/>Simpan ringkasan"]
 ```
-
 
 | Langkah | Flow Block | Peran dalam alur | Hasil |
 | --- | --- | --- | --- |
@@ -183,15 +182,15 @@ flowchart LR
 | Alamat IP server *hub* | Beberapa Flow mengirim data ke perangkat atau layanan yang sama tanpa menuliskan alamatnya berulang kali. |
 | Alamat layanan atau URL dasar | Flow yang memanggil layanan eksternal merujuk satu Name, sehingga perpindahan alamat cukup diubah sekali. |
 | Parameter bisnis | Ambang batas atau batas waktu dipakai bersama oleh beberapa Flow dan tetap konsisten. |
-| Konfigurasi notifikasi | Satu Name berisi tujuan notifikasi yang dipakai banyak proses. |
+| Konfigurasi notifikasi | data berisi tujuan notifikasi yang dipakai banyak proses. |
 
 ## Praktik Terbaik
-- **Beri Name yang deskriptif dan konsisten**, misalnya `AI_API_KEY` atau `HUB_SERVER_IP`, agar mudah dikenali saat dipilih atau dipanggil.
-- **Isi Description** untuk menjelaskan kegunaan Variable agar pengelola lain memahami fungsinya.
-- **Pilih Type yang sesuai** dengan Value agar nilai dapat dipakai dengan benar oleh komponen yang memanggilnya.
+- **Beri [[^field|Name]] yang deskriptif dan konsisten**, misalnya `AI_API_KEY` atau `HUB_IP_ADDRESS`, agar mudah dikenali saat dipilih atau dipanggil.
+- **Isi [[^field|Description]]** untuk menjelaskan kegunaan Variable agar pengelola lain memahami fungsinya.
+- **Pilih [[^field|Type]] yang sesuai** dengan Value agar nilai dapat dipakai dengan benar oleh komponen yang memanggilnya.
 - **Simpan satu nilai di satu Variable** dan hindari menyalin nilai yang sama ke komponen lain.
 - **Periksa pemakaian sebelum menghapus** Variable, terutama yang dipanggil oleh komponen di [[Docs/Modul Logic/Pengenalan|Modul Logic]].
-- **Batasi pihak yang dapat melihat komponen Variable** bila Value berisi nilai sensitif.
+- **Batasi pihak yang dapat melihat komponen Variable** bila [[^field|Value]] berisi nilai sensitif.
 
 ## Batasan dan Catatan
 - Hanya ada satu komponen Variable di dalam Pro, dan tidak dapat ditambah lewat [[Docs/Antarmuka#Area Manajemen Folder]].
@@ -204,14 +203,13 @@ flowchart LR
 
 ## TL:DR
 - Variable adalah komponen bawaan Pro yang menjadi satu sumber data universal, dibuat otomatis di folder root dan tidak dapat dihapus.
-- Isi Variable dikelola di halaman kerja berbentuk tabel dengan kolom Name, Type, Value, Description, Created At, dan Updated At.
-- Name harus unik, sedangkan Created At dan Updated At terisi otomatis.
-- Field bertipe Variable menampilkan daftar dari tabel ini, dan Flow dapat memanggil Variable cukup dengan Name.
-- Variable menjadi konstanta dan *alias* sehingga nilai sensitif dapat dipakai untuk integrasi tanpa perlu diketahui tim.
-- Hati-hati saat menghapus baris, karena komponen yang memanggilnya akan menghasilkan error di Flow Activity.
+- Isi Variable dikelola di halaman kerja berbentuk tabel dengan kolom [[^field|Name]], [[^field|Type]], [[^field|Value]], [[^field|Description]], [[^field|Created At]] , dan [[^field|Updated At]].
+- [[^field|Name]] harus unik, sedangkan [[^field|Created At]] dan [[^field|Updated At]] terisi otomatis.
+- Field bertipe Variable menampilkan daftar dari [[Docs/Tipe Data/Variable|Variable Data]], dan Komponen [[Docs/Modul Logic/Pengenalan|Modul Logic]] dapat memanggil Variable cukup dengan [[^field|Alias]].
+- Variable memilki akses yang ketat sehingga [[^field|Value]] yang sensitif dapat dipakai untuk integrasi tanpa perlu diketahui tim.
+- Hati-hati saat menghapus [[Docs/Tipe Data/Variable|Variable Data]], karena komponen yang memanggilnya akan menghasilkan nilai kosong atau error.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
-
 >**faq**
 >**Apakah saya dapat membuat komponen Variable baru?**
 >Tidak. Variable dibuat otomatis ketika Pro dimulai, dan Area Manajemen Folder tidak menyediakan pilihan untuk menambahkannya.
@@ -225,3 +223,4 @@ flowchart LR
 >Ya. Baris pada tabel dapat dihapus, tetapi pastikan tidak ada komponen yang masih memanggilnya.
 >**Apakah tim dapat melihat isi Value?**
 >Tim cukup memakai Name untuk memanggil nilai sehingga tidak perlu mengetahui isinya. Siapa saja yang dapat membuka halaman kerja Variable tetap dapat melihat nilainya.
+

@@ -109,7 +109,6 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   font-weight: 400;
   text-decoration: none !important;
   pointer-events: none;
-  white-space: nowrap;
   line-height: 1rem;
 }
 
@@ -136,6 +135,16 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 5. Isi [[field|Search workspace to add...]]  dan pilih Workspace yang ingin ditambahkan.
 6. Selesai
 
+
+| Langkah | Flow Block | Peran dalam alur | Hasil |
+| --- | --- | --- | --- |
+| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan\|Table Row Event]] | Berjalan saat baris tiket baru ditambahkan. | Flow dimulai otomatis. |
+| 2 | [[Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan\|Variable Getter]] | Mengambil nilai Variable dengan mengisi Name `AI_API_KEY`. | API Key tersedia untuk Flow tanpa perlu diketahui tim. |
+| 3 | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan\|AI (OpenAI 4)]] | Mengirim isi tiket ke penyedia AI memakai API Key tersebut. | Ringkasan tiket diterima. |
+| 4 | [[Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan\|TableData Setter]] | Menulis ringkasan ke baris tiket yang sama. | Ringkasan tampil di tabel. |
+
+
+
 ```space-style
 #sb-main .cm-editor a[href^="mode/"] {
   display:inline-block !important;
@@ -150,7 +159,6 @@ Run ${widgets.commandButton "System: Reload"} to reload.
   border-radius: 999px;
   background-color: #161616;
   pointer-events: none;
-  white-space: nowrap !important;
   text-decoration: none;
 }
 #sb-main .cm-editor td a[href^="mode/"] {
@@ -195,6 +203,9 @@ test [[button/edit|Edit]] [[button|Create]]
 
 ```space-style
 /* Style links starting with button: */
+#sb-main .cm-editor a {
+  white-space: nowrap !important;
+}
 #sb-main .cm-editor a[href^="button/"] {
   display:inline-block !important;
   font-family:"Segoe UI";
@@ -207,7 +218,6 @@ test [[button/edit|Edit]] [[button|Create]]
   border-radius: 9999px !important;
   background-color: #161616;
   pointer-events: none;
-  white-space: nowrap !important;
 }
 #sb-main .cm-editor a[href="button"] {
   font-family:"Segoe UI";
@@ -219,7 +229,6 @@ test [[button/edit|Edit]] [[button|Create]]
   border-radius: 9999px !important;
   background-color: #92400e;
   pointer-events: none;
-  white-space: nowrap !important;
 }
 #sb-main .cm-editor .sb-line-h1 a[href^="button/"],
 #sb-main .cm-editor .sb-line-li a[href^="button/"],
