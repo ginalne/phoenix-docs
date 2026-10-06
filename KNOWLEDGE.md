@@ -59,7 +59,35 @@ Sumber: halaman "Apa itu Flow" yang sudah direvisi penulis (status release).
 - **Event dari komponen:** Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol Event pada masing-masing komponen.
 - **Memantau proses:** klik tombol Activity/Submission, panel Flow Activity terbuka. Panel memiliki tombol Refresh List, kolom Search Activity, kolom ID/Name, Status/Type, Start At, Updated At, dan menampilkan "No Activity" bila kosong.
 
+## Variable (Modul Data)
+
+- **Komponen Variable** mengelola **Variable Data** (tipe data Variable) di dalam sebuah Pro. Nilai yang disimpan menjadi sumber kebenaran dan dapat dirujuk dari komponen mana pun.
+- **Komponen unik:** hanya ada satu per Pro, dibuat otomatis ketika Pro dimulai di folder root. Tidak dapat ditambah lewat Area Manajemen Folder, tidak dapat diduplikasi, dan tidak dapat dihapus. Boleh dipindahkan ke folder lain.
+- Header "Variables" tidak dapat diganti, sehingga tidak ada tombol Edit dan tidak ada langkah mengubah atribut komponen.
+- **Membuka:** klik "Variables" di Area Manajemen Folder.
+- **Halaman kerja:** bilah navigasi (judul komponen, Refresh, kolom pencarian "Search Variable Data...") dan tabel Variable di bawahnya.
+- **Kolom tabel:**
+  - Name (unik, diisi pengguna)
+  - Type (diisi pengguna)
+  - Value (diisi pengguna, menyesuaikan Type)
+  - Description (diisi pengguna)
+  - Created At dan Updated At (terisi otomatis)
+  - Action (berisi tombol Delete per baris)
+- **Tombol pada area tabel:** Add Row, Save, Delete. Cancel untuk membatalkan penambahan.
+- **Interaksi:** kolom di sisi kanan dilihat dengan scroll horizontal di bagian bawah tabel.
+- **Mengelola Variable Data:**
+  - Menambah: Add Row, isi Name, Type, Value, Description, lalu Save.
+  - Mengubah: ubah isian pada baris, lalu Save.
+  - Menghapus: klik Delete pada kolom Action, lalu konfirmasi dengan Delete. Data yang dihapus tidak dapat dikembalikan.
+- **Cara komponen lain merujuk Variable:**
+  - Field bertipe Variable: pilihannya adalah daftar Name dan Description dari Variable Data.
+  - Komponen di Modul Logic: mengisi field Variable cukup dengan Alias, yaitu isi Name. Jika Alias tidak valid (tidak ada Name yang cocok), tidak ada nilai yang diterima atau terjadi error. Laporan error tampil di Flow Activity.
+  - Variable Getter (Flow Block) mengambil nilai Variable dengan mengisi Name.
+- **Akses:** anggota yang tidak memiliki akses komponen Variable tidak dapat mengetahui Value, tetapi tetap dapat memakainya untuk otomasi atau integrasi. Anggota yang memiliki akses melihat Value secara terbuka di halaman kerja.
+- **Pemisahan halaman:** halaman komponen Variable membahas pengelolaan. Penjelasan Variable sebagai tipe data ada di halaman Tipe Data (`Docs/Tipe Data/Variable`).
+
 ## Pola penulis (lintas komponen)
+
 - Kolom isian dan teks informasi antarmuka memakai `[[^field|Label]]` (bukan `[[field|Label]]`), termasuk Search, No Activity, Header Name, `x _ y _`, dan `scale _`.
 - Ikon tombol yang dipakai: edit, delete, refresh, submission, event, activity, empty. Tombol tanpa ikon di dalam block (Trigger) memakai `[[^button/empty|Trigger]]`.
 - Callout memakai judul: `>**note** Judul` atau `>**warning** Judul`, lalu isi pada baris `>` berikutnya.

@@ -56,7 +56,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 | Gambar | `![[Docs/Modul <Nama>/<Komponen>/<nama-gambar>.png]]` | Nama file huruf kecil dipisah tanda hubung, ditaruh di folder komponen | `![[Docs/Modul Logic/Flow/blueprint-flow.png]]` |
 | Menu atau contextmenu antarmuka | `[[^field/<icon>\|<Label>]]` | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [slug komponen]. Kategori dan item menu tanpa icon memakai `[[^field\|<Label>]]` | `[[^field/add\|Add]]`, `[[^field\|Event]]`, `[[^field\|Pulser]]` |
 | Kolom isian dan teks informasi antarmuka | `[[^field\|<Label>]]` | Berlaku untuk kolom isian, kolom pencarian, dan teks yang tampil di antarmuka (misalnya keterangan kosong atau informasi koordinat) | `[[^field\|Name]]`, `[[^field\|Search]]`, `[[^field\|No Activity]]` |
-| Tombol antarmuka | `[[^button/<icon>\|<Label>]]` atau `[[^button\|<Label>]]` | icon: edit, delete, merge, publish, refresh, save, submission, event, activity, empty. `empty` untuk tombol tanpa ikon di dalam block atau panel (misalnya Trigger). Tanpa icon (`[[^button\|...]]`) untuk tombol aksi umum seperti Create, Update, Delete (konfirmasi) | `[[^button/edit\|Edit]]`, `[[^button\|Create]]`, `[[^button/empty\|Trigger]]` |
+| Tombol antarmuka | `[[^button/<icon>\|<Label>]]` atau `[[^button\|<Label>]]` | icon: add (berbentu plus), edit, delete, merge, publish, refresh, save, submission, event, activity, empty (tidak ada ikon). Tanpa icon (`[[^button\|...]]`) untuk tombol aksi umum seperti Create, Update, Delete (konfirmasi) | `[[^button/edit\|Edit]]`, `[[^button\|Create]]`, `[[^button/empty\|Trigger]]` |
 | Nilai Boolean | `[[^value/boolean/allow]]`, `[[^value/boolean/disallow]]`, `[[^value/boolean/true]]`, `[[^value/boolean/disallow]]` | Gunakan di dalam tabel dan kalimat, bukan teks tebal | `[[^value/boolean/false]]` |
 | Nama komponen/folder/data pada baris tabel | `[[^field/<slug>\|<Nama>]]` | slug: workspace, group, folder, variable, enum, table, tableview, tree, canvas, flow, dan slug komponen lain | `[[^field/tableview\|Daftar Pelanggan]]` |
 
@@ -85,34 +85,32 @@ Bertindaklah sebagai ahli/konsultan penulisan dokumentasi aplikasi Phoenix. Jika
 ## Templat halaman
 
 Gunakan urutan berikut. Bagian yang tidak relevan boleh dihilangkan, tetapi jangan mengubah urutan atau nama judulnya. Bagian Antarmuka dan Interaksi Antarmuka dipakai bila komponen memiliki halaman kerja atau screenshot dari penulis.
+Konteks bisa apapun sesuai permintaan.
 
 ````markdown
 ---
 status: draft
-title: Apa itu <Komponen>?
+title: <Sesuaikan dengan Title>
 description: <satu kalimat fungsi komponen>
-pageDecoration:
-  tree:
-    priority: 1
 ---
-# Apa itu <Komponen>
+# <Sesuaikan dengan Title>
 
 <callout untuk Pengenalan Komponen>
 >**note** _<Komponen>_ merupakan salah satu komponen dalam modul [[Docs/Modul <Modul>/Pengenalan|<Modul>]] di Phoenix.
 
-_<Komponen>_ adalah komponen yang dapat digunakan untuk <fungsi utama>.
+<Komponen> adalah komponen yang dapat digunakan untuk <fungsi utama>.
 
 <penjelasan dari segi kemudahan, solusi dan keunikan komponen ini>.
 
-## Mengapa Menggunakan <Komponen>?
+## Mengapa Menggunakan <Konteks>?
 - **<Manfaat singkat>.** <Penjelasan satu kalimat.>
 
 ## Konsep Utama
 | Istilah | Penjelasan |
 | --- | --- |
-| [[<halaman atau anchor tempat istilah dijelaskan>\|<Istilah>]] | <Satu kalimat.> |
+| [[<tautan atau anchor tempat istilah dijelaskan>\|<Istilah>]] | <Satu kalimat.> |
 
-## Cara Kerja <Komponen>
+## Cara Kerja <Konteks>
 <Satu kalimat inti. Konfirmasi jika bingung.>
 
 ```mermaid
@@ -121,25 +119,29 @@ _<Komponen>_ adalah komponen yang dapat digunakan untuk <fungsi utama>.
 
 <Aturan penting tentang relasi atau batasan alur.>
 
-## Membuat <Komponen>
-<Langkah-langkah. Konfirmasi atribut jika bingung.>
+## Membuat <Konteks>
+<Langkah-langkah jika konteks bisa dibuat. Konfirmasi atribut jika bingung.>
 
-## Mengubah <Komponen>
-<Langkah-langkah>
+## Mengubah <Konteks>
+<Langkah-langkah jika konteks bisa diubah>
 
-## Menyegarkan <Komponen>
+## Menyegarkan <Konteks>
+<Langkah jika konteks bisa disegarkan>
 
 ## Menghapus <Komponen>
 <Langkah-langkah>
 
 >**warning** <Judul singkat>
 >Dampak penghapusan: apa yang hilang dan apa yang terputus.
+>**danger** <Judul singkat>
+>Dampak penghapusan tidak bisa dikembalikan
 
-## Antarmuka <Komponen>
-![[Docs/Modul <Modul>/<Komponen>/<nama-gambar>.png]]
+<Gunakan ini jika konteks memiliki antarmuka yang perlu dijelaskan.>
+## Antarmuka <Konteks>
+<Sarankan Gambar (asumsikan Link) jika memiliki Antarmuka>
 <Satu atau dua kalimat tentang area antarmuka (bilah navigasi di bagian atas, area kerja di bagian bawah).>
 
-Bilah navigasi <Komponen> terdiri dari:
+### Bilah navigasi <Konteks> terdiri dari:
 
 | Tombol | Fungsi |
 | --- | --- |
@@ -148,7 +150,8 @@ Bilah navigasi <Komponen> terdiri dari:
 >**note** <Judul catatan, misalnya Perbedaan Icon>
 >Perbedaan tampilan desktop dan mobile.
 
-## Interaksi Antarmuka <Komponen>
+### Interaksi Antarmuka <Komponen>
+
 | Fungsi | Aksi |
 | --- | --- |
 | <Fungsi> | <Aksi dengan mouse, scroll, atau klik kanan.> |
@@ -223,8 +226,15 @@ Catatan format:
   `## Menyegarkan <Komponen>`
   `Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.`
 * **Callout peringatan.** Ditempatkan setelah langkah Menghapus bila ada dampak. Format: `>**warning** <Judul singkat>` lalu isi pada baris `>` berikutnya.
+* **Callout berhasil.** Ditempatkan setelah konfirmasi berhasil pengguna, panduan atau hasil yang selesai sempurna, pemberitahuan status positif, dan Praktik Terbaik. Format: `>**success** <Judul singkat>` lalu isi pada baris `>` berikutnya.
 * **Mermaid.** Penulis memperluas diagram saya menjadi diagram relasi, bukan hierarki lurus. Usulan: gambarkan juga jenis relasi (misalnya label `Akses` pada garis) dan gunakan garis putus-putus untuk relasi yang tidak berlaku pada semua komponen.
 * **Konsep Utama.** Judul bagian "Halaman Kerja" dan "Membaca Baris" boleh ditambahkan bila komponen memiliki halaman kerja berbentuk tabel.
+* **Pengelolaan baris di halaman kerja tabel.** Bila isi komponen dikelola per baris, pisahkan dari pengelolaan komponen lewat judul "Mengelola Data <Komponen>" dengan subjudul Menambahkan, Mengubah, dan Menghapus. Tombol yang dipakai: ` (di kolom Action). Dampak penghapusan baris ditulis sebagai callout warning.
+
+## Diagram alur saat menjelasakan alur Logic Flow
+Gaya diagram mermaid :
+bentuk node `database`, `rounded`, `circle`, `processes`;
+label garis diapit `&nbsp;`.
 
 ## Cara bekerja dengan permintaan pengguna
 

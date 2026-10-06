@@ -1,39 +1,123 @@
 ---
-    status: release
-    title: Apa itu Flow?
-    description: 
-    pageDecoration:
-      tree:
-        priority: 1
+name: phoenix-docs-silverbullet
+pageDecoration:
+  icon: info
+description: Menulis, melengkapi, merevisi, atau mereview dokumentasi produk Phoenix dalam format Silverbullet berbahasa Indonesia. Gunakan skill ini setiap kali pengguna meminta konten dokumentasi Phoenix. Output selalu berupa file .md.
 ---
+<<<<<<< Updated upstream
 # Apa itu Flow?
+=======
+>>>>>>> Stashed changes
 
->**note** _Flow_ merupakan salah satu komponen dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
+# Dokumentasi Phoenix (format Silverbullet)
 
-_Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pengelolaan data dengan pendekatan alur komposit, yaitu menyusun logika dengan menghubungkan blok demi blok. Setiap blok yang Anda bangun dapat dihubungkan dan dimonitor, sehingga setiap [[Docs/Event/Apa itu Event|Event]] yang terikat dapat menghasilkan keluaran dan otomasi yang tepat.
+Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, struktur, dan sintaks yang sama dengan halaman yang sudah dibuat penulisnya. Konsistensi penting karena halaman-halaman ini saling terhubung lewat wikilink dan dibaca sebagai satu kesatuan dokumentasi.
 
-## Mengapa Menggunakan Flow?
+## Prinsip umum
 
-* **Logika tersusun secara visual.** Anda merangkai Flow Block pada blueprint sehingga alur proses mudah dibaca dan dipahami.
-* **Otomasi berbasis Event.** Flow Block Event memicu proses, lalu hasilnya mengalir ke block berikutnya melalui koneksi.
-* **Mudah diuji.** Anda dapat menjalankan proses secara manual dari antarmuka Flow tanpa menunggu pemicu yang sebenarnya.
-* **Proses dapat dipantau.** Setiap proses yang berjalan tercatat dan dapat dilihat melalui [[Docs/Modul Logic/Flow/Flow Activity|Activity]].
-* **Terhubung dengan data Phoenix.** Flow Block tersedia untuk terhubung dengan [[Docs/Modul Data/Variable/Apa itu Variable|Variable]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], [[Docs/Modul Data/Table/Apa itu Table|Table]], dan [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].
-* **Terhubung dengan sistem lain.** Flow Block [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Modular]] seperti HTTP Request dan OpenAI 4 memungkinkan data Phoenix dikirim ke aplikasi lain atau diolah oleh AI.
+- Tulis dalam Bahasa Indonesia baku dan sapa pembaca dengan **"Anda"** (selalu huruf kapital).
+- Gunakan kalimat aktif, singkat, dan konkret. Jelaskan manfaat, bukan hanya definisi.
+- Istilah asing yang bukan nama fitur ditulis miring dengan `*...*`, misalnya `*drag and drop*`, `*least privilege*`.
+- Jangan mengarang perilaku produk. Jika detail fitur belum diketahui (nama menu, batasan, aturan akses), tulis tebakan terbaik, tandai, dan tambahkan usul perlunya gambar melalui Penjelasan TODO (lihat cara penulisan [[#Penjelasan TODO]]). Penulis akan memperbaiki isinya sendiri.
+-  Asumsikan detail yang terbaik sesuai konteks halamannya, jika ragu tetap lakukan dan jelaskan dalam TODO.
+-  Pahami konteks halaman yang diminta, silahkan buat struktur yang terbaik untuk halaman tersebut, jangan terlalu kaku, agar penulis tahu kemungkinan terbaik dalam menjelaskan konteks halaman tersebut.
+- Untuk konsep yang sudah punya halaman sendiri (Komponen, Folder, Pro, Flow Block, dan sejenisnya), jangan mendaftar contoh di tabel Konsep Utama. Cukup beri satu kalimat singkat dan tautkan ke halamannya ("Selengkapnya lihat [[...]]"). Pada tabel Konsep Utama, istilahnya sendiri yang dijadikan wikilink (kolom Istilah), bukan dicetak tebal.
+- Gunakan istilah "bilah navigasi", bukan "navbar".
+- Jika topik komponen cukup dalam (misalnya Data Access, Flow Block), tulis ringkasan di halaman utama dan arahkan ke subhalaman dengan tautan, lalu tandai dengan TODO bahwa subhalaman perlu dibuat.
+-  Hasilkan file `.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
+-  Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update /phoenix-docs-silverbullet"**. Isinya alasan pembaruannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah. Jika tidak ada yang relevan, jangan tulis bagian ini.
+-  Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill /phoenix-docs-knowledge"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah. Isinya alasan pembaruannya. Jika tidak ada yang relevan, jangan tulis bagian ini.
+
+## Cara berpikir yang perlu dijaga
+
+Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya agar bisa dipakai pada komponen apa pun, bukan hanya komponen yang pernah dibahas.
+
+1. **Halaman komponen adalah peta, bukan manual.** Halaman "Apa itu <Komponen>" memberi orientasi: definisi, manfaat, konsep (sebagai tautan), pengelolaan komponen itu sendiri (Membuat, Mengubah, Menyegarkan, Menghapus), Antarmuka, lalu daftar aspek yang mengarah ke subhalaman. Langkah rinci, katalog opsi menu, tabel isi panel, dan konfigurasi item anak dipindahkan ke subhalaman. Uji sederhana: jika sebuah bagian punya langkah atau tabel sendiri dan bisa dibaca terpisah, bagian itu adalah subhalaman, dan halaman utama hanya menyisakan satu kalimat atau satu daftar tautan (misalnya bagian "Membangun Logika Flow" berisi tautan anchor ke subhalaman). Pembaca halaman pengantar mencari orientasi, dan detail yang menumpuk membuat halaman dalam serta sulit dirawat. Jika ragu, tulis lebih ringkas dan usulkan subhalaman, karena menambah detail lebih mudah daripada memangkasnya.
+2. **Istilah milik produk dan penulis menang.** Pakai label persis seperti di antarmuka dan istilah yang dipakai penulis (misalnya Blueprint, Submission, Flow Block Event). Jangan menciptakan nama untuk area antarmuka yang belum diberi nama; tulis dengan sebutan paling netral dan beri TODO agar penulis menamainya. Analogi dari luar produk (misalnya "seperti composition di Blender") atau kalimat "kalau bingung maksudnya..." adalah bantuan bagi Claude untuk memahami, bukan isi dokumentasi, kecuali penulis memintanya ditulis. Pakai satu istilah yang sama di seluruh halaman. Kata Indonesia umum ("blok") boleh untuk penjelasan non-fitur, sedangkan nama fitur tetap sesuai antarmuka.
+3. **Tautkan untuk membuka jalan.** Setiap konsep, aksi, atau istilah yang punya ruang untuk tumbuh dijadikan wikilink, termasuk ke halaman yang belum ada. Wikilink tebakan adalah ide struktur dokumentasi, bukan kesalahan, jadi jangan ragu. Tebakan path mengikuti pola yang sudah ada: setiap folder memiliki halaman `Pengenalan` sebagai pintu masuk, fitur pendamping komponen bernama `<Komponen> <Fitur>` (misalnya `Flow Activity`), item anak berada di bawah folder kategorinya, dan bagian dalam sebuah subhalaman diakses lewat anchor (`#Menambahkan Flow Block`). Tautkan juga aksi yang melintasi komponen (misalnya menghubungkan Event dari komponen lain). Dalam contoh penggunaan, hampir setiap nama block atau komponen yang disebut adalah wikilink. Tandai asumsi halaman baru dengan satu TODO konsolidasi per halaman, bukan satu TODO per tautan.
+4. **Screenshot adalah sinyal struktur.** Screenshot antarmuka berarti penulis ingin ada bagian "Antarmuka <Komponen>": gambar, penjelasan area, tabel tombol bilah navigasi, dan catatan perbedaan tampilan desktop dan mobile. Jika ada gestur, tambahkan "Interaksi Antarmuka" (tabel Fungsi dan Aksi). Screenshot dengan menu terbuka biasanya menunjuk ke subhalaman. Tombol, ikon, atau penghitung yang belum dijelaskan penulis ditandai TODO, bukan ditebak sebagai fakta.
+5. **Contoh Penggunaan menjual nilai, bukan menguji fitur.** Skenario berangkat dari kebutuhan nyata dan hasil yang dirasakan pengguna, dengan menonjolkan nilai integrasi Phoenix (data, logika, dan sistem lain tersambung). Hindari contoh yang hanya membuktikan fitur bekerja (misalnya menekan tombol uji). Susunannya: kebutuhan, komponen yang terlibat, alur (diagram mermaid dan tabel langkah dengan nama block yang ditautkan), hasil yang dirasakan, lalu ide skenario lain (variasi pemicu, tujuan, atau komponen) sebagai inspirasi. Judul skenario dari penulis mengikat dan harus diisi rinci. Nama komponen memakai nama generik dan ditandai TODO. Kalimat penutup ditulis ulang untuk skenario itu dan tidak disalin dari contoh lain.
+6. **Draf dulu, TODO kemudian.** TODO tidak menggantikan draf. Setiap bagian, termasuk warning dampak penghapusan, catatan perbedaan mode, dan langkah yang belum pasti, ditulis dalam bentuk terbaik, lalu ditandai untuk konfirmasi. Dampak penghapusan komponen (apa yang hilang dan apa yang terputus) selalu ditulis sebagai callout warning.
+7. **Ringkasan harus mengikuti isi.** Batasan dan Catatan, TL:DR, dan FAQ adalah ringkasan. Setiap kali isi halaman berubah atau dipindah, sinkronkan keempatnya: (a) langkah yang sudah pindah ke subhalaman diganti satu tautan; (b) Batasan berisi perilaku, dampak, dan ketergantungan (warning, perbedaan mode, relasi hak akses, apa yang tidak dicakup sebuah tombol), bukan lokasi tombol atau langkah yang sudah ada di isi halaman; (c) TL:DR berisi 4 sampai 6 poin yang mengikuti peta halaman (definisi, antarmuka, membangun, menjalankan, memantau, hal yang perlu hati-hati); (d) setiap anchor `#...` harus ada di halaman tujuan atau di daftar halaman yang diusulkan.
+8. **Revisi penulis adalah sumber belajar.** Bandingkan halaman yang dikembalikan dengan versi sebelumnya. Yang dihapus biasanya salah level atau bukan konten, yang diganti biasanya istilah atau struktur, dan yang ditambah biasanya bagian yang terlewat. Ubah temuan menjadi aturan di SKILL.md dan fakta di KNOWLEDGE.md (path, istilah, perilaku). Jadikan struktur dan istilah penulis sebagai dasar untuk halaman berikutnya.
+
+## Konvensi tautan
+
+| Halaman | Format | Variasi | Contoh |
+| --- | --- | --- | --- |
+| Halaman konsep umum | `[[Inisialisasi/Apa itu Pro?\|Pro]]`, `[[Docs/Apa itu Komponen?]]`, `[[Docs/Folder/Apa itu Folder?]]` | Pro, Komponen, Folder | `[[Docs/Folder/Apa itu Folder?#Informasi Data]]` |
+| Event | `[[Docs/Event/Apa itu Event\|Event]]`, `[[Docs/Event/Menghubungkan Event]]` | Menggantikan `Docs/Event/Pengenalan` | - |
+| Subhalaman komponen | `[[Docs/Modul <Nama>/<Komponen>/<Subhalaman>]]` | Data Access, TimelineData, Flow Activity | `[[Docs/Modul Developer/Workspace/Data Access]]`, `[[Docs/Modul Logic/Flow/Flow Activity]]` |
+| Item anak komponen (misalnya Flow Block) | `[[Docs/Modul <Nama>/<Komponen>/<Item>/Pengenalan]]` untuk halaman pintu masuk, `[[Docs/Modul <Nama>/<Komponen>/<Item>/<Kategori>/Pengenalan]]` untuk kategori, `...#<Bagian>` untuk bagian di dalamnya | Flow Block: kategori Event, Data, Operator, Modular, dan seterusnya | `[[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan]]`, `[[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block]]` |
+| Tipe data milik komponen | `[[Docs/Modul <Nama>/<Komponen>/<Tipe>]]` | TimelineData | `[[Docs/Modul Interface/Timeline/TimelineData]]` |
+| Modul <Nama> | `[[Docs/Modul <Nama>/Pengenalan\|<Nama>]]` | Data, Interface, Logic, Developer `[[Docs/Modul Developer/Pengenalan\|Developer]]` |
+| Komponen | `[[Docs/Modul <Nama>/<Komponen>/Apa itu <Komponen>]]` | Data: Variable, Enum, Table, Tree. Interface: Table View, Gallery, Canvas, Kanban, Space, Timeline, Form. Logic: Flow. Developer: Group, Workspace | `[[Docs/Modul Logic/Flow/Apa itu Flow]]` |
+| Tipe Data | `[[Docs/Tipe Data/<Nama>]]` | Color, Tree, Expression, Mixed, Array, Boolean, Column, Number, Enum, EnumData, Complex, Month, Thing, Year, MonthYear, Text, Matrices, Node, Object, File, Query, Row, String, Table, TableData, Variable, Date, Time, DateTime, DateTimeZone | `[[Docs/Tipe Data/String]]` |
+| Format Data | `[[Docs/Format Data/<Tipe Data>/<Nama>]]` | String: Short Text, Password, Email, Phone Number, Mobile Number, URL, Slug, Username, Full Name, First Name, Initial, Country Code, Postal Code, License Plate, National ID, Passport Number, Tax ID, Bank Account, IBAN, Credit Card, MAC Address, IPv4, IPv6, UUID, Emoji. Number: Number, Integer, Decimal, Percentage, Rating. Text: Long Text, Rich Text, Markdown, Note, Chat. Complex: Numeration Unit, Length Unit, Area Unit, Volume Unit, Quaternion Unit, 1D Vector, 2D Vector, 3D Vector, 4D Vector, Geo, Currency. File: Attachment, Document, Media, Image, Photo, Audio, Video, Icon. Array: Popup List, Checkboxes, Direct List, Multiple Select. EnumData: Dropdown, Multiple Choices. | `[[Docs/Format Data/String/Short Text]]`
+| Anchor di halaman yang sama | `[[#Nama Bagian]]` | - | `[[#Flow]]` |
+| Tautan dengan teks lain | tambahkan alias setelah `\|`. Alias tidak diawali spasi. Di dalam sel tabel, pipa alias ditulis `\|` | Tidak ada. Silahkan sarankan ide untuk penjelasan jika dibutuhkan | `[[Docs/Event/Pengenalan\|Event]]` |
+| Anchor di halaman lain | `[[Docs/Antar Muka#Area Manajemen Folder]]`| [[Docs/Antarmuka#Bilah Navigasi]]` Header Navigation Phoenix. `[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antarmuka kerja komponen | |
+| Gambar | `![[Docs/Modul <Nama>/<Komponen>/<nama-gambar>.png]]` | Nama file huruf kecil dipisah tanda hubung, ditaruh di folder komponen | `![[Docs/Modul Logic/Flow/blueprint-flow.png]]` |
+| Menu atau contextmenu antarmuka | `[[^field/<icon>\|<Label>]]` | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [slug komponen]. Kategori dan item menu tanpa icon memakai `[[^field\|<Label>]]` | `[[^field/add\|Add]]`, `[[^field\|Event]]`, `[[^field\|Pulser]]` |
+| Kolom isian dan teks informasi antarmuka | `[[^field\|<Label>]]` | Berlaku untuk kolom isian, kolom pencarian, dan teks yang tampil di antarmuka (misalnya keterangan kosong atau informasi koordinat) | `[[^field\|Name]]`, `[[^field\|Search]]`, `[[^field\|No Activity]]` |
+| Tombol antarmuka | `[[^button/<icon>\|<Label>]]` atau `[[^button\|<Label>]]` | icon: edit, delete, merge, publish, refresh, save, submission, event, activity, empty. `empty` untuk tombol tanpa ikon di dalam block atau panel (misalnya Trigger). Tanpa icon (`[[^button\|...]]`) untuk tombol aksi umum seperti Create, Update, Delete (konfirmasi) | `[[^button/edit\|Edit]]`, `[[^button\|Create]]`, `[[^button/empty\|Trigger]]` |
+| Nilai Boolean | `[[^value/boolean/allow]]`, `[[^value/boolean/disallow]]`, `[[^value/boolean/true]]`, `[[^value/boolean/disallow]]` | Gunakan di dalam tabel dan kalimat, bukan teks tebal | `[[^value/boolean/false]]` |
+| Nama komponen/folder/data pada baris tabel | `[[^field/<slug>\|<Nama>]]` | slug: workspace, group, folder, variable, enum, table, tableview, tree, canvas, flow, dan slug komponen lain | `[[^field/tableview\|Daftar Pelanggan]]` |
+
+Catatan: alias tidak boleh diawali spasi (contoh salah: [[^field/workspace| Workspace]]).
+
+Tautkan komponen lain pada kemunculan pertamanya di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi, bukan diterjemahkan. Jika path tautan hanya tebakan, jangan ragu memakainya, lalu catat dalam satu TODO konsolidasi (lihat [[#Penjelasan TODO]]).
+
+## Penjelasan TODO
+
+Penulisan TODO sebagai catatan untuk diperhatikan kepada penulis harus dibuat dalam bentuk comment, dengan format sebagai berikut:
+
+<!--
+  * [TODO] Deskripsi Task
+-->
+
+Pembuka `<!--` dan penutup `-->` harus dalam line nya sendiri, serta tambahkan baris kosong agar memastikan format terbaca dengan baik.
+
+Deskripsi Task harus jelas, dan jika comment ini letak cukup jauh dari tulisan yang dimaksud, silahkan buat link dengan tagar untuk seperti ini: [[#Penjelasan TODO]].
+
+Untuk asumsi halaman baru yang ditautkan, kumpulkan dalam satu TODO per halaman: sebutkan path yang diusulkan dan isi yang diharapkan dari tiap halaman, tidak perlu satu TODO per tautan. TODO untuk konfirmasi fungsi block, perilaku, atau istilah ditulis terpisah supaya penulis bisa menjawab satu per satu.
+
+## Jika butuh konfirmasi
+
+Bertindaklah sebagai ahli/konsultan penulisan dokumentasi aplikasi Phoenix. Jika ada hal yang masih perlu dikonfirmasi, silahkan ajukan pertanyaan melalui fitur claude kepada saya satu per satu untuk menggali informasi, detail dan preferensi yang Anda butuhkan sebelum mulai mengerjakan tugas ini agar hasilnya lebih akurat dan detail.
+
+## Templat halaman
+
+Gunakan urutan berikut. Bagian yang tidak relevan boleh dihilangkan, tetapi jangan mengubah urutan atau nama judulnya. Bagian Antarmuka dan Interaksi Antarmuka dipakai bila komponen memiliki halaman kerja atau screenshot dari penulis.
+
+````markdown
+---
+status: draft
+title: Apa itu <Komponen>?
+description: <satu kalimat fungsi komponen>
+pageDecoration:
+  tree:
+    priority: 1
+---
+# Apa itu <Komponen>
+
+<callout untuk Pengenalan Komponen>
+>**note** _<Komponen>_ merupakan salah satu komponen dalam modul [[Docs/Modul <Modul>/Pengenalan|<Modul>]] di Phoenix.
+
+_<Komponen>_ adalah komponen yang dapat digunakan untuk <fungsi utama>.
+
+<penjelasan dari segi kemudahan, solusi dan keunikan komponen ini>.
+
+## Mengapa Menggunakan <Komponen>?
+- **<Manfaat singkat>.** <Penjelasan satu kalimat.>
 
 ## Konsep Utama
-
 | Istilah | Penjelasan |
 | --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] | Unit terkecil penyusun Flow. Setiap block memiliki fungsi tertentu dan dapat dihubungkan dengan block lain. |
-| [[#Antarmuka Flow|Blueprint]] | Area kerja tempat Anda menambahkan, menata, dan menghubungkan Flow Block. Posisi kursor (x, y) dan *scale* tampil di sudut kiri bawah halaman. |
-| [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Antarmuka Flow Block|Input dan Output]] | Titik penghubung pada Flow Block. Output berada di sisi kanan block, input berada di sisi kiri block. |
-| [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Antarmuka Flow Block|Koneksi]] | Garis penghubung dari output sebuah block ke input block lain. Koneksi menentukan arah aliran proses. |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] | Flow Block pemicu proses, misalnya Pulser dan Variable Event. Block ini juga memiliki tombol untuk eksekusi manual. Selengkapnya lihat [[Docs/Event/Apa itu Event\|Event]]. |
-| [[Docs/Modul Logic/Flow/Flow Activity]] | Tampilan pemantauan proses yang sedang atau sudah berjalan di dalam Flow. |
+| [[<halaman atau anchor tempat istilah dijelaskan>\|<Istilah>]] | <Satu kalimat.> |
 
-## Cara Kerja Flow
-Flow Block Event memicu proses, lalu hasilnya mengalir lewat koneksi dari satu Flow Block ke Flow Block berikutnya hingga menghasilkan keluaran.
+## Cara Kerja <Komponen>
+<Satu kalimat inti. Konfirmasi jika bingung.>
 
 ```mermaid
 flowchart TB
@@ -47,110 +131,64 @@ flowchart TB
     B2 -.->|Dipantau| Act
 ```
 
-Flow Block hanya terhubung dari output ke input. Garis putus-putus menandakan relasi yang tidak selalu dipakai, misalnya Flow Block Event yang dipicu dari komponen data atau dijalankan manual.
+<Aturan penting tentang relasi atau batasan alur.>
 
-## Membuat Flow
-1. Buka folder tempat Flow akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan > [[^field/add|Add]] > [[^field|Logic]] > [[^field/flow|Flow]]
-3. Isi [[^field|Name]] dan [[^field|Description]]
-4. Klik [[^button|Create]]
+## Membuat <Komponen>
+<Langkah-langkah. Konfirmasi atribut jika bingung.>
 
-## Mengubah Flow
-1. Buka halaman kerja Flow
-2. Klik [[^button/edit|Edit]]
-3. Perbarui isian [[^field|Name]] dan [[^field|Description]]
-4. Klik [[^button|Update]]
+## Mengubah <Komponen>
+<Langkah-langkah>
 
-## Menyegarkan Flow
-Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
+## Menyegarkan <Komponen>
 
-## Menghapus Flow
-1. Buka folder yang berisi Flow
-2. Klik kanan Flow
-3. Pilih [[^button/delete|Delete]]
-4. Konfirmasi dengan [[^button|Delete]]
+## Menghapus <Komponen>
+<Langkah-langkah>
 
->**warning** Harap hati-hati
->Menghapus Flow dapat menghilangkan Flow Block dan riwayat Activity. Flow Block Action yang sudah digunakan oleh komponen akan terputus.
+>**warning** <Judul singkat>
+>Dampak penghapusan: apa yang hilang dan apa yang terputus.
 
-## Antarmuka Flow
+## Antarmuka <Komponen>
+![[Docs/Modul <Modul>/<Komponen>/<nama-gambar>.png]]
+<Satu atau dua kalimat tentang area antarmuka (bilah navigasi di bagian atas, area kerja di bagian bawah).>
 
-![[Docs/Modul Logic/Flow/blueprint-flow.png]]
-Antarmuka Flow menampilkan seluruh struktur ruang kerja, yaitu bilah navigasi di bagian atas, dan kolom blueprint di bagian bawah.
-
-Bilah navigasi Flow terdiri dari:
+Bilah navigasi <Komponen> terdiri dari:
 
 | Tombol | Fungsi |
 | --- | --- |
-| [[^field/flow|Judul Flow]] | Ikon Flow dalam Phoenix serta [[^field|Header Name]] Flow. |
-| [[^button/edit|Edit]] | Mengubah atribut Flow seperti [[^field|Directory]], [[^field|Name]] dan [[^field|Description]]. |
-| [[^button/refresh|Refresh]] | Memuat ulang halaman kerja. |
-| [[^button/submission|Submission]] | Tombol yang berfungsi untuk membuka bilik submission. |
-| [[^field|Search]] | Kolom pencarian untuk mencari Flow Block. |
+| [[^button/edit|Edit]] | <Fungsi.> |
 
->**note** Perbedaan Icon
->Dalam mode desktop, tombol [[^button/submission|Submission]] sedikit berbeda. Tombol terlihat dengan susunan informasi submission, yaitu total activity, done, waiting, dan failure.
+>**note** <Judul catatan, misalnya Perbedaan Icon>
+>Perbedaan tampilan desktop dan mobile.
 
-## Interaksi Antarmuka Flow
-
-Anda bisa berinteraksi pada blueprint Flow untuk memudahkan proses pengembangan logika dan alur komposit dengan aksi seperti berikut:
-
+## Interaksi Antarmuka <Komponen>
 | Fungsi | Aksi |
 | --- | --- |
+<<<<<<< Updated upstream
 | Menggeser tampilan (_pan_) | Tekan dan tahan pada bagian yang kosong dalam blueprint lalu gerakkan kursor. Lepas untuk selesai. |
 | Mengubah skala tampilan (_zoom_) | gulir pada bagian blueprint. |
 | Mengembalikan tampilan ke tengah | Klik pada informasi koordinat [[^field|x _ y _]]. |
 | Mengembalikan skala tampilan | Klik pada informasi skala [[^field|scale _]]. |
 | Membuka menu konteks | Klik kanan pada bagian yang kosong dalam blueprint. |
+=======
+| <Fungsi> | <Aksi dengan mouse, scroll, atau klik kanan.> |
+>>>>>>> Stashed changes
 
-## Membangun Logika Flow
+<Sesi pengelolaan komponen. Konfirmasi apa saja isi komponen. Jika dirasa topik ini akan dalam, buat intro dan arahkan ke halaman lain>
 
-Membangun proses logika Flow dilakukan dengan cara pengelolaan Flow Block dengan aspek sebagai berikut:
-
-* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block|Menambahkan Flow Block]]
-* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Konfigurasi Flow Block|Mengatur Konfigurasi Flow Block]]
-* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menghubungkan Koneksi|Menghubungkan Koneksi]]
-* [[#Menjalankan Flow Secara Manual]]
-* [[#Memantau Proses]]
-* [[#Menghubungkan Block Event dari Komponen]]
-
-## Menjalankan Flow Secara Manual
-Anda dapat mengeksekusi proses secara manual melalui antarmuka Flow dengan menekan tombol pada Flow Block Event, misalnya [[^button/empty|Trigger]] pada Pulser.
-
-1. Buka halaman kerja Flow
-2. Cari [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang akan dijalankan
-3. Klik tombol [[^button/empty|Trigger]] pada block tersebut
-
-Setelah dijalankan, Anda dapat melihat prosesnya pada [[#Memantau Proses]].
-
-## Menghubungkan Block Event dari Komponen
-Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^button/event|Event]] pada masing-masing komponen. Selengkapnya lihat [[Docs/Event/Menghubungkan Event]].
-
-## Memantau Proses
-1. Pada halaman kerja Flow, klik menu [[^button/activity|Activity]] atau tombol di sebelah kanan [[^button/refresh|Refresh]] (mode desktop)
-2. Panel [[Docs/Modul Logic/Flow/Flow Activity]] akan terbuka
-3. Klik [[^button/refresh|Refresh List]] untuk memuat ulang daftar, atau gunakan [[^field|Search Activity]] untuk mencari proses
-
-Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Activity]].
-
->**note** Info
->Jika belum ada proses yang berjalan, panel menampilkan keterangan [[^field|No Activity]]
+## Membangun <Aspek> / Mengatur <Aspek>
+<Daftar tautan ke subhalaman atau anchor untuk setiap aspek. Langkah rinci ada di subhalaman.>
 
 ## Contoh Penggunaan
+**<Judul skenario>**
 
-**Mengirim informasi ke sistem lain ketika ada perubahan data**
-
-Bayangkan tim operasional Anda mencatat pesanan pelanggan pada sebuah Table. Selama ini, setiap pesanan yang siap dikirim harus disalin manual ke aplikasi logistik, lalu pelanggan dikabari satu per satu. Dengan Flow, perubahan data pada Table tersebut dapat langsung diteruskan ke sistem lain secara otomatis, lengkap dengan pesan pemberitahuan yang disusun oleh AI.
+<Kebutuhan nyata dalam dua sampai tiga kalimat.>
 
 **Komponen yang terlibat**
 
 | Komponen | Peran |
 | --- | --- |
-| [[^field/table\|Daftar Pesanan]] | Sumber data. Setiap baris adalah satu pesanan beserta nomor pesanan, pelanggan, status, dan total. |
-| [[^field/enum\|Status Pesanan]] | Pilihan status yang dipakai pada kolom status, misalnya Baru, Diproses, Siap Dikirim, dan Terkirim. |
-| [[^field/flow\|Notifikasi Pesanan]] | Flow yang berisi rangkaian Flow Block untuk meneruskan data pesanan. |
-| Sistem lain | Aplikasi logistik atau aplikasi pesan yang menerima data melalui API. |
 
+<<<<<<< Updated upstream
 **Alur di Flow**
 ```mermaid
 flowchart TB
@@ -163,86 +201,73 @@ flowchart TB
     S --> H@{ shape: rounded, label: "**HTTP Request**<br/>Kirim ke sistem lain"}
     H --> O@{ shape: processes, label: "Sistem lain<br/>menerima data" }
     H -.->|Gagal| ER@{ shape: rounded, label: "**Error Message**"}
+=======
+**Alur di <Komponen>**
+
+```mermaid
+<diagram alur skenario>
+>>>>>>> Stashed changes
 ```
 
-| Langkah | Flow Block | Peran dalam alur | Hasil |
+| Langkah | <Item> | Peran dalam alur | Hasil |
 | --- | --- | --- | --- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]] | Dihubungkan ke Daftar Pesanan melalui tombol [[^button/event\|Event]] pada Table, lalu terpicu ketika baris pesanan berubah. | Data baris pesanan masuk ke Flow. |
-| 2 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Table/TableRow Parse\|TableRow Parse]] | Mengurai baris menjadi nilai per kolom: nomor pesanan, pelanggan, status, dan total. | Setiap nilai kolom siap dipakai block berikutnya. |
-| 3 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If\|If]] | Memeriksa apakah status pesanan adalah Siap Dikirim. | Hanya perubahan yang relevan yang dilanjutkan. |
-| 4 | [[Docs/Modul Logic/Flow/Flow Block/Modular/AI/OpenAI 4\|OpenAI 4]] | Menyusun pesan pemberitahuan yang ramah dari data pesanan. | Teks pesan siap kirim. |
-| 5 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Object/Stringify\|Stringify]] | Mengubah data pesanan dan pesan menjadi teks yang siap dikirim. | Muatan data (*payload*) siap dikirim. |
-| 6 | [[Docs/Modul Logic/Flow/Flow Block/Modular/API/HTTP Request\|HTTP Request]] | Mengirim muatan data ke aplikasi logistik atau aplikasi pesan. | Sistem lain menerima pesanan. |
-| 7 | [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message\|Error Message]] | Menampilkan pesan kesalahan bila pengiriman gagal. | Kegagalan terlihat dan dapat ditelusuri di [[Docs/Modul Logic/Flow/Flow Activity\|Flow Activity]]. |
 
 **Hasil yang dirasakan**
-
-* **Tanpa input ulang.** Tim cukup memperbarui status pesanan di Phoenix, sedangkan pengiriman data ke sistem lain berjalan otomatis.
-* **Pelanggan lebih cepat terinformasi.** Pesan pemberitahuan terkirim begitu status berubah, tanpa menunggu tim mengabari satu per satu.
-* **Mudah ditelusuri.** Setiap proses tercatat sehingga Anda dapat memeriksa pesanan mana yang berhasil dan gagal terkirim.
-* **Data tetap satu sumber.** Pesanan tetap dikelola di Phoenix, sistem lain hanya menerima salinan yang dibutuhkan.
+- <Nilai bagi pengguna.>
 
 **Ide skenario lain**
 
-| Pemicu | Contoh integrasi |
+| <Pemicu atau variasi> | <Contoh integrasi> |
 | --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event\|Variable Event]] | **Peringatan stok menipis.** Saat nilai Variable stok turun di bawah batas, kirim peringatan ke tim pengadaan melalui aplikasi pesan. |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event\|Enum Data Event]] | **Kabar status layanan.** Saat status tiket berubah, kabari pelanggan melalui sistem komunikasi yang sudah mereka pakai. |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event\|Tree Node Event]] | **Sinkronisasi struktur.** Saat node pada struktur organisasi atau kategori produk berubah, perbarui sistem kepegawaian atau katalog. |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser\|Pulser]] | **Ringkasan berkala.** Ambil data Table, minta [[Docs/Modul Logic/Flow/Flow Block/Modular/AI/OpenAI 4\|OpenAI 4]] meringkasnya menjadi laporan singkat, lalu kirim ke manajemen. |
 
-Dengan satu Flow, data yang Anda kelola di Phoenix tidak berhenti sebagai catatan, tetapi langsung menjadi tindakan di sistem lain tanpa perlu disalin ulang.
-
-<!--
-  * [TODO] Nama komponen pada contoh (Daftar Pesanan, Status Pesanan, Notifikasi Pesanan) adalah nama generik buatan saya. Sesuaikan bila Anda ingin menambahkan gambar hasil Flow pada [[#Contoh Penggunaan]].
-  * [TODO] Mohon konfirmasi asumsi fungsi Flow Block pada skenario: Table Row Event (terpicu saat baris berubah, apakah juga saat baris ditambah atau dihapus?), TableRow Parse, If (apakah tepat untuk memeriksa kondisi, atau lebih tepat Branch/Condition?), OpenAI 4, Stringify, HTTP Request, dan Error Message.
-  * [TODO] Pertanyaan perilaku: bila Flow mengubah baris Table (misalnya menandai Terkirim), apakah perubahan itu memicu Table Row Event kembali? Jika ya, tambahkan catatan di [[#Batasan dan Catatan]].
-  * [TODO] Usulan halaman baru untuk mendukung contoh (path masih asumsi, mengikuti pola Flow Block/Event/Pengenalan): Flow Block/Event/{Table Row Event, Variable Event, Enum Data Event, Tree Node Event, Pulser}, Flow Block/Operator/{Table/TableRow Parse, Boolean/If, Object/Stringify}, Flow Block/Modular/{Pengenalan, API/HTTP Request, AI/OpenAI 4}, dan Flow Block/Error/Error Message. Setiap halaman diharapkan menjelaskan fungsi, input, output, dan contoh pemakaian block.
-  * [TODO] Konfirmasi apakah Pulser dapat dipakai sebagai pemicu berkala (skenario "Ringkasan berkala"), atau hanya dijalankan manual.
--->
+<Satu kalimat penutup tentang nilai skenario ini.>
 
 ## Praktik Terbaik
-- **Mulai dari [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]].** Tentukan pemicu terlebih dahulu, baru tambahkan block pemrosesan.
-- **Uji secara manual dahulu.** Gunakan tombol pada Flow Block Event sebelum mengandalkan pemicu otomatis (lihat [[#Menjalankan Flow Secara Manual]]).
-- **Cek [[Docs/Modul Logic/Flow/Flow Activity|Activity]] setelah menjalankan.** Pastikan proses berjalan sesuai harapan.
-- **Tata block dari kiri ke kanan.** Output berada di kanan dan input di kiri, sehingga alur lebih mudah dibaca.
-- **Beri nama dan deskripsi Flow yang jelas.** Anggota lain dapat memahami tujuan Flow tanpa membuka isinya.
+- <Saran dengan frasa kunci dicetak **tebal**.>
 
 ## Batasan dan Catatan
-- Koneksi dibuat dari **output** ke **input** (lihat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menghubungkan Koneksi]]).
-- Tombol [[^button/edit|Edit]] hanya mengubah atribut Flow ([[^field|Directory]], [[^field|Name]], dan [[^field|Description]]), bukan Flow Block pada blueprint. Pengaturan Flow Block dijelaskan di [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Konfigurasi Flow Block|Konfigurasi Flow Block]].
-- Kolom [[^field|Search]] pada bilah navigasi hanya mencari Flow Block. Untuk mencari proses, gunakan [[^field|Search Activity]] pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
-- Mengubah posisi dan skala panning hanya memengaruhi tampilan blueprint, bukan logika Flow.
-- Informasi total activity, done, waiting, dan failure pada tombol [[^button/submission|Submission]] hanya terlihat pada mode desktop.
-- Menghapus Flow menghilangkan Flow Block dan riwayat Activity, serta memutus Flow Block Action yang sudah digunakan komponen (lihat [[#Menghapus Flow]]).
-- Daftar Flow Block yang tersedia mengikuti menu [[^field/add|Add]] pada blueprint (lihat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan]]).
-- Akses ke Flow mengikuti hak akses komponen yang diatur melalui [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].
-
-<!--
-  * [TODO] Konfirmasi catatan "posisi dan skala panning hanya memengaruhi tampilan" dan "akses Flow mengikuti hak akses Workspace". Keduanya saya simpulkan dari pola komponen lain, belum dari penjelasan Anda. Bila Flow punya hak akses khusus (misalnya Modify Event pada Function Access), mohon dijelaskan.
-  * [TODO] Bagian ini tidak lagi memuat lokasi tombol Activity di sebelah kanan Refresh karena sudah dijelaskan di [[#Memantau Proses]] dan [[#Antarmuka Flow]].
--->
+- <Poin singkat.>
 
 ## TL:DR
-- _Flow_ mengatur logika dan proses data dengan menghubungkan [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada blueprint secara visual.
-- Antarmuka Flow terdiri dari bilah navigasi dan blueprint yang bisa digeser, diperbesar, dan dibuka konteks menunya (lihat [[#Interaksi Antarmuka Flow]]).
-- Bangun logika dengan menambahkan, mengatur, dan menghubungkan Flow Block (lihat [[#Membangun Logika Flow]]).
-- Jalankan manual dengan tombol pada [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], atau hubungkan Event dari komponen lewat tombol [[^button/event|Event]].
-- Pantau proses lewat [[^button/activity|Activity]] pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
-- Hati-hati saat menghapus Flow, karena Flow Block, riwayat Activity, dan koneksi ke komponen ikut terdampak.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
 >**faq**
->**Apa bedanya Flow dengan Event?**
->[[Docs/Event/Apa itu Event|Event]] adalah pemicu proses. Flow adalah tempat Anda menyusun dan menghubungkan Flow Block, agar pemicu tersebut menghasilkan keluaran dan otomasi.
->**Bagaimana menjalankan Flow tanpa menunggu Event?**
->Klik tombol pada Flow Block Event di antarmuka Flow, misalnya [[^button/empty|Trigger]] pada block.
->**Mengapa Activity List kosong?**
->Panel menampilkan [[^field|No Activity]] bila belum ada proses yang berjalan atau tercatat.
->**Bagaimana menambahkan Flow Block?**
->Klik kanan pada blueprint, pilih [[^field/add|Add]], lalu pilih kategori dan Flow Block yang diinginkan. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block|Menambahkan Flow Block]].
->**Bagaimana menghubungkan dua Flow Block?**
->Klik dan tahan titik output pada block asal, seret ke titik input block tujuan, lalu lepaskan. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menghubungkan Koneksi|Menghubungkan Koneksi]].
->**Apakah Flow dapat mengirim data ke sistem lain?**
->Bisa. Gunakan Flow Block [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Modular]] seperti HTTP Request. Lihat [[#Contoh Penggunaan]] untuk gambaran alurnya.
+>**<Pertanyaan?>**
+>Jawaban.
+>**<Pertanyaan?>**
+>Jawaban.
+````
+
+Catatan format:
+- Front matter ditulis di paling atas. `status` diisi `draft` (penulis yang mengubahnya menjadi `release`), `description` berisi satu kalimat ringkas, abaikan atribut lain jika ada.
+- Callout bisa memakai `>**note** <Judul>` diikuti isi pada baris `>` berikutnya. Format yang sama dipakai untuk `>**warning** <Judul>`. Callout pembuka tanpa judul (`>**note** teks`) hanya untuk Pengenalan Komponen.
+- Blok FAQ memakai `>**faq**`, lalu setiap pertanyaan dan jawaban berada di baris `>` sendiri. Pertanyaan dicetak tebal, jawaban tidak.
+- Judul FAQ ditulis persis: `## FAQ : Pertanyaan yang Sering Diajukan`.
+- Langkah bernomor berisi satu tindakan per baris. Jangan menambahkan titik atau spasi ekstra setelah nomor. Pastikan nomornya berurutan.
+- Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris.
+- Setelah menyalin pola langkah dari halaman lain, ganti semua nama komponen (misalnya jangan menulis "Klik kanan Workspace" di halaman Flow).
+* **Langkah Membuat.** Pola yang dipakai penulis:
+    1.  `Buka folder tempat <Komponen> akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]`
+    2.  `Klik kanan > [[^field/add|Add]] > [[^field|<Modul>]] > [[^field/<slug>|<Komponen>]]`
+    3.  `Isi [[^field|Name]] dan [[^field|Description]]`
+    4.  `Klik [[^button|Create]]`
+* **Langkah Mengubah.** Buka halaman kerja, klik `[[^button/edit|Edit]]`, perbarui isian, klik `[[^button|Update]]`. Tombol Save tidak dipakai.
+* **Langkah Menghapus.** Buka folder yang berisi komponen, klik kanan komponen, pilih `[[^button/delete|Delete]]`, lalu konfirmasi dengan `[[^button|Delete]]`.
+* **Bagian "Menyegarkan <Komponen>"** (opsional, untuk komponen yang punya Refresh), ditempatkan setelah Mengubah:
+  `## Menyegarkan <Komponen>`
+  `Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.`
+* **Callout peringatan.** Ditempatkan setelah langkah Menghapus bila ada dampak. Format: `>**warning** <Judul singkat>` lalu isi pada baris `>` berikutnya.
+* **Mermaid.** Penulis memperluas diagram saya menjadi diagram relasi, bukan hierarki lurus. Usulan: gambarkan juga jenis relasi (misalnya label `Akses` pada garis) dan gunakan garis putus-putus untuk relasi yang tidak berlaku pada semua komponen.
+* **Konsep Utama.** Judul bagian "Halaman Kerja" dan "Membaca Baris" boleh ditambahkan bila komponen memiliki halaman kerja berbentuk tabel.
+
+## Cara bekerja dengan permintaan pengguna
+
+1. **Bertanya agar memitigasi kesalahan** Jika diberikan tugas baru yang belum relevan dengan knowledge, ajukan pertanyaan agar mengerti tentang produk sebelum membuat dokumentasi. Langkah ini bisa menjadi pengembangan knowledge lebih baik sebelum menulis dokumentasi (lihat [[#Jika butuh konfirmasi]]).
+2. **Melengkapi atau membuat halaman baru:** isi seluruh templat yang relevan, tandai asumsi dengan Penjelasan TODO. Untuk komponen besar, tulis sebagai peta halaman dan arahkan detail ke subhalaman (lihat [[#Cara berpikir yang perlu dijaga]]).
+3. **Merevisi teks yang diberikan:** kembangkan struktur dan pertahankan fakta dari penulis, perbaiki ejaan ("pengeolaaan" menjadi "pengelolaan", "antar muka" menjadi "antarmuka", "dekstop" menjadi "desktop"), kejelasan, dan konsistensi sintaks. Jelaskan perubahan secara singkat.
+4. **Menilai kekurangan:** sebutkan bagian templat yang belum ada atau masih abstrak, lalu beri usulan revisi.
+5. Perlakukan fakta produk dari penulis sebagai kebenaran, termasuk koreksi atas asumsi sebelumnya. Jika penulis mengoreksi aturan (misalnya satu anggota hanya di satu Group), perbarui seluruh bagian yang terdampak.
+6. Gambar dan contoh penamaan: nama folder, komponen, atau data pada gambar/screenshot yang diberikan penulis adalah kasus pribadi penulis dan tidak boleh disebut di dokumentasi. Jika perlu contoh penamaan, buat penamaan generik sendiri dan tandai dengan TODO agar penulis menyesuaikan gambarnya. Sisipkan placeholder gambar dengan sintaks `![[...png]]` pada tempat yang tepat, lalu tambahkan TODO penempatan gambar beserta anotasi yang disarankan (nomor penanda untuk setiap bagian yang dijelaskan). Jika screenshot memuat salah ketik pada label aplikasi (misalnya "Pubilsh" yang seharusnya "Publish"), tulis label yang benar di dokumentasi dan sebutkan temuan itu di daftar cek penulis.
+7. **Cek konsistensi sebelum selesai:** pastikan Praktik Terbaik, Batasan dan Catatan, TL:DR, dan FAQ sesuai dengan isi halaman terbaru, semua anchor dan nama komponen pada langkah sudah benar, nomor langkah berurutan, dan istilah dipakai konsisten.
+8. Akhiri balasan dengan daftar singkat hal yang perlu dicek penulis, tanpa mengulang isi file.
