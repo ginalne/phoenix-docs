@@ -131,7 +131,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 <!--
   * [TODO] Konfirmasi dampak penghapusan Table (apakah dapat dikembalikan, apa yang terjadi pada Flow Block dan field berformat Row yang merujuk ke Table).
-    jawaban : terhapus
+    jawaban : Ya Terhapus
 -->
 
 ## Antarmuka Table
