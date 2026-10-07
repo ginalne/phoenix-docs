@@ -100,7 +100,7 @@ description: <satu kalimat penjelasan halaman ini>
 # <Sesuaikan dengan Title>
 
 <callout untuk Pengenalan Komponen>
->**note** _<Komponen>_ merupakan salah satu komponen dalam modul [[Docs/Modul <Modul>/Pengenalan|<Modul>]] di Phoenix.
+>**note** <Komponen> merupakan salah satu komponen dalam modul [[Docs/Modul <Modul>/Pengenalan|<Modul>]] di Phoenix.
 
 <Konteks> adalah <tipe/jenis> yang dapat digunakan untuk <fungsi utama>.
 
