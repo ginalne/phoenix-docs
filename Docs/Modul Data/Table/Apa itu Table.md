@@ -137,7 +137,7 @@ Halaman kerja Table terdiri dari bilah navigasi di bagian atas dan tabel data di
 ![[Docs/Modul Data/Table/halaman-kerja-table.png]]
 
 
-Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: **ID** di bagian awal dan **Action** di bagian akhir. Ikon kecil pada header setiap Column menunjukkan format Column tersebut.
+Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|ID]] di bagian awal dan [[^field|Action]] di bagian akhir. Ikon kecil pada header setiap Column menunjukkan format Column tersebut.
 
 <!--
   * [TODO] Penempatan gambar halaman-kerja-table.png. Sarankan anotasi bernomor: (1) judul Table, (2) tombol bilah navigasi, (3) kolom pencarian, (4) kolom ID dan header Column, (5) kolom Action (Save dan Delete), (6) tombol Add Row, (7) informasi jumlah data dan navigasi halaman.
@@ -156,9 +156,6 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: **ID** di 
 | [[^button/refresh|Refresh]]                    | Memuat ulang tampilan halaman kerja.                                                                     |
 | [[^field|Search Table Data...]]                | Mencari data pada Table.                                                                                 |
 
-> **note** Detail Merge, Publish, dan Event
-> Merge, Publish, dan Event dijelaskan pada halaman masing-masing.
-
 ### Tombol pada tabel data
 
 | Tombol                                | Fungsi                                                         |
@@ -172,14 +169,18 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: **ID** di 
 | Fungsi                          | Aksi                                                                                       |
 | ------------------------------- | ------------------------------------------------------------------------------------------ |
 | Melihat Column di sisi kanan    | Scroll horizontal pada bagian bawah tabel data.                                            |
-| Berpindah halaman data          | Klik [[^button|Prev]] atau [[^button|Next]], atau isi nomor halaman lalu klik [[^button|Go]]. |
+| Berpindah halaman data          | Klik [[^button/left|Prev]] atau [[^button/right|Next]], atau isi nomor halaman lalu klik [[^button/empty|Go]]. |
 | Mencari data                    | Ketik pada [[^field|Search Table Data...]].                                                |
 
 <!--
   * [TODO] Konfirmasi arti informasi di bagian bawah halaman ("Show 50 of 2 items, on page"), terutama makna angka 50 (batas data per halaman?).
+  Jawaban: Ya betul 50 batas halaman.
   * [TODO] Konfirmasi perilaku tombol Save (tampak nonaktif sebelum ada perubahan) dan apakah dua tombol Add Row berfungsi sama.
+  Jawaban: Save hanya aktif ketika ada perubahan, dan Add Row fungsinya sama.
   * [TODO] Konfirmasi perbedaan tampilan desktop dan mobile pada bilah navigasi (misalnya tombol berubah menjadi ikon saja).
+  Jawaban : Tidak ada perbedaan yang signifikan
   * [TODO] Konfirmasi apakah ID terisi otomatis, dan apakah kolom pencarian mencari di semua Column.
+  Jawaban : Iya ID terisi otomatis
 -->
 
 ## Mengelola Data Table
