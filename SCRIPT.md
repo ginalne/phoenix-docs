@@ -8,7 +8,7 @@
     tags:
       meta
 ---
-# Hello...:test
+# Script Section
 
 This page holds configuration for your SilverBullet space. See [[^Library/Std/Config]] for all options and defaults.
 Run ${widgets.commandButton "System: Reload"} to reload.
@@ -31,6 +31,35 @@ taskState.define {
 
 taskState.define {
   name = "DONE"
+}
+
+-- priority: 20
+command.define {
+  name = "Clipboard: Copy Without Frontmatter",
+  key = "Ctrl-Shift-c",
+
+  run = function()
+    local selection = editor.getSelection()
+
+    if selection.from == selection.to then
+      editor.flashNotification("Select something first", "error")
+      return
+    end
+
+    local text = editor.getText()
+    local selectedText = text:sub(selection.from + 1, selection.to)
+
+    -- Remove YAML frontmatter if it is included in the selection
+    selectedText = string.gsub(
+      selectedText,
+      "^%s*%-%-%-[\r\n]+.-[\r\n]+%-%-%-[\r\n]*",
+      "",
+      1
+    )
+
+    editor.copyToClipboard(selectedText)
+    editor.flashNotification("Copied without frontmatter", "info")
+  end
 }
 ```
 

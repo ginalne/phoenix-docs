@@ -33,7 +33,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 3. **Tautkan untuk membuka jalan.** Setiap konsep, aksi, atau istilah yang punya ruang untuk tumbuh dijadikan wikilink, termasuk ke halaman yang belum ada. Wikilink tebakan adalah ide struktur dokumentasi, bukan kesalahan, jadi jangan ragu. Tebakan path mengikuti pola yang sudah ada: setiap folder memiliki halaman`Pengenalan` sebagai pintu masuk, fitur pendamping konteks bernama`<Fitur>` (misalnya`Flow Activity`), item anak berada di bawah folder kategorinya, dan bagian dalam sebuah subhalaman diakses lewat anchor (`#Menambahkan Flow Block`). Tautkan juga aksi yang melintasi konteks (misalnya menghubungkan Event dari komponen lain). Dalam contoh penggunaan, hampir setiap nama fitur atau konteks yang disebut adalah wikilink. Tandai asumsi halaman baru dengan satu TODO konsolidasi per halaman, bukan satu TODO per tautan.
 4. **Screenshot adalah sinyal struktur.** Screenshot antarmuka berarti penulis ingin ada bagian "Antarmuka <Konteks>": gambar, penjelasan area, tabel tombol bilah navigasi, dan catatan perbedaan tampilan desktop dan mobile. Jika ada gestur, tambahkan "Interaksi Antarmuka" (tabel Fungsi dan Aksi). Screenshot dengan menu terbuka biasanya menunjuk ke subhalaman. Tombol, ikon, atau penghitung yang belum dijelaskan penulis ditandai TODO, bukan ditebak sebagai fakta.
 5. **Contoh Penggunaan menjual nilai, bukan menguji fitur.** Pada konteks komponen, Skenario berangkat dari kebutuhan nyata dan hasil yang dirasakan pengguna, dengan menonjolkan nilai integrasi Phoenix (data, logika, dan sistem lain tersambung). Hindari contoh yang hanya membuktikan fitur bekerja (misalnya menekan tombol uji). Susunannya: kebutuhan, komponen yang terlibat, alur (diagram mermaid dan tabel langkah dengan nama block yang ditautkan), hasil yang dirasakan, lalu ide skenario lain (variasi pemicu, tujuan, atau komponen) sebagai inspirasi. Judul skenario dari penulis mengikat dan harus diisi rinci. Nama konteks memakai nama generik dan ditandai TODO. Kalimat penutup ditulis ulang untuk skenario itu dan tidak disalin dari contoh lain.
-6. **Draf dulu, TODO kemudian.** TODO tidak menggantikan draf. Setiap bagian, termasuk warning dampak penghapusan, catatan perbedaan mode, dan langkah yang belum pasti, ditulis dalam bentuk terbaik, lalu ditandai untuk konfirmasi. Dampak penghapusan komponen (apa yang hilang dan apa yang terputus) selalu ditulis sebagai callout warning.
+6. **Draf dulu, TODO kemudian.** TODO tidak menggantikan draf. Setiap bagian, termasuk warning dampak penghapusan, catatan perbedaan mode, dan langkah yang belum pasti, ditulis dalam bentuk terbaik, lalu ditandai untuk konfirmasi. Dampak penghapusan konteks (apa yang hilang dan apa yang terputus) selalu ditulis sebagai callout warning.
 7. **Ringkasan harus mengikuti isi.** Batasan dan Catatan, TL:DR, dan FAQ adalah ringkasan. Setiap kali isi halaman berubah atau dipindah, sinkronkan keempatnya: (a) langkah yang sudah pindah ke subhalaman diganti satu tautan; (b) Batasan berisi perilaku, dampak, dan ketergantungan (warning, perbedaan mode, relasi hak akses, apa yang tidak dicakup sebuah tombol), bukan lokasi tombol atau langkah yang sudah ada di isi halaman; (c) TL:DR berisi 4 sampai 6 poin yang mengikuti peta halaman (definisi, antarmuka, membangun, menjalankan, memantau, hal yang perlu hati-hati); (d) setiap anchor`#...` harus ada di halaman tujuan atau di daftar halaman yang diusulkan.
 8. **Revisi penulis adalah sumber belajar.** Bandingkan halaman yang dikembalikan dengan versi sebelumnya. Yang dihapus biasanya salah level atau bukan konten, yang diganti biasanya istilah atau struktur, dan yang ditambah biasanya bagian yang terlewat. Ubah temuan menjadi aturan di skill silverbullet.md dan knowledge.md (path, istilah, perilaku). Jadikan struktur dan istilah penulis sebagai dasar untuk halaman berikutnya.
 
@@ -60,9 +60,9 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 |Nilai Boolean|`[[^value/boolean/allow]]`, `[[^value/boolean/disallow]]`, `[[^value/boolean/true]]`, `[[^value/boolean/disallow]]`|Gunakan di dalam tabel dan kalimat, bukan teks tebal|`[[^value/boolean/false]]`                                                                                                        |
 |Nama komponen/folder/data pada baris tabel|`[[^field/<slug>\|<Nama>]]`|slug: workspace, group, folder, variable, enum, table, tableview, tree, canvas, flow, dan slug komponen lain|`[[^field/tableview\|Daftar Pelanggan]]`                                                                                          |
 
-Catatan: alias tidak boleh diawali spasi (contoh salah: [[^field/workspace| Workspace]]).
+Catatan: alias tidak boleh diawali spasi (contoh salah: `[[^field/workspace| Workspace]]`).
 
-Tautkan komponen lain pada kemunculan pertamanya di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi, bukan diterjemahkan. Jika path tautan hanya tebakan, jangan ragu memakainya, lalu catat dalam satu TODO konsolidasi (lihat [[#Penjelasan TODO]]).
+Tautkan komponen lain di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi, bukan diterjemahkan. Jika path tautan hanya tebakan, jangan ragu memakainya, lalu catat dalam satu TODO konsolidasi (lihat [[#Penjelasan TODO]]).
 
 ## Penjelasan TODO
 
@@ -70,6 +70,7 @@ Penulisan TODO sebagai catatan untuk diperhatikan kepada penulis harus dibuat da
 
 <!--
   * [TODO] Deskripsi Task
+  * [TODO] lainnya...
 -->
 
 Pembuka`<!--` dan penutup`-->` harus dalam line nya sendiri, serta tambahkan baris kosong agar memastikan format terbaca dengan baik.
@@ -80,7 +81,7 @@ Untuk asumsi halaman baru yang ditautkan, kumpulkan dalam satu TODO per halaman:
 
 ## Jika butuh konfirmasi
 
-Bertindaklah sebagai ahli/konsultan penulisan dokumentasi aplikasi Phoenix. Jika ada hal yang masih perlu dikonfirmasi, silahkan ajukan pertanyaan melalui fitur claude kepada saya satu per satu untuk menggali informasi, detail dan preferensi yang Anda butuhkan sebelum mulai mengerjakan tugas ini agar hasilnya lebih akurat dan detail.
+Bertindaklah sebagai ahli/konsultan penulisan dokumentasi aplikasi Phoenix. Jika ada hal yang masih perlu dikonfirmasi, silahkan ajukan pertanyaan melalui fitur chat kepada saya satu per satu untuk menggali informasi, detail dan preferensi yang Anda butuhkan sebelum mulai mengerjakan tugas ini agar hasilnya lebih akurat dan detail.
 
 ## Templat halaman
 
@@ -101,9 +102,9 @@ description: <satu kalimat penjelasan halaman ini>
 <callout untuk Pengenalan Komponen>
 >**note** _<Komponen>_ merupakan salah satu komponen dalam modul [[Docs/Modul <Modul>/Pengenalan|<Modul>]] di Phoenix.
 
-<Komponen> adalah komponen yang dapat digunakan untuk <fungsi utama>.
+<Konteks> adalah <tipe/jenis> yang dapat digunakan untuk <fungsi utama>.
 
-<penjelasan dari segi kemudahan, solusi dan keunikan komponen ini>.
+<penjelasan dari segi kemudahan, solusi dan keunikan konteks ini>.
 
 ## Mengapa Menggunakan <Konteks>?
 
@@ -133,7 +134,7 @@ description: <satu kalimat penjelasan halaman ini>
 
 <Langkah jika konteks bisa disegarkan>
 
-## Menghapus <Komponen>
+## Menghapus <Konteks>
 
 <Langkah-langkah>
 
@@ -156,13 +157,13 @@ description: <satu kalimat penjelasan halaman ini>
 > **note** <Judul catatan, misalnya Perbedaan Icon>
 > Perbedaan tampilan desktop dan mobile.
 
-### Interaksi Antarmuka <Komponen>
+### Interaksi Antarmuka <Konteks>
 
 | Fungsi   | Aksi                                          |
 | -------- | --------------------------------------------- |
 | <Fungsi> | <Aksi dengan mouse, scroll, atau klik kanan.> |
 
-<Sesi pengelolaan komponen. Konfirmasi apa saja isi komponen. Jika dirasa topik ini akan dalam, buat intro dan arahkan ke halaman lain>
+<Sesi pengelolaan konteks. Konfirmasi apa saja isi konteks. Jika dirasa topik ini akan dalam, buat intro dan arahkan ke halaman lain>
 
 ## Membangun <Aspek> / Mengatur <Aspek>
 
@@ -172,7 +173,7 @@ description: <satu kalimat penjelasan halaman ini>
 
 **<Judul skenario>**
 
-<Satu paragraf konteks: siapa yang butuh apa dan mengapa komponen ini membantu.>
+<Satu paragraf konteks: siapa yang butuh apa dan mengapa konteks ini membantu.>
 
 **Komponen yang terlibat**
 
@@ -224,9 +225,10 @@ Catatan format:
 - Judul FAQ ditulis persis: `## FAQ : Pertanyaan yang Sering Diajukan`.
 - Langkah bernomor berisi satu tindakan per baris. Jangan menambahkan titik atau spasi ekstra setelah nomor. Pastikan nomornya berurutan.
 - Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris.
-- Setelah menyalin pola langkah dari halaman lain, ganti semua nama komponen (misalnya jangan menulis "Klik kanan Workspace" di halaman Flow).
+- Setelah menyalin pola langkah dari halaman lain, ganti semua nama konteks (misalnya jangan menulis "Klik kanan <Konteks halaman lain>" di halaman <konteks>).
 
-* **Langkah Membuat.** Pola yang dipakai penulis:
+## Pola yang dipakai penulis untuk konteks = Komponen:
+* **Langkah Membuat.** Pola yang dipakai penulis untuk konteks Komponen:
   1. `Buka folder tempat <Komponen> akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]`
   2. `Klik kanan > [[^field/add|Add]] > [[^field|<Modul>]] > [[^field/<slug>|<Komponen>]]`
   3. `Isi [[^field|Name]] dan [[^field|Description]]`
@@ -234,13 +236,13 @@ Catatan format:
 * **Langkah Mengubah.** Buka halaman kerja, klik`[[^button/edit|Edit]]`, perbarui isian, klik`[[^button|Update]]`. Tombol Save tidak dipakai.
 * **Langkah Menghapus.** Buka folder yang berisi komponen, klik kanan komponen, pilih`[[^button/delete|Delete]]`, lalu konfirmasi dengan`[[^button|Delete]]`.
 * **Bagian "Menyegarkan** (opsional, untuk komponen yang punya Refresh), ditempatkan setelah Mengubah:
-`## Menyegarkan <Komponen>`
-`Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.`
+* `## Menyegarkan <Komponen>`
+  `Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.`
 * **Callout peringatan.** Ditempatkan setelah langkah Menghapus bila ada dampak. Format: `>**warning** <Judul singkat>` lalu isi pada baris`>` berikutnya.
 * **Callout berhasil.** Ditempatkan setelah konfirmasi berhasil pengguna, panduan atau hasil yang selesai sempurna, pemberitahuan status positif, dan Praktik Terbaik. Format: `>**success** <Judul singkat>` lalu isi pada baris`>` berikutnya.
 * **Mermaid.** Penulis memperluas diagram saya menjadi diagram relasi, bukan hierarki lurus. Usulan: gambarkan juga jenis relasi (misalnya label`Akses` pada garis) dan gunakan garis putus-putus untuk relasi yang tidak berlaku pada semua komponen.
 * **Konsep Utama.** Judul bagian "Halaman Kerja" dan "Membaca Baris" boleh ditambahkan bila komponen memiliki halaman kerja berbentuk tabel.
-* **Pengelolaan baris di halaman kerja tabel.** Bila isi komponen dikelola per baris, pisahkan dari pengelolaan komponen lewat judul "Mengelola Data <Konteks>" dengan subjudul Menambahkan, Mengubah, dan Menghapus. Tombol yang dipakai: ` (di kolom Action). Dampak penghapusan baris ditulis sebagai callout warning.
+* **Pengelolaan baris di halaman kerja tabel.** Bila isi komponen dikelola per baris, pisahkan dari pengelolaan komponen lewat judul "Mengelola Data <Komponen>" dengan subjudul Menambahkan, Mengubah, dan Menghapus. Tombol yang dipakai: ` (di kolom Action). Dampak penghapusan baris ditulis sebagai callout warning.
 
 ## Diagram alur saat menjelasakan alur Logic Flow
 
@@ -252,7 +254,7 @@ label garis diapit`&nbsp;`.
 
 Ada dua jenis diagram. Pilih sesuai isi bagian.
 
-**A. Diagram relasi (Cara Kerja):** hubungan konseptual antar komponen atau Group, Workspace, dan sebagainya. Boleh memakai bentuk node sederhana`A["teks"]`. Label garis tetap diberi padding`&nbsp;`.
+**A. Diagram relasi (Cara Kerja):** hubungan konseptual antar konteks. Boleh memakai bentuk node sederhana `A["teks"]`. Label garis tetap diberi padding`&nbsp;`.
 **B. Diagram alur Flow (halaman Flow dan Contoh Penggunaan):** urutan blok Flow. Wajib memakai gaya di bawah:
 1. Gunakan flowchart LR atau flowchart TB jika diagram panjang.
 2.  Table: `@{ shape: database, label: "**Table**<br/><Nama Table>" } -.->|&nbsp;<Event Name>&nbsp;|`

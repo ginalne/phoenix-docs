@@ -1,6 +1,7 @@
 ---
   tags: meta/library
 ---
+# Styling Section
 
 | Istilah | Penjelasan |
 | --- | --- |
@@ -41,7 +42,6 @@ html{
 #sb-main .sb-wiki-link {
   white-space:nowrap;
 }
-
 ```
 ```mermaid
 flowchart LR
