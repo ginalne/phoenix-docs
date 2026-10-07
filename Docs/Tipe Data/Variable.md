@@ -26,7 +26,7 @@ Karena keunikannya, komponen lain dapat memilih Variable lewat field bertipe Var
 
 Selain sebagai konstanta, Variable juga dapat berfungsi sebagai *alias*. Komponen dalam [[Docs/Modul Logic/Pengenalan|Modul Logic]] dapat mengakses isi [[^field|Value]] hanya lewat nilai [[^field|Name]], sehingga isi [[^field|Value]] tidak harus diketahui oleh tim, tetapi tetap dapat dipakai untuk kebutuhan otomasi.
 
-Dengan Variable, nilai konfigurasi dan nilai sensitif di [[Inisialisasi/Apa itu Pro?|Pro]] tersimpan di satu sumber yang terhubung ke semua komponen, tanpa mengorbankan keamanan maupun konsistensi data.
+Dengan Variable, nilai konfigurasi dan nilai sensitif di [[Docs/Inisialisasi/Apa itu Pro|Pro]] tersimpan di satu sumber yang terhubung ke semua komponen, tanpa mengorbankan keamanan maupun konsistensi data.
 
 ## Format
 >**note** Tipe data ini tidak memiliki format khusus.

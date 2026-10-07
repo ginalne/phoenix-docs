@@ -16,12 +16,13 @@ Daftar browser yang memberikan performa optimal (Chrome, Edge, Safari), kompatib
 **Browser** : Chrome v.100+, Firefox v.90+, Edge v.100+, Safari v.14+
 **Koneksi** : Minimal 10 Mbps; aman dengan HTTPS
 
-## Persiapan
+## Inisialisasi
 
 1. Buat [akun ginalne](https://ginalne.com/join)
-2. lalu [Subcribe ke phoenix](https://ginalne.com/phoenix)
-3. Langganan Integrasi API yang diizinkan dan akses ke API Key yang telah dibuat (untuk integrasi pihak ketiga)
-4. Pemahaman mengenai REST API dan perangkat seperti Postman atau cURL (untuk pengembang)
+2. Memiliki langganan ke Phoenix (https://ginalne.com/phoenix)
+3. Membuat Pro dan menghubungkannya ke langganan tersebut
+4. Buka [halaman utama phoenix](https://phoenix.ginalne.com)
+5. Pilih Pro yang tersedia
 
-Setelah persiapan anda bisa masuk ke [halaman utama phoenix](https://phoenix.ginalne.com/), setelah itu anda akan masuk ke [[Docs/Antarmuka]]
+Setelah persiapan setelah itu anda akan masuk ke [[Docs/Antarmuka]]
 

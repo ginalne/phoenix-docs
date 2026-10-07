@@ -12,9 +12,9 @@
 
 >**note** _Variable_ merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix.
 
-Variable adalah komponen yang digunakan untuk mengelola Data Variable di dalam [[Inisialisasi/Apa itu Pro?|Pro]]. [[Docs/Tipe Data/Variable|Variable Data]] bersifat unik sehingga data yang Anda simpan dapat menjadi sumber kebenaran dan dipakai di mana saja.
+Variable adalah komponen yang digunakan untuk mengelola Data Variable di dalam [[Docs/Inisialisasi/Apa itu Pro|Pro]]. [[Docs/Tipe Data/Variable|Variable Data]] bersifat unik sehingga data yang Anda simpan dapat menjadi sumber kebenaran dan dipakai di mana saja.
 
-Komponen ini sudah tersedia sejak [[Inisialisasi/Apa itu Pro?|Pro]] dimulai. 
+Komponen ini sudah tersedia sejak [[Docs/Inisialisasi/Apa itu Pro|Pro]] dimulai. 
 
 ## Mengapa Menggunakan Komponen Variable?
 

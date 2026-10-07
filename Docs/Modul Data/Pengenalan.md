@@ -19,7 +19,7 @@ Berikut adalah beberapa komponen yang bisa digunakan dalam modul ini:
 
 ## Variable
 
-_Variable_ adalah komponen yang dapat digunakan untuk menyimpan nilai konstanta dan konfigurasi sebagai satu sumber data universal di dalam [[Inisialisasi/Apa itu Pro?|Pro]]. Semua komponen mengenali _Variable_, sehingga nilai yang Anda simpan sekali dapat dipakai di mana saja.
+_Variable_ adalah komponen yang dapat digunakan untuk menyimpan nilai konstanta dan konfigurasi sebagai satu sumber data universal di dalam [[Docs/Inisialisasi/Apa itu Pro|Pro]]. Semua komponen mengenali _Variable_, sehingga nilai yang Anda simpan sekali dapat dipakai di mana saja.
 
 Komponen ini sudah tersedia sejak Pro dimulai. Anda cukup membuka halaman kerjanya, mengisi baris pada tabel.
 

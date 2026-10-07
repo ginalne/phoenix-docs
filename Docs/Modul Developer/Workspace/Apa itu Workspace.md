@@ -33,7 +33,7 @@ Dengan Workspace, Anda tidak perlu mengatur hak akses di banyak tempat. Seluruh 
 | Istilah | Penjelasan |
 | --- | --- |
 | **Workspace** | Komponen untuk mengatur ruang kerja pengembangan, yaitu komponen yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan. |
-| **Origin** | Workspace utama sekaligus folder paling atas yang dimiliki setiap [[Inisialisasi/Apa itu Pro?|Pro]]. |
+| **Origin** | Workspace utama sekaligus folder paling atas yang dimiliki setiap [[Docs/Inisialisasi/Apa itu Pro|Pro]]. |
 | **Root** | Folder paling atas pada halaman kerja Workspace. Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itulah yang menjadi root. |
 | **Group** | Kumpulan pengguna yang dipetakan ke Workspace. Pada halaman kerja, Group tampil sebagai baris dengan angka jumlah anggotanya. |
 | **Folder** | Wadah yang berisi banyak komponen dan dapat diperluas atau dilipat. |

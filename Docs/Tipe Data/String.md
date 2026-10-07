@@ -13,6 +13,7 @@ String adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 255 
 * [[Docs/Format Data/String/Short Text]]
 * [[Docs/Format Data/String/Password]]
 * [[Docs/Format Data/String/Email]]
+* [[Docs/Format Data/String/Numeric]]
 * [[Docs/Format Data/String/Phone Number]]
 * [[Docs/Format Data/String/Mobile Number]]
 * [[Docs/Format Data/String/URL]]
