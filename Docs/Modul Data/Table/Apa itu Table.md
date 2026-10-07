@@ -95,9 +95,13 @@ Bagian [[^field|Column]] pada dialog [[^field|Create New Table]] berupa tabel de
 
 <!--
   * [TODO] Fungsi tombol [[^button/upload|Upload]] di pojok kanan atas dialog Create New Table belum dijelaskan. Dugaan saya untuk membuat Table dari file. Mohon konfirmasi, lalu tentukan apakah perlu subhalaman.
+    Jawaban : Ya
   * [TODO] Arti kolom Header (nilai N/A) belum jelas, mohon dijelaskan: kapan nilainya berubah dan apa fungsinya.
+    Jawaban : N/A artinya "not applicable", nilainya berubah ketika format perlu input Header-nya. semisal format nya adalah EnumData maka perlu header Enum. Atau Node perlu Tree.
   * [TODO] Konfirmasi apakah Directory otomatis terisi dari folder yang dibuka saat klik kanan, dan jalur menu Add > Data > Table.
+    Jawaban : Iya terisi ketika klik kanan di suatu folder.
   * [TODO] Konfirmasi apakah Column minimal harus berjumlah dua (dialog awal menampilkan dua baris Column) dan apakah Alias wajib dipilih sebelum Create.
+    Jawaban : Tidak, minimal 1
 -->
 
 ## Mengubah Table
@@ -109,6 +113,7 @@ Bagian [[^field|Column]] pada dialog [[^field|Create New Table]] berupa tabel de
 
 <!--
   * [TODO] Konfirmasi apa saja yang dapat diubah lewat Edit (hanya Name dan Description, atau juga Column, Format, dan Alias), dan dampaknya terhadap data Row yang sudah ada.
+    Jawaban : Ya tetap bisa, nanti akan ada tampilan warning untuk data loss, tapi pengguna dapat melakukan force update.
 -->
 
 ## Menyegarkan Table
@@ -122,10 +127,11 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 3. Konfirmasi dengan [[^button|Delete]]
 
 >**warning** Seluruh data Table ikut terhapus
-> Menghapus Table menghapus seluruh Column, Row, dan TableData di dalamnya. Komponen atau Flow yang menggunakan Table ini, termasuk [[Docs/Event/Menghubungkan Event|Event]] yang sudah terhubung dan field berformat Row yang merujuk ke Table ini, tidak lagi dapat mengambil datanya.
+> Menghapus Table menghapus seluruh [[Docs/Modul Data/Table/Column]], [[Docs/Modul Data/Table/Row]], dan [[Docs/Modul Data/Table/TableData]] di dalamnya. Komponen atau [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] yang menggunakan Table ini, termasuk [[Docs/Event/Menghubungkan Event|Event]] yang sudah terhubung dan field berformat Row yang merujuk ke Table ini, tidak lagi dapat mengambil datanya.
 
 <!--
   * [TODO] Konfirmasi dampak penghapusan Table (apakah dapat dikembalikan, apa yang terjadi pada Flow Block dan field berformat Row yang merujuk ke Table).
+    jawaban : terhapus
 -->
 
 ## Antarmuka Table
