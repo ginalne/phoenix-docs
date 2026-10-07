@@ -58,7 +58,8 @@ flowchart LR
 
 ## Membuat Table
 
-![[Docs/Modul Data/Table/modal-add-table.png]]
+![[Docs/Modul Data/Table/add-table.png]]
+
 1. Buka folder tempat Table akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan > [[^field/add|Add]] > [[^field|Data]] > [[^field/table|Table]]
 3. Periksa atau pilih folder pada [[^field|Directory]], biarkan kosong untuk letak _root_.
