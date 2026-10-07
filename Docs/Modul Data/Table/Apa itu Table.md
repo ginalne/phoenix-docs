@@ -38,7 +38,7 @@ Anda menyusun beberapa [[Docs/Tipe Data/Column|Column]] yang masing-masing memil
 | [[Docs/Tipe Data/Column|Column]]                       | Kolom pada Table. Setiap Column memiliki Name, Format, dan Description.                           |
 | [[Docs/Tipe Data/Row|Row]]                             | Baris pada Table yang menampung satu rangkaian data.                                              |
 | [[Docs/Tipe Data/TableData|TableData]]                 | Isi sel dari sebuah Row, mengikuti Column yang tersedia.                                          |
-| [[Docs/Tipe Data/Expression|Expression]]               | Ekspresi yang dapat langsung berfungsi pada komponen Table.                                       |
+| [[Docs/Tipe Data/Expression]]               | Tipe Data untuk melakukan perhitungan dengan fungsi yang disediakan, Tipe Data ini dapat langsung digunakan pada komponen Table.                                       |
 | [[Docs/Tipe Data/Column#Alias|Alias]]                  | Column pilihan yang nilainya tampil pada field berformat Row dengan pola `ID - Alias Value`.      |
 
 ## Cara Kerja Table
@@ -135,20 +135,20 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 Halaman kerja Table terdiri dari bilah navigasi di bagian atas dan tabel data di bagian bawah.
 
 ![[Docs/Modul Data/Table/halaman-kerja-table.png]]
-
-
 Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|ID]] di bagian awal dan [[^field|Action]] di bagian akhir. Ikon kecil pada header setiap Column menunjukkan format Column tersebut.
 
 <!--
-  * [TODO] Penempatan gambar halaman-kerja-table.png. Sarankan anotasi bernomor: (1) judul Table, (2) tombol bilah navigasi, (3) kolom pencarian, (4) kolom ID dan header Column, (5) kolom Action (Save dan Delete), (6) tombol Add Row, (7) informasi jumlah data dan navigasi halaman.
-  * [TODO] Teks pada screenshot (nama Table, isi Row, dan nama Column) adalah kasus pribadi dan tidak disebut di dokumentasi. Silakan ganti dengan gambar yang memakai penamaan generik.
+  * [DONE] Penempatan gambar halaman-kerja-table.png. Sarankan anotasi bernomor: (1) judul Table, (2) tombol bilah navigasi, (3) kolom pencarian, (4) kolom ID dan header Column, (5) kolom Action (Save dan Delete), (6) tombol Add Row, (7) informasi jumlah data dan navigasi halaman.
+  * [DONE] Teks pada screenshot (nama Table, isi Row, dan nama Column) adalah kasus pribadi dan tidak disebut di dokumentasi. Silakan ganti dengan gambar yang memakai penamaan generik.
   * [TODO] Kolom ketiga pada screenshot tidak menampilkan nama Column pada header (hanya ikon format). Mohon cek apakah itu hanya terpotong atau memang tampilan untuk nama kosong.
+    Jawaban : Ada, tapi tertutup
 -->
 
 ### Bilah navigasi Table terdiri dari:
 
-| Tombol                                         | Fungsi                                                                                                   |
+| Elemen                                         | Fungsi                                                                                                   |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [[^field/table|Pesanan]] | Judul, menampilkan ikon Table dan nama komponen. |
 | [[^button/edit|Edit]]                          | Mengubah atribut Table. Lihat [[#Mengubah Table]].                                                       |
 | [[^button/merge|Merge]]                        | Menggabungkan data Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Merge]].                         |
 | [[^button/publish|Publish]]                    | Mengatur publikasi Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Publish]].                       |
@@ -185,7 +185,7 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|I
 
 ## Mengelola Data Table
 
-Isi Table dikelola per Row di halaman kerja. Setiap Row memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai Column yang tersedia.
+Isi Table dikelola per Row di halaman kerja. Setiap [[Docs/Tipe Data/Row]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia.
 
 ### Menambahkan Row
 
@@ -194,10 +194,14 @@ Isi Table dikelola per Row di halaman kerja. Setiap Row memiliki [[Docs/Tipe Dat
 3. Isi data pada setiap Column
 4. Klik [[^button/save|Save]]
 
+Anda dapat klik [[^button/delete|Cancel]] untuk membatalkan penambahan Data Variable
+
 ### Mengubah Row
 
 1. Ubah isian pada Row yang diinginkan
 2. Klik [[^button/save|Save]] pada kolom [[^field|Action]]
+
+Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Data Variable
 
 ### Menghapus Row
 
@@ -209,7 +213,9 @@ Isi Table dikelola per Row di halaman kerja. Setiap Row memiliki [[Docs/Tipe Dat
 
 <!--
   * [TODO] Konfirmasi apakah ada dialog konfirmasi saat menghapus Row dan apakah Row yang dihapus benar-benar tidak dapat dikembalikan.
+    Jawaban: Iya ada konfirmasi, dan tidak dapat dikembalikan
   * [TODO] Pengelolaan isian per Format (misalnya cara mengisi Column berformat File atau Row) mungkin perlu subhalaman tersendiri.
+    Jawaban: Iya perlu, dimana text wikilink nya?
 -->
 
 ## Mengatur Table
@@ -223,6 +229,7 @@ Pelajari fitur pendukung Table di halaman berikut:
 
 <!--
   * [TODO] Halaman baru yang diusulkan (belum ada): Docs/Modul Data/Table/Merge (fungsi Merge), Docs/Modul Data/Table/Publish (konfigurasi publikasi), Docs/Modul Data/Table/Event (menghubungkan Event dari Table). Mohon konfirmasi path-nya, khususnya apakah halaman Event cukup mengarah ke Docs/Event/Menghubungkan Event.
+Jawaban: Iya sudah bagus.
 -->
 
 ## Contoh Penggunaan
@@ -250,8 +257,8 @@ flowchart LR
 
 | Langkah | Flow Block                                                                              | Peran dalam alur                                  | Hasil                                    |
 | ------- | --------------------------------------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------- |
-| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Table Row Event]]                   | Terpicu saat Row baru ditambahkan pada Table.     | Data Row siap diteruskan.                |
-| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|HTTP Request]]                    | Mengirim data Row ke sistem pengiriman.           | Sistem pengiriman menerima pesanan.      |
+| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]                   | Terpicu saat Row baru ditambahkan pada Table.     | Data Row siap diteruskan.                |
+| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]                    | Mengirim data Row ke sistem pengiriman.           | Sistem pengiriman menerima pesanan.      |
 
 **Hasil yang dirasakan**
 
@@ -270,8 +277,9 @@ flowchart LR
 Dengan satu Table sebagai sumber data, pencatatan, pemilihan data, dan otomasi dapat berjalan dari data yang sama.
 
 <!--
-  * [TODO] Nama komponen (Pesanan, Kirim Pesanan), nama Column, dan nama Event pada garis diagram ("Row Ditambahkan") adalah penamaan generik buatan saya. Mohon sesuaikan dengan nama Event Table yang sebenarnya dan judul skenario yang Anda inginkan.
+  * [DONE] Nama komponen (Pesanan, Kirim Pesanan), nama Column, dan nama Event pada garis diagram ("Row Ditambahkan") adalah penamaan generik buatan saya. Mohon sesuaikan dengan nama Event Table yang sebenarnya dan judul skenario yang Anda inginkan.
   * [TODO] Konfirmasi path halaman kategori Flow Block (Event dan Modular) dan apakah Table Row Event menghasilkan output bertipe Row.
+    Jawaban : Iya, betul.
 -->
 
 ## Praktik Terbaik
@@ -293,7 +301,7 @@ Dengan satu Table sebagai sumber data, pencatatan, pemilihan data, dan otomasi d
 
 - Table adalah komponen di modul [[Docs/Modul Data/Pengenalan|Data]] untuk menyimpan data transaksional maupun generik.
 - Table terdiri dari [[Docs/Tipe Data/Column|Column]], [[Docs/Tipe Data/Row|Row]], dan [[Docs/Tipe Data/TableData|TableData]].
-- Table baru dibuat tanpa Row, dan Anda wajib memilih satu Alias.
+- Anda wajib memilih satu Alias saat membuat Table.
 - Halaman kerja menambahkan kolom ID di awal dan Action di akhir.
 - Merge, Publish, dan Event memiliki halaman penjelasan masing-masing.
 - Hati-hati saat menghapus Table atau Row karena data tidak dapat dikembalikan.
@@ -302,13 +310,13 @@ Dengan satu Table sebagai sumber data, pencatatan, pemilihan data, dan otomasi d
 
 > **faq**
 > **Apakah Table baru langsung berisi data?**
-> Tidak. Row pada Table yang baru dibuat masih kosong. Tambahkan Row di halaman kerja.
+> Tidak. Row pada Table yang baru dibuat masih kosong. Klik [[^button/add|Add Row]] di halaman kerja.
 > **Mengapa saya harus memilih Alias?**
-> Alias menentukan nilai Column yang tampil pada field berformat Row dengan pola `ID - Alias Value`, sehingga Row mudah dikenali.
+> Alias menentukan nilai [[Docs/Tipe Data/Column]] yang tampil pada field berformat [[Docs/Tipe Data/Row]] dengan pola `ID : Alias Value`, sehingga Row mudah dikenali.
 > **Bisakah lebih dari satu Column dijadikan Alias?**
 > Tidak. Pilih salah satu Column sebagai Alias.
 > **Dari mana kolom ID dan Action berasal?**
 > Keduanya kolom tambahan pada halaman kerja Table, ID di bagian awal dan Action di bagian akhir.
-> **Di mana saya bisa mempelajari Merge, Publish, dan Event?**
+> **Di mana saya bisa mempelajari fungsi Merge, Publish, dan Event?**
 > Lihat [[Docs/Modul Data/Table/Merge|Merge]], [[Docs/Modul Data/Table/Publish|Publish]], dan [[Docs/Modul Data/Table/Event|Event]].
 

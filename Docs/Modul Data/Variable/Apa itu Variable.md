@@ -72,7 +72,7 @@ Halaman kerja Variable terdiri dari bilah navigasi di bagian atas dan tabel Vari
 
 Bilah navigasi Variable terdiri dari:
 
-| Tombol | Fungsi |
+| Elemen | Fungsi |
 | --- | --- |
 | [[^field/variable|Variable]] | Judul komponen, menampilkan ikon Variable dan nama komponen. |
 | [[^button/refresh|Refresh]] | Memuat ulang data pada tabel Variable. |
@@ -123,6 +123,7 @@ Anda dapat klik [[^button/delete|Cancel]] untuk membatalkan penambahan Data Vari
 3. Klik [[^button/save|Save]]
 
 Kolom [[^field|Updated At]] terisi otomatis setelah baris disimpan.
+Anda dapat klik [[^button/x|Cancel]] untuk membatalkan penambahan Data Variable
 
 ### Menghapus Variable Data
 
