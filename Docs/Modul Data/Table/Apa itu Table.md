@@ -115,7 +115,6 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 Halaman kerja Table terdiri dari bilah navigasi di bagian atas dan tabel data di bagian bawah.
 
 ![[Docs/Modul Data/Table/halaman-kerja-table.png]]
-
 Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|ID]] di bagian awal (terisi otomatis) dan [[^field|Action]] di bagian akhir. Ikon kecil pada header setiap Column menunjukkan format Column tersebut.
 
 ### Bilah navigasi Table terdiri dari:
@@ -185,7 +184,6 @@ Pelajari fitur pendukung Table di halaman berikut:
 - [[Docs/Modul Data/Table/Publish|Publish]]: mengatur publikasi Table.
 - [[Docs/Modul Data/Table/Event|Event]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 - [[Docs/Tipe Data/Column|Column]], [[Docs/Tipe Data/Row|Row]], dan [[Docs/Tipe Data/TableData|TableData]]: memahami isi Table lebih dalam.
-
 
 ## Contoh Penggunaan
 
