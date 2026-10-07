@@ -29,8 +29,6 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 
 ## Flow (Modul Logic)
 
-Sumber: halaman "Apa itu Flow" yang sudah direvisi penulis (status release).
-
 - **Definisi (versi penulis):** Flow adalah komponen untuk mengatur logika dan proses pengelolaan data dengan pendekatan **alur komposit**, yaitu menyusun logika dengan menghubungkan blok demi blok. Setiap blok dapat dihubungkan dan dimonitor agar setiap Event yang terikat menghasilkan keluaran dan otomasi yang tepat.
 - **Istilah resmi:** area kerja Flow disebut **Blueprint** (bukan "kanvas"). Block pemicu disebut **Flow Block Event**.
 - **Struktur halaman:**
@@ -86,11 +84,24 @@ Sumber: halaman "Apa itu Flow" yang sudah direvisi penulis (status release).
 - **Akses:** anggota yang tidak memiliki akses komponen Variable tidak dapat mengetahui Value, tetapi tetap dapat memakainya untuk otomasi atau integrasi. Anggota yang memiliki akses melihat Value secara terbuka di halaman kerja.
 - **Pemisahan halaman:** halaman komponen Variable membahas pengelolaan. Penjelasan Variable sebagai tipe data ada di halaman Tipe Data (`Docs/Tipe Data/Variable`).
 
-## Pola penulis (lintas komponen)
+## Table (Modul Data)
 
-- Kolom isian dan teks informasi antarmuka memakai `[[^field|Label]]` (bukan `[[field|Label]]`), termasuk Search, No Activity, Header Name, `x _ y _`, dan `scale _`.
-- Ikon tombol yang dipakai: edit, delete, refresh, submission, event, activity, empty. Tombol tanpa ikon di dalam block (Trigger) memakai `[[^button/empty|Trigger]]`.
-- Callout memakai judul: `>**note** Judul` atau `>**warning** Judul`, lalu isi pada baris `>` berikutnya.
-- Halaman komponen besar memuat bagian Antarmuka (gambar, penjelasan area, tabel tombol bilah navigasi, catatan perbedaan desktop/mobile) dan Interaksi Antarmuka (tabel Fungsi dan Aksi).
-- Bagian aspek pengelolaan (misalnya "Membangun Logika Flow") berisi daftar tautan anchor ke subhalaman, bukan langkah rinci.
-- Path komponen Data yang dipakai penulis: `Docs/Modul Data/<Komponen>/Apa itu <Komponen>` (Variable, Enum, Table, Tree).
+- **Definisi:** Table adalah komponen modul Data untuk menyimpan data secara kompleks, baik transaksional maupun generik. Table memiliki beberapa Column (`Docs/Tipe Data/Column`) dengan format berbeda, dan Row (`Docs/Tipe Data/Row`) yang masing-masing memiliki TableData (`Docs/Tipe Data/TableData`) sesuai kolom yang tersedia. Expression (`Docs/Tipe Data/Expression`) adalah Tipe Data untuk melakukan perhitungan dengan fungsi yang disediakan, dan dapat langsung digunakan pada Table.
+- **Path halaman:** `Docs/Modul Data/Table/Apa itu Table`. Judul: "Apa itu Table?". Subhalaman yang disepakati: `Docs/Modul Data/Table/Merge`, `.../Publish`, `.../Event`. Subhalaman yang diusulkan: `.../Upload` dan `.../Mengisi TableData` (cara mengisi data per Format Column).
+- **Row awal:** Row pada Table yang baru dibuat masih kosong.
+- **Dialog Create New Table** (gambar `add-table.png`, diletakkan di awal bagian Membuat):
+  - Directory (Search Folder): terisi otomatis sesuai folder yang diklik kanan. Dikosongkan berarti letak root.
+  - Name, Description, tombol Upload (membuat Table dari file), bagian Column dengan tombol Add Column, serta tombol Cancel dan Create.
+  - Tabel Column berkolom Index, Name, Format (placeholder "Select Data Format..."), Header, Description, Alias (ikon bintang), dan Action (Delete). Dialog awal menampilkan dua baris Column, tetapi **minimal Column adalah 1**.
+  - **Header** bernilai N/A (not applicable) bila Format tidak membutuhkannya. Bila Format membutuhkan, Header diisi: Format bertipe EnumData membutuhkan Header Enum, dan Node membutuhkan Tree.
+- **Alias:** wajib dipilih satu Column saat membuat Table. Alias yang dipilih tampil pada field berformat Row dengan pola `ID - Alias Value`.
+- **Mengubah Table (Edit > Update):** Name, Description, dan juga Column, Format, serta Alias dapat diubah. Bila perubahan berisiko menghilangkan data, Phoenix menampilkan peringatan data loss, dan pengguna dapat melanjutkan dengan *force update*.
+- **Menghapus Table:** seluruh Column, Row, dan TableData ikut terhapus.
+- **Halaman kerja:** bilah navigasi berisi judul Table (ikon Table dan Header Name), Edit, Merge, Publish, Event, Refresh, dan kolom pencarian "Search Table Data...". Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
+  - Tabel data memiliki kolom tambahan **ID** di awal (terisi otomatis) dan **Action** di akhir (tombol Save dan Delete per Row). Ikon kecil pada header Column menunjukkan format (contoh: abc untuk String, T untuk Text). Nama Column ada di header, tetapi pada screenshot sebagian tertutup.
+  - **Save** hanya aktif ketika ada perubahan. **Add Row** tersedia di bawah baris terakhir dan di bagian bawah halaman, keduanya berfungsi sama. Saat menambah atau mengubah Row tersedia tombol **Cancel** untuk membatalkan.
+  - Menghapus Row memunculkan dialog konfirmasi, dan Row yang dihapus tidak dapat dikembalikan.
+  - Bagian bawah: scroll horizontal, informasi "Show 50 of 2 items, on page" (angka 50 adalah batas data per halaman), input nomor halaman dengan Go, serta Prev dan Next.
+- **Contoh Flow:** Table Row Event (`Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event`) menghasilkan output bertipe Row. HTTP Request berada di `Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request`.
+- **Merge, Publish, Event:** detail dijelaskan di halaman masing-masing. Ketiganya dibatasi Function Access di Workspace.
+- **Penamaan pada screenshot** (nama Table, Row, dan Column pada gambar contoh penulis) adalah kasus pribadi dan tidak disebut di dokumentasi.

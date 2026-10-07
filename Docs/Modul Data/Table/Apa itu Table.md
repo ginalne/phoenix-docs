@@ -1,7 +1,7 @@
 ---
     status: release
     title: "Apa itu Table?"
-    description: 
+    description: Pengenalan komponen Table di modul Data Phoenix untuk menyimpan data transaksional maupun generik dalam Column, Row, dan TableData.
     pageDecoration:
       icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#aaa" viewBox="0 0 18 16">
   <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z"/>
@@ -9,15 +9,9 @@
       tree:
         priority: 4
 ---
----
-status: draft
-title: Apa itu Table?
-description: Pengenalan komponen Table di modul Data Phoenix untuk menyimpan data transaksional maupun generik dalam Column, Row, dan TableData.
----
-
 # Apa itu Table?
 
->**note** _Table_ merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix.
+>**note** Table merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix.
 
 Table adalah komponen penyimpan data yang dapat digunakan untuk menyimpan data secara kompleks, baik data transaksional maupun data generik.
 
@@ -59,7 +53,7 @@ flowchart LR
 
 1. Buka folder tempat Table akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan > [[^field/add|Add]] > [[^field|Data]] > [[^field/table|Table]]
-3. Periksa atau pilih folder pada [[^field|Directory]], biarkan kosong untuk letak _root_.
+3. Periksa [[^field|Directory]] yang terisi otomatis sesuai folder yang Anda klik kanan, atau pilih folder lain. Biarkan kosong untuk letak _root_.
 4. Isi [[^field|Name]] dan [[^field|Description]]
 5. Pada bagian [[^field|Column]], isi [[^field|Name]], pilih Format, dan isi Description untuk setiap Column
 6. Klik [[^button/add|Add Column]] jika Anda membutuhkan Column tambahan
@@ -67,8 +61,11 @@ flowchart LR
 8. Pilih satu Column sebagai Alias dengan mengklik ikon bintang pada kolom [[^field|Alias]]
 9. Klik [[^button|Create]]
 
+Anda juga dapat membuat Table dari file dengan mengklik [[^button/upload|Upload]] di pojok kanan atas dialog. Selengkapnya lihat [[Docs/Modul Data/Table/Upload]].
+
 Beberapa aturan penting:
 
+- Table minimal memiliki satu Column.
 - Setiap Table harus memiliki satu Alias. Pilih salah satu Column sebagai Alias.
 - Pada field berformat Row, nilai ditampilkan dengan pola `ID - Alias Value`. Contoh: jika Alias adalah Column Nama dan Row dengan ID 1 bernilai "Kopi Arabika", field menampilkan `1 - Kopi Arabika`.
 
@@ -79,38 +76,26 @@ Beberapa aturan penting:
 
 Bagian [[^field|Column]] pada dialog [[^field|Create New Table]] berupa tabel dengan kolom berikut:
 
-| Kolom                      | Fungsi                                                                                                        |
+| Elemen                      | Fungsi                                                                                                        |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | [[^field|Index]]           | Nomor urut Column.                                                                                            |
 | [[^field|Name]]            | Nama Column.                                                                                                  |
 | [[^field|Format]]          | Format data Column. Pilih lewat [[^field|Select Data Format...]]. Selengkapnya lihat [[Docs/Tipe Data/Column]]. |
-| [[^field|Header]]          | Informasi header Column. Pada Column yang baru ditambahkan, tampil [[^field|N/A]].                           |
+| [[^field|Header]]          | Header yang dibutuhkan oleh Format tertentu. Bernilai [[^field|N/A]] (*not applicable*) jika Format tidak membutuhkannya. Contoh: Format bertipe [[Docs/Tipe Data/EnumData|EnumData]] membutuhkan Header [[Docs/Tipe Data/Enum|Enum]], dan Format bertipe [[Docs/Tipe Data/Node|Node]] membutuhkan Header [[Docs/Tipe Data/Tree|Tree]]. |
 | [[^field|Description]]     | Penjelasan singkat tentang isi Column.                                                                        |
 | [[^field|Alias]]           | Penanda Column yang dipilih sebagai Alias. Hanya satu Column yang dapat dipilih.                              |
 | [[^field|Action]]          | Berisi tombol [[^button/delete|Delete]] untuk menghapus Column dari dialog.                                  |
-
-<!--
-  * [TODO] Fungsi tombol [[^button/upload|Upload]] di pojok kanan atas dialog Create New Table belum dijelaskan. Dugaan saya untuk membuat Table dari file. Mohon konfirmasi, lalu tentukan apakah perlu subhalaman.
-    Jawaban : Ya
-  * [TODO] Arti kolom Header (nilai N/A) belum jelas, mohon dijelaskan: kapan nilainya berubah dan apa fungsinya.
-    Jawaban : N/A artinya "not applicable", nilainya berubah ketika format perlu input Header-nya. semisal format nya adalah EnumData maka perlu header Enum. Atau Node perlu Tree.
-  * [TODO] Konfirmasi apakah Directory otomatis terisi dari folder yang dibuka saat klik kanan, dan jalur menu Add > Data > Table.
-    Jawaban : Iya terisi ketika klik kanan di suatu folder.
-  * [TODO] Konfirmasi apakah Column minimal harus berjumlah dua (dialog awal menampilkan dua baris Column) dan apakah Alias wajib dipilih sebelum Create.
-    Jawaban : Tidak, minimal 1
--->
 
 ## Mengubah Table
 
 1. Buka halaman kerja Table
 2. Klik [[^button/edit|Edit]]
-3. Perbarui isian yang diperlukan
+3. Perbarui isian yang diperlukan, termasuk Column, Format, atau Alias
 4. Klik [[^button|Update]]
 
-<!--
-  * [TODO] Konfirmasi apa saja yang dapat diubah lewat Edit (hanya Name dan Description, atau juga Column, Format, dan Alias), dan dampaknya terhadap data Row yang sudah ada.
-    Jawaban : Ya tetap bisa, nanti akan ada tampilan warning untuk data loss, tapi pengguna dapat melakukan force update.
--->
+>**warning** Perubahan Column dapat menyebabkan data hilang
+> Jika perubahan berisiko menghilangkan data pada Row yang sudah ada, Phoenix menampilkan peringatan. Anda tetap dapat melanjutkan dengan *force update*, tetapi data yang terdampak akan hilang.
+
 
 ## Menyegarkan Table
 
@@ -123,33 +108,21 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 3. Konfirmasi dengan [[^button|Delete]]
 
 >**warning** Seluruh data Table ikut terhapus
-> Menghapus Table menghapus seluruh [[Docs/Modul Data/Table/Column]], [[Docs/Modul Data/Table/Row]], dan [[Docs/Modul Data/Table/TableData]] di dalamnya. Komponen atau [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] yang menggunakan Table ini, termasuk [[Docs/Event/Menghubungkan Event|Event]] yang sudah terhubung dan field berformat Row yang merujuk ke Table ini, tidak lagi dapat mengambil datanya.
-
-<!--
-  * [TODO] Konfirmasi dampak penghapusan Table (apakah dapat dikembalikan, apa yang terjadi pada Flow Block dan field berformat Row yang merujuk ke Table).
-    jawaban : Ya Terhapus
--->
+> Menghapus Table menghapus seluruh [[Docs/Tipe Data/Column|Column]], [[Docs/Tipe Data/Row|Row]], dan [[Docs/Tipe Data/TableData|TableData]] di dalamnya. Komponen atau [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] yang menggunakan Table ini, termasuk [[Docs/Event/Menghubungkan Event|Event]] yang sudah terhubung dan field berformat Row yang merujuk ke Table ini, tidak lagi dapat mengambil datanya.
 
 ## Antarmuka Table
 
 Halaman kerja Table terdiri dari bilah navigasi di bagian atas dan tabel data di bagian bawah.
 
 ![[Docs/Modul Data/Table/halaman-kerja-table.png]]
-Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|ID]] di bagian awal dan [[^field|Action]] di bagian akhir. Ikon kecil pada header setiap Column menunjukkan format Column tersebut.
 
-<!--
-  * [DONE] Penempatan gambar halaman-kerja-table.png. Sarankan anotasi bernomor: (1) judul Table, (2) tombol bilah navigasi, (3) kolom pencarian, (4) kolom ID dan header Column, (5) kolom Action (Save dan Delete), (6) tombol Add Row, (7) informasi jumlah data dan navigasi halaman.
-  * [DONE] Teks pada screenshot (nama Table, isi Row, dan nama Column) adalah kasus pribadi dan tidak disebut di dokumentasi. Silakan ganti dengan gambar yang memakai penamaan generik.
-  * [TODO] Kolom ketiga pada screenshot tidak menampilkan nama Column pada header (hanya ikon format). Mohon cek apakah itu hanya terpotong atau memang tampilan untuk nama kosong.
-    Jawaban : Ada, tapi tertutup
--->
+Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|ID]] di bagian awal (terisi otomatis) dan [[^field|Action]] di bagian akhir. Ikon kecil pada header setiap Column menunjukkan format Column tersebut.
 
 ### Bilah navigasi Table terdiri dari:
 
-| Elemen                                         | Fungsi                                                                                                   |
+| Tombol                                         | Fungsi                                                                                                   |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [[^field/table|Pesanan]] | Judul, menampilkan ikon Table dan nama komponen. |
-| [[^button/edit|Edit]]                          | Mengubah atribut Table. Lihat [[#Mengubah Table]].                                                       |
+| [[^button/edit|Edit]]                          | Mengubah atribut Table, termasuk Column. Lihat [[#Mengubah Table]].                                      |
 | [[^button/merge|Merge]]                        | Menggabungkan data Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Merge]].                         |
 | [[^button/publish|Publish]]                    | Mengatur publikasi Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Publish]].                       |
 | [[^button/event|Event]]                        | Menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]]. Penjelasan lengkap di [[Docs/Modul Data/Table/Event]]. |
@@ -160,8 +133,8 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|I
 
 | Tombol                                | Fungsi                                                         |
 | ------------------------------------- | -------------------------------------------------------------- |
-| [[^button/add|Add Row]]               | Menambahkan Row baru. Tersedia di bawah baris terakhir dan di bagian bawah halaman. |
-| [[^button/save|Save]]                 | Menyimpan perubahan pada Row.                                  |
+| [[^button/add|Add Row]]               | Menambahkan Row baru. Tersedia di bawah baris terakhir dan di bagian bawah halaman, keduanya berfungsi sama. |
+| [[^button/save|Save]]                 | Menyimpan perubahan pada Row. Aktif hanya ketika ada perubahan. |
 | [[^button/delete|Delete]]             | Menghapus Row.                                                 |
 
 ### Interaksi Antarmuka Table
@@ -171,21 +144,12 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|I
 | Melihat Column di sisi kanan    | Scroll horizontal pada bagian bawah tabel data.                                            |
 | Berpindah halaman data          | Klik [[^button/left|Prev]] atau [[^button/right|Next]], atau isi nomor halaman lalu klik [[^button/empty|Go]]. |
 | Mencari data                    | Ketik pada [[^field|Search Table Data...]].                                                |
+| Membaca informasi jumlah data   | Lihat [[^field|Show 50 of 2 items, on page]] di bagian bawah halaman. Pada contoh tampilan, angka 50 adalah batas data per halaman dan angka 2 adalah jumlah seluruh data. |
 
-<!--
-  * [TODO] Konfirmasi arti informasi di bagian bawah halaman ("Show 50 of 2 items, on page"), terutama makna angka 50 (batas data per halaman?).
-  Jawaban: Ya betul 50 batas halaman.
-  * [TODO] Konfirmasi perilaku tombol Save (tampak nonaktif sebelum ada perubahan) dan apakah dua tombol Add Row berfungsi sama.
-  Jawaban: Save hanya aktif ketika ada perubahan, dan Add Row fungsinya sama.
-  * [TODO] Konfirmasi perbedaan tampilan desktop dan mobile pada bilah navigasi (misalnya tombol berubah menjadi ikon saja).
-  Jawaban : Tidak ada perbedaan yang signifikan
-  * [TODO] Konfirmasi apakah ID terisi otomatis, dan apakah kolom pencarian mencari di semua Column.
-  Jawaban : Iya ID terisi otomatis
--->
 
 ## Mengelola Data Table
 
-Isi Table dikelola per Row di halaman kerja. Setiap [[Docs/Tipe Data/Row]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia.
+Isi Table dikelola per Row di halaman kerja. Setiap [[Docs/Tipe Data/Row]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia. Cara mengisi TableData berbeda untuk setiap Format. Selengkapnya lihat [[Docs/Modul Data/Table/Mengisi TableData]].
 
 ### Menambahkan Row
 
@@ -194,14 +158,14 @@ Isi Table dikelola per Row di halaman kerja. Setiap [[Docs/Tipe Data/Row]] memil
 3. Isi data pada setiap Column
 4. Klik [[^button/save|Save]]
 
-Anda dapat klik [[^button/delete|Cancel]] untuk membatalkan penambahan Data Variable
+Anda dapat klik [[^button/delete|Cancel]] untuk membatalkan penambahan Row.
 
 ### Mengubah Row
 
 1. Ubah isian pada Row yang diinginkan
 2. Klik [[^button/save|Save]] pada kolom [[^field|Action]]
 
-Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Data Variable
+Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Row.
 
 ### Menghapus Row
 
@@ -211,26 +175,17 @@ Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Data Variable
 >**warning** Row yang dihapus tidak dapat dikembalikan
 > Menghapus Row juga menghapus seluruh TableData di dalamnya. Pastikan Row tersebut tidak lagi dibutuhkan oleh komponen atau Flow lain.
 
-<!--
-  * [TODO] Konfirmasi apakah ada dialog konfirmasi saat menghapus Row dan apakah Row yang dihapus benar-benar tidak dapat dikembalikan.
-    Jawaban: Iya ada konfirmasi, dan tidak dapat dikembalikan
-  * [TODO] Pengelolaan isian per Format (misalnya cara mengisi Column berformat File atau Row) mungkin perlu subhalaman tersendiri.
-    Jawaban: Iya perlu, dimana text wikilink nya?
--->
-
 ## Mengatur Table
 
 Pelajari fitur pendukung Table di halaman berikut:
 
+- [[Docs/Modul Data/Table/Upload|Upload]]: membuat Table dari file.
+- [[Docs/Modul Data/Table/Mengisi TableData|Mengisi TableData]]: cara mengisi data sesuai Format Column.
 - [[Docs/Modul Data/Table/Merge|Merge]]: menggabungkan data Table.
 - [[Docs/Modul Data/Table/Publish|Publish]]: mengatur publikasi Table.
 - [[Docs/Modul Data/Table/Event|Event]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 - [[Docs/Tipe Data/Column|Column]], [[Docs/Tipe Data/Row|Row]], dan [[Docs/Tipe Data/TableData|TableData]]: memahami isi Table lebih dalam.
 
-<!--
-  * [TODO] Halaman baru yang diusulkan (belum ada): Docs/Modul Data/Table/Merge (fungsi Merge), Docs/Modul Data/Table/Publish (konfigurasi publikasi), Docs/Modul Data/Table/Event (menghubungkan Event dari Table). Mohon konfirmasi path-nya, khususnya apakah halaman Event cukup mengarah ke Docs/Event/Menghubungkan Event.
-Jawaban: Iya sudah bagus.
--->
 
 ## Contoh Penggunaan
 
@@ -276,24 +231,20 @@ flowchart LR
 
 Dengan satu Table sebagai sumber data, pencatatan, pemilihan data, dan otomasi dapat berjalan dari data yang sama.
 
-<!--
-  * [DONE] Nama komponen (Pesanan, Kirim Pesanan), nama Column, dan nama Event pada garis diagram ("Row Ditambahkan") adalah penamaan generik buatan saya. Mohon sesuaikan dengan nama Event Table yang sebenarnya dan judul skenario yang Anda inginkan.
-  * [TODO] Konfirmasi path halaman kategori Flow Block (Event dan Modular) dan apakah Table Row Event menghasilkan output bertipe Row.
-    Jawaban : Iya, betul.
--->
-
 ## Praktik Terbaik
 
 - **Rancang Column sebelum mengisi Row.** Tentukan Name dan Format setiap Column agar data konsisten sejak awal.
 - **Pilih Format sesuai jenis data.** Format yang tepat membuat isian lebih rapi dan mudah diproses komponen lain.
 - **Pilih Alias yang mudah dikenali.** Gunakan Column yang paling mewakili Row, misalnya nama, karena nilainya tampil pada field berformat Row.
 - **Isi Description pada Column.** Penjelasan singkat membantu anggota lain memahami isi setiap Column.
+- **Periksa dampaknya sebelum mengubah Column.** Perubahan Column pada Table yang sudah berisi Row dapat menghilangkan data.
 
 ## Batasan dan Catatan
 
-- Table yang baru dibuat belum memiliki Row.
+- Table yang baru dibuat belum memiliki Row, dan minimal memiliki satu Column.
 - Setiap Table harus memiliki satu Alias. Alias yang dipilih tampil pada field berformat Row dengan pola `ID - Alias Value`.
-- ID dan Action adalah kolom tambahan pada halaman kerja, bukan Column yang Anda buat.
+- ID dan Action adalah kolom tambahan pada halaman kerja, bukan Column yang Anda buat. ID terisi otomatis.
+- Perubahan Column lewat [[^button/edit|Edit]] dapat menyebabkan data hilang. Phoenix menampilkan peringatan, dan Anda dapat melanjutkan dengan *force update*.
 - Penggunaan [[^button/merge|Merge]], [[^button/event|Event]], dan [[^button/publish|Publish]] bergantung pada Function Access di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].
 - Row yang dihapus tidak dapat dikembalikan.
 
@@ -301,10 +252,10 @@ Dengan satu Table sebagai sumber data, pencatatan, pemilihan data, dan otomasi d
 
 - Table adalah komponen di modul [[Docs/Modul Data/Pengenalan|Data]] untuk menyimpan data transaksional maupun generik.
 - Table terdiri dari [[Docs/Tipe Data/Column|Column]], [[Docs/Tipe Data/Row|Row]], dan [[Docs/Tipe Data/TableData|TableData]].
-- Anda wajib memilih satu Alias saat membuat Table.
+- Saat membuat Table, Anda wajib memilih satu Alias dan membuat minimal satu Column.
 - Halaman kerja menambahkan kolom ID di awal dan Action di akhir.
 - Merge, Publish, dan Event memiliki halaman penjelasan masing-masing.
-- Hati-hati saat menghapus Table atau Row karena data tidak dapat dikembalikan.
+- Hati-hati saat mengubah Column dan saat menghapus Table atau Row karena data dapat hilang.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
@@ -312,11 +263,13 @@ Dengan satu Table sebagai sumber data, pencatatan, pemilihan data, dan otomasi d
 > **Apakah Table baru langsung berisi data?**
 > Tidak. Row pada Table yang baru dibuat masih kosong. Klik [[^button/add|Add Row]] di halaman kerja.
 > **Mengapa saya harus memilih Alias?**
-> Alias menentukan nilai [[Docs/Tipe Data/Column]] yang tampil pada field berformat [[Docs/Tipe Data/Row]] dengan pola `ID : Alias Value`, sehingga Row mudah dikenali.
+> Alias menentukan nilai [[Docs/Tipe Data/Column]] yang tampil pada field berformat [[Docs/Tipe Data/Row]] dengan pola `ID - Alias Value`, sehingga Row mudah dikenali.
 > **Bisakah lebih dari satu Column dijadikan Alias?**
 > Tidak. Pilih salah satu Column sebagai Alias.
+> **Bisakah Column diubah setelah Table dibuat?**
+> Bisa, lewat [[^button/edit|Edit]]. Jika perubahan berisiko menghilangkan data, Phoenix menampilkan peringatan dan Anda dapat melanjutkan dengan *force update*.
 > **Dari mana kolom ID dan Action berasal?**
-> Keduanya kolom tambahan pada halaman kerja Table, ID di bagian awal dan Action di bagian akhir.
+> Keduanya kolom tambahan pada halaman kerja Table, ID di bagian awal (terisi otomatis) dan Action di bagian akhir.
 > **Di mana saya bisa mempelajari fungsi Merge, Publish, dan Event?**
 > Lihat [[Docs/Modul Data/Table/Merge|Merge]], [[Docs/Modul Data/Table/Publish|Publish]], dan [[Docs/Modul Data/Table/Event|Event]].
 
