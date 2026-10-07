@@ -3,6 +3,9 @@
     title: "Apa itu Table?"
     description: 
     pageDecoration:
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#aaa" viewBox="0 0 18 16">
+  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z"/>
+</svg>'
       tree:
         priority: 4
 ---
@@ -32,11 +35,11 @@ Anda menyusun beberapa [[Docs/Tipe Data/Column|Column]] yang masing-masing memil
 
 | Istilah                                                | Penjelasan                                                                                        |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| [[Docs/Tipe Data/Column\|Column]]                       | Kolom pada Table. Setiap Column memiliki Name, Format, dan Description.                           |
-| [[Docs/Tipe Data/Row\|Row]]                             | Baris pada Table yang menampung satu rangkaian data.                                              |
-| [[Docs/Tipe Data/TableData\|TableData]]                 | Isi sel dari sebuah Row, mengikuti Column yang tersedia.                                          |
-| [[Docs/Tipe Data/Expression\|Expression]]               | Ekspresi yang dapat langsung berfungsi pada komponen Table.                                       |
-| [[Docs/Tipe Data/Column#Alias\|Alias]]                  | Column pilihan yang nilainya tampil pada field berformat Row dengan pola `ID - Alias Value`.      |
+| [[Docs/Tipe Data/Column|Column]]                       | Kolom pada Table. Setiap Column memiliki Name, Format, dan Description.                           |
+| [[Docs/Tipe Data/Row|Row]]                             | Baris pada Table yang menampung satu rangkaian data.                                              |
+| [[Docs/Tipe Data/TableData|TableData]]                 | Isi sel dari sebuah Row, mengikuti Column yang tersedia.                                          |
+| [[Docs/Tipe Data/Expression|Expression]]               | Ekspresi yang dapat langsung berfungsi pada komponen Table.                                       |
+| [[Docs/Tipe Data/Column#Alias|Alias]]                  | Column pilihan yang nilainya tampil pada field berformat Row dengan pola `ID - Alias Value`.      |
 
 ## Cara Kerja Table
 
@@ -44,17 +47,11 @@ Table menyimpan data dalam struktur Column, Row, dan TableData: Column menentuka
 
 ```mermaid
 flowchart LR
-  T["Table"] -->|&nbsp;memiliki&nbsp;| C["Column<br/>Name, Format, Alias"]
+  T["Table"] -->|&nbsp;memiliki&nbsp;| C["Column<br/>"]
   T -->|&nbsp;memiliki&nbsp;| R["Row"]
   R -->|&nbsp;memiliki&nbsp;| D["TableData"]
   C -.->|&nbsp;menentukan format&nbsp;| D
 ```
-
-
-<!--
-  * [TODO] Nama Column dan nilai pada contoh Alias ("Nama", "Kopi Arabika") adalah penamaan generik buatan saya. Silakan sesuaikan dengan contoh yang Anda inginkan.
-  * [TODO] Konfirmasi path anchor [[Docs/Tipe Data/Column#Alias|Alias]] (usulan: bagian Alias di halaman tipe data Column) dan apakah penjelasan Alias lebih tepat di halaman Column.
--->
 
 ## Membuat Table
 
@@ -78,21 +75,19 @@ Beberapa aturan penting:
 >**success** Table berhasil dibuat
 > Table yang baru dibuat belum memiliki data. Tambahkan Row di [[#Mengelola Data Table]].
 
->**warning** Beberapa aturan penting
-
 ### Mengisi Column
 
 Bagian [[^field|Column]] pada dialog [[^field|Create New Table]] berupa tabel dengan kolom berikut:
 
 | Kolom                      | Fungsi                                                                                                        |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [[^field\|Index]]           | Nomor urut Column.                                                                                            |
-| [[^field\|Name]]            | Nama Column.                                                                                                  |
-| [[^field\|Format]]          | Format data Column. Pilih lewat [[^field\|Select Data Format]]. Selengkapnya lihat [[Docs/Tipe Data/Column]]. |
-| [[^field\|Header]]          | Informasi header Column. Pada Column yang baru ditambahkan, tampil [[^field\|N/A]].                           |
-| [[^field\|Description]]     | Penjelasan singkat tentang isi Column.                                                                        |
-| [[^field\|Alias]]           | Penanda Column yang dipilih sebagai Alias. Hanya satu Column yang dapat dipilih.                              |
-| [[^field\|Action]]          | Berisi tombol [[^button/delete\|Delete]] untuk menghapus Column dari dialog.                                  |
+| [[^field|Index]]           | Nomor urut Column.                                                                                            |
+| [[^field|Name]]            | Nama Column.                                                                                                  |
+| [[^field|Format]]          | Format data Column. Pilih lewat [[^field|Select Data Format...]]. Selengkapnya lihat [[Docs/Tipe Data/Column]]. |
+| [[^field|Header]]          | Informasi header Column. Pada Column yang baru ditambahkan, tampil [[^field|N/A]].                           |
+| [[^field|Description]]     | Penjelasan singkat tentang isi Column.                                                                        |
+| [[^field|Alias]]           | Penanda Column yang dipilih sebagai Alias. Hanya satu Column yang dapat dipilih.                              |
+| [[^field|Action]]          | Berisi tombol [[^button/delete|Delete]] untuk menghapus Column dari dialog.                                  |
 
 <!--
   * [TODO] Fungsi tombol [[^button/upload|Upload]] di pojok kanan atas dialog Create New Table belum dijelaskan. Dugaan saya untuk membuat Table dari file. Mohon konfirmasi, lalu tentukan apakah perlu subhalaman.
@@ -141,6 +136,7 @@ Halaman kerja Table terdiri dari bilah navigasi di bagian atas dan tabel data di
 
 ![[Docs/Modul Data/Table/halaman-kerja-table.png]]
 
+
 Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: **ID** di bagian awal dan **Action** di bagian akhir. Ikon kecil pada header setiap Column menunjukkan format Column tersebut.
 
 <!--
@@ -153,12 +149,12 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: **ID** di 
 
 | Tombol                                         | Fungsi                                                                                                   |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [[^button/edit\|Edit]]                          | Mengubah atribut Table. Lihat [[#Mengubah Table]].                                                       |
-| [[^button/merge\|Merge]]                        | Menggabungkan data Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Merge]].                         |
-| [[^button/publish\|Publish]]                    | Mengatur publikasi Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Publish]].                       |
-| [[^button/event\|Event]]                        | Menghubungkan Table dengan [[Docs/Event/Apa itu Event\|Event]]. Penjelasan lengkap di [[Docs/Modul Data/Table/Event]]. |
-| [[^button/refresh\|Refresh]]                    | Memuat ulang tampilan halaman kerja.                                                                     |
-| [[^field\|Search Table Data...]]                | Mencari data pada Table.                                                                                 |
+| [[^button/edit|Edit]]                          | Mengubah atribut Table. Lihat [[#Mengubah Table]].                                                       |
+| [[^button/merge|Merge]]                        | Menggabungkan data Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Merge]].                         |
+| [[^button/publish|Publish]]                    | Mengatur publikasi Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Publish]].                       |
+| [[^button/event|Event]]                        | Menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]]. Penjelasan lengkap di [[Docs/Modul Data/Table/Event]]. |
+| [[^button/refresh|Refresh]]                    | Memuat ulang tampilan halaman kerja.                                                                     |
+| [[^field|Search Table Data...]]                | Mencari data pada Table.                                                                                 |
 
 > **note** Detail Merge, Publish, dan Event
 > Merge, Publish, dan Event dijelaskan pada halaman masing-masing.
@@ -167,17 +163,17 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: **ID** di 
 
 | Tombol                                | Fungsi                                                         |
 | ------------------------------------- | -------------------------------------------------------------- |
-| [[^button/add\|Add Row]]               | Menambahkan Row baru. Tersedia di bawah baris terakhir dan di bagian bawah halaman. |
-| [[^button/save\|Save]]                 | Menyimpan perubahan pada Row.                                  |
-| [[^button/delete\|Delete]]             | Menghapus Row.                                                 |
+| [[^button/add|Add Row]]               | Menambahkan Row baru. Tersedia di bawah baris terakhir dan di bagian bawah halaman. |
+| [[^button/save|Save]]                 | Menyimpan perubahan pada Row.                                  |
+| [[^button/delete|Delete]]             | Menghapus Row.                                                 |
 
 ### Interaksi Antarmuka Table
 
 | Fungsi                          | Aksi                                                                                       |
 | ------------------------------- | ------------------------------------------------------------------------------------------ |
 | Melihat Column di sisi kanan    | Scroll horizontal pada bagian bawah tabel data.                                            |
-| Berpindah halaman data          | Klik [[^button\|Prev]] atau [[^button\|Next]], atau isi nomor halaman lalu klik [[^button\|Go]]. |
-| Mencari data                    | Ketik pada [[^field\|Search Table Data...]].                                                |
+| Berpindah halaman data          | Klik [[^button|Prev]] atau [[^button|Next]], atau isi nomor halaman lalu klik [[^button|Go]]. |
+| Mencari data                    | Ketik pada [[^field|Search Table Data...]].                                                |
 
 <!--
   * [TODO] Konfirmasi arti informasi di bagian bawah halaman ("Show 50 of 2 items, on page"), terutama makna angka 50 (batas data per halaman?).
@@ -238,8 +234,8 @@ Tim penjualan mencatat pesanan yang masuk dan ingin pesanan tersebut otomatis di
 
 | Komponen                         | Peran                                                                          |
 | -------------------------------- | ------------------------------------------------------------------------------ |
-| [[^field/table\|Pesanan]]         | Menyimpan setiap pesanan sebagai Row, dengan Column seperti Nama Pelanggan dan Jumlah. |
-| [[^field/flow\|Kirim Pesanan]]    | Menjalankan logika pengiriman data saat ada Row baru.                          |
+| [[^field/table|Pesanan]]         | Menyimpan setiap pesanan sebagai Row, dengan Column seperti Nama Pelanggan dan Jumlah. |
+| [[^field/flow|Kirim Pesanan]]    | Menjalankan logika pengiriman data saat ada Row baru.                          |
 
 **Alur di Flow**
 
@@ -253,8 +249,8 @@ flowchart LR
 
 | Langkah | Flow Block                                                                              | Peran dalam alur                                  | Hasil                                    |
 | ------- | --------------------------------------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------- |
-| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan\|Table Row Event]]                   | Terpicu saat Row baru ditambahkan pada Table.     | Data Row siap diteruskan.                |
-| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan\|HTTP Request]]                    | Mengirim data Row ke sistem pengiriman.           | Sistem pengiriman menerima pesanan.      |
+| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Table Row Event]]                   | Terpicu saat Row baru ditambahkan pada Table.     | Data Row siap diteruskan.                |
+| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|HTTP Request]]                    | Mengirim data Row ke sistem pengiriman.           | Sistem pengiriman menerima pesanan.      |
 
 **Hasil yang dirasakan**
 
@@ -268,7 +264,7 @@ flowchart LR
 | -------------------- | ----------------------------------------------------------------------------------------- |
 | Data generik         | Daftar produk atau pelanggan yang dirujuk oleh komponen lain lewat field berformat Row.   |
 | Data transaksional   | Catatan stok masuk dan keluar yang memicu pemberitahuan lewat Flow saat stok menipis.     |
-| Data publikasi       | Daftar harga atau jadwal yang dipublikasikan lewat [[Docs/Modul Data/Table/Publish\|Publish]]. |
+| Data publikasi       | Daftar harga atau jadwal yang dipublikasikan lewat [[Docs/Modul Data/Table/Publish|Publish]]. |
 
 Dengan satu Table sebagai sumber data, pencatatan, pemilihan data, dan otomasi dapat berjalan dari data yang sama.
 
