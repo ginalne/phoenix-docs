@@ -14,7 +14,6 @@ Enum adalah komponen yang dapat digunakan sebagai deret data atau yang sering di
 
 Dengan Enum, Anda mengelola daftar pilihan di satu tempat saja. Field di komponen lain tinggal merujuk ke Enum tersebut, sehingga pilihan selalu seragam dan perubahan cukup dilakukan satu kali.
 
-
 ## Mengapa Menggunakan Enum?
 
 - **Satu sumber pilihan.** Daftar opsi, menu, atau kategori dikelola di satu komponen dan dipakai ulang oleh banyak field.
@@ -27,11 +26,11 @@ Dengan Enum, Anda mengelola daftar pilihan di satu tempat saja. Field di kompone
 
 | Istilah | Penjelasan |
 | --- | --- |
-| [[Docs/Tipe Data/EnumData\|EnumData]] | Satu baris data di dalam Enum yang berisi [[^field\|Name]], [[^field\|Description]], [[^field\|Value]], dan [[^field\|Selectable]]. |
-| [[#Membaca Baris EnumData\|Selectable]] | Penanda apakah sebuah [[Docs/Tipe Data/EnumData]] tampil sebagai pilihan pada field berformat [[Docs/Tipe Data/EnumData]]. |
-| [[#Konfigurasi Enum\|Format]] | Format data yang menentukan bentuk kolom [[^field\|Value]] pada setiap baris. |
-| [[#Konfigurasi Enum\|Header]] | Header untuk [[^field\|Format]] yang membutuhkan tipe data pendamping. |
-| [[Docs/Modul Data/Enum/Konfigurasi Tegas\|Strict On Selected]] | Atribut penting Enum yang mengatur ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Konfigurasi Tegas]]. |
+| [[Docs/Tipe Data/EnumData|EnumData]] | Satu baris data di dalam Enum yang berisi [[^field|Name]], [[^field|Description]], [[^field|Value]], dan [[^field|Selectable]]. |
+| [[#Membaca Baris EnumData|Selectable]] | Penanda apakah sebuah [[Docs/Tipe Data/EnumData]] tampil sebagai pilihan pada field berformat [[Docs/Tipe Data/EnumData]]. |
+| [[#Konfigurasi Enum|Format]] | Format data yang menentukan bentuk kolom [[^field|Value]] pada setiap baris. |
+| [[#Konfigurasi Enum|Header]] | Header untuk [[^field|Format]] yang membutuhkan tipe data pendamping. |
+| [[Docs/Modul Data/Enum/Konfigurasi Tegas|Strict On Selected]] | Atribut penting Enum yang mengatur ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Konfigurasi Tegas]]. |
 
 ## Cara Kerja Enum
 
@@ -52,21 +51,21 @@ Setiap Enum memiliki atribut berikut:
 
 | Atribut | Penjelasan |
 | --- | --- |
-| [[^field\|Name]] | Nama Enum. Tidak boleh sama dengan komponen sejenis di folder yang sama. |
-| [[^field\|Description]] | Keterangan singkat tentang kegunaan Enum. |
-| [[^field\|Format]] | Format data untuk kolom [[^field\|Value]] pada setiap baris. Format dapat diubah setelah Enum dibuat (lihat [[#Mengubah Enum]]). |
-| [[^field\|Header]] | Header untuk [[^field\|Format]] dengan tipe data yang membutuhkan header. Bernilai N/A jika [[^field\|Format]] tidak membutuhkannya. |
-| [[^field\|Strict On Selected]] | Pengaturan ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Konfigurasi Tegas]]. |
+| [[^field|Name]] | Nama Enum. Tidak boleh sama dengan komponen sejenis di folder yang sama. |
+| [[^field|Description]] | Keterangan singkat tentang kegunaan Enum. |
+| [[^field|Format]] | Format data untuk kolom [[^field|Value]] pada setiap baris. Format dapat diubah setelah Enum dibuat (lihat [[#Mengubah Enum]]). |
+| [[^field|Header]] | Header untuk [[^field|Format]] dengan tipe data yang membutuhkan header. Bernilai N/A jika [[^field|Format]] tidak membutuhkannya. |
+| [[^field|Strict On Selected]] | Pengaturan ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Konfigurasi Tegas]]. |
 
 Pasangan tipe data [[^field|Format]] dan [[^field|Header]]:
 
 | Tipe data Format | Tipe data Header |
 | --- | --- |
-| [[Docs/Tipe Data/EnumData\|EnumData]] | [[Docs/Tipe Data/Enum\|Enum]] |
-| [[Docs/Tipe Data/Column\|Column]] | [[Docs/Tipe Data/Table\|Table]] |
-| [[Docs/Tipe Data/Row\|Row]] | [[Docs/Tipe Data/Table\|Table]] |
-| [[Docs/Tipe Data/TableData\|TableData]] | [[Docs/Tipe Data/Column\|Column]] |
-| [[Docs/Tipe Data/Node\|Node]] | [[Docs/Tipe Data/Tree\|Tree]] |
+| [[Docs/Tipe Data/EnumData|EnumData]] | [[Docs/Tipe Data/Enum|Enum]] |
+| [[Docs/Tipe Data/Column|Column]] | [[Docs/Tipe Data/Table|Table]] |
+| [[Docs/Tipe Data/Row|Row]] | [[Docs/Tipe Data/Table|Table]] |
+| [[Docs/Tipe Data/TableData|TableData]] | [[Docs/Tipe Data/Column|Column]] |
+| [[Docs/Tipe Data/Node|Node]] | [[Docs/Tipe Data/Tree|Tree]] |
 | Lainnya | N/A |
 
 ## Membuat Enum
@@ -109,28 +108,28 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja Enum.
 
 ![[Docs/Modul Data/Enum/halaman-kerja-enum.png]]
 
-Halaman kerja Enum terdiri dari bilah navigasi di bagian atas dan tabel [[Docs/Tipe Data/EnumData]] di bagian bawah.
+Halaman kerja Enum terdiri dari bilah navigasi di bagian atas dan tabel data di bagian bawah.
 
 ### Bilah navigasi Enum terdiri dari:
 
 | Tombol | Fungsi |
 | --- | --- |
-| Judul Enum | Menampilkan ikon Enum dan [[^field\|Header Name]]. |
-| [[^button/edit\|Edit]] | Mengubah atribut Enum (lihat [[#Mengubah Enum]]). |
-| [[^button/merge\|Merge]] | Menggabungkan data. Selengkapnya lihat [[Docs/Modul Data/Enum/Merge]]. |
-| [[^button/event\|Event]] | Menghubungkan [[Docs/Event/Apa itu Event\|Event]] dari Enum. Selengkapnya lihat [[Docs/Modul Data/Enum/Event]]. |
-| [[^button/refresh\|Refresh]] | Memuat ulang tampilan halaman kerja. |
-| [[^field\|Search Enum Data...]] | Mencari [[Docs/Tipe Data/EnumData]] di dalam Enum. |
+| Judul Enum ([[^field/enum|Pelayan]] di gambar) | Menampilkan ikon Enum dan [[^field|Header Name]]. |
+| [[^button/edit|Edit]] | Mengubah atribut Enum (lihat [[#Mengubah Enum]]). |
+| [[^button/merge|Merge]] | Menggabungkan data. Selengkapnya lihat [[Docs/Modul Data/Enum/EnumData Merge]]. |
+| [[^button/event|Event]] | Menghubungkan [[Docs/Event/Apa itu Event|Event]] dari Enum. Selengkapnya lihat [[Docs/Modul Data/Enum/Event]]. |
+| [[^button/refresh|Refresh]] | Memuat ulang tampilan halaman kerja. |
+| [[^field|Search Enum Data...]] | Mencari [[Docs/Tipe Data/EnumData]] di dalam Enum. |
 
-### Membaca Baris EnumData
+### Membaca Tabel Data
 
 | Kolom | Penjelasan |
 | --- | --- |
-| [[^field\|Name]] | Nama [[Docs/Tipe Data/EnumData]]. Tidak boleh sama dengan [[Docs/Tipe Data/EnumData]] lain di dalam Enum yang sama. |
-| [[^field\|Description]] | Keterangan [[Docs/Tipe Data/EnumData]]. |
-| [[^field\|Value]] | Nilai [[Docs/Tipe Data/EnumData]]. Bentuknya mengikuti [[^field\|Format]] pada konfigurasi Enum. Ikon di header kolom menunjukkan tipe data dari [[^field\|Format]]. |
-| [[^field\|Selectable]] | Menentukan apakah [[Docs/Tipe Data/EnumData]] tampil sebagai pilihan pada field. Hanya berlaku untuk field. |
-| [[^field\|Action]] | Berisi tombol [[^button/save\|Save]] dan [[^button/delete\|Delete]] untuk baris tersebut. |
+| [[^field|Name]] | Nama [[Docs/Tipe Data/EnumData]]. Tidak boleh sama dengan [[Docs/Tipe Data/EnumData]] lain di dalam Enum yang sama. |
+| [[^field|Description]] | Keterangan [[Docs/Tipe Data/EnumData]]. |
+| [[^field|Value]] | Nilai [[Docs/Tipe Data/EnumData]]. Bentuknya mengikuti [[^field|Format]] pada konfigurasi Enum. Ikon di header kolom menunjukkan tipe data dari [[^field|Format]]. |
+| [[^field|Selectable]] | Menentukan apakah [[Docs/Tipe Data/EnumData]] tampil sebagai pilihan pada field. Hanya berlaku untuk field. |
+| [[^field|Action]] | Berisi tombol [[^button/save|Save]] dan [[^button/delete|Delete]] untuk baris tersebut. |
 
 >**note** Tampilan [[^field|Value]] Mengikuti [[^field|Format]]
 > Tampilan kolom [[^field|Value]] dapat berbeda untuk setiap [[^field|Format]]. Pada Format Password, misalnya, Value tersamarkan.
@@ -139,12 +138,14 @@ Halaman kerja Enum terdiri dari bilah navigasi di bagian atas dan tabel [[Docs/T
 
 | Fungsi | Aksi |
 | --- | --- |
-| Menambah baris | Klik [[^button/add\|Add Row]] pada bagian bawah tabel atau pada bilah di bawahnya. Keduanya memiliki fungsi yang sama. |
-| Mengubah [[^field\|Selectable]] | Klik toggle pada kolom [[^field\|Selectable]]. |
-| Berpindah halaman | Gunakan [[^button\|Prev]], [[^button\|Next]], atau isi nomor halaman lalu klik [[^button\|Go]]. |
+| Menambah baris | Klik [[^button/add|Add Row]] pada bagian bawah tabel atau pada bilah di bawahnya. Keduanya memiliki fungsi yang sama. |
+| Mengubah [[^field|Selectable]] | Klik toggle pada kolom [[^field|Selectable]]. |
+| Berpindah halaman | Gunakan [[^button|Prev]], [[^button|Next]], atau isi nomor halaman lalu klik [[^button|Go]]. |
 | Membaca batas halaman | Teks "Show 50 of 1 items" menunjukkan batas 50 item per halaman dan jumlah item yang ada. |
 
 ## Mengelola EnumData
+
+Isi Enum dikelola per [[Docs/Tipe Data/EnumData]] di halaman kerja. Setiap [[Docs/Tipe Data/EnumData]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia. Cara mengisi TableData berbeda untuk setiap Format.
 
 ### Menambahkan EnumData
 
@@ -182,12 +183,11 @@ Tim layanan pelanggan menerima pengaduan dari banyak orang. Agar laporan mudah d
 
 | Komponen | Peran |
 | --- | --- |
-| [[^field/enum\|Kategori Pengaduan]] | Menyimpan daftar kategori sebagai [[Docs/Tipe Data/EnumData]]. |
-| [[^field/table\|Pengaduan]] | Menyimpan data pengaduan dengan field kategori berformat [[Docs/Tipe Data/EnumData]]. |
-| [[^field/flow\|Tindak Lanjut Pengaduan]] | Menjalankan otomasi ketika pengaduan baru masuk. |
+| [[^field/enum|Kategori Pengaduan]] | Menyimpan daftar kategori sebagai [[Docs/Tipe Data/EnumData]]. |
+| [[^field/table|Pengaduan]] | Menyimpan data pengaduan dengan field kategori berformat [[Docs/Tipe Data/EnumData]]. |
+| [[^field/flow|Tindak Lanjut Pengaduan]] | Menjalankan otomasi ketika pengaduan baru masuk. |
 
 **Alur di Flow**
-
 ```mermaid
 flowchart TB
   T@{ shape: database, label: "**Table**<br/>Pengaduan" } -.->|"&nbsp;Add Row&nbsp;"| E@{ shape: rounded, label: "**Table Row Event**" }
@@ -200,9 +200,9 @@ flowchart TB
 
 | Langkah | Flow Block | Peran dalam alur | Hasil |
 | --- | --- | --- | --- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan\|Table Row Event]] | Aktif ketika pengaduan baru ditambahkan. | Baris pengaduan diteruskan ke alur. |
-| 2 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan\|If]] | Memeriksa apakah kategori pengaduan adalah yang mendesak. | Alur terbagi menjadi jalur true dan false. |
-| 3 | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan\|HTTP Request]] | Mengirim data pengaduan ke sistem lain. | Sistem lain menerima data. |
+| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Table Row Event]] | Aktif ketika pengaduan baru ditambahkan. | Baris pengaduan diteruskan ke alur. |
+| 2 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|If]] | Memeriksa apakah kategori pengaduan adalah yang mendesak. | Alur terbagi menjadi jalur true dan false. |
+| 3 | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|HTTP Request]] | Mengirim data pengaduan ke sistem lain. | Sistem lain menerima data. |
 
 <!--
   * [TODO] Mohon konfirmasi path halaman Flow Block Operator untuk tautan If pada langkah 2 (path usulan: Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan).
@@ -218,9 +218,9 @@ flowchart TB
 
 | Jenis nilai | Contoh integrasi |
 | --- | --- |
-| Status pesanan | Menjadi kolom pengelompokan pada [[Docs/Modul Interface/Kanban/Apa itu Kanban\|Kanban]] dan pemicu notifikasi di [[Docs/Modul Logic/Flow/Apa itu Flow\|Flow]]. |
-| Kategori produk | Menjadi pilihan di [[Docs/Modul Interface/Form/Apa itu Form\|Form]] input produk dan penyaring pada [[Docs/Modul Interface/Table View/Apa itu Table View\|Table View]]. |
-| Tingkat prioritas | Menjadi dasar percabangan alur penanganan di [[Docs/Modul Logic/Flow/Apa itu Flow\|Flow]]. |
+| Status pesanan | Menjadi kolom pengelompokan pada [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] dan pemicu notifikasi di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. |
+| Kategori produk | Menjadi pilihan di [[Docs/Modul Interface/Form/Apa itu Form|Form]] input produk dan penyaring pada [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]]. |
+| Tingkat prioritas | Menjadi dasar percabangan alur penanganan di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. |
 | Wilayah layanan | Menjadi pilihan seragam di berbagai Table sehingga laporan antarwilayah konsisten. |
 
 Dengan satu daftar yang terhubung ke data dan logika, Enum membuat pilihan yang sama dapat dipakai konsisten di seluruh Phoenix.
@@ -263,3 +263,4 @@ Dengan satu daftar yang terhubung ke data dan logika, Enum membuat pilihan yang 
 > Tidak, selama keduanya berada di Enum yang sama.
 > **Mengapa Enum saya tidak bisa dihapus?**
 > Hapus terlebih dahulu relasi dari komponen lain yang masih memakai Enum tersebut, lalu ulangi penghapusan.
+

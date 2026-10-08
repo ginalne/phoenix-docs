@@ -122,7 +122,7 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|I
 | Tombol                                         | Fungsi                                                                                                   |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | [[^button/edit|Edit]]                          | Mengubah atribut Table, termasuk Column. Lihat [[#Mengubah Table]].                                      |
-| [[^button/merge|Merge]]                        | Menggabungkan data Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Merge]].                         |
+| [[^button/merge|Merge]]                        | Menggabungkan data Table. Penjelasan lengkap di [[Docs/Modul Data/Table/TableData Merge]].                         |
 | [[^button/publish|Publish]]                    | Mengatur publikasi Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Publish]].                       |
 | [[^button/event|Event]]                        | Menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]]. Penjelasan lengkap di [[Docs/Modul Data/Table/Event]]. |
 | [[^button/refresh|Refresh]]                    | Memuat ulang tampilan halaman kerja.                                                                     |
@@ -148,7 +148,7 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|I
 
 ## Mengelola Data Table
 
-Isi Table dikelola per Row di halaman kerja. Setiap [[Docs/Tipe Data/Row]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia. Cara mengisi TableData berbeda untuk setiap Format. Selengkapnya lihat [[Docs/Modul Data/Table/Mengisi TableData]].
+Isi Table dikelola per Row di halaman kerja. Setiap [[Docs/Tipe Data/Row]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia. Cara mengisi [[Docs/Tipe Data/TableData]] berbeda untuk setiap Format. Selengkapnya lihat [[Docs/Tipe Data/TableData#Mengisi TableData]].
 
 ### Menambahkan Row
 
@@ -180,7 +180,7 @@ Pelajari fitur pendukung Table di halaman berikut:
 
 - [[Docs/Modul Data/Table/Upload|Upload]]: membuat Table dari file.
 - [[Docs/Modul Data/Table/Mengisi TableData|Mengisi TableData]]: cara mengisi data sesuai Format Column.
-- [[Docs/Modul Data/Table/Merge|Merge]]: menggabungkan data Table.
+- [[Docs/Modul Data/Table/TableData Merge|Merge]]: menggabungkan data Table.
 - [[Docs/Modul Data/Table/Publish|Publish]]: mengatur publikasi Table.
 - [[Docs/Modul Data/Table/Event|Event]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 - [[Docs/Tipe Data/Column|Column]], [[Docs/Tipe Data/Row|Row]], dan [[Docs/Tipe Data/TableData|TableData]]: memahami isi Table lebih dalam.
@@ -269,5 +269,5 @@ Dengan satu Table sebagai sumber data, pencatatan, pemilihan data, dan otomasi d
 > **Dari mana kolom ID dan Action berasal?**
 > Keduanya kolom tambahan pada halaman kerja Table, ID di bagian awal (terisi otomatis) dan Action di bagian akhir.
 > **Di mana saya bisa mempelajari fungsi Merge, Publish, dan Event?**
-> Lihat [[Docs/Modul Data/Table/Merge|Merge]], [[Docs/Modul Data/Table/Publish|Publish]], dan [[Docs/Modul Data/Table/Event|Event]].
+> Lihat [[Docs/Modul Data/Table/TableData Merge|Merge]], [[Docs/Modul Data/Table/Publish|Publish]], dan [[Docs/Modul Data/Table/Event|Event]].
 
