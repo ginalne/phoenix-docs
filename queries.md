@@ -17,7 +17,7 @@
 >**danger** Berikut adalah daftar link yang sudah dimention tapi belum ada halamannya
 >${query[[
   from p = index.aspiringPages()
-  select "- <i style=\"color:#c22\">" .. p.name .. "</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
+  select "- <i style=\"color:#c22\">" .. p.name .. "</i> [[".. p.name .. "|create]] — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
 where not string.startsWith(p.name, "button")
 where not string.startsWith(p.name, "value")
 ]]}
