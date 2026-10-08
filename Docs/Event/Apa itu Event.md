@@ -8,5 +8,4 @@
       draft
 ---
 # Event
-_
 
