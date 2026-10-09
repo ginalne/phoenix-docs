@@ -13,12 +13,12 @@ Variable adalah tipe data yang hanya bisa dibuat, diperbarui atau dihapus melalu
 
 | Nama | Penjelasan |
 | --- | --- |
-| [[^field\|Name]] | Nama Variable, nilainya tidak boleh sama dengan variable lain. | 
-| [[^field\|Type]] | Menyimpan jenis tipe data, misalnya [[Docs/Tipe Data/String|String]]. | 
-| [[^field\|Value]] | Nilai yang disimpan, menyesuaikan atribut [[^field|Type]]. | 
-| [[^field\|Description]] | Keterangan tentang kegunaan Variable. | 
-| [[^field\|Created At]] | Waktu baris dibuat. | 
-| [[^field\|Updated At]] | Waktu baris terakhir diperbarui. | 
+| [[^field|Name]] | Nama Variable, nilainya tidak boleh sama dengan variable lain. | 
+| [[^field|Type]] | Menyimpan jenis tipe data, misalnya [[Docs/Tipe Data/String|String]]. | 
+| [[^field|Value]] | Nilai yang disimpan, menyesuaikan atribut [[^field|Type]]. | 
+| [[^field|Description]] | Keterangan tentang kegunaan Variable. | 
+| [[^field|Created At]] | Waktu baris dibuat. | 
+| [[^field|Updated At]] | Waktu baris terakhir diperbarui. | 
 
 ## Cara Kerja Variable
 
@@ -30,4 +30,3 @@ Dengan Variable, nilai konfigurasi dan nilai sensitif di [[Docs/Inisialisasi/Apa
 
 ## Format
 >**note** Tipe data ini tidak memiliki format khusus.
-
