@@ -4,7 +4,7 @@
     description: Tree adalah komponen modul Data untuk menyimpan data berhierarki berbentuk pohon yang terdiri dari banyak Node.
     pageDecoration:
       tree:
-        priority: 0
+        priority: 4
 ---
 
 # Apa itu Tree?
@@ -75,23 +75,25 @@ Tree yang tidak bersifat merger tidak dapat menambahkan Node dari Tree lain. Nod
 | [[^field|Directory]] | Folder tempat Tree berada. Terisi otomatis sesuai folder yang Anda klik kanan. Jika dikosongkan, Tree berada di root. |
 | [[^field|Name]] | Nama Tree. |
 | [[^field|Description]] | Keterangan singkat tentang Tree. |
-| [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]] | Jika aktif, Tree dapat menambahkan (*clone*) Node dari Tree lain. Bawaan: [[^field|Non-Active]]. |
-| [[#External Read Only]] | Tiga pilihan, yaitu [[^field|Order]], [[^field|Name]], dan [[^field|Children]]. Bawaan masing-masing: [[^field|Non-Active]]. |
+| [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]] | Jika aktif, Tree dapat menambahkan (*clone*) Node dari Tree lain. Bawaan: [[^value/boolean/Non-Active]]. |
+| [[#External Read Only]] | Tiga pilihan, yaitu [[^field|Order]], [[^field|Name]], dan [[^field|Children]]. Bawaan masing-masing: [[^value/boolean/Non-Active]]. |
 | [[#Default Configuration]] | Pengaturan tampilan awal, yaitu [[^field|Horizontal Mode]] dan [[^field|Context]]. |
 
 ### External Read Only
 
 External Read Only mengatur atribut Node yang bersumber dari Tree lain, yaitu Node *clone* dan Node asalnya (*origin*). Setiap atribut memiliki pilihan sendiri:
 
-| Atribut | Jika Non-Active | Jika Active |
+| Atribut | Jika [[^value/boolean/Non-Active]] | Jika [[^value/boolean/Active]] |
 | --- | --- | --- |
 | [[^field|Order]] | [[^field|Order]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Order]] Node tidak ikut berubah. |
 | [[^field|Name]] | [[^field|Name]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Name]] Node tidak ikut berubah. |
 | [[^field|Children]] | [[^field|Children]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Children]] Node tidak ikut berubah. |
 
 <!--
-  * [TODO] Kolom "Jika Active" adalah kebalikan logis dari penjelasan Anda untuk Non-Active. Mohon konfirmasi apakah Active berarti atribut terlindungi dari perubahan Tree lain.
+  * [TODO] Kolom "Jika Active" adalah kebalikan logis dari penjelasan Anda untuk [[^value/boolean/Non-Active]]. Mohon konfirmasi apakah Active berarti atribut terlindungi dari perubahan Tree lain.
+    Jawaban : Betul
   * [TODO] Mohon konfirmasi apakah pengaturan ini hanya relevan untuk Tree dengan Merger Mode (karena Node clone hanya ada di sana), atau juga berlaku untuk Tree non-merger.
+    Jawaban : Berlaku juga, karena tree non-merger bisa terubah dari perubahan node di tree merger.
 -->
 
 ### Default Configuration
@@ -110,10 +112,11 @@ Untuk pilihan [[^field|Context]]:
 | [[^field|Detail]] | Membuka detail Node. |
 
 <!--
-  * [TODO] Mohon konfirmasi arti nilai Horizontal Mode: Non-Active = Vertical? Pada screenshot halaman kerja, mode yang tampil adalah Horizontal.
-  * [TODO] Hasil pilihan Context Edit dan Detail ditulis berdasarkan dugaan dari nama pilihan. Mohon konfirmasi perilaku sebenarnya.
-  * [TODO] Mohon konfirmasi apakah Directory benar terisi otomatis sesuai folder yang diklik kanan (mengikuti pola komponen Table), karena pada screenshot kolom Search Folder... masih kosong.
-  * [TODO] Nama Tree pada screenshot (judul halaman kerja) dan nama pengguna di bilah atas adalah data pribadi. Mohon ganti dengan nama generik sebelum screenshot dipakai.
+  * [TODO] Mohon konfirmasi arti nilai Horizontal Mode: [[^value/boolean/Non-Active]] = Vertical? Pada screenshot halaman kerja, mode yang tampil adalah Horizontal.
+    Jawaban : Ya betul, kalau mode yang tampil udah saya ubah
+  * [DONE] Hasil pilihan Context Edit dan Detail ditulis berdasarkan dugaan dari nama pilihan. Mohon konfirmasi perilaku sebenarnya.
+  * [DONE] Mohon konfirmasi apakah Directory benar terisi otomatis sesuai folder yang diklik kanan (mengikuti pola komponen Table), karena pada screenshot kolom Search Folder... masih kosong.
+  * [DONE] Nama Tree pada screenshot (judul halaman kerja) dan nama pengguna di bilah atas adalah data pribadi. Mohon ganti dengan nama generik sebelum screenshot dipakai.
 -->
 
 ## Mengubah Tree
@@ -125,6 +128,7 @@ Untuk pilihan [[^field|Context]]:
 
 <!--
   * [TODO] Mohon konfirmasi apakah Merger Mode masih dapat diubah setelah Tree memiliki Node, dan apakah ada peringatan jika perubahannya berisiko.
+    Jawaban : Tidak bisa diubah.
 -->
 
 ## Menyegarkan Tree
@@ -339,7 +343,7 @@ Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemi
 > **Apa bedanya Tree biasa dengan Tree yang memakai Merger Mode?**
 > Tree biasa hanya menyimpan Node miliknya sendiri. Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat menambahkan (*clone*) Node dari Tree lain, sedangkan Tree biasa tidak dapat melakukannya.
 > **Apakah perubahan pada Node asal otomatis muncul di Node *clone*?**
-> Hal ini bergantung pada [[#External Read Only]]. Jika [[^field|Order]], [[^field|Name]], atau [[^field|Children]] berstatus [[^field|Non-Active]], atribut tersebut ikut berubah ketika Node di Tree lain diperbarui.
+> Hal ini bergantung pada [[#External Read Only]]. Jika [[^field|Order]], [[^field|Name]], atau [[^field|Children]] berstatus [[^value/boolean/Non-Active]], atribut tersebut ikut berubah ketika Node di Tree lain diperbarui.
 > **Apa yang dicari oleh [[^field|Search Tree Data...]]?**
 > Kolom ini hanya mencari berdasarkan [[^field|Name]] Node.
 > **Mengapa menu [[^field|Collapse]] berubah menjadi [[^field|No children...]]?**
