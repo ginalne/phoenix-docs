@@ -148,7 +148,7 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|I
 
 ## Mengelola Data Table
 
-Isi Table dikelola per Row di halaman kerja. Setiap [[Docs/Tipe Data/Row]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia. Cara mengisi [[Docs/Tipe Data/TableData]] berbeda untuk setiap Format. Selengkapnya lihat [[Docs/Tipe Data/TableData#Mengisi TableData]].
+Halaman kerja Table adalah untuk mengelola [[Docs/Tipe Data/Row]]. Setiap [[Docs/Tipe Data/Row]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia. Cara mengisi [[Docs/Tipe Data/TableData]] berbeda untuk setiap Format. Selengkapnya lihat [[Docs/Tipe Data/TableData#Mengisi TableData]].
 
 ### Menambahkan Row
 

@@ -142,21 +142,16 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 3. Konfirmasi dengan [[^button|Delete]]
 
 >**warning** Dampak penghapusan Tree
-> Seluruh [[Docs/Tipe Data/Node]] di dalam Tree ikut terhapus. Relasi dari komponen lain yang memakai Tree ini akan terputus, misalnya [[Docs/Tipe Data/Column]] pada Table yang memakai Node dari Tree ini dan Flow Block seperti [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event]]. Jika Tree ini menjadi sumber *clone* bagi Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]], Node hasil *clone* di Tree tersebut dapat terdampak.
+> Seluruh [[Docs/Tipe Data/Node]] di dalam Tree ikut terhapus. Relasi dari komponen lain yang memakai Tree ini akan terputus, misalnya [[Docs/Tipe Data/Column]] pada Table yang memakai [[Docs/Tipe Data/Node]] dari Tree ini dan [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] seperti [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event]]. Jika Tree ini menjadi sumber *clone* bagi Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]], Node hasil *clone* di Tree tersebut dapat terdampak.
 
 <!--
-  * [TODO] Dampak penghapusan di atas adalah draf berdasarkan pola komponen lain. Mohon konfirmasi apa yang terjadi pada Node clone di Tree Merger ketika Tree sumbernya dihapus, dan apakah relasi dari komponen lain harus dihapus terlebih dahulu (seperti pada Enum).
+  * [DONE] Dampak penghapusan di atas adalah draf berdasarkan pola komponen lain. Mohon konfirmasi apa yang terjadi pada Node clone di Tree Merger ketika Tree sumbernya dihapus, dan apakah relasi dari komponen lain harus dihapus terlebih dahulu (seperti pada Enum).
 -->
 
 ## Antarmuka Tree
 
 ![[Docs/Modul Data/Tree/antarmuka-tree.png]]
-
 Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di bagian bawah yang menampilkan pohon beserta Node-nya. Di sudut bawah area kerja terdapat informasi [[^field|context _]], [[^field|mode _]], koordinat [[^field|x _ y _]], dan [[^field|scale _]].
-
-<!--
-  * [TODO] Letakkan screenshot halaman kerja dengan nama file antarmuka-tree.png. Anotasi yang disarankan: (1) judul Tree, (2) tombol Edit, Publish, Event, Refresh, (3) kolom Search Tree Data..., (4) area kerja dengan Node, (5) informasi context, mode, koordinat, dan scale di bagian bawah.
--->
 
 ### Bilah navigasi Tree terdiri dari:
 
@@ -168,14 +163,6 @@ Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di 
 | [[^button/event|Event]] | Menghubungkan Tree dengan Event. Lihat [[Docs/Modul Data/Tree/Event]]. |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan. Lihat [[#Menyegarkan Tree]]. |
 | [[^field|Search Tree Data...]] | Mencari Node berdasarkan [[^field|Name]]. Pencarian tidak mencakup atribut Node yang lain. |
-
->**note** Perbedaan tampilan desktop dan mobile
-> Tampilan Tree pada desktop dan mobile pada dasarnya sama.
-
-<!--
-  * [TODO] Mohon konfirmasi apakah ada perbedaan tampilan desktop dan mobile (misalnya ikon tombol bilah navigasi hanya berupa ikon pada mobile).
-  * [TODO] Pada Tree dengan Merger Mode aktif, mungkin ada tombol tambahan (misalnya Merge) di bilah navigasi seperti pada Table dan Enum. Mohon konfirmasi dan lengkapi tabel di atas jika ada.
--->
 
 ### Informasi Area Kerja
 
@@ -190,19 +177,19 @@ Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di 
 
 | Fungsi | Aksi |
 | --- | --- |
+| Menggeser tampilan (_pan_) | Tekan dan tahan pada bagian yang kosong dalam blueprint lalu gerakkan kursor. Lepas untuk selesai. |
+| Mengubah skala tampilan (_zoom_) | gulir pada bagian blueprint. |
 | Memusatkan tampilan | Klik informasi koordinat [[^field|x _ y _]]. Tampilan kembali ke tengah. |
 | Mengembalikan skala | Klik informasi [[^field|scale _]]. Tampilan kembali berskala 1. |
-| Membuka menu konteks Node | Klik kanan pada Node. Hasilnya mengikuti nilai [[#Default Configuration|Context]]. |
-| Mencari Node | Ketik di [[^field|Search Tree Data...]]. Pencarian hanya berdasarkan [[^field|Name]]. |
+| Membuka menu konteks Node | Klik kanan pada Node. Hasilnya mengikuti nilai [[^field|context _]] . |
 
 <!--
   * [TODO] Mohon konfirmasi interaksi lain pada area kerja (menggeser dan zoom dengan scroll, seperti pada Blueprint Flow) dan apakah informasi context dan mode dapat diklik untuk mengubah nilainya.
+    Jawaban : Ya, context dan mode akan diganti ketika diklik.
 -->
 
 ### Menu Konteks Node
-
-![[Docs/Modul Data/Tree/menu-konteks-node.png]]
-
+![[Docs/Modul Data/Tree/node-menu.png]]
 Klik kanan pada Node untuk membuka menu konteks berikut.
 
 | Menu | Fungsi |
@@ -230,36 +217,30 @@ Submenu [[^field|View]]:
 > Jika Node tidak memiliki anak, pilihan [[^field|Expand]] atau [[^field|Collapse]] dan [[^field|Expand Children Only]] berubah menjadi [[^field|No children...]].
 
 <!--
-  * [TODO] Letakkan screenshot menu konteks Node dengan nama file menu-konteks-node.png. Anotasi yang disarankan: nomor pada setiap menu utama dan submenu View.
+  * [DONE] Letakkan screenshot menu konteks Node dengan nama file menu-konteks-node.png. Anotasi yang disarankan: nomor pada setiap menu utama dan submenu View.
   * [TODO] Fungsi Edit, Detail, Import, dan Export pada tabel menu hanya ditulis ringkas karena pengelolaan Node dijelaskan di halaman lain. Mohon konfirmasi arti Import dan Export (data apa yang masuk atau keluar, dan formatnya).
+    Jawaban : Sudah betul, untuk formatnya akan dijelaskan di halaman lain.
   * [TODO] Mohon konfirmasi arti "level ini" pada Collapse Below Level: level Node yang diklik atau level di bawahnya.
+    Jawaban : Level Node ini, artinya jika di collapse maka anaknya akan disembunyikan.
 -->
 
 ## Mengelola Node
 
-Isi Tree dikelola per Node, mulai dari menambahkan Node, mengubah atribut, melihat detail, menghapus, hingga mengimpor dan mengekspor. Sebagian aksi tersedia di [[#Menu Konteks Node]]. Langkah rinci ada di [[Docs/Modul Data/Tree/Mengelola Node]].
+Halaman kerja Tree adalah untuk mengelola [[Docs/Tipe Data/Node]], mulai dari menambahkan, mengubah atribut, melihat detail, menghapus, hingga mengimpor dan mengekspor. Sebagian aksi tersedia di [[#Menu Konteks Node]]. Langkah rinci ada di [[Docs/Modul Data/Tree/Mengelola Node]].
 
 ## Mengatur Tree
 
+Pelajari fitur pendukung Tree di halaman berikut:
+
 - [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]]: menggabungkan Node dari beberapa Tree.
-- [[Docs/Modul Data/Tree/Mengelola Node]]: menambah, mengubah, melihat detail, menghapus, mengimpor, dan mengekspor Node.
 - [[Docs/Modul Data/Tree/Publish]]: mengatur publikasi Tree.
 - [[Docs/Modul Data/Tree/Event]]: menghubungkan Tree dengan Event.
-
-<!--
-  * [TODO] Subhalaman berikut diusulkan dan perlu dibuat:
-    - Docs/Modul Data/Tree/Konfigurasi Merger Mode (cara kerja Merger Mode, cara menambahkan Node dari Tree lain, pilihan mengikuti atau tidak mengikuti perubahan Node asal)
-    - Docs/Modul Data/Tree/Mengelola Node (anchor: Menambahkan Node, Mengubah Node, Melihat Detail Node, Menghapus Node, Import Node, Export Node)
-    - Docs/Modul Data/Tree/Publish
-    - Docs/Modul Data/Tree/Event
-  * [TODO] Path Flow Block pada Contoh Penggunaan adalah tebakan mengikuti pola Docs/Modul Logic/Flow/Flow Block/<Kategori>/<Nama Block>: Event/Tree Node Event, Operator/Node Parse, dan Modular/HTTP Request.
--->
 
 ## Contoh Penggunaan
 
 **Katalog Kategori Terpadu dari Beberapa Divisi**
 
-Setiap divisi menyusun kategori produknya sendiri dalam bentuk pohon, tetapi tim pusat membutuhkan satu katalog terpadu untuk dipakai laporan dan sistem lain. Dengan Tree, setiap divisi tetap mengelola Node-nya sendiri, sementara satu Tree penggabung menghimpun semuanya tanpa menyalin ulang secara manual. Ketika katalog terpadu berubah, sistem lain langsung menerima perubahannya.
+Setiap divisi menyusun kategori produknya sendiri dalam bentuk pohon, tetapi tim pusat membutuhkan satu katalog terpadu untuk dipakai laporan dan sistem lain. Dengan Tree, setiap divisi tetap mengelola [[Docs/Tipe Data/Node]]-nya sendiri, sementara satu Tree penggabung menghimpun semuanya tanpa menyalin ulang secara manual. Ketika katalog terpadu berubah, sistem lain langsung menerima perubahannya.
 
 **Komponen yang terlibat**
 
@@ -300,8 +281,8 @@ flowchart LR
 Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemiliknya masing-masing, tetapi dapat dipakai bersama oleh seluruh tim.
 
 <!--
-  * [TODO] Judul skenario, nama Tree, dan nama Flow pada Contoh Penggunaan adalah nama generik. Mohon sesuaikan.
-  * [TODO] Nama Event pada garis putus-putus (Node Berubah) dan tipe output Node Parse ([Object]) adalah tebakan. Mohon konfirmasi nama Event yang dihasilkan Tree Node Event dan output Node Parse.
+  * [DONE] Judul skenario, nama Tree, dan nama Flow pada Contoh Penggunaan adalah nama generik. Mohon sesuaikan.
+  * [DONE] Nama Event pada garis putus-putus (Node Berubah) dan tipe output Node Parse ([Object]) adalah tebakan. Mohon konfirmasi nama Event yang dihasilkan Tree Node Event dan output Node Parse.
 -->
 
 ## Praktik Terbaik
@@ -325,7 +306,9 @@ Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemi
 
 <!--
   * [TODO] Mohon konfirmasi apakah Publish dan Event pada Tree dibatasi Function Access di Workspace (seperti pada Table).
+    Jawaban : Betul
   * [TODO] Mohon konfirmasi apakah [[^field|Horizontal Mode]] dan [[^field|Context]] hanya nilai awal atau dapat diubah langsung dari halaman kerja tanpa Edit.
+    Jawaban: Hanya nilai awal (sebagai default), selanjutnya di halaman kerja hanya sementara. Untuk mengubah default ini tetap menggunakan Edit.
 -->
 
 ## TL:DR
@@ -350,3 +333,4 @@ Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemi
 > Node tersebut tidak memiliki anak, sehingga tidak ada yang dapat dilipat atau diperluas. Lihat [[#Menu Konteks Node]].
 > **Apa yang ada di Tree yang baru dibuat?**
 > Tree baru otomatis memiliki satu Node bernama [[^field|Origin]]. Anda dapat menambahkan Node lain di [[#Mengelola Node]].
+

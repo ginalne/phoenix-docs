@@ -20,6 +20,8 @@
   select "- <i style=\"color:#c22\">" .. p.name .. "</i> [[".. p.name .. "|create]] — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
 where not string.startsWith(p.name, "button")
 where not string.startsWith(p.name, "value")
+where not string.startsWith(p.page, "STYLING")
+where not string.startsWith(p.page, "Library")
 ]]}
 
 >**warning** Berikut adalah daftar link yang sudah dimention tapi masih draft

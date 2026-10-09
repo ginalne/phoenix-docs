@@ -91,6 +91,13 @@ Bilah navigasi Flow terdiri dari:
 >**note** Perbedaan Icon
 >Dalam mode desktop, tombol [[^button/submission|Submission]] sedikit berbeda. Tombol terlihat dengan susunan informasi submission, yaitu total activity, done, waiting, dan failure.
 
+### Informasi Area Kerja
+
+| Informasi | Penjelasan |
+| --- | --- |
+| [[^field|x _ y _]] | Koordinat posisi tampilan pada area kerja. |
+| [[^field|scale _]] | Skala tampilan pada area kerja. |
+
 ## Interaksi Antarmuka Flow
 
 Anda bisa berinteraksi pada blueprint Flow untuk memudahkan proses pengembangan logika dan alur komposit dengan aksi seperti berikut:
