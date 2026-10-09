@@ -6,12 +6,11 @@
       tree:
         priority: 4
 ---
-
 # Apa itu Tree?
 
 >**note** Tree merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix.
 
-Tree adalah komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini cocok untuk menyimpan data relasional yang bercabang, seperti kategori dan subkategori atau struktur bertingkat lainnya. Satu Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu atribut penting dalam Tree adalah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Node]].
+Tree adalah komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini cocok untuk menyimpan data relasional yang bercabang, seperti kategori dan subkategori atau struktur bertingkat lainnya. Satu Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu atribut penting dalam Tree adalah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]].
 
 Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat memanggil Node dari beberapa Tree lain, lalu menambahkannya sebagai *clone* tanpa Anda perlu menyalin Node satu per satu. Anda juga dapat mengatur apakah atribut Node ikut berubah ketika Node asalnya diperbarui lewat [[#External Read Only]].
 
@@ -42,20 +41,15 @@ Tree menyimpan Node secara bertingkat, dan hanya Tree dengan Merger Mode yang da
 
 ```mermaid
 flowchart LR
-    A["Tree<br>Non-Merger"] -->|"&nbsp;memiliki&nbsp;"| N1["Node"]
-    B["Tree<br>Non-Merger"] -->|"&nbsp;memiliki&nbsp;"| N2["Node"]
-    N1 -.->|"&nbsp;Clone&nbsp;"| M["Tree<br>Merger Mode"]
-    N2 -.->|"&nbsp;Clone&nbsp;"| M
+    M["Tree<br>Merger Mode"] -->|"&nbsp;memiliki&nbsp;"| N1["Node"]
+    M -->|"&nbsp;memiliki&nbsp;"| N4["Node"]
+    N2["Node"] -.->|"&nbsp;Clone&nbsp;"| N1
+    N3["Node"] -.->|"&nbsp;Clone&nbsp;"| N4
+    A["Tree<br>Non-Merger"] -->|"&nbsp;memiliki&nbsp;"| N2
+    B["Tree<br>Non-Merger"] -->|"&nbsp;memiliki&nbsp;"| N3
 ```
 
-Tree yang tidak bersifat merger tidak dapat menambahkan Node dari Tree lain. Node *clone* di Tree penggabung dapat dibuat dengan atau tanpa mengikuti perubahan Node asalnya. Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].
-
-<!--
-  * [TODO] Hubungan antara pilihan "mengikuti/tidak mengikuti perubahan" saat clone Node dengan pengaturan External Read Only belum jelas. Saat ini keduanya ditulis terpisah: pilihan clone dijelaskan di halaman Konfigurasi Merger Mode, External Read Only dijelaskan di halaman ini. Mohon konfirmasi apakah keduanya saling terkait.
-    Jawaban : Iya keduanya terkait. Jadi Merger Node tetap akan dijelaskan dihalaman lain. Apa perlu menjelaskan Read Only juga ditempat lain?
-  * [TODO] Diagram Cara Kerja dibuat minimal. Mohon konfirmasi apakah arah "Clone" dari Node ke Tree Merger sudah tepat.
-    Jawaban : Iya, akan tetapi Tree Merge Mode juga memiliki Node, mungkin bisa diubah dengan Tree Merger Mode -> memiliki -> Node <- clone <- Node <- Tree non-merger
--->
+Tree yang tidak bersifat merger tidak dapat menambahkan Node dari Tree lain. Node *clone* di Tree penggabung dapat dibuat dengan atau tanpa mengikuti perubahan Node asalnya, dan pilihan ini berkaitan dengan [[#External Read Only]]. Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].
 
 ## Membuat Tree
 
@@ -75,13 +69,13 @@ Tree yang tidak bersifat merger tidak dapat menambahkan Node dari Tree lain. Nod
 | [[^field|Directory]] | Folder tempat Tree berada. Terisi otomatis sesuai folder yang Anda klik kanan. Jika dikosongkan, Tree berada di root. |
 | [[^field|Name]] | Nama Tree. |
 | [[^field|Description]] | Keterangan singkat tentang Tree. |
-| [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]] | Jika aktif, Tree dapat menambahkan (*clone*) Node dari Tree lain. Bawaan: [[^value/boolean/Non-Active]]. |
+| [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]] | Jika aktif, Tree dapat menambahkan (*clone*) Node dari Tree lain. Bawaan: [[^value/boolean/Non-Active]]. Tidak dapat diubah setelah Tree dibuat. |
 | [[#External Read Only]] | Tiga pilihan, yaitu [[^field|Order]], [[^field|Name]], dan [[^field|Children]]. Bawaan masing-masing: [[^value/boolean/Non-Active]]. |
 | [[#Default Configuration]] | Pengaturan tampilan awal, yaitu [[^field|Horizontal Mode]] dan [[^field|Context]]. |
 
 ### External Read Only
 
-External Read Only mengatur atribut Node yang bersumber dari Tree lain, yaitu Node *clone* dan Node asalnya (*origin*). Setiap atribut memiliki pilihan sendiri:
+External Read Only mengatur atribut Node yang bersumber dari Tree lain, yaitu Node *clone* dan Node asalnya (*origin*). Pengaturan ini berlaku pada Tree dengan maupun tanpa Merger Mode, karena perubahan Node di Tree merger juga dapat mengubah Node di Tree non-merger. Setiap atribut memiliki pilihan sendiri:
 
 | Atribut | Jika [[^value/boolean/Non-Active]] | Jika [[^value/boolean/Active]] |
 | --- | --- | --- |
@@ -89,11 +83,10 @@ External Read Only mengatur atribut Node yang bersumber dari Tree lain, yaitu No
 | [[^field|Name]] | [[^field|Name]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Name]] Node tidak ikut berubah. |
 | [[^field|Children]] | [[^field|Children]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Children]] Node tidak ikut berubah. |
 
+Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi External Read Only]].
+
 <!--
-  * [TODO] Kolom "Jika Active" adalah kebalikan logis dari penjelasan Anda untuk [[^value/boolean/Non-Active]]. Mohon konfirmasi apakah Active berarti atribut terlindungi dari perubahan Tree lain.
-    Jawaban : Betul
-  * [TODO] Mohon konfirmasi apakah pengaturan ini hanya relevan untuk Tree dengan Merger Mode (karena Node clone hanya ada di sana), atau juga berlaku untuk Tree non-merger.
-    Jawaban : Berlaku juga, karena tree non-merger bisa terubah dari perubahan node di tree merger.
+  * [TODO] Usulan halaman baru Docs/Modul Data/Tree/Konfigurasi External Read Only (pendamping Konfigurasi Merger Mode), berisi keterkaitan External Read Only dengan Merger Mode, contoh perubahan Node yang merambat dari Tree merger ke Tree non-merger, dan contoh kapan memilih Active. Halaman ini menyimpan tabel ringkas saja. Mohon konfirmasi apakah halaman ini perlu dibuat. Jika tidak, hapus kalimat "Selengkapnya lihat" di atas dan satu tautannya di bagian Mengatur Tree.
 -->
 
 ### Default Configuration
@@ -111,13 +104,7 @@ Untuk pilihan [[^field|Context]]:
 | [[^field|Edit]] | Membuka pengelolaan ubah Node. |
 | [[^field|Detail]] | Membuka detail Node. |
 
-<!--
-  * [TODO] Mohon konfirmasi arti nilai Horizontal Mode: [[^value/boolean/Non-Active]] = Vertical? Pada screenshot halaman kerja, mode yang tampil adalah Horizontal.
-    Jawaban : Ya betul, kalau mode yang tampil udah saya ubah
-  * [DONE] Hasil pilihan Context Edit dan Detail ditulis berdasarkan dugaan dari nama pilihan. Mohon konfirmasi perilaku sebenarnya.
-  * [DONE] Mohon konfirmasi apakah Directory benar terisi otomatis sesuai folder yang diklik kanan (mengikuti pola komponen Table), karena pada screenshot kolom Search Folder... masih kosong.
-  * [DONE] Nama Tree pada screenshot (judul halaman kerja) dan nama pengguna di bilah atas adalah data pribadi. Mohon ganti dengan nama generik sebelum screenshot dipakai.
--->
+Kedua isian ini hanya nilai awal. Di halaman kerja, Anda dapat mengganti mode dan context secara sementara (lihat [[#Interaksi Antarmuka Tree]]). Untuk mengubah nilai awalnya, gunakan [[^button/edit|Edit]].
 
 ## Mengubah Tree
 
@@ -126,10 +113,8 @@ Untuk pilihan [[^field|Context]]:
 3. Perbarui isian yang diperlukan
 4. Klik [[^button|Update]]
 
-<!--
-  * [TODO] Mohon konfirmasi apakah Merger Mode masih dapat diubah setelah Tree memiliki Node, dan apakah ada peringatan jika perubahannya berisiko.
-    Jawaban : Tidak bisa diubah.
--->
+>**note** Merger Mode tidak dapat diubah
+> [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] ditentukan saat Tree dibuat dan tidak dapat diubah setelahnya. Tentukan pilihan ini sebelum Anda klik [[^button|Create]].
 
 ## Menyegarkan Tree
 
@@ -143,10 +128,6 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 >**warning** Dampak penghapusan Tree
 > Seluruh [[Docs/Tipe Data/Node]] di dalam Tree ikut terhapus. Relasi dari komponen lain yang memakai Tree ini akan terputus, misalnya [[Docs/Tipe Data/Column]] pada Table yang memakai [[Docs/Tipe Data/Node]] dari Tree ini dan [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] seperti [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event]]. Jika Tree ini menjadi sumber *clone* bagi Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]], Node hasil *clone* di Tree tersebut dapat terdampak.
-
-<!--
-  * [DONE] Dampak penghapusan di atas adalah draf berdasarkan pola komponen lain. Mohon konfirmasi apa yang terjadi pada Node clone di Tree Merger ketika Tree sumbernya dihapus, dan apakah relasi dari komponen lain harus dihapus terlebih dahulu (seperti pada Enum).
--->
 
 ## Antarmuka Tree
 
@@ -168,8 +149,8 @@ Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di 
 
 | Informasi | Penjelasan |
 | --- | --- |
-| [[^field|context _]] | Nilai [[#Default Configuration|Context]] yang sedang berlaku. |
-| [[^field|mode _]] | Arah tampilan pohon, yaitu Horizontal atau Vertical. Lihat [[#Default Configuration|Mode]]. |
+| [[^field|context _]] | Nilai [[#Default Configuration|Context]] yang sedang berlaku. Klik untuk menggantinya. |
+| [[^field|mode _]] | Arah tampilan pohon, yaitu Horizontal atau Vertical. Klik untuk menggantinya. Lihat [[#Default Configuration|Mode]]. |
 | [[^field|x _ y _]] | Koordinat posisi tampilan pada area kerja. |
 | [[^field|scale _]] | Skala tampilan pada area kerja. |
 
@@ -177,18 +158,16 @@ Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di 
 
 | Fungsi | Aksi |
 | --- | --- |
-| Menggeser tampilan (_pan_) | Tekan dan tahan pada bagian yang kosong dalam blueprint lalu gerakkan kursor. Lepas untuk selesai. |
-| Mengubah skala tampilan (_zoom_) | gulir pada bagian blueprint. |
+| Menggeser tampilan (*pan*) | Tekan dan tahan pada bagian yang kosong dalam halaman kerja, lalu gerakkan kursor. Lepas untuk selesai. |
+| Mengubah skala tampilan (*zoom*) | Gulir pada bagian halaman kerja. |
 | Memusatkan tampilan | Klik informasi koordinat [[^field|x _ y _]]. Tampilan kembali ke tengah. |
 | Mengembalikan skala | Klik informasi [[^field|scale _]]. Tampilan kembali berskala 1. |
-| Membuka menu konteks Node | Klik kanan pada Node. Hasilnya mengikuti nilai [[^field|context _]] . |
-
-<!--
-  * [TODO] Mohon konfirmasi interaksi lain pada area kerja (menggeser dan zoom dengan scroll, seperti pada Blueprint Flow) dan apakah informasi context dan mode dapat diklik untuk mengubah nilainya.
-    Jawaban : Ya, context dan mode akan diganti ketika diklik.
--->
+| Mengganti mode | Klik informasi [[^field|mode _]]. Perubahan bersifat sementara. |
+| Mengganti context | Klik informasi [[^field|context _]]. Perubahan bersifat sementara. |
+| Membuka menu konteks Node | Klik kanan pada Node. Hasilnya mengikuti nilai [[^field|context _]]. |
 
 ### Menu Konteks Node
+
 ![[Docs/Modul Data/Tree/node-menu.png]]
 Klik kanan pada Node untuk membuka menu konteks berikut.
 
@@ -205,7 +184,7 @@ Submenu [[^field|View]]:
 
 | Menu | Fungsi |
 | --- | --- |
-| [[^field/collapse|Collapse Below Level]] | Melipat keturunan pada level ini (semua Node). |
+| [[^field/collapse|Collapse Below Level]] | Melipat keturunan pada level Node ini (semua Node). |
 | [[^field/expand|Expand Children Only]] | Memperluas hanya satu keturunan di bawahnya. |
 | [[^field/collapse|Collapse Descendant]] | Melipat semua keturunan secara *recursive*. |
 | [[^field/expand|Expand Descendant]] | Membuka semua keturunan secara *recursive*. |
@@ -216,14 +195,6 @@ Submenu [[^field|View]]:
 >**note** Node tanpa anak
 > Jika Node tidak memiliki anak, pilihan [[^field|Expand]] atau [[^field|Collapse]] dan [[^field|Expand Children Only]] berubah menjadi [[^field|No children...]].
 
-<!--
-  * [DONE] Letakkan screenshot menu konteks Node dengan nama file menu-konteks-node.png. Anotasi yang disarankan: nomor pada setiap menu utama dan submenu View.
-  * [TODO] Fungsi Edit, Detail, Import, dan Export pada tabel menu hanya ditulis ringkas karena pengelolaan Node dijelaskan di halaman lain. Mohon konfirmasi arti Import dan Export (data apa yang masuk atau keluar, dan formatnya).
-    Jawaban : Sudah betul, untuk formatnya akan dijelaskan di halaman lain.
-  * [TODO] Mohon konfirmasi arti "level ini" pada Collapse Below Level: level Node yang diklik atau level di bawahnya.
-    Jawaban : Level Node ini, artinya jika di collapse maka anaknya akan disembunyikan.
--->
-
 ## Mengelola Node
 
 Halaman kerja Tree adalah untuk mengelola [[Docs/Tipe Data/Node]], mulai dari menambahkan, mengubah atribut, melihat detail, menghapus, hingga mengimpor dan mengekspor. Sebagian aksi tersedia di [[#Menu Konteks Node]]. Langkah rinci ada di [[Docs/Modul Data/Tree/Mengelola Node]].
@@ -233,6 +204,7 @@ Halaman kerja Tree adalah untuk mengelola [[Docs/Tipe Data/Node]], mulai dari me
 Pelajari fitur pendukung Tree di halaman berikut:
 
 - [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]]: menggabungkan Node dari beberapa Tree.
+- [[Docs/Modul Data/Tree/Konfigurasi External Read Only]]: mengatur atribut Node yang ikut berubah dari Tree lain.
 - [[Docs/Modul Data/Tree/Publish]]: mengatur publikasi Tree.
 - [[Docs/Modul Data/Tree/Event]]: menghubungkan Tree dengan Event.
 
@@ -280,16 +252,11 @@ flowchart LR
 
 Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemiliknya masing-masing, tetapi dapat dipakai bersama oleh seluruh tim.
 
-<!--
-  * [DONE] Judul skenario, nama Tree, dan nama Flow pada Contoh Penggunaan adalah nama generik. Mohon sesuaikan.
-  * [DONE] Nama Event pada garis putus-putus (Node Berubah) dan tipe output Node Parse ([Object]) adalah tebakan. Mohon konfirmasi nama Event yang dihasilkan Tree Node Event dan output Node Parse.
--->
-
 ## Praktik Terbaik
 
 - **Pisahkan Tree sumber dan Tree penggabung.** Simpan Node di Tree non-merger per kebutuhan, dan gunakan Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] hanya untuk menghimpun Node dari Tree lain.
-- **Tentukan kebutuhan Merger Mode sejak awal.** Tree non-merger tidak dapat menambahkan Node dari Tree lain, jadi putuskan sejak membuat Tree apakah Anda membutuhkan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]].
-- **Kunci atribut yang harus stabil.** Aktifkan [[^field|Order]], [[^field|Name]], atau [[^field|Children]] pada [[#External Read Only]] jika atribut tersebut tidak boleh ikut berubah dari Tree lain.
+- **Tentukan kebutuhan Merger Mode sejak awal.** [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] tidak dapat diubah setelah Tree dibuat, dan Tree non-merger tidak dapat menambahkan Node dari Tree lain.
+- **Kunci atribut yang harus stabil.** Aktifkan [[^field|Order]], [[^field|Name]], atau [[^field|Children]] pada [[#External Read Only]] jika atribut tersebut tidak boleh ikut berubah dari Tree lain, baik pada Tree merger maupun non-merger.
 - **Beri [[^field|Name]] Node yang jelas.** [[^field|Search Tree Data...]] hanya mencari berdasarkan [[^field|Name]], sehingga nama yang deskriptif mempermudah pencarian.
 - **Rapikan pohon besar dengan [[^field|View]].** Gunakan [[^field|Collapse Descendant]] atau [[^field|Collapse and Hide]] di [[#Menu Konteks Node]] agar tampilan tetap ringkas.
 - **Pilih [[^field|Context]] sesuai kebiasaan kerja.** Atur [[#Default Configuration|Context]] agar membuka [[^field|Menu]], [[^field|Edit]], atau [[^field|Detail]] sesuai aksi yang paling sering Anda lakukan.
@@ -297,25 +264,19 @@ Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemi
 ## Batasan dan Catatan
 
 - Tree yang tidak bersifat merger tidak dapat menambahkan [[Docs/Tipe Data/Node]] dari Tree lain.
+- [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] ditentukan saat Tree dibuat dan tidak dapat diubah setelahnya.
 - [[^field|Search Tree Data...]] hanya mencari berdasarkan [[^field|Name]] Node.
-- Pengaturan [[#External Read Only]] menentukan apakah [[^field|Order]], [[^field|Name]], dan [[^field|Children]] ikut berubah ketika Node di Tree lain diperbarui.
+- Pengaturan [[#External Read Only]] menentukan apakah [[^field|Order]], [[^field|Name]], dan [[^field|Children]] ikut berubah ketika Node di Tree lain diperbarui, baik pada Tree merger maupun non-merger.
 - [[^field|Expand]], [[^field|Collapse]], dan [[^field|Expand Children Only]] berubah menjadi [[^field|No children...]] pada Node tanpa anak.
-- [[^field|Horizontal Mode]] dan [[^field|Context]] pada [[#Default Configuration]] adalah pengaturan tampilan awal.
+- [[^field|Horizontal Mode]] dan [[^field|Context]] pada [[#Default Configuration]] adalah nilai awal. Perubahan [[^field|mode _]] dan [[^field|context _]] di halaman kerja hanya bersifat sementara, dan untuk mengubah nilai awalnya gunakan [[^button/edit|Edit]].
 - Menghapus Tree menghapus seluruh Node dan memutus relasi dari komponen lain (lihat [[#Menghapus Tree]]).
 - Penggunaan [[^button/publish|Publish]] dan [[^button/event|Event]] dibatasi oleh Function Access di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].
-
-<!--
-  * [TODO] Mohon konfirmasi apakah Publish dan Event pada Tree dibatasi Function Access di Workspace (seperti pada Table).
-    Jawaban : Betul
-  * [TODO] Mohon konfirmasi apakah [[^field|Horizontal Mode]] dan [[^field|Context]] hanya nilai awal atau dapat diubah langsung dari halaman kerja tanpa Edit.
-    Jawaban: Hanya nilai awal (sebagai default), selanjutnya di halaman kerja hanya sementara. Untuk mengubah default ini tetap menggunakan Edit.
--->
 
 ## TL:DR
 
 - Tree adalah komponen modul [[Docs/Modul Data/Pengenalan|Data]] untuk menyimpan data berhierarki berbentuk pohon yang terdiri dari banyak [[Docs/Tipe Data/Node]].
 - Tree baru otomatis memiliki satu Node bernama [[^field|Origin]]. Buat Tree lewat [[^field/add|Add]] > [[^field|Data]] > [[^field/tree|Tree]] (lihat [[#Membuat Tree]]).
-- [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] membuat Tree dapat menambahkan (*clone*) Node dari Tree lain, sedangkan [[#External Read Only]] mengatur atribut Node yang ikut berubah.
+- [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] membuat Tree dapat menambahkan (*clone*) Node dari Tree lain dan tidak dapat diubah setelah Tree dibuat, sedangkan [[#External Read Only]] mengatur atribut Node yang ikut berubah.
 - Halaman kerja menampilkan pohon dengan [[#Default Configuration|Mode]] horizontal atau vertikal, dilengkapi [[^field|Search Tree Data...]] yang hanya mencari [[^field|Name]] (lihat [[#Antarmuka Tree]]).
 - Klik kanan pada Node untuk membuka [[#Menu Konteks Node]] guna mengelola Node dan mengatur tampilan cabang.
 - Hati-hati saat menghapus Tree karena seluruh Node hilang dan relasi dari komponen lain terputus.
@@ -325,12 +286,15 @@ Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemi
 > **faq**
 > **Apa bedanya Tree biasa dengan Tree yang memakai Merger Mode?**
 > Tree biasa hanya menyimpan Node miliknya sendiri. Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat menambahkan (*clone*) Node dari Tree lain, sedangkan Tree biasa tidak dapat melakukannya.
+> **Apakah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat diubah setelah Tree dibuat?**
+> Tidak. Pilihan ini ditentukan saat Tree dibuat. Lihat [[#Mengubah Tree]].
 > **Apakah perubahan pada Node asal otomatis muncul di Node *clone*?**
 > Hal ini bergantung pada [[#External Read Only]]. Jika [[^field|Order]], [[^field|Name]], atau [[^field|Children]] berstatus [[^value/boolean/Non-Active]], atribut tersebut ikut berubah ketika Node di Tree lain diperbarui.
 > **Apa yang dicari oleh [[^field|Search Tree Data...]]?**
 > Kolom ini hanya mencari berdasarkan [[^field|Name]] Node.
+> **Apakah perubahan [[^field|mode _]] dan [[^field|context _]] di halaman kerja bersifat permanen?**
+> Tidak. Perubahan di halaman kerja hanya sementara. Untuk mengubah nilai awalnya, gunakan [[^button/edit|Edit]] (lihat [[#Default Configuration]]).
 > **Mengapa menu [[^field|Collapse]] berubah menjadi [[^field|No children...]]?**
 > Node tersebut tidak memiliki anak, sehingga tidak ada yang dapat dilipat atau diperluas. Lihat [[#Menu Konteks Node]].
 > **Apa yang ada di Tree yang baru dibuat?**
 > Tree baru otomatis memiliki satu Node bernama [[^field|Origin]]. Anda dapat menambahkan Node lain di [[#Mengelola Node]].
-

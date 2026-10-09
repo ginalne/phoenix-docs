@@ -56,9 +56,9 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 |Anchor di halaman lain|`[[Docs/Antar Muka#Area Manajemen Folder]]` | [[Docs/Antarmuka#Bilah Navigasi]]`Header Navigation Phoenix.`[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antarmuka kerja komponen||
 |Gambar|`![[Docs/Modul <Nama>/<Komponen>/<nama-gambar>.png]]`|Nama file huruf kecil dipisah tanda hubung, ditaruh di folder komponen|`![[Docs/Modul Logic/Flow/blueprint-flow.png]]` |
 |Menu atau contextmenu antarmuka|`[[^field/<icon>\|<Label>]]`    | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [slug komponen]. Kategori dan item menu tanpa icon memakai`[[^field\|<Label>]]`     |`[[^field/add\|Add]]`, `[[^field\|Event]]`, `[[^field\|Pulser]]`  |
-|Kolom isian dan teks informasi antarmuka|`[[^field\|<Label>]]`|Berlaku untuk kolom isian, kolom pencarian, dan teks yang tampil di antarmuka (misalnya keterangan kosong atau informasi koordinat)|`[[^field\|Name]]`, `[[^field\|Search]]`, `[[^field\|No Activity]]`         |
+|Kolom isian dan teks informasi antarmuka|`[[^field\|<Label>]]`|Berlaku untuk kolom isian, kolom pencarian, dan teks yang tampil di antarmuka (misalnya keterangan kosong atau informasi koordinat), gunakan placeholder jika tidak ada label|`[[^field\|Name]]`, `[[^field\|Search]]`, `[[^field\|No Activity]]`         |
 |Tombol antarmuka|`[[^button/<icon>\|<Label>]]` atau`[[^button\|<Label>]]`     | icon: add (berbentu plus), edit, delete, merge, publish, refresh, save, submission, event, activity, left (Prev), right (Next), x (Cancel), upload, empty (tidak ada ikon). Tanpa icon (`[[^button\|...]]`) untuk tombol aksi umum seperti Create, Update, Delete (konfirmasi)  |`[[^button/edit\|Edit]]`, `[[^button\|Create]]`, `[[^button/empty\|Trigger]]`       |
-|Nilai Boolean|`[[^value/boolean/allow]]`, `[[^value/boolean/disallow]]`, `[[^value/boolean/true]]`, `[[^value/boolean/disallow]]`|Gunakan di dalam tabel dan kalimat, bukan teks tebal|`[[^value/boolean/false]]`  |
+|Nilai Boolean|`[[^value/boolean/<icon>]]`|allow, disallow, true, false, Active, Non-Active|`[[^value/boolean/false]]`  |
 |Nama komponen/folder/data pada baris tabel|`[[^field/<slug>\|<Nama>]]`|slug: workspace, group, folder, variable, enum, table, tableview, tree, canvas, flow, dan slug komponen lain|`[[^field/tableview\|Daftar Pelanggan]]`|
 
 Catatan: alias tidak boleh diawali spasi (contoh salah: `[[^field/workspace| Workspace]]`).
@@ -66,6 +66,10 @@ Catatan: alias tidak boleh diawali spasi (contoh salah: `[[^field/workspace| Wor
 Catatan label: bila label field berupa placeholder di antarmuka, tulis persis termasuk titik tiga (contoh: `[[^field|Select Data Format...]]`, `[[^field|Search Table Data...]]`). Nama kolom, tombol, atau elemen antarmuka tidak dicetak tebal; selalu pakai `[[^field|...]]` atau `[[^button|...]]`.
 
 Tautkan komponen lain di sebuah halaman (misalnya Workspace di halaman Group). Label menu dan field ditulis persis seperti yang tampil di aplikasi, bukan diterjemahkan. Jika path tautan hanya tebakan, jangan ragu memakainya, lalu catat dalam satu TODO konsolidasi (lihat [[#Penjelasan TODO]]).
+
+Path Flow Block spesifik di tabel langkah Contoh Penggunaan: `Docs/Modul Logic/Flow/Flow Block/<Kategori>/<Nama Block>` (contoh: `Event/Table Row Event`, `Modular/HTTP Request`), bukan halaman Pengenalan kategori.
+
+Tautan ke halaman konfigurasi yang namanya berbeda dari teks diberi alias dengan istilah atribut persis (misalnya [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]]). Jaga satu istilah yang sama di seluruh halaman, jangan bergantian "Merger Mode" dan "Merger Node".
 
 ## Penjelasan TODO
 
@@ -232,6 +236,9 @@ Catatan format:
 - Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris.
 - Jangan menambah callout yang hanya mengulang isi tabel di dekatnya (contoh: catatan "Detail Merge, Publish, dan Event" di bawah tabel bilah navigasi yang sudah memuat tautannya).
 - Setelah menyalin pola langkah dari halaman lain, ganti semua nama konteks (misalnya jangan menulis "Klik kanan <Konteks halaman lain>" di halaman <konteks>).
+- Jika Heading 2 memiliki anak (Heading 3) maka buat paragraf ringkas dahulu sebelum menulis Heading 3.
+- Jangan menulis catatan perbedaan desktop dan mobile jika perbedaannya tidak diketahui. Penulis menghapus catatan yang berbunyi "pada dasarnya sama". Tulis catatan hanya bila ada perbedaan yang diberikan penulis.
+- Interaksi Antarmuka untuk area kerja berbentuk kanvas memuat baris menggeser tampilan (pan: tekan dan tahan pada bagian kosong lalu gerakkan kursor, lepas untuk selesai) dan mengubah skala (zoom: gulir), selain klik koordinat dan klik scale.
 
 ## Pola yang dipakai penulis untuk konteks = Komponen:
 * **Langkah Membuat.** Pola yang dipakai penulis untuk konteks Komponen:
@@ -258,7 +265,6 @@ Catatan format:
 - Halaman komponen besar memuat bagian Antarmuka (gambar, penjelasan area, tabel tombol bilah navigasi, catatan perbedaan desktop/mobile) dan Interaksi Antarmuka (tabel Fungsi dan Aksi).
 - Bagian aspek pengelolaan (misalnya "Membangun Logika Flow") berisi daftar tautan anchor ke subhalaman, bukan langkah rinci.
 - Path komponen Data yang dipakai penulis: `Docs/Modul Data/<Komponen>/Apa itu <Komponen>` (Variable, Enum, Table, Tree).
-- Path Flow Block spesifik di tabel langkah Contoh Penggunaan: `Docs/Modul Logic/Flow/Flow Block/<Kategori>/<Nama Block>` (contoh: `Event/Table Row Event`, `Modular/HTTP Request`), bukan halaman Pengenalan kategori.
 - Ikon tombol tambahan yang dipakai penulis: left (Prev), right (Next), x (Cancel), upload. Tombol Go memakai `[[^button/empty|Go]]`.
 - Label field yang berupa placeholder ditulis persis termasuk titik tiga, misalnya `[[^field|Select Data Format...]]` dan `[[^field|Search Table Data...]]`.
 - Nama kolom dan elemen antarmuka tidak ditebalkan, ditulis dengan `[[^field|ID]]` dan `[[^field|Action]]`.
@@ -296,5 +302,8 @@ Ada dua jenis diagram. Pilih sesuai isi bagian.
 5. Perlakukan fakta produk dari penulis sebagai kebenaran, maknai bukan telan perkataannya mentah-mentah, termasuk koreksi atas asumsi sebelumnya. Jika penulis mengoreksi aturan (misalnya satu anggota hanya di satu Group), perbarui seluruh bagian yang terdampak.
 6. Gambar dan contoh penamaan: nama folder, komponen, atau data pada gambar/screenshot yang diberikan penulis adalah kasus pribadi penulis dan tidak boleh disebut di dokumentasi. Jika perlu contoh penamaan, buat penamaan generik sendiri dan tandai dengan TODO agar penulis menyesuaikan gambarnya. Sisipkan placeholder gambar dengan sintaks`![[...png]]` pada tempat yang tepat, lalu tambahkan TODO penempatan gambar beserta anotasi yang disarankan (nomor penanda untuk setiap bagian yang dijelaskan). Screenshot dialog Create diletakkan di awal bagian Membuat dengan nama file `add-<komponen>.png`, dan screenshot halaman kerja diletakkan di bagian Antarmuka. Jika screenshot memuat salah ketik pada label aplikasi (misalnya "Pubilsh" yang seharusnya "Publish"), tulis label yang benar di dokumentasi dan sebutkan temuan itu di daftar cek penulis.
 7. **Cek konsistensi sebelum selesai:** pastikan Praktik Terbaik, Batasan dan Catatan, TL:DR, dan FAQ sesuai dengan isi halaman terbaru, semua anchor dan nama komponen pada langkah sudah benar, nomor langkah berurutan, dan istilah dipakai konsisten.
-8. Penulis menandai TODO yang sudah dikerjakan dengan `[DONE]` dan menulis jawaban di bawah TODO dengan awalan "Jawaban:".
+8. TODO yang sudah berisi "Jawaban :" tetapi masih bertanda [TODO] harus diintegrasikan ke isi halaman, lalu TODO dihapus. TODO bertanda [DONE] atau yang dihapus penulis tanpa jawaban berarti draf diterima apa adanya, termasuk path Flow Block tebakan, daftar subhalaman, dan dampak penghapusan.
+Bila jawaban penulis berupa pertanyaan balik (misalnya "apa perlu dijelaskan di tempat lain?"), jawab di chat dengan rekomendasi, terapkan rekomendasi itu di halaman sebagai tautan usulan, dan simpan satu TODO konfirmasi.
+Bila penulis mengubah istilah di satu tempat (misalnya alias "Merger Node"), periksa apakah itu salah ketik atau istilah baru, samakan di seluruh halaman, dan sebutkan di daftar cek.
+Front matter yang hilang pada halaman yang dikembalikan penulis tetap ditulis ulang pada hasil akhir, dan tidak perlu disebut di daftar cek.
 9. Akhiri balasan dengan daftar singkat hal yang perlu dicek penulis, tanpa mengulang isi file.
