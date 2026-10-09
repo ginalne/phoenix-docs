@@ -1,5 +1,15 @@
-![[history prompt/2026-10-09_08-20-50.png]]![[history prompt/2026-10-09_08-27-54.png]]
-![[history prompt/2026-10-09_08-21-13.png]]
+---
+  pageDecoration:
+    tree:
+      priority: -5
+  tags:
+    meta
+    prompt
+---
+2026-10-09 08-00
+
+![[prompt/2026-10-09_08-20-50.png]]![[prompt/2026-10-09_08-27-54.png]]
+![[prompt/2026-10-09_08-21-13.png]]
 /phoenix-docs-knowledge /phoenix-docs-silverbullet 
 
 Tolong saya membuat halaman "Apa itu Tree?".

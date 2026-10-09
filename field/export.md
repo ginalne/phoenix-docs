@@ -1,7 +1,7 @@
 ---
   tags:
     meta/library
-    value
+    field
   pageDecoration:
-    icon: toggle-right
+    icon: 'download'
 ---

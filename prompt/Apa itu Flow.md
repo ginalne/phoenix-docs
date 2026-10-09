@@ -1,4 +1,13 @@
-#meta
+---
+    pageDecoration:
+      tree:
+        priority: 0
+    tags:
+      meta
+      prompt
+---
+2026-10-06 04-00
+
 /phoenix-docs-silverbullet  /phoenix-docs-knowledge 
 
 Tolong buatkan dokumentasi phoenix berjudul "Apa itu Flow".

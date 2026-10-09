@@ -1,7 +1,7 @@
 ---
   tags:
     meta/library
-    button
+    value
   pageDecoration:
     icon: toggle-left
 ---

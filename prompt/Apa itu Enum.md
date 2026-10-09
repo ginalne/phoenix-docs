@@ -1,7 +1,15 @@
-#meta
+---
+  pageDecoration:
+    tree:
+      priority: -2
+  tags:
+    meta
+    prompt
+---
+2026-10-07 23-00
 
-![[history prompt/2026-10-07_23-56-04.png]]
-![[history prompt/2026-10-08_00-05-56.png]]
+![[prompt/2026-10-07_23-56-04.png]]
+![[prompt/2026-10-08_00-05-56.png]]
 /phoenix-docs-silverbullet /phoenix-docs-knowledge
 
 1. Enum adalah salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix. 

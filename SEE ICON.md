@@ -13,7 +13,7 @@
 >**danger** mentioned button but not exists
 >${query[[
   from p = index.aspiringPages()
-  select "- <i style=\"color:#faa\">[[" .. p.name .. "]]</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
+  select "- <i style=\"color:#faa\">[[" .. p.name .. "]]</i> — <small style=\"color:#ffa\">".. templates.paragraphItem(p) .. "</small>"
   where string.startsWith(p.name, "button")
 ]]}
 
@@ -26,7 +26,7 @@
 >**danger** mentioned mode but not exists
 >${query[[
   from p = index.aspiringPages()
-  select "- <i style=\"color:#faa\">" .. p.name .. "</i> — <small style=\"color:#ffa\">[[" .. p.page .. "|" .. p.page .. "]]</small>"
+  select "- <i style=\"color:#faa\">" .. p.name .. "</i> — <small style=\"color:#ffa\">".. templates.paragraphItem(p) .. "</small>"
   where string.startsWith(p.name, "mode")
 ]]}
 

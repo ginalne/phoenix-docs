@@ -1,6 +1,14 @@
-#meta
+---
+  pageDecoration:
+    tree:
+      priority: -1
+  tags:
+    meta
+    prompt
+---
+2026-10-06 06-00
 
-![[history prompt/2026-10-06_06-06-41.png]]
+![[prompt/2026-10-06_06-06-41.png]]
 
 /phoenix-docs-silverbullet /phoenix-docs-knowledge
 

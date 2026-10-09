@@ -1,7 +1,15 @@
-#meta
+---
+  pageDecoration:
+    tree:
+      priority: -3
+  tags:
+    meta
+    prompt
+---
+2026-10-07 23-00
 
-![[history prompt/2026-10-07_15-54-27.png]]
-![[history prompt/2026-10-07_15-52-40.png]]
+![[prompt/2026-10-07_15-54-27.png]]
+![[prompt/2026-10-07_15-52-40.png]]
 Tolong buatkan halaman dengan judul "Apa itu Table?"
 base knowledge:
 
