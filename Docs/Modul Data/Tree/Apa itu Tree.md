@@ -86,10 +86,6 @@ External Read Only mengatur atribut Node yang bersumber dari Tree lain, yaitu No
 
 Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi External Read Only]].
 
-<!--
-  * [TODO] Usulan halaman baru Docs/Modul Data/Tree/Konfigurasi External Read Only (pendamping Konfigurasi Merger Mode), berisi keterkaitan External Read Only dengan Merger Mode, contoh perubahan Node yang merambat dari Tree merger ke Tree non-merger, dan contoh kapan memilih Active. Halaman ini menyimpan tabel ringkas saja. Mohon konfirmasi apakah halaman ini perlu dibuat. Jika tidak, hapus kalimat "Selengkapnya lihat" di atas dan satu tautannya di bagian Mengatur Tree.
--->
-
 ### Default Configuration
 
 | Isian | Fungsi |
@@ -285,7 +281,7 @@ Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemi
 ## FAQ : Pertanyaan yang Sering Diajukan
 
 > **faq**
-> **Apa bedanya Tree biasa dengan Tree yang memakai Merger Mode?**
+> **Apa bedanya Tree biasa dengan Tree yang memakai [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]]?**
 > Tree biasa hanya menyimpan Node miliknya sendiri. Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat menambahkan (*clone*) Node dari Tree lain, sedangkan Tree biasa tidak dapat melakukannya.
 > **Apakah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat diubah setelah Tree dibuat?**
 > Tidak. Pilihan ini ditentukan saat Tree dibuat. Lihat [[#Mengubah Tree]].
@@ -299,3 +295,4 @@ Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemi
 > Node tersebut tidak memiliki anak, sehingga tidak ada yang dapat dilipat atau diperluas. Lihat [[#Menu Konteks Node]].
 > **Apa yang ada di Tree yang baru dibuat?**
 > Tree baru otomatis memiliki satu Node bernama [[^field|Origin]]. Anda dapat menambahkan Node lain di [[#Mengelola Node]].
+
