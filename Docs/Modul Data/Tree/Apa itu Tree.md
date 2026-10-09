@@ -41,12 +41,13 @@ Tree menyimpan Node secara bertingkat, dan hanya Tree dengan Merger Mode yang da
 
 ```mermaid
 flowchart LR
-    M["**Tree Merger Mode**<br>"] -->|"&nbsp;memiliki&nbsp;"| N1["Node"]
+    M["**Tree Merger Mode**"] -->|"&nbsp;memiliki&nbsp;"| N1["Node"]
     M -->|"&nbsp;memiliki&nbsp;"| N4["Node"]
     N2["Node"] -.->|"&nbsp;Clone&nbsp;"| N1
     N3["Node"] -.->|"&nbsp;Clone&nbsp;"| N4
-    A["Tree<br>Non-Merger"] -->|"&nbsp;memiliki&nbsp;"| N2
-    B["Tree<br>Non-Merger"] -->|"&nbsp;memiliki&nbsp;"| N3
+    N4["Node"] -.->|"&nbsp;Perubahan&nbsp;"| N3
+    A["**Tree Non-Merger**<br>Read Only"] -->|"&nbsp;memiliki&nbsp;"| N2
+    B["**Tree Non-Merger**<br>"] -->|"&nbsp;memiliki&nbsp;"| N3
 ```
 
 Tree yang tidak bersifat merger tidak dapat menambahkan Node dari Tree lain. Node *clone* di Tree penggabung dapat dibuat dengan atau tanpa mengikuti perubahan Node asalnya, dan pilihan ini berkaitan dengan [[#External Read Only]]. Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].
