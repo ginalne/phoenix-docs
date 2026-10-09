@@ -41,7 +41,7 @@ Tree menyimpan Node secara bertingkat, dan hanya Tree dengan Merger Mode yang da
 
 ```mermaid
 flowchart LR
-    M["Tree<br>Merger Mode"] -->|"&nbsp;memiliki&nbsp;"| N1["Node"]
+    M["**Tree Merger Mode**<br>"] -->|"&nbsp;memiliki&nbsp;"| N1["Node"]
     M -->|"&nbsp;memiliki&nbsp;"| N4["Node"]
     N2["Node"] -.->|"&nbsp;Clone&nbsp;"| N1
     N3["Node"] -.->|"&nbsp;Clone&nbsp;"| N4
