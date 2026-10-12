@@ -96,7 +96,6 @@ Bagian [[^field|Column]] pada dialog [[^field|Create New Table]] berupa tabel de
 >**warning** Perubahan Column dapat menyebabkan data hilang
 > Jika perubahan berisiko menghilangkan data pada Row yang sudah ada, Phoenix menampilkan peringatan. Anda tetap dapat melanjutkan dengan *force update*, tetapi data yang terdampak akan hilang.
 
-
 ## Menyegarkan Table
 
 Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
