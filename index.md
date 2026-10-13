@@ -17,8 +17,9 @@ ATURAN:
 3. Penulis tidak boleh menulis [[index#Task|Task]] kecuali digunakan dalam [[index#Comment|Comment]]
 4. Penulis wajib menyisipkan ruang dengan Enter 2x diakhir dokumen (agar ada space dengan kolom Linked Mentions)
 
-
----
+VIEW MODE:
+1. Command Navigation Tree : ${widgets.commandButton("Buka Navigasi Pohon", "Navigate: Tree")}
+2. Command Table of Contest jika perlu : ${widgets.commandButton("Buka Table of Contents", "Navigate: Table of Contents")}
 
 ## Frontmatter
 frontmatter adalah section wajib dalam penulisan dokumentasi yang dibuka dengan `---` dan ditutup dengan `---`, isi dari frontmatter ditulis dengan format YAML. 
