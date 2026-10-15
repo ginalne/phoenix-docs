@@ -204,9 +204,6 @@ flowchart TB
 | 2 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|If]] | Memeriksa apakah kategori pengaduan adalah yang mendesak. | Alur terbagi menjadi jalur true dan false. |
 | 3 | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|HTTP Request]] | Mengirim data pengaduan ke sistem lain. | Sistem lain menerima data. |
 
-<!--
-  * [TODO] Mohon konfirmasi path halaman Flow Block Operator untuk tautan If pada langkah 2 (path usulan: Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan).
--->
 
 **Hasil yang dirasakan**
 
