@@ -9,11 +9,13 @@
 ---
 # Apa itu Flow Block
 
+Flow Block adalah unit terkecil penyusun Flow. Setiap block memiliki fungsi tertentu dan dapat dihubungkan dengan block lain.
+
 ## Menambahkan Flow Block
 
 ![[Docs/Modul Logic/Flow/Flow Block/add-flow-block.png]]
 1. Buka halaman kerja Flow
-2. Klik kanan pada blueprint > [[^field/add|Add]]
+2. Klik kanan pada blueprint ➜ [[^field/add|Add]]
 3. Pilih kategori Flow Block, misalnya [[^field/event|Event]]
 4. Pilih Flow Block, misalnya [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser]]
 
@@ -80,3 +82,4 @@ Garis koneksi akan terhapus di antara kedua block.
 >Klik kanan pada blueprint, pilih [[^field/add|Add]], lalu pilih kategori dan Flow Block yang diinginkan.
 >**Bagaimana menghubungkan dua Flow Block?**
 >Klik dan tahan titik output pada block asal, seret ke titik input block tujuan, lalu lepaskan.
+
