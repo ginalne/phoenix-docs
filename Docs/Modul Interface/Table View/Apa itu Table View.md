@@ -215,7 +215,7 @@ Anda dapat klik [[^button/x|Cancel]] untuk membatalkan penambahan Row.
 
 ### Kolom yang Terisi Otomatis
 
-Data hanya menampilkan Row yang memenuhi Query. Jika Query memiliki kondisi [[Docs/Tipe Data/Query#Where|Where]] pada kolom yang tidak ditampilkan, kolom tersebut tetap terisi otomatis saat Row ditambahkan. Dengan begitu, Row baru tetap memenuhi syarat Query dan tidak hilang setelah [[^button/refresh|Refresh]].
+Data hanya menampilkan Row yang memenuhi Query. Jika Query memiliki kondisi [[Docs/Tipe Data/Query#Where|Where]] pada kolom yang tidak ditampilkan, kolom tersebut tetap terisi otomatis saat Row ditambahkan. Dengan begitu, Row baru tetap memenuhi syarat Query dan tidak hilang bahkan setelah [[^button/refresh|Refresh]].
 
 Misalnya, Data [[^field|Menunggu Diproses]] memiliki kondisi Where pada kolom [[^field|Status]] (berformat [[Docs/Tipe Data/EnumData|EnumData]]) bernilai `Menunggu`, sementara kolom [[^field|Status]] disembunyikan dengan Hide. Saat Anda menambahkan Row dari Data tersebut, kolom [[^field|Status]] langsung terisi `Menunggu`.
 
