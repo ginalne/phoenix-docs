@@ -74,7 +74,7 @@ flowchart LR
 Buka halaman kerja Table View, klik [[^button/edit|Edit]], perbarui isian, lalu klik [[^button|Update]].
 
 <!--
-  * [TODO] Konfirmasi cakupan tombol Edit: diasumsikan hanya mengubah atribut Table View (Name dan Description). Pengelolaan Data (nama, Query, tampilan) dilakukan di halaman kerja, bukan lewat Edit.
+  * [DONE] Konfirmasi cakupan tombol Edit: diasumsikan hanya mengubah atribut Table View (Name dan Description). Pengelolaan Data (nama, Query, tampilan) dilakukan di halaman kerja, bukan lewat Edit.
 -->
 
 ## Menyegarkan Table View
@@ -96,7 +96,7 @@ Buka folder yang berisi Table View, klik kanan Table View, pilih [[^button/delet
 
 ![[Docs/Modul Interface/Table View/halaman-kerja-table-view.png]]
 
-Halaman kerja Table View terdiri dari bilah navigasi di bagian atas dan area Data di bagian bawah. Setiap Data tampil sebagai tabel Row yang dapat dilipat, dan Data baru ditambahkan lewat tombol [[^button/add|Add Data]] di bagian paling bawah.
+Halaman kerja Table View terdiri dari bilah navigasi di bagian atas dan area Data di bagian bawah. Setiap Data tampil sebagai tabel yang dapat dilipat, dan Data baru ditambahkan lewat tombol [[^button/add|Add Data]] di bagian paling bawah.
 
 <!--
   * [TODO] Penempatan gambar: `halaman-kerja-table-view.png` di bagian Antarmuka. Anotasi yang disarankan (nomor penanda): 1 judul Table View, 2 Edit, 3 Refresh, 4 Search, 5 judul Data, 6 pilihan tampilan, 7 tombol Q, 8 tabel Row, 9 Add Row, 10 informasi halaman dan pagination, 11 Add Data.
