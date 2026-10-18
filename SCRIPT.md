@@ -21,18 +21,6 @@ config.set("markdownPrettify.emphasisMarker", "_")
 ```
 
 ```space-lua
-command.define {
-  name = "Clipboard: Paste Plain Text",
-  key = "Alt-Shift-v",
-  run = function()
-    editor.flashNotification(
-      "Plain Paste: command is running"
-    )
-  end
-}
-```
-
-```space-lua
 taskState.define {
   name = "TODO"
 }
