@@ -91,15 +91,10 @@ Buka folder yang berisi Table View, klik kanan Table View, pilih [[^button/delet
 
 ## Antarmuka Table View
 
-![[Docs/Modul Interface/Table View/halaman-kerja-table-view.png]]
-
+![[Docs/Modul Interface/Table View/interface-tableview.png]]
 Halaman kerja Table View terdiri dari bilah navigasi di bagian atas dan area Data di bagian bawah. Setiap Data tampil sebagai tabel yang dapat dilipat, dan Data baru ditambahkan lewat tombol [[^button/add|Add Data]] di bagian paling bawah.
 
-<!--
-  * [TODO] Penempatan gambar: `halaman-kerja-table-view.png` di bagian Antarmuka. Anotasi yang disarankan (nomor penanda): 1 judul Table View, 2 Edit, 3 Refresh, 4 Search, 5 judul Data, 6 pilihan tampilan, 7 tombol Q, 8 tabel Row, 9 Add Row, 10 informasi halaman dan pagination, 11 Add Data.
-  * [TODO] Nama Table View, nama Data, dan isi Row pada screenshot adalah kasus pribadi dan tidak disebut di halaman ini. Mohon sesuaikan gambar atau gunakan penamaan generik.
-  * [TODO] Konfirmasi perbedaan tampilan desktop dan mobile. Jika ada, tambahkan callout catatan di bagian ini.
--->
+Contoh gambar diatas merupakan halaman kerja Table View dengan dua Data bernama [[^field|On Progress...]] dan [[^field|Done belum diambil]].
 
 ### Bilah navigasi Table View terdiri dari:
 
@@ -110,42 +105,25 @@ Halaman kerja Table View terdiri dari bilah navigasi di bagian atas dan area Dat
 | [[^button/refresh\|Refresh]] | Memuat ulang tampilan dan menjalankan kembali Query pada setiap Data. |
 | [[^field\|Search TableView Data...]] | Mencari kata kunci di semua kolom pada Data. |
 
-<!--
-  * [TODO] Konfirmasi cakupan Search: apakah mencari di seluruh Data sekaligus atau hanya Data yang terbuka, dan apakah Row yang tidak cocok disembunyikan.
--->
-
 ### Bagian Data terdiri dari:
 
 | Elemen | Fungsi |
 | ------ | ------ |
-| Judul Data | Menampilkan ikon panah, nama Data, dan angka dalam tanda kurung. Klik untuk melipat atau membuka Data. |
-| [[^button\|full]], [[^button\|half]], [[^button\|quarter]] | Menentukan porsi layar yang ditempati Data. Selengkapnya lihat [[#Mengatur Tampilan Data]]. |
-| [[^button\|Q]] | Membuka pengaturan Query untuk Data tersebut. |
-| Tabel Row | Menampilkan kolom hasil Query, ditambah kolom [[^field\|ID]] di awal dan [[^field\|Action]] di akhir yang berisi tombol [[^button/save\|Save]] dan [[^button/delete\|Delete]] per Row. |
-| [[^button/add\|Add Row]] | Menambahkan Row pada Table sumber Data. |
-| [[^field\|Show 50 of 4 items, on page]], [[^button/empty\|Go]], [[^button/left\|Prev]], [[^button/right\|Next]] | Informasi jumlah Row dan perpindahan halaman, sama seperti pada Table. |
-| [[^field\|Empty]] | Muncul pada Data yang Query-nya belum diisi. |
-| [[^field\|Query column output is not valid!]] | Muncul pada Data yang Query-nya belum diisi atau tidak valid. Lihat [[Docs/Tipe Data/Query]]. |
-
-<!--
-  * [TODO] Angka dalam kurung pada judul Data diasumsikan jumlah Row hasil Query (contoh: `(4)`, `(2)`). Pada Data dengan Query kosong tampil `(3) ()`. Mohon jelaskan arti `(3)` dan `()` tersebut.
-  * [TODO] Tombol Q diasumsikan membuka editor Query untuk Data. Mohon konfirmasi fungsinya dan namanya (apakah ada label atau tooltip).
-  * [TODO] Konfirmasi kapan pesan error muncul: Query kosong, Query tidak valid, atau Query tidak memakai header Table.
-  * [TODO] Informasi jumlah halaman pada screenshot ("Show 50 of 4 items, on page") diasumsikan sama seperti Table, yaitu batas 50 Row per halaman.
--->
+| Judul Data | Menampilkan ikon panah, nama Data, dan angka jumlah [[Docs/Tipe Data/Row]] dalam tanda kurung. |
+| [[^value/radio|full]], [[^value/radio/|half]], [[^value/radio|quarter]] | Menentukan porsi layar yang ditempati Data. Selengkapnya lihat [[#Mengatur Tampilan Data]]. |
+| Tombol [[^button|Q]] | Membuka pengaturan [[Docs/Tipe Data/Query]] untuk Data tersebut. |
+| Tabel Row | Menampilkan kolom dan baris hasil [[Docs/Tipe Data/Query]], ditambah kolom [[^field\|ID]] di awal dan [[^field\|Action]] di akhir yang berisi tombol [[^button/save|Save]] dan [[^button/delete\|Delete]] per [[Docs/Tipe Data/Row]]. |
+| [[^button/add|Add Row]] | Menambahkan [[Docs/Tipe Data/Row]] pada Table sumber Data. |
+| [[^field|Show _ of _ items, on page]], [[^button/empty\|Go]], [[^button/left\|Prev]], [[^button/right\|Next]] | Informasi jumlah Row dan perpindahan halaman, sama seperti pada [[Docs/Modul Data/Table/Apa itu Table|Table]]. |
+| [[^field\|Empty]] | Muncul pada Data yang [[Docs/Tipe Data/Query]]-nya belum diisi. |
+| Error | Muncul ketika ada kesalahan dalam Query. Selengkapnya lihat [[Docs/Tipe Data/Query#Error]]
 
 ### Interaksi Antarmuka Table View
 
 | Fungsi | Aksi |
 | ------ | ---- |
 | Melipat atau membuka Data | Klik judul Data. |
-| Membuka menu konteks Data | Klik kanan pada Data, lalu pilih [[^field/edit\|Rename]], [[^field/add\|Add Row]], [[^field/add\|Add Data]], atau [[^field/delete\|Delete Data]]. |
-| Mencari kata kunci | Ketik di [[^field\|Search TableView Data...]]. |
-| Berpindah halaman Row | Klik [[^button/left\|Prev]] atau [[^button/right\|Next]], atau isi nomor halaman lalu klik [[^button/empty\|Go]]. |
-
-<!--
-  * [TODO] Konfirmasi tempat menu konteks dibuka (klik kanan di judul Data atau di seluruh area Data) dan ikon masing-masing menu. Ikon pada tabel di atas masih tebakan.
--->
+| Membuka menu konteks Data | Klik kanan pada judul Data, lalu pilih [[^field/edit\|Rename]], [[^field/add\|Add Row]], [[^field/add\|Add Data]], atau [[^field/delete\|Delete Data]]. |
 
 ## Mengelola Data Table View
 
@@ -154,18 +132,15 @@ Data adalah isi dari Table View. Setiap Data menampung satu Query, nama, dan kon
 ### Menambahkan Data
 
 1. Buka halaman kerja Table View
-2. Klik [[^button/add|Add Data]] di bagian bawah halaman, atau klik kanan Data lain > [[^field/add|Add Data]]
+2. Klik [[^button/add|Add Data]] di bagian bawah halaman, atau klik kanan Data lain ➜ [[^field/add|Add Data]]
 3. Data baru tampil dengan Query kosong, ditandai [[^field|Empty]]
 4. Isi Query di [[#Mengatur Query]]
 
-<!--
-  * [TODO] Konfirmasi apakah Data baru langsung ditambahkan dengan nama awal "New Data", atau ada dialog isian terlebih dahulu.
--->
 
 ### Mengatur Query
 
 1. Klik [[^button|Q]] pada Data yang ingin diatur
-2. Isi Query dengan [[Docs/Tipe Data/Query#Header|header Table]]
+2. Isi Query sesuai dengan kaidah 
 3. Simpan perubahan Query
 
 Gunakan [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] untuk memilih kolom yang tampil, dan [[Docs/Tipe Data/Query#Where|Where]] untuk memfilter Row. Cara menulis Query dijelaskan di [[Docs/Tipe Data/Query]].

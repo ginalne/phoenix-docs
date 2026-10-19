@@ -15,3 +15,10 @@ Query cukup baik dalam menyimpan konfigurasi penampilan data sehingga digunakan 
 ## Format
 >**note** Tipe data ini tidak memiliki format khusus.
 
+## Error
+
+Konfigurasi yang dirumuskan dalam Query dapat tidak sesuai dengan permintaan ataupun hasilnya. Berikut adalah beberapa pesan error yang tampil sesuai dengan penyebabnya.
+
+| Pesan Error | Penyebabnya |
+| ---------------- | -------------------- |
+| Query column output is not valid | Hasil Query bukanlah data yang bersifat Table Row, bisa dikarenakan Header yang salah (bukan Table) atau belum diisi. |
