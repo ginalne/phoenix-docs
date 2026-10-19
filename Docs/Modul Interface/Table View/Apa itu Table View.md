@@ -16,10 +16,9 @@
 
 Table View (atau TableView) adalah komponen antarmuka yang dapat digunakan untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] menggunakan [[Docs/Tipe Data/Query|Query]].
 
-Satu Table View dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/TableView Data|Data]]. Setiap Data menampung satu Query, sebuah nama, dan konfigurasi tampilannya sendiri, sehingga Anda dapat menyajikan beberapa tampilan Table dalam satu halaman dengan kolom dan filter yang berbeda-beda. Row tetap dapat ditambah, diubah, dan dihapus langsung dari tampilan, seperti pada Table.
+Satu Table View dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/TableView Data|Data]]. Setiap Data menampung satu Query, sebuah nama, dan konfigurasi tampilannya sendiri, sehingga Anda dapat menyajikan beberapa tampilan Table dalam satu halaman dengan kolom dan filter yang berbeda-beda. [[Docs/Tipe Data/Row]] tetap dapat ditambah, diubah, dan dihapus langsung dari tampilan, seperti pada Table.
 
 ## Mengapa Menggunakan Table View?
-
 - **Banyak tampilan dalam satu halaman.** Tampilkan beberapa Data sekaligus, baik dari Table yang sama maupun dari Table yang berbeda.
 - **Kolom yang dapat dikontrol.** Tampilkan hanya kolom yang dibutuhkan dengan [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] di Query.
 - **Data yang dapat difilter.** Tambahkan kondisi [[Docs/Tipe Data/Query#Where|Where]] di Query agar Data hanya memuat Row yang relevan.
@@ -41,16 +40,23 @@ Satu Table View dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View
 
 ## Cara Kerja Table View
 
-Table View menjalankan Query pada setiap Data, lalu menampilkan hasilnya sebagai tabel Row yang dapat dikelola langsung.
+Table View menjalankan [[Docs/Tipe Data/Query|Query]] pada setiap Data, lalu menampilkan hasilnya sebagai tabel [[Docs/Tipe Data/Row]] yang dapat dikelola langsung (_editable_) atau hanya dapat dibaca (_readonly_).
 
 ```mermaid
 flowchart LR
-    A["Table View"] --> B["TableView Data"]
-    A --> C["TableView Data"]
-    B
-    C["TableView Data"]
-    B -->|&nbsp;Ditampilkan&nbsp;| C["Data Table View"]
-    D -->|&nbsp;Ditampilkan&nbsp;| E["Data Table View"]
+    A["Table View"] -..-> B["TableView Data<br>( editable )"]
+    A -..-> C["TableView Data<br>( readonly )"]
+    A -..-> D["TableView Data<br>( editable )"]
+    B -->|&nbsp;Query&nbsp;| F["Table Row<br>( editable )"]
+    C -->|&nbsp;Query&nbsp;| G["Table Row<br>( readonly )"]
+    D -->|&nbsp;Query&nbsp;| H["Table Row<br>( readonly )"]
+
+    X["Table A"] --> F
+    Y["Table B"] --> G
+    Z["Table C"] --> H
+    W["Workspace : Data Access"] -->|&nbsp;allow&nbsp;| X
+    W -->|&nbsp;allow&nbsp;| Y
+    W -->|&nbsp;disallow&nbsp;| Z
 ```
 
 ## Membuat Table View
