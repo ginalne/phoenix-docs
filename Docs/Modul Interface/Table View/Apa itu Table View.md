@@ -14,9 +14,9 @@
 
 >**note** Table View merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 
-Table View adalah komponen antarmuka yang dapat digunakan untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] menggunakan [[Docs/Tipe Data/Query|Query]].
+Table View (atau TableView) adalah komponen antarmuka yang dapat digunakan untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] menggunakan [[Docs/Tipe Data/Query|Query]].
 
-Satu Table View dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/TableViewData|Data]]. Setiap Data menampung satu Query, sebuah nama, dan konfigurasi tampilannya sendiri, sehingga Anda dapat menyajikan beberapa tampilan Table dalam satu halaman dengan kolom dan filter yang berbeda-beda. Row tetap dapat ditambah, diubah, dan dihapus langsung dari tampilan, seperti pada Table.
+Satu Table View dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/TableView Data|Data]]. Setiap Data menampung satu Query, sebuah nama, dan konfigurasi tampilannya sendiri, sehingga Anda dapat menyajikan beberapa tampilan Table dalam satu halaman dengan kolom dan filter yang berbeda-beda. Row tetap dapat ditambah, diubah, dan dihapus langsung dari tampilan, seperti pada Table.
 
 ## Mengapa Menggunakan Table View?
 
@@ -45,10 +45,12 @@ Table View menjalankan Query pada setiap Data, lalu menampilkan hasilnya sebagai
 
 ```mermaid
 flowchart LR
-    A["Table"] -->|&nbsp;Query&nbsp;| B["Data"]
-    B -->|&nbsp;Ditampilkan&nbsp;| C["Table View"]
-    D["Workspace"] -.->|&nbsp;Akses Data&nbsp;| B
-    D -.->|&nbsp;Akses Table&nbsp;| A
+    A["Table View"] --> B["TableView Data"]
+    A --> C["TableView Data"]
+    B
+    C["TableView Data"]
+    B -->|&nbsp;Ditampilkan&nbsp;| C["Data Table View"]
+    D -->|&nbsp;Ditampilkan&nbsp;| E["Data Table View"]
 ```
 
 ## Membuat Table View
@@ -56,32 +58,30 @@ flowchart LR
 ![[Docs/Modul Interface/Table View/add-table-view.png]]
 
 1. Buka folder tempat Table View akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan > [[^field/add|Add]] > [[^field|Interface]] > [[^field/tableview|Table View]]
+2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/tableview|Table View]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Klik [[^button|Create]]
 
 >**success** Table View berhasil dibuat
 > Table View yang baru dibuat belum memiliki Data. Tambahkan [[Docs/Modul Interface/Table View/TableViewData|Data]] di [[#Mengelola Data Table View]].
 
-<!--
-  * [TODO] Penempatan gambar: `add-table-view.png` (screenshot dialog Create Table View) diletakkan di awal bagian Membuat.
-  * [TODO] Pada dialog, baris Name tampil dengan dua isian yang dipisahkan tanda `/` (isian kiri tampak berisi nama folder). Diasumsikan isian kiri terisi otomatis sesuai folder yang diklik kanan, seperti Directory pada Table. Mohon konfirmasi label field-nya dan apakah boleh dikosongkan (letak root). Setelah itu langkah 3 perlu diperbarui.
-  * [TODO] Konfirmasi: apakah Table View yang baru dibuat memang belum memiliki Data sama sekali, atau sudah ada Data awal?
--->
 
 ## Mengubah Table View
 
-Buka halaman kerja Table View, klik [[^button/edit|Edit]], perbarui isian, lalu klik [[^button|Update]].
-
-<!--
-  * [DONE] Konfirmasi cakupan tombol Edit: diasumsikan hanya mengubah atribut Table View (Name dan Description). Pengelolaan Data (nama, Query, tampilan) dilakukan di halaman kerja, bukan lewat Edit.
--->
+1. Buka halaman kerja Table View
+2. Klik [[^button/edit|Edit]]
+3. Ubah [[^field|Name]] atau [[^field|Description]]
+4. Klik [[^button|Update]]
 
 ## Menyegarkan Table View
 
-Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan. Query pada setiap Data dijalankan kembali, sehingga Row yang tidak lagi memenuhi syarat Query tidak ditampilkan lagi.
+Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan. [[Docs/Tipe Data/Query]] pada setiap Data disegarkan kembali, sehingga [[Docs/Tipe Data/Row]] yang tidak lagi memenuhi syarat Query tidak ditampilkan lagi.
 
 ## Menghapus Table View
+
+1. Buka folder yang berisi Enum di [[Docs/Antarmuka#Area Manajemen Folder]]
+2. Klik kanan Enum ➜ [[^button/delete|Delete]]
+3. Konfirmasi dengan klik [[^button|Delete]]
 
 Buka folder yang berisi Table View, klik kanan Table View, pilih [[^button/delete|Delete]], lalu konfirmasi dengan [[^button|Delete]].
 
