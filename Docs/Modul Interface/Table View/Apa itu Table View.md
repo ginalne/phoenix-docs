@@ -239,21 +239,16 @@ flowchart LR
 
 | Jenis nilai | Contoh integrasi |
 | ----------- | ---------------- |
-| Keuangan | Satu halaman berisi Data tagihan belum lunas dan Data tagihan lunas, dengan Where pada status pembayaran. |
-| Inventaris | Data stok rendah dengan Where pada jumlah stok, dan Hide pada kolom harga untuk tim gudang. |
+| Keuangan | Satu halaman berisi Data tagihan belum lunas dan Data tagihan lunas, dengan filter pada status pembayaran. |
+| Inventaris | Data stok rendah dengan filter pada jumlah stok, dan sembunyikan kolom harga untuk tim gudang. |
 | Layanan pelanggan | Data tiket menurut prioritas, dengan Flow yang memberi tahu tim saat tiket baru ditambahkan. |
 
 Dengan satu Table sebagai sumber, Table View memberi setiap tim sudut pandang yang sesuai tanpa menggandakan data, sementara Flow menjaga sistem lain tetap sinkron.
 
-<!--
-  * [TODO] Nama Table, Enum, Table View, Flow, Data, dan kolom pada contoh ini adalah penamaan generik. Mohon sesuaikan.
-  * [TODO] Konfirmasi nama event Table pada diagram (`Row Added`) dan bahwa Row yang ditambahkan lewat Table View memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]] seperti Row yang ditambahkan dari Table.
--->
-
 ## Praktik Terbaik
 
-- **Beri nama Data sesuai filternya**, misalnya nama yang menjelaskan kondisi [[Docs/Tipe Data/Query#Where|Where]], agar pembaca langsung paham isi Data.
-- **Tampilkan hanya kolom yang dibutuhkan** dengan [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] agar tabel mudah dibaca.
+- **Beri nama Data sesuai filternya**, misalnya nama yang menjelaskan kondisi [[Docs/Tipe Data/Query#Filter|Filter]], agar pembaca langsung paham isi Data.
+- **Tampilkan hanya kolom yang dibutuhkan** dengan [[Docs/Tipe Data/Query#Show or Hide|Show/Hide]] agar tabel mudah dibaca.
 - **Selalu gunakan [[Docs/Tipe Data/Query#Header|header Table]]** pada [[Docs/Tipe Data/Query|Query]] agar Data tidak menampilkan [[^field|Query column output is not valid!]].
 - **Pilih porsi layar sesuai kepentingan Data**: [[^button|full]] untuk Data utama, [[^button|half]] atau [[^button|quarter]] untuk Data pendukung.
 - **Atur hak akses di dua tempat.** Pastikan [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Table dan konfigurasi [[Docs/Modul Interface/Table View/TableViewData|Data]] sesuai dengan siapa yang boleh mengubah Row.
