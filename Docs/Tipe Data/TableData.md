@@ -7,21 +7,28 @@
         priority: 0
 ---
 # TableData
+
 TableData adalah tipe data khusus yang digunakan oleh komponen [[Docs/Modul Data/Table/Apa itu Table|Table]].
 
 ## Attribute
-![[Docs/Tipe Data/enum-data.png|Contoh halaman kerja Enum]]
+
 Setiap [[Docs/Tipe Data/TableData]] memiliki atribut sebagai berikut:
-* [[#Name]]
-* [[#Description]]
-* [[#Value]]
-* [[#Selectable]]
+* [[#Row]]
+* [[#Column]]
+* [[#Type]]
+* [[#Val]]
 
-### Name
-Atribut Enum sebagai *Key* dalam item [[Docs/Tipe Data/EnumData]], setiap EnumData tidak boleh memiliki nama yang sama. Atribut ini akan tampil saat dalam pilihan.
+### Row
 
-### Description
-Atribut Enum berbentuk [[Docs/Tipe Data/Text]] yang menjadi keterangan pada item EnumData, setiap EnumData boleh memiliki deskripsi yang sama. Atribut ini akan tampil saat dalam pilihan (terkadang opsional).
+Atribut yang berelasi dengan [[Docs/Tipe Data/Row]] dalam [[Docs/Modul Data/Table/Apa itu Table|Table]].
+
+### Column
+
+Atribut yang berelasi dengan [[Docs/Tipe Data/Column]] dalam [[Docs/Modul Data/Table/Apa itu Table|Table]].
+
+### Type
+
+Atribut yang terisi otomatis dan sesuai dengan Type dalam [[Docs/Tipe Data/Column]]. Perubahan Type dalam TabelData tidak dapat diubah secara langsung, akan tetapi harus dengan mengubahnya melalui [[Docs/Tipe Data/Column]] yang terelasi. 
 
 ### Value
 Atribut tambahan yang bisa dapat diisi, diakses dan berguna dalam proses logika seperti komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].

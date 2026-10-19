@@ -43,16 +43,16 @@ flowchart LR
     A["Table View"] -..-> B["TableView Data<br>( editable )"]
     A -..-> C["TableView Data<br>( readonly )"]
     A -..-> D["TableView Data<br>( editable )"]
-    B -->|&nbsp;Query&nbsp;| F["Table Row<br>( editable )"]
-    C -->|&nbsp;Query&nbsp;| G["Table Row<br>( readonly )"]
-    D -->|&nbsp;Query&nbsp;| H["Table Row<br>( readonly )"]
+    B -->|&nbsp;Query&nbsp;| X
+    C -->|&nbsp;Query&nbsp;| Y
+    D -->|&nbsp;Query&nbsp;| Z
 
-    X["Table A"] --> F
-    Y["Table B"] --> G
-    Z["Table C"] --> H
-    W["Workspace : Data Access"] -->|&nbsp;allow&nbsp;| X
+    X["Table A"] --> F["Table Row<br>( editable )"]
+    Y["Table B"] --> G["Table Row<br>( readonly )"]
+    Z["Table C"] --> H["Table Row<br>( readonly )"]
     W -->|&nbsp;allow&nbsp;| Y
     W -->|&nbsp;disallow&nbsp;| Z
+    W["Workspace : Data Access"] -->|&nbsp;allow&nbsp;| X
 ```
 
 ## Membuat Table View
@@ -112,10 +112,11 @@ Contoh gambar diatas merupakan halaman kerja Table View dengan dua Data bernama 
 | Judul Data | Menampilkan ikon panah, nama Data, dan angka jumlah [[Docs/Tipe Data/Row]] dalam tanda kurung. |
 | [[^value/radio|full]], [[^value/radio/|half]], [[^value/radio|quarter]] | Menentukan porsi layar yang ditempati Data. Selengkapnya lihat [[#Mengatur Tampilan Data]]. |
 | Tombol [[^button|Q]] | Membuka pengaturan [[Docs/Tipe Data/Query]] untuk Data tersebut. |
-| Tabel Row | Menampilkan kolom dan baris hasil [[Docs/Tipe Data/Query]], ditambah kolom [[^field\|ID]] di awal dan [[^field\|Action]] di akhir yang berisi tombol [[^button/save|Save]] dan [[^button/delete\|Delete]] per [[Docs/Tipe Data/Row]]. |
-| [[^button/add|Add Row]] | Menambahkan [[Docs/Tipe Data/Row]] pada Table sumber Data. |
-| [[^field|Show _ of _ items, on page]], [[^button/empty\|Go]], [[^button/left\|Prev]], [[^button/right\|Next]] | Informasi jumlah Row dan perpindahan halaman, sama seperti pada [[Docs/Modul Data/Table/Apa itu Table|Table]]. |
-| [[^field\|Empty]] | Muncul pada Data yang [[Docs/Tipe Data/Query]]-nya belum diisi. |
+| Kolom Data | Menampilkan kolom hasil [[Docs/Tipe Data/Query]], ditambah [[^field\|Action]] di akhir |
+| Baris Data | Menampilkan baris hasil [[Docs/Tipe Data/Query]], ditambah tombol [[^button/save|Save]] dan [[^button/delete|Delete]] |
+| [[^button/add|Add Row]] | Menambahkan baris pada sumber Data. |
+| [[^field|Show _ of _ items, on page]], [[^button/empty|Go]], [[^button/left|Prev]], [[^button/right|Next]] | Informasi jumlah Row dan perpindahan halaman, sama seperti pada [[Docs/Modul Data/Table/Apa itu Table|Table]]. |
+| [[^field|Empty]] | Muncul pada Data yang [[Docs/Tipe Data/Query]]-nya belum diisi. |
 | Error | Muncul ketika ada kesalahan dalam Query. Selengkapnya lihat [[Docs/Tipe Data/Query#Error]]
 
 ### Interaksi Antarmuka Table View
@@ -127,7 +128,7 @@ Contoh gambar diatas merupakan halaman kerja Table View dengan dua Data bernama 
 
 ## Mengelola Data Table View
 
-Data adalah isi dari Table View. Setiap Data menampung satu Query, nama, dan konfigurasi tampilan. Selengkapnya lihat [[Docs/Modul Interface/Table View/TableViewData]].
+Data adalah isi dari Table View. Setiap Data menampung satu Query, nama, dan konfigurasi tampilan.
 
 ### Menambahkan Data
 
@@ -135,23 +136,7 @@ Data adalah isi dari Table View. Setiap Data menampung satu Query, nama, dan kon
 2. Klik [[^button/add|Add Data]] di bagian bawah halaman, atau klik kanan Data lain ➜ [[^field/add|Add Data]]
 3. Data baru tampil dengan Query kosong, ditandai [[^field|Empty]]
 4. Isi Query di [[#Mengatur Query]]
-
-
-### Mengatur Query
-
-1. Klik [[^button|Q]] pada Data yang ingin diatur
-2. Isi Query sesuai dengan kaidah 
-3. Simpan perubahan Query
-
-Gunakan [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] untuk memilih kolom yang tampil, dan [[Docs/Tipe Data/Query#Where|Where]] untuk memfilter Row. Cara menulis Query dijelaskan di [[Docs/Tipe Data/Query]].
-
->**note** Query wajib memakai header Table
-> Query pada Table View harus menggunakan header Table. Jika Query belum diisi atau outputnya tidak valid, Data menampilkan pesan [[^field|Query column output is not valid!]].
-
-<!--
-  * [TODO] Langkah 1 dan 3 bergantung pada fungsi tombol Q. Perbarui setelah fungsi dan tombol simpan pada editor Query dikonfirmasi.
--->
-
+   
 ### Mengatur Tampilan Data
 
 Klik salah satu pilihan tampilan pada bagian atas Data:
@@ -162,50 +147,37 @@ Klik salah satu pilihan tampilan pada bagian atas Data:
 | [[^button\|half]] | Setengah layar. |
 | [[^button\|quarter]] | Seperempat layar. |
 
+### Mengatur Query
+
+1. Klik  [[^button/q]] pada Data yang ingin diatur
+2. Isi Query sesuai dengan kaidah [[Docs/Tipe Data/Query#Table Output]]
+3. Klik bagian luar konfigurasi Query agar menutup popup
+4. Perubahan akan tersimpan secara otomatis dan hasil Query dapat dilihat pada Data
+
+>**note** Query wajib memakai header Table
+> Query pada Table View harus diisi dengan kaidah yang tepat. Jika Query belum diisi atau outputnya tidak valid, Data menampilkan pesan error seperti[[^field|Query column output is not valid!]].
+
 ### Mengubah Nama Data
 
-Klik kanan Data > [[^field/edit|Rename]], ubah nama, lalu simpan.
+Klik kanan Data ➜ [[^field/edit|Rename]], ubah nama, lalu simpan dengan klik [[^button/ok|Ok]].
 
 ### Menghapus Data
 
-Klik kanan Data > [[^field/delete|Delete Data]], lalu konfirmasi dengan [[^button|Delete]].
+Klik kanan Data ➜ [[^field/delete|Delete Data]], lalu konfirmasi dengan [[^button|Delete]].
 
 >**warning** Query dan konfigurasi Data ikut terhapus
 > Menghapus Data hanya menghapus Query dan konfigurasi tampilannya dari Table View. Table sumber beserta Row di dalamnya tidak terhapus.
 
 ## Mengelola Row pada Data
 
-Row ditambahkan dan diisi seperti pada komponen Table. Cara mengisi setiap Format Column dijelaskan di [[Docs/Modul Data/Table/Mengisi TableData]].
+Row ditambahkan dan diisi seperti pada komponen Table. Cara mengisi setiap Format Column dijelaskan di [[Docs/Modul Data/Table/Apa itu Table#Mengelola Data Table]].
 
-### Menambahkan Row
-
-1. Klik [[^button/add|Add Row]] di bawah tabel Data, atau klik kanan Data > [[^field/add|Add Row]]
-2. Isi kolom yang tampil pada Row baru
-3. Klik [[^button/save|Save]]
-
-Anda dapat klik [[^button/x|Cancel]] untuk membatalkan penambahan Row.
-
-### Kolom yang Terisi Otomatis
-
-Data hanya menampilkan Row yang memenuhi Query. Jika Query memiliki kondisi [[Docs/Tipe Data/Query#Where|Where]] pada kolom yang tidak ditampilkan, kolom tersebut tetap terisi otomatis saat Row ditambahkan. Dengan begitu, Row baru tetap memenuhi syarat Query dan tidak hilang bahkan setelah [[^button/refresh|Refresh]].
-
-Misalnya, Data [[^field|Menunggu Diproses]] memiliki kondisi Where pada kolom [[^field|Status]] (berformat [[Docs/Tipe Data/EnumData|EnumData]]) bernilai `Menunggu`, sementara kolom [[^field|Status]] disembunyikan dengan Hide. Saat Anda menambahkan Row dari Data tersebut, kolom [[^field|Status]] langsung terisi `Menunggu`.
-
-<!--
-  * [TODO] Contoh Data, kolom, dan nilai di atas adalah penamaan generik. Mohon sesuaikan atau ganti dengan contoh yang Anda inginkan.
-  * [TODO] Konfirmasi batas perilaku isi otomatis: apakah berlaku untuk semua jenis kondisi Where (misalnya rentang nilai) atau hanya kondisi kesamaan (sama dengan).
--->
-
-### Mengubah Row
-
-Ubah isian pada Row, lalu klik [[^button/save|Save]] pada kolom [[^field|Action]]. Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Row.
-
-### Menghapus Row
-
-Klik [[^button/delete|Delete]] pada kolom [[^field|Action]], lalu konfirmasi dengan [[^button|Delete]].
+>**note** Kolom yang Terisi Otomatis
+> Data hanya menampilkan baris yang memenuhi [[Docs/Tipe Data/Query]]. Jika [[Docs/Tipe Data/Query]] memiliki filter pada kolom yang tidak ditampilkan (artinya tidak bisa diisi melalui Data Table View), kolom tersebut tetap terisi otomatis saat baris ditambahkan. Dengan begitu, baris baru tetap memenuhi syarat Query dan tidak hilang bahkan setelah [[^button/refresh|Refresh]].
+>Misalnya, Data berjudul [[^field|Menunggu Diproses]] memiliki kondisi Query pada kolom [[^field|Status]] (berformat [[Docs/Tipe Data/EnumData|EnumData]]) bernilai [[^field|Menunggu]], sementara kolom [[^field|Status]] tidak ditampilkan. Saat Anda menambahkan baris dari Data tersebut, kolom [[^field|Status]] langsung terisi [[^field|Menunggu]].
 
 >**danger** Row pada Table ikut terhapus
-> Row yang ditampilkan Table View adalah Row milik Table sumber. Menghapus Row dari Table View menghapusnya dari Table dan tidak dapat dikembalikan.
+> Baris yang ditampilkan Table View adalah data ril milik sumber. Menghapus baris dari Table View secara otomatis menghapusnya dari sumber dan tidak dapat dikembalikan.
 
 ## Hak Akses Table View
 
@@ -213,17 +185,11 @@ Hak akses pada Table View diatur berlapis. Pengelolaan Data diatur di Workspace,
 
 | Yang dikelola | Diatur melalui | Penjelasan |
 | ------------- | -------------- | ---------- |
-| Data: ubah nama, ubah Query, dan ubah konfigurasi | [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Table View di Workspace | Menentukan apakah anggota [[^value/boolean/allow]] atau [[^value/boolean/disallow]] mengubah Data. |
-| Row dan isi cell pada Table View | Konfigurasi [[Docs/Modul Interface/Table View/TableViewData\|Data]] | Diatur pada konfigurasi Data, bukan melalui Workspace. |
-| Row dan isi cell pada Table sumber | [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Table di Workspace | Tetap berlaku, apa pun pengaturan konfigurasi Data. |
+| Data: ubah nama, ubah Query, dan ubah konfigurasi | [[Docs/Modul Developer/Workspace/Data Access|Data Access]] di Workspace | Menentukan apakah anggota [[^value/boolean/allow]] atau [[^value/boolean/disallow]] mengubah Data. |
+| Baris dan isi sel pada Table View | Konfigurasi Data editable/readonly +  [[Docs/Modul Developer/Workspace/Data Access|Data Access]] sumber di Workspace | Jika salah satu kondisi tidak memenuhi, maka baris dan isi sel tidak dapat dikelola |
 
->**note** Akses Table tetap berlaku
-> Jika Workspace tidak mengizinkan pengubahan data pada Table sumber, Row dan cell tetap tidak dapat diubah dari Table View, meskipun konfigurasi Data mengizinkannya. Aturan ini juga berlaku pada komponen Interface lain yang dapat mengubah data di komponen Modul Data.
-
-<!--
-  * [TODO] Konfirmasi pemetaan Data Access Table View di Workspace (Add, Update, Delete) ke aksi di halaman ini. Diasumsikan Add untuk menambah Data, Update untuk ubah nama, Query, dan konfigurasi, serta Delete untuk menghapus Data.
-  * [TODO] Konfirmasi opsi yang tersedia pada konfigurasi Data selain porsi layar (misalnya izin menambah, mengubah, dan menghapus Row). Detailnya diusulkan ditulis di halaman TableViewData.
--->
+>**note** Akses data sumber tetap berlaku
+> Jika Workspace tidak mengizinkan pengelolaan pada data sumber, baris dan isi sel tetap tidak dapat diubah dari Table View, meskipun konfigurasi Data mengizinkannya. Aturan ini juga berlaku pada komponen Interface lain yang dapat mengubah data di komponen [[Docs/Modul Data/Pengenalan|Modul Data]].
 
 ## Contoh Penggunaan
 
@@ -235,17 +201,17 @@ Tim operasional sebuah toko daring perlu melihat seluruh pesanan sekaligus memis
 
 | Komponen | Peran |
 | -------- | ----- |
-| [[^field/table\|Pesanan]] | Menyimpan seluruh pesanan dengan kolom Pelanggan, Total, dan Status. |
-| [[^field/enum\|Status Pesanan]] | Menyediakan pilihan Status untuk kolom Status (EnumData): Menunggu dan Selesai. |
-| [[^field/tableview\|Pemantauan Pesanan]] | Menampilkan Table Pesanan dalam tiga Data. |
-| [[^field/flow\|Notifikasi Pesanan Baru]] | Mengirim pesanan baru ke sistem pengiriman. |
+| Tabel [[^field/table|Pesanan]] | Menyimpan seluruh pesanan dengan kolom [[^field/column|Pelanggan]], [[^field/column|Total]], dan [[^field/column|Status]]. |
+| Enum [[^field/enum|Status Pesanan]] | Menyediakan pilihan status untuk kolom [[^field/column|Status]] di [[^field/table|Pesanan]]: [[^value/enumdata|Menunggu]] dan [[^value/enumdata|Selesai]]. |
+| Table View [[^field/tableview|Pemantauan Pesanan]] | Menampilkan Table [[^field/table|Pesanan]] dalam tiga Data. |
+| Flow [[^field/flow|Notifikasi Pesanan Baru]] | Mengirim pesanan baru ke sistem pengiriman. |
 
 **Pengaturan Table View**
 
 | Data | Query | Tampilan |
 | ---- | ----- | -------- |
 | Semua Pesanan | Menampilkan seluruh kolom tanpa filter. | [[^button\|full]] |
-| Menunggu Diproses | Where Status sama dengan Menunggu, kolom Status disembunyikan dengan Hide. | [[^button\|half]] |
+| Menunggu Diproses | Filter Status sama dengan Menunggu, kolom Status disembunyikan dengan Hide. | [[^button\|half]] |
 | Selesai | Where Status sama dengan Selesai. | [[^button\|half]] |
 
 **Alur di Flow**

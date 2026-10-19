@@ -7,9 +7,12 @@
         priority: 0
 ---
 # String
+
 String adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 255 karakter.
 
 ## Format
+
+Tipe data ini memiliki format sebagai berikut:
 * [[Docs/Format Data/String/Short Text]]
 * [[Docs/Format Data/String/Password]]
 * [[Docs/Format Data/String/Email]]
