@@ -273,7 +273,6 @@ Dengan satu Table sebagai sumber, Table View memberi setiap tim sudut pandang ya
 - Menghapus baris di Table View menghapusnya dari sumber, tetapi menghapus Data tidak.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
-
 > **faq**
 > **Mengapa Row yang baru saya tambahkan tidak hilang walaupun kolom filternya tidak tampil?**
 > Kolom yang menjadi syarat [[Docs/Tipe Data/Query#Filter|Filter]] terisi otomatis saat baris ditambahkan, sehingga baris tetap memenuhi kondisi [[Docs/Tipe Data/Query|Query]]. Selengkapnya lihat [[#Mengelola Row pada Data]].
@@ -284,19 +283,5 @@ Dengan satu Table sebagai sumber, Table View memberi setiap tim sudut pandang ya
 > **Mengapa saya tidak dapat mengubah cell padahal konfigurasi Data mengizinkan?**
 > Perubahan data tetap mengikuti [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Table di [[Docs/Modul Developer/Workspace/Apa itu Workspace| Workspace]]. Jika [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] tidak mengizinkan, baris tidak dapat diubah dari Table View.
 > **Apa bedanya Table View dengan komponen data lain seperti Table?**
-
->
->
->> 3
-> Table View menampilkan data sumber seperti [[Docs/Modul Data/Table/Apa itu Table|Table]] dalam beberapa tampilan  AWdsekaligus dengan [[Docs/Tipe Data/Query]] berbeda.
-
-<!--
-  * [TODO] Halaman dan anchor yang ditautkan dari halaman ini dan perlu dibuat atau disesuaikan:
-    * `Docs/Modul Interface/Pengenalan`: pintu masuk modul Interface.
-    * `Docs/Modul Interface/Table View/TableViewData`: atribut Data (nama, Query, tampilan), konfigurasi Data termasuk opsi izin Row, dan perilaku isi otomatis.
-    * `Docs/Tipe Data/Query` dengan anchor `#Header`, `#Show dan Hide`, dan `#Where`.
-    * `Docs/Modul Data/Table/Mengisi TableData`: cara mengisi Row per Format Column.
-    * `Docs/Modul Developer/Workspace/Data Access` dan `Docs/Modul Developer/Workspace/Apa itu Workspace`.
-    * `Docs/Tipe Data/EnumData`.
--->
+> Table View menampilkan data sumber seperti [[Docs/Modul Data/Table/Apa itu Table|Table]] dalam beberapa tampilan sekaligus dengan [[Docs/Tipe Data/Query]] berbeda.
 
