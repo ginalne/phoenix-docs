@@ -155,7 +155,7 @@ Klik salah satu pilihan tampilan pada bagian atas Data:
 4. Perubahan akan tersimpan secara otomatis dan hasil Query dapat dilihat pada Data
 
 >**note** Query wajib memakai header Table
-> Query pada Table View harus diisi dengan kaidah yang tepat. Jika Query belum diisi atau outputnya tidak valid, Data menampilkan pesan error seperti[[^field|Query column output is not valid!]].
+> Query pada Table View harus diisi dengan kaidah yang tepat. Jika Query belum diisi atau outputnya tidak valid, Data menampilkan pesan error seperti[[^field|Query table output is not valid!]].
 
 ### Mengubah Nama Data
 
@@ -249,43 +249,42 @@ Dengan satu Table sebagai sumber, Table View memberi setiap tim sudut pandang ya
 
 - **Beri nama Data sesuai filternya**, misalnya nama yang menjelaskan kondisi [[Docs/Tipe Data/Query#Filter|Filter]], agar pembaca langsung paham isi Data.
 - **Tampilkan hanya kolom yang dibutuhkan** dengan [[Docs/Tipe Data/Query#Show or Hide|Show/Hide]] agar tabel mudah dibaca.
-- **Selalu gunakan [[Docs/Tipe Data/Query#Header|header Table]]** pada [[Docs/Tipe Data/Query|Query]] agar Data tidak menampilkan [[^field|Query column output is not valid!]].
-- **Pilih porsi layar sesuai kepentingan Data**: [[^button|full]] untuk Data utama, [[^button|half]] atau [[^button|quarter]] untuk Data pendukung.
-- **Atur hak akses di dua tempat.** Pastikan [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Table dan konfigurasi [[Docs/Modul Interface/Table View/TableViewData|Data]] sesuai dengan siapa yang boleh mengubah Row.
-- **Klik [[^button/refresh|Refresh]]** setelah mengubah kolom yang menjadi syarat [[Docs/Tipe Data/Query#Where|Where]], karena Row yang tidak lagi memenuhi syarat akan hilang dari Data.
+- **Selalu gunakan kaidah [[Docs/Tipe Data/Query#Table Output]]** pada [[Docs/Tipe Data/Query|Query]] agar Data tidak menampilkan [[^field|Query table output is not valid!]].
+- **Pilih porsi layar sesuai kepentingan Data**: [[^value/radio|full]] untuk Data utama, [[^value/radio|half]] atau [[^value/radio|quarter]] untuk Data pendukung.
+- **Atur hak akses di dua tempat.** Pastikan [[Docs/Modul Developer/Workspace/Data Access]] Table dan konfigurasi [[Docs/Modul Interface/Table View/TableViewData|Data]] sesuai dengan siapa yang boleh mengubah baris data.
 
 ## Batasan dan Catatan
 
-- Setiap [[Docs/Modul Interface/Table View/TableViewData|Data]] hanya menampung satu [[Docs/Tipe Data/Query|Query]], dan Query wajib memakai [[Docs/Tipe Data/Query#Header|header Table]].
-- Table View hanya menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] dan tidak menyimpan Row sendiri. Row yang Anda tambah, ubah, atau hapus adalah Row pada Table sumber.
-- Menghapus Row dari Table View tidak dapat dikembalikan, sedangkan menghapus Data atau Table View tidak menghapus Row pada Table sumber.
-- Kolom yang menjadi syarat [[Docs/Tipe Data/Query#Where|Where]] akan terisi otomatis saat Row ditambahkan, walaupun kolom tersebut tidak ditampilkan oleh [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]].
-- Hak akses Table di Workspace selalu berlaku. Jika Workspace tidak mengizinkan pengubahan data Table, Row tetap tidak dapat diubah dari Table View meskipun konfigurasi Data mengizinkannya.
-- Hak akses pengelolaan Data (ubah nama, Query, dan konfigurasi) diatur di [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Table View, bukan di konfigurasi Data.
-- Mengubah nilai kolom yang menjadi syarat Where dapat membuat Row tidak tampil lagi setelah [[^button/refresh|Refresh]].
+- Setiap Data hanya menampung satu [[Docs/Tipe Data/Query|Query]], dan Query wajib memakai kaidah [[Docs/Tipe Data/Query#Output Table]].
+- Table View hanya menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] dan tidak menyimpan data baris sendiri. Baris yang Anda tambah, ubah, atau hapus adalah data ril pada sumber.
+- Menghapus baris dari Table View tidak dapat dikembalikan, sedangkan menghapus Data atau Table View tidak menghapus baris pada data sumber.
+- Kolom yang menjadi syarat [[Docs/Tipe Data/Query#Filter|Filter]] akan terisi otomatis saat baris ditambahkan, walaupun kolom tersebut tidak ditampilkan oleh [[Docs/Tipe Data/Query#Show or Hide|Show/Hide]].
+- Hak akses Table di Workspace selalu berlaku. Jika Workspace tidak mengizinkan pengelolaan data sumber maka tetap data tersebut tidak dapat diubah dari Table View meskipun konfigurasi Data mengizinkannya.
+- Hak akses pengelolaan Data (ubah nama, Query, dan konfigurasi) diatur di [[Docs/Modul Developer/Workspace/Data Access|Data Access]] di komponen Table View, bukan di konfigurasi Data.
+- Mengubah nilai kolom yang menjadi syarat [[Docs/Tipe Data/Query#Filter|Filter]] dapat membuat baris data tidak tampil lagi walaupun setelah [[^button/refresh|Refresh]].
 
 ## TL:DR
 
-- [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] menggunakan [[Docs/Tipe Data/Query|Query]], dan dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/TableViewData|Data]].
-- Setiap Data menampung satu Query, nama, dan tampilan ([[^button|full]], [[^button|half]], atau [[^button|quarter]]), dan dapat dilipat dengan klik.
-- Atur kolom dengan [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] dan filter dengan [[Docs/Tipe Data/Query#Where|Where]]; Query wajib memakai [[Docs/Tipe Data/Query#Header|header Table]].
-- Row dikelola seperti pada Table, dan kolom syarat filter yang tidak tampil terisi otomatis agar Row tidak hilang setelah [[^button/refresh|Refresh]].
-- Pengelolaan Data diatur di Workspace, sedangkan Row dan cell mengikuti konfigurasi Data serta hak akses Table.
-- Menghapus Row di Table View menghapusnya dari Table, tetapi menghapus Data tidak.
+- [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] menampilkan data sumber seperti [[Docs/Modul Data/Table/Apa itu Table|Table]] menggunakan [[Docs/Tipe Data/Query|Query]], dan dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/TableViewData|Data]].
+- Setiap Data menampung satu [[Docs/Tipe Data/Query]], nama, dan tampilan ([[^value/radio|full]], [[^value/radio|half]], atau [[^value/radio|quarter]]), dan dapat dilipat dengan klik.
+- Atur kolom dengan [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] dan kondisi dengan [[Docs/Tipe Data/Query#Filter|Filter]]; Query wajib memakai kaidah [[Docs/Tipe Data/Query#Table Output]].
+- Baris dikelola seperti pada Table, dan kolom syarat [[Docs/Tipe Data/Query#Filter|Filter]] yang tidak tampil terisi otomatis agar baris tidak hilang setelah [[^button/refresh|Refresh]].
+- Pengelolaan Data diatur di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], sedangkan baris dan sel mengikuti konfigurasi Data serta hak akses sumber.
+- Menghapus baris di Table View menghapusnya dari sumber, tetapi menghapus Data tidak.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
 > **faq**
 > **Mengapa Row yang baru saya tambahkan tidak hilang walaupun kolom filternya tidak tampil?**
-> Kolom yang menjadi syarat [[Docs/Tipe Data/Query#Where|Where]] terisi otomatis saat Row ditambahkan, sehingga Row tetap memenuhi [[Docs/Tipe Data/Query|Query]]. Selengkapnya lihat [[#Kolom yang Terisi Otomatis]].
+> Kolom yang menjadi syarat [[Docs/Tipe Data/Query#Filter|Filter]] terisi otomatis saat baris ditambahkan, sehingga baris tetap memenuhi kondisi [[Docs/Tipe Data/Query|Query]]. Selengkapnya lihat [[#Mengelola Row pada Data]].
 > **Mengapa muncul pesan [[^field|Query column output is not valid!]]?**
-> Query pada Data belum diisi atau outputnya tidak valid. Pastikan Query memakai [[Docs/Tipe Data/Query#Header|header Table]], lalu atur di [[#Mengatur Query]].
-> **Apakah menghapus Data juga menghapus Row di Table?**
-> Tidak. Menghapus [[Docs/Modul Interface/Table View/TableViewData|Data]] hanya menghapus Query dan konfigurasinya. Namun menghapus Row lewat [[^button/delete|Delete]] pada kolom [[^field|Action]] menghapus Row dari Table.
+> Query pada Data belum diisi atau outputnya tidak valid. Pastikan Query memakai [[Docs/Tipe Data/Query#Table Output]], lalu atur di [[#Mengatur Query]].
+> **Apakah menghapus Data juga menghapus data sumber?**
+> Tidak. Menghapus Data hanya menghapus [[Docs/Tipe Data/Query]] dan konfigurasinya. Namun menghapus Row lewat [[^button/delete|Delete]] pada kolom [[^field|Action]] menghapus baris dari sumber.
 > **Mengapa saya tidak dapat mengubah cell padahal konfigurasi Data mengizinkan?**
-> Perubahan data tetap mengikuti [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Table di Workspace. Jika Workspace tidak mengizinkan, Row tidak dapat diubah dari Table View.
-> **Apa bedanya Table View dengan Table?**
-> [[Docs/Modul Data/Table/Apa itu Table|Table]] menyimpan data, sedangkan Table View menampilkan data Table dalam beberapa tampilan sekaligus dengan Query berbeda.
+> Perubahan data tetap mengikuti [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Table di [[Docs/Modul Developer/Workspace/Apa itu Workspace| Workspace]]. Jika [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] tidak mengizinkan, baris tidak dapat diubah dari Table View.
+> **Apa bedanya Table View dengan komponen data lain seperti Table?**
+> Table View menampilkan data sumber seperti [[Docs/Modul Data/Table/Apa itu Table|Table]] dalam beberapa tampilan sekaligus dengan [[Docs/Tipe Data/Query]] berbeda.
 
 <!--
   * [TODO] Halaman dan anchor yang ditautkan dari halaman ini dan perlu dibuat atau disesuaikan:

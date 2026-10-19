@@ -23,4 +23,4 @@ Konfigurasi yang dirumuskan dalam Query dapat tidak sesuai dengan permintaan ata
 
 | Pesan Error | Penyebabnya |
 | ---------------- | -------------------- |
-| Query column output is not valid | Hasil Query bukanlah data yang bersifat Table Row, bisa dikarenakan Header yang salah (bukan Table) atau belum diisi. |
+| Query table output is not valid | Hasil Query bukanlah data yang bersifat Table Row, bisa dikarenakan Header yang salah (bukan Table) atau belum diisi. |
