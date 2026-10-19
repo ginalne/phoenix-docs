@@ -1,5 +1,7 @@
 ---
     status: draft
+    title: "Complex"
+    description: 
     pageDecoration:
       icon: x
       tree:

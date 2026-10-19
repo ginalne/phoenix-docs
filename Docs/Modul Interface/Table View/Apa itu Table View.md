@@ -31,8 +31,8 @@ Satu Table View dapat memiliki lebih dari satu Data. Setiap Data menampung satu 
 | ------- | ---------- |
 | Data | Satu unit tampilan pada Table View yang menampung nama, konfigurasi tampilan dan [[Docs/Tipe Data/Query]]. Satu Table View dapat memiliki lebih dari satu Data. |
 | [[Docs/Tipe Data/Query]] | Tipe data yang merumuskan [[Docs/Tipe Data/Row]] yang tampil pada setiap Data. |
-| [[Docs/Tipe Data/Query#Show dan Hide\|Show/Hide]] | Pengaturan di [[Docs/Tipe Data/Query]] untuk menampilkan atau menyembunyikan kolom tertentu. |
-| [[Docs/Tipe Data/Query#Where\|Where]] | Kondisi di [[Docs/Tipe Data/Query]] untuk memfilter [[Docs/Tipe Data/Row]] yang tampil. |
+| [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] | Pengaturan di [[Docs/Tipe Data/Query]] untuk menampilkan atau menyembunyikan kolom tertentu. |
+| [[Docs/Tipe Data/Query#Where|Where]] | Kondisi di [[Docs/Tipe Data/Query]] untuk memfilter [[Docs/Tipe Data/Row]] yang tampil. |
 
 ## Cara Kerja Table View
 
@@ -100,10 +100,10 @@ Contoh gambar diatas merupakan halaman kerja Table View dengan dua Data bernama 
 
 | Elemen | Fungsi |
 | ------ | ------ |
-| Judul | Menampilkan ikon Table View dan [[^field\|Header Name]]. |
-| [[^button/edit\|Edit]] | Mengubah atribut Table View. |
-| [[^button/refresh\|Refresh]] | Memuat ulang tampilan dan menjalankan kembali Query pada setiap Data. |
-| [[^field\|Search TableView Data...]] | Mencari kata kunci di semua kolom pada Data. |
+| Judul | Menampilkan ikon Table View dan [[^field|Header Name]]. |
+| [[^button/edit|Edit]] | Mengubah atribut Table View. |
+| [[^button/refresh|Refresh]] | Memuat ulang tampilan dan menjalankan kembali Query pada setiap Data. |
+| [[^field|Search TableView Data...]] | Mencari kata kunci di semua kolom pada Data. |
 
 ### Bagian Data terdiri dari:
 
@@ -112,7 +112,7 @@ Contoh gambar diatas merupakan halaman kerja Table View dengan dua Data bernama 
 | Judul Data | Menampilkan ikon panah, nama Data, dan angka jumlah [[Docs/Tipe Data/Row]] dalam tanda kurung. |
 | [[^value/radio|full]], [[^value/radio/|half]], [[^value/radio|quarter]] | Menentukan porsi layar yang ditempati Data. Selengkapnya lihat [[#Mengatur Tampilan Data]]. |
 | Tombol [[^button|Q]] | Membuka pengaturan [[Docs/Tipe Data/Query]] untuk Data tersebut. |
-| Kolom Data | Menampilkan kolom hasil [[Docs/Tipe Data/Query]], ditambah [[^field\|Action]] di akhir |
+| Kolom Data | Menampilkan kolom hasil [[Docs/Tipe Data/Query]], ditambah [[^field|Action]] di akhir |
 | Baris Data | Menampilkan baris hasil [[Docs/Tipe Data/Query]], ditambah tombol [[^button/save|Save]] dan [[^button/delete|Delete]] |
 | [[^button/add|Add Row]] | Menambahkan baris pada sumber Data. |
 | [[^field|Show _ of _ items, on page]], [[^button/empty|Go]], [[^button/left|Prev]], [[^button/right|Next]] | Informasi jumlah Row dan perpindahan halaman, sama seperti pada [[Docs/Modul Data/Table/Apa itu Table|Table]]. |
@@ -124,7 +124,7 @@ Contoh gambar diatas merupakan halaman kerja Table View dengan dua Data bernama 
 | Fungsi | Aksi |
 | ------ | ---- |
 | Melipat atau membuka Data | Klik judul Data. |
-| Membuka menu konteks Data | Klik kanan pada judul Data, lalu pilih [[^field/edit\|Rename]], [[^field/add\|Add Row]], [[^field/add\|Add Data]], atau [[^field/delete\|Delete Data]]. |
+| Membuka menu konteks Data | Klik kanan pada judul Data, lalu pilih [[^field/edit|Rename]], [[^field/add|Add Row]], [[^field/add|Add Data]], atau [[^field/delete|Delete Data]]. |
 
 ## Mengelola Data Table View
 
@@ -143,9 +143,9 @@ Klik salah satu pilihan tampilan pada bagian atas Data:
 
 | Pilihan | Porsi layar |
 | ------- | ----------- |
-| [[^button\|full]] | Seluruh layar. |
-| [[^button\|half]] | Setengah layar. |
-| [[^button\|quarter]] | Seperempat layar. |
+| [[^value/radio|full]] | Seluruh layar. |
+| [[^button|half]] | Setengah layar. |
+| [[^button|quarter]] | Seperempat layar. |
 
 ### Mengatur Query
 
@@ -210,9 +210,9 @@ Tim operasional sebuah toko daring perlu melihat seluruh pesanan sekaligus memis
 
 | Data | Query | Tampilan |
 | ---- | ----- | -------- |
-| Semua Pesanan | Menampilkan seluruh kolom tanpa filter. | [[^button\|full]] |
-| Menunggu Diproses | Filter Status sama dengan Menunggu, kolom Status disembunyikan dengan Hide. | [[^button\|half]] |
-| Selesai | Where Status sama dengan Selesai. | [[^button\|half]] |
+| Semua Pesanan | Menampilkan seluruh kolom tanpa filter. | [[^button|full]] |
+| Menunggu Diproses | Filter Status sama dengan Menunggu, kolom Status disembunyikan dengan Hide. | [[^button|half]] |
+| Selesai | Where Status sama dengan Selesai. | [[^button|half]] |
 
 **Alur di Flow**
 
@@ -226,8 +226,8 @@ flowchart LR
 
 | Langkah | Flow Block | Peran dalam alur | Hasil |
 | ------- | ---------- | ---------------- | ----- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]] | Memicu alur saat Row baru ditambahkan pada Table Pesanan, termasuk dari Table View. | Row pesanan baru. |
-| 2 | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request\|HTTP Request]] | Mengirim data pesanan ke sistem pengiriman. | Sistem pengiriman menerima pesanan. |
+| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]] | Memicu alur saat Row baru ditambahkan pada Table Pesanan, termasuk dari Table View. | Row pesanan baru. |
+| 2 | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]] | Mengirim data pesanan ke sistem pengiriman. | Sistem pengiriman menerima pesanan. |
 
 **Hasil yang dirasakan**
 
