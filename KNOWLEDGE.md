@@ -84,23 +84,6 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Akses:** anggota yang tidak memiliki akses komponen Variable tidak dapat mengetahui Value, tetapi tetap dapat memakainya untuk otomasi atau integrasi. Anggota yang memiliki akses melihat Value secara terbuka di halaman kerja.
 - **Pemisahan halaman:** halaman komponen Variable membahas pengelolaan. Penjelasan Variable sebagai tipe data ada di halaman Tipe Data (`Docs/Tipe Data/Variable`).
 
-Enum (Modul Data)
-
-Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direvisi penulis.
-
-Enum adalah komponen modul Data untuk deret data atau Master Data: pilihan, menu, opsi, dan kategori. Setiap Enum memiliki banyak EnumData (Docs/Tipe Data/EnumData).
-Path halaman: Docs/Modul Data/Enum/Apa itu Enum. Atribut penting Strict On Selected dijelaskan di Docs/Modul Data/Enum/Konfigurasi Tegas. Fungsi Merge dan Event dijelaskan di halaman lain (Docs/Modul Data/Enum/Merge, Docs/Modul Data/Enum/Event).
-Atribut Enum: Name, Description, Format, Header, Strict On Selected. Dialog Create dan Update memiliki field yang sama. Tombol dialog: Create atau Update, dan Cancel.
-Name Enum: mengikuti aturan komponen lain, yaitu tidak boleh sama dengan komponen sejenis di folder yang sama. Name EnumData tidak boleh sama di dalam Enum yang sama.
-Format dan Header: Format menentukan bentuk kolom Value. Pasangan Format → Header: EnumData → Enum, Column → Table, Row → Table, TableData → Column, Node → Tree. Format lainnya: Header bernilai N/A.
-Mengubah Format: masih bisa setelah ada EnumData. Muncul peringatan dan field Force Update harus diisi dengan salah satu mode: loss safe (mencoba mengonversi nilai ke Format baru, jika gagal muncul peringatan yang sama) atau force (paksa, nilai yang tidak dapat dikonversi bisa hilang). Jangan memakai istilah "loss" atau "lossless".
-Menghapus Enum: seluruh EnumData hilang. Relasi dari komponen lain harus dihapus terlebih dahulu. Menghapus EnumData meminta konfirmasi dengan tombol Delete.
-Halaman kerja: bilah navigasi (judul Enum, Edit, Merge, Event, Refresh, kolom pencarian "Search Enum Data...") dan tabel EnumData (kolom Name, Description, Value, Selectable, Action; tombol Save dan Delete per baris; Add Row; pagination). Label kecil di atas header kolom Value adalah ikon tipe data. Pagination "Show 50 of 1 items" berarti batas 50 item per halaman. Dua tombol Add Row (di bawah baris terakhir dan di bilah bawah) fungsinya sama. Tombol Save aktif setelah ada perubahan pada baris. Tidak ada perbedaan signifikan antara desktop dan mobile.
-Value: tampilan mengikuti Format. Ikon mata pada screenshot penulis hanya bagian dari Format Password, bukan fitur Enum, jadi tidak perlu dijelaskan sebagai fungsi Enum.
-Selectable: field berformat EnumData hanya menampilkan EnumData dengan Selectable = Yes. Selectable hanya berlaku untuk field; EnumData dengan Selectable = No tetap dapat dipakai di tempat lain.
-Add Row menambahkan baris (EnumData).
-Nama Enum dan isi pada screenshot penulis adalah kasus uji pribadi dan tidak disebut di dokumentasi.
-
 ## Enum (Modul Data)
 
 Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direvisi penulis.
@@ -164,6 +147,7 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 - **Penamaan pada screenshot** (nama Tree pada judul halaman kerja dan nama pengguna di bilah atas) adalah kasus pribadi dan tidak disebut di dokumentasi. Nama Node pada screenshot menu konteks (Child A, B, C) sudah generik.
 Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Active = terlindungi, Merger Mode tidak dapat diubah, External Read Only berlaku di kedua jenis Tree, context dan mode dapat diklik tetapi sementara). Semuanya perlu tersimpan agar subhalaman Tree dan Flow Block terkait konsisten.
 
+<<<<<<< HEAD
 ## Table View (Modul Interface)
 
 - **Definisi:** Table View adalah komponen modul Interface untuk menampilkan data Table menggunakan Query. Satu Table View memiliki lebih dari satu **Data** (TableViewData), dan setiap Data menampung satu Query, satu nama, dan konfigurasi tampilan (`full`, `half`, `quarter` dari layar).
@@ -181,3 +165,5 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 - **Dampak penghapusan:** menghapus Data atau Table View hanya menghapus Query dan konfigurasi, Row di Table sumber tidak terhapus. Menghapus Row dari Table View menghapusnya dari Table dan tidak dapat dikembalikan.
 - Nama Table View, Data, dan isi Row pada screenshot penulis (Judul, All Name, Name Level 2, New Data, dan nama orang) adalah kasus pribadi dan tidak disebut di dokumentasi.
 - **Belum terkonfirmasi:** fungsi tombol Q, arti `(3) ()` pada Data berQuery kosong, nama awal Data baru ("New Data"), cakupan Search, opsi konfigurasi Data selain tampilan, dan pemetaan Add/Update/Delete di Data Access.
+=======
+>>>>>>> 2cf66bd15b3caebc9d2eab1ef87456bac91d654d

@@ -7,6 +7,7 @@
         priority: 0
 ---
 # Column
+
 Column adalah tipe data khusus yang digunakan oleh komponen [[Docs/Modul Data/Table/Apa itu Table|Table]].
 
 ## Format
