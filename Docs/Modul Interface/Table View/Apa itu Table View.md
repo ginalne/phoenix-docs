@@ -16,7 +16,7 @@
 
 Table View (atau TableView) adalah komponen antarmuka yang dapat digunakan untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] menggunakan [[Docs/Tipe Data/Query|Query]].
 
-Satu Table View dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/TableView Data|Data]]. Setiap Data menampung satu Query, sebuah nama, dan konfigurasi tampilannya sendiri, sehingga Anda dapat menyajikan beberapa tampilan Table dalam satu halaman dengan kolom dan filter yang berbeda-beda. [[Docs/Tipe Data/Row]] tetap dapat ditambah, diubah, dan dihapus langsung dari tampilan, seperti pada Table.
+Satu Table View dapat memiliki lebih dari satu Data. Setiap Data menampung satu Query, sebuah nama, dan konfigurasi tampilannya sendiri, sehingga Anda dapat menyajikan beberapa tampilan Table dalam satu halaman dengan kolom dan filter yang berbeda-beda. [[Docs/Tipe Data/Row]] tetap dapat ditambah, diubah, dan dihapus langsung dari tampilan, seperti pada Table.
 
 ## Mengapa Menggunakan Table View?
 - **Banyak tampilan dalam satu halaman.** Tampilkan beberapa Data sekaligus, baik dari Table yang sama maupun dari Table yang berbeda.
@@ -29,14 +29,10 @@ Satu Table View dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View
 
 | Istilah | Penjelasan |
 | ------- | ---------- |
-| [[Docs/Tipe Data/Query]] | Perintah yang menentukan data apa yang tampil pada sebuah Data. Selengkapnya lihat halaman Query. |
-| [[Docs/Tipe Data/Query#Header\|Header Table]] | Header yang wajib digunakan Query pada Table View. |
-| [[Docs/Modul Interface/Table View/TableViewData]] | Satu unit tampilan pada Table View yang menampung satu Query, nama, dan konfigurasi tampilan. Satu Table View dapat memiliki lebih dari satu Data. |
-| [[#Mengatur Tampilan Data\|Tampilan Data]] | Porsi layar yang ditempati sebuah Data: [[^button\|full]], [[^button\|half]], atau [[^button\|quarter]]. |
-| [[Docs/Tipe Data/Query#Show dan Hide\|Show/Hide]] | Pengaturan di Query untuk menampilkan atau menyembunyikan kolom tertentu. |
-| [[Docs/Tipe Data/Query#Where\|Where]] | Kondisi di Query untuk memfilter Row yang tampil. |
-| [[#Kolom yang Terisi Otomatis]] | Kolom syarat filter yang tidak tampil tetap terisi saat Row ditambahkan. |
-| [[#Hak Akses Table View\|Hak Akses]] | Akses pengelolaan Data diatur di Workspace, sedangkan akses Row dan cell diatur di konfigurasi Data dan Table. |
+| Data | Satu unit tampilan pada Table View yang menampung nama, konfigurasi tampilan dan [[Docs/Tipe Data/Query]]. Satu Table View dapat memiliki lebih dari satu Data. |
+| [[Docs/Tipe Data/Query]] | Tipe data yang merumuskan [[Docs/Tipe Data/Row]] yang tampil pada setiap Data. |
+| [[Docs/Tipe Data/Query#Show dan Hide\|Show/Hide]] | Pengaturan di [[Docs/Tipe Data/Query]] untuk menampilkan atau menyembunyikan kolom tertentu. |
+| [[Docs/Tipe Data/Query#Where\|Where]] | Kondisi di [[Docs/Tipe Data/Query]] untuk memfilter [[Docs/Tipe Data/Row]] yang tampil. |
 
 ## Cara Kerja Table View
 
@@ -61,16 +57,15 @@ flowchart LR
 
 ## Membuat Table View
 
-![[Docs/Modul Interface/Table View/add-table-view.png]]
-
+![[Docs/Modul Interface/Table View/add-tableview.png]]
 1. Buka folder tempat Table View akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/tableview|Table View]]
-3. Isi [[^field|Name]] dan [[^field|Description]]
-4. Klik [[^button|Create]]
+2. Periksa [[^field|Directory]] yang terisi otomatis sesuai folder yang Anda klik kanan, atau pilih folder lain. Biarkan kosong untuk letak _root_.
+3. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/tableview|Table View]]
+4. Isi [[^field|Name]] dan [[^field|Description]]
+5. Klik [[^button|Create]]
 
 >**success** Table View berhasil dibuat
-> Table View yang baru dibuat belum memiliki Data. Tambahkan [[Docs/Modul Interface/Table View/TableViewData|Data]] di [[#Mengelola Data Table View]].
-
+> Table View yang baru dibuat belum memiliki Data. Tambahkan Data di [[#Mengelola Data Table View]].
 
 ## Mengubah Table View
 
@@ -92,11 +87,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan. [[Docs/Tipe Data/Q
 Buka folder yang berisi Table View, klik kanan Table View, pilih [[^button/delete|Delete]], lalu konfirmasi dengan [[^button|Delete]].
 
 >**warning** Seluruh Data ikut terhapus
-> Menghapus Table View menghapus seluruh Data di dalamnya beserta Query dan konfigurasi tampilannya. Table yang menjadi sumber Query dan Row di dalamnya tidak ikut terhapus.
-
-<!--
-  * [TODO] Konfirmasi dampak lain penghapusan Table View, misalnya apakah ada komponen yang menautkan Table View ini dan menjadi terputus.
--->
+> Menghapus Table View secara otomatis akan menghapus seluruh Data di dalamnya beserta [[Docs/Tipe Data/Query]] dan konfigurasi tampilannya. [[Docs/Modul Data/Table/Apa itu Table|Table]] yang menjadi sumber [[Docs/Tipe Data/Query]] dan [[Docs/Tipe Data/Row]] di dalamnya tidak ikut terhapus.
 
 ## Antarmuka Table View
 
