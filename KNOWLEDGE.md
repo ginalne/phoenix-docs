@@ -22,7 +22,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   - Arti angka dan ikon di samping nama komponen dijelaskan di halaman Folder, bagian Informasi Data.
 - **Hak akses** (nilai: allow / disallow):
   - Comp. Access (level komponen/header): Visible, Add (menambah folder atau komponen baru), Update (mengubah atribut komponen), Delete.
-  - Data Access (level data): Add, Update, Delete. Jenis data bergantung komponen (Table View: Row dan TableData; Timeline: TimelineData). Penjelasan lengkap ada di subhalaman Data Access.
+  - Data Access (level data): Add, Update, Delete. Jenis data bergantung komponen (Table: Row dan TableData; Table View: Data TableView; Timeline: TimelineData). Untuk Table View, Data Access hanya mengatur pengelolaan Data (ubah nama, ubah Query, ubah konfigurasi). Penjelasan lengkap ada di subhalaman Data Access.
   - Function Access: Merge (penggabungan data), Modify Event, View Publish (hanya melihat konfigurasi publikasi, misalnya menyalin Publish Link), Publish (memperbarui konfigurasi publikasi).
 - **Pewarisan:** jika folder induk Visible = disallow, seluruh isinya tidak dapat diakses meski allow. Disallow juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan Tree.
 - Nama folder pada gambar contoh penulis adalah kasus pribadi dan tidak disebut di dokumentasi.
@@ -163,3 +163,21 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 - **Contoh Flow (diterima penulis):** `Event/Tree Node Event`, `Operator/Node Parse`, `Modular/HTTP Request` di `Docs/Modul Logic/Flow/Flow Block/<Kategori>/<Nama Block>`.
 - **Penamaan pada screenshot** (nama Tree pada judul halaman kerja dan nama pengguna di bilah atas) adalah kasus pribadi dan tidak disebut di dokumentasi. Nama Node pada screenshot menu konteks (Child A, B, C) sudah generik.
 Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Active = terlindungi, Merger Mode tidak dapat diubah, External Read Only berlaku di kedua jenis Tree, context dan mode dapat diklik tetapi sementara). Semuanya perlu tersimpan agar subhalaman Tree dan Flow Block terkait konsisten.
+
+## Table View (Modul Interface)
+
+- **Definisi:** Table View adalah komponen modul Interface untuk menampilkan data Table menggunakan Query. Satu Table View memiliki lebih dari satu **Data** (TableViewData), dan setiap Data menampung satu Query, satu nama, dan konfigurasi tampilan (`full`, `half`, `quarter` dari layar).
+- **Path:** `Docs/Modul Interface/Table View/Apa itu Table View`. Tipe data milik komponen: `Docs/Modul Interface/Table View/TableViewData` (diusulkan, mengikuti pola TimelineData). Slug: `tableview`. Label antarmuka: "Create Table View", pencarian "Search TableView Data...".
+- **Query:** wajib memakai header Table (lihat `Docs/Tipe Data/Query`). Show/Hide mengontrol kolom yang tampil, Where memfilter Row. Jika Query kosong atau output kolom tidak valid, Data menampilkan "Query column output is not valid!" dan teks "Empty".
+- **Kegunaan:** menampilkan lebih dari satu data Table dalam satu halaman, yang dapat dikontrol kolomnya (Show/Hide) dan difiltrasi (Where).
+- **Mengelola Row:** setiap field dapat diisi dan ditambahkan seperti pada komponen Table. Kolom yang menjadi syarat filter (Where) tetapi tidak ditampilkan oleh Query (misalnya kolom EnumData) **terisi otomatis** saat Row ditambahkan, agar Row tetap tampil dan tidak hilang saat Refresh.
+- **Hak akses (berlapis):**
+  - Data Access Table View di Workspace mengatur pengelolaan Data: rename, edit Query, ubah konfigurasi.
+  - Perubahan Row dan cell pada Table View diatur di konfigurasi Data TableView, bukan di Workspace.
+  - Perubahan data pada Table yang dipanggil Query tetap mengikuti Data Access Table tersebut di Workspace. Jika Workspace tidak mengizinkan, tetap tidak bisa meskipun konfigurasi Data mengizinkan.
+  - **Aturan umum:** prinsip ini berlaku untuk semua komponen Interface yang dapat memanipulasi data di komponen Modul Data.
+- **Halaman kerja:** bilah navigasi (judul dengan ikon Table View dan Header Name, Edit, Refresh, kolom pencarian "Search TableView Data...") dan area Data. Setiap Data memiliki judul dengan nama dan angka dalam kurung (diasumsikan jumlah Row), pilihan tampilan full/half/quarter, tombol Q (diasumsikan membuka editor Query), tabel Row (ID, kolom hasil Query, Action dengan Save dan Delete), Add Row, dan pagination seperti Table. Tombol Add Data berada di bagian bawah halaman.
+- **Interaksi:** klik Data untuk collapse atau expand. Menu konteks Data: Rename, Add Row, Add Data, Delete Data (dengan konfirmasi). Search di bilah navigasi mencari kata kunci di semua kolom pada Data.
+- **Dampak penghapusan:** menghapus Data atau Table View hanya menghapus Query dan konfigurasi, Row di Table sumber tidak terhapus. Menghapus Row dari Table View menghapusnya dari Table dan tidak dapat dikembalikan.
+- Nama Table View, Data, dan isi Row pada screenshot penulis (Judul, All Name, Name Level 2, New Data, dan nama orang) adalah kasus pribadi dan tidak disebut di dokumentasi.
+- **Belum terkonfirmasi:** fungsi tombol Q, arti `(3) ()` pada Data berQuery kosong, nama awal Data baru ("New Data"), cakupan Search, opsi konfigurasi Data selain tampilan, dan pemetaan Add/Update/Delete di Data Access.
