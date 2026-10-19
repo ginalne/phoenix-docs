@@ -22,7 +22,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   - Arti angka dan ikon di samping nama komponen dijelaskan di halaman Folder, bagian Informasi Data.
 - **Hak akses** (nilai: allow / disallow):
   - Comp. Access (level komponen/header): Visible, Add (menambah folder atau komponen baru), Update (mengubah atribut komponen), Delete.
-  - Data Access (level data): Add, Update, Delete. Jenis data bergantung komponen (Table View: Row dan TableData; Timeline: TimelineData). Penjelasan lengkap ada di subhalaman Data Access.
+  - Data Access (level data): Add, Update, Delete. Jenis data bergantung komponen (Table: Row dan TableData; Table View: Data TableView; Timeline: Timeline Data). Untuk Table View, Data Access hanya mengatur pengelolaan Data (ubah nama, ubah Query, ubah konfigurasi), bukan Row atau cell. Penjelasan lengkap ada di subhalaman Data Access.
   - Function Access: Merge (penggabungan data), Modify Event, View Publish (hanya melihat konfigurasi publikasi, misalnya menyalin Publish Link), Publish (memperbarui konfigurasi publikasi).
 - **Pewarisan:** jika folder induk Visible = disallow, seluruh isinya tidak dapat diakses meski allow. Disallow juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan Tree.
 - Nama folder pada gambar contoh penulis adalah kasus pribadi dan tidak disebut di dokumentasi.
@@ -83,7 +83,6 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   - Variable Getter (Flow Block) mengambil nilai Variable dengan mengisi Name.
 - **Akses:** anggota yang tidak memiliki akses komponen Variable tidak dapat mengetahui Value, tetapi tetap dapat memakainya untuk otomasi atau integrasi. Anggota yang memiliki akses melihat Value secara terbuka di halaman kerja.
 - **Pemisahan halaman:** halaman komponen Variable membahas pengelolaan. Penjelasan Variable sebagai tipe data ada di halaman Tipe Data (`Docs/Tipe Data/Variable`).
-
 ## Enum (Modul Data)
 
 Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direvisi penulis.
@@ -104,7 +103,7 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 ## Table (Modul Data)
 
 - **Definisi:** Table adalah komponen modul Data untuk menyimpan data secara kompleks, baik transaksional maupun generik. Table memiliki beberapa Column (`Docs/Tipe Data/Column`) dengan format berbeda, dan Row (`Docs/Tipe Data/Row`) yang masing-masing memiliki TableData (`Docs/Tipe Data/TableData`) sesuai kolom yang tersedia. Expression (`Docs/Tipe Data/Expression`) adalah Tipe Data untuk melakukan perhitungan dengan fungsi yang disediakan, dan dapat langsung digunakan pada Table.
-- **Path halaman:** `Docs/Modul Data/Table/Apa itu Table`. Judul: "Apa itu Table?". Subhalaman yang disepakati: `Docs/Modul Data/Table/Merge`, `.../Publish`, `.../Event`. Subhalaman yang diusulkan: `.../Upload` dan `.../Mengisi TableData` (cara mengisi data per Format Column).
+- **Path halaman:** `Docs/Modul Data/Table/Apa itu Table`. Judul: "Apa itu Table?". Subhalaman yang disepakati: `Docs/Modul Data/Table/Merge`, `.../Publish`, `.../Event`. Subhalaman yang diusulkan: `.../Upload`. Cara mengisi data per Format Column dirujuk penulis ke anchor `Docs/Modul Data/Table/Apa itu Table#Mengelola Data Table` (bukan subhalaman `Mengisi TableData`).
 - **Row awal:** Row pada Table yang baru dibuat masih kosong.
 - **Dialog Create New Table** (gambar `add-table.png`, diletakkan di awal bagian Membuat):
   - Directory (Search Folder): terisi otomatis sesuai folder yang diklik kanan. Dikosongkan berarti letak root.
@@ -122,6 +121,7 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 - **Contoh Flow:** Table Row Event (`Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event`) menghasilkan output bertipe Row. HTTP Request berada di `Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request`.
 - **Merge, Publish, Event:** detail dijelaskan di halaman masing-masing. Ketiganya dibatasi Function Access di Workspace.
 - **Penamaan pada screenshot** (nama Table, Row, dan Column pada gambar contoh penulis) adalah kasus pribadi dan tidak disebut di dokumentasi.
+
 
 ## Tree (Modul Data)
  
@@ -147,3 +147,30 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 - **Penamaan pada screenshot** (nama Tree pada judul halaman kerja dan nama pengguna di bilah atas) adalah kasus pribadi dan tidak disebut di dokumentasi. Nama Node pada screenshot menu konteks (Child A, B, C) sudah generik.
 Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Active = terlindungi, Merger Mode tidak dapat diubah, External Read Only berlaku di kedua jenis Tree, context dan mode dapat diklik tetapi sementara). Semuanya perlu tersimpan agar subhalaman Tree dan Flow Block terkait konsisten.
 
+## Table View (Modul Interface)
+
+- **Definisi:** Table View (boleh juga ditulis TableView) adalah komponen modul Interface untuk menampilkan data Table menggunakan Query. Satu Table View memiliki lebih dari satu **Data**, dan setiap Data menampung satu Query, satu nama, dan konfigurasi tampilan.
+- **Path:** `Docs/Modul Interface/Table View/Apa itu Table View`.
+- **Data memiliki konfigurasi mode `editable` atau `readonly`**.
+- **Query pada Table View:**
+  - Wajib mengikuti **kaidah Table Output** (`Docs/Tipe Data/Query#Table Output`).
+  - Istilah penulis di halaman Query: **Filter**, **Show or Hide**, **Table Output**, **Error**. Anchor yang dipakai: `#Filter`, `#Show or Hide`, `#Table Output`, `#Error`.
+  - Query kosong ditandai teks "Empty". Kesalahan Query ditandai "Error" dan penjelasannya ada di `Docs/Tipe Data/Query#Error`. Teks pesan di aplikasi ditulis penulis sebagai "Query table output is not valid!".
+- **Kegunaan:** menampilkan lebih dari satu data Table dalam satu halaman, yang dapat dikontrol kolomnya (Show or Hide) dan difiltrasi (Filter).
+- **Mengelola baris:** setiap field dapat diisi dan ditambahkan seperti pada komponen Table (rujukan: `Docs/Modul Data/Table/Apa itu Table#Mengelola Data Table`). Kolom yang menjadi syarat Filter tetapi tidak ditampilkan Query (artinya tidak bisa diisi lewat Data Table View) **terisi otomatis** saat baris ditambahkan, agar baris tetap memenuhi Query dan tidak hilang bahkan setelah Refresh.
+- **Dampak penghapusan:** menghapus Data atau Table View hanya menghapus Query dan konfigurasi, baris di data sumber tidak terhapus. Menghapus baris dari Table View menghapusnya dari sumber dan tidak dapat dikembalikan.
+- **Hak akses (berlapis):**
+  - Data Access Table View di Workspace mengatur pengelolaan Data: ubah nama, ubah Query, ubah konfigurasi.
+  - Baris dan isi sel hanya dapat dikelola bila **dua syarat** terpenuhi: konfigurasi Data `editable` dan Data Access data sumber di Workspace mengizinkan. Jika salah satu tidak terpenuhi, baris dan sel tidak dapat dikelola.
+  - **Aturan umum:** prinsip ini berlaku untuk semua komponen Interface yang dapat memanipulasi data di komponen Modul Data.
+- **Membuat:** dialog Create memiliki Directory (terisi otomatis sesuai folder yang diklik kanan, dapat diganti, kosong berarti letak root), Name, Description.
+- **Halaman kerja**: bilah navigasi (judul dengan ikon Table View dan Header Name, Edit, Refresh, kolom pencarian "Search TableView Data...") dan area Data.
+  - Judul Data: ikon panah, nama Data, dan angka jumlah baris dalam kurung. Arti `(3) ()` pada Data berQuery kosong belum terkonfirmasi.
+  - Pilihan tampilan `full`, `half`, `quarter` berupa pilihan radio (`^value/radio`) yang menentukan porsi layar.
+  - Tombol Q (icon `q`) membuka popup konfigurasi Query. Perubahan Query **tersimpan otomatis** saat popup ditutup dengan klik di luar popup, tidak ada tombol Save.
+  - Kolom Data: kolom hasil Query ditambah Action. Baris Data: baris hasil Query dengan Save dan Delete. Add Row dan pagination seperti Table.
+  - Tombol Add Data ada di bagian bawah halaman. Data baru tampil dengan Query kosong (Empty). Nama awal Data baru belum terkonfirmasi.
+- **Interaksi:** klik judul Data untuk collapse atau expand. Klik kanan judul Data membuka menu konteks: Rename (dialog dengan tombol Ok), Add Row, Add Data, Delete Data (dengan konfirmasi Delete). Search di bilah navigasi mencari kata kunci di semua kolom pada Data.
+- **Nama awal Data baru** adalah New Data (n) <- jika ada nama yang sama, n dari 1 sampai tak terhingga.
+- **arti (x) setelah nama ** adalah total baris hasil Query.
+- **Efek penghapusan Table View atau Data** tidak mempengaruhi komponen lain.
