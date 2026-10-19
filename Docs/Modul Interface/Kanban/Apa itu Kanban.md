@@ -74,8 +74,9 @@ flowchart LR
 3. Ubah [[^field|Name]] atau [[^field|Description]]
 4. Klik [[^button|Update]]
 
->**warning** Template kartu ikut terhapus
->Mengubah [[^field|Table - Column]] Kanban otomatis menghapus tampilan Kanban beserta template kartunya. [[Docs/Tipe Data/Row]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber tidak ikut terhapus karena Kanban hanya menampilkan data.
+>**warning** Template kartu dapat terhapus
+>Mengubah Table pada [[^field|Table - Column]]otomatis menghapus template kartunya. [[Docs/Tipe Data/Row]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber tidak ikut terhapus karena Kanban hanya menampilkan data.
+>Abaikan peringatan ini jika perubahan hanya pada [[Docs/Tipe Data/Column]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]] yang sama.
 
 ## Menyegarkan Kanban
 
@@ -90,19 +91,9 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 >**warning** Template kartu ikut terhapus
 >Menghapus Kanban menghapus tampilan Kanban beserta template kartunya. Row pada [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber tidak ikut terhapus karena Kanban hanya menampilkan data.
 
-<!--
-  * [TODO] Mohon konfirmasi dampak penghapusan Kanban. Ditulis dengan asumsi Row di Table sumber tidak terhapus (mengikuti perilaku Table View). Mohon konfirmasi juga apakah ada komponen lain yang terputus.
--->
-
 ## Antarmuka Kanban
-
 ![[Docs/Modul Interface/Kanban/interface-kanban.png]]
-
-<!--
-  * [TODO] Penempatan gambar `interface-kanban.png` (halaman kerja Kanban). Saran anotasi nomor: ① judul Kanban, ② Edit, ③ Refresh, ④ Search Kanban Data..., ⑤ jumlah item, ⑥ Name - Description EnumData, ⑦ Setting, ⑧ kartu. Pada screenshot Anda, judul Kanban, nama EnumData, dan isi kartu adalah kasus pribadi, mohon diganti dengan nama generik. Saran keterangan: "Contoh gambar di atas merupakan halaman kerja Kanban dengan empat kolom EnumData."
--->
-
-Halaman kerja Kanban terdiri dari bilah navigasi di bagian atas dan area kolom di bagian bawah. Setiap kolom mewakili satu EnumData, dan kartu berada di dalam kolom sesuai nilai EnumData pada Row-nya.
+Halaman kerja Kanban terdiri dari bilah navigasi di bagian atas dan area kolom di bagian bawah. Setiap kolom mewakili satu [[Docs/Tipe Data/EnumData]], dan kartu berada di dalam kolom sesuai nilai [[Docs/Tipe Data/EnumData]] pada [[Docs/Tipe Data/Row]]-nya.
 
 ### Bilah navigasi Kanban terdiri dari:
 
@@ -120,25 +111,22 @@ Header setiap kolom berisi tiga bagian dari kiri ke kanan:
 | Bagian | Fungsi |
 | ------ | ------ |
 | Jumlah item | Angka yang menunjukkan banyaknya kartu pada kolom tersebut. |
-| Name - Description | Nama EnumData yang menjadi kolom, ditulis dengan format Name - Description. |
-| [[^button/setting|Setting]] | Membuka modal pengaturan template untuk EnumData tersebut. Lihat [[#Mengatur Template Kartu]]. |
-
-<!--
-  * [TODO] Pada screenshot, kolom terakhir tidak menampilkan tombol Setting. Mohon konfirmasi apakah ini karena lebar layar atau memang ada aturan tertentu.
-  * [TODO] Ikon `setting` (roda gigi) belum ada pada daftar ikon tombol di skill. Ditulis sebagai `[[^button/setting|Setting]]`, mohon konfirmasi slug-nya.
--->
+| [[^field|Name]] - [[^field|Description]] | Nama EnumData yang menjadi kolom. |
+| Tombol [[^button/setting]] | Membuka modal pengaturan template untuk EnumData tersebut. Lihat [[#Mengatur Template Kartu]]. |
 
 ### Interaksi Antarmuka Kanban
 
 | Fungsi | Aksi |
 | ------ | ---- |
 | Memindahkan kartu antar kolom | Seret kartu ke kolom tujuan. |
-| Membuka pengaturan template | Klik [[^button/setting|Setting]] pada header kolom. |
-| Mencari data | Ketik kata kunci pada [[^field|Search Kanban Data...]]. |
+| Mengulir daftar kartu | Arahkan kursor pada satu kolom, lalu gulir ke bawah atau ke atas. Ini berlaku jika tinggi tampilan kartu lebih besar dari layar Anda |
+| Mengulir kolom | Arahkan kursor pada halaman kerja, lalu gulir ke kiri atau ke kanan. Ini berlaku jika jumlah kolom cukup banyak sehingga lebar tampilan lebih besar dari layar Anda |
 
 <!--
   * [TODO] Mohon konfirmasi cara memindahkan kartu (*drag and drop*?). Mohon konfirmasi juga: apakah memindahkan kartu otomatis mengubah nilai EnumData pada Column di Row tersebut? Jika ya, tambahkan penjelasannya di sini.
+    Jawaban: Iya dapat dengan drag and drop, atau klik kanan pada kartu lalu Move To
   * [TODO] Apakah ada interaksi lain, misalnya klik kartu untuk melihat atau mengubah Row?
+    Jawaban: Iya dapat klik kartu untuk menampilkan Form Table (Row dalam bentuk form), agar dapat mengubah isinya secara langsung. Termasuk juga contextmenu yaitu: Detail (hasilnya sama seperti klik kiri), Add Row (menambahkan row baru dengan nilai kolom enumdata yang langsung terisi sesuai posisi kursor pada kolom), Delete Row, dan Move To (ketika diklik akan menampilkan lagi daftar kolom yang tersedia kecuali nilai enumdatanya saat itu)
 -->
 
 ## Mengatur Template Kartu
@@ -159,11 +147,9 @@ Setiap baris template berisi [[^field|Column]] yang akan ditampilkan, [[^field|C
 3. Tambahkan Column pada bagian [[^field|Header]], [[^field|Body]] atau [[^field|Footer]]. Langkah rincinya ada di [[Docs/Modul Interface/Kanban/Template Kartu]]
 4. Klik [[^button|Update]]
 
-![[Docs/Modul Interface/Kanban/setup-kanban.png]]
-
 <!--
-  * [TODO] Penempatan gambar `setup-template-kanban.png` (modal Setup Kanban Template). Saran anotasi nomor: ① Enum Data, ② Column Template, ③ Header, ④ Body, ⑤ Footer, ⑥ Update. Saran keterangan: "Contoh gambar di atas merupakan modal pengaturan template untuk satu EnumData."
-  * [TODO] Subhalaman `Template Kartu` perlu dibuat: tombol Add Header/Body/Footer Column, mengisi Column dan Class, urutan, dan menghapus baris.
+  * [DONE] Penempatan gambar `setup-template-kanban.png` (modal Setup Kanban Template). Saran anotasi nomor: ① Enum Data, ② Column Template, ③ Header, ④ Body, ⑤ Footer, ⑥ Update. Saran keterangan: "Contoh gambar di atas merupakan modal pengaturan template untuk satu EnumData."
+  * [DONE] Subhalaman `Template Kartu` perlu dibuat: tombol Add Header/Body/Footer Column, mengisi Column dan Class, urutan, dan menghapus baris.
 -->
 
 ### Global dan Local
@@ -177,12 +163,14 @@ Setiap EnumData dapat memiliki pengaturan template dengan cakupan [[^value/radio
 
 <!--
   * [TODO] Pada screenshot, toggle [[^field|Column Template]] dalam posisi mati dan berlabel Global. Mohon konfirmasi apakah toggle aktif berlabel Local.
+    Jawaban : Ya
   * [TODO] Mohon konfirmasi cakupan Global: apakah hanya dalam satu Kanban, atau lintas Kanban?
+    Jawaban : tidak lintas, hanya di kanban itu.
 -->
 
 ### Template Kosong
 
-Jika template masih kosong (seperti saat Kanban baru dibuat), kartu hanya menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari Table, yang biasanya berupa Column berformat [[Docs/Format Data/String/Short Text]].
+Jika template masih kosong (seperti saat Kanban baru dibuat), kartu hanya menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari Table, yang biasanya berupa [[Docs/Tipe Data/Column]] berformat [[Docs/Format Data/String/Short Text]].
 
 ## Contoh Penggunaan
 
@@ -194,15 +182,15 @@ Sebuah tim ingin melihat posisi setiap tugas, apakah masih direncanakan, sedang 
 
 | Komponen | Peran |
 | -------- | ----- |
-| [[^field/enum|Status Tugas]] | Menyimpan EnumData tahapan kerja yang menjadi kolom Kanban. |
-| [[^field/table|Tugas]] | Menyimpan Row tugas dan [[^field/column|Status]] berformat EnumData. |
-| [[^field/kanban|Papan Tugas]] | Menampilkan setiap Row Tugas sebagai kartu pada kolom sesuai Status. |
+| [[^field/enum|Status Tugas]] | Menyimpan [[Docs/Tipe Data/EnumData]] tahapan kerja yang menjadi kolom Kanban. |
+| [[^field/table|Tugas]] | Menyimpan [[Docs/Tipe Data/Row]] tugas dan [[^field/column|Status]] berformat [[Docs/Tipe Data/EnumData]]. |
+| [[^field/kanban|Papan Tugas]] | Menampilkan setiap [[Docs/Tipe Data/Row]] [[^field/table|Tugas]] sebagai kartu pada kolom sesuai [[^field|Status]]. |
 | [[^field/flow|Notifikasi Tugas Selesai]] | Mengirim data ke sistem lain saat Status berubah menjadi [[^value/enumdata|Selesai]]. |
 
 **Alur di Flow**
 
 ```mermaid
-flowchart LR
+flowchart TB
     A@{ shape: database, label: "**Table**<br/>Tugas" } -.->|&nbsp;Row Updated&nbsp;| B@{ shape: rounded, label: "**Table Row Event**" }
     B -->|"&nbsp;**[Row]**&nbsp;"| C@{ shape: rounded, label: "**If**<br>Status = Selesai?" }
     C --> D@{ shape: rounded, label: "**HTTP Request**" }
@@ -226,22 +214,17 @@ flowchart LR
 
 | Variasi | Contoh integrasi |
 | ------- | ---------------- |
-| Kartu masuk ke tahap persetujuan | Flow mengirim pemberitahuan kepada penyetuju melalui [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]. |
-| Kartu menumpuk pada satu tahap | Flow menghitung jumlah Row per Status lalu menyimpannya ke [[^field/variable|Variable]] untuk dipantau. |
-| Row baru ditambahkan | Flow mengisi Status awal otomatis agar kartu langsung muncul di kolom pertama. |
+| Kartu masuk ke tahap persetujuan | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] mengirim pemberitahuan kepada penyetuju melalui [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]. |
+| Kartu menumpuk pada satu tahap | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] menghitung jumlah Row per Status lalu menyimpannya ke [[^field/variable|Variable]] untuk dipantau. |
+| [[Docs/Tipe Data/Row]] baru ditambahkan | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] mengisi [[^field|Status]] awal otomatis agar kartu langsung muncul di kolom pertama. |
 
 Skenario ini menunjukkan Kanban sebagai tampilan alur kerja yang tersambung dengan data dan logika Phoenix, bukan sekadar papan visual.
-
-<!--
-  * [TODO] Nama komponen pada contoh (Status Tugas, Tugas, Papan Tugas, Notifikasi Tugas Selesai) adalah nama generik, mohon sesuaikan jika perlu.
-  * [TODO] Mohon konfirmasi apakah memindahkan kartu antar kolom memicu event Row Updated pada Table Row Event. Nama event pada diagram adalah asumsi.
--->
 
 ## Praktik Terbaik
 
 - Pilih [[^field|Table - Column]] yang benar-benar mewakili **tahapan kerja**, karena setiap EnumData menjadi satu kolom.
 - Gunakan cakupan [[^value/radio|Global]] agar **tampilan kartu seragam** di semua kolom, dan [[^value/radio|Local]] hanya untuk kolom yang butuh tampilan khusus.
-- Tampilkan **informasi yang paling penting** saja pada Header, Body, dan Footer agar kartu mudah dipindai.
+- Tampilkan **informasi yang paling penting** saja pada [[^field|Header]], [[^field|Body]], dan [[^field|Footer]] agar kartu mudah dipindai.
 - Isi [[^field|Class]] secara **sederhana dan konsisten** supaya tampilan kartu rapi.
 
 >**success** Mulai dari template kosong
@@ -249,33 +232,30 @@ Skenario ini menunjukkan Kanban sebagai tampilan alur kerja yang tersambung deng
 
 ## Batasan dan Catatan
 
-- [[^field|Table - Column]] wajib diisi dan harus berformat [[Docs/Tipe Data/EnumData|EnumData]]. Jumlah kolom Kanban mengikuti jumlah EnumData.
-- Perubahan template dengan cakupan [[^value/radio|Global]] memengaruhi EnumData lain, sedangkan [[^value/radio|Local]] hanya memengaruhi satu EnumData.
-- Jika template kosong, kartu hanya menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari Table.
-- Menghapus Kanban menghapus template kartu, tetapi tidak menghapus Row pada [[Docs/Modul Data/Table/Apa itu Table|Table]].
-- Memindahkan kartu mengubah data pada Table sumber, sehingga memerlukan izin pada [[Docs/Modul Developer/Workspace/Data Access]] untuk data sumber.
-
-<!--
-  * [TODO] Poin terakhir ditulis berdasarkan aturan umum komponen Interface (pengelolaan data butuh Data Access data sumber). Mohon konfirmasi apakah berlaku juga untuk memindahkan kartu pada Kanban, dan apakah ada pengaturan `editable` atau `readonly` seperti Table View.
--->
+- [[^field|Table - Column]] wajib diisi dan harus berformat [[Docs/Tipe Data/EnumData|EnumData]]. Jumlah kolom Kanban mengikuti jumlah [[Docs/Tipe Data/EnumData]].
+- Perubahan template dengan cakupan [[^value/radio|Global]] memengaruhi [[Docs/Tipe Data/EnumData]] lain, sedangkan [[^value/radio|Local]] hanya memengaruhi satu [[Docs/Tipe Data/EnumData]].
+- Jika template kosong, kartu hanya menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari [[Docs/Modul Data/Table/Apa itu Table|Table]].
+- Menghapus Kanban menghapus template kartu, tetapi tidak menghapus [[Docs/Tipe Data/Row]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]].
+- Memindahkan kartu mengubah data pada [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber, sehingga memerlukan izin pada [[Docs/Modul Developer/Workspace/Data Access]] untuk data sumber.
 
 ## TL:DR
 
 - **Definisi:** Kanban menampilkan Row [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai kartu pada kolom status atau kategori.
 - **Membuat:** isi [[^field|Table - Column]] berformat [[Docs/Tipe Data/EnumData|EnumData]]; setiap EnumData menjadi satu kolom ([[#Membuat Kanban]]).
-- **Antarmuka:** header kolom berisi jumlah item, Name - Description, dan [[^button/setting|Setting]] ([[#Antarmuka Kanban]]).
+- **Antarmuka:** header kolom berisi jumlah item, Name - Description, dan [[^button/setting]] ([[#Antarmuka Kanban]]).
 - **Template:** atur Header, Body, dan Footer kartu lewat [[^button/setting|Setting]] ([[#Mengatur Template Kartu]]).
 - **Cakupan:** [[^value/radio|Global]] memengaruhi EnumData lain, [[^value/radio|Local]] hanya satu EnumData ([[#Global dan Local]]).
-- **Hati-hati:** template kosong hanya menampilkan Alias, dan memindahkan kartu memerlukan izin data sumber.
+- **Hati-hati:** template kosong hanya menampilkan [[^field|Alias]], dan memindahkan kartu memerlukan izin data sumber.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
 > **faq**
 > **Mengapa Kanban saya memiliki jumlah kolom tertentu?**
-> Kolom Kanban mengikuti jumlah [[Docs/Tipe Data/EnumData|EnumData]] pada Enum yang dipilih di [[^field|Table - Column]]. Jika Enum memiliki 4 EnumData, Kanban memiliki 4 kolom.
+> Kolom Kanban mengikuti jumlah [[Docs/Tipe Data/EnumData|EnumData]] pada [[Docs/Tipe Data/Enum]] yang dipilih di [[^field|Table - Column]]. Jika [[Docs/Tipe Data/Enum]] memiliki 4 [[Docs/Tipe Data/EnumData]], Kanban memiliki 4 kolom.
 > **Mengapa kartu hanya menampilkan satu teks?**
-> Template kartu masih kosong, sehingga kartu menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari Table. Tambahkan Column pada template di [[#Mengatur Template Kartu]].
+> Template kartu masih kosong, sehingga kartu menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari [[Docs/Modul Data/Table/Apa itu Table|Table]]. Tambahkan [[^field|Column]] pada template di [[#Mengatur Template Kartu]].
 > **Apa bedanya [[^value/radio|Global]] dan [[^value/radio|Local]]?**
 > [[^value/radio|Global]] membuat perubahan template memengaruhi EnumData lain, sedangkan [[^value/radio|Local]] hanya menerapkannya pada satu EnumData. Selengkapnya lihat [[#Global dan Local]].
 > **Apakah Row hilang jika Kanban dihapus?**
 > Tidak. Kanban hanya menampilkan data, jadi Row pada [[Docs/Modul Data/Table/Apa itu Table|Table]] tetap ada. Yang terhapus adalah Kanban beserta template kartunya.
+
