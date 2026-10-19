@@ -284,7 +284,11 @@ Dengan satu Table sebagai sumber, Table View memberi setiap tim sudut pandang ya
 > **Mengapa saya tidak dapat mengubah cell padahal konfigurasi Data mengizinkan?**
 > Perubahan data tetap mengikuti [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Table di [[Docs/Modul Developer/Workspace/Apa itu Workspace| Workspace]]. Jika [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] tidak mengizinkan, baris tidak dapat diubah dari Table View.
 > **Apa bedanya Table View dengan komponen data lain seperti Table?**
-> Table View menampilkan data sumber seperti [[Docs/Modul Data/Table/Apa itu Table|Table]] dalam beberapa tampilan sekaligus dengan [[Docs/Tipe Data/Query]] berbeda.
+
+>
+>
+>> 3
+> Table View menampilkan data sumber seperti [[Docs/Modul Data/Table/Apa itu Table|Table]] dalam beberapa tampilan  AWdsekaligus dengan [[Docs/Tipe Data/Query]] berbeda.
 
 <!--
   * [TODO] Halaman dan anchor yang ditautkan dari halaman ini dan perlu dibuat atau disesuaikan:
