@@ -18,3 +18,4 @@ Berikut adalah aksi yang bisa dilakukan untuk mengelola Data :
 4. [[Docs/Modul Interface/Table View/Table View Data/Mengelola Row]]
 5. [[Docs/Modul Interface/Table View/Table View Data/Mengubah Nama]]
 6. [[Docs/Modul Interface/Table View/Table View Data/Menghapus]]
+

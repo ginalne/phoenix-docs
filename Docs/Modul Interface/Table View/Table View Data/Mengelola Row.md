@@ -18,3 +18,4 @@ Row ditambahkan dan diisi seperti pada komponen Table. Cara mengisi setiap Forma
 
 >**danger** Row pada Table ikut terhapus
 > Baris yang ditampilkan Table View adalah data ril milik sumber. Menghapus baris dari Table View secara otomatis menghapusnya dari sumber dan tidak dapat dikembalikan.
+

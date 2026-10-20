@@ -11,3 +11,4 @@
 # Table View Data : Mengubah Nama
 
 Klik kanan Data ➜ [[^field/edit|Rename]], ubah nama, lalu simpan dengan klik [[^button/ok|Ok]].
+

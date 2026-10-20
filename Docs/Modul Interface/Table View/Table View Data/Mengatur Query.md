@@ -17,3 +17,4 @@
 
 >**note** Query wajib memakai header Table
 > Query pada Table View harus diisi dengan kaidah yang tepat. Jika Query belum diisi atau outputnya tidak valid, Data menampilkan pesan error seperti[[^field|Query table output is not valid!]].
+

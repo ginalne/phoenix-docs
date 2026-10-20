@@ -17,3 +17,4 @@ Klik salah satu pilihan tampilan pada bagian atas Data:
 | [[^value/radio|full]] | Seluruh layar. |
 | [[^value/radio|half]] | Setengah layar. |
 | [[^value/radio|quarter]] | Seperempat layar. |
+
