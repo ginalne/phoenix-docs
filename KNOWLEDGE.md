@@ -203,3 +203,21 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Menghapus Kanban:** Kanban dan template kartunya terhapus, Row di Table sumber tidak terhapus (asumsi, tidak dikoreksi penulis).
 *   **Belum terkonfirmasi:** cakupan Search, perbedaan desktop dan mobile, penyebab kolom terakhir tanpa Setting, tempat Add Row bisa dipicu (klik kanan kartu atau juga area kosong kolom), dampak Delete Row (diasumsikan menghapus Row dari Table dan tidak bisa dikembalikan), letak halaman penjelasan Form Table.
 *   **Penamaan pada screenshot** (nama folder di dialog Create, judul Kanban, nama EnumData, dan isi kartu) adalah kasus pribadi dan tidak disebut di dokumentasi.
+
+## Gallery (Modul Interface)
+
+*   **Definisi:** Gallery adalah komponen modul Interface yang menyajikan data dalam bentuk kartu visual yang menonjolkan gambar atau konten dari setiap data. Cocok untuk koleksi visual seperti katalog, portofolio, atau daftar aset, agar data mudah dikenali sekilas. Setiap Row pada Table tampil sebagai satu kartu.
+*   **Path:** `Docs/Modul Interface/Gallery/Apa itu Gallery`. Subhalaman yang diusulkan: `Docs/Modul Interface/Gallery/Template Kartu` (menunggu konfirmasi).
+*   **Dialog Create Gallery** (gambar `add-gallery.png`): baris Name berisi bagian kiri tanda `/` (folder tempat Gallery ditempatkan, terisi sesuai folder tempat Gallery ditambahkan, dapat dikosongkan sehingga berada di root) dan kolom Name, lalu Description, Table (placeholder "Select..."), tombol Cancel dan Create. Filter belum tergambar dan akan diperbarui penulis.
+*   **Table (wajib)** dan **Filter (jika dibutuhkan).** Filter adalah daftar field kondisi seperti Query: kolom, operator, operand. **Table tidak dapat diubah** setelah Gallery dibuat.
+*   **Mengubah Gallery (Edit > Update):** semua isian dapat diubah kecuali Table.
+*   **Halaman kerja** (gambar `interface-gallery.png`): bilah navigasi (judul Gallery dengan ikon Gallery dan Header Name, Edit, Column, Refresh, kolom pencarian "Search Gallery Data...") dan area kartu. Tombol **Column** (ikon roda gigi, slug `setting`) disebut penulis sebagai "setting" dan membuka modal "Setup Gallery Template".
+*   **Modal Setup Gallery Template** (gambar `setup-gallery.png`): bagian Header, Body, Footer dengan tombol Add Header/Body/Footer Column (ikon plus), tabel No., Column, **Styling**, Action, serta tombol Cancel dan Update. Tidak ada toggle Global/Local seperti Kanban.
+*   **Template kartu:**
+    *   Column yang diisi tampil sesuai posisi template. Styling berisi nama class styling untuk menyesuaikan desain (contoh dari penulis: `text-right`, `font-semibold`; penulis juga menyebut object-fit untuk gambar, nama class persisnya belum pasti). Dijelaskan di `Docs/Styling/Styling Class`.
+    *   Header: flex-row, paling atas kartu, urutan kiri ke kanan. Body: flex-col, urutan atas ke bawah. Footer: flex-row, paling bawah kartu, urutan kiri ke kanan.
+    *   Semua format data ditampilkan sebaik mungkin, termasuk gambar.
+    *   **Template kosong** (kondisi awal): kartu menampilkan Kolom Alias pada Table (biasanya berformat Short Text).
+*   **Interaksi kartu (keterangan penulis):** klik kanan kartu membuka Row dalam bentuk Form untuk diperbarui, berlaku jika Data Access Table di Workspace mengizinkan. Klik kiri kartu menampilkan menu Detail, Add Row, Delete. Pembagian ini berkebalikan dengan Kanban dan belum diverifikasi ulang.
+*   **Belum terkonfirmasi:** isi Detail, form Add Row, konfirmasi Delete, apakah Add Row dan Delete memerlukan Data Access, cakupan Search, perbedaan desktop dan mobile, jumlah kartu per baris, gestur gulir, dampak menghapus Gallery (diasumsikan Row sumber tidak terhapus), serta label bagian kiri tanda `/` pada Name.
+*   **Penamaan pada screenshot** (nama folder di dialog Create, judul Gallery, dan isi kartu) adalah kasus pribadi dan tidak disebut di dokumentasi.
