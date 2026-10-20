@@ -7,7 +7,7 @@
     tags:
       draft
 ---
-# Styling Class
+# Styling dalam Phoenix
 
 Ketika mengisi field [[^field|Class]], Anda diberikan kesempatan untuk mengatur desain antarmuka agar membantu informasi lebih interaktif dan cepat diserap oleh tim.
 

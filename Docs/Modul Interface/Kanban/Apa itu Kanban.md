@@ -140,7 +140,7 @@ Template menentukan Column apa saja yang tampil pada kartu dan di mana letaknya.
 | Body | Berbentuk kolom (*flex-col*), berada di antara Header dan Footer. | Dari atas ke bawah sesuai urutan dalam daftar. |
 | Footer | Berbentuk baris (*flex-row*), berada di bagian paling bawah kartu. | Dari kiri ke kanan sesuai urutan dalam daftar. |
 
-Setiap baris template berisi [[^field|Column]] yang akan ditampilkan, [[^field|Class]], dan [[^field|Action]] berupa tombol [[^button/delete|Delete]] untuk menghapus baris tersebut dari template. Isi [[^field|Class]] dengan [[Docs/Styling/Styling Class]] yang dapat digunakan untuk mengatur tampilan [[^field|Column]] pada kartu, misalnya ukuran atau ketebalan teks.
+Setiap baris template berisi [[^field|Column]] yang akan ditampilkan, [[^field|Class]], dan [[^field|Action]] berupa tombol [[^button/delete|Delete]] untuk menghapus baris tersebut dari template. Isi [[^field|Class]] dengan [[Docs/Styling/Pengenalan]] yang dapat digunakan untuk mengatur tampilan [[^field|Column]] pada kartu, misalnya ukuran atau ketebalan teks.
 
 1. Klik [[^button/setting|Setting]] pada header kolom [[Docs/Tipe Data/EnumData]] yang ingin diatur
 2. Pada modal [[^field|Setup Kanban Template]], pilih cakupan template di [[^field|Column Template]] (lihat [[#Global dan Local]])
