@@ -10,7 +10,7 @@
 ---
 # Contoh Penggunaan Kanban
 
-## Studi Kasus : Memantau Pesanan per Status dalam Satu Halaman**
+## Studi Kasus : Memantau Pesanan per Status dalam Satu Halaman
 
 Tim operasional sebuah toko daring perlu melihat seluruh pesanan sekaligus memisahkan pesanan yang menunggu diproses dari yang sudah selesai. Dengan Table View, satu Table pesanan ditampilkan dalam beberapa Data dengan Query berbeda. Tim menambahkan pesanan baru langsung dari Data yang relevan, dan sistem pengiriman menerima pesanan baru secara otomatis lewat Flow.
 
