@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Table View Data : Mengubah Nama"
+    description: Penjelasan cara mengubah nama Table View Data
     pageDecoration:
-      icon: x
       tree:
         priority: 0
     tags:

@@ -1,7 +1,7 @@
 ---
     status: release
     title: "Mengatur Query"
-    description: 
+    description: Penjelasan cara mengatur Query pada Table View Data
     pageDecoration:
       tree:
         priority: 1

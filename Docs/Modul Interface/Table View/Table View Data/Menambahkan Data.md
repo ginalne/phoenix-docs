@@ -13,4 +13,5 @@
 1. Buka halaman kerja Table View
 2. Klik [[^button/add|Add Data]] di bagian bawah halaman, atau klik kanan Data lain ➜ [[^field/add|Add Data]]
 3. Data baru tampil dengan Query kosong, ditandai [[^field|Empty]]
-4. Isi Query di [[#Mengatur Query]]
+4. Isi Query di  [[Docs/Modul Interface/Table View/Table View Data/Mengatur Query]]
+

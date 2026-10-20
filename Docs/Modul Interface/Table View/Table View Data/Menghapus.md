@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Table View Data : Menghapus"
+    description: Penjelasan cara menghapus Table View Data
     pageDecoration:
-      icon: x
       tree:
         priority: -10
     tags:
