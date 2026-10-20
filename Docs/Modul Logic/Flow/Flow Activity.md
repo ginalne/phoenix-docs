@@ -7,7 +7,6 @@
     tags:
       draft
 ---
-
 # Flow Activity
 
 Panel Activity List menampilkan kolom berikut.

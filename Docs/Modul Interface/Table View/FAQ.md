@@ -1,7 +1,7 @@
 ---
     status: release
     title: "FAQ : Table View"
-    description: Pertanyaan yang Sering Diajukan pada komponen Table View
+    description: Pertanyaan yang sering diajukan pada komponen Table View
     pageDecoration:
       tree:
         priority: -10
@@ -10,7 +10,7 @@
 ---
 # FAQ : Table View
 
-Berikut adalah pertanyaan yang Sering Diajukan pada komponen Table View:
+Berikut adalah pertanyaan yang sering diajukan pada komponen Table View:
 
 > **faq**
 > **Mengapa Row yang baru saya tambahkan tidak hilang walaupun kolom filternya tidak tampil?**
