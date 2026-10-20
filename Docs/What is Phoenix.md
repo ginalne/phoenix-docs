@@ -22,18 +22,30 @@ Phoenix memiliki beberapa kelebihan yang ditawarkan dibanding menggunakan aplika
 Aplikasi konvensional maksudnya apa? contohnya apa?
 -->
 
-* Meningkatkan alur kerja: Membuat bagan alur dan pohon logika yang jelas serta visual untuk mengelola tugas, persetujuan, dan jadwal. [^1]
+* Meningkatkan alur kerja: Membuat bagan alur dan pohon logika yang jelas serta visual untuk mengelola tugas, persetujuan, dan jadwal.
+  <!--
+  `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:08</small>
+   @harbimartin isinya tidak ada hub dengan poin
+-->
 
-* Mengotomatisasi logika berulang: Memicu tindakan berdasarkan peristiwa atau aturan tertentu—tanpa perlu pembaruan manual.[^2]
-    
-* Menata hubungan yang kompleks: Membuat node pohon dinamis untuk berbagai keperluan, mulai dari bagan organisasi hingga silsilah keluarga atau perincian proyek.[^3]
-    
+* Mengotomatisasi logika berulang: Memicu tindakan berdasarkan peristiwa atau aturan tertentu—tanpa perlu pembaruan manual.
+<!--
+  `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:10</small>
+   @everynyaw gak ngerti
+-->
+* Menata hubungan yang kompleks: Membuat node pohon dinamis untuk berbagai keperluan, mulai dari bagan organisasi hingga silsilah keluarga atau perincian proyek.
+
+  <!--
+  `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:10</small>
+   @everynyaw maksudnya fitur tree?
+-->
 * Berintegrasi dengan ekosistem Anda: Menghubungkan Phoenix dengan perangkat atau sistem yang sudah ada untuk menyinkronkan data dan memicu tindakan lintas platform.  
 * Memusatkan pengetahuan dan aktivitas: Mengelola data, komunikasi, dan pelacakan proses dalam satu platform terpadu.
     
-* Sesuai dengan kebutuhan Anda: Mengatur jenis node, alur proses, dan struktur logika agar sesuai dengan kasus penggunaan unik Anda—tidak ada pendekatan yang dipaksakan seragam untuk semua orang.[^4]
+* Sesuai dengan kebutuhan Anda: Mengatur jenis node, alur proses, dan struktur logika agar sesuai dengan kasus penggunaan unik Anda—tidak ada pendekatan yang dipaksakan seragam untuk semua orang.
 <!--
-Baca di bawah ya
+  `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:12</small>
+   @everynyaw Saingan phoenix juga bisa melakukan yang serupa, hanya pendekatannya berbeda. pendekatan phoenix apa
 -->
 
 ## Mengapa dinamakan "Phoenix"?
@@ -44,14 +56,3 @@ The Phoenix is a mythical bird that regenerates from its own ashes—symbolizing
 We chose this name because that's exactly what this app empowers you to do: Take outdated, messy, or overwhelming processes… and rebirth them into clean, structured flows.
 
 Phoenix isn’t just a tool—it’s a system that adapts, grows, and evolves with your needs. It’s not about starting from scratch—it's about rising from where you are, better than before.
-
-<!--
-Ai juga??
--->
-
-
-
-[^1]: isinya tidak ada hub dengan poin
-[^2]: gak ngerti
-[^3]: maksudnya bagaimana? ini tentang fitur tree view saja? kalau iya menghubungkan data yang kompleks maksudnya apa?
-[^4]: karena u gak jelasin saingan. Bukankah saingan phoenix juga bisa di scale dan disesuaikan kebutuhan?
