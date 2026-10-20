@@ -11,12 +11,11 @@
 ---
 # Selamat datang di Phoenix
 
-Kami merancang manual ini untuk anda mengerti Phoenix. Buat apa? bukankah ribet diganti? Tentu ada beberapa  supaya bisa sesuai dengan kebutuhanmu
-Baik Anda baru mulai menggunakan Phoenix maupun sedang mendalami API kami, dokumentasi ini merupakan panduan lengkap untuk membantu Anda menggunakan Phoenix secara efektif. Phoenix dirancang untuk mengatur dan menyederhanakan alur kerja, event, serta berbagai hubungan yang kompleks di antara tim, tools, dan komunitas Anda — dan dokumentasi ini akan membantu Anda memaksimalkan seluruh potensinya.
+Sama seperti Dumbledore, Kami berharap Phoenix bisa memenuhi kebutuhan anda dalam Tim di dalam sebuah komunitas, event, atau kerja. Kami berharap ketika sistem kalian stagnan dan butuh scaling, kalian tidak butuh diskusi panjang dengan Tim IT untuk scaling system. Anda bisa membuang sistem anda yang sudah usang, simpan data yang sudah ada, lalu terapkan sistem baru hanya dalam beberapa minggu. Sama seperti burung Phoenix, di mana burung ini rela mati demi majikannya, lalu bangkit kembali untuk memenuhi kebutuhannya kembali. Setidaknya ini adalah filosofi kami dalam membuat Phoenix, di mana sebagai sebuah platform yang akan mengikuti kebutuhanmu.
 
-Dokumentasi kami disusun secara terstruktur ke dalam beberapa bagian yang intuitif:
+Lalu sekarang saya harus mulai dari mana? Kalau anda ingin lebih dalam mengerti tentang phoenix dan kelebihannya. anda bisa ke halaman [[Docs/What is Phoenix]]. 
 
-[[Docs/What is Phoenix]] : Pelajari apa itu Phoenix dan bagaimana cara memulainya dengan cepat.<br>
+Jika anda malas mendengarkan saya menyombongkan diri tentang Phoenix, anda tinggal masuk ke halaman 
 [[Docs/Persyaratan]] : Pelajari persyaratan apa yang diperlukan untuk menggunakan Phoenix.<br>
 [[Docs/Antarmuka]] : Pelajari antar muka saat anda telah memasuki halaman Phoenix.
 
