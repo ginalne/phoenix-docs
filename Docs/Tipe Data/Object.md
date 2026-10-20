@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Object"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
     tags:

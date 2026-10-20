@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Tree"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
     tags:

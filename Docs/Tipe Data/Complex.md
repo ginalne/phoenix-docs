@@ -1,9 +1,8 @@
 ---
-    status: draft
+    status: release
     title: "Complex"
     description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
     tags:

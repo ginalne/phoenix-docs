@@ -1,13 +1,14 @@
 ---
-    status: draft
+    status: release
+    title: "Format Data : Numeration Unit"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
     tags:
       draft
 ---
-# Format Data : Bank Account
+# Format Data : Numeration Unit
 
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan data angka serta prefix unitnya.
+Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data yang didukung kompleks secara bebas.
 

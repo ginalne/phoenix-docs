@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Table"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
     tags:
@@ -18,7 +19,7 @@ Table adalah tipe data yang mewakili komponen [[Docs/Modul Data/Table/Apa itu Ta
 | [[^field|Name]] | Nama Table. |
 | [[^field|Description]] | Keterangan singkat tentang kegunaan Table. |
 | [[^field|Column]] | Kolom untuk mengisi [[Docs/Tipe Data/TableData]] di tiap [[Docs/Tipe Data/Row]] |
-| [[^field|Row]] | Baris untuk mengisi TableData di tiap [[Docs/Tipe Data/Column]]]
+| [[^field|Row]] | Baris untuk mengisi TableData di tiap [[Docs/Tipe Data/Column]]
 
 ## Format
 >**note** Tipe data ini tidak memiliki format khusus.

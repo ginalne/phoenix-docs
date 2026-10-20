@@ -1,0 +1,14 @@
+---
+    status: release
+    title: "Format Data : Quaternion Unit"
+    description: 
+    pageDecoration:
+      tree:
+        priority: 0
+    tags:
+      draft
+---
+# Format Data : Quaternion Unit
+
+Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data x, y, z, w dan unitnya.
+

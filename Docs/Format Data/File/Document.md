@@ -1,0 +1,16 @@
+---
+    status: release
+    title: "Format Data : Attachment"
+    description: 
+    pageDecoration:
+      tree:
+        priority: 0
+    tags:
+      draft
+---
+# Format Data : Attachment
+
+Format dalam [[Docs/Tipe Data/File]] untuk menyimpan data bersifat dokumen. Berikut adalah batasan ekstensi atau _mime type_ yang dapat diupload:
+1. Wajib bersifat _application_ seperti *.docs, *.xls, *.pdf, *.json dan lain-lain.
+2. _Mime type_ yang digunakan dimulai dengan prefix “_application/_”.
+
