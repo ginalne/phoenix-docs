@@ -43,13 +43,7 @@ Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat m
 
 ### External Read Only
 
-External Read Only mengatur atribut Node yang bersumber dari Tree lain, yaitu Node *clone* dan Node asalnya (*origin*). Pengaturan ini berlaku pada Tree dengan maupun tanpa Merger Mode, karena perubahan Node di Tree merger juga dapat mengubah Node di Tree non-merger. Setiap atribut memiliki pilihan sendiri:
-
-| Atribut | Jika [[^value/boolean/Non-Active]] | Jika [[^value/boolean/Active]] |
-| --- | --- | --- |
-| [[^field|Order]] | [[^field|Order]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Order]] Node tidak ikut berubah. |
-| [[^field|Name]] | [[^field|Name]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Name]] Node tidak ikut berubah. |
-| [[^field|Children]] | [[^field|Children]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Children]] Node tidak ikut berubah. |
+External Read Only mengatur perubahan nilai pada atribut Node kloningan yang aksinya berasal bersumber dari Tree lain.
 
 Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi External Read Only]].
 

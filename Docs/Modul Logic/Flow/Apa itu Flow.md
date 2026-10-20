@@ -38,15 +38,15 @@ _Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pen
 
 ## Cara Kerja
 
-Penjelasan cara kerja Flow lihat selengkap nya di [[Docs/Modul Interface/Flow/Cara Kerja|Cara Kerja Flow]].
+Penjelasan cara kerja Flow lihat selengkap nya di [[Docs/Modul Logic/Flow/Cara Kerja|Cara Kerja Flow]].
 
-## Mengelola Kanban
+## Mengelola Flow
 
-Berikut adalah halaman yang menjelaskan cara untuk mengelola Kanban:
-1. [[Docs/Modul Interface/Kanban/Membuat Baru]] Kanban dalam halaman kerja.
-2. [[Docs/Modul Interface/Kanban/Mengubah]] Atribut Kanban seperti [[^field|Name]], [[^field|Description]], atau [[^field|Table - Column]].
-3. [[Docs/Modul Interface/Kanban/Menghapus]] Kanban.
-4. [[Docs/Modul Interface/Kanban/Mengatur Templat]] Kartu dalam Kanban.
+Berikut adalah halaman yang menjelaskan cara untuk mengelola Flow:
+
+1. [[Docs/Modul Logic/Flow/Membuat Baru]] Flow dalam halaman kerja.
+2. [[Docs/Modul Logic/Flow/Mengubah]] Atribut Flow seperti [[^field|Name]], [[^field|Description]], atau [[^field|Table - Column]].
+3. [[Docs/Modul Logic/Flow/Menghapus]] Flow.
 
 ## Membangun Logika Flow
 
@@ -70,9 +70,11 @@ Anda dapat mengeksekusi proses secara manual melalui antarmuka Flow dengan menek
 Setelah dijalankan, Anda dapat melihat prosesnya pada [[#Memantau Proses]].
 
 ## Menghubungkan Block Event dari Komponen
+
 Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^button/event|Event]] pada masing-masing komponen. Selengkapnya lihat [[Docs/Event/Menghubungkan Event]].
 
 ## Memantau Proses
+
 1. Pada halaman kerja Flow, klik menu [[^button/activity|Activity]] atau tombol di sebelah kanan [[^button/refresh|Refresh]] (mode desktop)
 2. Panel [[Docs/Modul Logic/Flow/Flow Activity]] akan terbuka
 3. Klik [[^button/refresh|Refresh List]] untuk memuat ulang daftar, atau gunakan [[^field|Search Activity]] untuk mencari proses
@@ -81,7 +83,6 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Activity]].
 
 >**note** Info
 >Jika belum ada proses yang berjalan, panel menampilkan keterangan [[^field|No Activity]]
-
 
 
 ## Praktik Terbaik
