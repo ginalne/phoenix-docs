@@ -19,10 +19,14 @@ Phoenix adalah platform dinamis yang dirancang untuk membantu anda dan tim dalam
 Phoenix memiliki beberapa kelebihan yang ditawarkan dibanding menggunakan aplikasi konvensional:
 
 <!--
-Aplikasi konvensional maksudnya apa? contohnya apa?
+ `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:08</small>
+   @harbimartin Aplikasi konvensional maksudnya apa? contohnya apa?
+
+   `@harbimartin` <small style="opacity: 0.5">at 2026-10-20 22:23</small>
+  odoo? @yohanes300
 -->
 
-* Meningkatkan alur kerja: Membuat bagan alur dan pohon logika yang jelas serta visual untuk mengelola tugas, persetujuan, dan jadwal.
+* Meningkatkan alur kerja: Menerapkan kebutuhan dan permintaan, persetujuan, dan jadwal secara cepat tanpa menunggu .
   <!--
   `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:08</small>
    @harbimartin isinya tidak ada hub dengan poin
@@ -33,19 +37,24 @@ Aplikasi konvensional maksudnya apa? contohnya apa?
   `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:10</small>
    @everynyaw gak ngerti
 -->
-* Menata hubungan yang kompleks: Membuat node pohon dinamis untuk berbagai keperluan, mulai dari bagan organisasi hingga silsilah keluarga atau perincian proyek.
 
+* Menata hubungan yang kompleks: Membuat node pohon dinamis untuk berbagai keperluan, mulai dari bagan organisasi hingga silsilah keluarga atau perincian proyek.
   <!--
   `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:10</small>
    @everynyaw maksudnya fitur tree?
 -->
-* Berintegrasi dengan ekosistem Anda: Menghubungkan Phoenix dengan perangkat atau sistem yang sudah ada untuk menyinkronkan data dan memicu tindakan lintas platform.  
+
+* Berintegrasi dengan ekosistem Anda: Menghubungkan Phoenix dengan perangkat atau sistem yang sudah ada untuk menyinkronkan data dan memicu tindakan lintas platform.
+*  
 * Memusatkan pengetahuan dan aktivitas: Mengelola data, komunikasi, dan pelacakan proses dalam satu platform terpadu.
     
-* Sesuai dengan kebutuhan Anda: Mengatur jenis node, alur proses, dan struktur logika agar sesuai dengan kasus penggunaan unik Anda—tidak ada pendekatan yang dipaksakan seragam untuk semua orang.
+* Sesuai dengan cara kerja tim Anda: Mengatur model data, aturan, alur proses, dan struktur logika yang relevan dengan kasus unik tim Anda — tidak ada pendekatan atau standar yang dipaksakan seragam untuk semua orang.
 <!--
   `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:12</small>
    @everynyaw Saingan phoenix juga bisa melakukan yang serupa, hanya pendekatannya berbeda. pendekatan phoenix apa
+
+   `@harbimartin` <small style="opacity: 0.5">at 2026-10-20 22:19</small>
+  Tuh udh gua update @yohanes300
 -->
 
 ## Mengapa dinamakan "Phoenix"?
@@ -59,4 +68,7 @@ Phoenix isn’t just a tool—it’s a system that adapts, grows, and evolves wi
 <!--
   `@yohanes300` <small style="opacity: 0.5">at 2026-10-20 21:22</small>
    @everynyaw ini di halaman introduksi saja dengan bentuk narasi
+
+   `@harbimartin` <small style="opacity: 0.5">at 2026-10-20 22:19</small>
+  lah ini halaman introduksi bang @yohanes300
 -->
