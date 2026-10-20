@@ -1,7 +1,7 @@
 ---
     status: release
     title: "Apa itu Kanban?"
-    description: Penjelasan komponen Kanban untuk memvisualisasikan alur kerja dan progres data Table dalam bentuk kolom status dan kartu.
+    description: Penjelasan komponen Kanban untuk memvisualisasikan data Table dalam bentuk kolom status atau kategori dan kartu.
     pageDecoration:
       icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#aaa" viewBox="0 0 16 16">
   <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -119,8 +119,8 @@ Header setiap kolom berisi tiga bagian dari kiri ke kanan:
 | Fungsi | Aksi |
 | ------ | ---- |
 | Memindahkan kartu antar kolom | Seret kartu ke kolom tujuan. |
-| Mengulir daftar kartu | Arahkan kursor pada satu kolom, lalu gulir ke bawah atau ke atas. Ini berlaku jika tinggi tampilan kartu lebih besar dari layar Anda |
-| Mengulir kolom | Arahkan kursor pada halaman kerja, lalu gulir ke kiri atau ke kanan. Ini berlaku jika jumlah kolom cukup banyak sehingga lebar tampilan lebih besar dari layar Anda |
+| Menggulir daftar kartu | Arahkan kursor pada satu kolom, lalu gulir ke bawah atau ke atas. Ini berlaku jika tinggi tampilan kartu lebih besar dari layar Anda |
+| Menggulir kolom | Arahkan kursor pada halaman kerja, lalu gulir ke kiri atau ke kanan. Ini berlaku jika jumlah kolom cukup banyak sehingga lebar tampilan lebih besar dari layar Anda |
 
 <!--
   * [TODO] Mohon konfirmasi cara memindahkan kartu (*drag and drop*?). Mohon konfirmasi juga: apakah memindahkan kartu otomatis mengubah nilai EnumData pada Column di Row tersebut? Jika ya, tambahkan penjelasannya di sini.

@@ -21,6 +21,7 @@ Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, 
 - Gunakan istilah "bilah navigasi", bukan "navbar".
 - Jika topik cukup dalam diluar dari kotenks, tulis ringkasan di halaman utama dan arahkan ke subhalaman dengan tautan, lalu tandai dengan TODO bahwa subhalaman perlu dibuat.
 - Hasilkan file`.md`, bukan teks biasa di chat, kecuali pengguna hanya meminta komentar atau review.
+- **Tautkan Tipe Data di setiap penyebutan**, bukan hanya di Konsep Utama: `[[Docs/Tipe Data/Row]]`, `[[Docs/Tipe Data/Column]]`, `[[Docs/Tipe Data/Enum]]`, `[[Docs/Tipe Data/EnumData]]` (tanpa alias bila sama persis dengan nama halaman), termasuk di Cara Kerja, TL:DR, FAQ, dan tabel. *Alasan:* penulis menautkan hampir semua penyebutan. Penulis memakai `Docs/Tipe Data/Enum` untuk Enum sebagai tipe data, dan halaman komponen `Docs/Modul Data/Enum/Apa itu Enum` hanya bila membahas komponennya.
 - Setiap kali saya memberi informasi baru dalam penulisan dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update /phoenix-docs-silverbullet"**. Isinya alasan pembaruannya, lalu sertakan file.md nya agar perubahan skill menjadi mudah. Jika tidak ada yang relevan, jangan tulis bagian ini.
 - Setiap kali saya memberi informasi baru dalam dokumentasi Phoenix, tulis di akhir jawaban bagian **"Usulan update skill /phoenix-docs-knowledge"**, lalu sertakan file.md nya agar perubahan skill menjadi mudah. Isinya alasan pembaruannya. Jika tidak ada yang relevan, jangan tulis bagian ini.
 
@@ -46,25 +47,24 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 |Subhalaman komponen|`[[Docs/Modul <Nama>/<Komponen>/<Subhalaman>]]`|Data Access, TimelineData, Flow Activity|`[[Docs/Modul Developer/Workspace/Data Access]]`, `[[Docs/Modul Logic/Flow/Flow Activity]]`   |
 |Item anak komponen (misalnya Flow Block)|`[[Docs/Modul <Nama>/<Komponen>/<Item>/Pengenalan]]` untuk halaman pintu masuk, `[[Docs/Modul <Nama>/<Komponen>/<Item>/<Kategori>/Pengenalan]]` untuk kategori, `...#<Bagian>` untuk bagian di dalamnya|Flow Block: kategori Event, Data, Operator, Modular, dan seterusnya|`[[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan]]`, `[[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block]]` |
 |Flow Block spesifik|`[[Docs/Modul Logic/Flow/Flow Block/<Kategori>/<Nama Block>|<Nama Block>]]`|Dipakai pada tabel langkah Contoh Penggunaan, bukan halaman Pengenalan kategori|`[[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]`, `[[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]`|
-|Tipe data milik komponen|`[[Docs/Modul <Nama>/<Komponen>/<Tipe>]]`|TimelineData|`[[Docs/Modul Interface/Timeline/TimelineData]]`|
+|Data milik komponen|`[[Docs/Modul <Nama>/<Komponen>/<Tipe>]]`|Timeline Data, Timeline Event, TableView Data, SpaceObject, SpaceEnvironment, SpaceWeather|`[[Docs/Modul Interface/Timeline/Timeline Data]]`|
 |Modul <Nama>|`[[Docs/Modul <Nama>/Pengenalan|<Nama>]]`  | Data, Interface, Logic, Developer`[[Docs/Modul Developer/Pengenalan|Developer]]` |
 |Komponen|`[[Docs/Modul <Nama>/<Komponen>/Apa itu <Komponen>]]`|Data: Variable, Enum, Table, Tree. Interface: Table View, Gallery, Canvas, Kanban, Space, Timeline, Form. Logic: Flow. Developer: Group, Workspace|`[[Docs/Modul Logic/Flow/Apa itu Flow]]`|
 |Tipe Data|`[[Docs/Tipe Data/<Nama>]]`|Color, Tree, Expression, Mixed, Array, Boolean, Column, Number, Enum, EnumData, Complex, Month, Thing, Year, MonthYear, Text, Matrices, Node, Object, File, Query, Row, String, Table, TableData, Variable, Date, Time, DateTime, DateTimeZone|`[[Docs/Tipe Data/String]]` |
 |Format Data|`[[Docs/Format Data/<Tipe Data>/<Nama>]]`|String: Short Text, Password, Email, Phone Number, Mobile Number, URL, Slug, Username, Full Name, First Name, Initial, Country Code, Postal Code, License Plate, National ID, Passport Number, Tax ID, Bank Account, IBAN, Credit Card, MAC Address, IPv4, IPv6, UUID, Emoji. Number: Number, Integer, Decimal, Percentage, Rating. Text: Long Text, Rich Text, Markdown, Note, Chat. Complex: Numeration Unit, Length Unit, Area Unit, Volume Unit, Quaternion Unit, 1D Vector, 2D Vector, 3D Vector, 4D Vector, Geo, Currency. File: Attachment, Document, Media, Image, Photo, Audio, Video, Icon. Array: Popup List, Checkboxes, Direct List, Multiple Select. EnumData: Dropdown, Multiple Choices.|`[[Docs/Format Data/String/Short Text]]`      |
 |Anchor di halaman yang sama|`[[#Nama Bagian]]`|-|`[[#Flow]]`       |
-|Tautan dengan teks lain|tambahkan alias setelah`|`. Alias tidak diawali spasi. Di dalam sel tabel pada halaman Phoenix, pipa alias ditulis `|` biasa tanpa backslash (mengikuti revisi penulis)|Tidak ada. Silahkan sarankan ide untuk penjelasan jika dibutuhkan|`[[Docs/Event/Pengenalan|Event]]`  |
 |Anchor di halaman lain|`[[Docs/Antar Muka#Area Manajemen Folder]]` | [[Docs/Antarmuka#Bilah Navigasi]]`Header Navigation Phoenix.`[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antarmuka kerja komponen||
 |Gambar|`![[Docs/Modul <Nama>/<Komponen>/<nama-gambar>.png]]`|Nama file huruf kecil dipisah tanda hubung, ditaruh di folder komponen|`![[Docs/Modul Logic/Flow/blueprint-flow.png]]` |
 |Menu atau contextmenu antarmuka|`[[^field/<icon>|<Label>]]`    | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [slug komponen]. Kategori dan item menu tanpa icon memakai`[[^field|<Label>]]`     |`[[^field/add|Add]]`, `[[^field|Event]]`, `[[^field|Pulser]]`  |
-|Kolom isian dan teks informasi antarmuka|`[[^field|<Label>]]`|Berlaku untuk kolom isian, kolom pencarian, dan teks yang tampil di antarmuka (misalnya keterangan kosong atau informasi koordinat)|`[[^field|Name]]`, `[[^field|Search]]`, `[[^field|No Activity]]`         |
+|Label isian, kolom isian dan teks informasi antarmuka|`[[^field|<Label>]]`|Berlaku untuk kolom isian, kolom pencarian, dan teks yang tampil di antarmuka (misalnya keterangan kosong atau informasi koordinat)|`[[^field|Name]]`, `[[^field|Search]]`, `[[^field|No Activity]]`         |
 |Tombol antarmuka|`[[^button/<icon>|<Label>]]` atau`[[^button|<Label>]]`     | icon: add (berbentu plus), edit, delete, merge, publish, refresh, save, submission, event, activity, left (Prev), right (Next), x (Cancel), upload, ok (Ok), q (tombol Query, ditulis `[[^button/q]]` tanpa alias), empty (tidak ada ikon). Tanpa icon (`[[^button|...]]`) untuk tombol aksi umum seperti Create, Update, Delete (konfirmasi)  |`[[^button/edit|Edit]]`, `[[^button|Create]]`, `[[^button/empty|Trigger]]`       |
 |Nilai Boolean|`[[^value/boolean/allow]]`, `[[^value/boolean/disallow]]`, `[[^value/boolean/true]]`, `[[^value/boolean/disallow]]`|Gunakan di dalam tabel dan kalimat, bukan teks tebal|`[[^value/boolean/false]]`  |
 |Nama komponen/folder/data pada baris tabel|`[[^field/<slug>|<Nama>]]`|slug: workspace, group, folder, variable, enum, table, tableview, tree, canvas, flow, dan slug komponen lain|`[[^field/tableview|Daftar Pelanggan]]`|
 |Pilihan radio atau toggle |`[[^value/radio|<Label>]]`|full, half, quarter pada Table View|`[[^value/radio|full]]`|
 |Nama Column pada baris tabel atau kalimat|`[[^field/column|<Nama>]]`|Dipakai di tabel Komponen yang terlibat|`[[^field/column|Status]]`|
 |Nilai EnumData pada baris tabel atau kalimat|`[[^value/enumdata|<Nama>]]`|Nilai dari Enum, bukan nama Enum|`[[^value/enumdata|Menunggu]]`|
-
-
+|Halaman Styling|`[[Docs/Styling/Styling Class]]`| | |
+|Tombol hanya ikon (tanpa label)|`[[^button/<icon>]]`| q (Query) | `[[^button/q]]` |
 
 Catatan: alias tidak boleh diawali spasi (contoh salah: `[[^field/workspace| Workspace]]`).
 
@@ -140,6 +140,9 @@ description: <satu kalimat penjelasan halaman ini>
 
 <Langkah-langkah jika konteks bisa diubah>
 
+> **warning** <Judul singkat>
+> Dampak bila perubahan atribut memengaruhi konfigurasi turunan dengan kalimat pengecualian jika ada
+
 ## Menyegarkan <Konteks>
 
 <Langkah jika konteks bisa disegarkan>
@@ -172,8 +175,6 @@ description: <satu kalimat penjelasan halaman ini>
 | Fungsi   | Aksi      |
 | -------- | --------------------------------------------- |
 | <Fungsi> | <Aksi dengan mouse, scroll, atau klik kanan.> |
-
-<Sesi pengelolaan konteks. Konfirmasi apa saja isi konteks. Jika dirasa topik ini akan dalam, buat intro dan arahkan ke halaman lain>
 
 ## Membangun <Aspek> / Mengatur <Aspek>
 
@@ -237,6 +238,7 @@ Catatan format:
 - Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris.
 - Jangan menambah callout yang hanya mengulang isi tabel di dekatnya (contoh: catatan "Detail Merge, Publish, dan Event" di bawah tabel bilah navigasi yang sudah memuat tautannya).
 - Setelah menyalin pola langkah dari halaman lain, ganti semua nama konteks (misalnya jangan menulis "Klik kanan <Konteks halaman lain>" di halaman <konteks>).
+- Interaksi Antarmuka memuat gestur gulir (vertikal per kolom dan horizontal pada halaman kerja) lengkap dengan syarat berlakunya ("Ini berlaku jika ...").
 
 ## Pola yang dipakai penulis untuk konteks = Komponen:
 * **Langkah Membuat.** Pola yang dipakai penulis untuk konteks Komponen:
@@ -249,7 +251,7 @@ Catatan format:
   > <Komponen> yang baru dibuat belum memiliki data. Tambahkan [[<tipe data>]] di [[#Mengelola <Data>]].
 * **Langkah Mengubah.** Ditulis sebagai langkah bernomor: 1. Buka halaman kerja <Komponen>; 2. Klik `[[^button/edit|Edit]]`; 3. Ubah `[[^field|Name]]` atau `[[^field|Description]]` (sesuai atribut komponen); 4. Klik `[[^button|Update]]`. Tombol Save tidak dipakai.
 * **Langkah Menghapus.** Ditulis sebagai langkah bernomor: 1. Buka folder yang berisi <Komponen> di `[[Docs/Antarmuka#Area Manajemen Folder]]`; 2. Klik kanan <Komponen> ➜ `[[^button/delete|Delete]]`; 3. Konfirmasi dengan klik `[[^button|Delete]]`. Ganti nama konteks pada setiap langkah dan jangan menyisakan paragraf lama.
-* **Bagian "MenyegarkaTn** (opsional, untuk komponen yang punya Refresh), ditempatkan setelah Mengubah:
+* **Bagian "Menyegarkan** (opsional, untuk komponen yang punya Refresh), ditempatkan setelah Mengubah:
 * `## Menyegarkan <Komponen>`
   `Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.`
 * **Callout peringatan.** Ditempatkan setelah langkah Menghapus bila ada dampak. Format: `>**warning** <Judul singkat>` lalu isi pada baris`>` berikutnya.
@@ -301,5 +303,5 @@ Ada dua jenis diagram. Pilih sesuai isi bagian.
 5. Perlakukan fakta produk dari penulis sebagai kebenaran, maknai bukan telan perkataannya mentah-mentah, termasuk koreksi atas asumsi sebelumnya. Jika penulis mengoreksi aturan (misalnya satu anggota hanya di satu Group), perbarui seluruh bagian yang terdampak.
 6. Gambar dan contoh penamaan: nama folder, komponen, atau data pada gambar/screenshot yang diberikan penulis adalah kasus pribadi penulis dan tidak boleh disebut di dokumentasi. Jika perlu contoh penamaan, buat penamaan generik sendiri dan tandai dengan TODO agar penulis menyesuaikan gambarnya. Sisipkan placeholder gambar dengan sintaks`![[...png]]` pada tempat yang tepat, lalu tambahkan TODO penempatan gambar beserta anotasi yang disarankan (nomor penanda untuk setiap bagian yang dijelaskan). Screenshot dialog Create diletakkan di awal bagian Membuat dengan nama file `add-<slug>.png`, dan screenshot halaman kerja diletakkan di bagian Antarmuka dengan nama `interface-<slug>.png`. Bila penulis sendiri menambah keterangan di bawah screenshot (contoh: "Contoh gambar diatas merupakan halaman kerja <Komponen> dengan dua Data bernama `[[^field|...]]`"), pertahankan. Jika Claude yang membuat draf, sarankan kalimat keterangan dengan nama generik dan tandai TODO. Jika screenshot memuat salah ketik pada label aplikasi (misalnya "Pubilsh" yang seharusnya "Publish"), tulis label yang benar di dokumentasi dan sebutkan temuan itu di daftar cek penulis.
 7. **Cek konsistensi sebelum selesai:** pastikan Praktik Terbaik, Batasan dan Catatan, TL:DR, dan FAQ sesuai dengan isi halaman terbaru, semua anchor dan nama komponen pada langkah sudah benar, nomor langkah berurutan, dan istilah dipakai konsisten.
-8. Penulis menandai TODO yang sudah dikerjakan dengan `[DONE]` dan menulis jawaban di bawah TODO dengan awalan "Jawaban:".
+8. Penulis menandai TODO yang sudah dikerjakan dengan `[DONE]` dan menulis jawaban di bawah TODO dengan awalan "Jawaban:". Jika DONE dengan tanpa jawaban artinya sudah oke.
 9. Akhiri balasan dengan daftar singkat hal yang perlu dicek penulis, tanpa mengulang isi file.

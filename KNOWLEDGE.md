@@ -174,3 +174,32 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 - **Nama awal Data baru** adalah New Data (n) <- jika ada nama yang sama, n dari 1 sampai tak terhingga.
 - **arti (x) setelah nama ** adalah total baris hasil Query.
 - **Efek penghapusan Table View atau Data** tidak mempengaruhi komponen lain.
+
+## Kanban (Modul Interface)
+
+*   **Definisi:** Kanban adalah komponen modul Interface yang menampilkan data dalam bentuk kolom-kolom berdasarkan status atau kategori. Setiap data (Row Table) direpresentasikan sebagai kartu yang dapat dipindahkan antar kolom. **Kanban bersifat generik**: cocok untuk data apa pun yang memiliki tahapan atau kategori, tidak khusus untuk tugas. Penulis menulis "memvisualisasikan data secara segmentatif".
+*   **Path:** `Docs/Modul Interface/Kanban/Apa itu Kanban`. Subhalaman: `Docs/Modul Interface/Kanban/Template Kartu` (langkah rinci Add Column, Class, urutan, Delete; sudah ditandai DONE oleh penulis).
+*   **Table - Column (wajib):** saat membuat Kanban, field Table - Column wajib diisi. Daftar pilihannya hanya berisi Column berformat EnumData. EnumData dari Enum Column tersebut menjadi kolom Kanban. Contoh: Enum Status dengan 4 EnumData menghasilkan 4 kolom.
+*   **Mengubah Kanban (Edit > Update):** Name, Description, dan Table - Column dapat diubah. **Mengganti Table pada Table - Column otomatis menghapus template kartu.** Row di Table sumber tidak terhapus karena Kanban hanya menampilkan data. Peringatan diabaikan bila perubahan hanya pada Column di Table yang sama (diasumsikan template tetap; belum terkonfirmasi untuk Column dengan Enum berbeda).
+*   **Dialog Create Kanban** (gambar `add-kanban.png`): baris Name berisi bagian kiri tanda `/` (tampaknya folder tujuan) dan kolom Name, lalu Description, Table - Column (placeholder "Empty"), tombol Cancel dan Create.
+*   **Kartu:** setiap Row pada Table tampil sebagai kartu di kolom sesuai nilai Column EnumData-nya.
+*   **Halaman kerja** (gambar `interface-kanban.png`): bilah navigasi (judul Kanban dengan ikon Kanban dan Header Name, Edit, Refresh, kolom pencarian "Search Kanban Data...") dan area kolom.
+*   **Header kolom:** jumlah item (angka dengan ikon kartu), Name - Description EnumData, dan tombol Setting (ikon roda gigi). Pada screenshot, kolom terakhir tidak menampilkan Setting (belum terkonfirmasi penyebabnya).
+*   **Interaksi (jawaban penulis):**
+    *   Memindahkan kartu: *drag and drop*, atau klik kanan kartu lalu **Move To**.
+    *   Klik kiri kartu menampilkan **Form Table** (Row dalam bentuk form) untuk mengubah isi Row langsung.
+    *   Menu konteks kartu: **Detail** (hasilnya sama seperti klik kiri), **Add Row** (Row baru dengan nilai EnumData langsung terisi sesuai kolom tempat kursor), **Delete Row**, **Move To** (menampilkan daftar kolom yang tersedia, kecuali kolom nilai EnumData saat ini).
+    *   Menggulir daftar kartu: kursor pada satu kolom, gulir atas/bawah, berlaku bila tinggi kartu melebihi layar.
+    *   Menggulir kolom: kursor pada halaman kerja, gulir kiri/kanan, berlaku bila lebar kolom melebihi layar.
+    *   Memindahkan kartu mengubah nilai EnumData pada Row sumber.
+*   **Hak akses:** memindahkan kartu mengubah data Table sumber sehingga memerlukan izin Data Access data sumber (diterima penulis tanpa koreksi). Berlaku juga untuk Add Row dan Delete Row (asumsi).
+*   **Setting kolom:** klik Setting membuka modal "Setup Kanban Template" (gambar `setup-kanban.png`) untuk EnumData tersebut. Isi modal: Enum Data, Column Template (toggle), bagian Header, Body, Footer dengan tombol Add Header/Body/Footer Column dan tabel No., Column, Class, Action (Delete per baris), serta tombol Cancel dan Update.
+*   **Global dan Local:** toggle Column Template mati = Global (bawaan), toggle aktif = Local. Global: perubahan template memengaruhi EnumData lain **dalam Kanban yang sama** (tidak lintas Kanban). Local: hanya EnumData tersebut.
+*   **Template kartu:**
+    *   Column yang diisi tampil sesuai posisi template. Class berisi nama class styling; dijelaskan di `Docs/Styling/Styling Class`. Action berisi tombol Delete di setiap baris template.
+    *   Header: tata letak flex-row, di bagian paling atas kartu, urutan kiri ke kanan. Body: flex-col, urutan atas ke bawah. Footer: flex-row, di bagian paling bawah kartu, urutan kiri ke kanan.
+    *   **Informasi teknis Tailwind** (paket dan versi yang dipakai Angular) hanya untuk pemahaman Claude. Dokumentasi pengguna tidak menyebut Tailwind dan tidak memakai tautan eksternal, cukup arahkan ke `Docs/Styling/Styling Class`.
+*   **Template kosong:** kartu menampilkan Kolom Alias pada Table (biasanya berformat Short Text).
+*   **Menghapus Kanban:** Kanban dan template kartunya terhapus, Row di Table sumber tidak terhapus (asumsi, tidak dikoreksi penulis).
+*   **Belum terkonfirmasi:** cakupan Search, perbedaan desktop dan mobile, penyebab kolom terakhir tanpa Setting, tempat Add Row bisa dipicu (klik kanan kartu atau juga area kosong kolom), dampak Delete Row (diasumsikan menghapus Row dari Table dan tidak bisa dikembalikan), letak halaman penjelasan Form Table.
+*   **Penamaan pada screenshot** (nama folder di dialog Create, judul Kanban, nama EnumData, dan isi kartu) adalah kasus pribadi dan tidak disebut di dokumentasi.
