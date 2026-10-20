@@ -11,6 +11,7 @@
 ---
 # Selamat datang di Phoenix
 
+Kami merancang manual ini supaya anda bisa memaksimalkan Phoenix. Kami mengharapkan Phoenix bisa mengikuti 
 Baik Anda baru mulai menggunakan Phoenix maupun sedang mendalami API kami, dokumentasi ini merupakan panduan lengkap untuk membantu Anda menggunakan Phoenix secara efektif. Phoenix dirancang untuk mengatur dan menyederhanakan alur kerja, event, serta berbagai hubungan yang kompleks di antara tim, tools, dan komunitas Anda — dan dokumentasi ini akan membantu Anda memaksimalkan seluruh potensinya.
 
 Dokumentasi kami disusun secara terstruktur ke dalam beberapa bagian yang intuitif:
