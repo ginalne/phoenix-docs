@@ -1,7 +1,7 @@
 ---
     status: release
     title: "Cara Kerja Gallery"
-    description: 
+    description: Penjelasan cara kerja komponen Gallery
     pageDecoration:
       tree:
         priority: 3

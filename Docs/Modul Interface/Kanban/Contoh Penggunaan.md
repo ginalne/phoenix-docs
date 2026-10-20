@@ -23,7 +23,7 @@ Sebuah tim ingin melihat posisi setiap tugas, apakah masih direncanakan, sedang 
 | [[^field/kanban|Papan Tugas]] | Menampilkan setiap [[Docs/Tipe Data/Row]] [[^field/table|Tugas]] sebagai kartu pada kolom sesuai [[^field/column|Status]]. |
 | [[^field/flow|Notifikasi Tugas Selesai]] | Mengirim data ke sistem lain saat [[^field/column|Status]] berubah menjadi [[^value/enumdata|Selesai]]. |
 
-## Alur di Flow
+## Alur di Flow [[^field/flow|Notifikasi Tugas Selesai]]
 
 ```mermaid
 flowchart TB

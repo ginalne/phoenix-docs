@@ -4,7 +4,7 @@
     description: Penjelasan cara mengubah komponen Gallery
     pageDecoration: 
       tree: 
-        priority: 0
+        priority: 1
 ---
 # Mengubah Gallery
 

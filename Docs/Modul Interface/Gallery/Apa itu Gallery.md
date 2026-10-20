@@ -39,13 +39,17 @@ Gallery ideal untuk koleksi yang bersifat visual, seperti katalog, portofolio, a
 | [[Docs/Tipe Data/Query#Filter|Filter]] | Daftar kondisi (kolom, operator, dan operand) untuk menyaring Row yang tampil sebagai kartu. |
 | [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] | Column Table yang menjadi isi kartu bila template masih kosong. |
 
+## Cara Kerja
+
+Penjelasan cara kerja Gallery lihat selengkap nya di [[Docs/Modul Interface/Gallery/Cara Kerja|Cara Kerja Gallery]].
+
 ## Mengelola Gallery
 
-Berikut adalah halaman yang menjelaskan cara untuk mengelola Gallery:
-1. [[Docs/Modul Interface/Kanban/Membuat Baru]] Gallery dalam halaman kerja.
-2. [[Docs/Modul Interface/Kanban/Mengubah]] Atribut Gallery seperti [[^field|Name]], [[^field|Description]], atau [[^field|Table - Column]].
-3. [[Docs/Modul Interface/Kanban/Menghapus]] Gallery.
-4. [[Docs/Modul Interface/Kanban/Mengatur Templat]] Kartu dalam Gallery.
+Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+1. [[Docs/Modul Interface/Gallery/Membuat Baru]] Gallery dalam halaman kerja.
+2. [[Docs/Modul Interface/Gallery/Mengubah]] Atribut Gallery seperti [[^field|Name]], [[^field|Description]], atau [[^field|Filter]].
+3. [[Docs/Modul Interface/Gallery/Menghapus]] Gallery.
+4. [[Docs/Modul Interface/Gallery/Mengatur Templat]] Kartu dalam Gallery.
 
 ## Antarmuka
 
@@ -80,17 +84,4 @@ Kartu didalam Gallery bisa disesuaikan sesuai kebutuhan agar membuat interaksi m
 - Klik kanan kartu untuk mengubah Row, klik kiri kartu untuk [[^field|Detail]], [[^field|Add Row]], dan [[^field|Delete]].
 - Berhati-hatilah pada [[^field|Delete]] karena menghapus Row dari Table sumber.
 
-## FAQ : Pertanyaan yang Sering Diajukan
-
-> **faq**
-> **Apa yang tampil pada kartu jika template masih kosong?**
-> Kartu menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari Table, yang biasanya berformat [[Docs/Format Data/String/Short Text]].
-> **Apakah Table dapat diganti setelah Gallery dibuat?**
-> Tidak. [[^field|Table]] tidak dapat diubah. Buat Gallery baru jika Anda ingin memakai Table lain.
-> **Apakah Gallery dapat menampilkan gambar?**
-> Ya. Semua format data ditampilkan sebaik mungkin di kartu, termasuk gambar. Anda dapat menyesuaikan desainnya lewat [[^field|Styling]].
-> **Apakah mengubah Row lewat Gallery memerlukan izin?**
-> Ya. Mengubah Row lewat Form Table hanya dapat dilakukan jika Data Access Table di [[Docs/Modul Developer/Workspace/Data Access|Workspace]] mengizinkan.
-> **Apa isi kolom Styling?**
-> Isi dengan nama class styling, misalnya `text-right` atau `font-semibold`. Selengkapnya lihat [[Docs/Styling/Pengenalan|Styling]].
-
+## 

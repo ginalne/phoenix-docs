@@ -1,7 +1,7 @@
 ---
     status: release
     title: "Cara Kerja Kanban"
-    description: 
+    description: Penjelasan cara kerja komponen Kanban
     pageDecoration:
       tree:
         priority: 3

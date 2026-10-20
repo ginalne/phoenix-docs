@@ -5,7 +5,7 @@
     date: "2026-10-02"
     pageDecoration:
       tree:
-        priority: 4
+        priority: 0
 ---
 # Konfigurasi Merger Mode
 

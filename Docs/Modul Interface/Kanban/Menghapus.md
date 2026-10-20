@@ -1,14 +1,14 @@
 ---
     status: release
     title: "Menghapus Kanban"
-    description: 
+    description: Penjelasan cara menghapus komponen Kanban
     pageDecoration:
       tree:
-        priority: 1
+        priority: 0
     tags:
       draft
 ---
-# Menghapus
+# Menghapus Kanban
 
 1. Buka folder yang berisi Kanban di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan Kanban ➜ [[^button/delete|Delete]]

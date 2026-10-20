@@ -39,44 +39,7 @@ Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat m
 | [[#Default Configuration|Context]] | Status yang berlaku ketika Anda membuka menu konteks Node. |
 | [[#Menu Konteks Node]] | Menu yang muncul ketika Anda klik kanan pada Node, berisi aksi untuk Node tersebut dan pengaturan tampilan cabangnya. |
 
-## Cara Kerja Tree
-
-Tree menyimpan Node secara bertingkat, dan hanya Tree dengan Merger Mode yang dapat menambahkan Node dari Tree lain.
-
-```mermaid
-flowchart LR
-    M["**Tree Merger Mode**"] -->|"&nbsp;memiliki&nbsp;"| N1["Node"]
-    M -->|"&nbsp;memiliki&nbsp;"| N4["Node"]
-    N2["Node"] -.->|"&nbsp;Clone&nbsp;"| N1
-    N3["Node"] -.->|"&nbsp;Clone&nbsp;"| N4
-    A["**Tree Non-Merger**<br>Read Only"] -->|"&nbsp;memiliki&nbsp;"| N2
-    B["**Tree Non-Merger**<br>"] -->|"&nbsp;memiliki&nbsp;"| N3
-    N4["Node"] -.->|"&nbsp;Perubahan&nbsp;"| N3
-```
-
-Tree yang tidak bersifat merger tidak dapat menambahkan Node dari Tree lain. Node *clone* di Tree penggabung dapat dibuat dengan atau tanpa mengikuti perubahan Node asalnya, dan pilihan ini berkaitan dengan [[#External Read Only]]. Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].
-
 ## Membuat Tree
-
-![[Docs/Modul Data/Tree/add-tree.png]]
-1. Buka folder tempat Tree akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Data]] ➜ [[^field/tree|Tree]]
-3. Isi [[^field|Name]] dan [[^field|Description]], lalu atur pilihan lain sesuai kebutuhan (lihat [[#Atribut Tree]])
-4. Klik [[^button|Create]]
-
->**success** Tree berhasil dibuat
-> Tree yang baru dibuat otomatis memiliki satu [[Docs/Tipe Data/Node]] bernama [[^field|Origin]]. Tambahkan Node lain di [[#Mengelola Node]].
-
-### Atribut Tree
-
-| Isian | Fungsi |
-| --- | --- |
-| [[^field|Directory]] | Folder tempat Tree berada. Terisi otomatis sesuai folder yang Anda klik kanan. Jika dikosongkan, Tree berada di root. |
-| [[^field|Name]] | Nama Tree. |
-| [[^field|Description]] | Keterangan singkat tentang Tree. |
-| [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]] | Jika aktif, Tree dapat menambahkan (*clone*) Node dari Tree lain. Bawaan: [[^value/boolean/Non-Active]]. Tidak dapat diubah setelah Tree dibuat. |
-| [[#External Read Only]] | Tiga pilihan, yaitu [[^field|Order]], [[^field|Name]], dan [[^field|Children]]. Bawaan masing-masing: [[^value/boolean/Non-Active]]. |
-| [[#Default Configuration]] | Pengaturan tampilan awal, yaitu [[^field|Horizontal Mode]] dan [[^field|Context]]. |
 
 ### External Read Only
 
@@ -108,15 +71,6 @@ Untuk pilihan [[^field|Context]]:
 Kedua isian ini hanya nilai awal. Di halaman kerja, Anda dapat mengganti mode dan context secara sementara (lihat [[#Interaksi Antarmuka Tree]]). Untuk mengubah nilai awalnya, gunakan [[^button/edit|Edit]].
 
 ## Mengubah Tree
-
-1. Buka halaman kerja Tree
-2. Klik [[^button/edit|Edit]]
-3. Perbarui isian yang diperlukan
-4. Klik [[^button|Update]]
-
->**note** Merger Mode tidak dapat diubah
-> [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] ditentukan saat Tree dibuat dan tidak dapat diubah setelahnya. Tentukan pilihan ini sebelum Anda klik [[^button|Create]].
-
 ## Menyegarkan Tree
 
 Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.

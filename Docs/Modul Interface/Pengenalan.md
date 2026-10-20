@@ -47,7 +47,7 @@ lihat selengkapnya [[Docs/Modul Interface/Gallery/Apa itu Gallery]]
 
 ## Kanban
 
-Kanban menampilkan data dalam bentuk kolom-kolom berdasarkan status atau kategori, dan setiap data direpresentasikan sebagai kartu yang dapat dipindahkan antar kolom. Komponen ini membantu Anda memvisualisasikan alur kerja dan memantau progres tugas secara intuitif.
+Kanban menampilkan data dalam bentuk kolom-kolom berdasarkan [[Docs/Tipe Data/EnumData]] yang diterapkan, dan setiap data direpresentasikan sebagai kartu yang dapat dipindahkan antar kolom. Komponen ini membantu Anda memvisualisasikan alur kerja dan memantau progres tugas secara intuitif.
 
 lihat selengkapnya [[Docs/Modul Interface/Kanban/Apa itu Kanban]]
 

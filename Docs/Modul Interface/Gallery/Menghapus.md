@@ -1,10 +1,10 @@
 ---
     status: release
     title: "Menghapus Gallery"
-    description: 
+    description: Penjelasan cara menghapus komponen Gallery
     pageDecoration:
       tree:
-        priority: 1
+        priority: 0
     tags:
       draft
 ---
