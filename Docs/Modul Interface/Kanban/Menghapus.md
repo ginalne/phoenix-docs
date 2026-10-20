@@ -4,11 +4,11 @@
     description: 
     pageDecoration:
       tree:
-        priority: 0
+        priority: 1
     tags:
       draft
 ---
-# Menghapus Kanban
+# Menghapus
 
 1. Buka folder yang berisi Kanban di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan Kanban ➜ [[^button/delete|Delete]]

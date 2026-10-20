@@ -19,3 +19,4 @@ flowchart LR
     R -->|&nbsp;Kartu&nbsp;| K
     T -.->|&nbsp;Column berformat EnumData&nbsp;| E
 ```
+

@@ -39,146 +39,21 @@ Gallery ideal untuk koleksi yang bersifat visual, seperti katalog, portofolio, a
 | [[Docs/Tipe Data/Query#Filter|Filter]] | Daftar kondisi (kolom, operator, dan operand) untuk menyaring Row yang tampil sebagai kartu. |
 | [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] | Column Table yang menjadi isi kartu bila template masih kosong. |
 
-## Cara Kerja Gallery
+## Mengelola Gallery
 
-Gallery mengambil Row dari satu Table, lalu menampilkan setiap Row sebagai satu kartu yang isinya ditata oleh template.
-```mermaid
-flowchart LR
-    A["Table"] -->|&nbsp;Row&nbsp;| B["Gallery"]
-    C["Filter"] -.->|&nbsp;Menyaring&nbsp;| B
-    D["Template Kartu"] -->|&nbsp;Menata isi&nbsp;| B
-    B -->|&nbsp;Setiap Row&nbsp;| E["Kartu"]
-```
+Berikut adalah halaman yang menjelaskan cara untuk mengelola Gallery:
+1. [[Docs/Modul Interface/Kanban/Membuat Baru]] Gallery dalam halaman kerja.
+2. [[Docs/Modul Interface/Kanban/Mengubah]] Atribut Gallery seperti [[^field|Name]], [[^field|Description]], atau [[^field|Table - Column]].
+3. [[Docs/Modul Interface/Kanban/Menghapus]] Gallery.
+4. [[Docs/Modul Interface/Kanban/Mengatur Templat]] Kartu dalam Gallery.
 
-## Membuat Gallery
+## Antarmuka
 
-![[Docs/Modul Interface/Gallery/add-gallery2.png]]
-1. Buka folder tempat Gallery akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/gallery|Gallery]]
-3. Isi [[^field|Name]] dan [[^field|Description]]
-4. Pilih [[Docs/Tipe Data/Table]] pada [[^field|Table]]
-5. Isi [[^field|Filter]] jika dibutuhkan
-6. Klik [[^button|Create]]
-
-Bagian di kiri tanda `/` pada [[^field|Name]] adalah folder tempat Gallery ditempatkan. Bagian ini terisi sesuai folder tempat Anda menambahkan Gallery, dan dapat dikosongkan sehingga Gallery berada di root.
-
-[[^field|Table]] wajib diisi dan tidak dapat diubah setelah Gallery dibuat. Pilih Table sumber dengan tepat.
-
->**success** Gallery berhasil dibuat
-> Setiap Row pada Table langsung tampil sebagai kartu. Karena template masih kosong, kartu menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari Table. Atur tampilan kartu di [[#Mengatur Template Kartu]].
-
-## Mengubah Gallery
-
-1. Buka halaman kerja Gallery
-2. Klik [[^button/edit|Edit]]
-3. Ubah [[^field|Name]], [[^field|Description]], atau [[^field|Filter]]
-4. Klik [[^button|Update]]
-
-Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan.
-
->**warning** Table tidak dapat diubah
-> [[^field|Table]] tidak dapat diubah setelah Gallery dibuat. Jika Anda ingin memakai Table lain, buat Gallery baru. Mengubah [[^field|Filter]] hanya memengaruhi Row yang tampil sebagai kartu, Row di Table sumber tidak terhapus.
-
-## Menyegarkan Gallery
-
-Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
-
-## Menghapus Gallery
-
-1. Buka folder yang berisi Gallery di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan Gallery ➜ [[^button/delete|Delete]]
-3. Konfirmasi dengan klik [[^button|Delete]]
-
->**warning** Dampak penghapusan Gallery
-> Gallery beserta [[^field|Filter]] dan template kartunya terhapus. Row di Table sumber tidak terhapus karena Gallery hanya menampilkan data.
-
-## Antarmuka Gallery
-
-![[Docs/Modul Interface/Gallery/interface-gallery2.png]]
-Halaman kerja Gallery terdiri dari bilah navigasi di bagian atas dan area kartu di bagian bawah. Setiap Row pada Table tampil sebagai satu kartu di area kartu.
-
-### Bilah navigasi Gallery terdiri dari:
-
-| Tombol | Fungsi |
-| ------ | ------ |
-| [[^button/edit|Edit]] | Mengubah [[^field|Name]], [[^field|Description]], dan [[^field|Filter]] Gallery. |
-| [[^button/setting|Column]] | Membuka modal [[^field|Setup Gallery Template]] untuk mengatur template kartu. Selengkapnya lihat [[#Mengatur Template Kartu]]. |
-| [[^button/refresh|Refresh]] | Memuat ulang tampilan. |
-| [[^field|Search Gallery Data...]] | Mencari data pada Gallery. |
-
-### Interaksi Antarmuka Gallery
-
-| Fungsi | Aksi |
-| ------ | ---- |
-| Mengubah Row | Klik kiri kartu, Row tampil dalam bentuk Form Table untuk diperbarui. Berlaku jika Data Access Table di Workspace mengizinkan. |
-| Melihat detail Row | Klik kanan kartu ➜ [[^field|Detail]] |
-| Menambah Row | Klik kanan kartu ➜ [[^field|Add Row]] |
-| Menghapus Row | Klik kanan kartu ➜ [[^field|Delete]] |
-
->**warning** Menghapus Row dari Gallery
-> Row yang dihapus lewat Gallery terhapus dari Table sumber dan tidak dapat dikembalikan.
+Penjelasan antarmuka Gallery lihat selengkap nya di [[Docs/Modul Interface/Gallery/Antarmuka|Antarmuka Gallery]].
 
 ## Mengatur Template Kartu
 
-Klik [[^button/setting|Column]] untuk membuka modal [[^field|Setup Gallery Template]]. Template menentukan [[^field|Column]] mana yang tampil pada kartu dan di posisi mana. Setiap bagian memiliki tombol tambah ([[^button/add|Add Header Column]], [[^button/add|Add Body Column]], [[^button/add|Add Footer Column]]) dan tabel dengan kolom [[^field|No.]], [[^field|Column]], [[^field|Styling]], dan [[^field|Action]].
-
-![[Docs/Modul Interface/Gallery/gallery-modal.png]]
-Kartu memiliki tiga bagian template:
-
-- [[^field|Header]] berada di bagian paling atas kartu dan tersusun mendatar (*flex-row*). Urutan pertama hingga terakhir dalam daftar adalah dari kiri ke kanan.
-- [[^field|Body]] tersusun menurun (*flex-col*). Urutan dalam daftar adalah dari atas ke bawah.
-- [[^field|Footer]] berada di bagian paling bawah kartu dan tersusun mendatar (*flex-row*). Urutan pertama hingga terakhir dalam daftar adalah dari kiri ke kanan.
-
-[[Docs/Tipe Data/Column]] yang Anda isi akan tampil sesuai posisi template-nya. Semua format data ditampilkan sebaik mungkin, termasuk gambar. Isi [[^field|Styling]] dengan nama class styling untuk menyesuaikan desain, misalnya `text-right` atau `font-semibold`. Daftar class lengkap ada di [[Docs/Styling/Pengenalan|Styling]].
-
-Jika template masih kosong, seperti saat Gallery pertama kali dibuat, kartu menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari Table, yang biasanya berformat [[Docs/Format Data/String/Short Text]].
-
-Langkah rinci menambah Column, mengisi Styling, dan menghapus Column dari template ada di [[Docs/Modul Interface/Gallery/Templat Kartu]].
-
-## Contoh Penggunaan
-
-**Katalog produk yang selalu terbarui**
-
-Tim penjualan menyimpan data produk di Table, lalu membutuhkan katalog yang menarik untuk dilihat sekilas dan tetap terhubung dengan sistem lain, misalnya toko daring. Dengan Gallery, setiap produk tampil sebagai kartu bergambar, dan Flow mengirim produk baru ke sistem lain secara otomatis.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| -------- | ----- |
-| [[^field/table|Data Produk]] | Menyimpan data produk, termasuk gambar, nama, dan harga. |
-| [[^field/gallery|Katalog Produk]] | Menyajikan setiap produk sebagai kartu visual. |
-| [[^field/flow|Kirim Produk Baru]] | Mengirim data produk baru ke sistem lain. |
-
-**Alur di Flow**
-
-```mermaid
-flowchart LR
-    A@{ shape: database, label: "**Table**<br/>Data Produk" } -.->|&nbsp;Row ditambahkan&nbsp;| B@{ shape: rounded, label: "**Table Row Event**" }
-    B -->|"&nbsp;**[Row]**&nbsp;"| C@{ shape: rounded, label: "**HTTP Request**" }
-    C --> D@{ shape: processes, label: "Sistem lain<br/>menerima data" }
-    D --> E@{ shape: circle, label: "Selesai" }
-```
-
-| Langkah | Flow Block | Peran dalam alur | Hasil |
-| ------- | ---------- | ---------------- | ----- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]] | Mendeteksi Row produk baru pada Table. | Output bertipe [[Docs/Tipe Data/Row]]. |
-| 2 | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]] | Mengirim data produk ke sistem lain. | Sistem lain menerima data produk. |
-
-**Hasil yang dirasakan**
-
-- Produk baru langsung muncul sebagai kartu bergambar di Gallery tanpa perlu menyusun ulang tampilan.
-- Sistem lain menerima data produk yang sama secara otomatis, sehingga tidak ada input ganda.
-- Kartu tampil seragam karena template dan [[Docs/Styling/Pengenalan|Styling]] berlaku untuk semua produk.
-
-**Ide skenario lain**
-
-| Jenis nilai | Contoh integrasi |
-| ----------- | ---------------- |
-| Portofolio | Karya baru yang dikirim lewat [[Docs/Modul Interface/Form/Apa itu Form|Form]] langsung tampil sebagai kartu di Gallery. |
-| Daftar aset | [[Docs/Tipe Data/Query#Filter|Filter]] menampilkan hanya aset yang berstatus tersedia, dan Flow memberi kabar saat status berubah. |
-| Katalog menu | Perubahan harga di Table langsung tampil pada kartu, dan Flow mengirim pembaruan ke sistem pemesanan. |
-
-Dengan Gallery, data produk tidak hanya tersimpan, tetapi juga tampil menarik dan terhubung ke sistem lain.
+Kartu didalam Gallery bisa disesuaikan sesuai kebutuhan agar membuat interaksi menjadi lebih mudah, selengkapnya lihat [[Docs/Modul Interface/Gallery/Mengatur Templat]].
 
 ## Praktik Terbaik
 

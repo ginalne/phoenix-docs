@@ -4,7 +4,7 @@
     description: Penjelasan antarmuka di halaman kerja komponen Kanban
     pageDecoration:
       tree:
-        priority: 0
+        priority: -1
     tags:
       draft
 ---
@@ -14,16 +14,16 @@
 
 Halaman kerja Kanban terdiri dari bilah navigasi di bagian atas dan area kolom di bagian bawah. Setiap kolom mewakili satu [[Docs/Tipe Data/EnumData]], dan kartu berada di dalam kolom sesuai nilai [[Docs/Tipe Data/EnumData]] pada [[Docs/Tipe Data/Row]]-nya.
 
-### Bilah navigasi Kanban terdiri dari:
+## Bilah navigasi Kanban terdiri dari:
 
 | Elemen | Fungsi |
 | ------ | ------ |
 | Judul Kanban | Menampilkan ikon Kanban dan Header Name. |
-| [[^button/edit|Edit]] | Mengubah atribut Kanban. Selengkapnya lihat [[Docs/Modul Interface/Kanban/Mengubah Kanban]]. |
+| [[^button/edit|Edit]] | Mengubah atribut Kanban. Selengkapnya lihat [[Docs/Modul Interface/Kanban/Mengubah]]. |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan Kanban. |
 | [[^field|Search Kanban Data...]] | Mencari data pada Kanban. |
 
-### Header Kolom Kanban
+## Header Kolom Kanban
 
 Header setiap kolom berisi tiga bagian dari kiri ke kanan:
 
@@ -33,7 +33,7 @@ Header setiap kolom berisi tiga bagian dari kiri ke kanan:
 | [[^field|Name]] - [[^field|Description]] | Nama [[Docs/Tipe Data/EnumData]] yang menjadi kolom. |
 | Tombol [[^button/setting]] | Membuka modal pengaturan template untuk [[Docs/Tipe Data/EnumData]] tersebut. Lihat [[#Mengatur Template Kartu]]. |
 
-### Interaksi Antarmuka Kanban
+## Interaksi Antarmuka Kanban
 
 | Fungsi | Aksi |
 | ------ | ---- |
@@ -43,7 +43,7 @@ Header setiap kolom berisi tiga bagian dari kiri ke kanan:
 | Menggulir daftar kartu | Arahkan kursor pada satu kolom, lalu gulir ke bawah atau ke atas. Ini berlaku jika tinggi tampilan kartu lebih besar dari layar Anda. |
 | Menggulir kolom | Arahkan kursor pada halaman kerja, lalu gulir ke kiri atau ke kanan. Ini berlaku jika jumlah kolom cukup banyak sehingga lebar tampilan lebih besar dari layar Anda. |
 
-### Menu Konteks Kartu
+## Menu Konteks Kartu
 
 | Menu | Fungsi |
 | ---- | ------ |
@@ -54,3 +54,4 @@ Header setiap kolom berisi tiga bagian dari kiri ke kanan:
 
 >**warning** Delete Row menghapus data sumber
 >[[^field/delete|Delete Row]] menghapus [[Docs/Tipe Data/Row]] dari [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber, bukan hanya kartu pada Kanban. [[Docs/Tipe Data/Row]] yang dihapus tidak dapat dikembalikan.
+

@@ -8,7 +8,7 @@
     tags:
       draft
 ---
-# Membuat Kanban
+# Membuat Kanban Baru
 
 ![[Docs/Modul Interface/Kanban/add-kanban.png]]
 
@@ -23,3 +23,4 @@
 
 >**success** Kanban berhasil dibuat
 >Kanban yang baru dibuat belum memiliki template, sehingga setiap kartu hanya menampilkan [[Docs/Modul Data/Table/Apa itu Table#Membuat Table|Alias]] dari [[Docs/Modul Data/Table/Apa itu Table|Table]]. Atur tampilan kartu di [[#Mengatur Template Kartu]].
+
