@@ -21,10 +21,20 @@ Tujuan:
 ## Solusi 
 Struktur Folder:
 Pemetaan Peran dalam Group:
-
-
+Matriks Akses:
+Data yang Disimpan:
+Otomasi dengan Flow:
+Berbagi Pengumuman:
 
 ## Hasil 
+Skenario Penggunaan:
+Perbedaan Sebelum dan Sesudah:
+
+## Saran dan Trik
+Praktik Terbaik:
+Batasan dan Catatan:
+Mulai Darimana:
+
 
 
 
