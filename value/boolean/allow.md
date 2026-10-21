@@ -3,5 +3,5 @@
     meta/library
     value
   pageDecoration:
-    icon: x
+    icon: check
 ---

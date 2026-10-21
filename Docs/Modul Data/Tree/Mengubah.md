@@ -7,10 +7,10 @@
           priority: 1.5
 ---
 # Mengubah Tree
-
+![[Docs/Modul Data/Tree/update-tree.png]]
 1. Buka halaman kerja Tree
 2. Klik [[^button/edit|Edit]]
-3. Perbarui isian yang diperlukan
+3. Perbarui isian yang diperlukan. Penjelasan tentang atribut lihat [[Docs/Modul Data/Tree/Membuat Baru#Atribut Tree]]
 4. Klik [[^button|Update]]
 
 >**note** Merger Mode tidak dapat diubah

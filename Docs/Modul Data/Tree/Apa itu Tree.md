@@ -43,13 +43,19 @@ Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat m
 
 Penjelasan cara kerja Table View lihat selengkap nya di [[Docs/Modul Interface/Table View/Cara Kerja|Cara Kerja Table View]].
 
-## Mengelola Table View
+## Mengelola Tree
 
 Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
 1. [[Docs/Modul Data/Tree/Membuat Baru]] Tree dalam halaman kerja.
 2. [[Docs/Modul Data/Tree/Mengubah]] Atribut Tree seperti [[^field|Name]], [[^field|Description]].
 3. [[Docs/Modul Data/Tree/Menghapus]] Table View.
 4. [[Docs/Modul Data/Tree/Node/Pengenalan|Mengelola Node]] seperti menambahkan, mengubah atau memperbarui Node.
+
+### Merger Node
+
+Merger Node adalah atribut dalam Tree agar Node dapat dikloning dari [[Docs/Tipe Data/Node]] yang sudah ada.
+
+Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].
 
 ### External Read Only
 
@@ -81,70 +87,6 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 ## Antarmuka Tree
 
-![[Docs/Modul Data/Tree/antarmuka-tree.png]]
-Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di bagian bawah yang menampilkan pohon beserta Node-nya. Di sudut bawah area kerja terdapat informasi [[^field|context _]], [[^field|mode _]], koordinat [[^field|x _ y _]], dan [[^field|scale _]].
-
-### Bilah navigasi Tree terdiri dari:
-
-| Elemen | Fungsi |
-| --- | --- |
-| Judul Tree | Menampilkan ikon Tree dan nama Tree. |
-| [[^button/edit|Edit]] | Mengubah atribut Tree. Lihat [[#Mengubah Tree]]. |
-| [[^button/publish|Publish]] | Mengatur publikasi Tree. Lihat [[Docs/Modul Data/Tree/Publish]]. |
-| [[^button/event|Event]] | Menghubungkan Tree dengan Event. Lihat [[Docs/Modul Data/Tree/Event]]. |
-| [[^button/refresh|Refresh]] | Memuat ulang tampilan. Lihat [[#Menyegarkan Tree]]. |
-| [[^field|Search Tree Data...]] | Mencari Node berdasarkan [[^field|Name]]. Pencarian tidak mencakup atribut Node yang lain. |
-
-### Informasi Area Kerja
-
-| Informasi | Penjelasan |
-| --- | --- |
-| [[^field|context _]] | Nilai [[#Default Configuration|Context]] yang sedang berlaku. Klik untuk menggantinya. |
-| [[^field|mode _]] | Arah tampilan pohon, yaitu Horizontal atau Vertical. Klik untuk menggantinya. Lihat [[#Default Configuration|Mode]]. |
-| [[^field|x _ y _]] | Koordinat posisi tampilan pada area kerja. |
-| [[^field|scale _]] | Skala tampilan pada area kerja. |
-
-### Interaksi Antarmuka Tree
-
-| Fungsi | Aksi |
-| --- | --- |
-| Menggeser tampilan (*pan*) | Tekan dan tahan pada bagian yang kosong dalam halaman kerja, lalu gerakkan kursor. Lepas untuk selesai. |
-| Mengubah skala tampilan (*zoom*) | Gulir pada bagian halaman kerja. |
-| Memusatkan tampilan | Klik informasi koordinat [[^field|x _ y _]]. Tampilan kembali ke tengah. |
-| Mengembalikan skala | Klik informasi [[^field|scale _]]. Tampilan kembali berskala 1. |
-| Mengganti mode | Klik informasi [[^field|mode _]]. Perubahan bersifat sementara. |
-| Mengganti context | Klik informasi [[^field|context _]]. Perubahan bersifat sementara. |
-| Membuka menu konteks Node | Klik kanan pada Node. Hasilnya mengikuti nilai [[^field|context _]]. |
-
-### Menu Konteks Node
-
-![[Docs/Modul Data/Tree/node-menu.png]]
-Klik kanan pada Node untuk membuka menu konteks berikut.
-
-| Menu | Fungsi |
-| --- | --- |
-| [[^field/edit|Edit]] | Mengubah Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Mengubah Node]]. |
-| [[^field/eye|Detail]] | Melihat detail Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Melihat Detail Node]]. |
-| [[^field/collapse|Collapse]] atau [[^field/expand|Expand]] | Melipat atau memperluas keturunan selanjutnya dari Node. |
-| [[^field|View]] | Membuka submenu pengaturan tampilan keturunan Node (lihat tabel di bawah). |
-| [[^field/import|Import]] | Memasukkan data ke Node. Lihat [[Docs/Modul Data/Tree/Import Node]]. |
-| [[^field/export|Export]] | Mengeluarkan data dari Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Export Node]]. |
-
-Submenu [[^field|View]]:
-
-| Menu | Fungsi |
-| --- | --- |
-| [[^field/collapse|Collapse Below Level]] | Melipat keturunan pada level Node ini (semua Node). |
-| [[^field/expand|Expand Children Only]] | Memperluas hanya satu keturunan di bawahnya. |
-| [[^field/collapse|Collapse Descendant]] | Melipat semua keturunan secara *recursive*. |
-| [[^field/expand|Expand Descendant]] | Membuka semua keturunan secara *recursive*. |
-| [[^field|Hide Collapsed]] | Menyembunyikan anak yang dilipat. |
-| [[^field|Show Collapsed]] | Memunculkan anak yang dilipat. |
-| [[^field/collapse|Collapse and Hide]] | Melipat sekaligus menyembunyikan anak yang dilipat. |
-
->**note** Node tanpa anak
-> Jika Node tidak memiliki anak, pilihan [[^field|Expand]] atau [[^field|Collapse]] dan [[^field|Expand Children Only]] berubah menjadi [[^field|No children...]].
-
 ## Mengelola Node
 
 Halaman kerja Tree adalah untuk mengelola [[Docs/Tipe Data/Node]], mulai dari menambahkan, mengubah atribut, melihat detail, menghapus, hingga mengimpor dan mengekspor. Sebagian aksi tersedia di [[#Menu Konteks Node]]. Langkah rinci ada di [[Docs/Modul Data/Tree/Mengelola Node]].
@@ -155,52 +97,10 @@ Pelajari fitur pendukung Tree di halaman berikut:
 
 - [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]]: menggabungkan Node dari beberapa Tree.
 - [[Docs/Modul Data/Tree/Konfigurasi External Read Only]]: mengatur atribut Node yang ikut berubah dari Tree lain.
-- [[Docs/Modul Data/Tree/Publish]]: mengatur publikasi Tree.
+- [[Docs/Modul Data/Tree/Publikasi]]: mengatur publikasi Tree.
 - [[Docs/Modul Data/Tree/Event]]: menghubungkan Tree dengan Event.
 
-## Contoh Penggunaan
 
-**Katalog Kategori Terpadu dari Beberapa Divisi**
-
-Setiap divisi menyusun kategori produknya sendiri dalam bentuk pohon, tetapi tim pusat membutuhkan satu katalog terpadu untuk dipakai laporan dan sistem lain. Dengan Tree, setiap divisi tetap mengelola [[Docs/Tipe Data/Node]]-nya sendiri, sementara satu Tree penggabung menghimpun semuanya tanpa menyalin ulang secara manual. Ketika katalog terpadu berubah, sistem lain langsung menerima perubahannya.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| --- | --- |
-| [[^field/tree|Tree Divisi A]] | Tree non-merger yang menyimpan kategori milik divisi pertama. |
-| [[^field/tree|Tree Divisi B]] | Tree non-merger yang menyimpan kategori milik divisi kedua. |
-| [[^field/tree|Katalog Terpadu]] | Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] yang menambahkan (*clone*) Node dari kedua Tree divisi. |
-| [[^field/flow|Sinkronisasi Katalog]] | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] yang meneruskan perubahan katalog ke sistem lain. |
-
-**Alur di Flow**
-
-```mermaid
-flowchart LR
-    A@{ shape: database, label: "**Tree**<br/>Katalog Terpadu" } -.->|&nbsp;Node Berubah&nbsp;| B@{ shape: rounded, label: "**Tree Node Event**" }-->|"&nbsp;**[Node]**&nbsp;"| C@{ shape: rounded, label: "**Node Parse**" }-->|"&nbsp;**[Object]**&nbsp;"| D@{ shape: rounded, label: "**HTTP Request**" } --> E@{ shape: processes, label: "Sistem lain<br/>menerima data" } --> F@{ shape: circle, label: "Selesai" }
-```
-
-| Langkah | Flow Block | Peran dalam alur | Hasil |
-| --- | --- | --- | --- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event]] | Memicu alur ketika Node pada Tree terpadu berubah. | Node yang berubah. |
-| 2 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Node Parse|Node Parse]] | Mengurai Node menjadi data yang dapat dikirim. | Data Node yang siap dikirim. |
-| 3 | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]] | Mengirim data ke sistem lain. | Sistem lain menerima katalog terbaru. |
-
-**Hasil yang dirasakan**
-
-- Setiap divisi tetap bebas mengelola kategorinya sendiri, tanpa mengubah Tree divisi lain.
-- Tim pusat memiliki satu katalog terpadu yang tidak perlu disusun ulang secara manual.
-- Sistem lain selalu menerima kategori terbaru tanpa proses kirim manual.
-
-**Ide skenario lain**
-
-| Jenis nilai | Contoh integrasi |
-| --- | --- |
-| Struktur organisasi lintas cabang | Tree penggabung menghimpun struktur tiap cabang, lalu [[Docs/Modul Data/Tree/Publish|Publish]] membagikannya ke pihak yang membutuhkan. |
-| Hierarki kategori produk | [[Docs/Modul Data/Table/Apa itu Table|Table]] memakai Node dari Tree sebagai pilihan kategori pada setiap baris produk. |
-| Menu atau navigasi bertingkat | Tree menyimpan susunan menu, lalu Flow memperbarui sistem lain setiap kali susunannya berubah. |
-
-Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemiliknya masing-masing, tetapi dapat dipakai bersama oleh seluruh tim.
 
 ## Praktik Terbaik
 
@@ -230,22 +130,4 @@ Dengan memisahkan Tree sumber dan Tree penggabung, data tetap dikelola oleh pemi
 - Halaman kerja menampilkan pohon dengan [[#Default Configuration|Mode]] horizontal atau vertikal, dilengkapi [[^field|Search Tree Data...]] yang hanya mencari [[^field|Name]] (lihat [[#Antarmuka Tree]]).
 - Klik kanan pada Node untuk membuka [[#Menu Konteks Node]] guna mengelola Node dan mengatur tampilan cabang.
 - Hati-hati saat menghapus Tree karena seluruh Node hilang dan relasi dari komponen lain terputus.
-
-## FAQ : Pertanyaan yang Sering Diajukan
-
-> **faq**
-> **Apa bedanya Tree biasa dengan Tree yang memakai [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]]?**
-> Tree biasa hanya menyimpan Node miliknya sendiri. Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat menambahkan (*clone*) Node dari Tree lain, sedangkan Tree biasa tidak dapat melakukannya.
-> **Apakah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat diubah setelah Tree dibuat?**
-> Tidak. Pilihan ini ditentukan saat Tree dibuat. Lihat [[#Mengubah Tree]].
-> **Apakah perubahan pada Node asal otomatis muncul di Node *clone*?**
-> Hal ini bergantung pada [[#External Read Only]]. Jika [[^field|Order]], [[^field|Name]], atau [[^field|Children]] berstatus [[^value/boolean/Non-Active]], atribut tersebut ikut berubah ketika Node di Tree lain diperbarui.
-> **Apa yang dicari oleh [[^field|Search Tree Data...]]?**
-> Kolom ini hanya mencari berdasarkan [[^field|Name]] Node.
-> **Apakah perubahan [[^field|mode _]] dan [[^field|context _]] di halaman kerja bersifat permanen?**
-> Tidak. Perubahan di halaman kerja hanya sementara. Untuk mengubah nilai awalnya, gunakan [[^button/edit|Edit]] (lihat [[#Default Configuration]]).
-> **Mengapa menu [[^field|Collapse]] berubah menjadi [[^field|No children...]]?**
-> Node tersebut tidak memiliki anak, sehingga tidak ada yang dapat dilipat atau diperluas. Lihat [[#Menu Konteks Node]].
-> **Apa yang ada di Tree yang baru dibuat?**
-> Tree baru otomatis memiliki satu Node bernama [[^field|Origin]]. Anda dapat menambahkan Node lain di [[#Mengelola Node]].
 

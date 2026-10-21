@@ -1,8 +1,7 @@
 ---
     status: release
     title: "Konfigurasi Merger Mode"
-    description: 
-    date: "2026-10-02"
+    description: Penjelasan konfigurasi Merge Mode di komponen Tree
     pageDecoration:
       tree:
         priority: 0

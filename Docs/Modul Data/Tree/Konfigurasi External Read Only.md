@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Konfigurasi External Read Only"
+    description: Penjelasan konfigurasi External Read Only di komponen Tree
     pageDecoration:
-      icon: x
       tree:
         priority: 0
     tags:
@@ -13,10 +14,12 @@ Node yang dikloning oleh [[Docs/Tipe Data/Tree]] lain dapat tetap terhubung keti
 
 | Merger Mode | Read Only | Atribut yang dapat berubah | Penjelasan Efek Read Only = Yes|
 | ------------------ | ---- | ---- | ------------------------ |
-| Tidak             | Ya | [[^field|Name]], [[^field|Name]], [[Ketika Tree lain (Merger Mode) yang mengkloning Node melakukan perubahan, maka Node asal akan berubah. |
-| Tidak             | Tidak | Ketika Tree lain yang mengkloning Node melakukan perubahan pada Node, maka Node asal tidak berubah. |
+| Tidak             | [[^value/boolean/Active]] | [[^field|Order]], [[^field|Name]] | Ketika Tree eksternal yang mengkloning Node melakukan perubahan, maka Node lokal akan berubah. |
+| Tidak             | [[^value/boolean/Non-Active]] | - | Ketika Tree eksternal yang mengkloning Node melakukan perubahan pada Node, maka Node asal tidak berubah. |
+| Ya             | [[^value/boolean/Active]] | [[^field|Order]], [[^field|Name]], [[^field|Children]] | Ketika Node asal melakukan perubahan, maka Node lokal akan berubah. |
+| Ya             | [[^value/boolean/Non-Active]] | - | Ketika Node asal melakukan perubahan, maka Node lokal tidak berubah. |
 
-, yaitu Node *clone* dan Node asalnya (*origin*). Pengaturan ini berlaku pada Tree dengan maupun tanpa Merger Mode, karena perubahan Node di Tree merger juga dapat mengubah Node di Tree non-merger. Setiap atribut memiliki pilihan sendiri:
+Pengaturan ini berlaku pada Tree dengan/tanpa Merger Mode, karena perubahan Node di Tree merger juga dapat mengubah Node di Tree non-merger. Setiap atribut memiliki pilihan sendiri:
 
 | Atribut | Jika [[^value/boolean/Non-Active]] | Jika [[^value/boolean/Active]] |
 | --- | --- | --- |

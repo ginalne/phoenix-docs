@@ -4,47 +4,72 @@
     description: Penjelasan antarmuka di halaman kerja komponen Tree
     pageDecoration:
       tree:
-        priority: -1
+        priority: 0
     tags:
       draft
 ---
 # Antarmuka Tree
 
-![[Docs/Modul Interface/Table View/interface-tableview.png]]
-Halaman kerja Table View terdiri dari bilah navigasi di bagian atas dan area Data di bagian bawah. Setiap Data tampil sebagai tabel yang dapat dilipat, dan Data baru ditambahkan lewat tombol [[^button/add|Add Data]] di bagian paling bawah.
+![[Docs/Modul Data/Tree/antarmuka-tree.png]]
+Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di bagian bawah yang menampilkan pohon beserta Node-nya. Di sudut bawah area kerja terdapat informasi [[^field|context _]], [[^field|mode _]], koordinat [[^field|x _ y _]], dan [[^field|scale _]].
 
-Contoh gambar diatas merupakan halaman kerja Table View dengan dua Data bernama [[^field|On Progress...]] dan [[^field|Done belum diambil]].
-
-## Bilah navigasi Table View
-
-Bilah navigasi pada halaman kerja Table View terdiri dari:
+## Bilah navigasi Tree terdiri dari:
 
 | Elemen | Fungsi |
-| ------ | ------ |
-| Judul | Menampilkan ikon Table View dan [[^field|Header Name]]. |
-| [[^button/edit|Edit]] | Mengubah atribut Table View. |
-| [[^button/refresh|Refresh]] | Memuat ulang tampilan dan menjalankan kembali [[Docs/Tipe Data/Query]] pada setiap Data, sehingga [[Docs/Tipe Data/Row]] yang tidak lagi memenuhi syarat Query tidak ditampilkan lagi. |
-| [[^field|Search TableView Data...]] | Mencari kata kunci di semua kolom pada Data. |
+| --- | --- |
+| Judul Tree | Menampilkan ikon Tree dan nama Tree. |
+| [[^button/edit|Edit]] | Mengubah atribut Tree. Lihat [[#Mengubah Tree]]. |
+| [[^button/publish|Publish]] | Mengatur publikasi Tree. Lihat [[Docs/Modul Data/Tree/Publikasi]]. |
+| [[^button/event|Event]] | Menghubungkan Tree dengan Event. Lihat [[Docs/Modul Data/Tree/Event]]. |
+| [[^button/refresh|Refresh]] | Memuat ulang tampilan. Lihat [[#Menyegarkan Tree]]. |
+| [[^field|Search Tree Data...]] | Mencari Node berdasarkan [[^field|Name]]. Pencarian tidak mencakup atribut Node yang lain. |
 
-## Area Data Table View
+## Informasi Area Kerja
 
-Area Data pada halaman kerja Table View terdiri dari:
+| Informasi | Penjelasan |
+| --- | --- |
+| [[^field|context _]] | Nilai [[#Default Configuration|Context]] yang sedang berlaku. Klik untuk menggantinya. |
+| [[^field|mode _]] | Arah tampilan pohon, yaitu Horizontal atau Vertical. Klik untuk menggantinya. Lihat [[#Default Configuration|Mode]]. |
+| [[^field|x _ y _]] | Koordinat posisi tampilan pada area kerja. |
+| [[^field|scale _]] | Skala tampilan pada area kerja. |
 
-| Elemen | Fungsi |
-| ------ | ------ |
-| Judul Data | Menampilkan ikon panah, nama Data, dan angka jumlah [[Docs/Tipe Data/Row]] dalam tanda kurung. |
-| [[^value/radio|full]], [[^value/radio/|half]], [[^value/radio|quarter]] | Menentukan porsi layar yang ditempati Data. Selengkapnya lihat [[#Mengatur Tampilan Data]]. |
-| Tombol [[^button|Q]] | Membuka pengaturan [[Docs/Tipe Data/Query]] untuk Data tersebut. |
-| Kolom Data | Menampilkan kolom hasil [[Docs/Tipe Data/Query]], ditambah [[^field|Action]] di akhir |
-| Baris Data | Menampilkan baris hasil [[Docs/Tipe Data/Query]], ditambah tombol [[^button/save|Save]] dan [[^button/delete|Delete]] |
-| [[^button/add|Add Row]] | Menambahkan baris pada sumber Data. |
-| [[^field|Show _ of _ items, on page]], [[^button/empty|Go]], [[^button/left|Prev]], [[^button/right|Next]] | Informasi jumlah Row dan perpindahan halaman, sama seperti pada [[Docs/Modul Data/Table/Apa itu Table|Table]]. |
-| [[^field|Empty]] | Muncul pada Data yang [[Docs/Tipe Data/Query]]-nya belum diisi. |
-| Error | Muncul ketika ada kesalahan dalam Query. Selengkapnya lihat [[Docs/Tipe Data/Query#Error]]
-
-## Interaksi Antarmuka Table View
+## Interaksi Antarmuka Tree
 
 | Fungsi | Aksi |
-| ------ | ---- |
-| Melipat atau membuka Data | Klik judul Data. |
-| Membuka menu konteks Data | Klik kanan pada judul Data, lalu pilih [[^field/edit|Rename]], [[^field/add|Add Row]], [[^field/add|Add Data]], atau [[^field/delete|Delete Data]]. |
+| --- | --- |
+| Menggeser tampilan (*pan*) | Tekan dan tahan pada bagian yang kosong dalam halaman kerja, lalu gerakkan kursor. Lepas untuk selesai. |
+| Mengubah skala tampilan (*zoom*) | Gulir pada bagian halaman kerja. |
+| Memusatkan tampilan | Klik informasi koordinat [[^field|x _ y _]]. Tampilan kembali ke tengah. |
+| Mengembalikan skala | Klik informasi [[^field|scale _]]. Tampilan kembali berskala 1. |
+| Mengganti mode | Klik informasi [[^field|mode _]]. Perubahan bersifat sementara. |
+| Mengganti context | Klik informasi [[^field|context _]]. Perubahan bersifat sementara. |
+| Membuka menu konteks Node | Klik kanan pada Node. Hasilnya mengikuti nilai [[^field|context _]]. |
+
+## Menu Konteks Node
+
+![[Docs/Modul Data/Tree/node-menu.png]]
+Klik kanan pada Node untuk membuka menu konteks berikut.
+
+| Menu | Fungsi |
+| --- | --- |
+| [[^field/edit|Edit]] | Mengubah Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Mengubah Node]]. |
+| [[^field/eye|Detail]] | Melihat detail Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Melihat Detail Node]]. |
+| [[^field/collapse|Collapse]] atau [[^field/expand|Expand]] | Melipat atau memperluas keturunan selanjutnya dari Node. |
+| [[^field|View]] | Membuka submenu pengaturan tampilan keturunan Node (lihat tabel di bawah). |
+| [[^field/import|Import]] | Memasukkan data ke Node. Lihat [[Docs/Modul Data/Tree/Import Node]]. |
+| [[^field/export|Export]] | Mengeluarkan data dari Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Export Node]]. |
+
+Submenu [[^field|View]]:
+
+| Menu | Fungsi |
+| --- | --- |
+| [[^field/collapse|Collapse Below Level]] | Melipat keturunan pada level Node ini (semua Node). |
+| [[^field/expand|Expand Children Only]] | Memperluas hanya satu keturunan di bawahnya. |
+| [[^field/collapse|Collapse Descendant]] | Melipat semua keturunan secara *recursive*. |
+| [[^field/expand|Expand Descendant]] | Membuka semua keturunan secara *recursive*. |
+| [[^field|Hide Collapsed]] | Menyembunyikan anak yang dilipat. |
+| [[^field|Show Collapsed]] | Memunculkan anak yang dilipat. |
+| [[^field/collapse|Collapse and Hide]] | Melipat sekaligus menyembunyikan anak yang dilipat. |
+
+>**note** Node tanpa anak
+> Jika Node tidak memiliki anak, pilihan [[^field|Expand]] atau [[^field|Collapse]] dan [[^field|Expand Children Only]] berubah menjadi [[^field|No children...]].
