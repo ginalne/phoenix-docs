@@ -39,6 +39,18 @@ Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat m
 | [[#Default Configuration|Context]] | Status yang berlaku ketika Anda membuka menu konteks Node. |
 | [[#Menu Konteks Node]] | Menu yang muncul ketika Anda klik kanan pada Node, berisi aksi untuk Node tersebut dan pengaturan tampilan cabangnya. |
 
+## Cara Kerja
+
+Penjelasan cara kerja Table View lihat selengkap nya di [[Docs/Modul Interface/Table View/Cara Kerja|Cara Kerja Table View]].
+
+## Mengelola Table View
+
+Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
+1. [[Docs/Modul Interface/Table View/Membuat Baru]] Tree dalam halaman kerja.
+2. [[Docs/Modul Interface/Table View/Mengubah]] Atribut Tree seperti [[^field|Name]], [[^field|Description]].
+3. [[Docs/Modul Interface/Table View/Menghapus]] Table View.
+4. [[Docs/Modul Interface/Table View/Table View Data|Mengelola Data]] Table View seperti menambahkan, mengubah atau memperbarui Data.
+
 ## Membuat Tree
 
 ### External Read Only
