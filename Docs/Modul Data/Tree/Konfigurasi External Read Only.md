@@ -11,9 +11,10 @@
 
 Node yang dikloning oleh [[Docs/Tipe Data/Tree]] lain dapat tetap terhubung ketika salah satu atribut kloningan berubah. Supaya ikatan ini lepas, maka Tree dapat dikonfigurasi agar tidak mengikuti perubahan dari kloningan lain. Hal ini berlaku berbeda tergantung dari [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]]-nya, dengan penjelasan sebagai berikut:
 
-| Merger Mode | Penjelasan Efek |
-| ------------------ | ------------------------ |
-| Tidak             | Ketika Tree lain yang mengkloning Node melakukan perubahan, maka Node asal akan berubah. |
+| Merger Mode | Read Only | Atribut yang dapat berubah | Penjelasan Efek Read Only = Yes|
+| ------------------ | ---- | ---- | ------------------------ |
+| Tidak             | Ya | [[^field|Name]], [[^field|Name]], [[Ketika Tree lain (Merger Mode) yang mengkloning Node melakukan perubahan, maka Node asal akan berubah. |
+| Tidak             | Tidak | Ketika Tree lain yang mengkloning Node melakukan perubahan pada Node, maka Node asal tidak berubah. |
 
 , yaitu Node *clone* dan Node asalnya (*origin*). Pengaturan ini berlaku pada Tree dengan maupun tanpa Merger Mode, karena perubahan Node di Tree merger juga dapat mengubah Node di Tree non-merger. Setiap atribut memiliki pilihan sendiri:
 

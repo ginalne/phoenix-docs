@@ -4,7 +4,7 @@
     description: Penjelasan cara mengubah komponen Tree
     pageDecoration: 
       tree: 
-          priority: 1
+          priority: 1.5
 ---
 # Mengubah Tree
 

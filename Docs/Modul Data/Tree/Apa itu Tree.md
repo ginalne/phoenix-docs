@@ -46,12 +46,10 @@ Penjelasan cara kerja Table View lihat selengkap nya di [[Docs/Modul Interface/T
 ## Mengelola Table View
 
 Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
-1. [[Docs/Modul Interface/Table View/Membuat Baru]] Tree dalam halaman kerja.
-2. [[Docs/Modul Interface/Table View/Mengubah]] Atribut Tree seperti [[^field|Name]], [[^field|Description]].
-3. [[Docs/Modul Interface/Table View/Menghapus]] Table View.
-4. [[Docs/Modul Interface/Table View/Table View Data|Mengelola Data]] Table View seperti menambahkan, mengubah atau memperbarui Data.
-
-## Membuat Tree
+1. [[Docs/Modul Data/Tree/Membuat Baru]] Tree dalam halaman kerja.
+2. [[Docs/Modul Data/Tree/Mengubah]] Atribut Tree seperti [[^field|Name]], [[^field|Description]].
+3. [[Docs/Modul Data/Tree/Menghapus]] Table View.
+4. [[Docs/Modul Data/Tree/Node/Pengenalan|Mengelola Node]] seperti menambahkan, mengubah atau memperbarui Node.
 
 ### External Read Only
 
@@ -80,15 +78,6 @@ Kedua isian ini hanya nilai awal. Di halaman kerja, Anda dapat mengganti mode da
 ## Menyegarkan Tree
 
 Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
-
-## Menghapus Tree
-
-1. Buka folder yang berisi Tree
-2. Klik kanan Tree, pilih [[^button/delete|Delete]]
-3. Konfirmasi dengan [[^button|Delete]]
-
->**warning** Dampak penghapusan Tree
-> Seluruh [[Docs/Tipe Data/Node]] di dalam Tree ikut terhapus. Relasi dari komponen lain yang memakai Tree ini akan terputus, misalnya [[Docs/Tipe Data/Column]] pada Table yang memakai [[Docs/Tipe Data/Node]] dari Tree ini dan [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] seperti [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event]]. Jika Tree ini menjadi sumber *clone* bagi Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]], Node hasil *clone* di Tree tersebut dapat terdampak.
 
 ## Antarmuka Tree
 
