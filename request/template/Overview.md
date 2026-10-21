@@ -13,5 +13,13 @@ Sekolah menengah dengan 600 siswa melakukan kegiatan akademik seperti penilaian,
 >**warning** Disclaimer
 >Sekolah dalam studi kasus ini fiktif, dibuat sebagai ilustrasi. Angka yang tertera adalah contoh, bukan hasil peninjauan.
 
+## Latar Belakang
+
+## Solusi 
+
+## Hasil
+
+
+
 
 
