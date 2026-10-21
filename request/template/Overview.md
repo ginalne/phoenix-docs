@@ -14,8 +14,15 @@ Sekolah menengah dengan 600 siswa melakukan kegiatan akademik seperti penilaian,
 >Sekolah dalam studi kasus ini fiktif, dibuat sebagai ilustrasi. Angka yang tertera adalah contoh, bukan hasil peninjauan.
 
 ## Latar Belakang
+Situasi:
+Gambaran Singkat:
+Tujuan:
 
 ## Solusi 
+Struktur Folder:
+Pemetaan Peran dalam Group:
+
+
 
 ## Hasil 
 
