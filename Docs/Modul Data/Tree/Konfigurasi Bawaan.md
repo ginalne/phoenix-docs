@@ -4,7 +4,7 @@
     description: Penjelasan Default Configuration di komponen Tree
     pageDecoration:
       tree:
-        priority: 0
+        priority: 0.1
     tags:
       draft
 ---

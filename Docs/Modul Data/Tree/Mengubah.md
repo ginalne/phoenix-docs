@@ -7,6 +7,7 @@
           priority: 1.5
 ---
 # Mengubah Tree
+
 ![[Docs/Modul Data/Tree/update-tree.png]]
 1. Buka halaman kerja Tree
 2. Klik [[^button/edit|Edit]]
@@ -15,4 +16,3 @@
 
 >**note** Merger Mode tidak dapat diubah
 > [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] ditentukan saat Tree dibuat dan tidak dapat diubah setelahnya. Tentukan pilihan ini sebelum Anda klik [[^button|Create]].
-

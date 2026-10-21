@@ -16,14 +16,14 @@
 
 Tree adalah komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini cocok untuk menyimpan data relasional yang bercabang, seperti kategori dan subkategori atau struktur bertingkat lainnya. Satu Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu atribut penting dalam Tree adalah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]].
 
-Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat memanggil Node dari beberapa Tree lain, lalu menambahkannya sebagai *clone* tanpa Anda perlu menyalin Node satu per satu. Anda juga dapat mengatur apakah atribut Node ikut berubah ketika Node asalnya diperbarui lewat [[#External Read Only]].
+Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat memanggil Node dari beberapa Tree lain, lalu menambahkannya sebagai *clone* tanpa Anda perlu menyalin Node satu per satu. Anda juga dapat mengatur apakah atribut Node ikut berubah ketika Node asalnya diperbarui lewat [[Docs/Modul Data/Tree/Konfigurasi External Read Only]].
 
 ## Mengapa Menggunakan Tree?
 
 - **Data bercabang tersimpan rapi.** Hubungan induk dan anak antar data tergambar langsung dalam bentuk pohon.
 - **Satu Tree, banyak Node.** Anda dapat menambahkan Node sebanyak yang dibutuhkan dan menyusunnya bertingkat.
 - **Menggabungkan Node dari banyak Tree.** Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] menghimpun Node dari Tree lain dalam satu tempat.
-- **Perubahan terkendali.** [[#External Read Only]] menentukan atribut Node mana yang boleh ikut berubah dari Tree lain.
+- **Perubahan terkendali.** [[Docs/Modul Data/Tree/Konfigurasi External Read Only]] menentukan atribut Node mana yang boleh ikut berubah dari Tree lain.
 - **Tampilan mudah disesuaikan.** Pohon dapat ditampilkan secara horizontal atau vertikal, dan cabangnya dapat dilipat atau dibuka.
 - **Terhubung dengan komponen lain.** Tree dapat dipublikasikan dan dihubungkan ke Event untuk otomasi di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
 
@@ -34,22 +34,16 @@ Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat m
 | [[Docs/Tipe Data/Node]] | Satu simpul data di dalam Tree. Node memiliki atribut [[^field|Order]] dan [[^field|Name]], serta dapat memiliki anak. |
 | [[#Membuat Tree|Origin]] | Node pertama yang otomatis dibuat ketika Tree baru dibuat. |
 | [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]] | Atribut yang menentukan apakah Tree dapat menambahkan (*clone*) Node dari Tree lain. |
-| [[#External Read Only]] | Pengaturan yang menentukan apakah [[^field|Order]], [[^field|Name]], dan [[^field|Children]] Node ikut berubah ketika Node di Tree lain diperbarui. |
-| [[#Default Configuration|Mode]] | Arah tampilan pohon, yaitu horizontal (kiri ke kanan) atau vertikal (atas ke bawah). |
+| [[Docs/Modul Data/Tree/Konfigurasi External Read Only]] | Pengaturan yang menentukan apakah [[^field|Order]], [[^field|Name]], dan [[^field|Children]] Node ikut berubah ketika Node di Tree lain diperbarui. |
 | [[#Default Configuration|Context]] | Status yang berlaku ketika Anda membuka menu konteks Node. |
-| [[#Menu Konteks Node]] | Menu yang muncul ketika Anda klik kanan pada Node, berisi aksi untuk Node tersebut dan pengaturan tampilan cabangnya. |
 
 ## Cara Kerja
 
 Penjelasan cara kerja Table View lihat selengkap nya di [[Docs/Modul Interface/Table View/Cara Kerja|Cara Kerja Table View]].
 
-## Mengelola Tree
+## Antarmuka
 
-Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
-1. [[Docs/Modul Data/Tree/Membuat Baru]] Tree dalam halaman kerja.
-2. [[Docs/Modul Data/Tree/Mengubah]] Atribut Tree seperti [[^field|Name]], [[^field|Description]].
-3. [[Docs/Modul Data/Tree/Menghapus]] Table View.
-4. [[Docs/Modul Data/Tree/Node/Pengenalan|Mengelola Node]] seperti menambahkan, mengubah atau memperbarui Node.
+Penjelasan antarmuka Table View lihat selengkap nya di [[Docs/Modul Interface/Table View/Antarmuka|Antarmuka Table View]].
 
 ### Merger Node
 
@@ -63,44 +57,15 @@ External Read Only mengatur perubahan nilai pada atribut Node kloningan yang aks
 
 Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi External Read Only]].
 
-### Default Configuration
+## Mengelola Tree
 
-| Isian | Fungsi |
-| --- | --- |
-| [[^field|Horizontal Mode]] | Menentukan arah tampilan pohon. Jika aktif, pohon berakar dari kiri ke kanan (horizontal). Jika tidak aktif, pohon berakar dari atas ke bawah (vertikal). |
-| [[^field|Context]] | Menentukan status ketika Anda membuka menu konteks Node. Pilihannya: [[^field|Menu]], [[^field|Edit]], dan [[^field|Detail]]. Bawaan: [[^field|Menu]]. |
-
-Untuk pilihan [[^field|Context]]:
-
-| Pilihan | Hasil ketika menu konteks Node dibuka |
-| --- | --- |
-| [[^field|Menu]] | Menampilkan [[#Menu Konteks Node]]. |
-| [[^field|Edit]] | Membuka pengelolaan ubah Node. |
-| [[^field|Detail]] | Membuka detail Node. |
-
-Kedua isian ini hanya nilai awal. Di halaman kerja, Anda dapat mengganti mode dan context secara sementara (lihat [[#Interaksi Antarmuka Tree]]). Untuk mengubah nilai awalnya, gunakan [[^button/edit|Edit]].
-
-## Mengubah Tree
-## Menyegarkan Tree
-
-Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
-
-## Antarmuka Tree
-
-## Mengelola Node
-
-Halaman kerja Tree adalah untuk mengelola [[Docs/Tipe Data/Node]], mulai dari menambahkan, mengubah atribut, melihat detail, menghapus, hingga mengimpor dan mengekspor. Sebagian aksi tersedia di [[#Menu Konteks Node]]. Langkah rinci ada di [[Docs/Modul Data/Tree/Mengelola Node]].
-
-## Mengatur Tree
-
-Pelajari fitur pendukung Tree di halaman berikut:
-
-- [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]]: menggabungkan Node dari beberapa Tree.
-- [[Docs/Modul Data/Tree/Konfigurasi External Read Only]]: mengatur atribut Node yang ikut berubah dari Tree lain.
-- [[Docs/Modul Data/Tree/Publikasi]]: mengatur publikasi Tree.
-- [[Docs/Modul Data/Tree/Event]]: menghubungkan Tree dengan Event.
-
-
+Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
+1. [[Docs/Modul Data/Tree/Membuat Baru]] Tree dalam halaman kerja.
+2. [[Docs/Modul Data/Tree/Mengubah]] Atribut Tree seperti [[^field|Name]], [[^field|Description]].
+3. [[Docs/Modul Data/Tree/Menghapus]] Table View.
+4. [[Docs/Modul Data/Tree/Node/Pengenalan|Mengelola Node]] seperti menambahkan, mengubah atau memperbarui Node.
+5. [[Docs/Modul Data/Table/Publikasi]]: mengatur publikasi Table.
+6. [[Docs/Modul Data/Table/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
 ## Praktik Terbaik
 

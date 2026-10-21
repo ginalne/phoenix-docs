@@ -1,7 +1,7 @@
 ---
     status: release
-    title: "FAQ : Table View"
-    description: Pertanyaan yang sering diajukan pada komponen Table View
+    title: "FAQ : Tree"
+    description: Pertanyaan yang sering diajukan pada komponen Tree
     pageDecoration:
       tree:
         priority: -10

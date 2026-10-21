@@ -35,195 +35,25 @@ Dengan Enum, Anda mengelola daftar pilihan di satu tempat saja. Field di kompone
 | [[#Konfigurasi Enum|Header]] | Header untuk [[^field|Format]] yang membutuhkan tipe data pendamping. |
 | [[Docs/Modul Data/Enum/Konfigurasi Tegas|Strict On Selected]] | Atribut penting Enum yang mengatur ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Konfigurasi Tegas]]. |
 
-## Cara Kerja Enum
+## Cara Kerja
 
-Enum menyimpan banyak [[Docs/Tipe Data/EnumData]], lalu field berformat [[Docs/Tipe Data/EnumData]] di komponen lain menampilkan [[Docs/Tipe Data/EnumData]] tersebut sebagai daftar pilihan.
+Penjelasan cara kerja Enum lihat selengkap nya di [[Docs/Modul Data/Enum/Cara Kerja|Cara Kerja Enum]].
 
-```mermaid
-flowchart LR
-  A["Enum"] -->|"&nbsp;berisi banyak&nbsp;"| B["EnumData"]
-  C["Field berformat EnumData"] -.->|"&nbsp;merujuk ke&nbsp;"| A
-  B -->|"&nbsp;tampil sebagai pilihan&nbsp;<br>&nbsp;(Selectable = Yes)&nbsp;"| C
-```
+## Antarmuka
 
-Hanya [[Docs/Tipe Data/EnumData]] dengan [[^field|Selectable]] bernilai [[^value/boolean/true]] yang tampil pada daftar pilihan. [[Docs/Tipe Data/EnumData]] dengan nilai [[^value/boolean/false]] tidak tampil sebagai pilihan di field, tetapi tetap dapat dipakai di tempat lain.
+Penjelasan antarmuka Enum lihat selengkap nya di [[Docs/Modul Data/Enum/Antarmuka|Antarmuka Enum]].
 
-## Konfigurasi Enum
+## Mengelola Enum
 
-Setiap Enum memiliki atribut berikut:
+Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
+1. [[Docs/Modul Data/Enum/Membuat Baru]] Enum dalam halaman kerja.
+2. [[Docs/Modul Data/Enum/Mengubah]] Atribut Enum seperti [[^field|Name]], [[^field|Description]].
+3. [[Docs/Modul Data/Enum/Menghapus]] Enum.
+4. [[Docs/Modul Data/Enum/Enum Data/Pengenalan|Mengelola Data]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/EnumData]].
+5. [[Docs/Modul Data/Enum/Publikasi]]: mengatur publikasi Table.
+6. [[Docs/Modul Data/Enum/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
-| Atribut | Penjelasan |
-| --- | --- |
-| [[^field|Name]] | Nama Enum. Tidak boleh sama dengan komponen sejenis di folder yang sama. |
-| [[^field|Description]] | Keterangan singkat tentang kegunaan Enum. |
-| [[^field|Format]] | Format data untuk kolom [[^field|Value]] pada setiap baris. Format dapat diubah setelah Enum dibuat (lihat [[#Mengubah Enum]]). |
-| [[^field|Header]] | Header untuk [[^field|Format]] dengan tipe data yang membutuhkan header. Bernilai N/A jika [[^field|Format]] tidak membutuhkannya. |
-| [[^field|Strict On Selected]] | Pengaturan ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Konfigurasi Tegas]]. |
-
-Pasangan tipe data [[^field|Format]] dan [[^field|Header]]:
-
-| Tipe data Format | Tipe data Header |
-| --- | --- |
-| [[Docs/Tipe Data/EnumData|EnumData]] | [[Docs/Tipe Data/Enum|Enum]] |
-| [[Docs/Tipe Data/Column|Column]] | [[Docs/Tipe Data/Table|Table]] |
-| [[Docs/Tipe Data/Row|Row]] | [[Docs/Tipe Data/Table|Table]] |
-| [[Docs/Tipe Data/TableData|TableData]] | [[Docs/Tipe Data/Column|Column]] |
-| [[Docs/Tipe Data/Node|Node]] | [[Docs/Tipe Data/Tree|Tree]] |
-| Lainnya | N/A |
-
-## Membuat Enum
-
-![[Docs/Modul Data/Enum/add-enum.png]]
-1. Buka folder tempat Enum akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Data]] ➜ [[^field/enum|Enum]]
-3. Isi [[^field|Name]] dan [[^field|Description]]
-4. Pilih [[^field|Format]] dan atur [[^field|Strict On Selected]] sesuai kebutuhan
-5. Klik [[^button|Create]]
-
->**success** Enum berhasil dibuat
-> Enum yang baru dibuat belum memiliki data. Tambahkan [[Docs/Tipe Data/EnumData]] di [[#Mengelola EnumData]].
-
-## Mengubah Enum
-
-1. Buka halaman kerja Enum
-2. Klik [[^button/edit|Edit]]
-3. Ubah [[^field|Name]], [[^field|Description]], [[^field|Format]], atau [[^field|Strict On Selected]]
-4. Klik [[^button|Update]]
-
->**warning** Mengubah [[^field|Format]]
-> [[^field|Format]] masih dapat diubah meskipun Enum sudah memiliki [[Docs/Tipe Data/EnumData]]. Phoenix menampilkan peringatan terlebih dahulu, dan Anda perlu mengisi [[^field|Force Update]] untuk melanjutkan. Hasilnya dapat berupa *loss safe* (akan mencoba mengonversi nilai ke [[^field|Format]] baru, jika gagal akan muncul peringatan yang sama) atau *force* (paksa, nilai yang tidak dapat dikonversi bisa hilang). Mohon periksa [[^field|Value]] yang sudah ada sebelum melanjutkan.
-
-
-## Menyegarkan Enum
-
-Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja Enum.
-
-## Menghapus Enum
-
-1. Buka folder yang berisi Enum di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan Enum > [[^button/delete|Delete]]
-3. Konfirmasi dengan klik [[^button|Delete]]
-
->**warning** Dampak Menghapus Enum
-> Seluruh [[Docs/Tipe Data/EnumData]] di dalam Enum ikut hilang. Sebelum menghapus, hapus terlebih dahulu relasi dari komponen lain yang menggunakan Enum ini, misalnya field berformat [[Docs/Tipe Data/EnumData]] dan [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
-
-## Antarmuka Enum
-
-![[Docs/Modul Data/Enum/halaman-kerja-enum.png]]
-
-Halaman kerja Enum terdiri dari bilah navigasi di bagian atas dan tabel data di bagian bawah.
-
-### Bilah navigasi Enum terdiri dari:
-
-| Tombol | Fungsi |
-| --- | --- |
-| Judul Enum ([[^field/enum|Pelayan]] di gambar) | Menampilkan ikon Enum dan [[^field|Header Name]]. |
-| [[^button/edit|Edit]] | Mengubah atribut Enum (lihat [[#Mengubah Enum]]). |
-| [[^button/merge|Merge]] | Menggabungkan data. Selengkapnya lihat [[Docs/Modul Data/Enum/EnumData Merge]]. |
-| [[^button/event|Event]] | Menghubungkan [[Docs/Event/Apa itu Event|Event]] dari Enum. Selengkapnya lihat [[Docs/Modul Data/Enum/Event]]. |
-| [[^button/refresh|Refresh]] | Memuat ulang tampilan halaman kerja. |
-| [[^field|Search Enum Data...]] | Mencari [[Docs/Tipe Data/EnumData]] di dalam Enum. |
-
-### Membaca Tabel Data
-
-| Kolom | Penjelasan |
-| --- | --- |
-| [[^field|Name]] | Nama [[Docs/Tipe Data/EnumData]]. Tidak boleh sama dengan [[Docs/Tipe Data/EnumData]] lain di dalam Enum yang sama. |
-| [[^field|Description]] | Keterangan [[Docs/Tipe Data/EnumData]]. |
-| [[^field|Value]] | Nilai [[Docs/Tipe Data/EnumData]]. Bentuknya mengikuti [[^field|Format]] pada konfigurasi Enum. Ikon di header kolom menunjukkan tipe data dari [[^field|Format]]. |
-| [[^field|Selectable]] | Menentukan apakah [[Docs/Tipe Data/EnumData]] tampil sebagai pilihan pada field. Hanya berlaku untuk field. |
-| [[^field|Action]] | Berisi tombol [[^button/save|Save]] dan [[^button/delete|Delete]] untuk baris tersebut. |
-
->**note** Tampilan [[^field|Value]] Mengikuti [[^field|Format]]
-> Tampilan kolom [[^field|Value]] dapat berbeda untuk setiap [[^field|Format]]. Pada Format Password, misalnya, Value tersamarkan.
-
-### Interaksi Antarmuka Enum
-
-| Fungsi | Aksi |
-| --- | --- |
-| Menambah baris | Klik [[^button/add|Add Row]] pada bagian bawah tabel atau pada bilah di bawahnya. Keduanya memiliki fungsi yang sama. |
-| Mengubah [[^field|Selectable]] | Klik toggle pada kolom [[^field|Selectable]]. |
-| Berpindah halaman | Gunakan [[^button|Prev]], [[^button|Next]], atau isi nomor halaman lalu klik [[^button|Go]]. |
-| Membaca batas halaman | Teks "Show 50 of 1 items" menunjukkan batas 50 item per halaman dan jumlah item yang ada. |
-
-## Mengelola EnumData
-
-Isi Enum dikelola per [[Docs/Tipe Data/EnumData]] di halaman kerja. Setiap [[Docs/Tipe Data/EnumData]] memiliki [[Docs/Tipe Data/TableData|TableData]] sesuai [[Docs/Tipe Data/Column]] yang tersedia. Cara mengisi TableData berbeda untuk setiap Format.
-
-### Menambahkan EnumData
-
-1. Buka halaman kerja Enum
-2. Klik [[^button/add|Add Row]]
-3. Isi [[^field|Name]], [[^field|Description]], dan [[^field|Value]]
-4. Atur [[^field|Selectable]]
-5. Klik [[^button/save|Save]]
-
->**note** [[^field|Name]] Harus Unik
-> [[^field|Name]] tidak boleh sama dengan [[Docs/Tipe Data/EnumData]] lain di dalam Enum yang sama.
-
-### Mengubah EnumData
-
-1. Ubah isian pada baris yang diinginkan
-2. Klik [[^button/save|Save]] pada kolom [[^field|Action]]
-
-Tombol [[^button/save|Save]] aktif setelah ada perubahan pada baris.
-
-### Menghapus EnumData
-
-1. Klik [[^button/delete|Delete]] pada kolom [[^field|Action]] di baris yang diinginkan
-2. Konfirmasi dengan klik [[^button|Delete]]
-
->**warning** Dampak Menghapus EnumData
-> [[Docs/Tipe Data/EnumData]] yang dihapus hilang dari Enum dan tidak tampil lagi sebagai pilihan. Jika hanya ingin menyembunyikannya dari field, ubah [[^field|Selectable]] menjadi [[^value/boolean/false]] alih-alih menghapus.
-
-## Contoh Penggunaan
-
-**Kategori pengaduan yang seragam dan memicu tindak lanjut otomatis**
-
-Tim layanan pelanggan menerima pengaduan dari banyak orang. Agar laporan mudah dikelompokkan dan yang mendesak segera ditangani, kategori pengaduan disimpan sebagai Master Data di Enum, lalu dipakai ulang di form dan tabel pengaduan.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| --- | --- |
-| [[^field/enum|Kategori Pengaduan]] | Menyimpan daftar kategori sebagai [[Docs/Tipe Data/EnumData]]. |
-| [[^field/table|Pengaduan]] | Menyimpan data pengaduan dengan field kategori berformat [[Docs/Tipe Data/EnumData]]. |
-| [[^field/flow|Tindak Lanjut Pengaduan]] | Menjalankan otomasi ketika pengaduan baru masuk. |
-
-**Alur di Flow**
-```mermaid
-flowchart TB
-  T@{ shape: database, label: "**Table**<br/>Pengaduan" } -.->|"&nbsp;Add Row&nbsp;"| E@{ shape: rounded, label: "**Table Row Event**" }
-  E -->|"&nbsp;**[Row]**&nbsp;"| B@{ shape: rounded, label: "**If**<br>Kategori = Mendesak?" }
-  B -->|"&nbsp;true&nbsp;"| H@{ shape: rounded, label: "**HTTP Request**" }
-  H --> S@{ shape: processes, label: "Sistem lain<br/>menerima data" }
-  S --> F@{ shape: circle, label: "Selesai" }
-  B -.->|"&nbsp;false&nbsp;"| F
-```
-
-| Langkah | Flow Block | Peran dalam alur | Hasil |
-| --- | --- | --- | --- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Table Row Event]] | Aktif ketika pengaduan baru ditambahkan. | Baris pengaduan diteruskan ke alur. |
-| 2 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|If]] | Memeriksa apakah kategori pengaduan adalah yang mendesak. | Alur terbagi menjadi jalur true dan false. |
-| 3 | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|HTTP Request]] | Mengirim data pengaduan ke sistem lain. | Sistem lain menerima data. |
-
-
-**Hasil yang dirasakan**
-
-- Petugas memilih kategori dari daftar yang seragam, tanpa mengetik ulang dan tanpa salah ejaan.
-- Pengaduan mendesak langsung diteruskan ke sistem lain tanpa menunggu dicek manual.
-- Menambah atau menonaktifkan kategori cukup dilakukan di Enum, dan semua field yang merujuk ikut diperbarui.
-
-**Ide skenario lain**
-
-| Jenis nilai | Contoh integrasi |
-| --- | --- |
-| Status pesanan | Menjadi kolom pengelompokan pada [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] dan pemicu notifikasi di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. |
-| Kategori produk | Menjadi pilihan di [[Docs/Modul Interface/Form/Apa itu Form|Form]] input produk dan penyaring pada [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]]. |
-| Tingkat prioritas | Menjadi dasar percabangan alur penanganan di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. |
-| Wilayah layanan | Menjadi pilihan seragam di berbagai Table sehingga laporan antarwilayah konsisten. |
-
-Dengan satu daftar yang terhubung ke data dan logika, Enum membuat pilihan yang sama dapat dipakai konsisten di seluruh Phoenix.
+Anda juga dapat memperdalam tentang Tipe Data yang berhubungan dengan data yaitu: [[Docs/Tipe Data/EnumData]].
 
 ## Praktik Terbaik
 
@@ -249,18 +79,3 @@ Dengan satu daftar yang terhubung ke data dan logika, Enum membuat pilihan yang 
 - [[^field|Value]] mengikuti [[^field|Format]] Enum, dan [[^field|Header]] dipakai untuk [[^field|Format]] tertentu.
 - Kelola Enum lewat [[^button/edit|Edit]], [[^button/refresh|Refresh]], dan hapus dari [[Docs/Antarmuka#Area Manajemen Folder]], serta kelola baris dengan [[^button/add|Add Row]].
 - Hati-hati saat mengubah [[^field|Format]] dan menghapus Enum karena dapat menghilangkan data.
-
-## FAQ : Pertanyaan yang Sering Diajukan
-
-> **faq**
-> **Apa bedanya Enum dengan EnumData?**
-> Enum adalah komponen yang menyimpan daftar, sedangkan [[Docs/Tipe Data/EnumData]] adalah setiap baris di dalamnya.
-> **Mengapa pilihan saya tidak muncul di field?**
-> Pastikan [[^field|Selectable]] pada [[Docs/Tipe Data/EnumData]] bernilai [[^value/boolean/true]]. Hanya [[Docs/Tipe Data/EnumData]] dengan [[^field|Selectable]] bernilai [[^value/boolean/true]] yang tampil sebagai pilihan.
-> **Apakah EnumData dengan Selectable No masih bisa dipakai?**
-> Bisa. [[^field|Selectable]] hanya memengaruhi daftar pilihan pada field, bukan pemakaian di tempat lain.
-> **Bolehkah dua EnumData memiliki Name yang sama?**
-> Tidak, selama keduanya berada di Enum yang sama.
-> **Mengapa Enum saya tidak bisa dihapus?**
-> Hapus terlebih dahulu relasi dari komponen lain yang masih memakai Enum tersebut, lalu ulangi penghapusan.
-

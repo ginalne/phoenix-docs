@@ -2,10 +2,9 @@
     status: release
     title: Konfigurasi Tegas dalam Enum
     description: 
-    date: "2026-10-02"
     pageDecoration:
       tree:
-        priority: 4
+        priority: 0.1
 ---
 # Konfigurasi Tegas dalam Enum
 
@@ -25,5 +24,5 @@ Kolom [[field|Strict On Selected]] dapat diubah dengan implikasi seperti berikut
 _Externally_ artinya sesuatu yang diluar Enum. Saat menentukan sebuah inputan dengan tipe data [[Docs/Tipe Data/EnumData|EnumData]], anda harus memilih header Enum. Input ini dapat muncul dalam [[Docs/Modul Data/Table/Apa itu Table|Tabel]], komponen dalam [[Docs/Modul Interface/Pengenalan|Modul Interface]] seperti [[Docs/Modul Interface/Form/Apa itu Form|Form]] yang dapat diinput oleh publik.
 
 >**note**Tips
->Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam EnumData tetap tidak dapat terduplikat. Meskipun akan banyak variasi Name yang mirip, Anda dapat menggunakan fitur [[Docs/Modul Data/Enum/EnumData Merge]] agar setiap data yang terelasi dengan EnumData tersebut dapat menjadi satu EnumData.
+>Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam EnumData tetap tidak dapat terduplikat. Meskipun akan banyak variasi Name yang mirip, Anda dapat menggunakan fitur [[Docs/Modul Data/Enum/Enum Data/Menggabungkan]] agar setiap data yang terelasi dengan EnumData tersebut dapat menjadi satu EnumData.
 

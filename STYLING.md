@@ -248,7 +248,7 @@ test [[button/edit|Edit]] [[button|Create]]
 Run ${widgets.commandButton "System: Reload"} to reload.
 
 >**note**Tips
->Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam EnumData tetap tidak dapat terduplikat. Meskipun akan banyak variasi Name yang mirip, Anda dapat menggunakan fitur [[Docs/Modul Data/Enum/EnumData Merge]] agar setiap data yang terelasi dengan EnumData tersebut dapat menjadi satu EnumData.
+>Meskipun Enum Data bisa bertambah secara liar, namun atribut Name dalam EnumData tetap tidak dapat terduplikat. Meskipun akan banyak variasi Name yang mirip, Anda dapat menggunakan fitur [[Docs/Modul Data/Enum/Enum Data/Menggabungkan]] agar setiap data yang terelasi dengan EnumData tersebut dapat menjadi satu EnumData.
 
 ```space-style
 #sb-main .cm-editor .sb-admonition {

@@ -1,9 +1,8 @@
 ---
-    status: draft
+    status: release
     title: TableData Merge
     description:
     pageDecoration:
-      icon: x
       tree:
         priority: 0
 ---

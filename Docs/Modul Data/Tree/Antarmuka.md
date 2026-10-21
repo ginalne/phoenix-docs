@@ -44,32 +44,3 @@ Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di 
 | Mengganti mode | Klik informasi [[^field|mode _]]. Perubahan bersifat sementara. |
 | Mengganti context | Klik informasi [[^field|context _]]. Perubahan bersifat sementara. |
 | Membuka menu konteks Node | Klik kanan pada Node. Hasilnya mengikuti nilai [[^field|context _]]. |
-
-## Menu Konteks Node
-
-![[Docs/Modul Data/Tree/node-menu.png]]
-Klik kanan pada Node untuk membuka menu konteks berikut.
-
-| Menu | Fungsi |
-| --- | --- |
-| [[^field/edit|Edit]] | Mengubah Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Mengubah Node]]. |
-| [[^field/eye|Detail]] | Melihat detail Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Melihat Detail Node]]. |
-| [[^field/collapse|Collapse]] atau [[^field/expand|Expand]] | Melipat atau memperluas keturunan selanjutnya dari Node. |
-| [[^field|View]] | Membuka submenu pengaturan tampilan keturunan Node (lihat tabel di bawah). |
-| [[^field/import|Import]] | Memasukkan data ke Node. Lihat [[Docs/Modul Data/Tree/Import Node]]. |
-| [[^field/export|Export]] | Mengeluarkan data dari Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Export Node]]. |
-
-Submenu [[^field|View]]:
-
-| Menu | Fungsi |
-| --- | --- |
-| [[^field/collapse|Collapse Below Level]] | Melipat keturunan pada level Node ini (semua Node). |
-| [[^field/expand|Expand Children Only]] | Memperluas hanya satu keturunan di bawahnya. |
-| [[^field/collapse|Collapse Descendant]] | Melipat semua keturunan secara *recursive*. |
-| [[^field/expand|Expand Descendant]] | Membuka semua keturunan secara *recursive*. |
-| [[^field|Hide Collapsed]] | Menyembunyikan anak yang dilipat. |
-| [[^field|Show Collapsed]] | Memunculkan anak yang dilipat. |
-| [[^field/collapse|Collapse and Hide]] | Melipat sekaligus menyembunyikan anak yang dilipat. |
-
->**note** Node tanpa anak
-> Jika Node tidak memiliki anak, pilihan [[^field|Expand]] atau [[^field|Collapse]] dan [[^field|Expand Children Only]] berubah menjadi [[^field|No children...]].
