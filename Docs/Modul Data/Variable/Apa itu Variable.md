@@ -30,91 +30,38 @@ Komponen ini sudah tersedia sejak [[Docs/Inisialisasi/Apa itu Pro|Pro]] dimulai.
 | [[Docs/Tipe Data/Variable|Variable Data]] | Data dalam komponen Variable. |
 | [[#Cara Kerja Variable|Alias]] | Istilah dari komponen lain yang merujuk ke isi [[^field|Name]] dari Variable Data. |
 
-## Cara Kerja Variable
+## Cara Kerja
 
-Variable adalah satu sumber data yang dikenali oleh semua komponen di dalam ruang lingkup Pro.
-```mermaid
-flowchart TB
-    V -.->|"Value"| L["Komponen di Modul Logic"]
-    P["Pro"] -->|"Membuat otomatis"| V["Komponen Variable"]
-    L -.->|"Alias Valid"| V
-    V -->|"Name dan Desc<br>(pilihan)"| F["Field bertipe Variable (komponen lain)"]
-    L -.->|"Alias tidak valid"| A["Nilai Kosong atau Error"]
-```
+Penjelasan cara kerja Enum lihat selengkap nya di [[Docs/Modul Data/Enum/Cara Kerja|Cara Kerja Enum]].
 
-Ada dua cara komponen merujuk ke Variable:
+## Mengelola Enum
 
-- **Field bertipe Variable.** Pada komponen yang memiliki field dengan [[Docs/Tipe Data/Variable|tipe data Variable]], pilihannya adalah daftar [[^field|Name]] dan [[^field|Description]] dari Variable Data.
-- **Komponen di modul Logic.** Komponen dalam [[Docs/Modul Logic]] dapat mengisi field Variable cukup dengan [[^field|Alias]]. Jika [[^field|Alias]] tidak valid di Variable (tidak ada [[^field|Nama]] yang cocok), maka tidak ada nilai yang diterima atau error.
+Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
 
-## Menambahkan Komponen Variable
->**danger** Komponen Variable tidak bisa dibuat[[Docs/Antarmuka#Area Manajemen Folder]].
+1. [[Docs/Modul Data/Enum/Enum Data/Menambahkan]]
+2. [[Docs/Modul Data/Enum/Enum Data/Mengubah]]
+3. [[Docs/Modul Data/Enum/Enum Data/Menghapus]]
+4. [[Docs/Modul Data/Enum/Enum Data/Menggabungkan]]
+1. [[Docs/Modul Data/Enum/Enum Data/Pengenalan|Mengelola Data]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/EnumData]].
+2. [[Docs/Modul Data/Enum/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
-## Duplikasi Komponen Variable
->**danger** Komponen Variable tidak bisa diduplikasi  [[Docs/Antarmuka#Area Manajemen Folder]].
+Anda juga dapat memperdalam tentang Tipe Data yang relevan yaitu: [[Docs/Tipe Data/Variable]].
 
-## Menghapus Komponen Variable
->**danger** Komponen Variable tidak bisa dihapus dalam  [[Docs/Antarmuka#Area Manajemen Folder]].
-
-## Mengganti Nama Variable
 >**note** Tombol Edit tidak tersedia
 >Karena nama header tidak dapat diganti, komponen Variable tidak memiliki langkah mengubah atribut komponen. Yang dapat Anda ubah adalah isi data di dalam halaman kerjanya (lihat [[#Mengelola Variable Data]]).
+
+>**danger** Komponen Variable dalam [[Docs/Antarmuka#Area Manajemen Folder]]tidak dapat dibuat baru, diduplikasi ataupun dihapus.
 
 
 ## Membuka Halaman Kerja Variable
 
 Klik [[^field/variable|Variables]] di [[Docs/Antarmuka#Area Manajemen Folder]] untuk membuka halaman kerja Variable.
 
-## Antarmuka Variable
+## Antarmuka.
 
-![[Docs/Modul Data/Variable/interface-variable.png]]
-Halaman kerja Variable terdiri dari bilah navigasi di bagian atas dan tabel Variable di bagian bawah.
-
-Bilah navigasi Variable terdiri dari:
-
-| Elemen | Fungsi |
-| --- | --- |
-| [[^field/variable|Variable]] | Judul komponen, menampilkan ikon Variable dan nama komponen. |
-| [[^button/refresh|Refresh]] | Memuat ulang data pada tabel Variable. |
-| [[^field|Search Variable Data...]] | Mencari data Variable pada tabel. |
-
-Kolom pada tabel Variable adalah:
-
-| Kolom | Penjelasan | Pengisian |
-| --- | --- | --- |
-| [[^field|Name]] | Nama Variable. Tidak boleh sama dengan baris lain. | Diisi oleh Anda |
-| [[^field|Type]] | Tipe data dari nilai yang disimpan, misalnya [[Docs/Tipe Data/String\|String]]. | Diisi oleh Anda |
-| [[^field|Value]] | Nilai yang disimpan, menyesuaikan Type. | Diisi oleh Anda |
-| [[^field|Description]] | Keterangan tentang kegunaan Variable. | Diisi oleh Anda |
-| [[^field|Created At]] | Waktu baris dibuat. | Terisi otomatis |
-| [[^field|Updated At]] | Waktu baris terakhir diperbarui. | Terisi otomatis |
-
-Pada area tabel terdapat:
-
-| Tombol | Fungsi |
-| --- | --- |
-| [[^button/add|Add Row]] | Menambahkan baris [[Docs/Tipe Data/Variable|Variable Data]] baru. |
-| [[^button/save|Save]] | Menyimpan perubahan data. |
-| [[^button/delete|Delete]] | Menghapus data. |
-
-## Interaksi Antarmuka Variable
-
-| Fungsi | Aksi |
-| --- | --- |
-| Melihat kolom di sisi kanan tabel | Geser tabel secara horizontal menggunakan *scroll* di bagian bawah tabel. |
-
-## Mengelola Variable Data
-
-Anda dapat mengelola Variable Data, harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]].
+Harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]]. Penjelasan antarmuka Enum lihat selengkap nya di [[Docs/Modul Data/Variable/Antarmuka|Antarmuka Variable]].
 
 ### Menambahkan Variable Data
-
-1. [[#Membuka Halaman Kerja Variable|Buka]] Halaman Kerja Variable
-2. Klik [[^button/add|Add Row]]
-3. Isi [[^field|Name]], [[^field|Type]], [[^field|Value]], dan [[^field|Description]]
-4. Klik [[^button/save|Save]]
-
-Anda dapat klik [[^button/delete|Cancel]] untuk membatalkan penambahan Data Variable
 
 ### Mengubah Variable Data
 
