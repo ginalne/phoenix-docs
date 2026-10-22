@@ -8,7 +8,7 @@
 ---
 # Matrices
 
-Matrices adalah tipe data yang dapat menyimpan data matrices.
+Matrices adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data matrices.
 
 ## Format
 >**note** Tipe data ini tidak memiliki format khusus.

@@ -10,7 +10,7 @@
 ---
 # Enum
 
-Enum adalah tipe data yang mewakili komponen [[Docs/Modul Data/Enum/Apa itu Enum|Enum]].
+Enum adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang mewakili komponen [[Docs/Modul Data/Enum/Apa itu Enum|Enum]].
 
 ## Atribut
 

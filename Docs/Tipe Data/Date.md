@@ -8,7 +8,7 @@
 ---
 # Date
 
-Date adalah tipe data yang dapat menyimpan data tanggal.
+Date adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data tanggal.
 
 ## Penggunaan dalam Interface
 

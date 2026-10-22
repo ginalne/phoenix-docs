@@ -8,7 +8,7 @@
 ---
 # TableData
 
-TableData adalah tipe data khusus yang digunakan oleh komponen [[Docs/Modul Data/Table/Apa itu Table|Table]].
+TableData adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] khusus yang digunakan oleh komponen [[Docs/Modul Data/Table/Apa itu Table|Table]].
 
 ## Attribute
 

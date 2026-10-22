@@ -8,7 +8,7 @@
 ---
 # Node
 
-Node adalah tipe data khusus yang digunakan oleh komponen [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].
+Node adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] khusus yang digunakan oleh komponen [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].
 
 ## Atribut
 

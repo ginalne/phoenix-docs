@@ -8,7 +8,7 @@
 ---
 # DateTime
 
-String adalah tipe data yang dapat menyimpan data tanggal dan waktu dengan presisi detik.
+String adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data tanggal dan waktu dengan presisi detik.
 
 ## Penggunaan dalam Interface
 

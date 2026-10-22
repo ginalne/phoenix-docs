@@ -10,7 +10,7 @@
 ---
 # Number
 
-Number adalah adalah tipe data numerik khusus untuk menyimpan bilangan pecahan atau desimal (floating-point) berpresisi tinggi. Tipe data ini menggunakan ukuran penyimpanan sebesar 8 byte (64 bit).
+Number adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] numerik khusus untuk menyimpan bilangan pecahan atau desimal (floating-point) berpresisi tinggi. Tipe data ini menggunakan ukuran penyimpanan sebesar 8 byte (64 bit).
 
 Karakteristik utamanya meliputi:
 1. **Presisi Ganda (Double Precision)**. Mampu menyimpan angka di belakang koma dengan tingkat akurasi hingga 15–17 digit desimal.

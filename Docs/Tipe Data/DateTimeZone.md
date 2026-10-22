@@ -8,7 +8,7 @@
 ---
 # DateTimeZone
 
-DateTimeZone adalah tipe data yang dapat menyimpan data tanggal, waktu dan zona waktu dengan presisi detik.
+DateTimeZone adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data tanggal, waktu dan zona waktu dengan presisi detik.
 
 ## Penggunaan dalam Interface
 

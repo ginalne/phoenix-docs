@@ -7,7 +7,7 @@
         priority: 0
 ---
 # Variable
-Variable adalah tipe data yang hanya bisa dibuat, diperbarui atau dihapus melalui komponan [[Docs/Modul Data/Variable/Apa itu Variable|Variable]].
+Variable adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang hanya bisa dibuat, diperbarui atau dihapus melalui komponan [[Docs/Modul Data/Variable/Apa itu Variable|Variable]].
 
 ## Atribut
 

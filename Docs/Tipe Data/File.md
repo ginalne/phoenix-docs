@@ -10,7 +10,7 @@
 ---
 # File
 
-File adalah adalah tipe data yang memiliki atribut khusus untuk menyimpan file atau _attachment_. Dalam beberapa penggunaan pada [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], nilai file akan diubah sesuai target pengirimnya.
+File adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang memiliki atribut khusus untuk menyimpan file atau _attachment_. Dalam beberapa penggunaan pada [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], nilai file akan diubah sesuai target pengirimnya.
 
 ## Format
 

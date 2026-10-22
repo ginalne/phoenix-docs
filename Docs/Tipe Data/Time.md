@@ -8,7 +8,7 @@
 ---
 # Time
 
-Time adalah tipe data yang dapat menyimpan data waktu dengan presisi detik.
+Time adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data waktu dengan presisi detik.
 
 ## Format
 >**note** Tipe data ini tidak memiliki format khusus.

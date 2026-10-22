@@ -8,7 +8,7 @@
 ---
 # EnumData
 
-Tipe data yang berisi data dari [[Docs/Modul Data/Enum/Apa itu Enum|Enum]].
+Enum Data (atau EnumData) adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang berisi data dari [[Docs/Modul Data/Enum/Apa itu Enum|Enum]].
 
 ## Attribute
 ![[Docs/Tipe Data/enum-data.png|Contoh halaman kerja Enum]]

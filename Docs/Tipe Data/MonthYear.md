@@ -8,7 +8,7 @@
 ---
 # MonthYear
 
-MonthYear adalah tipe data yang dapat menyimpan data bulan dan tahun.
+MonthYear adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data bulan dan tahun.
 
 ## Penggunaan dalam Interface
 

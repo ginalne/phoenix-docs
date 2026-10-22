@@ -10,7 +10,7 @@
 ---
 # Table
 
-Table adalah tipe data yang mewakili komponen [[Docs/Modul Data/Table/Apa itu Table|Table]].
+Table adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang mewakili komponen [[Docs/Modul Data/Table/Apa itu Table|Table]].
 
 ## Atribut
 

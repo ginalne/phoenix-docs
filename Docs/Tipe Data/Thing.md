@@ -8,7 +8,7 @@
 ---
 # Thing
 
-Thing adalah tipe data yang dapat menyimpan data Thing.
+Thing adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data Thing.
 
 ## Format
 >**note** Tipe data ini tidak memiliki format khusus.

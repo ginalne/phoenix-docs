@@ -8,7 +8,7 @@
 ---
 # Year
 
-Year adalah tipe data yang dapat menyimpan data tahun.
+Year adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data tahun.
 
 ## Penggunaan dalam Interface
 

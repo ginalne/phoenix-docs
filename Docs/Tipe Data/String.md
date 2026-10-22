@@ -8,7 +8,7 @@
 ---
 # String
 
-String adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 255 karakter.
+String adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan teks hingga menyimpan 0 hingga 255 karakter.
 
 ## Format
 

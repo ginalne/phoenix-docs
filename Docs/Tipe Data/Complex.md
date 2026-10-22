@@ -10,7 +10,7 @@
 ---
 # Complex
 
-Complex adalah adalah tipe data yang memiliki atribut khusus untuk menyimpan informasi dengan menggunakan empat atribut bernilai angka berpresisi tinggi serta atribut inisial berbentuk teks. 
+Complex adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang memiliki atribut khusus untuk menyimpan informasi dengan menggunakan empat atribut bernilai angka berpresisi tinggi serta atribut inisial berbentuk teks. 
 
 ## Atribut
 

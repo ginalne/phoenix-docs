@@ -10,7 +10,7 @@
 ---
 # Tree
 
-Tree adalah tipe data yang mewakili komponen [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].
+Tree adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang mewakili komponen [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].
 
 ## Atribut
 

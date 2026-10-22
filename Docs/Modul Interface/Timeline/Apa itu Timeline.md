@@ -1,11 +1,13 @@
-
-
 ---
-status: draft
-title: Apa itu Timeline?
-description: Pengenalan komponen Timeline untuk menampilkan data dalam urutan waktu dan memicu Event terjadwal ke Flow.
+    status: release
+    title: "Apa itu Timeline?"
+    description: Pengenalan komponen Timeline untuk menampilkan data dalam urutan waktu dan memicu Event terjadwal ke Flow.
+    pageDecoration:
+      tree:
+        priority: 0
+    tags:
+      draft
 ---
-
 # Apa itu Timeline?
 
 >**note** Timeline merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
@@ -15,15 +17,6 @@ Timeline adalah komponen yang menampilkan data dalam urutan waktu sehingga Anda 
 Komponen ini cocok untuk perencanaan, pelacakan progres, serta melihat hubungan antar peristiwa dalam satu rentang waktu.
 
 Timeline memiliki dua jenis isi, yaitu [[Docs/Modul Interface/Timeline/Timeline Event|Timeline Event]] untuk memicu otomasi terjadwal dan [[Docs/Modul Interface/Timeline/Timeline Data|Timeline Data]] untuk menampilkan data sumber di sumbu waktu. Keduanya tampil dalam satu halaman kerja yang dapat digeser, diperbesar, dan diperkecil.
-
-<!--
-  * [TODO] Path halaman baru yang ditautkan di halaman ini adalah usulan. Mohon dibuat atau disesuaikan:
-    * `Docs/Modul Interface/Pengenalan` (pintu masuk modul Interface).
-    * `Docs/Modul Interface/Timeline/Timeline Event` (field, Repeat, Interval, mengubah dan menghapus Timeline Event).
-    * `Docs/Modul Interface/Timeline/Timeline Data` (Query, label Show Name/Start/End, Rename, Row, Preview dan Edit Row).
-    * `Docs/Modul Logic/Flow/Flow Block/Event/Pulser` (halaman Flow Block Pulser).
-  * [TODO] Slug ikon `timeline` pada `[[^field/timeline|...]]` adalah tebakan.
--->
 
 ## Mengapa Menggunakan Timeline?
 
@@ -48,28 +41,30 @@ Timeline memiliki dua jenis isi, yaitu [[Docs/Modul Interface/Timeline/Timeline 
 ## Cara Kerja Timeline
 
 Timeline mempertemukan dua hal dalam satu sumbu waktu: Timeline Event yang memicu Pulser sesuai jadwal, dan Timeline Data yang menampilkan Row dari data sumber berdasarkan Query.
-
 ```mermaid
 flowchart LR
-    TL["Timeline"] -->|"&nbsp;memiliki&nbsp;"| TE["Timeline Event"]
-    TL -->|"&nbsp;memiliki&nbsp;"| TD["Timeline Data"]
+    A["Timeline"] -->|"&nbsp;memiliki&nbsp;"| TE["Timeline Event"]
     TE -.->|"&nbsp;memicu&nbsp;"| PL["Pulser"]
-    TD -->|"&nbsp;Query&nbsp;"| SR["Data sumber"]
-```
+    
+    A -..->|"&nbsp;memiliki&nbsp;"| B["Timeline Data<br>( editable )"]
+    A -..->|"&nbsp;memiliki&nbsp;"| C["Timeline Data<br>( readonly )"]
+    A -..->|"&nbsp;memiliki&nbsp;"| D["Timeline Data<br>( editable )"]
+    
+    B -->|&nbsp;Query&nbsp;| X
+    C -->|&nbsp;Query&nbsp;| Y
+    D -->|&nbsp;Query&nbsp;| Z
 
-<!--
-  * [TODO] Diagram menyebut data sumber secara umum. Mohon konfirmasi apakah sumber Timeline Data selalu [[Docs/Modul Data/Table/Apa itu Table|Table]] (mengikuti kaidah Table Output pada Query) atau ada sumber lain.
--->
+    X["Table A"] --> F["Row<br>( editable )"]
+    Y["Table B"] --> G["Row<br>( readonly )"]
+    Z["Table C"] --> H["Row<br>( readonly )"]
+    W["Workspace : Data Access"] -->|&nbsp;allow&nbsp;| X
+    W -->|&nbsp;allow&nbsp;| Y
+    W -->|&nbsp;disallow&nbsp;| Z
+```
 
 ## Membuat Timeline
 
 ![[Docs/Modul Interface/Timeline/add-timeline.png]]
-
-<!--
-  * [TODO] Penempatan gambar `add-timeline.png` (dialog Create Timeline). Anotasi yang disarankan: (1) bagian kiri tanda `/` sebagai folder tujuan, (2) kolom Name, (3) kolom Description, (4) tombol Create.
-  * [TODO] Bagian kiri tanda `/` pada Name tampil "root" berwarna redup. Asumsi saya: terisi sesuai folder tempat Timeline ditambahkan dan dapat dikosongkan (letak root), seperti Gallery. Mohon konfirmasi.
--->
-
 1. Buka folder tempat Timeline akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/timeline|Timeline]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
@@ -87,10 +82,6 @@ flowchart LR
 
 Untuk mengubah Timeline Event, klik kanan blok Timeline Event ➜ [[^field|Edit]]. Untuk mengubah nama Timeline Data, klik kanan Timeline Data ➜ [[^field|Rename Data]].
 
-<!--
-  * [TODO] Mohon konfirmasi atribut yang dapat diubah lewat [[^button/edit|Edit]] pada Timeline (hanya Name dan Description, atau juga folder tujuan seperti Flow).
--->
-
 ## Menyegarkan Timeline
 
 Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
@@ -104,19 +95,9 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 >**warning** Timeline Event dan Timeline Data ikut terhapus
 > Seluruh Timeline Event dan Timeline Data beserta konfigurasi Query di dalam Timeline hilang. Flow Block Pulser yang sebelumnya dipicu Timeline Event tidak lagi menerima pemicu dari Timeline ini. Row pada data sumber tidak terhapus.
 
-<!--
-  * [TODO] Dampak penghapusan di atas adalah asumsi (mengikuti pola Table View: hanya Query dan konfigurasi yang hilang, data sumber aman). Mohon konfirmasi, termasuk apakah Flow Block Pulser tetap ada.
--->
 
 ## Antarmuka Timeline
-
-![[Docs/Modul Interface/Timeline/interface-timeline.png]]
-
-<!--
-  * [TODO] Penempatan gambar `interface-timeline.png`. Anotasi yang disarankan: (1) judul Timeline, (2) tombol Edit dan Refresh, (3) kolom pencarian, (4) Item List, (5) header waktu, (6) penanda now, (7) grup Event, (8) grup Timeline Data.
-  * [TODO] Nama Timeline pada judul dan nama Timeline Data pada gambar adalah kasus pribadi dan tidak disebut di dokumentasi. Mohon ganti gambar dengan nama generik. Saran keterangan: "Contoh gambar di atas merupakan halaman kerja Timeline yang masih kosong, dengan area Event dan Data."
--->
-
+ ![[Docs/Modul Interface/Timeline/interface-timeline.png]]
 Halaman kerja Timeline terdiri dari bilah navigasi di bagian atas dan area kerja di bagian bawah.
 
 ### Bilah navigasi Timeline terdiri dari:
@@ -126,12 +107,7 @@ Halaman kerja Timeline terdiri dari bilah navigasi di bagian atas dan area kerja
 | Judul Timeline | Menampilkan ikon Timeline dan nama Timeline. |
 | [[^button/edit|Edit]] | Mengubah atribut Timeline. Lihat [[#Mengubah Timeline]]. |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan. |
-| [[^field|Search Timeline Data...]] | Mencari kata kunci pada Timeline Data. |
-
-<!--
-  * [TODO] Mohon konfirmasi cakupan [[^field|Search Timeline Data...]]: mencari nama Row saja atau semua kolom pada Timeline Data, dan apakah Timeline Event ikut dicari.
-  * [TODO] Perbedaan tampilan desktop dan mobile belum diketahui. Mohon konfirmasi bila ada.
--->
+| [[^field|Search Timeline Data...]] | Mencari kata kunci pada Timeline Data dan Timeline Event. |
 
 ### Area Kerja Timeline
 
@@ -146,6 +122,7 @@ Halaman kerja Timeline terdiri dari bilah navigasi di bagian atas dan area kerja
 
 <!--
   * [TODO] Mohon konfirmasi: (1) pasangan label Zoom (misalnya Week - Date, Date - Hour) memang menentukan baris header waktu, (2) angka di judul Timeline Data adalah jumlah Row hasil Query, (3) panah di judul Event dan Data dipakai untuk melipat atau membuka grup, (4) arti ikon jam di samping nama Timeline Event.
+    Jawaban : 1. Iya betul header akan disesuaikan, 2. Iya betul. 3. iya betul. 4. Hanya ikon untuk menandakan itu grup event.
 -->
 
 ### Menu Konteks Timeline
@@ -168,19 +145,18 @@ Menu [[^field|Zoom]] memiliki cabang berikut.
 
 <!--
   * [TODO] Daftar menu untuk "Timeline Data" saya ambil dari butir kedua yang pada catatan Anda tertulis "block Timeline Event" dua kali. Mohon konfirmasi bahwa itu menu untuk Timeline Data.
+    Jawaban : itu bukan menu tapi balok yang ada di baris row.
   * [TODO] Ikon pada item menu konteks belum diketahui, jadi semua memakai `[[^field|...]]`. Mohon tambahkan ikon bila ada.
+    Jawaban : Abaikan
   * [TODO] Mohon jelaskan perbedaan [[^field|Edit]] dan [[^field|View]] pada Row (apakah View membuka popup preview atau form baca saja), serta fungsi persis cabang Time - 30 Minute, Time - 10 Minute, dan Time - 1 Minute.
+    Jawaban : iya view hanya popup view bukan form, kalau edit itu buka form editnya.
   * [TODO] Mohon konfirmasi dampak [[^field|Delete Event]], [[^field|Delete Data]], dan [[^field|Delete Row]] (asumsi: Delete Row menghapus Row dari data sumber dan tidak dapat dikembalikan).
+    Jawaban : Delete Event hanya menghapus Timeline Event (bukan pulsernya), Delete Data hanya menghapus konfigurasi dan query. Delete Row berdampak akan menghapus sumbernya (tidak dapat dikembalikan).
 -->
 
 ### Preview dan Edit Row
 
-![[Docs/Modul Interface/Timeline/preview-timeline-row.png]]
-
-<!--
-  * [TODO] Penempatan gambar `preview-timeline-row.png`. Judul, tanggal, dan nama pada gambar adalah data pribadi dan tidak disebut di dokumentasi. Mohon ganti dengan contoh generik. Anotasi yang disarankan: (1) judul dan Start/End, (2) Duration sampai Relative, (3) kontrol Change time, (4) tombol Edit Row.
--->
-
+![[Docs/Modul Interface/Timeline/preview-example.png]]
 Klik kiri pada Row untuk membuka popup preview. Popup berisi bagian berikut.
 
 | Bagian | Penjelasan |
@@ -199,7 +175,9 @@ Hak akses untuk mengubah Row mengikuti [[Docs/Modul Developer/Workspace/Data Acc
 
 <!--
   * [TODO] Mohon konfirmasi: (1) kapan [[^field|Progress]] tampil (pada gambar Row berstatus selesai dan Progress tidak tampil), (2) daftar nilai [[^field|Status]], (3) fungsi tombol panah ganda dan tunggal pada Change time, (4) fungsi ikon di kiri bawah popup.
+    Jawaban : 1. ketika saat  statusnya On Going. 2. Upcoming, On Going, Finished. 3. membuka dan menutup kontrol change time. 4. iya 2 ikon itu kesatuan, jika kontrol dibuka maka panahnya menjadi keatas.
   * [TODO] Teks Relative pada gambar berbunyi "Ended in 180 days ago" yang tampaknya salah susunan kata di aplikasi. Dokumentasi hanya menyebut Relative tanpa mengutip teks itu.
+    Jawaban : Iya itu isi dari relative. yaitu sebagai contoh di gambar sudah berakhir 180 hari lalu.
 -->
 
 ### Interaksi Antarmuka Timeline
@@ -218,8 +196,11 @@ Hak akses untuk mengubah Row mengikuti [[Docs/Modul Developer/Workspace/Data Acc
 
 <!--
   * [TODO] Mohon jelaskan hasil dari Select (apa yang terjadi setelah rentang terpilih, misalnya menu atau Zoom ke rentang tersebut), karena tabel di atas baru menjelaskan caranya.
+    Jawaban : Menu tetap dan zoom tetap sama, akan tetapi ketika Add Row, isi start dan end akan otomatis terisi sesuai select.
   * [TODO] Mohon konfirmasi cara berpindah posisi waktu: geser dengan *drag* pada area kerja atau gulir horizontal.
+    Jawaban: Gulir horizontal, akan tetap pada tampilan mobile bisa geser pada halaman kerja.
   * [TODO] Mohon konfirmasi hak akses saat memindahkan blok. Asumsi saya: memindahkan blok Row mengubah data sumber sehingga memerlukan Data Access, sedangkan Timeline Event mengikuti hak akses Timeline Event.
+    Jawaban : Betul cara kerjanya sama seperti TableView.
 -->
 
 ## Mengatur Isi Timeline
@@ -227,11 +208,6 @@ Hak akses untuk mengubah Row mengikuti [[Docs/Modul Developer/Workspace/Data Acc
 ### Menambahkan Timeline Event
 
 ![[Docs/Modul Interface/Timeline/add-timeline-event.png]]
-
-<!--
-  * [TODO] Penempatan gambar `add-timeline-event.png` (dialog Create New Timeline Event). Jika subhalaman Timeline Event dibuat, gambar ini mungkin lebih tepat dipindahkan ke sana.
--->
-
 1. Klik [[^button/add|Add Event]], atau klik kanan ➜ [[^field|Add Event]]
 2. Isi [[^field|Name]]
 3. Pilih Flow Block Pulser yang akan dipicu di [[^field|Pulser Event]]
@@ -243,11 +219,16 @@ Hak akses untuk mengubah Row mengikuti [[Docs/Modul Developer/Workspace/Data Acc
 >**note** Repeat dan field turunannya
 > Field [[^field|End]] dan [[^field|Interval]] hanya tampil ketika [[^field|Repeat]] aktif. Jika [[^field|Repeat]] [[^value/boolean/false]], Timeline Event hanya memicu Pulser satu kali pada waktu [[^field|Start]].
 
+>**success** Timeline berhasil dibuat
+> Pemicu akan berjalan pada jadwal yang ditentukan, pasti bila [[^field|Status]] bernilai [[^value/boolean/Active]] pada Timeline Event agar jadwal dijalankan.
+
 Selengkapnya lihat [[Docs/Modul Interface/Timeline/Timeline Event]].
 
 <!--
-  * [TODO] Mohon konfirmasi: (1) pilihan pada dropdown [[^field|Interval]] (pada gambar tampil Custom dengan isian angka dan satuan Minute), (2) fungsi toggle [[^field|Active]] (asumsi: mematikan jadwal tanpa menghapus Timeline Event), (3) hak akses Timeline Event (Data Access atau Function Access Modify Event).
+  * [TODO] Mohon konfirmasi: (1) pilihan pada dropdown [[^field|Interval]] (pada gambar tampil Custom dengan isian angka dan satuan Minute), (2) fungsi toggle [[^field|Active]] (asumsi: mematikan jadwal tanpa menghapus Timeline Event), (3) hak akses Timeline Event (Data Access atau Function Access Modify Event).\
+    Jawaban : 1. Custom, Minutely, Hourly, Daily, Weekly, Monthly, Quarterly, Yearly. 2. Iya betul fungsi toggle Active mematikan jadwal tanpa hapus Timeline Event. 3. Masuknya ke Modify Event.
   * [TODO] Nilai toggle Active/Non-Active saya tulis dengan `[[^value/boolean/true]]` dan `[[^value/boolean/false]]`. Mohon sesuaikan bila konvensinya berbeda.
+    Jawaban : Oke sudah betul.
 -->
 
 ### Menambahkan Timeline Data
@@ -264,8 +245,11 @@ Selengkapnya lihat [[Docs/Modul Interface/Timeline/Timeline Data]].
 
 <!--
   * [TODO] Pesan error pada gambar tertulis "Query must atleast have 2 showed column!" (ada salah ketik di aplikasi). Dokumentasi memakai bentuk yang benar.
+    Jawaban: Query menggunakan kaidah Timeline output. jadi ada error khusus seperti contoh.
   * [TODO] Mohon konfirmasi kolom wajib pada Show: apakah Name dan Start wajib sedangkan End opsional, dan apakah kolom Start/End harus berformat tanggal-waktu ([[Docs/Tipe Data/DateTime]]).
+    Jawaban: kolom pada Show yang wajib hanya Name dan End. Start dan End harus berformat waktu : DateTime, Date, DateTimeZone.
   * [TODO] Mohon konfirmasi apakah perubahan Query tersimpan otomatis saat popup ditutup (seperti Table View) atau ada tombol simpan, serta apakah nama awal `New Data (n)` mengikuti pola Table View.
+    Jawaban: Query tersimpan otomatis ketika popup ditutup dan isi Row akan disesuaikan otomatis.
 -->
 
 ## Contoh Penggunaan
@@ -282,12 +266,7 @@ Tim operasional mencatat setiap pekerjaan beserta tanggal mulai dan tenggatnya. 
 | [[^field/timeline|Jadwal Pekerjaan]] | Menampilkan pekerjaan sebagai blok di sumbu waktu lewat Timeline Data, dan menjadwalkan pengingat lewat Timeline Event. |
 | [[^field/flow|Pengingat Pekerjaan]] | Menyusun ringkasan pekerjaan jatuh tempo dan mengirimkannya. |
 
-<!--
-  * [TODO] Nama Data Pekerjaan, Jadwal Pekerjaan, dan Pengingat Pekerjaan adalah nama generik. Mohon sesuaikan bila ada contoh yang lebih tepat.
--->
-
 **Alur di Flow**
-
 ```mermaid
 flowchart LR
     TE@{ shape: rounded, label: "**Timeline Event**<br/>Pengingat Harian" } -.->|"&nbsp;Pulser Event&nbsp;"| PL@{ shape: rounded, label: "**Pulser**" }
@@ -305,10 +284,6 @@ flowchart LR
 | 3 | [[Docs/Modul Logic/Flow/Flow Block/Query/Execute|Execute]] | Menjalankan Query untuk mengambil pekerjaan yang jatuh tempo hari ini. | Daftar pekerjaan jatuh tempo. |
 | 4 | [[Docs/Modul Logic/Flow/Flow Block/Operator/Implode|Implode]] | Menggabungkan nama pekerjaan menjadi satu teks. | Ringkasan dalam bentuk teks. |
 | 5 | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]] | Mengirim ringkasan ke layanan pesan. | Ringkasan diterima tim. |
-
-<!--
-  * [TODO] Mohon konfirmasi susunan Flow Block pada contoh (khususnya masukan dan keluaran Execute dan Implode), karena saya belum mengetahui tipe data keluaran Execute.
--->
 
 **Hasil yang dirasakan**
 
@@ -334,9 +309,6 @@ Dengan Timeline, data yang tersebar menjadi satu gambaran waktu yang dapat diuba
 - **Beri nama Timeline Event yang menjelaskan tujuannya**, misalnya pengingat atau pembersihan, agar mudah dikenali di [[^field|Item List]].
 - **Uji Pulser lebih dulu** dengan tombol Trigger pada Flow sebelum menjadwalkannya di Timeline Event.
 - **Gunakan [[#Menu Konteks Timeline|Zoom]] yang sesuai** dengan rentang data, misalnya Month - Week untuk jadwal bulanan dan Date - Hour untuk jadwal harian.
-
->**success** Pastikan Timeline Event aktif
-> Jadwal hanya berjalan bila [[^field|Active]] aktif pada Timeline Event.
 
 ## Batasan dan Catatan
 

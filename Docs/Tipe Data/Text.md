@@ -8,7 +8,7 @@
 ---
 # Text
 
-Text adalah tipe data yang dapat menyimpan teks hingga menyimpan 0 hingga 65,535 karakter.
+Text adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan teks hingga menyimpan 0 hingga 65,535 karakter.
 
 ## Format
 
