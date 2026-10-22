@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : Rich Text
-Format dalam [[Docs/Tipe Data/Text]] yang dapat memberikan alat untuk mengakses penulisan markdown.
+
+Rich Text adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Text]] yang dapat memberikan alat untuk mengakses penulisan markdown.
 

@@ -10,5 +10,5 @@
 ---
 # Format Data : Attachment
 
-Format dalam [[Docs/Tipe Data/File]] untuk menyimpan data file. Tidak ada batasan ekstensi atau _mime type_ yang dapat diupload.
+Attachment adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/File]] untuk menyimpan data file. Tidak ada batasan ekstensi atau _mime type_ yang dapat diupload.
 

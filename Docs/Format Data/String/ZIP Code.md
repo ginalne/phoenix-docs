@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : ZIP Code
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan kode zip.
+
+ZIP Code adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan kode zip.
 

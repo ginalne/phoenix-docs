@@ -1,8 +1,7 @@
 ---
-    status: draft
+    status: group
     pageDecoration:
-      icon: x
+      icon: folder
       tree:
-        priority: 0
+        priority: -1
 ---
-# Timeline Data

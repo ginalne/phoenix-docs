@@ -13,6 +13,7 @@ TableData adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] khusus yang digunakan o
 ## Attribute
 
 Setiap [[Docs/Tipe Data/TableData]] memiliki atribut sebagai berikut:
+
 * [[#Row]]
 * [[#Column]]
 * [[#Type]]

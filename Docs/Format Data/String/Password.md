@@ -4,7 +4,8 @@
     description:
 ---
 # Format Data : Password
-format dalam [[Docs/Tipe Data/String]] secara memberikan pengalaman input secara rahasia, karena pengisi tidak dapat melihat nilainya secara langsung. 
+
+Password adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] secara memberikan pengalaman input secara rahasia, karena pengisi tidak dapat melihat nilainya secara langsung. 
 
 Format ini bagus untuk penginputan yang bersifat tidak bisa dilihat.
 

@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : Country Code
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan kode negara. Kode negara bersifat international dan disediakan oleh Phoenix.
+
+Country Code adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan kode negara. Kode negara bersifat international dan disediakan oleh Phoenix.
 

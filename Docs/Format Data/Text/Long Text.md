@@ -4,7 +4,8 @@
     description:
 ---
 # Format Data : Long Text
-Format dalam [[Docs/Tipe Data/Text]] secara _default_ yang tidak memberikan pemformatan apapun.
+
+Long Text adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Text]] secara _default_ yang tidak memberikan pemformatan apapun.
 
 Anda dapat menggunakan format ini untuk pengisian bersifat teks panjang yang tidak memerlukan bantuan format khusus.
 

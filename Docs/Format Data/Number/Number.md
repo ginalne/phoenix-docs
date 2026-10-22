@@ -10,7 +10,7 @@
 ---
 # Format Data : Number
 
-Format dalam [[Docs/Tipe Data/Number]] secara _default_ yang tidak memberikan pemformatan apapun.
+Number adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Number]] secara _default_ yang tidak memberikan pemformatan apapun.
 
 Anda dapat menggunakan format ini untuk pengisian bersifat angka yang tidak memerlukan bantuan format khusus.
 

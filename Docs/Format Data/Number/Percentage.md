@@ -10,5 +10,5 @@
 ---
 # Format Data : Percentage
 
-Format dalam [[Docs/Tipe Data/Number]] untuk menyimpan angka persentase dengan simbol “%“ selalu diawal. Nilai yang sebenarnya tersimpan adalah 1/100 dari nilai yang dimasukan.
+Percentage adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Number]] untuk menyimpan angka persentase dengan simbol “%“ selalu diawal. Nilai yang sebenarnya tersimpan adalah 1/100 dari nilai yang dimasukan.
 

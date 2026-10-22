@@ -25,6 +25,7 @@ Complex adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang memiliki atribut khu
 ## Format
 
 Tipe data ini memiliki format sebagai berikut:
+
 * [[Docs/Format Data/Complex/Numeration Unit]]
 * [[Docs/Format Data/Complex/Length Unit]]
 * [[Docs/Format Data/Complex/Area Unit]]

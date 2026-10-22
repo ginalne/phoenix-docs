@@ -10,5 +10,5 @@
 ---
 # Format Data : 3D Vector
 
-Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data vektor x, y dan z.
+3D Vector adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Complex]] untuk menyimpan data vektor x, y dan z.
 

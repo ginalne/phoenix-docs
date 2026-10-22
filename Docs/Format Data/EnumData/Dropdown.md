@@ -7,5 +7,6 @@
         priority: 0
 ---
 # Dropdown
-Format dalam [[Docs/Tipe Data/EnumData]] yang membuat pencarian item secara _default_ dengan berbentuk dropdown.
+
+Dropdown adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/EnumData]] yang membuat pencarian item secara _default_ dengan berbentuk dropdown.
 

@@ -10,5 +10,5 @@
 ---
 # Format Data : Volume Unit
 
-Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data x, y, z dan unitnya.
+Volume Unit adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Complex]] untuk menyimpan data x, y, z dan unitnya.
 

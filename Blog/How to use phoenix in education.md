@@ -1,6 +1,6 @@
 ---
     status: released
     tags:
-    - basic
-    - education
+      basic
+      education
 ---

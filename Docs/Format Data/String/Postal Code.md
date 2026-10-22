@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : Postal Code
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan kode pos.
+
+Postal Code adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan kode pos.
 

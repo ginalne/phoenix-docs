@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : IBAN
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan nomor rekening bank internasional.
+
+IBAN adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan nomor rekening bank internasional.
 

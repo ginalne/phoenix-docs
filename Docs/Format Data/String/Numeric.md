@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : Numeric
-format dalam [[Docs/Tipe Data/String]] untuk menyimpan text dengan format nomor dan simbol simbol yang mendukung, yaitu “-” (strip), “.” (titik), “,” (koma), dan “_” (garis bawah).
+
+Numeric adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan text dengan format nomor dan simbol simbol yang mendukung, yaitu “-” (strip), “.” (titik), “,” (koma), dan “_” (garis bawah).
 

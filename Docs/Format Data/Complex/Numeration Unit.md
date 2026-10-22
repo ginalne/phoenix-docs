@@ -10,5 +10,5 @@
 ---
 # Format Data : Numeration Unit
 
-Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data yang didukung kompleks secara bebas.
+Numeration Unit adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Complex]] untuk menyimpan data yang didukung kompleks secara bebas.
 

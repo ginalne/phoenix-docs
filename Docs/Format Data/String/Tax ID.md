@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : Tax ID
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan nomor identifikasi pajak.
+
+Tax ID adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan nomor identifikasi pajak.
 

@@ -10,5 +10,5 @@
 ---
 # Format Data : Geo
 
-Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data geolokasi dengan atribut Latitude dan Longitude.
+Geo adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Complex]] untuk menyimpan data geolokasi dengan atribut Latitude dan Longitude.
 

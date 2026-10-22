@@ -10,5 +10,5 @@
 ---
 # Format Data : Quaternion Unit
 
-Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data x, y, z, w dan unitnya.
+Quaternion Unit adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Complex]] untuk menyimpan data x, y, z, w dan unitnya.
 

@@ -13,6 +13,7 @@ Text adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan teks hi
 ## Format
 
 Tipe data ini memiliki format sebagai berikut:
+
 * [[Docs/Format Data/Text/Long Text]]
 * [[Docs/Format Data/Text/Rich Text]]
 * [[Docs/Format Data/Text/Markdown]]

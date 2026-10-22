@@ -42,6 +42,7 @@ Penjelasan cara kerja Table View lihat selengkap nya di [[Docs/Modul Interface/T
 ## Mengelola Table View
 
 Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
+
 1. [[Docs/Modul Interface/Table View/Membuat Baru]] Table View dalam halaman kerja.
 2. [[Docs/Modul Interface/Table View/Mengubah]] Atribut Table View seperti [[^field|Name]], [[^field|Description]], atau [[^field|Table - Column]].
 3. [[Docs/Modul Interface/Table View/Menghapus]] Table View.
@@ -49,7 +50,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
 
 ## Antarmuka
 
-Penjelasan antarmuka Table View lihat selengkap nya di [[Docs/Modul Interface/Table View/Antarmuka|Antarmuka Table View]].
+Penjelasan antarmuka lihat selengkapnya di [[Docs/Modul Interface/Table View/Antarmuka|Antarmuka Table View]].
 
 ## Praktik Terbaik
 

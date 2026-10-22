@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : License Plate
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan plat nomor.
+
+License Plate adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan plat nomor.
 

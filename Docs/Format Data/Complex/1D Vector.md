@@ -10,5 +10,5 @@
 ---
 # Format Data : 1D Vector
 
-Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data vektor x.
+1D Vector adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Complex]] untuk menyimpan data vektor x.
 

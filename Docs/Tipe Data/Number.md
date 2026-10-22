@@ -19,6 +19,7 @@ Karakteristik utamanya meliputi:
 ## Format
 
 Tipe data ini memiliki format sebagai berikut:
+
 * [[Docs/Format Data/Number/Number]]
 * [[Docs/Format Data/Number/Integer]]
 * [[Docs/Format Data/Number/Decimal]]

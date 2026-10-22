@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : Vehicle VIN
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan Nomor Rangka atau Nomor Identifikasi Kendaraan.
+
+Vehicle VIN adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan Nomor Rangka atau Nomor Identifikasi Kendaraan.
 

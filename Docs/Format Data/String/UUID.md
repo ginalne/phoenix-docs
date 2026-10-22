@@ -4,5 +4,6 @@
     description:
 ---
 # Format Data : UUID
-Format dalam [[Docs/Tipe Data/String]] untuk menyimpan kode UUID.
+
+UUID adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/String]] untuk menyimpan kode UUID.
 

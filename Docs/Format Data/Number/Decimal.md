@@ -10,5 +10,5 @@
 ---
 # Format Data : Decimal
 
-Format dalam [[Docs/Tipe Data/Number]] untuk menyimpan angka hingga presisi desimal.
+Decimal adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Number]] untuk menyimpan angka hingga presisi desimal.
 

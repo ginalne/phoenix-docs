@@ -10,5 +10,5 @@
 ---
 # Format Data : 2D Vector
 
-Format dalam [[Docs/Tipe Data/Complex]] untuk menyimpan data vektor x dan y.
+2d Vector adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Complex]] untuk menyimpan data vektor x dan y.
 

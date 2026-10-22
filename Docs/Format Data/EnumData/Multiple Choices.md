@@ -7,5 +7,6 @@
         priority: 0
 ---
 # Multiple Choices
-Format dalam [[Docs/Tipe Data/EnumData]] yang membuat pemilihan item dengan pilihan ganda.
+
+Multiple Choices adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/EnumData]] yang membuat pemilihan item dengan pilihan ganda.
 

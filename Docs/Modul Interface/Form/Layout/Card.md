@@ -40,7 +40,7 @@ flowchart LR
   A["Card"] -.->|&nbsp;Binding table&nbsp;| B["Table"]
   A -->|&nbsp;Berisi&nbsp;| C["Elemen Input"]
   C -.->|&nbsp;Binding&nbsp;| D["Column"]
-  A -->|&nbsp;Berisi&nbsp;| E["Card anak"]
+  A -->|&nbsp;Berisi&nbsp;| E["Layout anak"]
   E -.->|&nbsp;Binding pivot&nbsp;| F["Table berelasi"]
 ```
 
@@ -55,13 +55,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan E
 
 ## Mengonfigurasi Card
 
-![[Docs/Modul Interface/Form/Layout/Card/properties-card.png]]
-
-<!--
-  * [TODO] Letakkan gambar Properties Panel Card (properties-card.png) di sini. Anotasi yang disarankan: (1) [[^field|Type]] dan [[^field|Table]] pada Binding, (2) [[^field|Visible]] pada State, (3) daftar Children, (4) label Table di atas Card, (5) Header Toolbar dengan tombol [[^button/delete|Remove]].
-  * [TODO] Gambar contoh memuat nama Table dan Elemen milik penulis. Ganti dengan penamaan generik.
--->
-
+![[Docs/Modul Interface/Form/Layout/properties-form-card.png]]
 Klik kiri Card di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar. Label Table (berikon tabel) juga tampil di atas Card sebagai informasi Binding.
 
 | Bagian | Fungsi |
@@ -98,13 +92,7 @@ Untuk mengatur pivot pada Card anak:
 4. Pilih relasi yang tersedia
 
 >**warning** Dampak mengubah Binding
-> Mengubah Table pada Card dapat memutus Binding Column pada Elemen Input di dalamnya, sehingga Column perlu dipilih ulang.
-
-<!--
-  * [TODO] Konfirmasi nama field pada pilihan pivot (langkah 4 pengaturan pivot) dan apa yang tampil sebagai relasi yang tersedia.
-  * [TODO] Konfirmasi dampak mengubah Table pada Card terhadap Binding Column di dalamnya (warning di atas masih asumsi).
-  * [TODO] Konfirmasi apa yang membedakan Card dari Layout lain (Full, Split, Accordion) pada tampilan Form, agar bisa ditulis pada pengantar.
--->
+> Mengubah [[^field|Table]]atau [[^field|Pivot]] pada Card dapat memutus Binding Column pada Elemen Input di dalamnya, sehingga menghasilkan error _binding missmatch_.
 
 ### Children
 
@@ -114,58 +102,8 @@ Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Card. Setiap baris
 
 Langkah menghapus Card sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Menghapus Elemen]].
 
->**warning** Dampak penghapusan Card
-> Menghapus Card akan menghapus semua Elemen di dalamnya. Phoenix menampilkan konfirmasi sebelum Card dihapus.
-
-## Contoh Penggunaan
-
-**Pendaftaran peserta pelatihan beserta pendampingnya**
-
-Panitia pelatihan ingin peserta mendaftar sekaligus mengisi data pendampingnya dalam satu Form. Dengan Card bertingkat, data peserta dan data pendamping tersimpan di Table yang berelasi tanpa perlu dicatat ulang oleh panitia.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| --- | --- |
-| [[^field/form|Form Pendaftaran]] | Tempat pendaftar mengisi data lewat tautan publik. |
-| [[^field/table|Data Peserta]] | Table header pada Card induk. |
-| [[^field/table|Data Pendamping]] | Table berelasi yang dipakai Card anak lewat pivot. |
-
-**Susunan Form**
-
-1. Card induk dengan [[^value/radio|table]] ke Data Peserta, berisi Elemen Input untuk data peserta.
-2. Card anak dengan [[^value/radio|pivot]] ke Data Pendamping, berisi Elemen Input untuk data pendamping.
-
-<!--
-  * [TODO] Nama Form dan Table pada contoh hanya penamaan generik. Sesuaikan dengan gambar yang Anda buat.
-  * [TODO] Konfirmasi asumsi bahwa isian pada Card anak tersimpan sebagai Row pada Table berelasi lewat pivot.
--->
-
-**Hasil yang dirasakan**
-
-- Pendaftar mengisi satu Form, data tersimpan di dua Table yang berelasi.
-- Panitia tidak perlu menyalin data antar [[Docs/Modul Data/Table/Apa itu Table|Table]].
-- Setiap pendaftaran dapat ditindaklanjuti otomatis lewat [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
-
-**Ide skenario lain**
-
-| Jenis nilai | Contoh integrasi |
-| --- | --- |
-| Data berelasi | Form pesanan dengan Card induk untuk pemesan dan Card anak untuk rincian barang. |
-| Otomasi | Card pada Form permintaan layanan yang Row barunya memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]. |
-| Tampilan | Form survei dengan beberapa Card untuk mengelompokkan pertanyaan per topik. |
-
-Card membuat Form bukan sekadar kumpulan kolom isian, tetapi susunan data berelasi yang langsung tersambung ke Table di Phoenix.
-
-## Praktik Terbaik
-
-- **Pilih Table dulu.** Tentukan [[^field|Table]] pada Card sebelum menambah Elemen Input, agar Column dapat dipilih.
-- **Satu Card untuk satu Table.** Pisahkan data yang berbeda Table ke Card yang berbeda.
-- **Gunakan pivot untuk relasi.** Pakai [[^value/radio|pivot]] pada Card anak untuk data turunan, bukan Table terpisah tanpa relasi.
-- **Beri Elemen Text sebagai judul.** Letakkan Elemen [[Docs/Modul Interface/Form/Display/Text/Penjelasan|Text]] di bagian atas Card agar tujuan Card jelas bagi pengisi.
-
->**success** Card siap digunakan
-> Setelah [[^field|Table]] terpilih dan Elemen Input terikat ke Column, Card siap dipakai pengisi.
+>**danger** Dampak penghapusan Card
+> Menghapus Card akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.
 
 ## Batasan dan Catatan
 

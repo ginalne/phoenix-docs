@@ -15,6 +15,7 @@ File adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang memiliki atribut khusus
 ## Format
 
 Tipe data ini memiliki format sebagai berikut:
+
 * [[Docs/Format Data/File/Attachment]]
 * [[Docs/Format Data/File/Document]]
 * [[Docs/Format Data/File/Media]]

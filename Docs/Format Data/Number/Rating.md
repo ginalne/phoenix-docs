@@ -10,5 +10,5 @@
 ---
 # Format Data : Rating
 
-Format dalam [[Docs/Tipe Data/Number]] untuk menyimpan angka peniliain atau rating dengan ikon bintang berjumlah 5. Nilai yang sebenarnya tersimpan adalah jumlah bintang yang terang.
+Rating adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/Number]] untuk menyimpan angka peniliain atau rating dengan ikon bintang berjumlah 5. Nilai yang sebenarnya tersimpan adalah jumlah bintang yang terang.
 
