@@ -24,7 +24,7 @@ Tiga hal yang membuat situasi ini sulit dibiarkan:
   `@vianney08` <small style="opacity: 0.5">at 2026-10-23 03:42</small>
    @harbimartin gangerti konteksnya siapa yang menerima apa untuk diapakan
 -->
-- **Tindak lanjut terlambat.** Siswa yang perlu remedial baru diketahui setelah rapor hampir selesai.
+- **Tindak lanjut terlambat.** Siswa yang perlu remedial baru diketahui setelah rapor hampir selesai atau data kehadiran yang keliru baru diketahui setelah rapor dibagikan.
 
 ### Gambaran Singkat
 | | |
@@ -33,7 +33,7 @@ Tiga hal yang membuat situasi ini sulit dibiarkan:
 | **Skala** | 600 siswa, 45 guru, 4 staf tata usaha, 1 kepala sekolah |
 | **Masalah utama** | Data tersebar di banyak file dan tidak ada kontrol akses |
 | **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Data/Table View/Apa itu Table View|Table View]], [[Docs/Modul Data/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], [[Docs/Publish/Pengenalan|Publish]] |
-| **Hasil yang dituju** | Satu sumber data, akses sesuai peran, pengingat berjalan otomatis |
+| **Hasil yang dituju** | Satu sumber data, akses sesuai peran, pengingat yang berjalan otomatis |
 
 ### Tujuan
 1. Seluruh data akademik berada di satu tempat dan dapat dicari.
@@ -84,11 +84,15 @@ Matriks berikut adalah titik awal. Nilai `allow` dan `disallow` diatur pada hala
 | Pengumuman | Visible, Add, Update, Publish | Visible | Visible | Visible, View Publish |
 
 Pengaturan **Visible** pada folder induk berlaku untuk seluruh isinya, jadi rancang `disallow` dari folder terlebih dahulu sebelum menyetel komponen satu per satu.
+<!--
+  `@vianney08` <small style="opacity: 0.5">at 2026-10-23 03:51</small>
+   @harbimartin “berlaku untuk seluruh isinya” maksudnya apa?
+-->
 
 ### Data yang Disimpan
 | Komponen | Isi utama |
 |---|---|
-| Data Siswa | NIS, nama, kelas, nama wali |
+| Data Siswa | NIS, NISN, nama, kelas, nama wali |
 | Kehadiran | Tanggal, siswa, status (hadir, izin, sakit, alpa) |
 | Nilai | Siswa, mata pelajaran, jenis penilaian, skor |
 | Kalender Akademik | Awal semester, ujian, libur, pembagian rapor |
@@ -98,7 +102,6 @@ Selengkapnya tentang membuat tabel dan menentukan tipe kolom lihat [[Docs/Modul 
 
 ### Otomasi dengan Flow
 [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] **Tindak Lanjut Nilai** menyusun alur komposit pada Blueprint:
-
 1. Sebuah [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] terpicu saat baris baru ditambahkan di tabel Nilai.
 2. Alur memeriksa apakah skor berada di bawah batas tuntas mata pelajaran.
 3. Jika ya, alur menambahkan catatan ke daftar tindak lanjut yang dipantau wali kelas.
