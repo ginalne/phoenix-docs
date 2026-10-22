@@ -102,12 +102,15 @@ Halaman kerja Form terdiri dari bilah navigasi di bagian atas, area kerja di bag
 
 ### Bilah navigasi Form terdiri dari:
 
-| Tombol | Fungsi |
+Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
+
+| Elemen | Fungsi |
 | --- | --- |
 | Judul Form | Menampilkan ikon Form dan nama Form. |
 | [[^button/edit|Edit]] | Mengubah atribut Form ([[^field|Name]] dan [[^field|Description]]). Lihat [[#Mengubah Form]]. |
 | [[^button/publish|Publish]] | Membuka konfigurasi publikasi Form. Lihat [[#Mempublikasikan Form]]. |
-| [[^field|mode]] | Berpindah antara [[^value/radio|View]] dan [[^value/radio|Edit]]. Lihat [[#Mode View dan Edit Mode]]. |
+|  [[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. Lihat [[#Mode View dan Edit Mode]]. |
+|  [[mode/edit|Edit]] | Saklar dengan mode Edit agar  konten Form hanya bisa dilihat. Lihat [[#Mode View dan Edit Mode]]. |
 | [[^button/save|Save]] | Menyimpan perubahan isi Form. Aktif saat ada perubahan, dan perubahan juga tersimpan otomatis (*auto save*) setelah sekitar 3 detik. |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan Form. |
 | [[^button/submission|Informasi Submission]] | Menampilkan jumlah Submission sukses, menunggu, dan gagal. Klik untuk membuka [[#Mengelola Submission|Submission List]]. |
@@ -235,6 +238,16 @@ Panel untuk mengatur ukuran, padding, margin dan beberapa _styling_ elemen. Seti
 | [[^field|padding]] | Mengatur jarak di bagian dalam elemen, yaitu antara batas elemen dan kontennya. |
 | [[^field|margin]] | Mengatur jarak di luar elemen, yaitu ruang antara elemen tersebut dan elemen lain di sekitarnya. |
 
+### Menu Konteks Elemen
+
+Klik kanan pada elemen untuk membuka menu konteks.
+
+| Area | Menu |
+| ---- | ---- |
+| [[^field/copy|Copy Layout Style]] | Menyalin konfigurasi _styling_ elemen. |
+| [[^field/paste|Paste Layout Style]] | Menerapkan salinan konfigurasi _styling_ elemen. |
+| [[^field/up|Move Back]] | Memindahkan posisi dengan elemen sebelumnya (tidak ada pengaruh jika elemen berada dibarisan pertama) |
+| [[^field/down|Move Next]] | Memindahkan posisi dengan elemen setelahnya (tidak ada pengaruh jika elemen berada dibarisan akhir)
 
 ### Menghapus Elemen
 
@@ -268,12 +281,7 @@ Setiap kali Form dikirim, Phoenix mencatatnya sebagai Submission dengan status s
 
 Klik [[^button/submission|Informasi Submission]] untuk membuka **Submission List** di sebelah kanan.
 
-![[Docs/Modul Interface/Form/submission-list-form.png]]
-
-<!--
-  * [TODO] Letakkan gambar Submission List (submission-list-form.png) di sini. Anotasi yang disarankan: (1) filter waktu, (2) [[^button/refresh|Refresh List]], (3) kolom pencarian, (4) grafik, (5) daftar Submission.
-  * [TODO] Gambar contoh memuat nama pengisi yang sebenarnya. Ganti dengan data contoh atau sensor sebelum dipublikasikan.
--->
+![[Docs/Modul Interface/Form/submission-form.png]]
 
 | Bagian | Fungsi |
 | --- | --- |
@@ -285,7 +293,9 @@ Klik [[^button/submission|Informasi Submission]] untuk membuka **Submission List
 
 <!--
   * [TODO] Konfirmasi isi baris Submission saat dibuka (ikon panah di kiri baris), fungsi tombol salin di samping ID, dan fungsi ikon panel di kiri judul Submission List.
+    Jawaban : ikan panah adalah untuk membuat rincian submission tersebut seperti menambahkan data apa, ID berapa atau ada error apa.
   * [TODO] Konfirmasi cakupan [[^field|Search Submission...]] (kolom apa saja yang dicari).
+    Jawaban : ID dan Name.
 -->
 
 ## Mempublikasikan Form
@@ -296,12 +306,11 @@ Publish adalah konfigurasi untuk mengubah Form menjadi dipublikasikan, sehingga 
 2. Klik [[^button/publish|Publish]]
 3. Atur konfigurasi publikasi
 4. Klik [[^button|Update]]
-
+   
 ![[Docs/Modul Interface/Form/publish-form.png]]
-
 <!--
-  * [TODO] Letakkan gambar dialog Publish (publish-form.png) di sini. Anotasi yang disarankan: (1) [[^field|Status]], (2) [[^field|Link]], (3) [[^field|Language]], (4) [[^field|Single Submission]].
-  * [TODO] Gambar contoh memuat nama Form milik penulis. Ganti dengan penamaan generik.
+  * [DONE] Letakkan gambar dialog Publish (publish-form.png) di sini. Anotasi yang disarankan: (1) [[^field|Status]], (2) [[^field|Link]], (3) [[^field|Language]], (4) [[^field|Single Submission]].
+  * [DONE] Gambar contoh memuat nama Form milik penulis. Ganti dengan penamaan generik.
 -->
 
 | Konfigurasi | Fungsi |
@@ -316,6 +325,7 @@ Publish adalah konfigurasi untuk mengubah Form menjadi dipublikasikan, sehingga 
 
 <!--
   * [TODO] Konfirmasi catatan di atas (pengaruh perubahan konfigurasi Publish terhadap Submission yang sudah masuk). Konfirmasi juga pilihan lain pada [[^field|Language]] dan apakah dialog Publish perlu dipindah menjadi subhalaman `Docs/Modul Interface/Form/Publish`.
+    Jawaban : sudah betul, tidak perlu.
 -->
 
 ## Hak Akses Form
@@ -330,6 +340,7 @@ Akses Form di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] men
 
 <!--
   * [TODO] Konfirmasi pemetaan Data Access (Add, Update, Delete) ke aksi di Form: aksi apa yang membutuhkan [[^field|Add]], [[^field|Update]], dan [[^field|Delete]] (misalnya Edit Mode dan Remove Elemen).
+    Jawaban : Sudah betul.
 -->
 
 ## Contoh Penggunaan
@@ -347,8 +358,9 @@ Panitia sebuah kegiatan ingin peserta mendaftar sendiri lewat tautan, tanpa haru
 | [[^field/flow|Notifikasi Pendaftaran]] | Mengirim pemberitahuan ke panitia saat ada Row baru. |
 
 <!--
-  * [TODO] Nama Form, Table, dan Flow pada contoh ini hanya penamaan generik. Sesuaikan dengan gambar yang Anda buat.
+  * [DONE] Nama Form, Table, dan Flow pada contoh ini hanya penamaan generik. Sesuaikan dengan gambar yang Anda buat.
   * [TODO] Konfirmasi asumsi bahwa Submission Form menambahkan Row baru di Table sehingga dapat memicu Flow Block Table Row Event, dan konfirmasi nama Event yang dipakai pada diagram.
+    Jawaban : Iya betul.
 -->
 
 **Alur di Flow**
@@ -429,25 +441,3 @@ Dengan Form, pengumpulan data dari publik tersambung langsung ke data dan otomas
 > **Di mana penjelasan setiap Elemen?**
 > Setiap Elemen punya halaman sendiri, misalnya [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]] dan [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]]. Lihat daftarnya di [[#Memahami Elemen]].
 
-<!--
-  * [TODO] Halaman yang diusulkan dan belum ada: `Docs/Modul Interface/Pengenalan`, `Docs/Modul Interface/Form/<Tipe>/<Nama Elemen>/Penjelasan` (13 Elemen), `Docs/Modul Interface/Table View/Apa itu Table View`, `Docs/Modul Interface/Kanban/Apa itu Kanban`, dan `Docs/Modul Developer/Workspace/Data Access`. Pastikan path-nya sesuai struktur Anda.
--->
-
-
-## Antar Muka
-
-Berikut adalah tampilan form saat pertama kali dibuat:
-
-![[Docs/Modul Interface/Form/form-new.png]]
-Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
-
-| | |
-|-------------------|---------------------------------------------------------------------------------------------------|
-|[[field/form|Judul Form]]| Ikon Form dalam phoenix serta [[field|Header Name]] Form.  
-| [[button/edit|Edit]]  | Tombol yang berfungsi untuk membuka modal Edit Form untuk memperbarui nama dan deskripsi Form. |
-| [[button/publish|Publish]]  | Tombol yang berfungsi untuk membuka modal Publish Form untuk memperbarui konfigurasi publish Form. |
-|  [[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
-|  [[mode/edit|Edit]] | Saklar dengan mode Edit agar  konten Form hanya bisa dilihat |
-| [[button/save|Save]]  | Tombol yang berfungsi untuk menyimpan perubahan Form. |
-| [[button/refresh|Refresh]]  | Tombol yang berfungsi untuk menyegarkan lagi halaman Form. |
-|[[button/submission|Submission]]| Tombol yang berfungsi untuk membuka bilik submission.
