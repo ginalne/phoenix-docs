@@ -38,16 +38,9 @@ Penjelasan cara kerja Enum lihat selengkap nya di [[Docs/Modul Data/Enum/Cara Ke
 
 Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
 
-1. [[Docs/Modul Data/Enum/Enum Data/Menambahkan]]
-2. [[Docs/Modul Data/Enum/Enum Data/Mengubah]]
+1. [[Docs/Modul Data/Variablle Data/Menambahkan Data]]
+2. [[Docs/Modul Data/Enum/Enum Data/Mengubah Data]]
 3. [[Docs/Modul Data/Enum/Enum Data/Menghapus]]
-4. [[Docs/Modul Data/Enum/Enum Data/Menggabungkan]]
-
-
-
-
-
-
 1. [[Docs/Modul Data/Enum/Enum Data/Pengenalan|Mengelola Data]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/EnumData]].
 2. [[Docs/Modul Data/Enum/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
