@@ -1,10 +1,9 @@
 ---
-status: draft
-title: Text (Elemen Display)
-description: Text adalah Elemen Display pada Form untuk menampilkan teks statis seperti judul, keterangan, dan petunjuk pengisian.
+    status: release
+    title: "Form Display : Text"
+    description: Text adalah Elemen Display pada Form untuk menampilkan teks statis seperti judul, keterangan, dan petunjuk pengisian.
 ---
-
-# Text (Elemen Display)
+# Form Display : Text
 
 >**note** Text merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
@@ -53,6 +52,7 @@ Menampilkan Layout tempat Text berada. Ukuran, *padding*, dan *margin* Text diat
 
 ### Header Toolbar teks
 
+![[Docs/Modul Interface/Form/Display/toolbar-form-text.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
 
 <!--
@@ -128,9 +128,7 @@ Text membuat Form lebih mudah dipahami, sehingga data yang terkumpul lebih tepat
 
 > **faq**
 > **Apakah Content dapat menampilkan nilai dari Binding?**
-> Belum. [[^field|Content]] saat ini hanya teks statis dan belum dapat berisi [[Docs/Tipe Data/Expression]].
-> **Mengapa panel Text tidak punya Binding?**
-> Text hanya menampilkan teks statis, sehingga tidak terikat ke data di [[Docs/Modul Data/Table/Apa itu Table|Table]].
+> Belum. [[^field|Content]] saat ini hanya teks statis dan belum dapat berisi [[Docs/Tipe Data/Expression]]. Jika ingin membuat tampilan text berisi [[Docs/Tipe Data/Expression]], gunakan Basic Input dengan [[^field|Read Only]] = [[^value/boolean/Active]].
 > **Bagaimana mengubah ukuran teks?**
 > Klik kiri Text di Edit Mode, lalu gunakan pengaturan ukuran font pada [[#Header Toolbar teks|Header Toolbar teks]].
 > **Apakah isi Text dikirim sebagai Submission?**
