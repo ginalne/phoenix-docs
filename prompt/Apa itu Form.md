@@ -15,6 +15,8 @@
 ![[prompt/2026-10-22_14-49-38.png]]
 ![[prompt/2026-10-22_14-50-59.png]]
 ![[prompt/2026-10-22_14-53-17.png]]
+![[prompt/2026-10-22_15-53-04.png]]
+
 
 /phoenix-docs-knowledge  /phoenix-docs-silverbullet 
 
@@ -25,8 +27,9 @@ base knowledge:
 2. Form dapat memiliki beberapa halaman, dan disetiap halaman akan ada informasi Start Building dengan pemilihan layout (informasi ini hanya tampil di Edit Mode).
 3. Bagian publish form adalah konfigurasi untuk mengubah form menjadi di publikasi.
 4. Informasi submission (sukses, menunggu, gagal) dapat diklik agar menampilkan konten (disebelah kanan) Submission List, yaitu grafik dan daftarnya, dapat di filtrasi ataupun dicari.
-5. Setiap aksi select (klik kiri) dalam Node akan menampilkan card konfigurasi (seperti binding, state, attribute, children atau parent), serta header (untuk shortcut action) yang selalu ada tombol Remove untuk menghapus Node.
-6. Pada mode Edit informasi binding bisa dilihat.
+5. Pada mode Edit informasi binding bisa dilihat, focus node dengan klik kiri.
+6. Setiap aksi select (klik kiri) dalam Node akan menampilkan card konfigurasi (seperti binding, state, attribute, children atau parent), serta header (untuk shortcut action) yang selalu ada tombol Remove untuk menghapus Node.
+7. Khusus penjelasan keunikan masing-masing Node akan dijelaskan di halaman [[Docs/Modul Interface/Form/<Tipe>/<Nama Node>/Penjelasan|<Nama Node>]].
 
 techincal knowledge:
 1. Node dalam form adalah satu objek yang bisa digunakan untuk memetakan konten dalam Form, dengan kategori Layout (Card, Full, Split, Accordion), Display (Text, Table, Tooltip, Qr, Chrono), Input (Basic, Quiz, Table, List).
