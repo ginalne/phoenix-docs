@@ -37,3 +37,11 @@ techincal knowledge:
 3. Display memiliki fungsi untuk menampilkan sesuatu informasi yang statis atau expression dari binding value (semisal nilai total dan sebagainya).
 4. Input memiliki fungsi untuk input ataupun menampilkan sesuatu informasi yang berlaku di binding.
 5. Form memiliki binding yaitu ikatan hirarki agar input dan hasil akhir (binding ke table row dan relasinya) dapat sesuai.
+
+answer:
+1. Tombol [[^button/edit|Edit]] mengubah atribut Form (Name dan Description, lalu Update) seperti komponen lain, sedangkan toggle mode yang berpindah antara View dan Edit Mode. tombol [[^button/save|Save]] aktif ketika ada perubahan, bisa ditekan manual atau menunggu sekitar 3 detik (auto save).
+2. mode read only itu ketika bukan dalam edit mode. Toggle ke edit mode bisa dlakukan jika akses workspace edit data = allow.
+3. language dalam publish adalah form publik, single submission yaitu per perangkat. kalau status jadi non-active maka form tidak bisa dikirim (hanya dilihat).
+4. Bagian Template di Start Building belum ada, itu ada untuk mempermudah styling. (sama hal nya menggunakan node yang tersedia dan mengubah konfigurasi stylenya).
+5. Hanya menghapus template dan history submission, data yang sudah tersimpan tidak langsung terhapus. (ada pengaruh juga ketika publik sedang mengisi, akan error ketika mencoba mengirim).
+6. Form mengikuti Comp. Access, Data Access, dan Function Access (View Publish dan Publish) seperti komponen lain. Data Access yang dimaksud adalah setiap perubahan Node dan atributnya didalam Form.
