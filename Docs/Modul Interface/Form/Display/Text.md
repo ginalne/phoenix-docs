@@ -31,7 +31,7 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Text
 
-![[Docs/Modul Interface/Form/Display/Text/properties-text.png]]
+![[Docs/Modul Interface/Form/Display/properties-form-text.png]]
 Klik kiri Text di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar.
 
 ### State Text
@@ -55,45 +55,6 @@ Menampilkan Layout tempat Text berada. Ukuran, *padding*, dan *margin* Text diat
 ![[Docs/Modul Interface/Form/Display/toolbar-form-text.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
 
-<!--
-  * [TODO] Konfirmasi fungsi ikon `T` di kiri Header Toolbar Text, dan apakah teks dapat diedit langsung pada tampilan Form (selain lewat field Content).
-  * [TODO] Konfirmasi alasan panel Text tidak memiliki bagian Binding (apakah karena isinya statis), dan apakah Expression direncanakan pada versi berikutnya.
--->
-
-## Contoh Penggunaan
-
-**Petunjuk pengisian pada Form pendaftaran**
-
-Panitia sebuah kegiatan ingin pendaftar memahami cara mengisi Form tanpa perlu bertanya. Dengan Text, judul dan petunjuk ditampilkan tepat di atas isian, sehingga data yang masuk lebih lengkap dan benar.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| --- | --- |
-| [[^field/form|Form Pendaftaran]] | Tempat pendaftar mengisi data lewat tautan publik. |
-| Text | Menampilkan judul Form dan petunjuk pengisian. |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]] | Elemen Input untuk data pendaftar. |
-
-<!--
-  * [TODO] Nama Form pada contoh hanya penamaan generik. Sesuaikan dengan gambar yang Anda buat.
--->
-
-**Hasil yang dirasakan**
-
-- Pendaftar langsung memahami tujuan Form dan cara mengisinya.
-- Isian yang masuk ke [[Docs/Modul Data/Table/Apa itu Table|Table]] lebih lengkap dan konsisten.
-- Panitia mengurangi pertanyaan berulang dari pendaftar.
-
-**Ide skenario lain**
-
-| Jenis nilai | Contoh integrasi |
-| --- | --- |
-| Petunjuk | Text sebagai catatan di atas [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Input Table]] untuk menjelaskan cara mengisi data berulang. |
-| Judul | Text berukuran besar sebagai judul [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]]. |
-| Pemisah | Beberapa Text sebagai penanda bagian pada Form yang panjang. |
-
-Text membuat Form lebih mudah dipahami, sehingga data yang terkumpul lebih tepat sejak diisi.
-
 ## Praktik Terbaik
 
 - **Singkat dan jelas.** Tulis [[^field|Content]] seperlunya agar pengisi tidak kewalahan.
@@ -101,20 +62,12 @@ Text membuat Form lebih mudah dipahami, sehingga data yang terkumpul lebih tepat
 - **Letakkan petunjuk dekat isian.** Taruh Text tepat di atas Elemen Input yang dijelaskan.
 - **Gunakan Visible untuk petunjuk kondisional.** Sembunyikan Text dengan [[^field|Visible]] bila tidak diperlukan.
 
->**success** Text siap digunakan
-> Setelah [[^field|Content]] terisi dan ukuran teks sesuai, Text siap tampil di Form.
-
 ## Batasan dan Catatan
 
 - [[^field|Content]] saat ini hanya teks statis dan belum mendukung [[Docs/Tipe Data/Expression]].
 - Panel Text tidak memiliki bagian Binding.
 - Text tidak menambah isian ke Table dan tidak ikut dikirim sebagai Submission.
 - Ukuran, *padding*, dan *margin* Text diatur lewat Layout Panel.
-
-<!--
-  * [TODO] Konfirmasi asumsi bahwa Text tidak ikut dikirim sebagai Submission dan tidak menambah isian ke Table (poin Batasan, TL:DR, dan FAQ).
-  * [TODO] Halaman yang diusulkan dan belum ada: `Docs/Modul Interface/Form/Input/Table/Penjelasan` (dipakai pada Ide skenario lain).
--->
 
 ## TL:DR
 

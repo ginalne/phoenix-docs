@@ -1,10 +1,9 @@
 ---
-status: draft
-title: Basic (Elemen Input)
-description: Basic adalah Elemen Input pada Form untuk mengisi satu Column dari Table, dengan format isian yang mengikuti Column tersebut.
+    status: release
+    title: Basic (Elemen Input)
+    description: Basic adalah Elemen Input pada Form untuk mengisi satu Column dari Table, dengan format isian yang mengikuti Column tersebut.
 ---
-
-# Basic (Elemen Input)
+# Form Input : Basic
 
 >**note** Basic merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Input|Elemen Input]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
@@ -37,11 +36,13 @@ Basic terikat ke Column pada Table yang ditentukan Layout di atasnya, lalu isian
 
 ```mermaid
 flowchart LR
-  A["Layout"] -.->|&nbsp;Binding table&nbsp;| B["Table"]
+  A["Layout"] -.->|&nbsp;Binding&nbsp;| B["Table"]
+  A -->|&nbsp;Submission&nbsp;| R["Row"]
   A -->|&nbsp;Berisi&nbsp;| C["Basic"]
   C -.->|&nbsp;Binding&nbsp;| D["Column"]
   E["Pengisi"] -->|&nbsp;Mengisi&nbsp;| C
-  C -->|&nbsp;Submission&nbsp;| F["Row"]
+  R -->|&nbsp;Relasi&nbsp;| F
+  C -->|&nbsp;Submission&nbsp;| F["TableData"]
 ```
 
 ## Menambahkan Basic
@@ -53,19 +54,10 @@ flowchart LR
 
 Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]].
 
-<!--
-  * [TODO] Konfirmasi apakah [[^field|Table]] pada Binding Basic terisi otomatis dari Layout induk, atau dipilih manual.
--->
 
 ## Mengonfigurasi Basic
 
-![[Docs/Modul Interface/Form/Input/Basic/properties-basic.png]]
-
-<!--
-  * [TODO] Letakkan gambar Properties Panel Basic (properties-basic.png) di sini. Anotasi yang disarankan: (1) Binding ([[^field|Table]] dan [[^field|Column]]), (2) State, (3) Validators, (4) Attributes, (5) Parent, (6) Header Toolbar teks, (7) ikon Layout Panel di bawah Elemen.
-  * [TODO] Gambar contoh memuat nama Table, Column, dan label milik penulis. Ganti dengan penamaan generik.
--->
-
+![[Docs/Modul Interface/Form/Input/properties-form-input.png]]
 Klik kiri Basic di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar. Label Column (berikon kolom) juga tampil di atas Basic sebagai informasi Binding.
 
 ### Binding Basic
@@ -111,54 +103,12 @@ Selain tombol [[^button/delete|Remove]], Header Toolbar Basic memiliki pengatura
 
 Menampilkan Layout tempat Basic berada. Mengubah ukuran, *padding*, dan *margin* Basic dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
 
-<!--
-  * [TODO] Konfirmasi apakah Header Toolbar teks hanya memformat Label, atau juga teks lain pada Basic. Konfirmasi juga apakah Format Type dapat diubah manual atau hanya mengikuti Column.
--->
-
-## Contoh Penggunaan
-
-**Formulir permintaan layanan pelanggan**
-
-Tim layanan ingin pelanggan mengirim permintaan lewat tautan, dengan kolom penting yang wajib diisi dan kategori awal yang sudah terisi. Dengan Basic, validasi dan nilai bawaan diatur langsung di Form, sehingga data yang masuk ke Table sudah rapi.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| --- | --- |
-| [[^field/form|Form Permintaan Layanan]] | Tempat pelanggan mengisi permintaan lewat tautan publik. |
-| [[^field/table|Data Permintaan]] | Menyimpan setiap permintaan sebagai Row. |
-| [[^field/column|Nama Pemohon]] | Column yang diikat ke Basic dengan [[^field|Required]] aktif. |
-| [[^field/column|Kategori]] | Column yang diikat ke Basic dengan [[^field|Default Value]] dan [[^field|Readonly]] aktif. |
-
-<!--
-  * [TODO] Nama Form, Table, dan Column pada contoh hanya penamaan generik. Sesuaikan dengan gambar yang Anda buat.
--->
-
-**Hasil yang dirasakan**
-
-- Pelanggan tidak dapat mengirim permintaan tanpa mengisi kolom wajib.
-- Kategori sudah terisi dan tidak dapat diubah, sehingga data konsisten.
-- Setiap permintaan tersimpan sebagai Row di [[Docs/Modul Data/Table/Apa itu Table|Table]] dan dapat ditindaklanjuti lewat [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
-
-**Ide skenario lain**
-
-| Jenis nilai | Contoh integrasi |
-| --- | --- |
-| Validasi | Form pendaftaran dengan Basic [[^field|Required]] pada nama dan nomor telepon. |
-| Nilai bawaan | Form laporan dengan tanggal atau lokasi awal lewat [[^field|Default Value]]. |
-| Otomasi | Row baru dari Form memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]] untuk notifikasi. |
-
-Basic menjaga data dari publik tetap rapi sejak diisi, sehingga langsung siap dipakai oleh Table dan Flow.
-
 ## Praktik Terbaik
 
 - **Ikat ke Column yang tepat.** [[^field|Format Type]] mengikuti Column, jadi pilih Column dengan tipe yang sesuai.
 - **Tandai field penting dengan Required.** Aktifkan [[^field|Required]] hanya pada isian yang benar-benar wajib.
 - **Gunakan Default Value untuk isian umum.** Isi [[^field|Default Value]] agar pengisi tidak mengetik hal yang sama berulang.
 - **Beri Placeholder yang jelas.** [[^field|Placeholder]] membantu pengisi memahami format isian.
-
->**success** Basic siap digunakan
-> Setelah [[^field|Column]] terpilih dan [[^field|Label]] jelas, Basic siap diisi pengisi.
 
 ## Batasan dan Catatan
 

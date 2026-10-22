@@ -1,10 +1,9 @@
 ---
-status: draft
-title: Card (Elemen Layout)
-description: Card adalah Elemen Layout pada Form yang menampung Elemen lain dalam satu kartu sekaligus menjadi header Table bagi Elemen di dalamnya.
+    status: release
+    title: Card (Elemen Layout)
+    description: Card adalah Elemen Layout pada Form yang menampung Elemen lain dalam satu kartu sekaligus menjadi header Table bagi Elemen di dalamnya.
 ---
-
-# Card (Elemen Layout)
+# Form Layout : Card
 
 >**note** Card merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
