@@ -49,7 +49,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
 1. [[Docs/Modul Data/Table/Membuat Baru]] Table dalam halaman kerja.
 2. [[Docs/Modul Data/Table/Mengubah]] Atribut Table seperti [[^field|Name]], [[^field|Description]].
 3. [[Docs/Modul Data/Table/Menghapus]] Table.
-4. [[Docs/Modul Data/Table/Table Data/Pengenalan|Mengelola Data]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/TableData]].
+4. [[Docs/Modul Data/Table/Table Row/Pengenalan|Mengelola Baris]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/Row]].
 5. [[Docs/Modul Data/Table/Publikasi]]: mengatur publikasi Table.
 6. [[Docs/Modul Data/Table/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 

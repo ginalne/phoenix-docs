@@ -1,7 +1,7 @@
 ---
     status: release
-    title: "Menambahkan Data"
-    description: Penjelasan cara menambahkan Table View Data
+    title: "Menambahkan Enum Data"
+    description: Penjelasan cara menambahkan Enum Data di komponen Enum
     pageDecoration:
       tree:
         priority: 3

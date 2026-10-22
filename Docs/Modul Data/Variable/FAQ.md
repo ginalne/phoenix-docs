@@ -8,19 +8,20 @@
     tags:
       draft
 ---
-# FAQ : Enum
+# FAQ : Variable
 
-Berikut adalah pertanyaan yang sering diajukan pada komponen Enum:
+Berikut adalah pertanyaan yang sering diajukan pada komponen Variable:
 
-> **faq**
-> **Apa bedanya Enum dengan EnumData?**
-> Enum adalah komponen yang menyimpan daftar, sedangkan [[Docs/Tipe Data/EnumData]] adalah setiap baris di dalamnya.
-> **Mengapa pilihan saya tidak muncul di field?**
-> Pastikan [[^field|Selectable]] pada [[Docs/Tipe Data/EnumData]] bernilai [[^value/boolean/true]]. Hanya [[Docs/Tipe Data/EnumData]] dengan [[^field|Selectable]] bernilai [[^value/boolean/true]] yang tampil sebagai pilihan.
-> **Apakah EnumData dengan Selectable No masih bisa dipakai?**
-> Bisa. [[^field|Selectable]] hanya memengaruhi daftar pilihan pada field, bukan pemakaian di tempat lain.
-> **Bolehkah dua EnumData memiliki Name yang sama?**
-> Tidak, selama keduanya berada di Enum yang sama.
-> **Mengapa Enum saya tidak bisa dihapus?**
-> Hapus terlebih dahulu relasi dari komponen lain yang masih memakai Enum tersebut, lalu ulangi penghapusan.
-
+>**faq**
+>**Apakah saya dapat membuat komponen Variable baru?**
+>Tidak. Variable dibuat otomatis ketika Pro dimulai, dan Area Manajemen Folder tidak menyediakan pilihan untuk menambahkannya.
+>**Apakah komponen Variable dapat dihapus atau diganti namanya?**
+>Tidak. Komponen Variable tidak dapat dihapus dan nama header "Variables" tidak dapat diganti, tetapi Anda dapat memindahkannya ke folder lain.
+>**Apakah dua Variable boleh memiliki Name yang sama?**
+>Tidak. Setiap baris harus memiliki Name yang unik.
+>**Apa yang terjadi jika Flow memanggil Name yang tidak ada?**
+>Flow tidak menemukan Variable tersebut, dan laporan error tampil di Flow Activity.
+>**Apakah saya dapat menghapus Variable yang sudah ditambahkan?**
+>Ya. Data pada tabel dapat dihapus, tetapi pastikan tidak ada komponen yang masih memanggilnya.
+>**Apakah tim dapat melihat isi Value?**
+>Tim cukup memakai Alias untuk memanggil nilai sehingga tidak perlu mengetahui isinya. Siapa saja yang dapat membuka halaman kerja Variable tetap dapat melihat nilainya.

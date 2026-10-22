@@ -1,14 +1,14 @@
 ---
     status: release
     title: "Enum Data"
-    description: Penjelasan singkat tentang Enum Data dalam komponen Enum
+    description: Pengenalan singkat tentang Enum Data dalam komponen Enum
     pageDecoration:
       tree:
         priority: 4
 ---
 # Enum Data
 
-Enum Data (atau [[Docs/Tipe Data/EnumData]]) adalah satu unit data pada [[Docs/Tipe Data/Enum]] yang memiliki [[Docs/Tipe Data/TableData|TableData]] sebagai sel sesuai dengan [[Docs/Tipe Data/Column]] yang tersedia. Cara mengisi antar sel berbeda sesuai [[Docs/Format Data/Pengenalan|Format]] kolomnya. Unit data ini juga dapat digunakan dalam _field_ sebagai [[Tipe Data/Pengenalan|Tipe Data]].
+Enum Data (atau [[Docs/Tipe Data/EnumData]]) adalah satu unit data pada [[Docs/Tipe Data/Enum]] yang memiliki atribut [[^field|Name]], [[^field|Description]], [[^field|Value]] yang tersedia pada [[Docs/Modul Data/Enum/Antarmuka|Halaman Kerja Enum]]. Unit data ini juga dapat digunakan dalam _field_ sebagai [[Tipe Data/Pengenalan|Tipe Data]].
 
 Berikut adalah aksi yang bisa dilakukan untuk mengelolanya dalam halaman kerja Tree :
 

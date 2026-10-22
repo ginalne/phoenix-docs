@@ -8,7 +8,7 @@
     tags:
       draft
 ---
-# Menambahkan Data
+# Menambahkan Data Variable
 
 1. [[#Membuka Halaman Kerja Variable|Buka]] Halaman Kerja Variable
 2. Klik [[^button/add|Add Row]]

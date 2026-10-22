@@ -38,11 +38,10 @@ Penjelasan cara kerja Enum lihat selengkap nya di [[Docs/Modul Data/Enum/Cara Ke
 
 Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
 
-1. [[Docs/Modul Data/Variablle Data/Menambahkan Data]]
-2. [[Docs/Modul Data/Enum/Enum Data/Mengubah Data]]
-3. [[Docs/Modul Data/Enum/Enum Data/Menghapus]]
-1. [[Docs/Modul Data/Enum/Enum Data/Pengenalan|Mengelola Data]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/EnumData]].
-2. [[Docs/Modul Data/Enum/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
+1. [[Docs/Modul Data/Variable/Menambahkan Data]]
+2. [[Docs/Modul Data/Variable/Mengubah Data]]
+3. [[Docs/Modul Data/Variable/Menghapus Data]]
+4. [[Docs/Modul Data/Enum/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
 Anda juga dapat memperdalam tentang Tipe Data yang relevan yaitu: [[Docs/Tipe Data/Variable]].
 
@@ -51,86 +50,13 @@ Anda juga dapat memperdalam tentang Tipe Data yang relevan yaitu: [[Docs/Tipe Da
 
 >**danger** Komponen Variable dalam [[Docs/Antarmuka#Area Manajemen Folder]]tidak dapat dibuat baru, diduplikasi ataupun dihapus.
 
-
 ## Membuka Halaman Kerja Variable
 
 Klik [[^field/variable|Variables]] di [[Docs/Antarmuka#Area Manajemen Folder]] untuk membuka halaman kerja Variable.
 
-## Antarmuka.
+## Antarmuka
 
 Harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]]. Penjelasan antarmuka Enum lihat selengkap nya di [[Docs/Modul Data/Variable/Antarmuka|Antarmuka Variable]].
-
-### Menambahkan Variable Data
-
-### Mengubah Variable Data
-
-1. [[#Membuka Halaman Kerja Variable|Buka]] Halaman Kerja Variable
-2. Ubah isian pada baris yang ingin diperbarui
-3. Klik [[^button/save|Save]]
-
-Kolom [[^field|Updated At]] terisi otomatis setelah baris disimpan.
-Anda dapat klik [[^button/x|Cancel]] untuk membatalkan penambahan Data Variable
-
-### Menghapus Variable Data
-
-1. [[#Membuka Halaman Kerja Variable|Buka]] Halaman Kerja Variable
-2. Pada kolom [[^field|Action]], klik [[^button/delete|Delete]] pada baris yang ingin dihapus
-3. Konfirmasi dengan [[^button|Delete]]
-
->**warning** Pastikan Variable tidak lagi dipakai
->Variable yang dihapus tidak lagi tersedia sebagai pilihan pada field bertipe Variable. Flow atau komponen lain yang masih memanggil Name tersebut tidak akan menemukan nilainya, dan laporan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]]. Periksa dulu komponen yang memakai Variable sebelum menghapusnya.
-
->**danger** Pertimbangkan Resiko
->Variable Data yang sudah dihapus tidak dapat dikembalikan.
-
-## Menyegarkan Daftar Variable Data
-
-Klik [[^button/refresh|Refresh]] untuk memuat ulang data pada tabel Variable.
-
-## Contoh Penggunaan
-
-**Menjaga API Key Penyedia AI Tetap Aman dalam Otomasi Flow**
-
-Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh AI. Layanan AI membutuhkan API Key, tetapi kunci tersebut tidak boleh diketahui seluruh anggota tim. Dengan Variable, kunci disimpan sekali, dan [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] memanggilnya lewat nama untuk kebutuhan integrasi.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| --- | --- |
-| [[^field/variable|Variables]] | Menyimpan API Key penyedia AI dengan Name `AI_API_KEY`. |
-| [[^field/table|Daftar Tiket]] | Menyimpan tiket yang masuk dan hasil ringkasannya. |
-| [[^field/flow|Ringkas Tiket Otomatis]] | Menjalankan proses dari tiket baru sampai ringkasan tersimpan. |
-
-**Alur di Flow**
-```mermaid
-flowchart LR
-    A[**Table Row Event**<br/>Tiket baru masuk] -->|"**[Objek]**<br> &nbsp;Informasi Tiket&nbsp;"| C
-    A -->|"&nbsp;**[Row]**&nbsp;"| D
-    B["**Variable Getter**<br/>AI_API_KEY"] -->|"**[Text]**<br>&nbsp;API Key&nbsp;"| C["**OpenAI 4**<br/>Ringkas isi tiket"]
-    C -->|"&nbsp;**[Text]**&nbsp;<br>Hasil Ringkasan"| D["**TableData Setter**<br/>Simpan ringkasan"]
-```
-
-| Langkah | Flow Block | Peran dalam alur | Hasil |
-| --- | --- | --- | --- |
-| 1 | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan\|Table Row Event]] | Berjalan saat baris tiket baru ditambahkan. | Flow dimulai otomatis. |
-| 2 | [[Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan\|Variable Getter]] | Mengambil nilai Variable dengan mengisi Name `AI_API_KEY`. | API Key tersedia untuk Flow tanpa perlu diketahui tim. |
-| 3 | [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan\|AI (OpenAI 4)]] | Mengirim isi tiket ke penyedia AI memakai API Key tersebut. | Ringkasan tiket diterima. |
-| 4 | [[Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan|TableData Setter]] | Menulis ringkasan ke baris tiket yang sama. | Ringkasan tampil di tabel. |
-
-**Hasil yang dirasakan**
-
-- Tiket baru langsung memiliki ringkasan tanpa pekerjaan manual.
-- API Key hanya disimpan di satu tempat dan tidak perlu dibagikan ke anggota tim.
-- Jika API Key diganti, Anda cukup memperbarui satu baris di [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dan semua Flow yang memanggilnya ikut memakai nilai baru.
-
-**Ide skenario lain**
-
-| Jenis nilai | Contoh integrasi |
-| --- | --- |
-| Alamat IP server *hub* | Beberapa [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] mengirim data ke perangkat atau layanan yang sama tanpa menuliskan alamatnya berulang kali. |
-| Alamat layanan atau URL dasar | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] yang memanggil layanan eksternal merujuk satu Name, sehingga perpindahan alamat cukup diubah sekali. |
-| Parameter bisnis | Ambang batas atau batas waktu dipakai bersama oleh beberapa [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dan tetap konsisten. |
-| Konfigurasi notifikasi | data berisi tujuan notifikasi yang dipakai banyak proses. |
 
 ## Praktik Terbaik
 
@@ -159,19 +85,3 @@ flowchart LR
 - Field bertipe Variable menampilkan daftar dari [[Docs/Tipe Data/Variable|Variable Data]], dan Komponen [[Docs/Modul Logic/Pengenalan|Modul Logic]] dapat memanggil Variable cukup dengan [[^field|Alias]].
 - Variable memilki akses yang ketat sehingga [[^field|Value]] yang sensitif dapat dipakai untuk integrasi tanpa perlu diketahui tim.
 - Hati-hati saat menghapus [[Docs/Tipe Data/Variable|Variable Data]], karena komponen yang memanggilnya akan menghasilkan nilai kosong atau error.
-
-## FAQ : Pertanyaan yang Sering Diajukan
->**faq**
->**Apakah saya dapat membuat komponen Variable baru?**
->Tidak. Variable dibuat otomatis ketika Pro dimulai, dan Area Manajemen Folder tidak menyediakan pilihan untuk menambahkannya.
->**Apakah komponen Variable dapat dihapus atau diganti namanya?**
->Tidak. Komponen Variable tidak dapat dihapus dan nama header "Variables" tidak dapat diganti, tetapi Anda dapat memindahkannya ke folder lain.
->**Apakah dua Variable boleh memiliki Name yang sama?**
->Tidak. Setiap baris harus memiliki Name yang unik.
->**Apa yang terjadi jika Flow memanggil Name yang tidak ada?**
->Flow tidak menemukan Variable tersebut, dan laporan error tampil di Flow Activity.
->**Apakah saya dapat menghapus Variable yang sudah ditambahkan?**
->Ya. Data pada tabel dapat dihapus, tetapi pastikan tidak ada komponen yang masih memanggilnya.
->**Apakah tim dapat melihat isi Value?**
->Tim cukup memakai Alias untuk memanggil nilai sehingga tidak perlu mengetahui isinya. Siapa saja yang dapat membuka halaman kerja Variable tetap dapat melihat nilainya.
-

@@ -4,7 +4,7 @@
     description: Penjelasan cara menghapus Enum Data di komponen Enum
     pageDecoration:
       tree:
-        priority: 1
+        priority: 0
     tags:
       draft
 ---

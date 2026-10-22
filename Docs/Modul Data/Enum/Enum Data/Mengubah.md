@@ -4,11 +4,11 @@
     description: Penjelasan cara mengubah nama Enum Data
     pageDecoration:
       tree:
-        priority: 0
+        priority: 1
     tags:
       draft
 ---
-## Mengubah Enum Data
+# Mengubah Enum Data
 
 1. Ubah isian pada baris yang diinginkan
 2. Klik [[^button/save|Save]] pada kolom [[^field|Action]]
