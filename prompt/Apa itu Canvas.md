@@ -12,8 +12,32 @@
 Tolong saya membuat halaman "Apa itu Canvas?".
 base knowledge:
 
-1. Canvas adalah komponen untuk menginput, melihat, dan mengubah data secara terstruktur. Setiap kolom ditampilkan sebagai field yang jelas dan terarah, sehingga proses pengisian data menjadi lebih rapi, konsisten, dan minim kesalahan. Anda juga dapat membagikan Form kepada publik agar proses pengumpulan data bisa lebih cepat dan efektif.
-2. Form dapat memiliki beberapa halaman, dan disetiap halaman akan ada informasi Start Building dengan pemilihan layout (informasi ini hanya tampil di Edit Mode).
+1. Canvas adalah komponen untuk untuk menyusun, menghubungkan, dan memetakan data atau presentasi secara visual. Komponen ini memberi fleksibilitas untuk membuat diagram, tabel, maupun proyeksi tanpa dibatasi struktur baris dan kolom.
+2. Canvas memiliki widget yang tersedia yaitu: | 'text'
+
+  | 'chart\_pie'
+
+  | 'chart\_line'
+
+  | 'chart\_bar'
+
+  | 'chart\_radial'
+
+  | 'chart\_linear'
+
+  | 'table'
+
+  | 'kanban'
+
+  | 'gantt'
+
+  | 'timeline'
+
+  | 'gallery'
+
+  | 'form'
+
+  | 'space';.
 3. Bagian publish form adalah konfigurasi untuk mengubah form menjadi di publikasi.
 4. Informasi submission (sukses, menunggu, gagal) dapat diklik agar menampilkan konten (disebelah kanan) Submission List, yaitu grafik dan daftarnya, dapat di filtrasi ataupun dicari.
 5. Pada mode Edit informasi binding bisa dilihat, focus node dengan klik kiri.
