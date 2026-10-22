@@ -11,11 +11,11 @@
 >**warning** Disclaimer
 >Sekolah dalam studi kasus ini fiktif, dibuat sebagai ilustrasi. Angka yang tertera adalah contoh, bukan hasil peninjauan.
 
-## Latar Belakang
-Sekolah menengah dengan 600 siswa yang masih melakukan kegiatan akademik seperti pencatatan penilaian, kehadiran, kalender, dengan kertas atau spreadsheet manual. Dan memberi pengumuman manual satu per satu, kemudian disatukan kedalam satu Pro di Phoenix. Dengan kondisi khusus dimana setiap peran, yaitu guru, wali kelas, tata usaha, dan kepala sekolah hanya melihat dan mengubah data yang menjadi bagiannya. 
+## Ringkasan
+Sekolah menengah dengan 600 siswa, masih melakukan kegiatan akademik seperti pencatatan penilaian, kehadiran, dan kalender, dengan kertas atau spreadsheet manual. Dan masih memberi pengumuman secara manual satu per satu, kemudian proses tersebut disatukan kedalam satu Pro di Phoenix. Dengan kondisi khusus dimana setiap peran, yaitu guru, wali kelas, tata usaha, dan kepala sekolah hanya melihat dan mengubah data yang menjadi bagiannya. 
 
 ### Situasi
-Setiap awal semester, guru mata pelajaran membuat catatan atau spreadsheet nilai sendiri. Wali kelas mencatat kehadiran di buku, lalu tata usaha mengetik ulang ke dalam dokumen digital. Menjelang pembagian rapor, kepala sekolah meminta rekap data (data apa saja?), lalu staf menggabungkan belasan file secara manual.
+Setiap awal semester, guru mata pelajaran membuat catatan atau spreadsheet nilai sendiri. Wali kelas mencatat kehadiran di buku, lalu tata usaha mengetik ulang ke dalam dokumen digital. Menjelang pembagian rapor, kepala sekolah meminta rekap data (data apa saja? prefer disebutkan), lalu staf menggabungkan belasan file secara manual.
 
 Tiga hal yang membuat situasi ini sulit dibiarkan:
 - **Data ganda.** Satu data siswa tercatat di banyak file dengan penulisan identitas yang berbeda.
@@ -141,7 +141,7 @@ Kepala Sekolah membuka **Nilai** dan **Kehadiran** langsung dari Workspace, tanp
 - Uji Flow dengan satu baris contoh sebelum dipakai seluruh guru.
 
 ### Batasan dan Catatan
-- Akses di Workspace diatur per komponen. Bila guru hanya boleh melihat nilai kelasnya sendiri, pisahkan tabel Nilai per kelas atau per jenjang.
+- Akses di Workspace diatur per komponen. Bila guru hanya boleh melihat nilai kelasnya sendiri, pisahkan tabel Nilai per kelas atau per jenjang. (tidak terbayang, perlu penjelasan khusus?)
 - Hapus komponen dengan hati-hati. Menghapus Flow dapat menghilangkan Flow Block dan riwayat Activity.
 - Pastikan setiap Group tetap memiliki minimal satu Workspace agar anggotanya bisa membuka Phoenix.
 
@@ -154,7 +154,6 @@ Kepala Sekolah membuka **Nilai** dan **Kehadiran** langsung dari Workspace, tanp
 
 ---
 ## TL;DR
-
 Satu [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dengan empat [[Docs/Modul Developer/Group/Apa itu Group|Group]] menjaga akses sesuai peran. [[Docs/Modul Data/Table View/Apa itu Table View|Table View]] dan [[Docs/Modul Data/Timeline/Apa itu Timeline|Timeline]] menyimpan data akademik. [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] menandai siswa yang perlu tindak lanjut, dan [[Docs/Publish/Pengenalan|Publish]] membagikan pengumuman lewat tautan.
 
 * [ ] TODO (konsolidasi): Path wikilink untuk Workspace, Group, Table View, Timeline, Publish, Folder, dan Pro adalah tebakan mengikuti pola yang ada. Mohon dicek dan disesuaikan.
