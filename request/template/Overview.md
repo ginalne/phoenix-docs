@@ -30,7 +30,7 @@ Berbagi Pengumuman:
 Skenario Penggunaan:
 Perubahan Sebelum dan Sesudah:
 
-## Saran dan Trik
+## Tips and Tricks
 Praktik Terbaik:
 Batasan dan Catatan:
 Mulai Darimana:
