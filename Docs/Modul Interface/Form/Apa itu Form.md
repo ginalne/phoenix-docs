@@ -206,29 +206,35 @@ Input berfungsi untuk mengisi atau menampilkan informasi yang berlaku pada Bindi
 
 ### Mengonfigurasi Elemen
 
+![[Docs/Modul Interface/Form/panel-form.png]]
 Klik kiri pada Elemen di [[#Mode View dan Edit Mode|Edit Mode]] untuk memfokuskannya. Setelah itu muncul dua hal:
 
-- **Properties Panel**, yang panel untuk mengatur properti elemen secara rinci, seperti Binding, State, Validators, Attributes, Children dan Parent.
-- **Header Toolbar**, yaitu bilah pintasan aksi yang selalu memiliki tombol [[^button/delete|Remove]] untuk menghapus Elemen.
-- **Layout Panel**, yaitu Panel untuk mengatur ukuran, padding, margin dan beberapa _styling_ elemen.
+#### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen-config-form.png]]
-
-<!--
-  * [TODO] Letakkan gambar card konfigurasi dan header Elemen (Elemen-config-form.png) di sini. Anotasi yang disarankan: (1) card konfigurasi, (2) bagian Binding, (3) bagian State, (4) daftar Children, (5) header Elemen dan tombol Remove.
-  * [TODO] Gambar contoh memuat nama Elemen milik penulis. Ganti dengan penamaan generik.
--->
+Panel untuk mengatur properti elemen secara rinci, seperti Binding, State, Validators, Attributes, Children dan Parent.
 
 | Bagian card | Fungsi |
 | --- | --- |
 | [[^field|Binding]] | Mengikat Elemen ke data. Lihat [[#Binding Form]]. |
 | [[^field|State]] | Mengatur kondisi Elemen, misalnya [[^field|Visible]] untuk menampilkan atau menyembunyikan Elemen. |
-| Attribute | Mengatur pengaturan khusus Elemen, termasuk gayanya. Isinya berbeda-beda pada setiap Elemen. |
-| Children atau Parent | Menampilkan Elemen yang berada di dalam Elemen ini (*children*), atau Elemen tempat Elemen ini berada (*parent*). |
+| [[^field|Attribute]] | Mengatur pengaturan khusus Elemen, termasuk gayanya. Isinya berbeda-beda pada setiap Elemen. |
+| [[^field|Children]] atau [[^field|Parent]] | Menampilkan Elemen yang berada di dalam Elemen ini (*children*), atau Elemen tempat Elemen ini berada (*parent*). |
 
-<!--
-  * [TODO] Konfirmasi isi bagian Attribute (apakah gaya memakai nama class seperti [[Docs/Styling/Styling Class]]) dan penjelasan pilihan Type pada Binding ([[^value/radio|table]] dan [[^value/radio|pivot]]).
--->
+#### Header Toolbar
+
+Bilah pintasan aksi yang selalu memiliki tombol [[^button/delete|Remove]] untuk menghapus Elemen.
+
+#### Layout Panel
+
+Panel untuk mengatur ukuran, padding, margin dan beberapa _styling_ elemen. Setiap elemen memiliki pengaturan ini:
+
+| Bagian card | Fungsi |
+| --- | --- |
+| [[^field|min.]] layout | Ukuran persentase minimum Elemen terhadap layar. |
+| [[^field/resize]] | kontrol tambahan terkait ukuran atau tampilan pengaturan dimensi.
+| [[^field|padding]] | Mengatur jarak di bagian dalam elemen, yaitu antara batas elemen dan kontennya. |
+| [[^field|margin]] | Mengatur jarak di luar elemen, yaitu ruang antara elemen tersebut dan elemen lain di sekitarnya. |
+
 
 ### Menghapus Elemen
 
@@ -241,6 +247,7 @@ Klik kiri pada Elemen di [[#Mode View dan Edit Mode|Edit Mode]] untuk memfokuska
 
 <!--
   * [TODO] Konfirmasi apakah Elemen di dalam Layout ikut terhapus saat Layout dihapus, dan apakah ada konfirmasi sebelum Remove.
+    Jawaban : Iya semua elemen didalam layout terhapus, dan ada konfirmasi.
 -->
 
 ## Binding Form
@@ -254,10 +261,6 @@ Secara umum, urutannya seperti ini:
 3. Elemen yang mewakili data turunan diikat ke relasi dari Row induknya.
 
 Informasi Binding dapat dilihat di [[#Mode View dan Edit Mode|Edit Mode]] sebagai label pada Elemen. Klik kiri Elemen untuk memfokuskannya dan melihat pengaturan [[^field|Binding]] pada card konfigurasi.
-
-<!--
-  * [TODO] Konfirmasi urutan Binding di atas, terutama pengikatan ke relasi Row induk dan arti pilihan Type [[^value/radio|table]] dan [[^value/radio|pivot]]. Pertimbangkan membuat subhalaman `Docs/Modul Interface/Form/Binding` bila pembahasannya makin panjang.
--->
 
 ## Mengelola Submission
 
