@@ -28,7 +28,7 @@ Berbagi Pengumuman:
 
 ## Hasil 
 Skenario Penggunaan:
-Perbedaan Sebelum dan Sesudah:
+Perubahan Sebelum dan Sesudah:
 
 ## Saran dan Trik
 Praktik Terbaik:
