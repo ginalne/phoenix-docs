@@ -204,10 +204,12 @@ Perubahan [[^field|Priority]] atau [[^field|Status]] dapat mengubah Weather mana
 <!--
 
   * [TODO] Label field persis pada Weather mohon dikonfirmasi: [[^field|Jenis]] (apakah "Jenis" atau "Type"), nama pilihan Jenis (`earth sky` dan `sea`, huruf kecil atau kapital), serta label properti [[^field|Time]], [[^field|Level]], dan [[^field|Wave Rate]]. Saya menulis nama properti memakai bahasa Inggris sesuai pola antarmuka lain.
-    Jawaban : 
-  * [TODO] Arti Level dan Wave Rate pada sea saya tulis netral. Mohon dijelaskan fungsi masing-masing (misalnya ketinggian dan kecepatan gelombang) dan satuannya.
+    Jawaban : lebih jelasnya [[^field|Type]], dan pilihannya titlecase. Semua properti di Phoenix menggunakan bahasa inggris.
+  * [DONE] Arti Level dan Wave Rate pada sea saya tulis netral. Mohon dijelaskan fungsi masing-masing (misalnya ketinggian dan kecepatan gelombang) dan satuannya.
   * [TODO] Cara memilih antara nilai statis dan Query pada properti Weather belum diketahui (tombol atau pilihan). Mohon konfirmasi, dan sebutan sumber Query Single Output (Table, Variable, atau lainnya).
-  * [TODO] Langkah Menambahkan (dialog Create atau isian langsung), tombol penyimpan setelah mengubah nilai di panel (Update atau Save), dan konfirmasi saat Delete pada data Outliner belum diketahui. Draf di atas adalah tebakan terbaik.
+    Jawaban : dibagian field nilai properti ada toggle untuk mengisi menggunakan nilai langsung atau query.
+  * [DONE] Langkah Menambahkan (dialog Create atau isian langsung), tombol penyimpan setelah mengubah nilai di panel (Update atau Save), dan konfirmasi saat Delete pada data Outliner belum diketahui. Draf di atas adalah tebakan terbaik.
+    Jawaban : sudah betul.
 
 -->
 
@@ -249,10 +251,14 @@ Environment hanya berisi data statis, sehingga perubahan nilai tidak memengaruhi
 
 <!--
 
-  * [TODO] Label atribut Environment pada antarmuka mohon dikonfirmasi: base knowledge menulis "Desc" sedangkan Weather menulis "Description". Saya memakai [[^field|Description]].
+  * [DONE] Label atribut Environment pada antarmuka mohon dikonfirmasi: base knowledge menulis "Desc" sedangkan Weather menulis "Description". Saya memakai [[^field|Description]].
+    Jawaban : asumsi anda sudah betul.
   * [TODO] Format Data untuk [[^field|Rotation]] (Euler Angle) dan [[^field|Model]] (3D Model) belum ada di daftar Format Data, tautan di atas adalah tebakan. Mohon konfirmasi nama dan path-nya.
+    Jawaban : saya akan menambahkan tipe data Model dan format data Euler Angle.
   * [TODO] Makna [[^field|Scale]] bertipe Volume Unit (satu nilai atau per sumbu) dan format file 3D yang didukung belum diketahui.
+    Jawaban : Volume Unit memiliki 3 nilai x, y dan z.
   * [TODO] Nasib file 3D setelah Environment dihapus (tersimpan atau tidak di penyimpanan) adalah asumsi. Mohon konfirmasi.
+    Jawaban : Iya ikut terhapus.
 
 -->
 
@@ -308,9 +314,13 @@ Nilai yang diubah pada Object memengaruhi [[Docs/Tipe Data/Row]] sebenarnya pada
 <!--
 
   * [TODO] Makna [[^field|Origin]] pada Object belum dijelaskan (titik asal seluruh objek 3D atau titik asal tiap Row). Mohon dijelaskan agar bisa ditulis lebih tepat.
-  * [TODO] Pemilihan [[^field|Model]] pada Object saya asumsikan berupa pilihan komponen Model. Mohon konfirmasi bentuk isiannya (placeholder, bila ada) dan tipe datanya.
-  * [TODO] Dampak hapus Object (Row sumber tidak terhapus) adalah asumsi berdasarkan perilaku Table View. Mohon konfirmasi.
+    Jawaban : titik asal tiap row.
+  * [DONE] Pemilihan [[^field|Model]] pada Object saya asumsikan berupa pilihan komponen Model. Mohon konfirmasi bentuk isiannya (placeholder, bila ada) dan tipe datanya.
+    Jawaban : sudah betul. menggunakan tipe data Model.
+  * [DONE] Dampak hapus Object (Row sumber tidak terhapus) adalah asumsi berdasarkan perilaku Table View. Mohon konfirmasi.
+    Jawaban : Betul
   * [TODO] Letak tombol [[^button/q]] pada Object dan apakah Query tersimpan otomatis saat popup ditutup (seperti Table View) belum dikonfirmasi.
+    Jawaban : letak tombol pada object hanya di modal Object. Tidak dapat muncul langsung di antarmuka (seperti Table View).
 
 -->
 
@@ -332,8 +342,11 @@ Pengaruh perubahan nilai berbeda untuk tiap jenis data:
 <!--
 
   * [TODO] Mohon konfirmasi pengaruh perubahan pada Weather dan Environment: saya menulis "tidak memengaruhi Row pada data sumber" karena keduanya bukan Table Output. Mohon jelaskan apakah perubahan itu hanya mengubah konfigurasi data di Space.
+    Jawaban : Iya betul
   * [TODO] Mohon konfirmasi bagaimana atribut [[^value/radio|static]] pada Object berperilaku saat diubah lewat panel (mengubah konfigurasi untuk semua objek 3D atau tidak) serta apakah [[^field|Origin]] ikut memengaruhi Row.
+    Jawaban : Mengubah atribut menjadi static akan mengubah atribut objek 3d yang dirender, semisal atribut on pada model lampu, ketika static menjadi on = true, maka semua lampu dalam tampilan menjadi menyala. Origin tidak mempengaruhi Row karena bersifat sebagai anchor untuk render model 
   * [TODO] Mohon konfirmasi apakah panel menampilkan tombol penyimpan atau perubahan langsung diterapkan.
+    Jawaban : tidak ada tombol penyimpanan, perubahan langsung diterapkan seketika (dalam field bersifat teks tetap ada debounce sekitar 300ms, untuk toggle atau option terjadi seketika).
 
 -->
 
@@ -349,7 +362,8 @@ Space mengikuti pengaturan di [[Docs/Modul Developer/Workspace/Apa itu Workspace
 
 <!--
 
-  * [TODO] Pemetaan hak akses di atas (Add untuk Add Weather/Environment/Object, Update untuk mengubah nilai, Delete untuk menghapus data) adalah tebakan terbaik. Mohon konfirmasi dan sesuaikan dengan halaman Data Access.
+  * [DONE] Pemetaan hak akses di atas (Add untuk Add Weather/Environment/Object, Update untuk mengubah nilai, Delete untuk menghapus data) adalah tebakan terbaik. Mohon konfirmasi dan sesuaikan dengan halaman Data Access.
+    Jawaban : Sudah betul
 
 -->
 
@@ -408,10 +422,13 @@ Dengan menggabungkan Environment, Object, dan Weather, Space mengubah data tabel
 
 <!--
 
-  * [TODO] Nama komponen pada contoh (Data Unit, Model Unit, Denah Gudang, Daftar Unit) adalah nama generik. Mohon disesuaikan dengan gambar bila perlu.
-  * [TODO] Contoh skenario memakai atribut Model yang tidak ditentukan (misalnya status) dan Query Single Output untuk [[^field|Time]]. Mohon konfirmasi apakah skenario ini cocok dengan kemampuan Model dan Query yang ada.
-  * [TODO] Slug ikon [[^field/model|Model Unit]] dan [[^field/space|Denah Gudang]] (`model`, `space`) adalah tebakan.
-  * [TODO] Skenario ini tidak memakai [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. Mohon kabari bila ingin ditambahkan otomasi (misalnya memperbarui Row unit lewat Flow Block).
+  * [DONE] Nama komponen pada contoh (Data Unit, Model Unit, Denah Gudang, Daftar Unit) adalah nama generik. Mohon disesuaikan dengan gambar bila perlu.
+  * [DONE] Contoh skenario memakai atribut Model yang tidak ditentukan (misalnya status) dan Query Single Output untuk [[^field|Time]]. Mohon konfirmasi apakah skenario ini cocok dengan kemampuan Model dan Query yang ada.
+    Jawaban : Sudah oke
+  * [DONE] Slug ikon [[^field/model|Model Unit]] dan [[^field/space|Denah Gudang]] (`model`, `space`) adalah tebakan.
+    Jawbaan : Sudah oke
+  * [DONE] Skenario ini tidak memakai [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. Mohon kabari bila ingin ditambahkan otomasi (misalnya memperbarui Row unit lewat Flow Block).
+    Jawaban : tidak perlu, skenario ini sudah oke untuk Space
 
 -->
 
