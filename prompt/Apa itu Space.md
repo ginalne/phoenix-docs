@@ -23,8 +23,9 @@ base knowledge:
 
 1. Space adalah komponen yang menaungi dan mengorganisasi data dalam bentuk 3D (tiga dimensi). Dengan Space, Anda dapat memvisualisasikan data beserta hubungan antar data dalam ruang tiga dimensi dan menjelajahinya dari berbagai sudut pandang, sehingga pola dan keterkaitan yang sulit terlihat pada tampilan tabel menjadi lebih mudah dipahami.
 2. Space memiliki 3 jenis data yaitu Weather, Environment dan Object.
-3. Weather adalah data yang tampil sebagai _world effect_ dengan atribut Name, Description, jenis dengan properti uniknya, hal yang bisa digunakan saat ini adalah earth sky (dengan properti waktu [datetime / datetimezone]), dan sea (dengan properti level [number] dan wave rate [number]). Jika ada banyak jenis
-4. Environment adalah data yang tampil sebagai object dengan atribut posisi (3d vector), skala (volume unit), rotation (eul)
+3. Weather adalah data yang tampil sebagai _world effect_ dengan atribut Priority [number], Name [string], Description [string], Jenis (dengan properti uniknya), Status [boolean]. Jenis yang bisa digunakan saat ini adalah earth sky (dengan properti waktu [datetime / datetimezone]), dan sea (dengan properti level [number] dan wave rate [number]). Jika ada banyak environment dengan jenis yang sama maka akan diambil priority yang paling rendah.
+4. Environment adalah data yang tampil sebagai object dengan atribut Name, Desc, Position (3d vector), Scale (volume unit), Rotation (euler angle), Model (3d model).
+5. Object adalah data yang tampil sebagai object dengan atribut Origin (3d vector), Model (3d model).
 5. Bagian publish adalah konfigurasi untuk mengubah canvas menjadi di publikasi. Hanya ada kolom Status (Active atau Non-Active) dan Link (link - copy - open new tab).
 6. Pada mode Edit, focus widget dengan klik kiri.
 7. Setiap aksi select (klik kiri) dalam widget akan menampilkan header toolbar dan design toolbar.
