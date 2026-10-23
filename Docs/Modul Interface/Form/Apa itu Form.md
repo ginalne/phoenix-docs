@@ -52,7 +52,8 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
 1. [[Docs/Modul Interface/Form/Membuat Baru]] Form dalam halaman kerja.
 2. [[Docs/Modul Interface/Form/Mengubah]] Atribut Form seperti [[^field|Name]], [[^field|Description]], atau [[^field|Filter]].
 3. [[Docs/Modul Interface/Form/Menghapus]] Form.
-4. [[Docs/Modul Interface/Form/Form Page|Mengelola Halaman]] dalam Form.
+4. [[Docs/Modul Interface/Form/Form Page|Mengelola Alur Halaman]] dalam Form.
+5. [[Docs/Modul Interface/Form/Binding|Memahami Binding]] dalam Form
 4. [[Docs/Modul Interface/Form/Mengatur Templat]] Kartu dalam Form.
 
 ## Antarmuka
