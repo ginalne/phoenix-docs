@@ -284,12 +284,16 @@ Modal Binding berisi tabel dengan kolom berikut:
 Sebagai contoh, Anda membuat Canvas untuk mempresentasikan satu [[Docs/Tipe Data/Row|Row]] pesanan, yaitu pesanan A, dengan desain menarik yang memuat informasi pesanan A. Ketika Binding diubah ke pesanan B, desain yang sama menyesuaikan informasinya dengan pesanan B.
 
 <!--
-  * [TODO] Bagian Binding belum ada pada lampiran karena baru tersedia di rilis berikutnya. Mohon tambahkan screenshot dan verifikasi ulang setelah rilis: letak tombol Binding pada bilah navigasi, ikon (diasumsikan `setting`), tombol di modal (Add, Cancel, Update?), dan cara menambah atau menghapus baris Binding.
-    Jawaban : 
+  * [DONE] Bagian Binding belum ada pada lampiran karena baru tersedia di rilis berikutnya. Mohon tambahkan screenshot dan verifikasi ulang setelah rilis: letak tombol Binding pada bilah navigasi, ikon (diasumsikan `setting`), tombol di modal (Add, Cancel, Update?), dan cara menambah atau menghapus baris Binding.
+    Jawaban : Ok
   * [TODO] Konfirmasi: Header bernilai N/A bila Format tidak membutuhkannya (mengikuti pola Table).
+    Jawaban: Ya betul
   * [TODO] Konfirmasi cara memakai Binding di Query (sintaks atau pilihan di Query popup) dan tautkan ke `Docs/Tipe Data/Query#Binding` bila ada.
+    Jawaban: Pada binding bagian value (semisal pada Filter) bisa diisi dengan key binding dari Canvas, sehingga ketika parameter Canvas diubah maka nilai dalam Query ikut berubah.
   * [TODO] Konfirmasi cara membuka Canvas secara dinamis dengan parameter (melalui tautan Publish, button, atau komponen lain) dan format penulisan parameternya.
+    Jawaban : bisa dengan tautan Publish, button yang sudah disetup atau komponen lain yang dapat memanggil Canvas dengan parameter.
   * [TODO] Konfirmasi apakah contoh "pesanan A dan pesanan B" boleh dipakai apa adanya di dokumentasi atau perlu diganti nama generik.
+    Gunakan contoh yang lebih generik dibandingkan inisial
 -->
 
 ### Mempublikasikan Canvas
@@ -305,9 +309,13 @@ Akses Publish mengikuti Function Access di [[Docs/Modul Developer/Workspace/Apa 
 
 <!--
   * [TODO] Konfirmasi: Publish membuka modal atau panel (diasumsikan modal) dan ada tombol Update atau Save di dalamnya.
+    Jawaban : iya betul
   * [TODO] Konfirmasi: Status Non-Active membuat tautan tidak dapat dibuka. Diasumsikan, belum terkonfirmasi.
+    Jawaban : ya tautan akan menampilkan canvas bukan dalam status dipublish
   * [TODO] Konfirmasi: apakah isi Link dibuat otomatis, apakah bisa dibuka tanpa login, dan apakah publik dapat melihat Canvas dalam View Mode saja.
+    Jawaban: Isi link di create otomatis, dan bisa dibuka oleh publik (hanya View Mode)
   * [TODO] Bila Publish Canvas nanti punya halaman sendiri seperti Table (`Docs/Modul Data/Table/Publish`), pindahkan bagian ini dan ganti dengan satu tautan.
+    Jawaban : Ok
 -->
 
 ## Hak Akses Canvas
@@ -323,7 +331,9 @@ Canvas mengikuti Comp. Access, Data Access, dan Function Access di [[Docs/Modul 
 
 <!--
   * [TODO] Konfirmasi: tautan anchor `#Comp. Access` dan `#Function Access` pada halaman Workspace adalah tebakan.
+    Jawaban : sudah oke
   * [TODO] Konfirmasi: View Publish hanya dapat menyalin atau membuka Link tanpa mengubah Status (diasumsikan mengikuti definisi di Workspace).
+    Jawaban : Iya betul
 -->
 
 ## Contoh Penggunaan
@@ -363,7 +373,6 @@ flowchart LR
 - Data pesanan tetap aman karena Canvas hanya menyajikan tampilan.
 
 **Ide skenario lain**
-
 | Jenis nilai                   | Contoh integrasi                                                                                                                                                                 |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Kartu detail dinamis          | Canvas dengan [[#Binding Canvas\|Binding]] untuk menampilkan desain menarik satu pesanan, lalu berganti ke pesanan lain hanya dengan mengubah parameter.                         |
@@ -374,10 +383,13 @@ flowchart LR
 Dengan Canvas, data, logika, dan tampilan yang sudah ada di Phoenix tersambung dalam satu halaman visual yang mudah dibagikan.
 
 <!--
-  * [TODO] Nama Table "Pesanan", Canvas "Dasbor Pesanan", dan Flow "Kirim Ringkasan" bersifat generik. Mohon sesuaikan atau konfirmasi.
+  * [DONE] Nama Table "Pesanan", Canvas "Dasbor Pesanan", dan Flow "Kirim Ringkasan" bersifat generik. Mohon sesuaikan atau konfirmasi.
   * [TODO] Konfirmasi alur: apakah widget button memicu Flow melalui Flow Block Pulser (diasumsikan) atau Flow Block Event lain. Jika berbeda, ganti diagram dan tabel langkah.
+    Jawaban : Sudah oke menggunakan Pulser
   * [TODO] Konfirmasi: widget button dapat ditempatkan pada Canvas yang dipublikasikan dan dipakai oleh publik atau hanya oleh pengguna Phoenix.
+    Jawaban : Publik (developer harus hati-hati)
   * [TODO] Skenario "Kartu detail dinamis" bergantung pada Binding yang belum ada pada lampiran (rilis berikutnya).
+    Jawaban : Oke tidak apa-apa
 -->
 
 ## Praktik Terbaik
