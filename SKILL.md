@@ -37,6 +37,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 6. **Draf dulu, TODO kemudian.** TODO tidak menggantikan draf. Setiap bagian, termasuk warning dampak penghapusan, catatan perbedaan mode, dan langkah yang belum pasti, ditulis dalam bentuk terbaik, lalu ditandai untuk konfirmasi. Dampak penghapusan konteks (apa yang hilang dan apa yang terputus) selalu ditulis sebagai callout warning.
 7. **Ringkasan harus mengikuti isi.** Batasan dan Catatan, TL:DR, dan FAQ adalah ringkasan. Setiap kali isi halaman berubah atau dipindah, sinkronkan keempatnya: (a) langkah yang sudah pindah ke subhalaman diganti satu tautan; (b) Batasan berisi perilaku, dampak, dan ketergantungan (warning, perbedaan mode, relasi hak akses, apa yang tidak dicakup sebuah tombol), bukan lokasi tombol atau langkah yang sudah ada di isi halaman; (c) TL:DR berisi 4 sampai 6 poin yang mengikuti peta halaman (definisi, antarmuka, membangun, menjalankan, memantau, hal yang perlu hati-hati); (d) setiap anchor`#...` harus ada di halaman tujuan atau di daftar halaman yang diusulkan.
 8. **Revisi penulis adalah sumber belajar.** Bandingkan halaman yang dikembalikan dengan versi sebelumnya. Yang dihapus biasanya salah level atau bukan konten, yang diganti biasanya istilah atau struktur, dan yang ditambah biasanya bagian yang terlewat. Ubah temuan menjadi aturan di skill silverbullet.md dan knowledge.md (path, istilah, perilaku). Jadikan struktur dan istilah penulis sebagai dasar untuk halaman berikutnya.
+9. **Ikon di judul halaman kerja adalah ikon komponen.** Jangan menafsirkannya sebagai jenis atau tombol (contoh: "2D" pada Canvas). Tulis "ikon <Komponen> dan Header Name".
 
 ## Konvensi tautan
 
@@ -68,6 +69,10 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 | Toggle mode pada bilah navigasi | `[[^mode/view|View]]` dan `[[^mode/edit|Edit]]`, satu baris per mode, deskripsi menjelaskan fungsi saklar saat mode itu tampil | Form | `[[^mode/view|View]]` |
 | Menu konteks Elemen | `[[^field/copy|Copy Layout Style]]`, `[[^field/paste|Paste Layout Style]]`, `[[^field/up|Move Back]]`, `[[^field/down|Move Next]]` | Form | `[[^field/up|Move Back]]` |
 | Kontrol ukuran | `[[^field/resize]]` | Layout Panel | `[[^field/resize]]` |
+|Widget Canvas|`[[Docs/Modul Interface/Form/Widget/<Nama Widget>/Penjelasan|<Nama Widget>]]`|Nama widget ditulis Title Case dengan spasi (Chart Pie, Chart Bar, Text, Button). Slug seperti chart_pie hanya informasi data key di kode, jangan dipakai di dokumentasi|`[[Docs/Modul Interface/Form/Widget/Chart Pie/Penjelasan|Chart Pie]]`|
+|Template Canvas|`[[Docs/Modul Interface/Canvas/Template|Template Canvas]]`|Halaman usulan, daftar Template dan cara memakainya|`[[#Template Canvas|Template]]`|
+|Toggle mode antarmuka|`[[^field|mode]]` untuk toggle, `[[^value/radio|View]]` dan `[[^value/radio|Edit]]` untuk nilainya|Status Active dan Non-Active juga memakai `[[^value/radio|...]]`|`[[^field|mode]]`|
+|Tombol Binding|`[[^button/setting|Binding]]`|Ikon setting (roda gigi) dipakai untuk Binding pada Canvas|`[[^button/setting|Binding]]`|
 
 Catatan: alias tidak boleh diawali spasi (contoh salah: `[[^field/workspace| Workspace]]`).
 
@@ -276,6 +281,9 @@ Catatan format:
 - Bila komponen punya tombol Save dan Refresh, tambahkan callout warning bahwa Refresh membuang perubahan yang belum tersimpan (Save masih aktif berarti belum tersimpan).
 - Bila tampilan tombol berbeda di desktop dan mobile, tambahkan callout note "Perbedaan Icon" di bawah tabel bilah navigasi.
 - Tabel "Interaksi Antarmuka" tidak mengulang aksi yang sudah punya bagian sendiri (misalnya Remove Elemen dan membuka Submission List); penulis menghapus baris tersebut.
+* **Komponen dengan tombol Save pada bilah navigasi (Canvas dan Form).** Pengecualian dari aturan "Tombol Save tidak dipakai" pada langkah Mengubah. Save pada bilah navigasi menyimpan perubahan isi (aktif ketika ada perubahan, manual atau *auto save* sekitar 3 detik). Langkah Mengubah atribut tetap memakai Edit lalu Update. Tambahkan callout `>**note** Tombol Edit berbeda dengan Edit Mode`. Refresh tidak dapat dilakukan saat sedang menyimpan.
+* **Komponen dengan mode View dan Edit (Canvas dan Form).** Tulis subbagian "Mode View dan Edit" di dalam Antarmuka: tabel mode, syarat hak akses untuk berpindah ke Edit Mode, dan gambar Edit Mode terpisah.
+* **Data Access granular.** Jika Data Access sebuah komponen memiliki makna per kolom, tulis satu baris per kolom di tabel Hak Akses. Pada Canvas: Add = menambahkan widget, Update = mengubah Query, atribut, atau styling widget, Delete = menghapus widget. Berpindah ke Edit Mode cukup jika salah satu bernilai allow.
 
 ## Pola yang dipakai penulis untuk konteks = Elemen form:
 - Judul halaman: <Nama Elemen> (Elemen <Tipe>), misalnya Card (Elemen Layout).
