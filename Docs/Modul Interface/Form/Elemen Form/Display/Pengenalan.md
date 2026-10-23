@@ -14,5 +14,8 @@ Kategori dari [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] yang b
 
 Kategori ini memiliki elemen sebagai berikut:
 
-
-
+1. [[Docs/Modul Interface/Form/Display/Text/Penjelasan|Text]]
+2. [[Docs/Modul Interface/Form/Display/Table/Penjelasan|Table]]
+3. [[Docs/Modul Interface/Form/Display/Tooltip/Penjelasan|Tooltip]]
+4. [[Docs/Modul Interface/Form/Display/Qr/Penjelasan|Qr]]
+5. [[Docs/Modul Interface/Form/Display/Chrono/Penjelasan|Chrono]] 
