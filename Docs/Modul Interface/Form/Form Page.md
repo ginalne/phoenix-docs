@@ -7,7 +7,7 @@
     tags:
       draft
 ---
-# Mengelola Page Form
+# Form Page
 
 Form dapat memiliki beberapa Page. Daftar Page tampil pada panel [[^field|form flow]] di bagian bawah halaman kerja. Form baru yang belum memiliki Page menampilkan keterangan [[^field|No Page]].
 

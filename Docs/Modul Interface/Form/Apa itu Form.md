@@ -42,6 +42,27 @@ Anda dapat menyusun tampilan Form sendiri dari beberapa [[#Memahami Elemen|Eleme
 | [[#Mempublikasikan Form|Publish]] | Konfigurasi untuk membagikan Form kepada publik. |
 | [[#Mengelola Submission|Submission]] | Catatan setiap pengiriman Form, dengan status sukses, menunggu, atau gagal. |
 
+## Cara Kerja
+
+Penjelasan cara kerja Form lihat selengkap nya di [[Docs/Modul Interface/Form/Cara Kerja|Cara Kerja Form]].
+
+## Mengelola Form
+
+Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+1. [[Docs/Modul Interface/Form/Membuat Baru]] Form dalam halaman kerja.
+2. [[Docs/Modul Interface/Form/Mengubah]] Atribut Form seperti [[^field|Name]], [[^field|Description]], atau [[^field|Filter]].
+3. [[Docs/Modul Interface/Form/Menghapus]] Form.
+4. [[Docs/Modul Interface/Form/Form Page|Mengelola Halaman]] dalam Form.
+4. [[Docs/Modul Interface/Form/Mengatur Templat]] Kartu dalam Form.
+
+## Antarmuka
+
+Penjelasan antarmuka Form lihat selengkap nya di [[Docs/Modul Interface/Form/Antarmuka|Antarmuka Form]].
+
+## Mengatur Template Kartu
+
+Kartu didalam Form bisa disesuaikan sesuai kebutuhan agar membuat interaksi menjadi lebih mudah, selengkapnya lihat [[Docs/Modul Interface/Form/Mengatur Templat]].
+
 Selengkapnya tentang penjelasan khusus setiap Elemen dapat dilihat pada halaman masing-masing di [[#Memahami Elemen]].
 
 
