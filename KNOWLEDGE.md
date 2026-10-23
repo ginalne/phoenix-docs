@@ -301,3 +301,64 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Hak akses:** mengikuti Comp. Access, Data Access, dan Function Access (View Publish dan Publish) seperti komponen lain. View Publish hanya menyalin atau membuka Link tanpa mengubah Status.
 *   **Belum terkonfirmasi:** apakah Layout dan Template mengikuti Data Access Add, Update, Delete yang sama dengan widget, widget lain yang tergolong "versi lite", label tombol penyimpan di modal Publish, tombol di modal Binding, dan letak tombol Binding pada bilah navigasi.
 *   **Penamaan pada screenshot** (nama Canvas "Test", nama Data pada Chart Pie, serta nama dan nilai pada grafik) adalah kasus pribadi dan tidak disebut di dokumentasi.
+
+---
+
+# Tambahan (Widget Table dan Widget Chart Pie)
+
+**Alasan:** penulis memberi informasi baru dan 2 screenshot untuk Widget Table dan Widget Chart Pie. Tambahkan sebagai sub-bagian di bawah bagian Canvas.
+
+## Widget Canvas (struktur halaman)
+
+*   **Path:** `Docs/Modul Interface/Form/Widget/<Nama Widget>/Penjelasan`, nama folder Title Case (`Table`, `Chart Pie`). **Penulis menyebut halamannya "Widget Table" dan "Widget Pie".** Draf memakai judul "Widget Chart Pie" mengikuti keputusan nama widget sebelumnya (Chart Pie). Mohon konfirmasi.
+*   **Struktur** akan diikuti widget lain (Text, Chart Line, Chart Bar, Chart Radial, Chart Linear, Kanban, Gantt, Timeline, Gallery, Space, Button).
+*   **Panel tata letak** sama di semua widget: min. (w, h persen), tombol Expand (ikon panah diagonal, fungsi belum terkonfirmasi), padding dan margin (4 sisi), panah ▼ di sisi kiri panel.
+
+## Widget Table
+
+*   **Definisi:** menampilkan data Table sebagai tabel di Canvas. Versi lite Table View: hanya satu data, tanpa kolom Action, tanpa Add Row, isi tidak dapat dimanipulasi.
+*   **Header toolbar** (`interface-widget-table.png`): ikon Table (jenis widget), ikon pegangan ⋮⋮ (memindahkan), ikon tabel kecil di kiri tombol 123 (**belum dijelaskan**), tombol **123 = toggle pagination**, tombol **kaca pembesar = toggle toolbar search**, Data (ikon Table dan nama Table), tombol Q, Remove. Toggle aktif ditandai latar berwarna.
+*   **Design toolbar:** hanya panel tata letak (tidak ada panel tampilan pada screenshot). Pada screenshot min. w 0% dan h 40%, Expand aktif.
+*   **Tampilan:** toolbar search di atas (tombol **Refresh List**, kolom **Search Data...**), tabel (kolom ID, kolom hasil Query dengan ikon tipe data di samping nama, cell kosong menampilkan "Empty"), pagination di bawah ("Show 50 of 8 items, on page", input nomor halaman, Go, Prev, nomor halaman, Next). 50 adalah batas data per halaman.
+*   **Query:** diatur lewat Q. Kaidah (**asumsi: Table Output**, belum terkonfirmasi).
+*   **Belum terkonfirmasi:** fungsi ikon tabel di kiri 123, fungsi Expand, cakupan Search Data..., apakah search dan pagination tampil di View Mode dan tautan Publish, perilaku Refresh List, kaidah Query, cara memilih Data, tampilan sebelum Data dipilih.
+
+## Widget Chart Pie
+
+*   **Definisi:** menampilkan data Table sebagai diagram pie di Canvas.
+*   **Header toolbar** (`interface-widget-chart-pie.png`): ikon pie (jenis widget), ikon pegangan ⋮⋮, **Data (input Query dengan kaidah Series Output; ikon Table dan nama Table)**, tombol Q, **Limit = jumlah maksimal data yang muncul** (menampilkan "Empty" bila belum diisi), Remove.
+*   **Design toolbar:** dua panel. Panel tata letak (sama di semua widget) dan **panel tampilan** (ikon palet, ▼, serta satu ikon di sisi kanan baris hole dan gap yang belum dijelaskan).
+*   **Panel tampilan (penjelasan penulis):**
+    *   **hole:** berapa lubang pada pie (persen, contoh 45%)
+    *   **gap:** gap antar data (contoh 6)
+    *   **theme:** tema warna (dropdown, contoh `fun`)
+    *   **gradient:** gradasi warna dari tengah ke pinggir (transparent to color), persen (contoh 0%)
+    *   **offset:** batas akhir gradasi. Jika 75%, gradasi dari tengah sampai sekitar 75% ke ujung lingkaran (contoh 0%)
+    *   **label:** label dalam pie. Pilihan: `none`, `label`, `value`, `percent`, `all` (label - value). Contoh `none`
+    *   **min:** derajat minimum pie untuk menampilkan label (contoh 20)
+    *   **legends:** posisi legenda. Pilihan: `right`, `bottom`, `hidden` (contoh `right`)
+    *   **total:** toggle, menampilkan total di tengah (contoh aktif, Σ)
+    *   **size:** font size dari tampilan total di tengah (contoh 22)
+*   **Tampilan:** irisan per data, total di tengah, legenda "label (persen)".
+*   **Belum terkonfirmasi:** definisi kaidah **Series Output** (anchor `Docs/Tipe Data/Query#Series Output`: kolom, contoh, Error), satuan gap dan size, arti nilai persen gradient, daftar theme, apakah `all` memuat percent, arti Limit kosong, ikon tanpa nama pada panel tampilan, cara memilih Data.
+*   **Penamaan pada screenshot** (Table "Pesanan" dan "Barang pesanan", nama barang dan kolom) adalah data pribadi dan tidak disebut di dokumentasi.
+
+## Space (Modul Interface)
+
+*   **Definisi:** Space adalah komponen modul Interface yang menaungi dan mengorganisasi data dalam bentuk 3D (tiga dimensi). Data dan hubungan antar data divisualisasikan dalam ruang tiga dimensi dan dapat dijelajahi dari berbagai sudut pandang, sehingga pola dan keterkaitan yang sulit terlihat pada tampilan tabel menjadi lebih mudah dipahami.
+*   **Path dan struktur:** `Docs/Modul Interface/Space/Apa itu Space`. **Seluruh isi Weather, Environment, dan Object ditulis lengkap di halaman ini, tanpa subhalaman**, ditautkan lewat anchor (`#Mengelola Weather`, `#Mengelola Environment`, `#Mengelola Object`, `#Mengatur Model Attribute`, `#Panel Properti`, `#Hak Akses Space`).
+*   **Dialog Create Space** (`add-space.png`): Name (bagian kiri tanda `/` = folder tujuan, tampil "root", boleh dikosongkan; lalu kolom Name) dan Description, tombol Cancel dan Create. Slug ikon menu: `space`.
+*   **Halaman kerja** (`interface-space.png`): bilah navigasi (ikon Space dan Header Name, Edit, Refresh, "Search Space Data...") dan area kerja: view 3D (grid lantai, penanda sumbu di titik pusat: **x merah, y hijau, z biru**), panel **Outliner** di kiri (kelompok Weather, Environment, Object, angka = jumlah data, panah membuka/menutup daftar), dan panel properti di kanan ("No selection" bila tidak ada data yang difokuskan). Judul Space dan folder pada screenshot adalah kasus pribadi, tidak disebut di dokumentasi.
+*   **Edit** hanya mengubah Name dan Description. **Search Space Data...** mencari data di Outliner berdasarkan Name, termasuk data milik Object yang banyak.
+*   **Menambah dan menghapus data:** klik kanan pada panel Outliner membuka menu **Add Weather, Add Environment, Add Object**. Data yang sudah ada punya menu **Delete** dan **Edit**. Modal Edit Object berisi isian yang sama dengan Add dan **semua atribut bisa diubah** (Origin hanya bisa diubah lewat Edit).
+*   **Fokus data:** klik data pada Outliner, atau klik langsung objek pada view 3D (keduanya bisa).
+*   **Interaksi view 3D:** klik kiri memutar, Shift + klik kiri menggeser, wheel zoom, mobile memakai gestur sentuh standar (sudah dikonfirmasi penulis: satu jari memutar, dua jari menggeser, cubit untuk zoom). Data yang difokuskan punya alat bantu pemindah, **belum ada pergantian mode**. Memindahkan objek 3D Object dengan alat bantu **memperbarui Row sumber jika atributnya bind**. **Environment tidak bisa dipindahkan dengan alat bantu**, hanya lewat panel properti. Dokumentasi menjelaskan perilaku sesuai halaman kerja Phoenix, **tanpa menyebut nama pustaka atau kontrol 3D yang mendasarinya.**
+*   **Tiga jenis data:**
+    *   **Weather:** tampil sebagai *world effect* (berlaku pada seluruh ruang). Atribut: Priority [Number], Name [String], Description [String], **Type** (label field berbahasa Inggris, bukan "Jenis"), Status [Boolean]. Pilihan Type (titlecase): **Earth Sky** (properti Time [DateTime / DateTimeZone]) dan **Sea** (properti Level [Number] dan Wave Rate [Number]). Jika ada banyak Weather dengan Type yang sama, yang menang adalah **Priority terkecil dengan Status true**. Setiap properti punya **toggle** pada field nilainya untuk memilih nilai langsung atau Query **kaidah Single Output** (hasil kalkulasi).
+    *   **Environment:** objek **statis tanpa logika**, pengguna cukup meng-upload file 3D. Atribut: Name, Description, Position (3D Vector), Scale (Volume Unit, 3 nilai x, y, z), Rotation (Euler Angle), Model (**upload file 3D**, bukan komponen Model). File 3D **ikut terhapus** saat Environment dihapus.
+    *   **Object:** berlogika kompleks, disiapkan di **komponen Model modul Developer**. Atribut: Name, Description, Origin (3D Vector), Model (**komponen Model**, tipe data Model), Query **kaidah Table Output** (data riil). **Origin** = titik asal tiap Row, berfungsi sebagai *anchor* untuk merender model, **tidak memengaruhi Row**, dan hanya bisa diubah lewat klik kanan > Edit di Outliner. Tombol **Q** hanya ada di modal Object (tidak tampil langsung di antarmuka seperti Table View). Saat Query diisi tampil tabel **Model Attribute** (kolom **Key, Static, Value**). **Static dan bind adalah radio:** static = Value bebas dan sama untuk semua objek 3D yang dirender (contoh: atribut `on` pada model lampu diubah ke true, semua lampu menyala), bind = pilih kolom Query (berbeda tiap Row). **Daftar Key disiapkan di komponen Model.** Satu Object dapat menghasilkan banyak objek 3D (sebanyak Row hasil Query). Dihapus: Row sumber tidak ikut terhapus.
+*   **Panel properti:** tidak ada tombol simpan, **perubahan langsung diterapkan** (field teks ada debounce sekitar 300 ms, toggle dan option seketika). **Perubahan memengaruhi Row sumber hanya pada Object.** Perubahan pada Weather dan Environment hanya mengubah konfigurasi data di Space. Pengaruh ke sumber tetap mengikuti Data Access sumber.
+*   **Hak akses:** satu Data Access Space mewakili semua kategori (Weather, Environment, Object). Add = Add Weather/Environment/Object, Update = mengubah nilai, Delete = menghapus data.
+*   **Dampak hapus Space:** seluruh data dan konfigurasi Space hilang, Row sumber tidak terhapus.
+*   **Halaman yang akan ditambahkan penulis:** tipe data **Model** (`Docs/Tipe Data/Model`) dan format data **Euler Angle** (`Docs/Format Data/Complex/Euler Angle`).
+*   **Belum terkonfirmasi:** arti Level dan Wave Rate, serta tipe data atau format data untuk field upload Model pada Environment (dan format file 3D yang didukung).
