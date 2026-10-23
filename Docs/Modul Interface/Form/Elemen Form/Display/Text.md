@@ -31,7 +31,7 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Text
 
-![[Docs/Modul Interface/Form/Display/properties-form-text.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Display/properties-form-text.png]]
 Klik kiri Text di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar.
 
 ### State Text
@@ -52,7 +52,7 @@ Menampilkan Layout tempat Text berada. Ukuran, *padding*, dan *margin* Text diat
 
 ### Header Toolbar teks
 
-![[Docs/Modul Interface/Form/Display/toolbar-form-text.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-text.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
 
 ## Praktik Terbaik

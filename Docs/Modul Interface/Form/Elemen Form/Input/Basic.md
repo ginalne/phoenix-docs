@@ -57,7 +57,7 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Basic
 
-![[Docs/Modul Interface/Form/Input/properties-form-input.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Input/properties-form-input.png]]
 Klik kiri Basic di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar. Label Column (berikon kolom) juga tampil di atas Basic sebagai informasi Binding.
 
 ### Binding Basic

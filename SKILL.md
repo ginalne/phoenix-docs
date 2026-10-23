@@ -38,6 +38,10 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 7. **Ringkasan harus mengikuti isi.** Batasan dan Catatan, TL:DR, dan FAQ adalah ringkasan. Setiap kali isi halaman berubah atau dipindah, sinkronkan keempatnya: (a) langkah yang sudah pindah ke subhalaman diganti satu tautan; (b) Batasan berisi perilaku, dampak, dan ketergantungan (warning, perbedaan mode, relasi hak akses, apa yang tidak dicakup sebuah tombol), bukan lokasi tombol atau langkah yang sudah ada di isi halaman; (c) TL:DR berisi 4 sampai 6 poin yang mengikuti peta halaman (definisi, antarmuka, membangun, menjalankan, memantau, hal yang perlu hati-hati); (d) setiap anchor`#...` harus ada di halaman tujuan atau di daftar halaman yang diusulkan.
 8. **Revisi penulis adalah sumber belajar.** Bandingkan halaman yang dikembalikan dengan versi sebelumnya. Yang dihapus biasanya salah level atau bukan konten, yang diganti biasanya istilah atau struktur, dan yang ditambah biasanya bagian yang terlewat. Ubah temuan menjadi aturan di skill silverbullet.md dan knowledge.md (path, istilah, perilaku). Jadikan struktur dan istilah penulis sebagai dasar untuk halaman berikutnya.
 9. **Ikon di judul halaman kerja adalah ikon komponen.** Jangan menafsirkannya sebagai jenis atau tombol (contoh: "2D" pada Canvas). Tulis "ikon <Komponen> dan Header Name".
+14. **Widget adalah versi lite komponen lain.** Jelaskan perbedaannya langsung dari antarmuka widget (misalnya Widget Table tidak memiliki kolom Action dan Add Row, hanya menyajikan satu data) dan tautkan ke komponen aslinya. Jangan menyalin seluruh fitur komponen aslinya.
+15. **Tulis hanya pengaturan yang terlihat dan dijelaskan penulis.** Pada Widget Table, design toolbar hanya memuat panel tata letak, jadi tidak ada panel tampilan. Ikon yang belum dijelaskan (misalnya ikon tabel di sebelah tombol 123, panah ▼, ikon di samping baris hole dan gap) tidak ditulis di isi, cukup di TODO.
+16. **Contoh penggunaan widget jangan menyalin contoh Canvas.** Contoh Canvas memakai Button dan Pulser. Contoh widget memakai pemicu lain (misalnya Table Row Event lalu HTTP Request) dan menjelaskan nilai tampilan widget tersebut.
+17. **Satu pengaturan, satu penjelasan lengkap.** Untuk pengaturan seperti gradient dan offset, adalah upaya penulis untuk menjelaskan kepada Claude (misalnya "jika 75%, gradasi berjalan dari tengah sampai sekitar 75% ke ujung lingkaran").
 
 ## Konvensi tautan
 
@@ -73,6 +77,10 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 |Template Canvas|`[[Docs/Modul Interface/Canvas/Template|Template Canvas]]`|Halaman usulan, daftar Template dan cara memakainya|`[[#Template Canvas|Template]]`|
 |Toggle mode antarmuka|`[[^field|mode]]` untuk toggle, `[[^value/radio|View]]` dan `[[^value/radio|Edit]]` untuk nilainya|Status Active dan Non-Active juga memakai `[[^value/radio|...]]`|`[[^field|mode]]`|
 |Tombol Binding|`[[^button/setting|Binding]]`|Ikon setting (roda gigi) dipakai untuk Binding pada Canvas|`[[^button/setting|Binding]]`|
+|Tombol toggle pada header toolbar widget|`[[^button|123]]` (pagination), `[[^button/search|Search]]` (kaca pembesar), `[[^button/q]]`, `[[^button/delete|Remove]]`, `[[^button/expand|Expand]]`, `[[^button/refresh|Refresh List]]`|Tombol toggle yang aktif ditandai latar berwarna. Label yang tampil di antarmuka dipakai persis|`[[^button|123]]`| 
+|Nilai pilihan tetap dan perintah ketik ditulis dalam kode inline, bukan wikilink|`` `right` ``, `` `/chart` ``
+|Kaidah Query|`[[Docs/Tipe Data/Query/Series Output|Series Output]]`|Table Output untuk widget tabel, Series Output untuk Chart Pie. Anchor dipakai tanpa path subhalaman|`[[Docs/Tipe Data/Query#Series Output|Series Output]]`|
+
 
 Catatan: alias tidak boleh diawali spasi (contoh salah: `[[^field/workspace| Workspace]]`).
 

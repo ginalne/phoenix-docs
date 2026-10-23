@@ -55,7 +55,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan E
 
 ## Mengonfigurasi Card
 
-![[Docs/Modul Interface/Form/Layout/properties-form-card.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-card.png]]
 Klik kiri Card di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar. Label Table (berikon tabel) juga tampil di atas Card sebagai informasi Binding.
 
 | Bagian | Fungsi |

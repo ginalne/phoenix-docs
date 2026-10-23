@@ -23,6 +23,9 @@ Tiga hal yang membuat situasi ini sulit dibiarkan:
 <!--
   `@vianney08` <small style="opacity: 0.5">at 2026-10-23 03:42</small>
    @harbimartin gangerti konteksnya siapa yang menerima apa untuk diapakan
+
+   `@harbimartin` <small style="opacity: 0.5">at 2026-10-23 19:57</small>
+  iya kn klo manual file bisa aja tercecer terus datanya kemana-mana, gaada segmentasi, semisal nilai siswa di grup guru ada, nnti ke admin ada lagi @vianney08
 -->
 - **Tindak lanjut terlambat.** Siswa yang perlu remedial baru diketahui setelah rapor hampir selesai atau data kehadiran yang keliru baru diketahui setelah rapor dibagikan.
 
@@ -87,6 +90,9 @@ Pengaturan **Visible** pada folder induk berlaku untuk seluruh isinya, jadi ranc
 <!--
   `@vianney08` <small style="opacity: 0.5">at 2026-10-23 03:51</small>
    @harbimartin “berlaku untuk seluruh isinya” maksudnya apa?
+
+   `@harbimartin` <small style="opacity: 0.5">at 2026-10-23 19:56</small>
+  maksudnya itu dalam workspace kan ada settingan visible, nah ketika folder induknya visible maka seluruh komponen didalam folder ngikut. makanya disuruh rancang foldernya disallow. @vianney08
 -->
 
 ### Data yang Disimpan

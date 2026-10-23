@@ -3,7 +3,6 @@ status: draft
 title: Apa itu Canvas?
 description: Canvas adalah komponen modul Interface untuk menyusun, menghubungkan, dan memetakan data atau presentasi secara visual menggunakan widget.
 ---
-
 # Apa itu Canvas?
 
 >**note** Canvas merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.

@@ -8,6 +8,12 @@
 | **Workspace** | Komponen untuk mengatur ruang kerja pengembangan, yaitu komponen yang dapat dilihat, dikelola, dan diubah, serta integrasi yang digunakan.
 
 ```space-style
+
+@media screen and (min-width: 3200px) {
+  #sb-main .cm-editor .cm-content {
+      max-width: none;
+  }
+}
 table {
   border-radius: 15px;
   overflow: hidden;

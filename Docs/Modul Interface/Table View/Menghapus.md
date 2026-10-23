@@ -4,7 +4,7 @@
     description: Penjelasan cara menghapus komponen Table View
     pageDecoration:
       tree:
-        priority: 0
+        priority: 0.5
     tags:
       draft
 ---
