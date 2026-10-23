@@ -65,6 +65,9 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 |Nilai EnumData pada baris tabel atau kalimat|`[[^value/enumdata|<Nama>]]`|Nilai dari Enum, bukan nama Enum|`[[^value/enumdata|Menunggu]]`|
 |Halaman Styling|`[[Docs/Styling/Styling Class]]`| | |
 |Tombol hanya ikon (tanpa label)|`[[^button/<icon>]]`| q (Query) | `[[^button/q]]` |
+| Toggle mode pada bilah navigasi | `[[^mode/view|View]]` dan `[[^mode/edit|Edit]]`, satu baris per mode, deskripsi menjelaskan fungsi saklar saat mode itu tampil | Form | `[[^mode/view|View]]` |
+| Menu konteks Elemen | `[[^field/copy|Copy Layout Style]]`, `[[^field/paste|Paste Layout Style]]`, `[[^field/up|Move Back]]`, `[[^field/down|Move Next]]` | Form | `[[^field/up|Move Back]]` |
+| Kontrol ukuran | `[[^field/resize]]` | Layout Panel | `[[^field/resize]]` |
 
 Catatan: alias tidak boleh diawali spasi (contoh salah: `[[^field/workspace| Workspace]]`).
 
@@ -269,6 +272,24 @@ Catatan format:
 - Ikon tombol tambahan yang dipakai penulis: left (Prev), right (Next), x (Cancel), upload. Tombol Go memakai `[[^button/empty|Go]]`.
 - Label field yang berupa placeholder ditulis persis termasuk titik tiga, misalnya `[[^field|Select Data Format...]]` dan `[[^field|Search Table Data...]]`.
 - Nama kolom dan elemen antarmuka tidak ditebalkan, ditulis dengan `[[^field|ID]]` dan `[[^field|Action]]`.
+- Bagian "Mengonfigurasi Elemen" dipecah menjadi **Properties Panel**, **Header Toolbar**, **Layout Panel**, dan **Menu Konteks Elemen**, masing-masing dengan tabel Bagian dan Fungsi.
+- Bila komponen punya tombol Save dan Refresh, tambahkan callout warning bahwa Refresh membuang perubahan yang belum tersimpan (Save masih aktif berarti belum tersimpan).
+- Bila tampilan tombol berbeda di desktop dan mobile, tambahkan callout note "Perbedaan Icon" di bawah tabel bilah navigasi.
+- Tabel "Interaksi Antarmuka" tidak mengulang aksi yang sudah punya bagian sendiri (misalnya Remove Elemen dan membuka Submission List); penulis menghapus baris tersebut.
+
+## Pola yang dipakai penulis untuk konteks = Elemen form:
+- Judul halaman: <Nama Elemen> (Elemen <Tipe>), misalnya Card (Elemen Layout).
+- Fokus pada keunikan Elemen. Hal yang berlaku untuk semua Elemen (Header Toolbar, Layout Panel, Menu Konteks Elemen, Menambahkan dan Menghapus Elemen, Binding Form) cukup ditautkan ke [[Docs/Modul Interface/Form/Apa itu Form#<Bagian>]], tidak ditulis ulang.
+- Kerangka isi: Konsep Utama, Cara Kerja (diagram relasi), Menambahkan, Mengonfigurasi (sub-bagian per bagian Properties Panel: Binding, State, Validators, Attributes, Children atau Parent, Header Toolbar teks), Contoh Penggunaan, Praktik Terbaik, Batasan dan Catatan, TL:DR, FAQ.
+- Contoh Penggunaan Elemen tidak wajib memakai diagram Flow; cukup komponen yang terlibat, hasil yang dirasakan, dan ide skenario lain.
+
+### 4. Halaman Elemen (`.../<Tipe>/<Nama Elemen>/Penjelasan`)
+
+- Judul halaman: `<Nama Elemen> (Elemen <Tipe>)`, misalnya `Card (Elemen Layout)`.
+- Fokus pada keunikan Elemen. Hal yang berlaku untuk semua Elemen (Header Toolbar, Layout Panel, Menu Konteks Elemen, Menambahkan dan Menghapus Elemen, Binding Form) cukup ditautkan ke `[[Docs/Modul Interface/Form/Apa itu Form#<Bagian>]]`, tidak ditulis ulang.
+- Kerangka isi: Konsep Utama, Cara Kerja (diagram relasi), Menambahkan, Mengonfigurasi (sub-bagian per bagian Properties Panel: Binding, State, Validators, Attributes, Children atau Parent, Header Toolbar teks), Contoh Penggunaan, Praktik Terbaik, Batasan dan Catatan, TL:DR, FAQ.
+- Gambar: `properties-<elemen>.png` di folder Elemen (misalnya `Docs/Modul Interface/Form/Layout/Card/properties-card.png`).
+- Contoh Penggunaan Elemen tidak wajib memakai diagram Flow; cukup komponen yang terlibat, hasil yang dirasakan, dan ide skenario lain.
 
 ## Diagram alur saat menjelasakan alur Logic Flow
 

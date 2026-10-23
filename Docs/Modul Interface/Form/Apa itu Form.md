@@ -32,6 +32,7 @@ Anda dapat menyusun tampilan Form sendiri dari beberapa [[#Memahami Elemen|Eleme
 | Istilah | Penjelasan |
 | --- | --- |
 | [[#Mengelola Page Form|Page]] | Satu halaman di dalam Form. Satu Form dapat memiliki beberapa Page. |
+| [[#Mengelola Page Form|Form Flow]] | Alur Page pada Form. Page paling kiri tampil pertama, dan Form dapat disubmit setelah pengisi mencapai Page terakhir. |
 | [[#Memahami Elemen|Elemen]] | Satu objek penyusun isi Form, misalnya teks, tabel, atau kolom isian. |
 | [[#Elemen Layout|Layout]] | Kategori Elemen yang berfungsi sebagai templat tempat Elemen lain diletakkan. |
 | [[#Elemen Display|Display]] | Kategori Elemen yang menampilkan informasi, baik statis maupun hasil dari nilai Binding. |
@@ -59,6 +60,7 @@ flowchart LR
 ## Membuat Form
 
 ![[Docs/Modul Interface/Form/add-form.png]]
+
 1. Buka folder tempat Form akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/form|Form]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
@@ -87,39 +89,36 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 3. Konfirmasi dengan klik [[^button|Delete]]
 
 >**warning** Dampak penghapusan Form
-> Menghapus Form akan menghapus templat Form dan riwayat Submission-nya. Data yang sudah tersimpan di [[Docs/Modul Data/Table/Apa itu Table|Table]] tidak langsung terhapus.
-> Jika publik sedang mengisi Form yang dipublikasikan, mereka akan mengalami *error* saat mencoba mengirim.
-
-<!--
-  * [TODO] Konfirmasi arti "templat Form" pada dampak penghapusan: apakah maksudnya susunan Page dan Elemen? Konfirmasi juga apakah tautan Publish langsung tidak dapat dibuka setelah Form dihapus.
-    Jawaban : Templat form adalah page dan Elemen, termasuk binding yang sudah dipetakan. tautan publish akan invalid ketika form dihapus.
--->
+> Menghapus Form akan menghapus templat Form, yaitu Page, Elemen, dan Binding yang sudah dipetakan, beserta riwayat Submission-nya. Data yang sudah tersimpan di [[Docs/Modul Data/Table/Apa itu Table|Table]] tidak langsung terhapus.
+> Tautan Publish menjadi tidak valid setelah Form dihapus. Jika publik sedang mengisi Form yang dipublikasikan, mereka akan mengalami *error* saat mencoba mengirim.
 
 ## Antarmuka Form
 
 ![[Docs/Modul Interface/Form/interface-form.png]]
+
 Halaman kerja Form terdiri dari bilah navigasi di bagian atas, area kerja di bagian tengah, dan panel [[^field|form flow]] di bagian bawah yang menampilkan daftar [[#Mengelola Page Form|Page]].
 
 ### Bilah navigasi Form terdiri dari:
 
 Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 
-| Elemen | Fungsi |
+| Tombol | Fungsi |
 | --- | --- |
 | Judul Form | Menampilkan ikon Form dan nama Form. |
 | [[^button/edit|Edit]] | Mengubah atribut Form ([[^field|Name]] dan [[^field|Description]]). Lihat [[#Mengubah Form]]. |
 | [[^button/publish|Publish]] | Membuka konfigurasi publikasi Form. Lihat [[#Mempublikasikan Form]]. |
-|  [[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. Lihat [[#Mode View dan Edit Mode]]. |
-|  [[mode/edit|Edit]] | Saklar dengan mode Edit agar  konten Form hanya bisa dilihat. Lihat [[#Mode View dan Edit Mode]]. |
+| [[mode/view|View]] | Saklar saat Form berada di mode View. Klik untuk beralih ke Edit Mode agar isi Form dapat disunting. Lihat [[#Mode View dan Edit Mode]]. |
+| [[mode/edit|Edit]] | Saklar saat Form berada di Edit Mode. Klik untuk beralih ke mode View agar isi Form hanya dapat dilihat. Lihat [[#Mode View dan Edit Mode]]. |
 | [[^button/save|Save]] | Menyimpan perubahan isi Form. Aktif saat ada perubahan, dan perubahan juga tersimpan otomatis (*auto save*) setelah sekitar 3 detik. |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan Form. |
 | [[^button/submission|Informasi Submission]] | Menampilkan jumlah Submission sukses, menunggu, dan gagal. Klik untuk membuka [[#Mengelola Submission|Submission List]]. |
 
 >**note** Perbedaan Icon
->Dalam mode dekstop tombol [[button/submission|Submission]]sedikit berbeda, tombol terlihat dengan susunan informasi submission yaitu submitted, waiting dan failure
+> Pada tampilan desktop, tombol [[^button/submission|Submission]] menampilkan susunan informasi Submission sekaligus, yaitu Submitted, Waiting, dan Failure.
+> Pada tampilan mobile, tombol [[^button/submission|Submission]] didalam menu navigasi.
 
 > **warning** Harap hati-hati
-> Saat melakukan[[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
+> Saat melakukan [[^button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[^button/save|Save]] masih aktif, berarti perubahan belum disimpan.
 
 ### Mode View dan Edit Mode
 
@@ -127,7 +126,7 @@ Form memiliki dua mode yang dipilih lewat toggle [[^field|mode]]:
 
 | Mode | Fungsi |
 | --- | --- |
-| [[^value/radio|View]] | Melihat Form tanpa dapat mengubah isinya. Pada mode ini Form tampil sebagai *Read Only*. |
+| [[^value/radio|View]] | Melihat Form tanpa dapat mengubah isinya. Pada mode ini Form tampil sebagai [[^field|Read Only]]. |
 | [[^value/radio|Edit]] | Menyusun Form: menambah [[#Mengelola Page Form|Page]], mengelola [[#Mengelola Elemen Form|Elemen]], dan melihat informasi [[#Binding Form|Binding]]. |
 
 >**note** Syarat beralih ke Edit Mode
@@ -137,11 +136,15 @@ Form memiliki dua mode yang dipilih lewat toggle [[^field|mode]]:
 
 | Fungsi | Aksi |
 | --- | --- |
-| Memfokuskan Elemen (Edit Mode) | Klik kiri pada Elemen. _Card_ konfigurasi dan _header_ elemen akan tampil. |
+| Memfokuskan Elemen (Edit Mode) | Klik kiri pada Elemen. [[#Properties Panel]] dan [[#Header Toolbar]] akan tampil. |
+| Membuka Layout Panel (Edit Mode) | Klik ikon kecil di bawah Elemen yang difokuskan. Lihat [[#Layout Panel]]. |
+| Membuka menu konteks Elemen (Edit Mode) | Klik kanan pada Elemen. Lihat [[#Menu Konteks Elemen]]. |
 
 ## Mengelola Page Form
 
 Form dapat memiliki beberapa Page. Daftar Page tampil pada panel [[^field|form flow]] di bagian bawah halaman kerja. Form baru yang belum memiliki Page menampilkan keterangan [[^field|No Page]].
+
+Panel [[^field|form flow]] menunjukkan alur Form. Page paling kiri adalah halaman yang pertama kali tampil, dan Form hanya dapat disubmit setelah pengisi mencapai Page terakhir.
 
 ### Start Building
 
@@ -162,10 +165,7 @@ Pada setiap Page yang masih kosong, Edit Mode menampilkan informasi **Start Buil
 3. Isi [[^field|Page Name]]
 4. Pilih salah satu layout pada bagian Basic
 
-<!--
-  * [TODO] Konfirmasi langkah Menambahkan Page di atas (apakah Add Page langsung menampilkan Start Building). Konfirmasi juga cara mengganti nama, menghapus, dan mengurutkan Page, serta arti nama panel [[^field|form flow]] dan arti ikon peringatan pada tab Page.
-    Jawaban : Form Flow artinya alur form, halaman paling kiri adalah halaman yang pertama kali tampil, sedangkan form dapat disubmit ketika sudah mencapai halaman akhir.
--->
+
 
 ## Mengelola Elemen Form
 
@@ -200,27 +200,24 @@ Input berfungsi untuk mengisi atau menampilkan informasi yang berlaku pada Bindi
 1. Aktifkan [[#Mode View dan Edit Mode|Edit Mode]]
 2. Buka Page yang akan diisi
 3. Klik [[^field|Type something here to add...]] pada Elemen Layout
-4. Pilih Elemen yang akan ditambahkan
-
-<!--
-  * [TODO] Konfirmasi cara memilih Elemen pada langkah Menambahkan Elemen (apakah mengetik nama Elemen, memilih dari daftar, atau cara lain).
-    Jawaban : Cara memilih elemen adalah dengan memilih dalam dropdown (ketika focus input “type something here to add...”), user juga dapat mengetik untuk mencari elemen yang diinginkan.
--->
+4. Pilih Elemen pada dropdown yang muncul, atau ketik untuk mencari Elemen yang diinginkan
 
 ### Mengonfigurasi Elemen
 
 ![[Docs/Modul Interface/Form/panel-form.png]]
-Klik kiri pada Elemen di [[#Mode View dan Edit Mode|Edit Mode]] untuk memfokuskannya. Setelah itu muncul dua hal:
+
+Klik kiri pada Elemen di [[#Mode View dan Edit Mode|Edit Mode]] untuk memfokuskannya. Setelah itu muncul [[#Properties Panel]] dan [[#Header Toolbar]]. Selain itu, [[#Layout Panel]] dapat dibuka lewat ikon kecil di bawah Elemen yang difokuskan.
 
 #### Properties Panel
 
-Panel untuk mengatur properti elemen secara rinci, seperti Binding, State, Validators, Attributes, Children dan Parent.
+Panel untuk mengatur properti Elemen secara rinci, seperti [[^field|Binding]], [[^field|State]], [[^field|Validators]], [[^field|Attributes]], [[^field|Children]], dan [[^field|Parent]]. Isinya berbeda-beda pada setiap Elemen.
 
-| Bagian card | Fungsi |
+| Bagian | Fungsi |
 | --- | --- |
 | [[^field|Binding]] | Mengikat Elemen ke data. Lihat [[#Binding Form]]. |
 | [[^field|State]] | Mengatur kondisi Elemen, misalnya [[^field|Visible]] untuk menampilkan atau menyembunyikan Elemen. |
-| [[^field|Attribute]] | Mengatur pengaturan khusus Elemen, termasuk gayanya. Isinya berbeda-beda pada setiap Elemen. |
+| [[^field|Validators]] | Aturan yang harus dipenuhi pengisi agar dapat mengirim Form, misalnya [[^field|Required]]. |
+| [[^field|Attributes]] | Mengatur pengaturan khusus Elemen, termasuk gayanya. Isinya berbeda-beda pada setiap Elemen. |
 | [[^field|Children]] atau [[^field|Parent]] | Menampilkan Elemen yang berada di dalam Elemen ini (*children*), atau Elemen tempat Elemen ini berada (*parent*). |
 
 #### Header Toolbar
@@ -229,51 +226,57 @@ Bilah pintasan aksi yang selalu memiliki tombol [[^button/delete|Remove]] untuk 
 
 #### Layout Panel
 
-Panel untuk mengatur ukuran, padding, margin dan beberapa _styling_ elemen. Setiap elemen memiliki pengaturan ini:
+Panel untuk mengatur ukuran, *padding*, *margin*, dan beberapa *styling* Elemen. Setiap Elemen memiliki pengaturan ini, dan panel dibuka lewat ikon kecil di bawah Elemen yang difokuskan.
 
-| Bagian card | Fungsi |
+| Bagian | Fungsi |
 | --- | --- |
 | [[^field|min.]] layout | Ukuran persentase minimum Elemen terhadap layar. |
-| [[^field/resize]] | kontrol tambahan terkait ukuran atau tampilan pengaturan dimensi.
-| [[^field|padding]] | Mengatur jarak di bagian dalam elemen, yaitu antara batas elemen dan kontennya. |
-| [[^field|margin]] | Mengatur jarak di luar elemen, yaitu ruang antara elemen tersebut dan elemen lain di sekitarnya. |
+| [[^field/resize]] | Kontrol tambahan terkait ukuran atau tampilan pengaturan dimensi. |
+| [[^field|padding]] | Mengatur jarak di bagian dalam Elemen, yaitu antara batas Elemen dan kontennya. |
+| [[^field|margin]] | Mengatur jarak di luar Elemen, yaitu ruang antara Elemen tersebut dan Elemen lain di sekitarnya. |
 
 ### Menu Konteks Elemen
 
-Klik kanan pada elemen untuk membuka menu konteks.
+Klik kanan pada Elemen untuk membuka menu konteks.
 
-| Area | Menu |
-| ---- | ---- |
-| [[^field/copy|Copy Layout Style]] | Menyalin konfigurasi _styling_ elemen. |
-| [[^field/paste|Paste Layout Style]] | Menerapkan salinan konfigurasi _styling_ elemen. |
-| [[^field/up|Move Back]] | Memindahkan posisi dengan elemen sebelumnya (tidak ada pengaruh jika elemen berada dibarisan pertama) |
-| [[^field/down|Move Next]] | Memindahkan posisi dengan elemen setelahnya (tidak ada pengaruh jika elemen berada dibarisan akhir)
+| Menu | Fungsi |
+| --- | --- |
+| [[^field/copy|Copy Layout Style]] | Menyalin konfigurasi *styling* Elemen. |
+| [[^field/paste|Paste Layout Style]] | Menerapkan salinan konfigurasi *styling* Elemen. |
+| [[^field/up|Move Back]] | Memindahkan posisi dengan Elemen sebelumnya (tidak berpengaruh jika Elemen berada di barisan pertama). |
+| [[^field/down|Move Next]] | Memindahkan posisi dengan Elemen setelahnya (tidak berpengaruh jika Elemen berada di barisan akhir). |
 
 ### Menghapus Elemen
 
 1. Aktifkan [[#Mode View dan Edit Mode|Edit Mode]]
 2. Klik kiri Elemen yang akan dihapus
-3. Klik [[^button/delete|Remove]] pada header Elemen
+3. Klik [[^button/delete|Remove]] pada [[#Header Toolbar]]
+4. Konfirmasi penghapusan Elemen
 
 >**warning** Dampak penghapusan Elemen
-> Menghapus Elemen Layout dapat ikut menghapus Elemen yang berada di dalamnya. Binding yang dipakai Elemen tersebut juga terputus dari Form.
-
-<!--
-  * [TODO] Konfirmasi apakah Elemen di dalam Layout ikut terhapus saat Layout dihapus, dan apakah ada konfirmasi sebelum Remove.
-    Jawaban : Iya semua elemen didalam layout terhapus, dan ada konfirmasi.
--->
+> Menghapus Elemen Layout akan menghapus semua Elemen yang berada di dalamnya. Binding yang dipakai Elemen tersebut juga terputus dari Form.
 
 ## Binding Form
 
 Binding adalah ikatan berjenjang yang menghubungkan Elemen dengan data. Tujuannya agar isian pengguna dan hasil akhirnya tersimpan pada [[Docs/Tipe Data/Row]] dan relasi yang tepat di [[Docs/Modul Data/Table/Apa itu Table|Table]].
 
+Setiap Elemen Layout memiliki [[^field|Type]] Binding berupa [[^value/radio|table]] dan [[^value/radio|pivot]]. Artinya, Layout tersebut ditentukan sebagai header bagi Elemen di bawahnya.
+
+| Type | Fungsi |
+| --- | --- |
+| [[^value/radio|table]] | Memilih [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai header Layout. |
+| [[^value/radio|pivot]] | Dipakai pada Layout anak bila Layout induknya sudah memiliki Table. Pivot menjadi relasi lanjutan dari Table tersebut. |
+
+>**note** Pilihan pivot bisa kosong
+> Table pada header harus memiliki pivot dengan Table lain. Jika tidak ada, pilihan pada pivot akan kosong.
+
 Secara umum, urutannya seperti ini:
 
-1. Elemen paling atas diikat ke [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber datanya.
-2. Elemen di dalamnya diikat ke [[Docs/Tipe Data/Column]] pada Table tersebut, sehingga setiap *field* tahu ke kolom mana isiannya disimpan.
-3. Elemen yang mewakili data turunan diikat ke relasi dari Row induknya.
+1. Layout paling atas diikat ke [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber datanya lewat Type [[^value/radio|table]].
+2. Elemen Input di dalamnya diikat ke [[Docs/Tipe Data/Column]] pada Table tersebut, sehingga setiap *field* tahu ke kolom mana isiannya disimpan.
+3. Layout anak yang mewakili data turunan diikat lewat Type [[^value/radio|pivot]] sebagai relasi lanjutan dari Table pada Layout induknya.
 
-Informasi Binding dapat dilihat di [[#Mode View dan Edit Mode|Edit Mode]] sebagai label pada Elemen. Klik kiri Elemen untuk memfokuskannya dan melihat pengaturan [[^field|Binding]] pada card konfigurasi.
+Informasi Binding dapat dilihat di [[#Mode View dan Edit Mode|Edit Mode]] sebagai label pada Elemen. Klik kiri Elemen untuk memfokuskannya dan melihat pengaturan [[^field|Binding]] pada [[#Properties Panel]]. Selengkapnya lihat [[Docs/Modul Interface/Form/Layout/Card/Penjelasan#Binding Card|Binding Card]].
 
 ## Mengelola Submission
 
@@ -287,16 +290,12 @@ Klik [[^button/submission|Informasi Submission]] untuk membuka **Submission List
 | --- | --- |
 | Grafik | Menampilkan jumlah Submission dari waktu ke waktu untuk status Submitted, Waiting, dan Failure. Arahkan kursor ke grafik untuk melihat rinciannya pada tanggal tertentu. |
 | Daftar | Menampilkan setiap Submission dengan kolom [[^field|ID/Name]], [[^field|Status/ID]], [[^field|Start At]], dan [[^field|Updated At]]. |
+| Rincian Submission | Klik panah di kiri baris untuk membuka rincian Submission, seperti data yang ditambahkan, ID, atau error yang terjadi. |
+| Tombol salin ID Submission | Klik [[^ubtton/copy]] di baris untukmenyalin ID dari submission. |
 | Filter waktu | Memfilter data dengan pilihan [[^value/radio|All Time]], [[^value/radio|This Month]], [[^value/radio|This Week]], dan [[^value/radio|Today]]. |
-| [[^field|Search Submission...]] | Mencari Submission. |
+| [[^field|Search Submission...]] | Mencari Submission berdasarkan ID dan Name. |
 | [[^button/refresh|Refresh List]] | Memuat ulang daftar Submission. |
 
-<!--
-  * [TODO] Konfirmasi isi baris Submission saat dibuka (ikon panah di kiri baris), fungsi tombol salin di samping ID, dan fungsi ikon panel di kiri judul Submission List.
-    Jawaban : ikan panah adalah untuk membuat rincian submission tersebut seperti menambahkan data apa, ID berapa atau ada error apa.
-  * [TODO] Konfirmasi cakupan [[^field|Search Submission...]] (kolom apa saja yang dicari).
-    Jawaban : ID dan Name.
--->
 
 ## Mempublikasikan Form
 
@@ -306,12 +305,8 @@ Publish adalah konfigurasi untuk mengubah Form menjadi dipublikasikan, sehingga 
 2. Klik [[^button/publish|Publish]]
 3. Atur konfigurasi publikasi
 4. Klik [[^button|Update]]
-   
+
 ![[Docs/Modul Interface/Form/publish-form.png]]
-<!--
-  * [DONE] Letakkan gambar dialog Publish (publish-form.png) di sini. Anotasi yang disarankan: (1) [[^field|Status]], (2) [[^field|Link]], (3) [[^field|Language]], (4) [[^field|Single Submission]].
-  * [DONE] Gambar contoh memuat nama Form milik penulis. Ganti dengan penamaan generik.
--->
 
 | Konfigurasi | Fungsi |
 | --- | --- |
@@ -323,11 +318,6 @@ Publish adalah konfigurasi untuk mengubah Form menjadi dipublikasikan, sehingga 
 >**note** Perubahan konfigurasi tidak memengaruhi Submission yang sudah masuk
 > Mengubah [[^field|Status]] atau [[^field|Single Submission]] hanya berlaku untuk pengiriman berikutnya.
 
-<!--
-  * [TODO] Konfirmasi catatan di atas (pengaruh perubahan konfigurasi Publish terhadap Submission yang sudah masuk). Konfirmasi juga pilihan lain pada [[^field|Language]] dan apakah dialog Publish perlu dipindah menjadi subhalaman `Docs/Modul Interface/Form/Publish`.
-    Jawaban : sudah betul, tidak perlu.
--->
-
 ## Hak Akses Form
 
 Akses Form di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] mengikuti tiga jenis akses berikut:
@@ -337,11 +327,6 @@ Akses Form di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] men
 | [[^field|Comp. Access]] | Melihat ([[^field|Visible]]), menambah ([[^field|Add]]), mengubah atribut ([[^field|Update]]), dan menghapus ([[^field|Delete]]) komponen Form. |
 | [[^field|Data Access]] | Setiap perubahan Elemen dan atributnya di dalam Form, termasuk beralih ke [[#Mode View dan Edit Mode|Edit Mode]]. Selengkapnya lihat [[Docs/Modul Developer/Workspace/Data Access]]. |
 | [[^field|Function Access]] | [[^field|View Publish]] untuk melihat konfigurasi publikasi (misalnya menyalin tautan), dan [[^field|Publish]] untuk memperbarui konfigurasi publikasi. |
-
-<!--
-  * [TODO] Konfirmasi pemetaan Data Access (Add, Update, Delete) ke aksi di Form: aksi apa yang membutuhkan [[^field|Add]], [[^field|Update]], dan [[^field|Delete]] (misalnya Edit Mode dan Remove Elemen).
-    Jawaban : Sudah betul.
--->
 
 ## Contoh Penggunaan
 
@@ -356,12 +341,6 @@ Panitia sebuah kegiatan ingin peserta mendaftar sendiri lewat tautan, tanpa haru
 | [[^field/form|Form Pendaftaran]] | Tempat pendaftar mengisi data lewat tautan publik. |
 | [[^field/table|Data Pendaftar]] | Menyimpan setiap pendaftaran sebagai Row lewat Binding. |
 | [[^field/flow|Notifikasi Pendaftaran]] | Mengirim pemberitahuan ke panitia saat ada Row baru. |
-
-<!--
-  * [DONE] Nama Form, Table, dan Flow pada contoh ini hanya penamaan generik. Sesuaikan dengan gambar yang Anda buat.
-  * [TODO] Konfirmasi asumsi bahwa Submission Form menambahkan Row baru di Table sehingga dapat memicu Flow Block Table Row Event, dan konfirmasi nama Event yang dipakai pada diagram.
-    Jawaban : Iya betul.
--->
 
 **Alur di Flow**
 
@@ -409,8 +388,10 @@ Dengan Form, pengumpulan data dari publik tersambung langsung ke data dan otomas
 ## Batasan dan Catatan
 
 - [[#Mode View dan Edit Mode|Edit Mode]] hanya dapat diaktifkan bila [[^field|Data Access]] di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] mengizinkan.
-- Menghapus Form menghapus templat dan riwayat Submission, tetapi data yang sudah tersimpan di [[Docs/Modul Data/Table/Apa itu Table|Table]] tidak langsung terhapus.
-- Pengisi yang sedang mengisi Form publik akan mengalami *error* saat mengirim jika Form dihapus.
+- Menghapus Form menghapus templat (Page, Elemen, dan Binding) beserta riwayat Submission, tetapi data yang sudah tersimpan di [[Docs/Modul Data/Table/Apa itu Table|Table]] tidak langsung terhapus.
+- Tautan Publish menjadi tidak valid setelah Form dihapus, dan pengisi yang sedang mengisi Form publik akan mengalami *error* saat mengirim.
+- Form hanya dapat disubmit setelah pengisi mencapai Page terakhir pada [[#Mengelola Page Form|Form Flow]].
+- Menghapus Elemen Layout menghapus semua Elemen di dalamnya.
 - Jika [[^field|Status]] berstatus Non-Active, Form publik hanya dapat dilihat dan tidak dapat dikirim.
 - [[^field|Single Submission]] membatasi pengiriman per perangkat, bukan per orang.
 - Tombol [[^button/edit|Edit]] hanya mengubah atribut Form, bukan isi Form.
@@ -423,7 +404,7 @@ Dengan Form, pengumpulan data dari publik tersambung langsung ke data dan otomas
 - **Menyusun.** Tambahkan [[#Mengelola Page Form|Page]], lalu susun isinya dari [[#Memahami Elemen|Elemen]] Layout, Display, dan Input di [[#Mode View dan Edit Mode|Edit Mode]].
 - **Menghubungkan data.** [[#Binding Form|Binding]] mengikat Elemen ke [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Tipe Data/Column]], dan [[Docs/Tipe Data/Row]] agar isian tersimpan di tempat yang tepat.
 - **Membagikan dan memantau.** [[#Mempublikasikan Form|Publish]] membagikan Form lewat tautan, dan [[#Mengelola Submission|Submission List]] memantau pengiriman.
-- **Hati-hati.** Menghapus Form menghapus templat dan riwayat Submission, dan publik yang sedang mengisi akan *error* saat mengirim.
+- **Hati-hati.** Menghapus Form menghapus templat (Page, Elemen, dan Binding) beserta riwayat Submission, tautan Publish menjadi tidak valid, dan publik yang sedang mengisi akan *error* saat mengirim.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
@@ -437,7 +418,8 @@ Dengan Form, pengumpulan data dari publik tersambung langsung ke data dan otomas
 > **Apakah satu orang hanya bisa mengirim Form sekali?**
 > Hanya bila [[^field|Single Submission]] aktif, dan pembatasannya berlaku per perangkat.
 > **Apa yang terjadi pada data jika Form dihapus?**
-> Templat dan riwayat Submission terhapus, tetapi data yang sudah tersimpan di [[Docs/Modul Data/Table/Apa itu Table|Table]] tidak langsung terhapus.
+> Templat (Page, Elemen, dan Binding) serta riwayat Submission terhapus, tetapi data yang sudah tersimpan di [[Docs/Modul Data/Table/Apa itu Table|Table]] tidak langsung terhapus. Tautan Publish juga menjadi tidak valid.
+> **Kapan Form dapat disubmit?**
+> Form hanya dapat disubmit setelah pengisi mencapai Page terakhir pada [[#Mengelola Page Form|Form Flow]].
 > **Di mana penjelasan setiap Elemen?**
 > Setiap Elemen punya halaman sendiri, misalnya [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]] dan [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]]. Lihat daftarnya di [[#Memahami Elemen]].
-
