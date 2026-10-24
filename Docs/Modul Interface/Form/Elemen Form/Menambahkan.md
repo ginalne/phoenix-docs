@@ -1,5 +1,14 @@
-
-### Menambahkan Elemen
+---
+    status: release
+    title: "Menambahkan Elemen"
+    description:  Penjelasan cara menambahkan elemen dalam komponen Form
+    pageDecoration:
+      tree:
+        priority: 5
+    tags:
+      draft
+---
+# Menambahkan Elemen
 
 1. Aktifkan [[#Mode View dan Edit Mode|Edit Mode]]
 2. Buka Page yang akan diisi

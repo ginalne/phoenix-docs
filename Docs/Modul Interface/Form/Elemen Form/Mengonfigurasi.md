@@ -1,5 +1,14 @@
-
-### Mengonfigurasi Elemen
+---
+    status: release
+    title: "Mengonfigurasi Elemen"
+    description:  Penjelasan cara mengonfigurasi elemen dalam komponen Form
+    pageDecoration:
+      tree:
+        priority: 5
+    tags:
+      draft
+---
+# Mengonfigurasi Elemen
 
 ![[Docs/Modul Interface/Form/panel-form.png]]
 

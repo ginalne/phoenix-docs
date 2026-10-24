@@ -1,5 +1,14 @@
-
-### Menghapus Elemen
+---
+    status: release
+    title: "Menambahkan Elemen"
+    description:  Penjelasan cara menghapus elemen dalam komponen Form
+    pageDecoration:
+      tree:
+        priority: 5
+    tags:
+      draft
+---
+## Menghapus Elemen
 
 1. Aktifkan [[#Mode View dan Edit Mode|Edit Mode]]
 2. Klik kiri Elemen yang akan dihapus

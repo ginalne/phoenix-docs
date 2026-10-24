@@ -1,4 +1,14 @@
-### Menu Konteks Elemen
+---
+    status: release
+    title: "Menu Konteks Elemen"
+    description:  Penjelasan menu konteks pada elemen dalam komponen Form
+    pageDecoration:
+      tree:
+        priority: 1
+    tags:
+      draft
+---
+# Menu Konteks Elemen
 
 Klik kanan pada Elemen untuk membuka menu konteks.
 

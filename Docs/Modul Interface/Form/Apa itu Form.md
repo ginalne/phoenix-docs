@@ -53,7 +53,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
 2. [[Docs/Modul Interface/Form/Mengubah]] Atribut Form seperti [[^field|Name]], [[^field|Description]], atau [[^field|Filter]].
 3. [[Docs/Modul Interface/Form/Menghapus]] Form.
 4. [[Docs/Modul Interface/Form/Form Page|Mengelola Alur Halaman]] dalam Form.
-5. [[Docs/Modul Interface/Form/Binding|Memahami Binding]] dalam Form.
+5. [[Docs/Modul Interface/Form/Elemen Form/Binding|Memahami Binding]] dalam Form.
 6. [[Docs/Modul Interface/Form/State|Memahami State]] dalam Form.
 7. [[Docs/Modul Interface/Form/Validator|Memahami Validator]] dalam Form.
 8. [[Docs/Modul Data/Table/Publikasi]]: mengatur publikasi Table.

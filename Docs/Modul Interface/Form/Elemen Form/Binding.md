@@ -1,14 +1,14 @@
 ---
     status: release
-    title: "Binding Form"
+    title: "Binding dalam Form"
     description:  Penjelasan tentang binding dalam komponen Form
     pageDecoration:
       tree:
-        priority: 1
+        priority: 4
     tags:
       draft
 ---
-# Binding Form
+# Binding dalam Form
 
 Binding adalah ikatan berjenjang yang menghubungkan Elemen dengan data. Tujuannya agar isian pengguna dan hasil akhirnya tersimpan pada [[Docs/Tipe Data/Row]] dan relasi yang tepat di [[Docs/Modul Data/Table/Apa itu Table|Table]].
 
