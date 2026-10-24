@@ -75,13 +75,6 @@ Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
 | Mengubah tampilan pie               | Atur nilai pada panel tampilan di design toolbar.                                                                     |
 | Memindahkan widget                  | Gunakan ikon pegangan ⋮⋮ pada header toolbar.                                                                         |
 
-<!--
-  * [TODO] Konfirmasi fungsi tombol Expand dan arti panah ▼ di sisi kiri panel (diasumsikan melipat panel). Juga ikon di sisi kanan baris hole dan gap pada panel tampilan yang belum dijelaskan penulis.
-  * [TODO] Konfirmasi: nilai Limit kosong ([[^field|Empty]]) berarti tanpa batas (diasumsikan).
-  * [TODO] Konfirmasi: persentase pada legenda dihitung dari total seluruh data yang muncul (setelah Limit).
-  * [TODO] Screenshot menampilkan nama Table "Barang pesanan" dan data pribadi (nama barang). Mohon ganti dengan data generik pada gambar bila perlu. Saran keterangan gambar: "Contoh gambar di atas merupakan Widget Chart Pie dengan total aktif dan legenda di sisi kanan."
--->
-
 ## Mengatur Widget Chart Pie
 
 ### Mengatur Data dan Query
@@ -123,14 +116,6 @@ Pada contoh di atas, nilai yang tampil adalah [[^field|hole]] 45%, [[^field|gap]
 
 Atur ukuran dan jarak widget melalui panel tata letak: [[^field|min.]], [[^field|padding]], dan [[^field|margin]]. Selengkapnya lihat [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar|Header Toolbar dan Design Toolbar]].
 
-<!--
-  * [TODO] Kaidah Series Output belum ada di knowledge. Mohon definisikan di halaman Query (anchor `Docs/Tipe Data/Query#Series Output`): kolom apa yang diperlukan (label dan value), contoh Query, dan pesan Error bila tidak valid.
-  * [TODO] Konfirmasi satuan dan rentang: gap (px?), min (derajat, 0 sampai 360), size (px?), dan arti nilai persen pada gradient (kekuatan gradasi?).
-  * [TODO] Konfirmasi pilihan theme selain `fun` (daftar tema) dan apakah `all` pada label hanya label - value atau juga percent.
-  * [TODO] Konfirmasi: nilai yang tampil pada contoh adalah nilai bawaan widget baru (bukan hasil pengaturan penulis).
-  * [TODO] Konfirmasi: apakah perubahan Query dan pengaturan tampilan tersimpan dengan Save pada Canvas.
--->
-
 ## Menghapus Widget Chart Pie
 
 1. Pindah ke Edit Mode, lalu klik kiri widget
@@ -139,70 +124,6 @@ Atur ukuran dan jarak widget melalui panel tata letak: [[^field|min.]], [[^field
 
 >**warning** Dampak menghapus Widget Chart Pie
 > Menghapus widget hanya menghapus tampilan dan konfigurasi widget, termasuk [[Docs/Tipe Data/Query]] dan pengaturan tampilan pie. Table sumber dan barisnya tetap aman.
-
-## Hak Akses Widget Chart Pie
-
-Widget Chart Pie mengikuti Data Access Canvas di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]]:
-
-| Akses                                                                  | Pengaruh pada Widget Chart Pie                                                                       |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Add        | Menambahkan Widget Chart Pie ke Canvas.                                                              |
-| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Update     | Mengubah Data, Query, Limit, tampilan pie, dan tata letak widget.                                    |
-| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Delete     | Menghapus Widget Chart Pie dari Canvas.                                                              |
-
-Selengkapnya lihat [[Docs/Modul Interface/Canvas/Apa itu Canvas#Hak Akses Canvas|Hak Akses Canvas]].
-
-## Contoh Penggunaan
-
-**Komposisi Barang Pesanan untuk Pemilik Usaha**
-
-Pemilik usaha ingin tahu barang apa yang paling banyak dipesan, tanpa membuka Table dan menghitung manual. Dengan Widget Chart Pie pada Canvas, komposisi barang pesanan tampil sebagai pie dengan total di tengah. Ketika barang pesanan baru ditambahkan, Flow juga memperbarui stok di sistem gudang, sehingga pie dan stok selalu sejalan.
-
-**Komponen yang terlibat**
-
-| Komponen                                    | Peran                                                                                                             |
-| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [[^field/table|Barang Pesanan]]            | Data sumber barang pesanan. Query menyiapkan data untuk pie dengan kaidah Series Output.                          |
-| [[^field/canvas|Dasbor Komposisi Pesanan]] | Menampilkan Widget Chart Pie dengan [[^field|Limit]] tertentu agar hanya barang terbanyak yang muncul.           |
-| [[^field/flow|Perbarui Stok]]              | Mengirim perubahan stok ke sistem gudang ketika barang pesanan baru ditambahkan.                                  |
-
-**Alur di Flow**
-
-```mermaid
-flowchart LR
-  A@{ shape: processes, label: "**Table Barang Pesanan**<br/>baris baru ditambahkan" } -.->|&nbsp;Event&nbsp;| B@{ shape: rounded, label: "**Table Row Event**" }
-  B --> C@{ shape: rounded, label: "**HTTP Request**" }
-  C --> D@{ shape: processes, label: "Sistem gudang<br/>memperbarui stok" }
-  D --> E@{ shape: circle, label: "Selesai" }
-```
-
-| Langkah | Flow Block                                                                              | Peran dalam alur                                         | Hasil                                      |
-| ------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------ |
-| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]             | Menangkap baris baru pada Table Barang Pesanan sebagai Row. | Alur berjalan dengan data barang baru.  |
-| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]                 | Mengirim perubahan stok ke sistem gudang.                | Stok di sistem gudang diperbarui.          |
-
-**Hasil yang dirasakan**
-
-- Pemilik usaha melihat barang terlaris sekilas lewat pie, tanpa menghitung manual.
-- Stok di sistem gudang ikut diperbarui otomatis, tanpa input ganda.
-- Tampilan pie selalu mengikuti data terbaru di Table sumber.
-- Data pesanan tetap aman karena widget hanya menampilkan.
-
-**Ide skenario lain**
-
-| Jenis nilai                | Contoh integrasi                                                                                                                            |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Status tugas               | Widget Chart Pie menampilkan komposisi status tugas bersama [[Docs/Modul Interface/Form/Widget/Table/Penjelasan|Widget Table]] berisi daftar tugasnya. |
-| Sumber pendapatan          | Pie komposisi pendapatan per kategori pada dasbor yang dibagikan lewat tautan [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas|Publish]]. |
-| Hasil survei               | Pie komposisi jawaban survei dengan label `percent` untuk presentasi ke pihak luar.                                                         |
-
-Dengan Widget Chart Pie, data yang sudah ada di Phoenix berubah menjadi gambaran komposisi yang mudah dipahami, tanpa menghitung atau menyalin data ke aplikasi lain.
-
-<!--
-  * [TODO] Nama Table "Barang Pesanan", Canvas "Dasbor Komposisi Pesanan", dan Flow "Perbarui Stok" bersifat generik. Mohon sesuaikan atau konfirmasi.
-  * [TODO] Konfirmasi: Table Row Event dapat dipakai sebagai pemicu perubahan stok untuk baris baru dan struktur alurnya sesuai.
-  * [TODO] Skenario bergantung pada kaidah Series Output yang belum didefinisikan. Sesuaikan setelah kaidah tersedia.
--->
 
 ## Praktik Terbaik
 
