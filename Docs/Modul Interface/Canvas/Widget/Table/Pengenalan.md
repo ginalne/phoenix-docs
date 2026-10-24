@@ -22,11 +22,11 @@ Widget Table bekerja seperti [[Docs/Modul Interface/Table View/Apa itu Table Vie
 
 | Istilah                                                                     | Penjelasan                                                                                             |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| [[#Mengatur Data dan Query\|Data]]                                          | Table sumber yang dibaca widget.                                                                       |
+| [[#Mengatur Data dan Query|Data]]                                          | Table sumber yang dibaca widget.                                                                       |
 | [[Docs/Tipe Data/Query]]                                                    | Tipe Data yang menentukan kolom dan baris yang ditampilkan widget.                                     |
-| [[#Pagination dan Search\|Pagination]]                                      | Bilah di bagian bawah widget untuk berpindah halaman data.                                             |
-| [[#Pagination dan Search\|Toolbar Search]]                                  | Toolbar di bagian atas widget untuk menyegarkan dan mencari data.                                      |
-| [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar\|Header Toolbar dan Design Toolbar]] | Toolbar yang tampil ketika widget dipilih pada Edit Mode. |
+| [[#Pagination dan Search|Pagination]]                                      | Bilah di bagian bawah widget untuk berpindah halaman data.                                             |
+| [[#Pagination dan Search|Toolbar Search]]                                  | Toolbar di bagian atas widget untuk menyegarkan dan mencari data.                                      |
+| [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar|Header Toolbar dan Design Toolbar]] | Toolbar yang tampil ketika widget dipilih pada Edit Mode. |
 
 ## Cara Kerja Widget Table
 
@@ -65,11 +65,11 @@ Pada Edit Mode, klik kiri widget untuk menampilkan header toolbar di atas widget
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon Table (paling kiri)                  | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^button\|123]]                          | Toggle pagination. Menampilkan atau menyembunyikan bilah pagination di bagian bawah widget.                                    |
-| [[^button/search\|Search]] (kaca pembesar) | Toggle toolbar search. Memunculkan atau menyembunyikan toolbar search di bagian atas widget.                                   |
-| [[^field\|Data]]                          | Memilih Table sumber. Menampilkan ikon Table dan nama Table yang dipilih.                                                      |
+| [[^button|123]]                          | Toggle pagination. Menampilkan atau menyembunyikan bilah pagination di bagian bawah widget.                                    |
+| [[^button/search|Search]] (kaca pembesar) | Toggle toolbar search. Memunculkan atau menyembunyikan toolbar search di bagian atas widget.                                   |
+| [[^field|Data]]                          | Memilih Table sumber. Menampilkan ikon Table dan nama Table yang dipilih.                                                      |
 | [[^button/q]]                             | Membuka konfigurasi [[Docs/Tipe Data/Query]] untuk widget.                                                                     |
-| [[^button/delete\|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Table]].                                                               |
+| [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Table]].                                                               |
 
 Tombol toggle yang aktif ditandai dengan latar berwarna.
 
@@ -79,10 +79,10 @@ Widget Table hanya memiliki satu panel pada design toolbar, yaitu panel tata let
 
 | Elemen                                  | Fungsi                                                                                                                          |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [[^field\|min.]]                        | Ukuran minimum widget dalam persen: [[^field\|w]] untuk lebar dan [[^field\|h]] untuk tinggi.                                   |
-| [[^button/expand\|Expand]]              | Tombol toggle di samping [[^field\|min.]].                                                                                      |
-| [[^field\|padding]]                     | Jarak di dalam widget pada empat sisi (atas, kanan, bawah, kiri).                                                               |
-| [[^field\|margin]]                      | Jarak di luar widget pada empat sisi (atas, kanan, bawah, kiri).                                                                |
+| [[^field|min.]]                        | Ukuran minimum widget dalam persen: [[^field|w]] untuk lebar dan [[^field|h]] untuk tinggi.                                   |
+| [[^button/expand|Expand]]              | Tombol toggle di samping [[^field|min.]].                                                                                      |
+| [[^field|padding]]                     | Jarak di dalam widget pada empat sisi (atas, kanan, bawah, kiri).                                                               |
+| [[^field|margin]]                      | Jarak di luar widget pada empat sisi (atas, kanan, bawah, kiri).                                                                |
 
 Selengkapnya tentang design toolbar lihat [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar|Header Toolbar dan Design Toolbar]].
 
@@ -90,10 +90,10 @@ Selengkapnya tentang design toolbar lihat [[Docs/Modul Interface/Canvas/Apa itu 
 
 | Bagian                         | Isi                                                                                                                                                |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kolom                          | Kolom ID dan kolom hasil [[Docs/Tipe Data/Query\|Query]]. Ikon kecil di samping nama kolom menunjukkan tipe data kolom.                            |
-| Baris                          | Baris hasil Query. Cell yang kosong menampilkan teks [[^field\|Empty]].                                                                            |
-| Toolbar search                 | Tombol [[^button/refresh\|Refresh List]] dan kolom [[^field\|Search Data...]]. Tampil bila toggle [[^button/search\|Search]] aktif.               |
-| Pagination                     | Informasi [[^field\|Show 50 of 8 items, on page]] (50 adalah batas data per halaman), input nomor halaman dengan [[^button\|Go]], serta [[^button\|Prev]] dan [[^button\|Next]]. Tampil bila toggle [[^button\|123]] aktif. |
+| Kolom                          | Kolom ID dan kolom hasil [[Docs/Tipe Data/Query|Query]]. Ikon kecil di samping nama kolom menunjukkan tipe data kolom.                            |
+| Baris                          | Baris hasil Query. Cell yang kosong menampilkan teks [[^field|Empty]].                                                                            |
+| Toolbar search                 | Tombol [[^button/refresh|Refresh List]] dan kolom [[^field|Search Data...]]. Tampil bila toggle [[^button/search|Search]] aktif.               |
+| Pagination                     | Informasi [[^field|Show 50 of 8 items, on page]] (50 adalah batas data per halaman), input nomor halaman dengan [[^button|Go]], serta [[^button|Prev]] dan [[^button|Next]]. Tampil bila toggle [[^button|123]] aktif. |
 
 Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
 
@@ -102,11 +102,11 @@ Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
 | Fungsi                              | Aksi                                                                                                                  |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Menampilkan toolbar widget          | Pada Edit Mode, klik kiri widget.                                                                                     |
-| Mengaktifkan pagination             | Klik [[^button\|123]] pada header toolbar.                                                                            |
-| Mengaktifkan toolbar search         | Klik [[^button/search\|Search]] pada header toolbar.                                                                  |
-| Mencari data                        | Ketik kata kunci pada [[^field\|Search Data...]].                                                                     |
-| Menyegarkan daftar                  | Klik [[^button/refresh\|Refresh List]].                                                                               |
-| Berpindah halaman                   | Klik [[^button\|Prev]] atau [[^button\|Next]], atau isi nomor halaman lalu klik [[^button\|Go]].                      |
+| Mengaktifkan pagination             | Klik [[^button|123]] pada header toolbar.                                                                            |
+| Mengaktifkan toolbar search         | Klik [[^button/search|Search]] pada header toolbar.                                                                  |
+| Mencari data                        | Ketik kata kunci pada [[^field|Search Data...]].                                                                     |
+| Menyegarkan daftar                  | Klik [[^button/refresh|Refresh List]].                                                                               |
+| Berpindah halaman                   | Klik [[^button|Prev]] atau [[^button|Next]], atau isi nomor halaman lalu klik [[^button|Go]].                      |
 | Memindahkan widget                  | Gunakan ikon pegangan ⋮⋮ pada header toolbar.                                                                         |
 
 <!--
@@ -133,8 +133,8 @@ Query menentukan kolom dan baris yang tampil pada widget. Query diatur melalui [
 
 | Pengaturan                                  | Fungsi                                                                                                               |
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| [[^button\|123]]                            | Aktifkan untuk menampilkan pagination di bagian bawah widget. Cocok untuk data yang banyak.                          |
-| [[^button/search\|Search]]                  | Aktifkan untuk menampilkan toolbar search di bagian atas widget, berisi [[^button/refresh\|Refresh List]] dan [[^field\|Search Data...]]. |
+| [[^button|123]]                            | Aktifkan untuk menampilkan pagination di bagian bawah widget. Cocok untuk data yang banyak.                          |
+| [[^button/search|Search]]                  | Aktifkan untuk menampilkan toolbar search di bagian atas widget, berisi [[^button/refresh|Refresh List]] dan [[^field|Search Data...]]. |
 
 Kedua pengaturan bersifat toggle dan dapat diaktifkan sendiri-sendiri.
 
@@ -166,9 +166,9 @@ Widget Table mengikuti Data Access Canvas di [[Docs/Modul Developer/Workspace/Ap
 
 | Akses                                                                  | Pengaruh pada Widget Table                                                                          |
 | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Add        | Menambahkan Widget Table ke Canvas.                                                                 |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Update     | Mengubah Data, Query, pengaturan pagination dan search, serta tata letak widget.                    |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Delete     | Menghapus Widget Table dari Canvas.                                                                 |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Add        | Menambahkan Widget Table ke Canvas.                                                                 |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Update     | Mengubah Data, Query, pengaturan pagination dan search, serta tata letak widget.                    |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Delete     | Menghapus Widget Table dari Canvas.                                                                 |
 
 Selengkapnya lihat [[Docs/Modul Interface/Canvas/Apa itu Canvas#Hak Akses Canvas|Hak Akses Canvas]].
 
@@ -182,9 +182,9 @@ Tim dapur ingin melihat pesanan yang sedang diproses di satu layar, tanpa membuk
 
 | Komponen                                  | Peran                                                                                                           |
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| [[^field/table\|Pesanan]]                 | Data sumber pesanan. Query hanya menampilkan pesanan yang belum selesai.                                        |
-| [[^field/canvas\|Layar Pantau Pesanan]]   | Menampilkan Widget Table dengan toolbar search aktif, dan dibagikan sebagai tautan Publish ke layar dapur.      |
-| [[^field/flow\|Notifikasi Pesanan Baru]]  | Mengirim notifikasi ke aplikasi pesan ketika pesanan baru ditambahkan.                                          |
+| [[^field/table|Pesanan]]                 | Data sumber pesanan. Query hanya menampilkan pesanan yang belum selesai.                                        |
+| [[^field/canvas|Layar Pantau Pesanan]]   | Menampilkan Widget Table dengan toolbar search aktif, dan dibagikan sebagai tautan Publish ke layar dapur.      |
+| [[^field/flow|Notifikasi Pesanan Baru]]  | Mengirim notifikasi ke aplikasi pesan ketika pesanan baru ditambahkan.                                          |
 
 **Alur di Flow**
 
@@ -198,8 +198,8 @@ flowchart LR
 
 | Langkah | Flow Block                                                                              | Peran dalam alur                                         | Hasil                                      |
 | ------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------ |
-| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]]             | Menangkap baris baru pada Table Pesanan sebagai Row.     | Alur berjalan dengan data pesanan baru.    |
-| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request\|HTTP Request]]                 | Mengirim notifikasi pesanan baru ke aplikasi pesan.      | Tim dapur menerima notifikasi.             |
+| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]             | Menangkap baris baru pada Table Pesanan sebagai Row.     | Alur berjalan dengan data pesanan baru.    |
+| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]                 | Mengirim notifikasi pesanan baru ke aplikasi pesan.      | Tim dapur menerima notifikasi.             |
 
 **Hasil yang dirasakan**
 
@@ -213,8 +213,8 @@ flowchart LR
 | Jenis nilai                | Contoh integrasi                                                                                                                            |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Daftar tugas harian        | Widget Table menampilkan tugas hari ini pada Canvas bersama Widget Chart Pie yang menunjukkan komposisi status tugas.                      |
-| Tabel referensi publik     | Widget Table dengan pagination dan search untuk daftar harga atau jadwal yang dibagikan lewat tautan [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas\|Publish]]. |
-| Ringkasan pada dasbor      | Widget Table berisi sepuluh data terbaru di sisi dasbor, sedangkan pengelolaan data lengkap tetap di [[Docs/Modul Interface/Table View/Apa itu Table View\|Table View]]. |
+| Tabel referensi publik     | Widget Table dengan pagination dan search untuk daftar harga atau jadwal yang dibagikan lewat tautan [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas|Publish]]. |
+| Ringkasan pada dasbor      | Widget Table berisi sepuluh data terbaru di sisi dasbor, sedangkan pengelolaan data lengkap tetap di [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]]. |
 
 Dengan Widget Table, data yang sudah ada di Phoenix dapat tampil dalam desain Canvas yang rapi dan mudah ditelusuri, tanpa membuka komponen sumbernya.
 

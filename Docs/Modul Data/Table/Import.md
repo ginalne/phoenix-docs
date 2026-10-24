@@ -3,8 +3,8 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 0
+        priority: -1
     tags:
       draft
 ---
-# Table Upload
+# Table Import

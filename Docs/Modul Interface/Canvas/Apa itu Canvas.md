@@ -25,14 +25,14 @@ Canvas memberi fleksibilitas untuk membuat diagram, tabel, maupun proyeksi tanpa
 
 | Istilah                                                       | Penjelasan                                                                                                                       |
 | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [[#Widget Canvas\|Widget]]                                    | Elemen penyusun tampilan Canvas, misalnya teks, grafik, tabel, atau tombol.                                                      |
-| [[#Layout Canvas\|Layout]]                                    | Wadah yang mengatur susunan widget secara horizontal atau vertikal. Layout dapat berisi widget maupun Layout lain.               |
-| [[#Template Canvas\|Template]]                                | Gabungan banyak widget yang sudah didesain dan siap dipakai.                                                                     |
-| [[#Header Toolbar dan Design Toolbar\|Header Toolbar]]        | Bilah pintasan aksi widget yang tampil ketika widget dipilih pada Edit Mode.                                                     |
-| [[#Header Toolbar dan Design Toolbar\|Design Toolbar]]        | Panel pengaturan tata letak dan tampilan widget yang tampil ketika widget dipilih pada Edit Mode.                                |
-| [[#Mode View dan Edit\|View Mode dan Edit Mode]]              | Dua mode Canvas. View Mode bersifat read only, Edit Mode untuk menyusun dan mengubah isi Canvas.                                 |
-| [[#Binding Canvas\|Binding]]                                  | Parameter Canvas yang dapat dipakai dalam Query widget dan memiliki nilai bawaan.                                                |
-| [[#Mempublikasikan Canvas\|Publish]]                          | Konfigurasi untuk mengubah Canvas menjadi tautan yang dipublikasikan.                                                            |
+| [[#Widget Canvas|Widget]]                                    | Elemen penyusun tampilan Canvas, misalnya teks, grafik, tabel, atau tombol.                                                      |
+| [[#Layout Canvas|Layout]]                                    | Wadah yang mengatur susunan widget secara horizontal atau vertikal. Layout dapat berisi widget maupun Layout lain.               |
+| [[#Template Canvas|Template]]                                | Gabungan banyak widget yang sudah didesain dan siap dipakai.                                                                     |
+| [[#Header Toolbar dan Design Toolbar|Header Toolbar]]        | Bilah pintasan aksi widget yang tampil ketika widget dipilih pada Edit Mode.                                                     |
+| [[#Header Toolbar dan Design Toolbar|Design Toolbar]]        | Panel pengaturan tata letak dan tampilan widget yang tampil ketika widget dipilih pada Edit Mode.                                |
+| [[#Mode View dan Edit|View Mode dan Edit Mode]]              | Dua mode Canvas. View Mode bersifat read only, Edit Mode untuk menyusun dan mengubah isi Canvas.                                 |
+| [[#Binding Canvas|Binding]]                                  | Parameter Canvas yang dapat dipakai dalam Query widget dan memiliki nilai bawaan.                                                |
+| [[#Mempublikasikan Canvas|Publish]]                          | Konfigurasi untuk mengubah Canvas menjadi tautan yang dipublikasikan.                                                            |
 | [[Docs/Tipe Data/Query]]                                      | Tipe Data yang dipakai widget untuk mengambil dan menyaring data sumber.                                                         |
 
 
@@ -83,11 +83,11 @@ Halaman kerja Canvas terdiri dari bilah navigasi di bagian atas dan area kerja d
 
 | Tombol                              | Fungsi                                                                                                                                         |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[^button/edit\|Edit]]              | Mengubah atribut Canvas (Name dan Description), lalu klik [[^button\|Update]]. Lihat [[#Mengubah Canvas]].                                      |
-| [[^button/publish\|Publish]]        | Membuka konfigurasi publikasi Canvas. Lihat [[#Mempublikasikan Canvas]].                                                                       |
-| [[^field\|mode]]                    | Toggle untuk berpindah antara [[^value/radio\|View]] dan [[^value/radio\|Edit]]. Lihat [[#Mode View dan Edit]].                                |
-| [[^button/save\|Save]]              | Menyimpan perubahan. Aktif ketika ada perubahan. Lihat [[#Menyimpan Perubahan]].                                                               |
-| [[^button/refresh\|Refresh]]        | Memuat ulang tampilan. Lihat [[#Menyegarkan Canvas]].                                                                                          |
+| [[^button/edit|Edit]]              | Mengubah atribut Canvas (Name dan Description), lalu klik [[^button|Update]]. Lihat [[#Mengubah Canvas]].                                      |
+| [[^button/publish|Publish]]        | Membuka konfigurasi publikasi Canvas. Lihat [[#Mempublikasikan Canvas]].                                                                       |
+| [[^field|mode]]                    | Toggle untuk berpindah antara [[^value/radio|View]] dan [[^value/radio|Edit]]. Lihat [[#Mode View dan Edit]].                                |
+| [[^button/save|Save]]              | Menyimpan perubahan. Aktif ketika ada perubahan. Lihat [[#Menyimpan Perubahan]].                                                               |
+| [[^button/refresh|Refresh]]        | Memuat ulang tampilan. Lihat [[#Menyegarkan Canvas]].                                                                                          |
 
 ### Mode View dan Edit
 
@@ -95,8 +95,8 @@ Canvas memiliki dua mode yang dapat dipilih melalui toggle [[^field|mode]]:
 
 | Mode                          | Fungsi                                                                                                                                                   |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[^value/radio\|View]]        | Mode read only. Isi Canvas hanya dapat dilihat dan tidak dapat diubah. Canvas kosong menampilkan [[^field\|Read Only]].                                  |
-| [[^value/radio\|Edit]]        | Mode untuk menyusun dan mengubah isi Canvas. Canvas kosong menampilkan [[^field\|Type something here to add...]] untuk menambahkan Layout atau widget. |
+| [[^value/radio|View]]        | Mode read only. Isi Canvas hanya dapat dilihat dan tidak dapat diubah. Canvas kosong menampilkan [[^field|Read Only]].                                  |
+| [[^value/radio|Edit]]        | Mode untuk menyusun dan mengubah isi Canvas. Canvas kosong menampilkan [[^field|Type something here to add...]] untuk menambahkan Layout atau widget. |
 
 Pindah ke Edit Mode dapat dilakukan jika salah satu Data Access Canvas (Add, Update, atau Delete) pada [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] bernilai [[^value/boolean/allow]]. Jika semuanya [[^value/boolean/disallow]], toggle tidak dapat dipindahkan dan Canvas tetap berada di View Mode. Lihat [[#Hak Akses Canvas]].
 
@@ -110,13 +110,13 @@ Tombol [[^button/save|Save]] aktif ketika ada perubahan pada Canvas. Anda dapat 
 
 | Fungsi                                                      | Aksi                                                                                                               |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Berpindah mode                                              | Klik toggle [[^field\|mode]] pada bilah navigasi.                                                                  |
-| Menambahkan Layout atau widget                              | Pada Edit Mode, klik [[^field\|Type something here to add...]], ketik perintah berawalan `/`, lalu pilih dari dropdown. |
+| Berpindah mode                                              | Klik toggle [[^field|mode]] pada bilah navigasi.                                                                  |
+| Menambahkan Layout atau widget                              | Pada Edit Mode, klik [[^field|Type something here to add...]], ketik perintah berawalan `/`, lalu pilih dari dropdown. |
 | Memfokuskan widget                                          | Pada Edit Mode, klik kiri widget.                                                                                  |
-| Menampilkan [[#Header Toolbar dan Design Toolbar\|header toolbar dan design toolbar]] | Klik kiri (*select*) widget. Setiap aksi select pada widget menampilkan keduanya.        |
+| Menampilkan [[#Header Toolbar dan Design Toolbar|header toolbar dan design toolbar]] | Klik kiri (*select*) widget. Setiap aksi select pada widget menampilkan keduanya.        |
 | Memindahkan widget                                          | Gunakan ikon pegangan ⋮⋮ pada header toolbar untuk memindahkan widget ke posisi atau Layout lain.                  |
-| Menghapus widget                                            | Klik [[^button/delete\|Remove]] pada header toolbar.                                                               |
-| Menyimpan perubahan                                         | Klik [[^button/save\|Save]] atau tunggu sekitar 3 detik.                                                           |
+| Menghapus widget                                            | Klik [[^button/delete|Remove]] pada header toolbar.                                                               |
+| Menyimpan perubahan                                         | Klik [[^button/save|Save]] atau tunggu sekitar 3 detik.                                                           |
 
 ## Membangun Canvas
 
@@ -162,9 +162,9 @@ Contoh di atas adalah toolbar widget Chart Pie:
 
 | Area                                  | Isi pada contoh Chart Pie                                                                                                                                                           |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Header toolbar                        | Ikon pegangan ⋮⋮ untuk memindahkan widget, [[^field\|Data]] (Table sumber), tombol [[^button/q]] untuk membuka [[Docs/Tipe Data/Query]], [[^field\|Limit]], dan tombol [[^button/delete\|Remove]] untuk menghapus widget. |
-| Design toolbar, panel tata letak      | [[^field\|min.]] (w dan h dalam persen), [[^field\|padding]], dan [[^field\|margin]] pada keempat sisi.                                                                             |
-| Design toolbar, panel tampilan widget | [[^field\|hole]], [[^field\|gap]], [[^field\|theme]], [[^field\|gradient]], [[^field\|offset]], [[^field\|label]], [[^field\|min]], [[^field\|legends]], [[^field\|total]], dan [[^field\|size]]. |
+| Header toolbar                        | Ikon pegangan ⋮⋮ untuk memindahkan widget, [[^field|Data]] (Table sumber), tombol [[^button/q]] untuk membuka [[Docs/Tipe Data/Query]], [[^field|Limit]], dan tombol [[^button/delete|Remove]] untuk menghapus widget. |
+| Design toolbar, panel tata letak      | [[^field|min.]] (w dan h dalam persen), [[^field|padding]], dan [[^field|margin]] pada keempat sisi.                                                                             |
+| Design toolbar, panel tampilan widget | [[^field|hole]], [[^field|gap]], [[^field|theme]], [[^field|gradient]], [[^field|offset]], [[^field|label]], [[^field|min]], [[^field|legends]], [[^field|total]], dan [[^field|size]]. |
 
 >**note** Isi toolbar berbeda pada setiap widget
 > Panel tata letak sama di semua widget. Header toolbar dan panel tampilan widget bersifat unik untuk masing-masing widget. Keunikan setiap widget dijelaskan di halaman widget masing-masing pada [[#Widget Canvas]].
@@ -175,19 +175,19 @@ Widget adalah elemen penyusun tampilan Canvas. Widget yang tersedia:
 
 | Widget                                                                                      | Kelompok                |
 | ------------------------------------------------------------------------------------------- | ----------------------- |
-| [[Docs/Modul Interface/Form/Widget/Text/Penjelasan\|Text]]                                  | Teks                    |
-| [[Docs/Modul Interface/Form/Widget/Chart Pie/Penjelasan\|Chart Pie]]                        | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Chart Line/Penjelasan\|Chart Line]]                      | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Chart Bar/Penjelasan\|Chart Bar]]                        | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Chart Radial/Penjelasan\|Chart Radial]]                  | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Chart Linear/Penjelasan\|Chart Linear]]                  | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Table/Penjelasan\|Table]]                                | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Kanban/Penjelasan\|Kanban]]                              | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Gantt/Penjelasan\|Gantt]]                                | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Timeline/Penjelasan\|Timeline]]                          | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Gallery/Penjelasan\|Gallery]]                            | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Space/Penjelasan\|Space]]                                | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Button/Penjelasan\|Button]]                              | Aksi                    |
+| [[Docs/Modul Interface/Form/Widget/Text/Penjelasan|Text]]                                  | Teks                    |
+| [[Docs/Modul Interface/Form/Widget/Chart Pie/Penjelasan|Chart Pie]]                        | Grafik                  |
+| [[Docs/Modul Interface/Form/Widget/Chart Line/Penjelasan|Chart Line]]                      | Grafik                  |
+| [[Docs/Modul Interface/Form/Widget/Chart Bar/Penjelasan|Chart Bar]]                        | Grafik                  |
+| [[Docs/Modul Interface/Form/Widget/Chart Radial/Penjelasan|Chart Radial]]                  | Grafik                  |
+| [[Docs/Modul Interface/Form/Widget/Chart Linear/Penjelasan|Chart Linear]]                  | Grafik                  |
+| [[Docs/Modul Interface/Form/Widget/Table/Penjelasan|Table]]                                | Tampilan data           |
+| [[Docs/Modul Interface/Form/Widget/Kanban/Penjelasan|Kanban]]                              | Tampilan data           |
+| [[Docs/Modul Interface/Form/Widget/Gantt/Penjelasan|Gantt]]                                | Tampilan data           |
+| [[Docs/Modul Interface/Form/Widget/Timeline/Penjelasan|Timeline]]                          | Tampilan data           |
+| [[Docs/Modul Interface/Form/Widget/Gallery/Penjelasan|Gallery]]                            | Tampilan data           |
+| [[Docs/Modul Interface/Form/Widget/Space/Penjelasan|Space]]                                | Tampilan data           |
+| [[Docs/Modul Interface/Form/Widget/Button/Penjelasan|Button]]                              | Aksi                    |
 
 Beberapa widget bekerja seperti komponen Interface lain dalam versi lite. Sebagai contoh, komponen [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] memiliki Event dan banyak data, sedangkan widget Timeline pada Canvas hanya menyajikan satu data.
 
@@ -209,10 +209,10 @@ Modal Binding berisi tabel dengan kolom berikut:
 
 | Kolom                            | Fungsi                                                                                                                                                                  |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[^field\|Name]]                 | Nama Binding. Harus unik.                                                                                                                                               |
-| [[^field\|Format]]               | Format data Binding.                                                                                                                                                    |
-| [[^field\|Header]]               | Hanya diisi pada format tertentu, mirip dengan konfigurasi [[Docs/Tipe Data/Column\|Column]] pada [[Docs/Modul Data/Table/Apa itu Table\|Table]]. Bernilai N/A bila Format tidak membutuhkannya. |
-| [[^field\|Default Value]]        | Nilai bawaan ketika parameter tidak ditentukan.                                                                                                                         |
+| [[^field|Name]]                 | Nama Binding. Harus unik.                                                                                                                                               |
+| [[^field|Format]]               | Format data Binding.                                                                                                                                                    |
+| [[^field|Header]]               | Hanya diisi pada format tertentu, mirip dengan konfigurasi [[Docs/Tipe Data/Column|Column]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]]. Bernilai N/A bila Format tidak membutuhkannya. |
+| [[^field|Default Value]]        | Nilai bawaan ketika parameter tidak ditentukan.                                                                                                                         |
 
 **Memakai Binding di Query.** Pada bagian nilai di [[Docs/Tipe Data/Query]] (misalnya pada [[Docs/Tipe Data/Query#Filter|Filter]]), Anda dapat mengisinya dengan Name Binding. Ketika parameter Canvas diubah, nilai dalam Query ikut berubah.
 
@@ -227,8 +227,8 @@ Publish adalah konfigurasi untuk mengubah Canvas menjadi dipublikasikan. Klik [[
 
 | Kolom                    | Fungsi                                                                                                                         |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| [[^field\|Status]]       | Menentukan Canvas dipublikasikan atau tidak: [[^value/radio\|Active]] atau [[^value/radio\|Non-Active]].                       |
-| [[^field\|Link]]         | Tautan Canvas yang dibuat otomatis. Anda dapat menyalin tautan (*copy*) atau membukanya di tab baru (*open new tab*).          |
+| [[^field|Status]]       | Menentukan Canvas dipublikasikan atau tidak: [[^value/radio|Active]] atau [[^value/radio|Non-Active]].                       |
+| [[^field|Link]]         | Tautan Canvas yang dibuat otomatis. Anda dapat menyalin tautan (*copy*) atau membukanya di tab baru (*open new tab*).          |
 
 Tautan yang Active dapat dibuka oleh publik dalam View Mode saja. Jika Status [[^value/radio|Non-Active]], tautan tidak dapat dibuka karena Canvas tidak dalam status dipublikasikan.
 
@@ -244,12 +244,12 @@ Canvas mengikuti Comp. Access, Data Access, dan Function Access di [[Docs/Modul 
 
 | Akses                                                                                                  | Pengaruh pada Canvas                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[Docs/Modul Developer/Workspace/Apa itu Workspace#Comp. Access\|Comp. Access]]                        | Mengatur apakah Canvas terlihat, dapat ditambahkan, diubah atributnya (Name dan Description), dan dihapus.                                        |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Add                                        | Menambahkan widget ke dalam Canvas.                                                                                                               |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Update                                     | Mengubah Query, atribut, atau styling widget.                                                                                                     |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Delete                                     | Menghapus widget dari Canvas.                                                                                                                     |
-| [[Docs/Modul Developer/Workspace/Apa itu Workspace#Function Access\|Function Access]] View Publish     | Hanya melihat konfigurasi publikasi, misalnya menyalin tautan.                                                                                    |
-| [[Docs/Modul Developer/Workspace/Apa itu Workspace#Function Access\|Function Access]] Publish          | Memperbarui konfigurasi publikasi, yaitu mengubah Status.                                                                                         |
+| [[Docs/Modul Developer/Workspace/Apa itu Workspace#Comp. Access|Comp. Access]]                        | Mengatur apakah Canvas terlihat, dapat ditambahkan, diubah atributnya (Name dan Description), dan dihapus.                                        |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Add                                        | Menambahkan widget ke dalam Canvas.                                                                                                               |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Update                                     | Mengubah Query, atribut, atau styling widget.                                                                                                     |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Delete                                     | Menghapus widget dari Canvas.                                                                                                                     |
+| [[Docs/Modul Developer/Workspace/Apa itu Workspace#Function Access|Function Access]] View Publish     | Hanya melihat konfigurasi publikasi, misalnya menyalin tautan.                                                                                    |
+| [[Docs/Modul Developer/Workspace/Apa itu Workspace#Function Access|Function Access]] Publish          | Memperbarui konfigurasi publikasi, yaitu mengubah Status.                                                                                         |
 
 Data Access pada Canvas mengatur setiap perubahan widget dan atributnya di dalam Canvas. Jika salah satu dari Add, Update, atau Delete bernilai [[^value/boolean/allow]], toggle [[^field|mode]] dapat dipindahkan ke Edit Mode. Jika ketiganya [[^value/boolean/disallow]], Canvas hanya dapat dilihat.
 
@@ -264,9 +264,9 @@ Manajer penjualan ingin melihat kondisi pesanan dalam satu halaman tanpa harus m
 
 | Komponen                                | Peran                                                                                                                       |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [[^field/table\|Pesanan]]               | Data sumber pesanan yang dibaca widget melalui [[Docs/Tipe Data/Query]].                                                    |
-| [[^field/canvas\|Dasbor Pesanan]]       | Menyusun widget Text, Chart Pie, Chart Bar, dan Table dalam satu tampilan, serta widget Button untuk pengiriman.            |
-| [[^field/flow\|Kirim Ringkasan]]        | Menjalankan proses pengiriman ringkasan ketika Button ditekan.                                                              |
+| [[^field/table|Pesanan]]               | Data sumber pesanan yang dibaca widget melalui [[Docs/Tipe Data/Query]].                                                    |
+| [[^field/canvas|Dasbor Pesanan]]       | Menyusun widget Text, Chart Pie, Chart Bar, dan Table dalam satu tampilan, serta widget Button untuk pengiriman.            |
+| [[^field/flow|Kirim Ringkasan]]        | Menjalankan proses pengiriman ringkasan ketika Button ditekan.                                                              |
 
 **Alur di Flow**
 
@@ -280,8 +280,8 @@ flowchart LR
 
 | Langkah | Flow Block                                                                                         | Peran dalam alur                                    | Hasil                                    |
 | ------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ---------------------------------------- |
-| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser\|Pulser]]                                          | Menerima pemicu dari Button pada Canvas.            | Alur berjalan.                           |
-| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request\|HTTP Request]]                            | Mengirim ringkasan pesanan ke sistem lain.          | Sistem lain menerima ringkasan.          |
+| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]]                                          | Menerima pemicu dari Button pada Canvas.            | Alur berjalan.                           |
+| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]                            | Mengirim ringkasan pesanan ke sistem lain.          | Sistem lain menerima ringkasan.          |
 
 **Hasil yang dirasakan**
 
@@ -293,10 +293,10 @@ flowchart LR
 **Ide skenario lain**
 | Jenis nilai                   | Contoh integrasi                                                                                                                                                                 |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kartu detail dinamis          | Canvas dengan [[#Binding Canvas\|Binding]] untuk menampilkan desain menarik satu pesanan, lalu berganti ke pesanan lain hanya dengan mengubah parameter.                         |
+| Kartu detail dinamis          | Canvas dengan [[#Binding Canvas|Binding]] untuk menampilkan desain menarik satu pesanan, lalu berganti ke pesanan lain hanya dengan mengubah parameter.                         |
 | Pemantauan proyek             | Widget Gantt, Timeline, dan Kanban dalam satu Canvas untuk melihat jadwal dan progres proyek sekaligus.                                                                          |
 | Katalog dengan aksi           | Widget Gallery untuk katalog dan widget Button yang membuka komponen lain untuk memesan.                                                                                         |
-| Laporan publik                | Canvas berisi grafik dan teks penjelasan yang dibagikan ke pihak luar melalui tautan [[#Mempublikasikan Canvas\|Publish]].                                                       |
+| Laporan publik                | Canvas berisi grafik dan teks penjelasan yang dibagikan ke pihak luar melalui tautan [[#Mempublikasikan Canvas|Publish]].                                                       |
 
 Dengan Canvas, data, logika, dan tampilan yang sudah ada di Phoenix tersambung dalam satu halaman visual yang mudah dibagikan.
 

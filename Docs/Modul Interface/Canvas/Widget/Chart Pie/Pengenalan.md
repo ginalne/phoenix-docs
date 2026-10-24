@@ -22,12 +22,12 @@ Anda dapat mengatur jumlah data yang muncul, bentuk pie, warna, label, legenda, 
 
 | Istilah                                                                     | Penjelasan                                                                                             |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| [[#Mengatur Data dan Query\|Data]]                                          | Table sumber yang dibaca widget.                                                                       |
+| [[#Mengatur Data dan Query|Data]]                                          | Table sumber yang dibaca widget.                                                                       |
 | [[Docs/Tipe Data/Query]]                                                    | Tipe Data yang menyiapkan data pie dan harus mengikuti kaidah Series Output.                           |
-| [[#Mengatur Data dan Query\|Limit]]                                         | Jumlah maksimal data yang muncul pada pie.                                                             |
-| [[#Mengatur Tampilan Pie\|Panel tampilan]]                                  | Panel design toolbar untuk mengatur lubang, warna, label, legenda, dan total.                          |
-| [[#Mengatur Tampilan Pie\|Legenda]]                                         | Keterangan warna setiap data, dengan posisi yang dapat diatur.                                         |
-| [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar\|Header Toolbar dan Design Toolbar]] | Toolbar yang tampil ketika widget dipilih pada Edit Mode. |
+| [[#Mengatur Data dan Query|Limit]]                                         | Jumlah maksimal data yang muncul pada pie.                                                             |
+| [[#Mengatur Tampilan Pie|Panel tampilan]]                                  | Panel design toolbar untuk mengatur lubang, warna, label, legenda, dan total.                          |
+| [[#Mengatur Tampilan Pie|Legenda]]                                         | Keterangan warna setiap data, dengan posisi yang dapat diatur.                                         |
+| [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar|Header Toolbar dan Design Toolbar]] | Toolbar yang tampil ketika widget dipilih pada Edit Mode. |
 
 ## Cara Kerja Widget Chart Pie
 
@@ -66,10 +66,10 @@ Pada Edit Mode, klik kiri widget untuk menampilkan header toolbar di atas widget
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon pie (paling kiri)                    | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^field\|Data]]                          | Memilih Table sumber. Menampilkan ikon Table dan nama Table yang dipilih.                                                      |
+| [[^field|Data]]                          | Memilih Table sumber. Menampilkan ikon Table dan nama Table yang dipilih.                                                      |
 | [[^button/q]]                             | Membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah Series Output.                                              |
-| [[^field\|Limit]]                         | Jumlah maksimal data yang muncul pada pie. Menampilkan [[^field\|Empty]] bila belum diisi.                                     |
-| [[^button/delete\|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Pie]].                                                           |
+| [[^field|Limit]]                         | Jumlah maksimal data yang muncul pada pie. Menampilkan [[^field|Empty]] bila belum diisi.                                     |
+| [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Pie]].                                                           |
 
 ### Design toolbar terdiri dari:
 
@@ -77,8 +77,8 @@ Design toolbar Widget Chart Pie memiliki dua panel. Panel pertama (ikon tata let
 
 | Panel                                | Isi                                                                                                                                                                   |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Panel tata letak                     | [[^field\|min.]] ([[^field\|w]] dan [[^field\|h]] dalam persen), [[^button/expand\|Expand]], [[^field\|padding]] dan [[^field\|margin]] pada empat sisi.              |
-| Panel tampilan                       | [[^field\|hole]], [[^field\|gap]], [[^field\|theme]], [[^field\|gradient]], [[^field\|offset]], [[^field\|label]], [[^field\|min]], [[^field\|legends]], [[^field\|total]], dan [[^field\|size]]. Lihat [[#Mengatur Tampilan Pie]]. |
+| Panel tata letak                     | [[^field|min.]] ([[^field|w]] dan [[^field|h]] dalam persen), [[^button/expand|Expand]], [[^field|padding]] dan [[^field|margin]] pada empat sisi.              |
+| Panel tampilan                       | [[^field|hole]], [[^field|gap]], [[^field|theme]], [[^field|gradient]], [[^field|offset]], [[^field|label]], [[^field|min]], [[^field|legends]], [[^field|total]], dan [[^field|size]]. Lihat [[#Mengatur Tampilan Pie]]. |
 
 Selengkapnya tentang panel tata letak lihat [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar|Header Toolbar dan Design Toolbar]].
 
@@ -86,10 +86,10 @@ Selengkapnya tentang panel tata letak lihat [[Docs/Modul Interface/Canvas/Apa it
 
 | Bagian                         | Isi                                                                                                                                                |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Irisan pie                     | Satu irisan untuk setiap data, dengan warna sesuai [[^field\|theme]].                                                                              |
-| Angka di tengah                | Total, tampil bila toggle [[^field\|total]] aktif.                                                                                                 |
-| Legenda                        | Keterangan warna setiap data beserta persentasenya, dengan posisi sesuai [[^field\|legends]].                                                      |
-| Label di dalam irisan          | Sesuai pilihan [[^field\|label]] dan batas [[^field\|min]].                                                                                        |
+| Irisan pie                     | Satu irisan untuk setiap data, dengan warna sesuai [[^field|theme]].                                                                              |
+| Angka di tengah                | Total, tampil bila toggle [[^field|total]] aktif.                                                                                                 |
+| Legenda                        | Keterangan warna setiap data beserta persentasenya, dengan posisi sesuai [[^field|legends]].                                                      |
+| Label di dalam irisan          | Sesuai pilihan [[^field|label]] dan batas [[^field|min]].                                                                                        |
 
 Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
 
@@ -121,9 +121,9 @@ Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
 
 | Pengaturan                       | Fungsi                                                                                                                                  |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [[^field\|Data]]                 | Table sumber widget.                                                                                                                    |
-| [[^button/q]]                    | Query yang menyiapkan data pie. Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output\|Series Output]].                     |
-| [[^field\|Limit]]                | Jumlah maksimal data yang muncul pada pie.                                                                                              |
+| [[^field|Data]]                 | Table sumber widget.                                                                                                                    |
+| [[^button/q]]                    | Query yang menyiapkan data pie. Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]].                     |
+| [[^field|Limit]]                | Jumlah maksimal data yang muncul pada pie.                                                                                              |
 
 Query diatur melalui [[^button/q]], sedangkan isi widget, yaitu data hasil Query, tidak dapat dimanipulasi dari Canvas.
 
@@ -133,16 +133,16 @@ Atur tampilan pie melalui panel tampilan pada design toolbar:
 
 | Pengaturan                  | Fungsi                                                                                                                                                         |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[^field\|hole]]            | Besar lubang di tengah pie, dalam persen.                                                                                                                      |
-| [[^field\|gap]]             | Jarak antar data (antar irisan).                                                                                                                               |
-| [[^field\|theme]]           | Tema warna pie.                                                                                                                                                |
-| [[^field\|gradient]]        | Gradasi warna dari tengah ke pinggir (dari transparan ke warna), dalam persen.                                                                                 |
-| [[^field\|offset]]          | Batas akhir gradasi. Jika 75%, gradasi berjalan dari tengah sampai sekitar 75% ke ujung lingkaran.                                                             |
-| [[^field\|label]]           | Isi label di dalam pie: `none`, `label`, `value`, `percent`, atau `all` (label - value).                                                                       |
-| [[^field\|min]]             | Derajat minimum irisan agar label ditampilkan.                                                                                                                 |
-| [[^field\|legends]]         | Posisi legenda: `right`, `bottom`, atau `hidden`.                                                                                                              |
-| [[^field\|total]]           | Toggle untuk menampilkan total di tengah pie.                                                                                                                  |
-| [[^field\|size]]            | Ukuran font total yang tampil di tengah pie.                                                                                                                   |
+| [[^field|hole]]            | Besar lubang di tengah pie, dalam persen.                                                                                                                      |
+| [[^field|gap]]             | Jarak antar data (antar irisan).                                                                                                                               |
+| [[^field|theme]]           | Tema warna pie.                                                                                                                                                |
+| [[^field|gradient]]        | Gradasi warna dari tengah ke pinggir (dari transparan ke warna), dalam persen.                                                                                 |
+| [[^field|offset]]          | Batas akhir gradasi. Jika 75%, gradasi berjalan dari tengah sampai sekitar 75% ke ujung lingkaran.                                                             |
+| [[^field|label]]           | Isi label di dalam pie: `none`, `label`, `value`, `percent`, atau `all` (label - value).                                                                       |
+| [[^field|min]]             | Derajat minimum irisan agar label ditampilkan.                                                                                                                 |
+| [[^field|legends]]         | Posisi legenda: `right`, `bottom`, atau `hidden`.                                                                                                              |
+| [[^field|total]]           | Toggle untuk menampilkan total di tengah pie.                                                                                                                  |
+| [[^field|size]]            | Ukuran font total yang tampil di tengah pie.                                                                                                                   |
 
 Pada contoh di atas, nilai yang tampil adalah [[^field|hole]] 45%, [[^field|gap]] 6, [[^field|theme]] `fun`, [[^field|gradient]] 0%, [[^field|offset]] 0%, [[^field|label]] `none`, [[^field|min]] 20, [[^field|legends]] `right`, [[^field|total]] aktif, dan [[^field|size]] 22.
 
@@ -176,9 +176,9 @@ Widget Chart Pie mengikuti Data Access Canvas di [[Docs/Modul Developer/Workspac
 
 | Akses                                                                  | Pengaruh pada Widget Chart Pie                                                                       |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Add        | Menambahkan Widget Chart Pie ke Canvas.                                                              |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Update     | Mengubah Data, Query, Limit, tampilan pie, dan tata letak widget.                                    |
-| [[Docs/Modul Developer/Workspace/Data Access\|Data Access]] Delete     | Menghapus Widget Chart Pie dari Canvas.                                                              |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Add        | Menambahkan Widget Chart Pie ke Canvas.                                                              |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Update     | Mengubah Data, Query, Limit, tampilan pie, dan tata letak widget.                                    |
+| [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Delete     | Menghapus Widget Chart Pie dari Canvas.                                                              |
 
 Selengkapnya lihat [[Docs/Modul Interface/Canvas/Apa itu Canvas#Hak Akses Canvas|Hak Akses Canvas]].
 
@@ -192,9 +192,9 @@ Pemilik usaha ingin tahu barang apa yang paling banyak dipesan, tanpa membuka Ta
 
 | Komponen                                    | Peran                                                                                                             |
 | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [[^field/table\|Barang Pesanan]]            | Data sumber barang pesanan. Query menyiapkan data untuk pie dengan kaidah Series Output.                          |
-| [[^field/canvas\|Dasbor Komposisi Pesanan]] | Menampilkan Widget Chart Pie dengan [[^field\|Limit]] tertentu agar hanya barang terbanyak yang muncul.           |
-| [[^field/flow\|Perbarui Stok]]              | Mengirim perubahan stok ke sistem gudang ketika barang pesanan baru ditambahkan.                                  |
+| [[^field/table|Barang Pesanan]]            | Data sumber barang pesanan. Query menyiapkan data untuk pie dengan kaidah Series Output.                          |
+| [[^field/canvas|Dasbor Komposisi Pesanan]] | Menampilkan Widget Chart Pie dengan [[^field|Limit]] tertentu agar hanya barang terbanyak yang muncul.           |
+| [[^field/flow|Perbarui Stok]]              | Mengirim perubahan stok ke sistem gudang ketika barang pesanan baru ditambahkan.                                  |
 
 **Alur di Flow**
 
@@ -208,8 +208,8 @@ flowchart LR
 
 | Langkah | Flow Block                                                                              | Peran dalam alur                                         | Hasil                                      |
 | ------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------ |
-| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event\|Table Row Event]]             | Menangkap baris baru pada Table Barang Pesanan sebagai Row. | Alur berjalan dengan data barang baru.  |
-| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request\|HTTP Request]]                 | Mengirim perubahan stok ke sistem gudang.                | Stok di sistem gudang diperbarui.          |
+| 1       | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]             | Menangkap baris baru pada Table Barang Pesanan sebagai Row. | Alur berjalan dengan data barang baru.  |
+| 2       | [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]                 | Mengirim perubahan stok ke sistem gudang.                | Stok di sistem gudang diperbarui.          |
 
 **Hasil yang dirasakan**
 
@@ -222,8 +222,8 @@ flowchart LR
 
 | Jenis nilai                | Contoh integrasi                                                                                                                            |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Status tugas               | Widget Chart Pie menampilkan komposisi status tugas bersama [[Docs/Modul Interface/Form/Widget/Table/Penjelasan\|Widget Table]] berisi daftar tugasnya. |
-| Sumber pendapatan          | Pie komposisi pendapatan per kategori pada dasbor yang dibagikan lewat tautan [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas\|Publish]]. |
+| Status tugas               | Widget Chart Pie menampilkan komposisi status tugas bersama [[Docs/Modul Interface/Form/Widget/Table/Penjelasan|Widget Table]] berisi daftar tugasnya. |
+| Sumber pendapatan          | Pie komposisi pendapatan per kategori pada dasbor yang dibagikan lewat tautan [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas|Publish]]. |
 | Hasil survei               | Pie komposisi jawaban survei dengan label `percent` untuk presentasi ke pihak luar.                                                         |
 
 Dengan Widget Chart Pie, data yang sudah ada di Phoenix berubah menjadi gambaran komposisi yang mudah dipahami, tanpa menghitung atau menyalin data ke aplikasi lain.

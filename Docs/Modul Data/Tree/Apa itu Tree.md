@@ -14,16 +14,16 @@
 
 >**note** Tree merupakan salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix.
 
-Tree adalah komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini cocok untuk menyimpan data relasional yang bercabang, seperti kategori dan subkategori atau struktur bertingkat lainnya. Satu Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu atribut penting dalam Tree adalah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]].
+Tree adalah komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini cocok untuk menyimpan data relasional yang bercabang, seperti kategori dan subkategori atau struktur bertingkat lainnya. Satu Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu atribut penting dalam Tree adalah [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]].
 
-Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat memanggil Node dari beberapa Tree lain, lalu menambahkannya sebagai *clone* tanpa Anda perlu menyalin Node satu per satu. Anda juga dapat mengatur apakah atribut Node ikut berubah ketika Node asalnya diperbarui lewat [[Docs/Modul Data/Tree/Konfigurasi External Read Only]].
+Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat memanggil Node dari beberapa Tree lain, lalu menambahkannya sebagai *clone* tanpa Anda perlu menyalin Node satu per satu. Anda juga dapat mengatur apakah atribut Node ikut berubah ketika Node asalnya diperbarui lewat [[Docs/Modul Data/Tree/External Read Only]].
 
 ## Mengapa Menggunakan Tree?
 
 - **Data bercabang tersimpan rapi.** Hubungan induk dan anak antar data tergambar langsung dalam bentuk pohon.
 - **Satu Tree, banyak Node.** Anda dapat menambahkan Node sebanyak yang dibutuhkan dan menyusunnya bertingkat.
-- **Menggabungkan Node dari banyak Tree.** Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] menghimpun Node dari Tree lain dalam satu tempat.
-- **Perubahan terkendali.** [[Docs/Modul Data/Tree/Konfigurasi External Read Only]] menentukan atribut Node mana yang boleh ikut berubah dari Tree lain.
+- **Menggabungkan Node dari banyak Tree.** Tree dengan [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] menghimpun Node dari Tree lain dalam satu tempat.
+- **Perubahan terkendali.** [[Docs/Modul Data/Tree/External Read Only]] menentukan atribut Node mana yang boleh ikut berubah dari Tree lain.
 - **Tampilan mudah disesuaikan.** Pohon dapat ditampilkan secara horizontal atau vertikal, dan cabangnya dapat dilipat atau dibuka.
 - **Terhubung dengan komponen lain.** Tree dapat dipublikasikan dan dihubungkan ke Event untuk otomasi di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
 
@@ -33,8 +33,8 @@ Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat m
 | --- | --- |
 | [[Docs/Tipe Data/Node]] | Satu simpul data di dalam Tree. Node memiliki atribut [[^field|Order]] dan [[^field|Name]], serta dapat memiliki anak. |
 | [[#Membuat Tree|Origin]] | Node pertama yang otomatis dibuat ketika Tree baru dibuat. |
-| [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]] | Atribut yang menentukan apakah Tree dapat menambahkan (*clone*) Node dari Tree lain. |
-| [[Docs/Modul Data/Tree/Konfigurasi External Read Only]] | Pengaturan yang menentukan apakah [[^field|Order]], [[^field|Name]], dan [[^field|Children]] Node ikut berubah ketika Node di Tree lain diperbarui. |
+| [[Docs/Modul Data/Tree/Merger Mode]] | Atribut yang menentukan apakah Tree dapat menambahkan (*clone*) Node dari Tree lain. |
+| [[Docs/Modul Data/Tree/External Read Only]] | Pengaturan yang menentukan apakah [[^field|Order]], [[^field|Name]], dan [[^field|Children]] Node ikut berubah ketika Node di Tree lain diperbarui. |
 | [[#Default Configuration|Context]] | Status yang berlaku ketika Anda membuka menu konteks Node. |
 
 ## Cara Kerja
@@ -49,13 +49,13 @@ Penjelasan antarmuka Table View lihat selengkap nya di [[Docs/Modul Interface/Ta
 
 Merger Node adalah atribut dalam Tree agar Node dapat dikloning dari [[Docs/Tipe Data/Node]] yang sudah ada.
 
-Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].
+Selengkapnya lihat [[Docs/Modul Data/Tree/Merger Mode]].
 
 ### External Read Only
 
 External Read Only mengatur perubahan nilai pada atribut Node kloningan yang aksinya berasal bersumber dari Tree lain.
 
-Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi External Read Only]].
+Selengkapnya lihat [[Docs/Modul Data/Tree/External Read Only]].
 
 ## Mengelola Tree
 
@@ -64,13 +64,13 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
 2. [[Docs/Modul Data/Tree/Mengubah]] Atribut Tree seperti [[^field|Name]], [[^field|Description]].
 3. [[Docs/Modul Data/Tree/Menghapus]] Table View.
 4. [[Docs/Modul Data/Tree/Node/Pengenalan|Mengelola Node]] seperti menambahkan, mengubah atau memperbarui Node.
-5. [[Docs/Modul Data/Table/Publikasi]]: mengatur publikasi Table.
-6. [[Docs/Modul Data/Table/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
+5. [[Docs/Modul Data/Tree/Publikasi]]: mengatur publikasi Table.
+6. [[Docs/Modul Data/Tree/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
 ## Praktik Terbaik
 
-- **Pisahkan Tree sumber dan Tree penggabung.** Simpan Node di Tree non-merger per kebutuhan, dan gunakan Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] hanya untuk menghimpun Node dari Tree lain.
-- **Tentukan kebutuhan Merger Mode sejak awal.** [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] tidak dapat diubah setelah Tree dibuat, dan Tree non-merger tidak dapat menambahkan Node dari Tree lain.
+- **Pisahkan Tree sumber dan Tree penggabung.** Simpan Node di Tree non-merger per kebutuhan, dan gunakan Tree dengan [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] hanya untuk menghimpun Node dari Tree lain.
+- **Tentukan kebutuhan Merger Mode sejak awal.** [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] tidak dapat diubah setelah Tree dibuat, dan Tree non-merger tidak dapat menambahkan Node dari Tree lain.
 - **Kunci atribut yang harus stabil.** Aktifkan [[^field|Order]], [[^field|Name]], atau [[^field|Children]] pada [[#External Read Only]] jika atribut tersebut tidak boleh ikut berubah dari Tree lain, baik pada Tree merger maupun non-merger.
 - **Beri [[^field|Name]] Node yang jelas.** [[^field|Search Tree Data...]] hanya mencari berdasarkan [[^field|Name]], sehingga nama yang deskriptif mempermudah pencarian.
 - **Rapikan pohon besar dengan [[^field|View]].** Gunakan [[^field|Collapse Descendant]] atau [[^field|Collapse and Hide]] di [[#Menu Konteks Node]] agar tampilan tetap ringkas.
@@ -79,7 +79,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
 ## Batasan dan Catatan
 
 - Tree yang tidak bersifat merger tidak dapat menambahkan [[Docs/Tipe Data/Node]] dari Tree lain.
-- [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] ditentukan saat Tree dibuat dan tidak dapat diubah setelahnya.
+- [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] ditentukan saat Tree dibuat dan tidak dapat diubah setelahnya.
 - [[^field|Search Tree Data...]] hanya mencari berdasarkan [[^field|Name]] Node.
 - Pengaturan [[#External Read Only]] menentukan apakah [[^field|Order]], [[^field|Name]], dan [[^field|Children]] ikut berubah ketika Node di Tree lain diperbarui, baik pada Tree merger maupun non-merger.
 - [[^field|Expand]], [[^field|Collapse]], dan [[^field|Expand Children Only]] berubah menjadi [[^field|No children...]] pada Node tanpa anak.
@@ -91,7 +91,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
 
 - Tree adalah komponen modul [[Docs/Modul Data/Pengenalan|Data]] untuk menyimpan data berhierarki berbentuk pohon yang terdiri dari banyak [[Docs/Tipe Data/Node]].
 - Tree baru otomatis memiliki satu Node bernama [[^field|Origin]]. Buat Tree lewat [[^field/add|Add]] > [[^field|Data]] > [[^field/tree|Tree]] (lihat [[#Membuat Tree]]).
-- [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] membuat Tree dapat menambahkan (*clone*) Node dari Tree lain dan tidak dapat diubah setelah Tree dibuat, sedangkan [[#External Read Only]] mengatur atribut Node yang ikut berubah.
+- [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] membuat Tree dapat menambahkan (*clone*) Node dari Tree lain dan tidak dapat diubah setelah Tree dibuat, sedangkan [[#External Read Only]] mengatur atribut Node yang ikut berubah.
 - Halaman kerja menampilkan pohon dengan [[#Default Configuration|Mode]] horizontal atau vertikal, dilengkapi [[^field|Search Tree Data...]] yang hanya mencari [[^field|Name]] (lihat [[#Antarmuka Tree]]).
 - Klik kanan pada Node untuk membuka [[#Menu Konteks Node]] guna mengelola Node dan mengatur tampilan cabang.
 - Hati-hati saat menghapus Tree karena seluruh Node hilang dan relasi dari komponen lain terputus.

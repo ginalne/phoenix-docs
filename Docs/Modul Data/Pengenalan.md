@@ -42,7 +42,7 @@ lihat selengkapnya [[Docs/Modul Data/Table/Apa itu Table]].
 
 ## Tree
 
-Tree merupakan komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini dapat digunakan untuk menyimpan data relasional yang bercabang. Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu atribut penting dalam Tree adalah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]].
+Tree merupakan komponen yang dapat menyimpan data secara hierarki atau berbentuk pohon. Sifat data ini dapat digunakan untuk menyimpan data relasional yang bercabang. Tree dapat memiliki banyak [[Docs/Tipe Data/Node]]. Salah satu atribut penting dalam Tree adalah [[Docs/Modul Data/Tree/Merger Mode]].
 
 lihat selengkapnya [[Docs/Modul Data/Tree/Apa itu Tree]].
 

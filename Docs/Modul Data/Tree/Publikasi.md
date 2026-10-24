@@ -4,7 +4,7 @@
     description: Penjelasan cara mempublikasikan komponen Tree
     pageDecoration:
       tree:
-        priority: 0
+        priority: -1
     tags:
       draft
 ---
@@ -18,4 +18,12 @@ Membagikan Tree memperlukan ijin akses [[^field|Comp. Access : Visible]] dan [[^
 
 ## Mengubah Konfigurasi Publish
 
-![[Docs/Modul Data/Tree/tree-publish.png]]
+![[Docs/Modul Data/Tree/publish-tree.png]]
+1. Buka halaman kerja Tree di [[Docs/Antarmuka#Area Manajemen Folder]]
+2. Klik [[^button/edit|Publish]]
+2. Ubah status menjadi [[^value/boolean/Active]] untuk dipublikasi.
+3. Klik [[^button/copy|Copy]] untuk menyalin tautan.
+4. Klik [[^button|Update]] untuk menyimpan konfigurasi
+
+>**success** Tree berhasil dipublikasi
+> Kirim tautan ke siapapun agar tampilan Tree dapat diakses dan dilihat tanpa harus akun atau otorisasi akun Phoenix.

@@ -15,4 +15,4 @@
 4. Klik [[^button|Update]]
 
 >**note** Merger Mode tidak dapat diubah
-> [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] ditentukan saat Tree dibuat dan tidak dapat diubah setelahnya. Tentukan pilihan ini sebelum Anda klik [[^button|Create]].
+> [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] ditentukan saat Tree dibuat dan tidak dapat diubah setelahnya. Tentukan pilihan ini sebelum Anda klik [[^button|Create]].

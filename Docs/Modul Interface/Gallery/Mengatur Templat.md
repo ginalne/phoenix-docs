@@ -21,12 +21,12 @@ Dengan template, Anda dapat menonjolkan gambar atau konten yang paling penting d
 
 | Istilah | Penjelasan |
 | ------- | ---------- |
-| [[#Bagian Template Kartu\|Header]] | Bagian paling atas kartu. Column tersusun mendatar dari kiri ke kanan. |
-| [[#Bagian Template Kartu\|Body]] | Bagian isi kartu. Column tersusun menurun dari atas ke bawah. |
-| [[#Bagian Template Kartu\|Footer]] | Bagian paling bawah kartu. Column tersusun mendatar dari kiri ke kanan. |
+| [[#Bagian Template Kartu|Header]] | Bagian paling atas kartu. Column tersusun mendatar dari kiri ke kanan. |
+| [[#Bagian Template Kartu|Body]] | Bagian isi kartu. Column tersusun menurun dari atas ke bawah. |
+| [[#Bagian Template Kartu|Footer]] | Bagian paling bawah kartu. Column tersusun mendatar dari kiri ke kanan. |
 | [[Docs/Tipe Data/Column]] | Kolom Table sumber yang dipilih untuk tampil pada kartu. |
-| [[Docs/Styling/Styling Class\|Styling]] | Nama class yang menyesuaikan desain sebuah Column pada kartu. |
-| [[#Mengubah Urutan Column\|Urutan]] | Posisi Column dalam sebuah bagian, yang dapat diubah dengan *drag and drop*. |
+| [[Docs/Styling/Styling Class|Styling]] | Nama class yang menyesuaikan desain sebuah Column pada kartu. |
+| [[#Mengubah Urutan Column|Urutan]] | Posisi Column dalam sebuah bagian, yang dapat diubah dengan *drag and drop*. |
 | [[#Template Kosong]] | Kondisi awal Gallery sebelum ada Column pada template. |
 
 ## Membuka Template Kartu
@@ -42,10 +42,10 @@ Setiap bagian memiliki tombol tambah ([[^button/add|Add Header Column]], [[^butt
 
 | Kolom | Fungsi |
 | ----- | ------ |
-| [[^field\|No.]] | Nomor urutan Column pada bagian tersebut. |
-| [[^field\|Column]] | Column dari Table sumber yang tampil pada kartu. |
-| [[^field\|Styling]] | Nama class untuk menyesuaikan desain Column. |
-| [[^field\|Action]] | Berisi tombol [[^button/delete\|Delete]] untuk menghapus baris dari template. |
+| [[^field|No.]] | Nomor urutan Column pada bagian tersebut. |
+| [[^field|Column]] | Column dari Table sumber yang tampil pada kartu. |
+| [[^field|Styling]] | Nama class untuk menyesuaikan desain Column. |
+| [[^field|Action]] | Berisi tombol [[^button/delete|Delete]] untuk menghapus baris dari template. |
 
 Bagian yang belum memiliki Column menampilkan teks [[^field|No Column]].
 
@@ -58,9 +58,9 @@ Kartu memiliki tiga bagian. Column yang Anda isi tampil sesuai posisi bagiannya.
 
 | Bagian | Posisi pada kartu | Tata letak | Urutan Column |
 | ------ | ----------------- | ---------- | ------------- |
-| [[^field\|Header]] | Paling atas | Mendatar (*flex-row*) | Dari kiri ke kanan |
-| [[^field\|Body]] | Di antara [[^field\|Header]] dan [[^field\|Footer]] | Menurun (*flex-col*) | Dari atas ke bawah |
-| [[^field\|Footer]] | Paling bawah | Mendatar (*flex-row*) | Dari kiri ke kanan |
+| [[^field|Header]] | Paling atas | Mendatar (*flex-row*) | Dari kiri ke kanan |
+| [[^field|Body]] | Di antara [[^field|Header]] dan [[^field|Footer]] | Menurun (*flex-col*) | Dari atas ke bawah |
+| [[^field|Footer]] | Paling bawah | Mendatar (*flex-row*) | Dari kiri ke kanan |
 
 Urutan pertama hingga terakhir pada daftar di modal mengikuti arah pada tabel di atas.
 

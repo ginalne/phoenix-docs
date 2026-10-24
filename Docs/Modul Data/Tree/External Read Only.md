@@ -10,7 +10,7 @@
 ---
 # Konfigurasi External Read Only
 
-Node yang dikloning oleh [[Docs/Tipe Data/Tree]] lain dapat tetap terhubung ketika salah satu atribut kloningan berubah. Supaya ikatan ini lepas, maka Tree dapat dikonfigurasi agar tidak mengikuti perubahan dari kloningan lain. Hal ini berlaku berbeda tergantung dari [[Docs/Modul Data/Tree/Konfigurasi Merger Mode]]-nya, dengan penjelasan sebagai berikut:
+Node yang dikloning oleh [[Docs/Tipe Data/Tree]] lain dapat tetap terhubung ketika salah satu atribut kloningan berubah. Supaya ikatan ini lepas, maka Tree dapat dikonfigurasi agar tidak mengikuti perubahan dari kloningan lain. Hal ini berlaku berbeda tergantung dari [[Docs/Modul Data/Tree/Merger Mode]]-nya, dengan penjelasan sebagai berikut:
 
 | Merger Mode | Read Only | Atribut yang dapat berubah | Penjelasan Efek Read Only = Yes|
 | ------------------ | ---- | ---- | ------------------------ |
@@ -25,4 +25,4 @@ Pengaturan ini berlaku pada Tree dengan/tanpa Merger Mode, karena perubahan Node
 | --- | --- | --- |
 | [[^field|Order]] | [[^field|Order]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Order]] Node tidak ikut berubah. |
 | [[^field|Name]] | [[^field|Name]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Name]] Node tidak ikut berubah. |
-| [[^field|Children]] | [[^field|Children]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Children]] Node tidak ikut berubah. |
+| [[^field|Children]] | [[^field|Children]] Node di Tree ini ikut berubah ketika Node di Tree lain diperbarui. | [[^field|Children]] Node tidak ikut berubah. | -- @harbimartin

@@ -13,9 +13,9 @@
 Berikut adalah pertanyaan yang sering diajukan pada komponen Tree:
 
 > **faq**
-> **Apa bedanya Tree biasa dengan Tree yang memakai [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]]?**
-> Tree biasa hanya menyimpan Node miliknya sendiri. Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat menambahkan (*clone*) Node dari Tree lain, sedangkan Tree biasa tidak dapat melakukannya.
-> **Apakah [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] dapat diubah setelah Tree dibuat?**
+> **Apa bedanya Tree biasa dengan Tree yang memakai [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]]?**
+> Tree biasa hanya menyimpan Node miliknya sendiri. Tree dengan [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] dapat menambahkan (*clone*) Node dari Tree lain, sedangkan Tree biasa tidak dapat melakukannya.
+> **Apakah [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] dapat diubah setelah Tree dibuat?**
 > Tidak. Pilihan ini ditentukan saat Tree dibuat. Lihat [[#Mengubah Tree]].
 > **Apakah perubahan pada Node asal otomatis muncul di Node *clone*?**
 > Hal ini bergantung pada [[#External Read Only]]. Jika [[^field|Order]], [[^field|Name]], atau [[^field|Children]] berstatus [[^value/boolean/Non-Active]], atribut tersebut ikut berubah ketika Node di Tree lain diperbarui.
