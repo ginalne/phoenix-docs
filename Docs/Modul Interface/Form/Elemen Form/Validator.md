@@ -77,42 +77,6 @@ Aturan penulisan expression pada Validators:
 | ----------------- | ---- |
 | `Email not empty` | Elemen menjadi wajib bila isian dengan [[^field\|Label]] "Email" sudah terisi. |
 
-
-## Contoh Penggunaan
-
-**Form pendaftaran peserta dengan isian wajib bersyarat**
-
-Panitia membutuhkan data peserta yang lengkap, tetapi tidak ingin membebani pengisi dengan isian yang belum relevan. Nama lengkap selalu wajib, sedangkan konfirmasi email hanya wajib setelah pengisi mengisi email. Isian yang lengkap langsung tersimpan sebagai Row di Table.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| -------- | ----- |
-| [[^field/form\|Form Pendaftaran Peserta]] | Form yang diisi pengisi. |
-| [[^field/table\|Data Peserta]] | [[Docs/Modul Data/Table/Apa itu Table\|Table]] tujuan penyimpanan isian. Setiap pendaftaran menjadi satu [[Docs/Tipe Data/Row\|Row]]. |
-
-**Pengaturan Elemen**
-
-| Elemen | Validator | Nilai | Perilaku yang dirasakan pengisi |
-| ------ | --------- | ----- | ------------------------------- |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan\|Basic]] "Nama Lengkap" | [[^field\|Required]] | Statis, aktif | Form tidak dapat dikirim sebelum nama diisi. |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan\|Basic]] "Konfirmasi Email" | [[^field\|Required]] | Expression `Email not empty` | Konfirmasi hanya wajib setelah Email terisi. |
-
-**Hasil yang dirasakan**
-
-- Data peserta di Table selalu memuat isian yang benar-benar dibutuhkan.
-- Pengisi tidak dipaksa mengisi isian yang belum relevan bagi mereka.
-
-**Ide skenario lain**
-
-| Kebutuhan | Validator | Contoh kondisi |
-| --------- | --------- | -------------- |
-| Alamat wajib bila memilih pengiriman | [[^field\|Required]] | `Metode Pengiriman not empty` |
-| Alasan wajib bila ada keterangan tambahan | [[^field\|Required]] | `Keterangan not empty` |
-
-Validators menjaga kelengkapan data dari sumbernya, sebelum data masuk ke Table.
-
-
 ## Praktik Terbaik
 
 * Gunakan Required seperlunya
@@ -120,15 +84,6 @@ Validators menjaga kelengkapan data dari sumbernya, sebelum data masuk ke Table.
 - Gunakan **expression** untuk isian yang hanya wajib pada kondisi tertentu.
 - Beri **[[^field|Label]] yang jelas dan berbeda** pada Elemen yang dirujuk expression.
 - Pastikan Elemen yang wajib **tidak tersembunyi atau nonaktif** bila Anda ingin [[^field|Required]] berlaku.
-
-## Batasan dan Catatan
-
-- Saat ini Validators hanya memiliki [[^field|Required]].
-- Validators hanya tersedia pada Elemen input, tidak pada Elemen layout dan display.
-- [[^field|Required]] tidak berlaku bila [[^field|Visible]] atau [[^field|Enable]] bernilai [[^value/boolean/false]]. Selengkapnya lihat [[Docs/Modul Interface/Form/State|State]].
-- Hasil expression harus [[Docs/Tipe Data/Boolean|Boolean]], dan parameternya merujuk ke nama [[^field|Label]] Elemen di Form.
-- Nilai awal [[^field|Required]] pada Elemen input baru adalah [[^value/boolean/false]].
-- Validators diatur di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit|Edit Mode]], yang membutuhkan akses edit data Workspace bernilai [[^value/boolean/allow]]. Selengkapnya lihat [[Docs/Modul Developer/Workspace/Data Access|Data Access]].
 
 ## TL:DR
 
@@ -150,6 +105,3 @@ Validators menjaga kelengkapan data dari sumbernya, sebelum data masuk ke Table.
 >**Bagaimana membuat isian wajib hanya pada kondisi tertentu?**
 >Beralih ke expression lewat ikon saklar di sebelah kanan label [[^field|Required]], lalu tulis kondisinya, misalnya `Email not empty`.
 
-<!--
-  * [TODO] Jawaban FAQ ketiga: mohon konfirmasi bila ada rencana Validators lain yang boleh disebut di dokumentasi.
--->

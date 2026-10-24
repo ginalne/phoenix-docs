@@ -1,10 +1,9 @@
 ---
-status: draft
-title: Widget Chart Pie
-description: Widget Chart Pie menampilkan data Table sebagai diagram pie pada Canvas, lengkap dengan pengaturan lubang, warna, label, legenda, dan total.
+    status: draft
+    title: Widget Chart Pie
+    description: Widget Chart Pie menampilkan data Table sebagai diagram pie pada Canvas, lengkap dengan pengaturan lubang, warna, label, legenda, dan total.
 ---
 # Widget Chart Pie
-
 >**note** Widget Chart Pie merupakan salah satu widget pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Daftar widget lainnya ada di [[Docs/Modul Interface/Canvas/Apa itu Canvas#Widget Canvas|Widget Canvas]].
 
 Widget Chart Pie adalah widget untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai diagram pie di dalam Canvas. Data diambil melalui [[Docs/Tipe Data/Query]] yang mengikuti kaidah Series Output, lalu setiap data menjadi satu irisan pie.

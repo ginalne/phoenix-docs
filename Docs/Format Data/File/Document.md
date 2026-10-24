@@ -1,6 +1,6 @@
 ---
     status: release
-    title: "Format Data : Attachment"
+    title: "Format Data : Document"
     description: 
     pageDecoration:
       tree:
@@ -8,7 +8,7 @@
     tags:
       draft
 ---
-# Format Data : Attachment
+# Format Data : Document
 
 Document adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Docs/Tipe Data/File]] untuk menyimpan data bersifat dokumen. Berikut adalah batasan ekstensi atau _mime type_ yang dapat diupload:
 
