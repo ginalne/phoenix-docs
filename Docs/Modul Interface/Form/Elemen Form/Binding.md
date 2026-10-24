@@ -24,7 +24,7 @@ Setiap Elemen Layout memiliki [[^field|Type]] Binding berupa [[^value/radio|tabl
 >**note** Pilihan pivot bisa kosong
 > Table pada header harus memiliki pivot dengan Table lain. Jika tidak ada, pilihan pada pivot akan kosong.
 
-Setiap Elemen Input memiliki [[^field|Type]] Binding berupa [[^value/radio|table]] dan [[^value/radio|pivot]]. Artinya, Layout tersebut ditentukan sebagai header bagi Elemen di bawahnya.
+Setiap Elemen Input memiliki [[^field|Type]] Binding berupa [[^value/radio|column]] dan [[^value/radio|pivot]]. Artinya, Layout tersebut ditentukan sebagai header bagi Elemen di bawahnya.
 
 | Type | Fungsi |
 | --- | --- |

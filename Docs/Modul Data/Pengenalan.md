@@ -30,7 +30,7 @@ lihat selengkapnya [[Docs/Modul Data/Variable/Apa itu Variable]].
 
 ## Enum
 
-Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Setiap Enum memiliki banyak [[Docs/Tipe Data/EnumData]] didalamnya. Salah satu atribut penting dalam Enum adalah [[Docs/Modul Data/Enum/Konfigurasi Tegas]].
+Enum merupakan komponen yang dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Setiap Enum memiliki banyak [[Docs/Tipe Data/EnumData]] didalamnya. Salah satu atribut penting dalam Enum adalah [[Docs/Modul Data/Enum/Strict On Field]].
 
 lihat selengkapnya [[Docs/Modul Data/Enum/Apa itu Enum]].
 

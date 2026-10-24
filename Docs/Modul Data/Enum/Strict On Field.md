@@ -1,14 +1,14 @@
 ---
     status: release
-    title: Konfigurasi Tegas dalam Enum
+    title: Konfigurasi Strict On Field dalam Enum
     description: 
     pageDecoration:
       tree:
         priority: 0.1
 ---
-# Konfigurasi Tegas dalam Enum
+# Konfigurasi Strict On Field dalam Enum
 
-[[Docs/Modul Data/Enum/Apa itu Enum|Enum]] memiliki atribut Name dan Description yang muncul ketika pengguna sedang memilih [[Docs/Tipe Data/EnumData]] , namun dalam proses Data Gathering, terkadang nilai [[Docs/Tipe Data/EnumData]] belum ada yang mewakilkan, sehingga konfigurasi Enum dapat dibuka menjadi tidak ketat agar penambahan data selama input dapat dilakukan.
+[[Docs/Modul Data/Enum/Apa itu Enum|Enum]] memiliki atribut [[^field|Name]] dan [[^field|Description]] yang muncul ketika pengguna sedang memilih [[Docs/Tipe Data/EnumData]] , namun dalam proses Data Gathering, terkadang nilai [[Docs/Tipe Data/EnumData]] belum ada yang mewakilkan, sehingga konfigurasi Enum dapat dibuka menjadi tidak ketat agar penambahan data selama input dapat dilakukan.
 
 ## Mengatur Konfigurasi
 

@@ -13,7 +13,7 @@
 /phoenix-docs-silverbullet /phoenix-docs-knowledge
 
 1. Enum adalah salah satu komponen dalam modul [[Docs/Modul Data/Pengenalan|Data]] di Phoenix. 
-2. Enum dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Setiap Enum memiliki banyak [[Docs/Tipe Data/EnumData]] didalamnya. Salah satu atribut penting dalam Enum adalah [[Docs/Modul Data/Enum/Konfigurasi Tegas]] (penjelasan fungsi field Strict On Selected).
+2. Enum dapat digunakan sebagai deret data atau yang sering dikenal dengan Master Data. Sifat data ini digunakan sebagai pilihan, menu, opsi ataupun kategori. Setiap Enum memiliki banyak [[Docs/Tipe Data/EnumData]] didalamnya. Salah satu atribut penting dalam Enum adalah [[Docs/Modul Data/Enum/Strict On Field]] (penjelasan fungsi field Strict On Selected).
 3. field dengan format EnumData akan menampilkan pilihan dari daftar dengan Selectable bernilai Yes.
 4. Setiap baris memiliki kolom Value berdasarkan Format di konfigurasi Enum.
 5. Field header adalah header untuk format dengan tipe data yang perlu header.

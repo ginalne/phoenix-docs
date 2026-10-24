@@ -31,7 +31,7 @@ Setiap Enum memiliki atribut berikut:
 | [[^field|Description]] | Keterangan singkat tentang kegunaan Enum. |
 | [[^field|Format]] | Format data untuk kolom [[^field|Value]] pada setiap baris. Format dapat diubah setelah Enum dibuat (lihat [[#Mengubah Enum]]). |
 | [[^field|Header]] | Header untuk [[^field|Format]] dengan tipe data yang membutuhkan header. Bernilai N/A jika [[^field|Format]] tidak membutuhkannya. |
-| [[^field|Strict On Selected]] | Pengaturan ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Konfigurasi Tegas]]. |
+| [[^field|Strict On Selected]] | Pengaturan ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Strict On Field]]. |
 
 Pasangan tipe data [[^field|Format]] dan [[^field|Header]]:
 

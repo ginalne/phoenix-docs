@@ -33,7 +33,7 @@ Dengan Enum, Anda mengelola daftar pilihan di satu tempat saja. Field di kompone
 | [[#Membaca Baris EnumData|Selectable]] | Penanda apakah sebuah [[Docs/Tipe Data/EnumData]] tampil sebagai pilihan pada field berformat [[Docs/Tipe Data/EnumData]]. |
 | [[#Konfigurasi Enum|Format]] | Format data yang menentukan bentuk kolom [[^field|Value]] pada setiap baris. |
 | [[#Konfigurasi Enum|Header]] | Header untuk [[^field|Format]] yang membutuhkan tipe data pendamping. |
-| [[Docs/Modul Data/Enum/Konfigurasi Tegas|Strict On Selected]] | Atribut penting Enum yang mengatur ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Konfigurasi Tegas]]. |
+| [[Docs/Modul Data/Enum/Strict On Field|Strict On Selected]] | Atribut penting Enum yang mengatur ketegasan pilihan. Selengkapnya lihat [[Docs/Modul Data/Enum/Strict On Field]]. |
 
 ## Cara Kerja
 
