@@ -15,10 +15,6 @@ State adalah pengaturan pada Elemen yang menentukan apakah sebuah Elemen tampil,
 
 Dengan State, satu Form dapat menyesuaikan diri dengan pengisinya: pertanyaan lanjutan hanya muncul saat dibutuhkan, isian yang belum relevan dinonaktifkan, dan isian bawaan dikunci agar tidak berubah.
 
-<!--
-  * [TODO] Konsolidasi tautan tebakan pada halaman ini: (1) anchor di Apa itu Form: #Properties Panel, #Elemen, #Layout, #Display, #Input, #Mode View dan Edit, #Menambahkan Elemen. (2) Halaman Elemen: Docs/Modul Interface/Form/<Tipe>/<Nama Elemen>/Penjelasan untuk Full, Split, Accordion, Table, Tooltip, Qr, Chrono, Quiz, List, selain Card, Basic, dan Text yang sudah disepakati. (3) Docs/Modul Interface/Form/Validators (halaman pendamping, sudah dibuat bersama halaman ini). Mohon sesuaikan bila path berbeda.
--->
-
 ## Mengapa Menggunakan State?
 
 - **Form menyesuaikan diri dengan pengisi.** Elemen dapat muncul, aktif, atau terkunci sesuai isian yang sudah diisi pengisi.
@@ -69,11 +65,6 @@ Nilai awal ketiga State pada Elemen input yang baru ditambahkan selalu sama:
 | [[^field\|Enable]] | [[^value/boolean/true]] | Elemen aktif dan menyimpan isiannya ke Row saat Form dikirim. | Elemen tidak menyimpan isiannya ke Row. |
 | [[^field\|Readonly]] | [[^value/boolean/false]] | Isi Elemen tidak dapat diubah pengisi. | Pengisi dapat mengisi Elemen. |
 
-<!--
-  * [TODO] Nilai awal Visible pada Elemen layout dan display belum dikonfirmasi (diasumsikan [[^value/boolean/true]] seperti Elemen input).
-  * [TODO] Tampilan Elemen saat Enable bernilai false (misalnya redup atau abu-abu) belum dikonfirmasi, sehingga belum ditulis di tabel.
--->
-
 ### Visible
 
 [[^field|Visible]] menentukan apakah Elemen terlihat oleh pengisi. Pengaturan ini tersedia pada semua Elemen, baik layout, display, maupun input.
@@ -82,11 +73,6 @@ Bila [[^field|Visible]] pada Elemen layout bernilai [[^value/boolean/false]], se
 
 >**warning** Elemen input yang tersembunyi tetap dapat menyimpan data
 > [[^field|Visible]] tidak memengaruhi penyimpanan. Elemen input yang tersembunyi tetap menyimpan isiannya ke [[Docs/Tipe Data/Row|Row]] selama [[^field|Enable]] bernilai [[^value/boolean/true]]. Atur [[^field|Enable]] bila isian yang tersembunyi tidak boleh ikut tersimpan.
-
-<!--
-  * [TODO] Konfirmasi: apakah nilai bawaan ([[^field|Default Value]]) Elemen input yang tersembunyi juga ikut tersimpan ke Row?
-  * [TODO] Konfirmasi: Elemen input di dalam Layout yang tersembunyi dianggap tetap aktif selama [[^field|Enable]] miliknya [[^value/boolean/true]]. Mohon cek apakah benar.
--->
 
 ### Enable
 
@@ -105,7 +91,7 @@ Bila [[^field|Visible]] pada Elemen layout bernilai [[^value/boolean/false]], se
 
 ## Antarmuka State
 
-![[Docs/Modul Interface/Form/properties-state.png]]
+![[Docs/Modul Interface/Form/Elemen Form/state.png]]
 
 State berada di Properties Panel, di bawah bagian [[^field|Binding]]. Setiap baris State terdiri dari label, ikon saklar, dan nilai.
 
@@ -151,56 +137,6 @@ Aturan penulisan expression pada State:
 | Contoh expression | Arti |
 | ----------------- | ---- |
 | `Asal Instansi not empty` | Bernilai [[^value/boolean/true]] bila isian dengan [[^field\|Label]] "Asal Instansi" sudah terisi. |
-
-<!--
-  * [TODO] Daftar operator dan fungsi yang bisa dipakai pada expression belum dikonfirmasi. Saat ini contoh hanya memakai pola `not empty` dari penulis. Mohon konfirmasi cara penulisan parameter (apakah nama Label ditulis apa adanya, termasuk bila mengandung spasi).
-  * [TODO] Perilaku bila dua Elemen memiliki [[^field|Label]] yang sama, atau bila [[^field|Label]] yang dirujuk diubah, belum dikonfirmasi.
-  * [TODO] Perilaku bila Elemen yang dirujuk belum memiliki [[^field|Label]] (kolom Label kosong) belum dikonfirmasi.
--->
-
-## Contoh Penggunaan
-
-**Form pendaftaran peserta yang menyesuaikan diri**
-
-Panitia ingin pendaftaran tetap ringkas. Pengisi perorangan tidak perlu melihat isian instansi, kategori peserta harus tetap "Umum", dan kolom nomor voucher baru boleh diisi setelah email terisi. Dengan State, satu Form melayani semua kebutuhan itu dan hasilnya tersimpan rapi ke Table.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| -------- | ----- |
-| [[^field/form\|Form Pendaftaran Peserta]] | Form yang diisi pengisi. |
-| [[^field/table\|Data Peserta]] | [[Docs/Modul Data/Table/Apa itu Table\|Table]] tujuan penyimpanan isian. Setiap pendaftaran menjadi satu [[Docs/Tipe Data/Row\|Row]]. |
-
-**Pengaturan Elemen**
-
-| Elemen | State | Nilai | Perilaku yang dirasakan pengisi |
-| ------ | ----- | ----- | ------------------------------- |
-| [[Docs/Modul Interface/Form/Layout/Card/Penjelasan\|Card]] "Detail Instansi" | [[^field\|Visible]] | Expression `Asal Instansi not empty` | Detail instansi hanya muncul setelah Asal Instansi diisi. |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan\|Basic]] "Kategori Peserta" | [[^field\|Readonly]] | Statis, aktif | Kategori terlihat dan tidak dapat diubah, nilainya tetap tersimpan ke Row. |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan\|Basic]] "Nomor Voucher" | [[^field\|Enable]] | Expression `Email not empty` | Nomor voucher baru aktif setelah Email diisi, dan baru tersimpan saat aktif. |
-
-**Hasil yang dirasakan**
-
-- Pengisi perorangan melihat Form yang lebih pendek karena detail instansi tersembunyi.
-- Kategori peserta konsisten di semua pendaftaran tanpa perlu dikoreksi manual.
-- Data di Table hanya berisi isian yang memang relevan bagi pengisi.
-
-**Ide skenario lain**
-
-| Kebutuhan | State | Contoh kondisi |
-| --------- | ----- | -------------- |
-| Pertanyaan lanjutan hanya muncul bila relevan | [[^field\|Visible]] pada Layout | `Punya Kendaraan not empty` |
-| Isian dikunci setelah terisi oleh sistem | [[^field\|Readonly]] | `Nomor Pendaftaran not empty` |
-| Isian yang tidak berlaku tidak boleh tersimpan | [[^field\|Enable]] | `Metode Pembayaran not empty` |
-
-State menjadikan Form bukan sekadar daftar isian, tetapi alur pengisian yang mengikuti jawaban pengisinya.
-
-<!--
-  * [TODO] Penamaan Form, Table, Elemen, dan Label pada contoh di atas bersifat generik. Mohon sesuaikan dengan gambar Anda.
-  * [TODO] Konfirmasi apakah nilai bawaan ([[^field|Default Value]]) "Umum" pada Kategori Peserta memang bisa dikombinasikan dengan [[^field|Readonly]] seperti pada contoh.
--->
-
-## Praktik Terbaik
 
 >**success** Rancang State dari kebutuhan pengisi
 > - Gunakan **[[^field|Visible]] pada Layout** untuk menyembunyikan sekelompok Elemen sekaligus, daripada mengatur satu per satu.
