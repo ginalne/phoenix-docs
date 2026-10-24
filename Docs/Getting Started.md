@@ -38,6 +38,7 @@ Bagi kami, Phoenix bukan sekadar perangkat lunak untuk menjalankan pekerjaan har
 Lalu sekarang saya harus mulai dari mana? Kalau anda ingin lebih dalam mengerti tentang phoenix dan kelebihannya. anda bisa ke halaman [[Docs/What is Phoenix]]. 
 
 Jika anda malas mendengarkan saya menyombongkan diri tentang Phoenix, anda tinggal masuk ke halaman 
+
 [[Docs/Persyaratan]] : Pelajari persyaratan apa yang diperlukan untuk menggunakan Phoenix.
 
 [[Docs/Antarmuka]] : Pelajari antar muka saat anda telah memasuki halaman Phoenix.
@@ -45,9 +46,9 @@ Jika anda malas mendengarkan saya menyombongkan diri tentang Phoenix, anda tingg
 ## Jelajahi Dokumentasi
 
 * [[Docs/Modul Data/Pengenalan|Modul Data]] Dokumentasi Modul Data
-* [[Docs/Modul Developer/Pengenalan|Module Developer]] Dokumentasi Modul Developer
 * [[Docs/Modul Interface/Pengenalan|Module Interface]] Dokumentasi Modul Interface
 * [[Docs/Modul Logic/Pengenalan|Modul Logic]] Dokumentasi Modul Logic
+* [[Docs/Modul Developer/Pengenalan|Module Developer]] Dokumentasi Modul Developer
 
 Sudah siap? Langsung mulai saja — atau gunakan navigasi di sebelah kiri untuk menjelajahi seluruh dokumentasi!
 

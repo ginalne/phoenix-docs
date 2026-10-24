@@ -4,7 +4,8 @@
     description: Widget Chart Pie menampilkan data Table sebagai diagram pie pada Canvas, lengkap dengan pengaturan lubang, warna, label, legenda, dan total.
 ---
 # Widget Chart Pie
->**note** Widget Chart Pie merupakan salah satu widget pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Daftar widget lainnya ada di [[Docs/Modul Interface/Canvas/Apa itu Canvas#Widget Canvas|Widget Canvas]].
+
+>**note** Widget Chart Pie merupakan salah satu widget pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Daftar widget lainnya ada di [[Docs/Modul Interface/Canvas/Widget/Pengenalan|Widget Canvas]].
 
 Widget Chart Pie adalah widget untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai diagram pie di dalam Canvas. Data diambil melalui [[Docs/Tipe Data/Query]] yang mengikuti kaidah Series Output, lalu setiap data menjadi satu irisan pie.
 
@@ -16,28 +17,6 @@ Anda dapat mengatur jumlah data yang muncul, bentuk pie, warna, label, legenda, 
 - **Tampilan mudah disesuaikan.** Lubang, gap, tema warna, gradasi, label, legenda, dan total dapat diatur sesuai desain Canvas.
 - **Jumlah data terkendali.** [[^field|Limit]] membatasi jumlah data yang muncul agar pie tidak terlalu padat.
 - **Selalu mengikuti data.** Pie membaca Table sumber melalui Query, sehingga tampilan mengikuti data terbaru.
-
-## Konsep Utama
-
-| Istilah                                                                     | Penjelasan                                                                                             |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| [[#Mengatur Data dan Query|Data]]                                          | Table sumber yang dibaca widget.                                                                       |
-| [[Docs/Tipe Data/Query]]                                                    | Tipe Data yang menyiapkan data pie dan harus mengikuti kaidah Series Output.                           |
-| [[#Mengatur Data dan Query|Limit]]                                         | Jumlah maksimal data yang muncul pada pie.                                                             |
-| [[#Mengatur Tampilan Pie|Panel tampilan]]                                  | Panel design toolbar untuk mengatur lubang, warna, label, legenda, dan total.                          |
-| [[#Mengatur Tampilan Pie|Legenda]]                                         | Keterangan warna setiap data, dengan posisi yang dapat diatur.                                         |
-| [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar|Header Toolbar dan Design Toolbar]] | Toolbar yang tampil ketika widget dipilih pada Edit Mode. |
-
-## Cara Kerja Widget Chart Pie
-
-Widget Chart Pie membaca Table sumber melalui Query, membatasi jumlah data dengan Limit, lalu menggambar setiap data sebagai irisan pie.
-
-```mermaid
-flowchart LR
-  Sumber["Table<br/>(data sumber)"] -->|&nbsp;Query<br/>Series Output&nbsp;| Widget["Widget Chart Pie"]
-  Widget -->|&nbsp;Limit&nbsp;| Pie["Irisan pie"]
-  Pie -->|&nbsp;ditampilkan di&nbsp;| Canvas["Canvas"]
-```
 
 ## Menambahkan Widget Chart Pie
 

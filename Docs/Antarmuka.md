@@ -14,6 +14,7 @@ Sebelum memulai tahap ini pastikan anda sudah memenuhi [[Docs/Persyaratan|syarat
 Setelah anda berhasil masuk ke dalam satu Pro, anda bisa mengakses beberapa fitur dari Phoenix secara langsung. 
 
 Berikut adalah beberapa bagian antarmuka ini:
+
 1. [[#Bilah Navigasi]]
 2. [[#Area Manajemen Folder]]
 3. [[#Halaman Kerja]]
@@ -22,6 +23,7 @@ Berikut adalah beberapa bagian antarmuka ini:
 
 ![[Docs/bilah-navigasi.png|Bilah Navigasi Halaman Kerja Phoenix]]
 Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix dengan rincian seperti berikut:
+
 1. Logo Phoenix : informasi bentuk logo phoenix dan versi yang sedang berjalan
 2. Pengenal Pro: informasi Pro yang sedang digunakan
 3. Saklar Mode Gelap/Terang: tombol mengatur mode gelap atau terang tampilan Phoenix.
@@ -34,6 +36,7 @@ Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix deng
 
 ![[Docs/area+manajemen+folder.png|Area Manajemen Folder dan Komponen Phoenix]]
 Bagian ini merupakan tempat Anda mengatur daftar folder dan komponen dalam Phoenix dengan rincian seperti berikut:
+
 1. Pengenal Workspace : informasi Workspace yang sedang dibuka saat ini serta tombol agar dapat mengganti ke Workspace lain.
 2. Tombol Penyegaran : tombol untuk menyegarkan (refresh) kembali daftar folder dan komponen.
 3. Saklar Pemindahan : tombol saklar untuk mengubah mode pemindahan komponen secara drag & drop.
@@ -44,6 +47,7 @@ Bagian ini merupakan tempat Anda mengatur daftar folder dan komponen dalam Phoen
 
 ![[Docs/kolom-tab.png|Halaman Kerja Utama Phoenix]]
 Bagian ini merupakan tempat Anda mengerjakan dan mengelola data Anda melalui komponen yang sedang aktif rincian seperti berikut:
+
 1. Kolom Tab : bagian di bagian atas jendela yang menampilkan halaman kerja. Masing-masing tab dapat dipindahkan atau dihapus dengan konteks menu seperti berikut:
    * Close: agar menutup tab
    * Close All Except This: agar menutup semua tab selain dari tab yang dipilih

@@ -5,7 +5,7 @@ description: Widget Table menampilkan data Table dalam bentuk tabel pada Canvas,
 ---
 # Widget Table
 
->**note** Widget Table merupakan salah satu widget pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Daftar widget lainnya ada di [[Docs/Modul Interface/Canvas/Apa itu Canvas#Widget Canvas|Widget Canvas]].
+>**note** Widget Table merupakan salah satu widget pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Daftar widget lainnya ada di [[Docs/Modul Interface/Canvas/Widget/Pengenalan|Widget Canvas]].
 
 Widget Table adalah widget untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] dalam bentuk tabel di dalam Canvas. Data diambil melalui [[Docs/Tipe Data/Query]], lalu dapat dilengkapi pagination dan toolbar search agar pembaca mudah menelusuri baris.
 
@@ -17,27 +17,6 @@ Widget Table bekerja seperti [[Docs/Modul Interface/Table View/Apa itu Table Vie
 - **Mudah ditelusuri.** Pagination dan toolbar search dapat diaktifkan sesuai kebutuhan pembaca.
 - **Hanya menampilkan yang perlu.** Kolom dan baris ditentukan oleh [[Docs/Tipe Data/Query]], sehingga tampilan tetap ringkas.
 - **Data sumber tetap aman.** Isi widget tidak dapat diubah dari Canvas, sehingga cocok untuk dibagikan melalui [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas|Publish]].
-
-## Konsep Utama
-
-| Istilah                                                                     | Penjelasan                                                                                             |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| [[#Mengatur Data dan Query|Data]]                                          | Table sumber yang dibaca widget.                                                                       |
-| [[Docs/Tipe Data/Query]]                                                    | Tipe Data yang menentukan kolom dan baris yang ditampilkan widget.                                     |
-| [[#Pagination dan Search|Pagination]]                                      | Bilah di bagian bawah widget untuk berpindah halaman data.                                             |
-| [[#Pagination dan Search|Toolbar Search]]                                  | Toolbar di bagian atas widget untuk menyegarkan dan mencari data.                                      |
-| [[Docs/Modul Interface/Canvas/Apa itu Canvas#Header Toolbar dan Design Toolbar|Header Toolbar dan Design Toolbar]] | Toolbar yang tampil ketika widget dipilih pada Edit Mode. |
-
-## Cara Kerja Widget Table
-
-Widget Table membaca Table sumber melalui Query, lalu menampilkan hasilnya sebagai tabel di Canvas. Pembaca dapat menelusuri baris dengan pagination dan search.
-
-```mermaid
-flowchart LR
-  Sumber["Table<br/>(data sumber)"] -->|&nbsp;Query&nbsp;| Widget["Widget Table"]
-  Widget -->|&nbsp;ditampilkan di&nbsp;| Canvas["Canvas"]
-  Pengguna["Pembaca"] -.->|&nbsp;pagination dan search&nbsp;| Widget
-```
 
 ## Menambahkan Widget Table
 
