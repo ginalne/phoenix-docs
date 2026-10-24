@@ -1,5 +1,14 @@
-
-## Mempublikasikan Form
+---
+    status: release
+    title: "Mempublikasi Form"
+    description: Penjelasan cara mempublikasikan komponen Form
+    pageDecoration:
+      tree:
+        priority: -1
+    tags:
+      draft
+---
+# Mempublikasikan Form
 
 Publish adalah konfigurasi untuk mengubah Form menjadi dipublikasikan, sehingga dapat dibuka dan diisi oleh publik lewat sebuah tautan.
 

@@ -45,7 +45,7 @@ flowchart LR
 
 | Jenis nilai | Contoh integrasi |
 | --- | --- |
-| Struktur organisasi lintas cabang | Tree penggabung menghimpun struktur tiap cabang, lalu [[Docs/Modul Data/Tree/Publikasi|Publish]] membagikannya ke pihak yang membutuhkan. |
+| Struktur organisasi lintas cabang | Tree penggabung menghimpun struktur tiap cabang, lalu [[Docs/Modul Data/Tree/Mempublikasi|Publish]] membagikannya ke pihak yang membutuhkan. |
 | Hierarki kategori produk | [[Docs/Modul Data/Table/Apa itu Table|Table]] memakai Node dari Tree sebagai pilihan kategori pada setiap baris produk. |
 | Menu atau navigasi bertingkat | Tree menyimpan susunan menu, lalu Flow memperbarui sistem lain setiap kali susunannya berubah. |
 

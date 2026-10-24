@@ -50,11 +50,6 @@ flowchart LR
 >**success** Widget Chart Pie berhasil ditambahkan
 > Widget tampil di Canvas. Klik kiri widget untuk menampilkan [[#Antarmuka Widget Chart Pie|header toolbar dan design toolbar]].
 
-<!--
-  * [TODO] Konfirmasi: tampilan widget sebelum Data dan Query diisi, serta cara memilih Table pada Data (dropdown atau popup).
-  * [TODO] Konfirmasi: nama persis Chart Pie pada dropdown hasil `/chart` (Search chart).
--->
-
 ## Antarmuka Widget Chart Pie
 
 ![[Docs/Modul Interface/Form/Widget/Chart Pie/interface-widget-chart-pie.png]]
@@ -162,13 +157,10 @@ Atur ukuran dan jarak widget melalui panel tata letak: [[^field|min.]], [[^field
 
 1. Pindah ke Edit Mode, lalu klik kiri widget
 2. Klik [[^button/delete|Remove]] pada header toolbar
+3. Konfirmasi dengan klik [[^button|Delete]]
 
 >**warning** Dampak menghapus Widget Chart Pie
 > Menghapus widget hanya menghapus tampilan dan konfigurasi widget, termasuk [[Docs/Tipe Data/Query]] dan pengaturan tampilan pie. Table sumber dan barisnya tetap aman.
-
-<!--
-  * [TODO] Konfirmasi: Remove langsung menghapus atau meminta konfirmasi.
--->
 
 ## Hak Akses Widget Chart Pie
 

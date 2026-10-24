@@ -4,7 +4,7 @@
     description: Penjelasan cara kerja komponen Canvas
     pageDecoration:
       tree:
-        priority: 9
+        priority: 5
     tags:
       draft
 ---

@@ -56,7 +56,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
 5. [[Docs/Modul Interface/Form/Elemen Form/Binding|Memahami Binding]] dalam Form.
 6. [[Docs/Modul Interface/Form/State|Memahami State]] dalam Form.
 7. [[Docs/Modul Interface/Form/Validator|Memahami Validator]] dalam Form.
-8. [[Docs/Modul Data/Table/Publikasi]]: mengatur publikasi Table.
+8. [[Docs/Modul Data/Table/Mempublikasi]]: mengatur publikasi Table.
 9. [[Docs/Modul Data/Table/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
 ## Antarmuka

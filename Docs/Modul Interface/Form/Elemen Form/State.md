@@ -15,38 +15,6 @@ State adalah pengaturan pada Elemen yang menentukan apakah sebuah Elemen tampil,
 
 Dengan State, satu Form dapat menyesuaikan diri dengan pengisinya: pertanyaan lanjutan hanya muncul saat dibutuhkan, isian yang belum relevan dinonaktifkan, dan isian bawaan dikunci agar tidak berubah.
 
-## Mengapa Menggunakan State?
-
-- **Form menyesuaikan diri dengan pengisi.** Elemen dapat muncul, aktif, atau terkunci sesuai isian yang sudah diisi pengisi.
-- **Form lebih ringkas.** Sembunyikan satu [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]] berisi banyak Elemen sampai isinya memang dibutuhkan.
-- **Data tersimpan sesuai kebutuhan.** Elemen input hanya menyimpan isiannya ke [[Docs/Tipe Data/Row]] saat [[^field|Enable]] aktif.
-- **Satu pengaturan, dua cara mengisi.** Gunakan nilai statis untuk aturan tetap, atau expression untuk aturan yang bergantung pada isian lain.
-
-## Konsep Utama
-
-| Istilah | Penjelasan |
-| ------- | ---------- |
-| [[Docs/Modul Interface/Form/Apa itu Form#Elemen\|Elemen]] | Objek penyusun isi Form. State berada di Properties Panel setiap Elemen. |
-| [[#Visible]] | State yang menentukan apakah Elemen tampil atau tersembunyi. Tersedia pada semua Elemen. |
-| [[#Enable]] | State yang menentukan apakah Elemen input aktif dan menyimpan isiannya ke Row. Hanya pada Elemen input. |
-| [[#Readonly]] | State yang mengunci isi Elemen input agar tidak dapat diubah pengisi. Hanya pada Elemen input. |
-| [[#Mengisi State dengan Nilai Statis\|Nilai statis]] | Nilai [[Docs/Tipe Data/Boolean\|Boolean]] yang dipilih lewat saklar dan tidak berubah selama pengisi mengisi Form. |
-| [[Docs/Tipe Data/Expression]] | Logika atau kondisi yang menghasilkan Boolean dan dihitung ulang saat pengisi mengisi Form, misalnya `inputA not empty`. |
-
-## Cara Kerja State
-
-Setiap State pada sebuah Elemen mengambil nilainya dari saklar statis atau dari expression, lalu menentukan perilaku Elemen saat Form diisi.
-
-```mermaid
-flowchart LR
-    A["Elemen"] -->|&nbsp;memiliki&nbsp;| B["State"]
-    B -->|&nbsp;semua Elemen&nbsp;| C["Visible"]
-    B -.->|&nbsp;hanya Elemen input&nbsp;| D["Enable"]
-    B -.->|&nbsp;hanya Elemen input&nbsp;| E["Readonly"]
-    C & D & E -->|&nbsp;nilai dari&nbsp;| F["Statis"]
-    C & D & E -.->|&nbsp;atau&nbsp;| G["Expression"]
-```
-
 ## Jenis State
 
 Jenis State yang tersedia bergantung pada jenis Elemen. Elemen layout dan display hanya memiliki [[^field|Visible]], sedangkan Elemen input memiliki ketiganya.
@@ -92,7 +60,6 @@ Bila [[^field|Visible]] pada Elemen layout bernilai [[^value/boolean/false]], se
 ## Antarmuka State
 
 ![[Docs/Modul Interface/Form/Elemen Form/state.png]]
-
 State berada di Properties Panel, di bawah bagian [[^field|Binding]]. Setiap baris State terdiri dari label, ikon saklar, dan nilai.
 
 | Bagian | Fungsi |
@@ -101,12 +68,6 @@ State berada di Properties Panel, di bawah bagian [[^field|Binding]]. Setiap bar
 | Ikon saklar | Ikon kecil di sebelah kanan label. Klik untuk beralih antara nilai statis dan expression. |
 | Saklar nilai | Tampil saat memakai nilai statis. Hijau berarti [[^value/boolean/true]], abu-abu berarti [[^value/boolean/false]]. |
 | Kolom isian expression | Tampil menggantikan saklar nilai saat memakai expression. Memiliki *autocomplete* dan *checker*. |
-
-<!--
-  * [TODO] Penempatan gambar: `properties-state.png` berisi panel Elemen Basic dengan bagian State terlihat. Anotasi yang disarankan: (1) label State, (2) ikon saklar, (3) saklar nilai. Gunakan penamaan Elemen yang generik pada gambar.
-  * [TODO] Tambahkan gambar `state-expression.png` untuk baris State yang sedang memakai expression, dengan anotasi (4) kolom isian expression.
-  * [TODO] Ikon saklar dan kolom isian expression belum punya nama resmi di antarmuka, mohon beri nama bila ada.
--->
 
 ## Mengisi State dengan Nilai Statis
 
@@ -131,29 +92,21 @@ Expression membuat State berubah mengikuti kondisi saat pengisi mengisi Form.
 Aturan penulisan expression pada State:
 
 - Hasil expression harus [[Docs/Tipe Data/Boolean|Boolean]]. *Checker* akan memeriksanya.
-- Parameter pada expression merujuk ke nama [[^field|Label]] Elemen yang ada di Form.
+- Parameter pada expression merujuk ke nama [[^field|Alias]] Elemen yang ada di Form.
 - Expression dihitung ulang saat pengisi mengisi Form, sehingga State dapat berubah selama pengisian.
 
 | Contoh expression | Arti |
 | ----------------- | ---- |
-| `Asal Instansi not empty` | Bernilai [[^value/boolean/true]] bila isian dengan [[^field\|Label]] "Asal Instansi" sudah terisi. |
+| `Asal Instansi not empty` | Bernilai [[^value/boolean/true]] bila isian dengan [[^field|Alias]] "Asal Instansi" sudah terisi. |
 
->**success** Rancang State dari kebutuhan pengisi
-> - Gunakan **[[^field|Visible]] pada Layout** untuk menyembunyikan sekelompok Elemen sekaligus, daripada mengatur satu per satu.
-> - Pilih **[[^field|Readonly]]** bila nilainya harus tetap tersimpan, dan **[[^field|Enable]]** bila nilainya tidak boleh tersimpan.
-> - Mulailah dengan **nilai statis**, lalu beralih ke expression hanya bila State perlu berubah mengikuti isian.
-> - Beri **[[^field|Label]] yang jelas dan berbeda** pada Elemen yang akan dirujuk oleh expression.
-> - Periksa hasil ***checker*** sebelum menyimpan agar expression pasti menghasilkan Boolean.
+## Praktik Terbaik
 
-## Batasan dan Catatan
+* Gunakan **[[^field|Visible]] pada Layout** untuk menyembunyikan sekelompok Elemen sekaligus, daripada mengatur satu per satu.
+* Pilih **[[^field|Readonly]]** bila nilainya harus tetap tersimpan, dan **[[^field|Enable]]** bila nilainya tidak boleh tersimpan.
+* Mulailah dengan **nilai statis**, lalu beralih ke expression hanya bila State perlu berubah mengikuti isian.
+* Beri **[[^field|Label]] yang jelas dan berbeda** pada Elemen yang akan dirujuk oleh expression.
+* Periksa hasil ***checker*** sebelum menyimpan agar expression pasti menghasilkan Boolean.
 
-- Elemen layout dan display hanya memiliki [[^field|Visible]]. [[^field|Enable]] dan [[^field|Readonly]] hanya ada pada Elemen input.
-- [[^field|Visible]] bernilai [[^value/boolean/false]] pada Elemen layout menyembunyikan semua Elemen di dalamnya.
-- Elemen input hanya menyimpan isiannya ke [[Docs/Tipe Data/Row|Row]] saat [[^field|Enable]] bernilai [[^value/boolean/true]]. State lain tidak memengaruhi penyimpanan.
-- Hasil expression harus [[Docs/Tipe Data/Boolean|Boolean]], dan parameternya merujuk ke nama [[^field|Label]] Elemen di Form.
-- Nilai statis tidak berubah selama pengisian, sedangkan expression berubah mengikuti isian.
-- Validator [[^field|Required]] tidak berlaku bila [[^field|Visible]] atau [[^field|Enable]] bernilai [[^value/boolean/false]]. Selengkapnya lihat [[Docs/Modul Interface/Form/Validators]].
-- State diatur di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit|Edit Mode]], yang membutuhkan akses edit data Workspace bernilai [[^value/boolean/allow]]. Selengkapnya lihat [[Docs/Modul Developer/Workspace/Data Access|Data Access]].
 
 ## TL:DR
 
@@ -178,6 +131,3 @@ Aturan penulisan expression pada State:
 >**Bagaimana bila expression tidak menghasilkan Boolean?**
 >*Checker* pada kolom isian expression akan memeriksa dan memberi tahu Anda.
 
-<!--
-  * [TODO] Jawaban FAQ terakhir: tampilan pesan *checker* belum dikonfirmasi. Mohon sebutkan bentuknya (misalnya penanda kesalahan) agar jawabannya lebih konkret.
--->

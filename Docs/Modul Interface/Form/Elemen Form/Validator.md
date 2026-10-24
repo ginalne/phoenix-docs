@@ -12,38 +12,13 @@
 
 Validators adalah aturan pemeriksaan yang harus dipenuhi isian pengisi sebelum Form dapat dikirim. Saat ini Validators hanya memiliki satu aturan, yaitu [[^field|Required]], dan hanya tersedia pada Elemen input.
 
-Seperti [[Docs/Modul Interface/Form/State|State]], [[^field|Required]] dapat diisi dengan nilai statis atau [[Docs/Tipe Data/Expression]], sehingga sebuah isian dapat menjadi wajib hanya pada kondisi tertentu.
-
-<!--
-  * [TODO] Konsolidasi tautan tebakan pada halaman ini: anchor #Properties Panel di Apa itu Form, halaman Elemen Docs/Modul Interface/Form/Input/<Nama Elemen>/Penjelasan (Basic, Quiz, Table, List), dan halaman pendamping Docs/Modul Interface/Form/State (dibuat bersama halaman ini). Mohon sesuaikan bila path berbeda.
--->
+Seperti [[Docs/Modul Interface/Form/Elemen Form/State]], [[^field|Required]] dapat diisi dengan nilai statis atau [[Docs/Tipe Data/Expression]], sehingga sebuah isian dapat menjadi wajib hanya pada kondisi tertentu.
 
 ## Mengapa Menggunakan Validators?
 
 - **Data yang masuk lebih lengkap.** Isian penting tidak terlewat karena Form tidak dapat dikirim sebelum Elemen yang wajib terisi.
 - **Aturan mengikuti situasi.** Dengan expression, sebuah isian hanya wajib bila kondisi tertentu terpenuhi.
 - **Pengisi tahu apa yang harus dilengkapi.** Aturan ditentukan pembuat Form, bukan ditebak pengisi.
-
-## Konsep Utama
-
-| Istilah | Penjelasan |
-| ------- | ---------- |
-| [[Docs/Modul Interface/Form/Apa itu Form#Input\|Elemen input]] | Elemen yang menerima isian pengisi dan satu-satunya yang memiliki Validators. |
-| [[#Required]] | Validator yang mewajibkan Elemen input terisi sebelum Form dapat dikirim. Saat ini satu-satunya Validator. |
-| [[#Mengisi Required dengan Nilai Statis\|Nilai statis]] | Nilai [[Docs/Tipe Data/Boolean\|Boolean]] yang dipilih lewat saklar dan tidak berubah selama pengisi mengisi Form. |
-| [[Docs/Tipe Data/Expression]] | Logika atau kondisi yang menghasilkan Boolean dan dihitung ulang saat pengisi mengisi Form, misalnya `inputA not empty`. |
-
-## Cara Kerja Validators
-
-Saat [[^field|Required]] bernilai [[^value/boolean/true]], pengisi wajib mengisi Elemen tersebut agar Form dapat dikirim (*submit*).
-
-```mermaid
-flowchart LR
-    A["Elemen input"] -->|&nbsp;memiliki&nbsp;| B["Validators"]
-    B --> C["Required"]
-    C -->|&nbsp;wajib terisi sebelum&nbsp;| D["Form dikirim"]
-    E["State"] -.->|&nbsp;Visible atau Enable false: tidak berlaku&nbsp;| C
-```
 
 ## Required
 
@@ -60,15 +35,9 @@ Nilai awal [[^field|Required]] pada Elemen input yang baru ditambahkan adalah [[
 >**note** Required mengikuti State
 > Elemen yang tidak terlihat atau tidak aktif tidak dapat diisi oleh pengisi, sehingga [[^field|Required]] tidak berlaku pada Elemen tersebut. Selengkapnya lihat [[Docs/Modul Interface/Form/State|State]].
 
-<!--
-  * [TODO] Bentuk umpan balik kepada pengisi saat ada Elemen wajib yang belum terisi (pesan, penanda, atau tombol kirim nonaktif) belum dikonfirmasi, sehingga belum ditulis.
-  * [TODO] Perilaku [[^field|Required]] pada Elemen yang [[^field|Readonly]] bernilai [[^value/boolean/true]] belum dikonfirmasi.
--->
-
 ## Antarmuka Validators
 
-![[Docs/Modul Interface/Form/properties-validators.png]]
-
+![[Docs/Modul Interface/Form/Elemen Form/validator-form.png]]
 Validators berada di Properties Panel, di bawah bagian [[^field|State]]. Baris [[^field|Required]] terdiri dari label, ikon saklar, dan nilai.
 
 | Bagian | Fungsi |
@@ -77,11 +46,6 @@ Validators berada di Properties Panel, di bawah bagian [[^field|State]]. Baris [
 | Ikon saklar | Ikon kecil di sebelah kanan label. Klik untuk beralih antara nilai statis dan expression. |
 | Saklar nilai | Tampil saat memakai nilai statis. Hijau berarti [[^value/boolean/true]], abu-abu berarti [[^value/boolean/false]]. |
 | Kolom isian expression | Tampil menggantikan saklar nilai saat memakai expression. Memiliki *autocomplete* dan *checker*. |
-
-<!--
-  * [TODO] Penempatan gambar: `properties-validators.png` berisi panel Elemen Basic dengan bagian Validators terlihat. Anotasi yang disarankan: (1) label Required, (2) ikon saklar, (3) saklar nilai. Gunakan penamaan Elemen yang generik pada gambar.
-  * [TODO] Ikon saklar dan kolom isian expression belum punya nama resmi di antarmuka, mohon beri nama bila ada.
--->
 
 ## Mengisi Required dengan Nilai Statis
 
@@ -113,9 +77,6 @@ Aturan penulisan expression pada Validators:
 | ----------------- | ---- |
 | `Email not empty` | Elemen menjadi wajib bila isian dengan [[^field\|Label]] "Email" sudah terisi. |
 
-<!--
-  * [TODO] Daftar operator dan fungsi yang bisa dipakai pada expression belum dikonfirmasi. Contoh hanya memakai pola `not empty` dari penulis.
--->
 
 ## Contoh Penggunaan
 
@@ -151,17 +112,14 @@ Panitia membutuhkan data peserta yang lengkap, tetapi tidak ingin membebani peng
 
 Validators menjaga kelengkapan data dari sumbernya, sebelum data masuk ke Table.
 
-<!--
-  * [TODO] Penamaan Form, Table, Elemen, dan Label pada contoh di atas bersifat generik. Mohon sesuaikan dengan gambar Anda.
--->
 
 ## Praktik Terbaik
 
->**success** Gunakan Required seperlunya
-> - Wajibkan hanya **isian yang benar-benar dibutuhkan** agar pengisi tidak terbebani.
-> - Gunakan **expression** untuk isian yang hanya wajib pada kondisi tertentu.
-> - Beri **[[^field|Label]] yang jelas dan berbeda** pada Elemen yang dirujuk expression.
-> - Pastikan Elemen yang wajib **tidak tersembunyi atau nonaktif** bila Anda ingin [[^field|Required]] berlaku.
+* Gunakan Required seperlunya
+- Wajibkan hanya **isian yang benar-benar dibutuhkan** agar pengisi tidak terbebani.
+- Gunakan **expression** untuk isian yang hanya wajib pada kondisi tertentu.
+- Beri **[[^field|Label]] yang jelas dan berbeda** pada Elemen yang dirujuk expression.
+- Pastikan Elemen yang wajib **tidak tersembunyi atau nonaktif** bila Anda ingin [[^field|Required]] berlaku.
 
 ## Batasan dan Catatan
 
