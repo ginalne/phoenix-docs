@@ -302,12 +302,6 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Belum terkonfirmasi:** apakah Layout dan Template mengikuti Data Access Add, Update, Delete yang sama dengan widget, widget lain yang tergolong "versi lite", label tombol penyimpan di modal Publish, tombol di modal Binding, dan letak tombol Binding pada bilah navigasi.
 *   **Penamaan pada screenshot** (nama Canvas "Test", nama Data pada Chart Pie, serta nama dan nilai pada grafik) adalah kasus pribadi dan tidak disebut di dokumentasi.
 
----
-
-# Tambahan (Widget Table dan Widget Chart Pie)
-
-**Alasan:** penulis memberi informasi baru dan 2 screenshot untuk Widget Table dan Widget Chart Pie. Tambahkan sebagai sub-bagian di bawah bagian Canvas.
-
 ## Widget Canvas (struktur halaman)
 
 *   **Path:** `Docs/Modul Interface/Form/Widget/<Nama Widget>/Penjelasan`, nama folder Title Case (`Table`, `Chart Pie`). **Penulis menyebut halamannya "Widget Table" dan "Widget Pie".** Draf memakai judul "Widget Chart Pie" mengikuti keputusan nama widget sebelumnya (Chart Pie). Mohon konfirmasi.

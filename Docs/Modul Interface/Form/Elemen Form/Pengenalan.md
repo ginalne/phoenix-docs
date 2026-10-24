@@ -19,3 +19,4 @@ Elemen dikelompokkan dalam tiga kategori:
 | [[#Elemen Input|Input]] | Mengisi atau menampilkan informasi yang berlaku pada Binding. | [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]], [[Docs/Modul Interface/Form/Input/Quiz/Penjelasan|Quiz]], [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]], [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] |
 
 Penjelasan keunikan masing-masing Elemen ada di halaman Elemen tersebut.
+

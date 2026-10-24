@@ -7,11 +7,11 @@
 
 >**note** Text merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Text adalah Elemen Display yang dapat digunakan untuk menampilkan teks statis di Form, misalnya judul, keterangan, atau petunjuk pengisian.
+Text adalah [[Docs/Modul Interface/Form/Elemen Form/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan teks statis di Form, misalnya judul, keterangan, atau petunjuk pengisian.
 
 Dengan Text, Anda dapat memberi konteks kepada pengisi tanpa memengaruhi data. Teksnya dapat diatur ukuran dan gayanya langsung dari Header Toolbar.
 
-Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara menghapus Elemen ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Text.
+Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen Form/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Text.
 
 ## Mengapa Menggunakan Text?
 
@@ -22,9 +22,9 @@ Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Eleme
 
 ## Menambahkan Text
 
-1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]]
-2. Klik [[^field|Type something here to add...]] pada Layout
-3. Pilih Text dari daftar, atau ketik untuk mencarinya
+1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] pada [[Docs/Modul Interface/Form/Antarmuka|halaman kerja Form]]
+2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Layout]]
+3. Pilih [[^field|Text]] dari daftar, atau ketik untuk mencarinya
 4. Isi [[^field|Content]]
 
 Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]].
