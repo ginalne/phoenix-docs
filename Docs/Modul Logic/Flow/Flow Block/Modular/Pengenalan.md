@@ -3,7 +3,7 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 0
+        priority: 10
     tags:
       draft
 ---

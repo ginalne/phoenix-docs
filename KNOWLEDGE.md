@@ -48,10 +48,11 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Kategori menu Add** (screenshot): Event, Data, I/O, Query, Operator, Modular, Misc. JSON penulis memuat Chrono (Delay) dan Error (Error Message) yang diasumsikan berada di Misc.
   - **Event:** Pulser, Variable Event, Enum Data Event, Table Row Event, Tree Node Event. Pulser punya tombol Trigger tanpa ikon untuk eksekusi manual.
   - **Data:** Variable (Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value), Enum (Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Value), Table (Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, TableData Setter), Tree (Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, Tree Get Origin).
-  - **I/O:** Branch, Passer. **Query:** Condition, Execute.
+  - **I/O:** Branch, Passer.
+  - **Query:** Condition, Execute.
   - **Operator:** Number (Increment), String (Concatenate, Implode, Pad Left, Pad Right), Table (TableRow Parse), Object (Assign, Merge, Parse, Stringify), Boolean (If), Tree (Node Parse).
   - **Modular:** API (HTTP Request), AI (OpenAI 4).
-  - **Misc. (asumsi):** Chrono (Delay), Error (Error Message).
+  - **Misc.:** Chrono (Delay), Error (Error Message).
 - **Menghubungkan block:** klik dan tahan (hold press) pada output, arahkan ke input, lalu lepaskan (release). Output di sisi kanan, input di sisi kiri.
 - **Eksekusi manual:** lewat antarmuka Flow, gunakan tombol pada Flow Block Event (misalnya Trigger pada Pulser).
 - **Event dari komponen:** Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol Event pada masing-masing komponen.

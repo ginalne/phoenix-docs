@@ -6,19 +6,13 @@
       tree:
         priority: 4
 ---
-# Validators Elemen Form
+# Validator Elemen Form
 
->**note** Validators merupakan bagian dari [[Docs/Modul Interface/Form/Apa itu Form#Properties Panel|Properties Panel]] pada Elemen input di komponen [[Docs/Modul Interface/Form/Apa itu Form|Form]], salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
+>**note** Validator merupakan bagian dari [[Docs/Modul Interface/Form/Apa itu Form#Properties Panel|Properties Panel]] pada Elemen input di komponen [[Docs/Modul Interface/Form/Apa itu Form|Form]], salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 
-Validators adalah aturan pemeriksaan yang harus dipenuhi isian pengisi sebelum Form dapat dikirim. Saat ini Validators hanya memiliki satu aturan, yaitu [[^field|Required]], dan hanya tersedia pada Elemen input.
+Validator adalah aturan pemeriksaan yang harus dipenuhi isian pengisi sebelum Form dapat dikirim. Saat ini Validators hanya memiliki satu aturan, yaitu [[^field|Required]], dan hanya tersedia pada Elemen input.
 
 Seperti [[Docs/Modul Interface/Form/Elemen Form/State]], [[^field|Required]] dapat diisi dengan nilai statis atau [[Docs/Tipe Data/Expression]], sehingga sebuah isian dapat menjadi wajib hanya pada kondisi tertentu.
-
-## Mengapa Menggunakan Validators?
-
-- **Data yang masuk lebih lengkap.** Isian penting tidak terlewat karena Form tidak dapat dikirim sebelum Elemen yang wajib terisi.
-- **Aturan mengikuti situasi.** Dengan expression, sebuah isian hanya wajib bila kondisi tertentu terpenuhi.
-- **Pengisi tahu apa yang harus dilengkapi.** Aturan ditentukan pembuat Form, bukan ditebak pengisi.
 
 ## Required
 
@@ -35,10 +29,10 @@ Nilai awal [[^field|Required]] pada Elemen input yang baru ditambahkan adalah [[
 >**note** Required mengikuti State
 > Elemen yang tidak terlihat atau tidak aktif tidak dapat diisi oleh pengisi, sehingga [[^field|Required]] tidak berlaku pada Elemen tersebut. Selengkapnya lihat [[Docs/Modul Interface/Form/State|State]].
 
-## Antarmuka Validators
+## Antarmuka Validator
 
 ![[Docs/Modul Interface/Form/Elemen Form/validator-form.png]]
-Validators berada di Properties Panel, di bawah bagian [[^field|State]]. Baris [[^field|Required]] terdiri dari label, ikon saklar, dan nilai.
+Validator berada di Properties Panel, di bawah bagian [[^field|State]]. Baris [[^field|Required]] terdiri dari label, ikon saklar, dan nilai.
 
 | Bagian | Fungsi |
 | ------ | ------ |
@@ -67,10 +61,10 @@ Expression membuat Elemen menjadi wajib hanya saat kondisinya terpenuhi. Hasil [
 5. Periksa hasil *checker* sampai tidak ada kesalahan
 6. Klik [[^button/save|Save]], atau tunggu *auto save* sekitar 3 detik
 
-Aturan penulisan expression pada Validators:
+Aturan penulisan expression pada Validator:
 
 - Hasil expression harus [[Docs/Tipe Data/Boolean|Boolean]]. *Checker* akan memeriksanya.
-- Parameter pada expression merujuk ke nama [[^field|Label]] Elemen yang ada di Form.
+- Parameter pada expression merujuk ke nama [[^field|Alias]] Input Elemen yang ada di Form.
 - Expression dihitung ulang saat pengisi mengisi Form, sehingga Elemen dapat berubah dari tidak wajib menjadi wajib selama pengisian.
 
 | Contoh expression | Arti |
@@ -82,12 +76,12 @@ Aturan penulisan expression pada Validators:
 * Gunakan Required seperlunya
 - Wajibkan hanya **isian yang benar-benar dibutuhkan** agar pengisi tidak terbebani.
 - Gunakan **expression** untuk isian yang hanya wajib pada kondisi tertentu.
-- Beri **[[^field|Label]] yang jelas dan berbeda** pada Elemen yang dirujuk expression.
+- Beri **[[^field|Alias]] yang jelas dan berbeda** pada Elemen yang dirujuk expression.
 - Pastikan Elemen yang wajib **tidak tersembunyi atau nonaktif** bila Anda ingin [[^field|Required]] berlaku.
 
 ## TL:DR
 
-- Validators adalah aturan yang harus dipenuhi isian sebelum Form dapat dikirim.
+- Validator adalah aturan yang harus dipenuhi isian sebelum Form dapat dikirim.
 - Saat ini hanya ada [[^field|Required]], dan hanya pada Elemen input.
 - [[^field|Required]] diisi dengan nilai statis atau [[Docs/Tipe Data/Expression]], dipilih lewat ikon saklar di sebelah kanan label.
 - Expression harus menghasilkan [[Docs/Tipe Data/Boolean|Boolean]] dan merujuk ke nama [[^field|Label]] Elemen di Form.
@@ -97,10 +91,10 @@ Aturan penulisan expression pada Validators:
 
 >**faq**
 >**Apakah Elemen Text bisa diberi Required?**
->Tidak. Validators hanya tersedia pada Elemen input karena hanya Elemen input yang menerima isian pengisi.
+>Tidak. Validator hanya tersedia pada Elemen input karena hanya Elemen input yang menerima isian pengisi.
 >**Mengapa Required tidak berlaku pada Elemen yang tersembunyi?**
 >Pengisi tidak dapat melihat atau mengisi Elemen yang [[^field|Visible]] atau [[^field|Enable]]-nya [[^value/boolean/false]], sehingga tidak ada isian yang dapat diwajibkan.
->**Apakah akan ada Validators selain Required?**
+>**Apakah akan ada Validator selain Required?**
 >Saat ini hanya [[^field|Required]] yang tersedia.
 >**Bagaimana membuat isian wajib hanya pada kondisi tertentu?**
 >Beralih ke expression lewat ikon saklar di sebelah kanan label [[^field|Required]], lalu tulis kondisinya, misalnya `Email not empty`.

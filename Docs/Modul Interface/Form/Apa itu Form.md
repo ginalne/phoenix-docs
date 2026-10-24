@@ -38,6 +38,8 @@ Anda dapat menyusun tampilan Form sendiri dari beberapa [[#Memahami Elemen|Eleme
 | [[#Elemen Display|Display]] | Kategori Elemen yang menampilkan informasi, baik statis maupun hasil dari nilai Binding. |
 | [[#Elemen Input|Input]] | Kategori Elemen untuk mengisi atau menampilkan informasi yang berlaku pada Binding. |
 | [[#Binding Form|Binding]] | Ikatan antara Elemen dan data di [[Docs/Modul Data/Table/Apa itu Table|Table]] agar isian dan hasil akhirnya sesuai. |
+| [[Docs/Modul Interface/Form/Elemen Form/State|State]] | Pengaturan Elemen yang menentukan apakah Elemen tampil, aktif, atau hanya dibaca oleh pengisi Form. |
+| [[Docs/Modul Interface/Form/Elemen Form/Validator|Validator]] | Aturan yang harus dipenuhi isian pengisi sebelum Form dapat dikirim. Saat ini hanya [[^field|Required]]. |
 | [[#Mode View dan Edit Mode|Edit Mode]] | Mode untuk menyusun Form, termasuk melihat informasi Binding dan konfigurasi Elemen. |
 | [[#Mempublikasikan Form|Publish]] | Konfigurasi untuk membagikan Form kepada publik. |
 | [[#Mengelola Submission|Submission]] | Catatan setiap pengiriman Form, dengan status sukses, menunggu, atau gagal. |
