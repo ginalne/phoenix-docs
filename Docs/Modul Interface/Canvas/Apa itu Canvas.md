@@ -52,20 +52,16 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
 1. [[Docs/Modul Interface/Canvas/Membuat Baru]] Canvas dalam halaman kerja.
 2. [[Docs/Modul Interface/Canvas/Mengubah]] Atribut Canvas seperti [[^field|Name]], [[^field|Description]], atau [[^field|Filter]].
 3. [[Docs/Modul Interface/Canvas/Menghapus]] Canvas.
-4. [[Docs/Modul Interface/Canvas/Canvas Page|Mengelola Alur Halaman]] dalam Canvas.
-5. [[Docs/Modul Interface/Canvas/Binding|Memahami Binding]] dalam Canvas.
-8. [[Docs/Modul Data/Table/Mempublikasi]]: mengatur publikasi Table.
-9. [[Docs/Modul Data/Table/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
+4. [[Docs/Modul Interface/Canvas/Binding|Memahami Binding]] dalam Canvas.
+5. [[Docs/Modul Data/Table/Mempublikasi]]: mengatur publikasi Table.
 
 ## Antarmuka
 
 Penjelasan antarmuka Canvas lihat selengkap nya di [[Docs/Modul Interface/Canvas/Antarmuka|Antarmuka Canvas]].
 
-## Mengatur Template Kartu
+## Mengisi Canvas
 
-Kartu didalam Canvas bisa disesuaikan sesuai kebutuhan agar membuat interaksi menjadi lebih mudah, selengkapnya lihat [[Docs/Modul Interface/Canvas/Mengatur Templat]].
-
-Selengkapnya tentang penjelasan khusus setiap Elemen dapat dilihat pada halaman masing-masing di [[#Memahami Elemen]].
+Canvas bisa disesuaikan sesuai kebutuhan agar membuat interaksi menjadi lebih mudah. Anda dapat menggunakan [[Docs/Modul Interface/Canvas/Layout]] untuk mengatur tata letak dan [[Docs/Modul Interface/Canvas/Widget/Pengenalan|Widget]] untuk mengisi konten dalam Canvas. Anda juga dapat mengisi dengan [[Docs/Modul Interface/Canvas/Template/Pengenalan|Template Canvas]] siap pakai.
 
 ## Hak Akses
 
