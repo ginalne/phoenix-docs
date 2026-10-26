@@ -83,6 +83,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   - Variable Getter (Flow Block) mengambil nilai Variable dengan mengisi Name.
 - **Akses:** anggota yang tidak memiliki akses komponen Variable tidak dapat mengetahui Value, tetapi tetap dapat memakainya untuk otomasi atau integrasi. Anggota yang memiliki akses melihat Value secara terbuka di halaman kerja.
 - **Pemisahan halaman:** halaman komponen Variable membahas pengelolaan. Penjelasan Variable sebagai tipe data ada di halaman Tipe Data (`Docs/Tipe Data/Variable`).
+
 ## Enum (Modul Data)
 
 Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direvisi penulis.
@@ -121,7 +122,6 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 - **Contoh Flow:** Table Row Event (`Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event`) menghasilkan output bertipe Row. HTTP Request berada di `Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request`.
 - **Merge, Publish, Event:** detail dijelaskan di halaman masing-masing. Ketiganya dibatasi Function Access di Workspace.
 - **Penamaan pada screenshot** (nama Table, Row, dan Column pada gambar contoh penulis) adalah kasus pribadi dan tidak disebut di dokumentasi.
-
 
 ## Tree (Modul Data)
  
