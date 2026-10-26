@@ -1,7 +1,7 @@
 ---
     status: release
-    title: "Antarmuka Gallery"
-    description: Penjelasan antarmuka di halaman kerja komponen Gallery
+    title: "Antarmuka Table View"
+    description: Penjelasan antarmuka di halaman kerja komponen Table View
     pageDecoration:
       tree:
         priority: 0

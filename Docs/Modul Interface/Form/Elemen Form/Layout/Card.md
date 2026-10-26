@@ -11,7 +11,9 @@ Card adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Lay
 
 Dengan Card, Anda tidak perlu memetakan Table pada setiap kolom isian. Cukup pilih Table pada Card, lalu Elemen Input di dalamnya tinggal memilih [[Docs/Tipe Data/Column]]. Untuk data yang berelasi, Card dapat disusun bertingkat dengan memakai pivot.
 
+<<<<<<< HEAD
 ## Menambahkan Layout Card
+=======
 ## Mengapa Menggunakan Card?
 
 Semua Elemen Layout sama-sama dapat menampung Elemen lain dan menentukan Table header. Keunikan setiap Layout ada pada tampilannya:
@@ -26,6 +28,7 @@ Semua Elemen Layout sama-sama dapat menampung Elemen lain dan menentukan Table h
 Pilih Card bila Anda ingin Elemen di dalamnya tampil dalam satu kartu.
 
 ## Menambahkan Card
+>>>>>>> 0fcf44ad0b2d62adbe367406b054d3fcc2af510f
 
 Anda dapat menambahkan Card dengan dua cara:
 
