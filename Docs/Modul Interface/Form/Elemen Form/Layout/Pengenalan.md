@@ -12,7 +12,7 @@ Kategori dari [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]] y
 
 Kategori ini memiliki elemen sebagai berikut:
 
- 1. [[Docs/Modul Interface/Form/Elemen Form/Layout/Card|Card]]
- 2. [[Docs/Modul Interface/Form/Layout/Full/Penjelasan|Full]]
- 3. [[Docs/Modul Interface/Form/Layout/Split/Penjelasan|Split]]
- 4. [[Docs/Modul Interface/Form/Layout/Accordion/Penjelasan|Accordion]]
+ 1. [[Docs/Modul Interface/Form/Elemen Form/Layout/Card]]
+ 2. [[Docs/Modul Interface/Form/Elemen Form/Layout/Full]]
+ 3. [[Docs/Modul Interface/Form/Elemen Form/Layout/Split]]
+ 4. [[Docs/Modul Interface/Form/Elemen Form/Layout/Accordion]]

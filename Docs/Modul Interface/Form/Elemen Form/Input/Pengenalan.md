@@ -12,7 +12,7 @@ Kategori dari [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]] y
 
 Kategori ini memiliki elemen sebagai berikut:
 
-1. [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]]
-2.  [[Docs/Modul Interface/Form/Input/Quiz/Penjelasan|Quiz]]
-3.  [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]]
-4.   [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] 
+1. [[Docs/Modul Interface/Form/Elemen Form/Input/Basic]]
+2.  [[Docs/Modul Interface/Form/Elemen Form/Input/Quiz]]
+3.  [[Docs/Modul Interface/Form/Elemen Form/Input/Table]]
+4.   [[Docs/Modul Interface/Form/Elemen Form/Input/List]] 
