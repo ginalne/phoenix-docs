@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Form Page"
+    description: Penjelasan Form atau Flow Page dalam komponen Form.
     pageDecoration:
-      icon: x
       tree:
         priority: 1.1
     tags:
