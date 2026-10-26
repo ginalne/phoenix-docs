@@ -42,6 +42,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 15. **Tulis hanya pengaturan yang terlihat dan dijelaskan penulis.** Pada Widget Table, design toolbar hanya memuat panel tata letak, jadi tidak ada panel tampilan. Ikon yang belum dijelaskan (misalnya ikon tabel di sebelah tombol 123, panah ▼, ikon di samping baris hole dan gap) tidak ditulis di isi, cukup di TODO.
 16. **Contoh penggunaan widget jangan menyalin contoh Canvas.** Contoh Canvas memakai Button dan Pulser. Contoh widget memakai pemicu lain (misalnya Table Row Event lalu HTTP Request) dan menjelaskan nilai tampilan widget tersebut.
 17. **Satu pengaturan, satu penjelasan lengkap.** Untuk pengaturan seperti gradient dan offset, adalah upaya penulis untuk menjelaskan kepada Claude (misalnya "jika 75%, gradasi berjalan dari tengah sampai sekitar 75% ke ujung lingkaran").
+18. **Kode atau kunci internal yang tidak terlihat pengguna tidak ditulis di dokumentasi.** Bila penulis memberi pasangan kunci dan pesan (misalnya hasil binding checker), tulis hanya pesan yang tampil di layar, ditautkan dengan `[[^field|<pesan>]]`, dan jangan menyebut kuncinya di dokumen, tabel, TODO, maupun contoh. Bila ejaan pesan tampak salah, tulis persis seperti yang diberikan lalu sebutkan temuan itu di daftar cek penulis. Bila penulis meminta saran penulisan yang benar dan menyatakan aplikasi akan mengikuti, berikan saran (pesan asli dan saran) di daftar cek, lalu pakai versi saran di dokumen.
 
 ## Konvensi tautan
 
@@ -50,6 +51,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 |Halaman konsep umum|`[[Inisialisasi/Apa itu Pro?|Pro]]`, `[[Docs/Apa itu Komponen?]]`, `[[Docs/Folder/Apa itu Folder?]]`|Pro, Komponen, Folder|`[[Docs/Folder/Apa itu Folder?#Informasi Data]]`|
 |Event|`[[Docs/Event/Apa itu Event|Event]]`, `[[Docs/Event/Menghubungkan Event]]`     | Menggantikan`Docs/Event/Pengenalan`|-|
 |Subhalaman komponen|`[[Docs/Modul <Nama>/<Komponen>/<Subhalaman>]]`|Data Access, TimelineData, Flow Activity|`[[Docs/Modul Developer/Workspace/Data Access]]`, `[[Docs/Modul Logic/Flow/Flow Activity]]`   |
+|Halaman pendamping Properties Panel Elemen|`[[Docs/Modul Interface/Form/State]]`, `[[Docs/Modul Interface/Form/Validators]]`, `[[Docs/Modul Interface/Form/Binding]]`|State, Validators, dan Binding pada Form|`[[Docs/Modul Interface/Form/State|State]]`|
 |Item anak komponen (misalnya Flow Block)|`[[Docs/Modul <Nama>/<Komponen>/<Item>/Pengenalan]]` untuk halaman pintu masuk, `[[Docs/Modul <Nama>/<Komponen>/<Item>/<Kategori>/Pengenalan]]` untuk kategori, `...#<Bagian>` untuk bagian di dalamnya|Flow Block: kategori Event, Data, Operator, Modular, dan seterusnya|`[[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan]]`, `[[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block]]` |
 |Flow Block spesifik|`[[Docs/Modul Logic/Flow/Flow Block/<Kategori>/<Nama Block>|<Nama Block>]]`|Dipakai pada tabel langkah Contoh Penggunaan, bukan halaman Pengenalan kategori|`[[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]`, `[[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]`|
 |Data milik komponen|`[[Docs/Modul <Nama>/<Komponen>/<Tipe>]]`|Timeline Data, Timeline Event, TableView Data, SpaceObject, SpaceEnvironment, SpaceWeather|`[[Docs/Modul Interface/Timeline/Timeline Data]]`|
@@ -251,7 +253,7 @@ Catatan format:
 - Blok FAQ memakai`>**faq**`, lalu setiap pertanyaan dan jawaban berada di baris`>` sendiri. Pertanyaan dicetak tebal, jawaban tidak.
 - Judul FAQ ditulis persis: `## FAQ : Pertanyaan yang Sering Diajukan`.
 - Langkah bernomor berisi satu tindakan per baris. Jangan menambahkan titik atau spasi ekstra setelah nomor. Pastikan nomornya berurutan.
-- Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris.
+- Tabel ditulis lengkap dengan pipa di awal dan akhir setiap baris. Alias wikilink di dalam tabel ditulis dengan pipa biasa (`[[^field|Label]]`); jangan memakai tanda escape pipa di mana pun.
 - Jangan menambah callout yang hanya mengulang isi tabel di dekatnya (contoh: catatan "Detail Merge, Publish, dan Event" di bawah tabel bilah navigasi yang sudah memuat tautannya).
 - Setelah menyalin pola langkah dari halaman lain, ganti semua nama konteks (misalnya jangan menulis "Klik kanan <Konteks halaman lain>" di halaman <konteks>).
 - Interaksi Antarmuka memuat gestur gulir (vertikal per kolom dan horizontal pada halaman kerja) lengkap dengan syarat berlakunya ("Ini berlaku jika ...").
@@ -306,6 +308,35 @@ Catatan format:
 - Kerangka isi: Konsep Utama, Cara Kerja (diagram relasi), Menambahkan, Mengonfigurasi (sub-bagian per bagian Properties Panel: Binding, State, Validators, Attributes, Children atau Parent, Header Toolbar teks), Contoh Penggunaan, Praktik Terbaik, Batasan dan Catatan, TL:DR, FAQ.
 - Gambar: `properties-<elemen>.png` di folder Elemen (misalnya `Docs/Modul Interface/Form/Layout/Card/properties-card.png`).
 - Contoh Penggunaan Elemen tidak wajib memakai diagram Flow; cukup komponen yang terlibat, hasil yang dirasakan, dan ide skenario lain.
+
+### 5. Halaman pendamping Properties Panel (State dan Validators)
+
+- Bagian Properties Panel yang berlaku untuk banyak Elemen dijelaskan di halaman pendamping Form, bukan diulang di setiap halaman Elemen: `Docs/Modul Interface/Form/State` dan `Docs/Modul Interface/Form/Validators`. Halaman Elemen cukup menyebut State atau Validators apa saja yang tersedia untuk Elemen itu dan menautkan ke halaman pendamping.
+- Judul halaman: `State Elemen Form` dan `Validators Elemen Form`. Pengenalan memakai callout `>**note**` tanpa judul yang menyebut bahwa bagian ini adalah bagian dari Properties Panel pada Elemen di komponen Form, salah satu komponen dalam modul Interface.
+- Kerangka isi: Mengapa Menggunakan, Konsep Utama, Cara Kerja (diagram relasi jenis A), Jenis State atau Required (tabel ketersediaan per jenis Elemen dan nilai awal), Antarmuka, Mengisi dengan Nilai Statis, Mengisi dengan Expression, Contoh Penggunaan (tanpa diagram Flow), Praktik Terbaik, Batasan dan Catatan, TL:DR, FAQ.
+- Gambar: `properties-state.png`, `state-expression.png`, dan `properties-validators.png` di folder `Docs/Modul Interface/Form/`.
+- Bagian terkait di "Apa itu Form?" hanya ringkasan dengan tautan ke halaman pendamping. Bila halaman "Apa itu Form?" sudah berstatus release dan file-nya belum diberikan, lihat aturan potongan pada [[#Cara bekerja dengan permintaan pengguna]].
+- Fakta produk yang berlaku: State ada tiga (Visible, Enable, Readonly) dan ketiganya hanya pada Elemen input, sedangkan Elemen layout dan display hanya memiliki Visible. Validators saat ini hanya Required, hanya pada Elemen input. Nilai awal Elemen input yang baru ditambahkan selalu Visible aktif, Enable aktif, Readonly nonaktif, Required nonaktif. Visible = false pada Layout menyembunyikan semua Elemen di dalamnya. Elemen input menyimpan ke Row saat submit hanya bila Enable = true, dan State lain tidak memengaruhi penyimpanan. Required tidak berlaku bila Visible atau Enable bernilai false.
+
+### 6. Pengaturan dengan ikon saklar (nilai statis atau expression)
+
+- Setiap field State dan Validators memiliki ikon saklar kecil di sebelah kanan label untuk beralih antara nilai statis dan expression. Selama belum ada nama resmi di antarmuka, tulis "ikon saklar di sebelah kanan label" dan beri TODO agar penulis menamainya.
+- Mode statis menampilkan saklar nilai (hijau = `[[^value/boolean/true]]`, abu-abu = `[[^value/boolean/false]]`) dan nilainya tidak berubah selama pengisi mengisi Form.
+- Mode expression menggantikan saklar nilai dengan kolom isian teks yang memiliki *autocomplete* dan *checker*. Expression dihitung ulang saat pengisi mengisi Form, sehingga nilainya dapat berubah selama pengisian.
+- Hasil expression harus Boolean (diperiksa *checker*). Parameter expression merujuk ke **Alias** Elemen input, bukan ke Label (koreksi dari penulis). Alias bersifat opsional dan diaktifkan lewat checkbox Alias pada Binding Elemen input. Contoh dari penulis: `inputA not empty`. Daftar operator dan fungsi belum terkonfirmasi, jadi contoh hanya memakai pola yang sudah diberikan penulis dan beri TODO.
+- Langkah mengisi: beralih ke Edit Mode, klik kiri Elemen, atur State atau Validators di Properties Panel, lalu `[[^button/save|Save]]` atau tunggu *auto save* sekitar 3 detik.
+- Perbedaan Enable dan Readonly ditulis eksplisit: Enable = false membuat Elemen tidak menyimpan ke Row, sedangkan Readonly = true hanya mengunci isi dan isian tetap tersimpan selama Enable aktif.
+
+### 7. Halaman pendamping Binding
+
+- Path: `Docs/Modul Interface/Form/Binding`, judul `Binding Elemen Form`. Kerangka mengikuti pola bagian 5, ditambah Jenis Binding (Binding Layout: table dan pivot; Binding Elemen Input; Alias; Title Submission), Antarmuka Binding (termasuk Label Binding di Edit Mode), Mengatur Binding Layout, Mengatur Binding Elemen Input, Binding dan Submission, dan Binding Checker.
+- Fakta produk yang berlaku: Layout memakai Binding Type table atau pivot. Elemen input tidak memiliki pilihan Binding Type dan langsung mengisi Column, sedangkan Table terisi otomatis dari Layout (pengisi memilih Column dari Table header yang sudah diinformasikan Phoenix). Elemen input multi row (Table dan List) mengisi Column dari Table lain (pivot).
+- Pivot berfungsi bila Table header memiliki relasi: Table header memiliki Column bertipe Row, atau Table lain memiliki Column bertipe Row dengan Header berupa Table header. Pivot pada Elemen input multi row harus dari Table lain yang memiliki Column bertipe Row dengan Header berupa Table header. Label field pivot hanya Column (dengan informasi Table yang dimaksud). Bila tidak ada relasi, pilihan pivot kosong.
+- Alias bersifat opsional: tampil sebagai checkbox, dan kolom teks Alias tampil saat checkbox bernilai true. Fungsinya mendaftarkan Elemen input sebagai parameter yang dipakai Elemen lain (misalnya pada expression State dan Validators). Nama Alias harus unik dan boleh memakai karakter ASCII apa pun. Label checkbox dan kolom teksnya adalah Alias.
+- Title Submission diatur lewat label `As Title` di bagian Binding dengan toggle Yes atau No (bukan klik bintang), biasanya pada isian nama pengisi, agar mudah dicari di Submission List. Bintang di samping Column menandai isian title. Bintang ini tidak terkait Alias pada Table.
+- Label binding di Edit Mode: Table ungu, pivot biru, Column oranye.
+- Setiap pengisian Form yang baru menambah Row baru. Mengubah isian yang sudah dikirim butuh Submission ID (tombol copy di Submission List pada halaman kerja). Tampilan pengisi punya menu untuk mengakses tautan itu, yang secara teknis tersimpan di local cache. Karena local cache, tautan hanya tersedia di perangkat yang sama dan hilang bila cache dihapus; admin dapat mengirim ulang tautan lewat tombol copy. Pengisi tidak membutuhkan pengaturan akses tambahan: akses menambah Row dianggap sudah diizinkan saat pembuat Form memilih Table dan relasinya pada Binding. Pengisian pada Layout anak ber-pivot menambah Row di Table relasi yang otomatis terhubung ke Row Table header.
+- Binding checker menampilkan empat pesan di layar: kolom dan header tidak cocok, pivot pada Layout belum ditentukan, header untuk Elemen input yang terikat Column belum ditentukan, dan tipe Column tidak cocok dengan Format Type pada Elemen input. Pesan tidak menghalangi Save maupun Publish. Tulis pesan sesuai aturan 18. Mengganti Table pada Layout menghasilkan pesan header belum ditentukan atau Column dan header tidak cocok pada Elemen input di dalamnya.
 
 ## Diagram alur saat menjelasakan alur Logic Flow
 
