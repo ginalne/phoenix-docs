@@ -4,7 +4,7 @@
     description: Penjelasan cara menghapus komponen Space
     pageDecoration:
       tree:
-        priority: 0.5
+        priority: 6
     tags:
       draft
 ---

@@ -1,34 +1,30 @@
 ---
-    status: draft
+    status: release
     title: Accordion (Elemen Layout)
     description: Accordion adalah Elemen Layout pada Form yang menampung Elemen lain dalam kartu dengan header yang dapat di-toggle, sekaligus menjadi header Table bagi Elemen di dalamnya.
 ---
 # Form Layout : Accordion
 
->**note** Accordion merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
+>**note** Layout Accordion merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Accordion adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] lain dalam satu kartu dengan header yang dapat di-toggle untuk menyembunyikan dan menampilkan isinya, sekaligus menentukan [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber data bagi Elemen di dalamnya.
+Layout Accordion adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] lain dalam satu kartu dengan header yang dapat di-toggle untuk menyembunyikan dan menampilkan isinya, sehingga Layout ini berguna untuk bagian Form yang tidak perlu selalu terlihat.
 
-Dengan Accordion, Anda tidak perlu memetakan Table pada setiap kolom isian. Cukup pilih Table pada Accordion, lalu Elemen Input di dalamnya tinggal memilih [[Docs/Tipe Data/Column]]. Untuk data yang berelasi, Accordion dapat disusun bertingkat dengan memakai pivot.
+Layout Accordion memiliki header dengan [[^field|Label]] dan kondisi bawaan lewat [[^field|Default State]]. 
 
-## Mengapa Menggunakan Accordion?
+## Menambahkan Layout Accordion
 
-Pilih Accordion bila Anda ingin Elemen tampil dalam kartu yang isinya dapat disembunyikan, misalnya untuk bagian Form yang tidak perlu selalu terlihat. Accordion memiliki header dengan [[^field|Label]] dan kondisi bawaan lewat [[^field|Default State]].
-
-## Menambahkan Accordion
-
-Anda dapat menambahkan Accordion dengan dua cara:
+Anda dapat menambahkan Layout Accordion dengan dua cara:
 
 - Memilih [[^field|Accordion Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
-- Memilih Accordion pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Accordion anak).
+- Memilih Layout Accordion pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
 
 Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
 
-## Mengonfigurasi Accordion
+## Mengonfigurasi Layout Accordion
 
 ![[Docs/Modul Interface/Form/Elemen Form/Layout/accordion-header-form.png]]
 ![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-accordion.png]]
-Klik kiri Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Accordion sebagai informasi Binding.
+Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Layout Accordion sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -45,17 +41,17 @@ Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/dele
 
 ### Binding
 
-Binding dalam Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/Binding#Binding Layout]].
+Binding dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/Binding#Binding Layout]].
 
 ### State
 
-State dalam Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
+State dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
 
-[[^field|Visible]] berbeda dengan kondisi `Collapsed` pada [[^field|Default State]]. [[^field|Visible]] bernilai [[^value/boolean/false]] menyembunyikan seluruh Accordion, sedangkan `Collapsed` hanya menyembunyikan isinya dan header tetap tampil.
+[[^field|Visible]] berbeda dengan kondisi `Collapsed` pada [[^field|Default State]]. [[^field|Visible]] bernilai [[^value/boolean/false]] menyembunyikan seluruh Layout Accordion, sedangkan `Collapsed` hanya menyembunyikan isinya dan header tetap tampil.
 
 ### Attribute
 
-Accordion memiliki dua atribut yang dapat dikonfigurasi:
+Layout Accordion memiliki dua atribut yang dapat dikonfigurasi:
 
 | Atribut | Fungsi |
 | --- | --- |
@@ -64,11 +60,11 @@ Accordion memiliki dua atribut yang dapat dikonfigurasi:
 
 ### Children
 
-Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Accordion. Setiap baris diberi kategori ([[^field|layout]], [[^field|display]] atau [[^field|input]]) dan nama Elemen. Tambahkan Elemen baru lewat [[^field|Type something here to add...]] di bagian bawah Accordion.
+Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Layout Accordion. Setiap baris diberi kategori ([[^field|layout]], [[^field|display]] atau [[^field|input]]) dan nama Elemen. Tambahkan Elemen baru lewat [[^field|Type something here to add...]] di bagian bawah Layout Accordion.
 
-## Menghapus Accordion
+## Menghapus Layout Accordion
 
-Langkah menghapus Accordion sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Layout Accordion sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
 
->**danger** Dampak penghapusan Accordion
-> Menghapus Accordion akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.
+>**danger** Dampak penghapusan Layout Accordion
+> Menghapus Layout Accordion akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.

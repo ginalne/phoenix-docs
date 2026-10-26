@@ -4,7 +4,7 @@
     description: Penjelasan antarmuka di halaman kerja komponen Space
     pageDecoration:
       tree:
-        priority: 0
+        priority: 5
     tags:
       draft
 ---
@@ -45,3 +45,22 @@ Area kerja berisi tiga bagian:
 | Menambah data | Klik kanan pada Outliner ➜ [[^field/add|Add Weather]], [[^field/add|Add Environment]], atau [[^field/add|Add Object]]. |
 | Menghapus data | Klik kanan data pada Outliner ➜ [[^button/delete|Delete]]. |
 | Mengendalikan view 3D di mobile | Geser satu jari untuk memutar, geser dua jari untuk menggeser, dan cubit dengan dua jari untuk memperbesar atau memperkecil tampilan. |
+
+## Panel Properti
+
+Panel Properti tampil di sisi kanan halaman kerja. Selama belum ada data yang difokuskan, panel menampilkan [[^field|No selection]]. Ketika Anda memfokuskan data, baik dengan klik pada Outliner maupun klik langsung pada view 3D, panel menampilkan propertinya dan nilai tersebut dapat diubah.
+
+Tidak ada tombol penyimpanan: perubahan langsung diterapkan. Pada field teks ada jeda (*debounce*) sekitar 300 ms, sedangkan *toggle* dan pilihan berlaku seketika.
+
+Pengaruh perubahan nilai berbeda untuk tiap jenis data:
+
+| Jenis Data | Sumber nilai | Pengaruh perubahan di panel |
+| --- | --- | --- |
+| [[#Mengelola Weather|Weather]] | Nilai statis atau [[Docs/Tipe Data/Query#Single Output|Single Output]] (hasil kalkulasi) | Hanya mengubah konfigurasi data di Space, tidak memengaruhi Row pada data sumber. |
+| [[#Mengelola Environment|Environment]] | Data statis | Hanya mengubah konfigurasi data di Space, tidak memengaruhi Row pada data sumber. |
+| [[#Mengelola Object|Object]] | [[Docs/Tipe Data/Query#Table Output|Table Output]] (data riil) | Memengaruhi [[Docs/Tipe Data/Row]] sebenarnya pada data sumber. |
+
+Pada Object, mengubah atribut menjadi [[^value/radio|static]] berlaku untuk seluruh objek 3D yang dirender. Misalnya atribut `on` pada Model lampu yang diubah menjadi true akan menyalakan semua lampu pada tampilan, sedangkan atribut [[^value/radio|bind]] mengikuti Row masing-masing.
+
+>**warning** Perubahan pada Object mengubah data sumber
+> Nilai yang diubah pada Object tersimpan ke data sumber dan terlihat oleh komponen lain yang memakai Row yang sama. Perubahan hanya berhasil bila [[#Hak Akses Space|Data Access]] sumber mengizinkan.

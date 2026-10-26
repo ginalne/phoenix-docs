@@ -14,7 +14,7 @@
 
 Tim operasional ingin melihat posisi dan kondisi seluruh unit di sebuah area gudang sekaligus, tanpa membaca baris demi baris di tabel. Dengan Space, data unit tampil sebagai objek 3D di dalam denah gudang, sehingga unit yang menumpuk atau bermasalah langsung terlihat dari sudut pandang mana pun.
 
-**Komponen yang terlibat**
+## Komponen yang terlibat
 
 | Komponen | Peran |
 | --- | --- |
@@ -23,8 +23,7 @@ Tim operasional ingin melihat posisi dan kondisi seluruh unit di sebuah area gud
 | [[^field/space|Denah Gudang]] | Menampilkan gedung, suasana, dan unit dalam satu ruang 3D. |
 | [[^field/tableview|Daftar Unit]] | Menampilkan data yang sama dalam bentuk tabel untuk dicek bersama. |
 
-**Alur penggunaan**
-
+## Alur penggunaan
 ```mermaid
 flowchart LR
   A["Table<br/>Data Unit"] -.->|"&nbsp;Table Output&nbsp;"| B["Space<br/>Object"]
@@ -44,13 +43,13 @@ flowchart LR
 | 5 | [[#Mengelola Weather|Weather]] | Menambahkan Weather dengan [[^field|Type]] [[^value/radio|Earth Sky]] dan [[^field|Time]] dari [[Docs/Tipe Data/Query#Single Output|Single Output]]. | Suasana langit mengikuti waktu dari data sumber. |
 | 6 | [[#Panel Properti]] | Fokus pada satu unit lalu ubah nilainya. | Row unit pada sumber ikut diperbarui. |
 
-**Hasil yang dirasakan**
+## Hasil yang dirasakan
 
 - Tim melihat sebaran dan kondisi seluruh unit dalam satu pandangan, lalu memutar dan memperbesar tampilan untuk memeriksa area tertentu.
 - Perubahan status unit dari [[#Panel Properti]] langsung tersimpan ke data sumber, sehingga [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] yang menampilkan data yang sama ikut menyesuaikan.
 - Data yang sama bisa dibaca sebagai tabel maupun sebagai ruang, tergantung kebutuhan.
 
-**Ide skenario lain**
+## Ide skenario lain
 
 | Jenis nilai | Contoh integrasi |
 | --- | --- |
@@ -60,4 +59,3 @@ flowchart LR
 | Tata ruang | Environment menampilkan bangunan atau perabot statis sebagai latar data yang dipantau. |
 
 Dengan menggabungkan Environment, Object, dan Weather, Space mengubah data tabel menjadi ruang yang dapat dijelajahi dan langsung terhubung dengan sumber datanya.
-enjaga sistem lain tetap sinkron.

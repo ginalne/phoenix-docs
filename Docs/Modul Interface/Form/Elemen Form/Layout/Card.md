@@ -5,30 +5,11 @@
 ---
 # Form Layout : Card
 
->**note** Card merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
+>**note** Layout Card merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Card adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] lain dalam satu kartu, sekaligus menentukan [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber data bagi Elemen di dalamnya.
-
-Dengan Card, Anda tidak perlu memetakan Table pada setiap kolom isian. Cukup pilih Table pada Card, lalu Elemen Input di dalamnya tinggal memilih [[Docs/Tipe Data/Column]]. Untuk data yang berelasi, Card dapat disusun bertingkat dengan memakai pivot.
-
-<<<<<<< HEAD
-## Menambahkan Layout Card
-=======
-## Mengapa Menggunakan Card?
-
-Semua Elemen Layout sama-sama dapat menampung Elemen lain dan menentukan Table header. Keunikan setiap Layout ada pada tampilannya:
-
-| Layout | Keunikan |
-| --- | --- |
-| [[Docs/Modul Interface/Form/Elemen Form/Layout/Card|Card]] | Memiliki tampilan kartu. |
-| [[Docs/Modul Interface/Form/Elemen Form/Layout/Full|Full]] | Memiliki tampilan penuh. |
-| [[Docs/Modul Interface/Form/Elemen Form/Layout/Split|Split]] | Memiliki tampilan dibelah menjadi sisi kiri dan kanan. |
-| [[Docs/Modul Interface/Form/Elemen Form/Layout/Accordion|Accordion]] | Memiliki tampilan kartu dengan header yang dapat di-toggle untuk menyembunyikan dan menampilkan isinya. |
-
-Pilih Card bila Anda ingin Elemen di dalamnya tampil dalam satu kartu.
+Layout Card adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] lain dalam satu kartu.
 
 ## Menambahkan Card
->>>>>>> 0fcf44ad0b2d62adbe367406b054d3fcc2af510f
 
 Anda dapat menambahkan Card dengan dua cara:
 

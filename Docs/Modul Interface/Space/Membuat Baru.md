@@ -4,7 +4,7 @@
     description: Penjelasan cara membuat komponen Table View baru.
     pageDecoration:
       tree:
-        priority: 2
+        priority: 8
     tags:
       draft
 ---

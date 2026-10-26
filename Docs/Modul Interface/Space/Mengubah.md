@@ -4,7 +4,7 @@
     description: Penjelasan cara mengubah komponen Table View
     pageDecoration: 
       tree: 
-          priority: 1
+          priority: 7
 ---
 # Mengubah Space
 

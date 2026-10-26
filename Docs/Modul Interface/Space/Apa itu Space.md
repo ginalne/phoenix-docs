@@ -8,7 +8,7 @@
   </svg>
   '
       tree:
-        priority: 4
+        priority: 10
 ---
 # Apa itu Space?
 
@@ -51,130 +51,23 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Space:
 1. [[Docs/Modul Interface/Space/Membuat Baru]] Space dalam halaman kerja.
 2. [[Docs/Modul Interface/Space/Mengubah]] Atribut Space seperti [[^field|Name]], [[^field|Description]], atau [[^field|Table - Column]].
 3. [[Docs/Modul Interface/Space/Menghapus]] Space.
-4. [[Docs/Modul Interface/Space/Space Data|Mengelola Data]] Space seperti menambahkan, mengubah atau memperbarui Data.
+4. [[#Mengelola Data]] Space seperti menambahkan, mengubah atau memperbarui Data.
 
 ## Antarmuka
 
 Penjelasan antarmuka lihat selengkapnya di [[Docs/Modul Interface/Space/Antarmuka|Antarmuka Space]].
 
-## Mengelola Environment
+## Mengelola Data
 
-Environment adalah data yang tampil sebagai objek 3D statis tanpa logika. Anda cukup meng-*upload* file 3D untuk menjadikannya benda di dalam ruang, misalnya bangunan, lantai, atau perabot.
+Space dapat didesain dan disesuaikan sesuai kebutuhan agar membuat tampilan 3D menjadi lebih interaktif, penyusun utama dalam Space adalah:
 
-| Atribut | Tipe Data | Penjelasan |
-| --- | --- | --- |
-| [[^field|Name]] | [[Docs/Tipe Data/String]] | Nama Environment. |
-| [[^field|Description]] | [[Docs/Tipe Data/String]] | Keterangan Environment. |
-| [[^field|Position]] | [[Docs/Format Data/Complex/3D Vector|3D Vector]] | Posisi Environment di ruang 3D. |
-| [[^field|Scale]] | [[Docs/Format Data/Complex/Volume Unit|Volume Unit]] | Ukuran (skala) Environment pada sumbu x, y, dan z. |
-| [[^field|Rotation]] | [[Docs/Format Data/Complex/Euler Angle|Euler Angle]] | Rotasi Environment. |
-| [[^field|Model]] | File 3D | File 3D yang di-*upload* sebagai wujud Environment. |
+1. [[Docs/Modul Interface/Space/Weather/Pengenalan|Weather]]
+2. [[Docs/Modul Interface/Space/Environment/Pengenalan|Environment]]
+3. [[Docs/Modul Interface/Space/Object/Pengenalan|Object]]
 
-### Menambahkan Environment
+## Hak Akses
 
-1. Buka halaman kerja Space
-2. Klik kanan pada [[#Antarmuka Space|Outliner]] ➜ [[^field/add|Add Environment]]
-3. Isi [[^field|Name]] dan [[^field|Description]]
-4. Upload file 3D pada [[^field|Model]]
-5. Atur [[^field|Position]], [[^field|Scale]], dan [[^field|Rotation]]
-
-### Mengubah Environment
-
-1. Fokuskan Environment yang akan diubah
-2. Ubah nilai pada [[#Panel Properti]]
-
-Environment hanya berisi data statis, sehingga perubahan nilai tidak memengaruhi data sumber lain. Environment tidak dapat dipindahkan dengan alat bantu pemindah, ubah [[^field|Position]], [[^field|Rotation]], dan [[^field|Scale]] lewat [[#Panel Properti]].
-
-### Menghapus Environment
-
-1. Klik kanan Environment pada [[#Antarmuka Space|Outliner]]
-2. Klik [[^button/delete|Delete]]
-
->**warning** Benda hilang dari ruang
-> Environment yang dihapus tidak lagi tampil di ruang 3D. File 3D yang di-*upload* ikut terhapus.
-
-
-## Mengelola Object
-
-Object adalah data berlogika yang tampil sebagai objek 3D. Object mengambil datanya dari [[Docs/Tipe Data/Query|Query]] dengan kaidah [[Docs/Tipe Data/Query#Table Output|Table Output]], sehingga yang dirender adalah data riil, bukan hasil kalkulasi. Satu Object dapat menghasilkan banyak objek 3D, sebanyak [[Docs/Tipe Data/Row]] hasil Query.
-
-| Atribut | Tipe Data | Penjelasan |
-| --- | --- | --- |
-| [[^field|Name]] | [[Docs/Tipe Data/String]] | Nama Object. |
-| [[^field|Description]] | [[Docs/Tipe Data/String]] | Keterangan Object. |
-| [[^field|Origin]] | [[Docs/Format Data/Complex/3D Vector|3D Vector]] | Titik asal (*anchor*) tempat model setiap Row dirender. Origin tidak memengaruhi Row pada data sumber, dan hanya dapat diubah lewat klik kanan Object pada Outliner ➜ [[^field/edit|Edit]]. |
-| [[^field|Model]] | [[Docs/Tipe Data/Model]] | Model yang menjadi wujud dan logika Object, disiapkan di komponen [[Docs/Modul Developer/Model/Apa itu Model|Model]] pada modul Developer. |
-| [[^field|Query]] | [[Docs/Tipe Data/Query]] | Pengambil data dengan kaidah Table Output. Tombol [[^button/q]] hanya tersedia di modal Object dan tidak tampil langsung di antarmuka seperti pada [[Docs/Modul Interface/Space/Apa itu Space|Space]]. |
-
-Karena logika Object yang kompleks disiapkan di komponen Model, daftar Key yang dapat diisi mengikuti Model yang dipilih pada [[^field|Model]].
-
-### Mengatur Model Attribute
-
-Ketika [[^field|Query]] sudah diisi, tabel [[^field|Model Attribute]] akan tampil dengan kolom [[^field|Key]], [[^field|Static]], dan [[^field|Value]]. Kolom [[^field|Static]] berisi pilihan radio yang menentukan cara nilai atribut diisi:
-
-| Pilihan | Value yang diisi | Hasil pada objek 3D |
-| --- | --- | --- |
-| [[^value/radio|static]] | Nilai bebas sesuai kebutuhan. | Seluruh objek 3D yang dirender memiliki nilai atribut yang sama. |
-| [[^value/radio|bind]] | Kolom yang tersedia pada [[Docs/Tipe Data/Query|Query]]. | Nilai atribut tiap objek 3D mengikuti [[Docs/Tipe Data/Row]] masing-masing. |
-
-Perlu diketahui bahwa Query dapat memanggil banyak data. Jika atribut bernilai [[^value/radio|static]], semua objek 3D yang dirender akan memiliki nilai atribut yang sama, sedangkan atribut [[^value/radio|bind]] dapat berbeda pada setiap objek 3D.
-
-### Menambahkan Object
-
-1. Buka halaman kerja Space
-2. Klik kanan pada [[#Antarmuka Space|Outliner]] ➜ [[^field/add|Add Object]]
-3. Isi [[^field|Name]], [[^field|Description]], dan [[^field|Origin]]
-4. Pilih [[^field|Model]]
-5. Isi [[^field|Query]] dengan klik [[^button/q]]
-6. Atur [[^field|Model Attribute]] pada kolom [[^field|Static]] dan [[^field|Value]]
-
-### Mengubah Object
-
-1. Fokuskan Object yang akan diubah
-2. Ubah nilai pada [[#Panel Properti]]
-
-Untuk mengubah atribut seperti [[^field|Name]], [[^field|Description]], [[^field|Origin]], [[^field|Model]], atau [[^field|Query]], klik kanan Object pada [[#Antarmuka Space|Outliner]] ➜ [[^field/edit|Edit]]. Isian pada modal Edit sama seperti saat menambahkan Object, dan semua atributnya dapat diubah.
-
-Anda juga dapat memindahkan objek 3D dengan alat bantu pemindah. Jika atributnya di-*bind*, perubahan nilainya memperbarui Row sumber.
-
-Nilai yang diubah pada Object memengaruhi [[Docs/Tipe Data/Row]] sebenarnya pada data sumber, selama [[#Hak Akses Space|hak akses]] mengizinkan.
-
-### Menghapus Object
-
-1. Klik kanan Object pada [[#Antarmuka Space|Outliner]]
-2. Klik [[^button/delete|Delete]]
-
->**warning** Objek 3D hilang dari ruang
-> Seluruh objek 3D milik Object tidak lagi tampil di ruang, dan konfigurasi [[^field|Query]] serta [[^field|Model Attribute]] ikut terhapus. [[Docs/Tipe Data/Row]] pada data sumber tidak ikut terhapus.
-
-## Panel Properti
-
-Panel Properti tampil di sisi kanan halaman kerja. Selama belum ada data yang difokuskan, panel menampilkan [[^field|No selection]]. Ketika Anda memfokuskan data, baik dengan klik pada Outliner maupun klik langsung pada view 3D, panel menampilkan propertinya dan nilai tersebut dapat diubah.
-
-Tidak ada tombol penyimpanan: perubahan langsung diterapkan. Pada field teks ada jeda (*debounce*) sekitar 300 ms, sedangkan *toggle* dan pilihan berlaku seketika.
-
-Pengaruh perubahan nilai berbeda untuk tiap jenis data:
-
-| Jenis Data | Sumber nilai | Pengaruh perubahan di panel |
-| --- | --- | --- |
-| [[#Mengelola Weather|Weather]] | Nilai statis atau [[Docs/Tipe Data/Query#Single Output|Single Output]] (hasil kalkulasi) | Hanya mengubah konfigurasi data di Space, tidak memengaruhi Row pada data sumber. |
-| [[#Mengelola Environment|Environment]] | Data statis | Hanya mengubah konfigurasi data di Space, tidak memengaruhi Row pada data sumber. |
-| [[#Mengelola Object|Object]] | [[Docs/Tipe Data/Query#Table Output|Table Output]] (data riil) | Memengaruhi [[Docs/Tipe Data/Row]] sebenarnya pada data sumber. |
-
-Pada Object, mengubah atribut menjadi [[^value/radio|static]] berlaku untuk seluruh objek 3D yang dirender. Misalnya atribut `on` pada Model lampu yang diubah menjadi true akan menyalakan semua lampu pada tampilan, sedangkan atribut [[^value/radio|bind]] mengikuti Row masing-masing.
-
->**warning** Perubahan pada Object mengubah data sumber
-> Nilai yang diubah pada Object tersimpan ke data sumber dan terlihat oleh komponen lain yang memakai Row yang sama. Perubahan hanya berhasil bila [[#Hak Akses Space|Data Access]] sumber mengizinkan.
-
-## Hak Akses Space
-
-Space mengikuti pengaturan di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]]:
-
-| Hak Akses | Pengaruh pada Space |
-| --- | --- |
-| Comp. Access | Mengatur apakah Space terlihat ([[^field|Visible]]), serta dapat diubah ([[^field|Update]]) atau dihapus ([[^field|Delete]]). |
-| Data Access | Satu pengaturan [[Docs/Modul Developer/Workspace/Data Access|Data Access]] mewakili ketiga jenis data (Weather, Environment, dan Object) untuk menambah ([[^field|Add]]), mengubah ([[^field|Update]]), dan menghapus ([[^field|Delete]]) data. |
-| Data Access sumber | Pada Object, perubahan yang memengaruhi Row sumber hanya berhasil bila Data Access data sumber (misalnya [[Docs/Tipe Data/Table]]) juga mengizinkan. |
+Penjelasan tentang pengelolaan Hak Akses dalam komponen Space lihat selengkapnya di [[Docs/Modul Interface/Space/Hak Akses]].
 
 ## Praktik Terbaik
 

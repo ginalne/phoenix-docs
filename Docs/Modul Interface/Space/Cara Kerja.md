@@ -4,7 +4,7 @@
     description: Penjelasan cara kerja komponen Space
     pageDecoration:
       tree:
-        priority: 3
+        priority: 9
     tags:
       draft
 ---
