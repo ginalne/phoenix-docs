@@ -1,4 +1,12 @@
-# Binding Canvas
+---
+    status: release
+    title: "Binding dalam Canvas"
+    description: Penjelasan binding dalam komponen Canvas
+    pageDecoration:
+      tree:
+        priority: 0
+---
+# Binding dalam Canvas
 
 Binding adalah parameter Canvas yang dapat dipakai dalam [[Docs/Tipe Data/Query]] pada widget. Binding dikonfigurasikan melalui tombol [[^button/setting|Binding]] yang membuka modal. Setiap Binding memiliki nilai bawaan (*default value*), dan Canvas dapat dibuka secara dinamis dengan Binding sebagai parameter.
 
