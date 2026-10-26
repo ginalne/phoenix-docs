@@ -8,6 +8,9 @@
 ---
 2026-10-27 01:00
 
+![[prompt/phoenix.ginalne.com_testing_group_2(Documentation).png]]
+
+
 /phoenix-docs-silverbullet /phoenix-docs-knowledge
 
 Tolong saya membuat halaman "Apa itu Group?".
