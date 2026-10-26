@@ -12,6 +12,20 @@ Card adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Lay
 Dengan Card, Anda tidak perlu memetakan Table pada setiap kolom isian. Cukup pilih Table pada Card, lalu Elemen Input di dalamnya tinggal memilih [[Docs/Tipe Data/Column]]. Untuk data yang berelasi, Card dapat disusun bertingkat dengan memakai pivot.
 
 ## Menambahkan Layout Card
+## Mengapa Menggunakan Card?
+
+Semua Elemen Layout sama-sama dapat menampung Elemen lain dan menentukan Table header. Keunikan setiap Layout ada pada tampilannya:
+
+| Layout | Keunikan |
+| --- | --- |
+| [[Docs/Modul Interface/Form/Elemen Form/Layout/Card|Card]] | Memiliki tampilan kartu. |
+| [[Docs/Modul Interface/Form/Elemen Form/Layout/Full|Full]] | Memiliki tampilan penuh. |
+| [[Docs/Modul Interface/Form/Elemen Form/Layout/Split|Split]] | Memiliki tampilan dibelah menjadi sisi kiri dan kanan. |
+| [[Docs/Modul Interface/Form/Elemen Form/Layout/Accordion|Accordion]] | Memiliki tampilan kartu dengan header yang dapat di-toggle untuk menyembunyikan dan menampilkan isinya. |
+
+Pilih Card bila Anda ingin Elemen di dalamnya tampil dalam satu kartu.
+
+## Menambahkan Card
 
 Anda dapat menambahkan Card dengan dua cara:
 
@@ -34,7 +48,7 @@ Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/dele
 
 | Bagian | Fungsi |
 | --- | --- |
-| [[^field|Binding]] | Menentukan header Card. Lihat [[#Binding Card]]. |
+| [[^field|Binding]] | Menentukan header Card. Lihat [[#Binding]]. |
 | [[^field|State]] | Mengatur kondisi Card. [[^field|Visible]] menampilkan atau menyembunyikan Card. |
 | [[^field|Children]] | Daftar Elemen di dalam Card, lengkap dengan kategorinya ([[^field|display]] atau [[^field|input]]) dan namanya. |
 
@@ -48,7 +62,7 @@ State dalam Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface
 
 ### Attribute
 
-Tidak ada atribut yang dapat dikonfigrasi pada Card.
+Tidak ada atribut yang dapat dikonfigurasi pada Card.
 
 ### Children
 
