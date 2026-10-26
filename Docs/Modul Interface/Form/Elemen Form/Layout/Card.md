@@ -11,16 +11,16 @@ Card adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Lay
 
 Dengan Card, Anda tidak perlu memetakan Table pada setiap kolom isian. Cukup pilih Table pada Card, lalu Elemen Input di dalamnya tinggal memilih [[Docs/Tipe Data/Column]]. Untuk data yang berelasi, Card dapat disusun bertingkat dengan memakai pivot.
 
-## Menambahkan Card
+## Menambahkan Layout Card
 
 Anda dapat menambahkan Card dengan dua cara:
 
 - Memilih [[^field|Card Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
-- Memilih Card pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Card anak).
+- Memilih Card pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
 
 Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
 
-## Mengonfigurasi Card
+## Mengonfigurasi Layout Card
 
 ![[Docs/Modul Interface/Form/Elemen Form/Layout/card-header-form.png]]
 ![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-card.png]]
@@ -54,7 +54,7 @@ Tidak ada atribut yang dapat dikonfigrasi pada Card.
 
 Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Card. Setiap baris diberi kategori ([[^field|layout]], [[^field|display]] atau [[^field|input]]) dan nama Elemen. Tambahkan Elemen baru lewat [[^field|Type something here to add...]] di bagian bawah Card.
 
-## Menghapus Card
+## Menghapus Layout Card
 
 Langkah menghapus Card sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
 

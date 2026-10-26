@@ -51,15 +51,13 @@ Penjelasan cara kerja Form lihat selengkap nya di [[Docs/Modul Interface/Form/Ca
 ## Mengelola Form
 
 Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+
 1. [[Docs/Modul Interface/Form/Membuat Baru]] Form dalam halaman kerja.
 2. [[Docs/Modul Interface/Form/Mengubah]] Atribut Form seperti [[^field|Name]], [[^field|Description]], atau [[^field|Filter]].
 3. [[Docs/Modul Interface/Form/Menghapus]] Form.
 4. [[Docs/Modul Interface/Form/Form Page|Mengelola Alur Halaman]] dalam Form.
-5. [[Docs/Modul Interface/Form/Elemen Form/Binding|Memahami Binding]] dalam Form.
-6. [[Docs/Modul Interface/Form/State|Memahami State]] dalam Form.
-7. [[Docs/Modul Interface/Form/Validator|Memahami Validator]] dalam Form.
+4. [[Docs/Modul Interface/Form/Submission|Memahami Submission]] dalam Form.
 8. [[Docs/Modul Data/Table/Mempublikasi]]: mengatur publikasi Table.
-9. [[Docs/Modul Data/Table/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
 ## Antarmuka
 
@@ -68,6 +66,10 @@ Penjelasan antarmuka Form lihat selengkap nya di [[Docs/Modul Interface/Form/Ant
 ## Mengelola Templat Form
 
 Form dapat di desain dan disesuaikan sesuai kebutuhan agar membuat pengumpulan data menjadi lebih mudah menggunakan Elemen Form, selengkapnya lihat [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]].
+
+## Hak Akses
+
+Penjelasan tentang pengelolaan Hak Akses dalam komponen Form lihat selengkapnya di [[Docs/Modul Interface/Form/Hak Akses]].
 
 ## Praktik Terbaik
 

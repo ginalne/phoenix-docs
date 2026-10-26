@@ -8,7 +8,7 @@
 ---
 # Elemen Display
 
-Kategori dari [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]] yang berfungsi menampilkan informasi. Informasi yang ditampilkan dapat berupa isi statis (misalnya judul atau keterangan), atau hasil dari [[Docs/Tipe Data/Expression]] terhadap nilai [[Docs/Modul Interface/Form/Elemen Form/Binding]] (misalnya nilai total).
+Elemen Layout adalah kategori dari [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]] yang berfungsi menampilkan informasi. Informasi yang ditampilkan dapat berupa isi statis (misalnya judul atau keterangan), atau hasil dari [[Docs/Tipe Data/Expression]] terhadap nilai [[Docs/Modul Interface/Form/Elemen Form/Binding]] (misalnya nilai total).
 
 Kategori ini memiliki elemen sebagai berikut:
 

@@ -6,9 +6,9 @@
       tree:
         priority: 4
 ---
-## Elemen Layout
+# Elemen Layout
 
-Kategori dari [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]] yang berfungsi sebagai templat. Elemen Layout adalah satu-satunya kategori yang memiliki *field* [[^field|Type something here to add...]], yaitu tempat Anda menambahkan Elemen lain ke dalamnya. Dengan begitu, Layout mengatur tata letak, sedangkan isinya diisi oleh Elemen Display dan Elemen Input.
+Elemen Layout adalah kategori dari [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]] yang berfungsi sebagai templat. Elemen Layout adalah satu-satunya kategori yang memiliki *field* [[^field|Type something here to add...]], yaitu tempat Anda menambahkan Elemen lain ke dalamnya. Dengan begitu, Layout mengatur tata letak, sedangkan isinya diisi oleh Elemen Display dan Elemen Input.
 
 Kategori ini memiliki elemen sebagai berikut:
 

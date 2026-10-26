@@ -4,7 +4,7 @@
     description: Penjelasan Form atau Flow Page dalam komponen Form.
     pageDecoration:
       tree:
-        priority: 1.1
+        priority: 0.5
     tags:
       draft
 ---

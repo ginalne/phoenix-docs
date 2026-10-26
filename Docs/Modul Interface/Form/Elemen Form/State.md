@@ -1,13 +1,12 @@
 ---
     status: draft
-    title: State Elemen Form
+    title: State dalam Elemen Form
     description: Penjelasan tiga State pada Elemen Form (Visible, Enable, Readonly) dan cara mengisinya dengan nilai statis atau expression.
     pageDecoration:
       tree:
         priority: 4
 ---
-
-# State Elemen Form
+# State dalam Elemen Form
 
 >**note** State merupakan bagian dari [[Docs/Modul Interface/Form/Apa itu Form#Properties Panel|Properties Panel]] pada Elemen di komponen [[Docs/Modul Interface/Form/Apa itu Form|Form]], salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 

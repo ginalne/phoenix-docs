@@ -1,6 +1,6 @@
 ---
     status: release
-    title: "Binding Elemen Form"
+    title: "Binding dalam Elemen Form"
     description:  Penjelasan Binding pada Form, yaitu cara Layout terikat ke Table (table dan pivot) dan Elemen input terikat ke Column, termasuk Alias, title Submission, dan binding checker.
     pageDecoration:
       tree:
@@ -8,7 +8,7 @@
     tags:
       draft
 ---
-# Binding Elemen Form
+# Binding dalam Elemen Form
 
 >**note** Binding merupakan bagian dari [[Docs/Modul Interface/Form/Apa itu Form#Properties Panel|Properties Panel]] pada Elemen di komponen [[Docs/Modul Interface/Form/Apa itu Form|Form]], salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 
@@ -16,48 +16,13 @@ Binding adalah pengaturan yang mengikat Elemen Form ke data di [[Docs/Modul Data
 
 Binding juga menjadi dasar relasi antar Table pada satu Form, penanda title [[Docs/Modul Interface/Form/Apa itu Form#Submission List|Submission]], dan Alias yang memungkinkan Elemen lain merujuk isian sebuah Elemen.
 
-## Mengapa Menggunakan Binding?
-
-- **Isian langsung tersimpan ke Table.** Setiap pengisian Form baru menambah satu Row di Table yang terikat.
-- **Data berelasi dalam satu Form.** Dengan pivot, satu Form dapat mengisi beberapa Table yang saling berelasi.
-- **Kesalahan terdeteksi lebih awal.** *Binding checker* menampilkan pesan bila ada binding yang belum lengkap atau tidak cocok.
-- **Elemen saling merujuk.** Alias menjadikan isian sebuah Elemen sebagai parameter yang dapat dipakai Elemen lain.
-- **Submission mudah dicari.** Satu isian dapat dijadikan title, misalnya nama pengisi.
-
-## Konsep Utama
-
-| Istilah | Penjelasan |
-| ------- | ---------- |
-| [[#Binding Layout]] | Binding pada Elemen layout dengan Binding Type table atau pivot. Layout menjadi header bagi Elemen di bawahnya. |
-| [[#Table]] | Binding Type yang memilih sebuah Table sebagai header Layout. |
-| [[#Pivot]] | Binding Type untuk relasi lanjutan ke Table lain melalui Column bertipe Row. |
-| [[#Binding Elemen Input]] | Binding pada Elemen input yang mengikat isian ke sebuah Column. |
-| [[#Alias]] | Nama opsional pada Elemen input agar Elemen lain dapat memakai isiannya sebagai parameter. |
-| [[#Title Submission]] | Pengaturan [[^field|As Title]] agar isian menjadi judul Submission, biasanya nama pengisi. |
-| [[#Binding Checker]] | Pemeriksa yang menampilkan pesan bila binding belum lengkap atau tidak cocok. |
-| [[Docs/Tipe Data/Row]] | Satu baris data di Table. Setiap pengisian Form baru menambah satu Row. |
-
-## Cara Kerja Binding
-
-Layout menentukan Table sebagai header, Elemen input memilih Column dari header tersebut, dan setiap pengisian baru menyimpan isian sebagai Row baru.
-
-```mermaid
-flowchart LR
-    A["Layout"] -->|&nbsp;table&nbsp;| B["Table header"]
-    A -->|&nbsp;memiliki&nbsp;| C["Layout anak"]
-    C -.->|&nbsp;pivot&nbsp;| D["Table relasi"]
-    D -.->|&nbsp;Column bertipe Row&nbsp;| B
-    E["Elemen input"] -->|&nbsp;Column&nbsp;| B
-    B -->|&nbsp;setiap pengisian baru&nbsp;| F["Row baru"]
-```
-
 ## Jenis Binding
 
 | Elemen | Binding | Yang dipilih |
 | ------ | ------- | ------------ |
-| Elemen layout, misalnya [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]] | Binding Type [[^value/radio|table]] atau [[^value/radio|pivot]] | Table sebagai header, atau Column untuk pivot. |
+| Elemen layout | Binding Type [[^value/radio|Table]] atau [[^value/radio|Pivot]] | [[Docs/Tipe Data/Table]] sebagai header, atau [[Docs/Tipe Data/Column]] sebagai pivot. |
 | Elemen input satu isian, misalnya [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]] | Column | Column dari Table header. Table terisi otomatis dari Layout. |
-| Elemen input multi row, yaitu [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]] dan [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] | Column | Column dari Table lain (pivot). |
+| Elemen input multi row, yaitu [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]] dan [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] | Pivot | Column dari Table lain (pivot). Table terisi otomatis dari Layout |
 
 ### Binding Layout
 
@@ -94,11 +59,7 @@ Contoh: Elemen dengan Alias `email` dapat dirujuk dengan expression `email not e
 
 ### Title Submission
 
-Bagian [[^field|Binding]] pada Elemen input memiliki label [[^field|As Title]] dengan toggle [[^value/radio|Yes]] atau [[^value/radio|No]]. Isian yang diatur [[^value/radio|Yes]] menjadi title [[Docs/Modul Interface/Form/Apa itu Form#Submission List|Submission]] dan ditandai bintang di samping [[^field|Column]]. Biasanya isian yang dipilih adalah nama pengisi, sehingga pencarian di Submission List menjadi mudah berdasarkan title.
-
-<!--
-  * [TODO] Konfirmasi: apakah bintang di samping Column muncul saat As Title bernilai Yes, apakah hanya satu Elemen per Form yang boleh As Title Yes, dan bagaimana title tampil di Submission List.
--->
+Bagian [[^field|Binding]] pada Elemen input memiliki label [[^field|As Title]] dengan toggle [[^value/boolean|Yes]] atau [[^value/boolean|No]]. Isian yang diatur [[^value/radio|Yes]] menjadi title [[Docs/Modul Interface/Form/Submission]] dan ditandai bintang di samping [[^field|Column]]. Biasanya isian yang dipilih adalah nama pengisi, sehingga pencarian di Submission List menjadi mudah berdasarkan title.
 
 ## Antarmuka Binding
 
@@ -115,6 +76,7 @@ Binding berada di Properties Panel, di bagian paling atas. Bagian yang tampil be
 
 ### Label Binding di Edit Mode
 
+![[Docs/Modul Interface/Form/Elemen Form/label-binding-form.png]]
 Pada [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit|Edit Mode]], Phoenix menampilkan label binding di atas Elemen agar Anda mudah melihat ikatan yang sudah dibuat.
 
 | Label | Warna | Menandai |
@@ -127,8 +89,8 @@ Pada [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit|Edit Mode]], Ph
 
 1. Beralih ke [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit|Edit Mode]]
 2. Klik kiri Layout yang ingin diatur
-3. Pada bagian [[^field|Binding]] di Properties Panel, pilih Binding Type [[^value/radio|table]] atau [[^value/radio|pivot]]
-4. Pilih Table sebagai header untuk [[^value/radio|table]], atau pilih [[^field|Column]] untuk [[^value/radio|pivot]]
+3. Pada bagian [[^field|Binding]] di [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], pilih Binding Type [[^value/radio|table]] atau [[^value/radio|pivot]]
+4. Pilih [[Docs/Tipe Data/Table]] sebagai header untuk [[^value/radio|table]], atau pilih [[Docs/Tipe Data/Column|Kolom Pivot]] untuk [[^value/radio|pivot]]
 5. Klik [[^button/save|Save]], atau tunggu *auto save* sekitar 3 detik
 
 >**note** Pivot membutuhkan relasi
@@ -165,64 +127,23 @@ Pengisi tidak membutuhkan pengaturan akses tambahan. Saat pembuat Form memilih T
 
 | Pesan | Penyebab | Cara memperbaiki |
 | ----- | -------- | ---------------- |
-| [[^field|The selected column and its header do not match]] | Column yang dipilih tidak cocok dengan header-nya. | Pilih ulang [[^field|Column]] dari Table header, atau perbaiki Table pada Layout. |
-| [[^field|There is a layout bound by a pivot, but the pivot is not defined yet]] | Layout memakai pivot tetapi [[^field|Column]]-nya belum dipilih. | Pilih [[^field|Column]] pada Binding Layout. |
-| [[^field|There is an input bound by a column, but the header is not defined yet]] | Elemen input terikat ke Column tetapi Layout belum memiliki Table header. | Tentukan Binding Layout terlebih dahulu. |
-| [[^field|There is an input bound by a column, but the column type and the Format Type do not match]] | Tipe Column tidak cocok dengan [[^field|Format Type]] yang diatur pada Elemen input. | Samakan [[^field|Format Type]] pada Elemen input dengan tipe Column, atau pilih Column lain. |
+| The selected column and its header do not match | Column yang dipilih tidak cocok dengan header-nya. | Pilih ulang [[^field|Column]] dari Table header, atau perbaiki Table pada Layout. |
+| There is a layout bound by a pivot, but the pivot is not defined yet | Layout memakai pivot tetapi [[^field|Column]]-nya belum dipilih. | Pilih [[^field|Column]] pada Binding Layout. |
+| There is an input bound by a column, but the header is not defined yet | Elemen input terikat ke Column tetapi Layout belum memiliki Table header. | Tentukan Binding Layout terlebih dahulu. |
+| There is an input bound by a column, but the column type and the Format Type do not match | Tipe Column tidak cocok dengan [[^field|Format Type]] yang diatur pada Elemen input. | Samakan [[^field|Format Type]] pada Elemen input dengan tipe Column, atau pilih Column lain. |
 
 >**warning** Mengganti Table pada Layout memicu pesan kesalahan
-> Bila Table pada Layout diganti, Elemen input di dalamnya akan menampilkan pesan [[^field|There is an input bound by a column, but the header is not defined yet]] atau [[^field|The selected column and its header do not match]]. Pilih ulang [[^field|Column]] pada setiap Elemen input terdampak.
-
-## Contoh Penggunaan
-
-**Form pendaftaran peserta dengan data berelasi**
-
-Panitia ingin satu Form mencatat data diri peserta sekaligus riwayat pendidikannya. Data diri masuk ke satu Table, riwayat pendidikan masuk ke Table lain yang berelasi, dan pengurus dapat mencari pendaftar lewat namanya.
-
-**Komponen yang terlibat**
-
-| Komponen | Peran |
-| -------- | ----- |
-| [[^field/form|Form Pendaftaran Peserta]] | Form yang diisi pengisi. |
-| [[^field/table|Data Peserta]] | Table header untuk data diri. |
-| [[^field/table|Riwayat Pendidikan]] | Table relasi dengan Column [[^field/column|Peserta]] bertipe [[Docs/Tipe Data/Row|Row]] dengan [[^field|Header]] [[^field/table|Data Peserta]]. |
-
-**Pengaturan Binding**
-
-| Elemen | Binding | Keterangan |
-| ------ | ------- | ---------- |
-| [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]] "Data Diri" | [[^value/radio|table]]: [[^field/table|Data Peserta]] | Menjadi header bagi Elemen di dalamnya. |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]] "Nama Lengkap" | Column [[^field/column|Nama]], [[^field|As Title]] [[^value/radio|Yes]], Alias `nama` | Menjadi title Submission. |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]] "Email" | Column [[^field/column|Email]], Alias `email` | Dapat dirujuk Elemen lain. |
-| [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]] "Pendidikan" | [[^value/radio|pivot]]: Column [[^field/column|Peserta]] | Relasi ke [[^field/table|Riwayat Pendidikan]]. |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]] "Nama Sekolah" | Column [[^field/column|Nama Sekolah]] | Tersimpan di Table relasi. |
-| [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]] "Konfirmasi Email" | [[^field|Visible]] dengan expression `email not empty` | Muncul setelah Email diisi, memakai Alias. |
-
-**Hasil yang dirasakan**
-
-- Satu pengisian menambah Row baru di Table data diri dan menambah Row di Table relasi yang otomatis terhubung ke Row data diri tersebut.
-- Pengurus mencari pendaftar di Submission List lewat nama karena title Submission adalah nama lengkap.
-- Form menyesuaikan diri tanpa pengisi menyadarinya karena Elemen dapat saling merujuk lewat Alias.
-
-**Ide skenario lain**
-
-| Kebutuhan | Binding |
-| --------- | ------- |
-| Daftar item dalam satu pesanan | Elemen input multi row dengan pivot ke Table item |
-| Cari pengajuan lewat nama pemohon | [[^field|As Title]] [[^value/radio|Yes]] pada Column nama pemohon |
-| Isian muncul bergantung pada isian lain | Alias dipakai pada expression [[^field|Visible]] |
-
-Binding menghubungkan isian pengisi langsung ke data Anda, lengkap dengan relasi dan pencariannya.
+> Bila Table pada Layout diganti, Elemen input di dalamnya akan menampilkan pesan error. Pilih ulang [[^field|Column]] pada setiap [[Docs/Modul Interface/Form/Elemen Form/Input/Pengenalan|Elemen Input]]yang terdampak.
 
 ## Praktik Terbaik
 
->**success** Rancang Binding dari Table terlebih dahulu
-> - Tentukan **Table header pada Layout paling atas** sebelum mengatur Elemen input.
-> - Pastikan **relasi Table sudah ada** (Column bertipe Row) sebelum memakai pivot.
-> - Pilih **satu isian yang mudah dicari**, seperti nama pengisi, sebagai title Submission.
-> - Beri **Alias singkat, jelas, dan unik** hanya pada Elemen yang akan dirujuk Elemen lain.
-> - Setelah mengganti Table pada Layout, **periksa ulang Column** pada setiap Elemen input di dalamnya.
-> - Perhatikan **pesan *binding checker*** dan selesaikan sebelum membagikan Form.
+- Rancang Binding dari Table terlebih dahulu
+ - Tentukan **Table header pada Layout paling atas** sebelum mengatur Elemen input.
+ - Pastikan **relasi Table sudah ada** (Column bertipe Row) sebelum memakai pivot.
+ - Pilih **satu isian yang mudah dicari**, seperti nama pengisi, sebagai title Submission.
+ - Beri **Alias singkat, jelas, dan unik** hanya pada Elemen yang akan dirujuk Elemen lain.
+ - Setelah mengganti Table pada Layout, **periksa ulang Column** pada setiap Elemen input di dalamnya.
+ - Perhatikan **pesan *binding checker*** dan selesaikan sebelum membagikan Form.
 
 ## Batasan dan Catatan
 

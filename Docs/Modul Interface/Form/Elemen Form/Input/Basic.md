@@ -20,31 +20,6 @@ Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Eleme
 - **Nilai bawaan siap pakai.** [[^field|Default Value]] mengisi field otomatis saat pengisi membuka Form.
 - **Kontrol kondisi tampil dan aktif.** [[^field|Visible]], [[^field|Enable]], dan [[^field|Readonly]] mengatur perilaku field tanpa menghapusnya.
 
-## Konsep Utama
-
-| Istilah | Penjelasan |
-| --- | --- |
-| [[Docs/Tipe Data/Column]] | Kolom Table tempat isian Basic disimpan. |
-| [[#Binding Basic|Binding]] | Ikatan Basic ke Table dan Column agar isian tersimpan pada Row yang tepat. |
-| [[#State Basic|State]] | Pengaturan kondisi field: [[^field|Visible]], [[^field|Enable]], dan [[^field|Readonly]]. |
-| [[#Validators|Validators]] | Aturan yang harus dipenuhi pengisi agar dapat mengirim Form. Saat ini baru [[^field|Required]]. |
-| [[#Attributes Basic|Attributes]] | Pengaturan tampilan dan nilai awal: [[^field|Label]], [[^field|Placeholder]], [[^field|Format Type]], dan [[^field|Default Value]]. |
-
-## Cara Kerja Basic
-
-Basic terikat ke Column pada Table yang ditentukan Layout di atasnya, lalu isian pengguna dikirim sebagai Submission dan disimpan pada Row.
-
-```mermaid
-flowchart LR
-  A["Layout"] -.->|&nbsp;Binding&nbsp;| B["Table"]
-  A -->|&nbsp;Submission&nbsp;| R["Row"]
-  A -->|&nbsp;Berisi&nbsp;| C["Basic"]
-  C -.->|&nbsp;Binding&nbsp;| D["Column"]
-  E["Pengisi"] -->|&nbsp;Mengisi&nbsp;| C
-  R -->|&nbsp;Relasi&nbsp;| F
-  C -->|&nbsp;Submission&nbsp;| F["TableData"]
-```
-
 ## Menambahkan Basic
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]]
@@ -102,39 +77,3 @@ Selain tombol [[^button/delete|Remove]], Header Toolbar Basic memiliki pengatura
 ### Parent
 
 Menampilkan Layout tempat Basic berada. Mengubah ukuran, *padding*, dan *margin* Basic dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
-
-## Praktik Terbaik
-
-- **Ikat ke Column yang tepat.** [[^field|Format Type]] mengikuti Column, jadi pilih Column dengan tipe yang sesuai.
-- **Tandai field penting dengan Required.** Aktifkan [[^field|Required]] hanya pada isian yang benar-benar wajib.
-- **Gunakan Default Value untuk isian umum.** Isi [[^field|Default Value]] agar pengisi tidak mengetik hal yang sama berulang.
-- **Beri Placeholder yang jelas.** [[^field|Placeholder]] membantu pengisi memahami format isian.
-
-## Batasan dan Catatan
-
-- [[^field|Format Type]] mengikuti Column pada Binding.
-- [[^field|Required]] adalah satu-satunya validator saat ini, dan tidak berlaku jika [[^field|Visible]] atau [[^field|Enable]] bernilai [[^value/boolean/false]].
-- Jika [[^field|Enable]] bernilai [[^value/boolean/false]], isian tidak berpengaruh ke Row.
-- [[^field|Readonly]] hanya mencegah pengisi mengubah isi, tidak menonaktifkan Binding.
-- [[^field|Default Value]] berlaku saat pengisi baru (publik) membuka Form.
-
-## TL:DR
-
-- **Definisi.** Basic adalah [[Docs/Modul Interface/Form/Apa itu Form#Elemen Input|Elemen Input]] untuk mengisi satu [[Docs/Tipe Data/Column]].
-- **Binding.** Pilih [[^field|Table]] dan [[^field|Column]]; [[^field|Format Type]] mengikuti Column.
-- **Kondisi.** [[^field|Visible]], [[^field|Enable]], dan [[^field|Readonly]] mengatur tampil, aktif, dan bisa diubahnya field.
-- **Validasi.** [[^field|Required]] mewajibkan pengisi mengisi field sebelum mengirim Form.
-- **Nilai awal.** [[^field|Default Value]] terisi otomatis saat pengisi membuka Form.
-- **Hati-hati.** [[^field|Enable]] [[^value/boolean/false]] membuat isian tidak berpengaruh ke Row.
-
-## FAQ : Pertanyaan yang Sering Diajukan
-
-> **faq**
-> **Apa bedanya Enable dan Readonly?**
-> [[^field|Enable]] mengaktifkan Binding, sehingga jika [[^value/boolean/false]] isian tidak berpengaruh ke Row. [[^field|Readonly]] hanya membuat isi tidak dapat diubah.
-> **Mengapa Required saya tidak berlaku?**
-> [[^field|Required]] tidak berlaku jika [[^field|Visible]] atau [[^field|Enable]] bernilai [[^value/boolean/false]].
-> **Dari mana Format Type ditentukan?**
-> [[^field|Format Type]] mengikuti [[Docs/Tipe Data/Column]] yang diikat pada Binding.
-> **Kapan Default Value dipakai?**
-> Saat pengisi baru (publik) membuka Form, [[^field|Default Value]] menjadi nilai bawaan field.

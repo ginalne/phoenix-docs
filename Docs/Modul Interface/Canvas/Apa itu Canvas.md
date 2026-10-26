@@ -67,6 +67,10 @@ Kartu didalam Canvas bisa disesuaikan sesuai kebutuhan agar membuat interaksi me
 
 Selengkapnya tentang penjelasan khusus setiap Elemen dapat dilihat pada halaman masing-masing di [[#Memahami Elemen]].
 
+## Hak Akses
+
+Penjelasan tentang pengelolaan Hak Akses dalam komponen Canvas lihat selengkapnya di [[Docs/Modul Interface/Canvas/Hak Akses]].
+
 ## Praktik Terbaik
 
 - **Pisahkan tampilan dan data.** Gunakan Canvas untuk menyajikan data, dan kelola Row di [[Docs/Modul Data/Table/Apa itu Table|Table]] atau [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]].

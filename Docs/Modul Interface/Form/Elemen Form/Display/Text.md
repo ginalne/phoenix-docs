@@ -54,35 +54,3 @@ Menampilkan Layout tempat Text berada. Ukuran, *padding*, dan *margin* Text diat
 
 ![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-text.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
-
-## Praktik Terbaik
-
-- **Singkat dan jelas.** Tulis [[^field|Content]] seperlunya agar pengisi tidak kewalahan.
-- **Gunakan ukuran dan bold untuk judul.** Atur lewat [[#Header Toolbar teks|Header Toolbar teks]] agar judul menonjol.
-- **Letakkan petunjuk dekat isian.** Taruh Text tepat di atas Elemen Input yang dijelaskan.
-- **Gunakan Visible untuk petunjuk kondisional.** Sembunyikan Text dengan [[^field|Visible]] bila tidak diperlukan.
-
-## Batasan dan Catatan
-
-- [[^field|Content]] saat ini hanya teks statis dan belum mendukung [[Docs/Tipe Data/Expression]].
-- Panel Text tidak memiliki bagian Binding.
-- Text tidak menambah isian ke Table dan tidak ikut dikirim sebagai Submission.
-- Ukuran, *padding*, dan *margin* Text diatur lewat Layout Panel.
-
-## TL:DR
-
-- **Definisi.** Text adalah [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] untuk menampilkan teks statis.
-- **Isi.** Atur teks lewat [[^field|Content]]; belum mendukung [[Docs/Tipe Data/Expression]].
-- **Tampilan.** Ukuran dan gaya teks diatur dari [[#Header Toolbar teks|Header Toolbar teks]].
-- **Kondisi.** [[^field|Visible]] menampilkan atau menyembunyikan Text.
-- **Hati-hati.** Text tidak memiliki Binding dan tidak ikut dikirim sebagai Submission.
-
-## FAQ : Pertanyaan yang Sering Diajukan
-
-> **faq**
-> **Apakah Content dapat menampilkan nilai dari Binding?**
-> Belum. [[^field|Content]] saat ini hanya teks statis dan belum dapat berisi [[Docs/Tipe Data/Expression]]. Jika ingin membuat tampilan text berisi [[Docs/Tipe Data/Expression]], gunakan Basic Input dengan [[^field|Read Only]] = [[^value/boolean/Active]].
-> **Bagaimana mengubah ukuran teks?**
-> Klik kiri Text di Edit Mode, lalu gunakan pengaturan ukuran font pada [[#Header Toolbar teks|Header Toolbar teks]].
-> **Apakah isi Text dikirim sebagai Submission?**
-> Tidak. Text hanya ditampilkan dan tidak menambah isian ke Table.

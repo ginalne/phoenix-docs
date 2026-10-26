@@ -1,12 +1,12 @@
 ---
     status: draft
-    title: Validators Elemen Form
+    title: Validators dalam Elemen Form
     description: Penjelasan Validators pada Elemen input Form (saat ini Required) dan cara mengisinya dengan nilai statis atau expression.
     pageDecoration:
       tree:
         priority: 4
 ---
-# Validator Elemen Form
+# Validator dalam Elemen Form
 
 >**note** Validator merupakan bagian dari [[Docs/Modul Interface/Form/Apa itu Form#Properties Panel|Properties Panel]] pada Elemen input di komponen [[Docs/Modul Interface/Form/Apa itu Form|Form]], salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
 
