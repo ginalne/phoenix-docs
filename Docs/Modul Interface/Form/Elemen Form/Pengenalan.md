@@ -32,7 +32,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
 
 ## Menu Konteks Elemen
 
-Klik kanan pada Elemen untuk membuka menu konteks.
+Klik kanan pada Elemen untuk membuka menu konteks, penjelasan dari setiap menu dapat dilihat dalam tabel.
 
 | Menu | Fungsi |
 | --- | --- |
@@ -40,3 +40,4 @@ Klik kanan pada Elemen untuk membuka menu konteks.
 | [[^field/paste|Paste Layout Style]] | Menerapkan salinan konfigurasi *styling* Elemen. |
 | [[^field/up|Move Back]] | Memindahkan posisi dengan Elemen sebelumnya (tidak berpengaruh jika Elemen berada di barisan pertama). |
 | [[^field/down|Move Next]] | Memindahkan posisi dengan Elemen setelahnya (tidak berpengaruh jika Elemen berada di barisan akhir). |
+| [[^field/delete|Delete]] | Menghapus Elemen |

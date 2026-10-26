@@ -65,11 +65,9 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
 
 Penjelasan antarmuka Form lihat selengkap nya di [[Docs/Modul Interface/Form/Antarmuka|Antarmuka Form]].
 
-## Mengatur Template Kartu
+## Mengelola Templat Form
 
-Kartu didalam Form bisa disesuaikan sesuai kebutuhan agar membuat interaksi menjadi lebih mudah, selengkapnya lihat [[Docs/Modul Interface/Form/Mengatur Templat]].
-
-Selengkapnya tentang penjelasan khusus setiap Elemen dapat dilihat pada halaman masing-masing di [[#Memahami Elemen]].
+Form dapat di desain dan disesuaikan sesuai kebutuhan agar membuat pengumpulan data menjadi lebih mudah menggunakan Elemen Form, selengkapnya lihat [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]].
 
 ## Praktik Terbaik
 

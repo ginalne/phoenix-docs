@@ -24,7 +24,7 @@ Canvas memberi fleksibilitas untuk membuat diagram, tabel, maupun proyeksi tanpa
 - **Banyak jenis tampilan dalam satu halaman.** Teks, grafik, tabel, kanban, gantt, timeline, gallery, dan space dapat dikombinasikan dalam satu Canvas.
 - **Mulai lebih cepat dengan Template.** [[#Template Canvas|Template]] menggabungkan banyak widget yang sudah didesain dan siap dipakai.
 - **Terhubung dengan logika.** Widget Button dapat memicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] atau membuka komponen lain.
-- **Satu desain untuk banyak data.** [[#Binding Canvas|Binding]] membuat tampilan yang sama menyesuaikan informasinya dengan nilai parameter yang berbeda.
+- **Satu desain untuk banyak data.** [[#Binding Canvas|Binding]] membuat tampilan yang sama menyesuaikan inCanvasasinya dengan nilai parameter yang berbeda.
 - **Mudah dibagikan.** Canvas dapat dipublikasikan dan dibuka melalui satu tautan.
 - **Data sumber tetap aman.** Menghapus Canvas hanya menghapus template dan propertinya, bukan data sumber.
 
@@ -41,6 +41,31 @@ Canvas memberi fleksibilitas untuk membuat diagram, tabel, maupun proyeksi tanpa
 | [[#Binding Canvas|Binding]]                                  | Parameter Canvas yang dapat dipakai dalam Query widget dan memiliki nilai bawaan.                                                |
 | [[#Mempublikasikan Canvas|Publish]]                          | Konfigurasi untuk mengubah Canvas menjadi tautan yang dipublikasikan.                                                            |
 | [[Docs/Tipe Data/Query]]                                      | Tipe Data yang dipakai widget untuk mengambil dan menyaring data sumber.                                                         |
+
+## Cara Kerja
+
+Penjelasan cara kerja Canvas lihat selengkap nya di [[Docs/Modul Interface/Canvas/Cara Kerja|Cara Kerja Canvas]].
+
+## Mengelola Canvas
+
+Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+1. [[Docs/Modul Interface/Canvas/Membuat Baru]] Canvas dalam halaman kerja.
+2. [[Docs/Modul Interface/Canvas/Mengubah]] Atribut Canvas seperti [[^field|Name]], [[^field|Description]], atau [[^field|Filter]].
+3. [[Docs/Modul Interface/Canvas/Menghapus]] Canvas.
+4. [[Docs/Modul Interface/Canvas/Canvas Page|Mengelola Alur Halaman]] dalam Canvas.
+5. [[Docs/Modul Interface/Canvas/Binding|Memahami Binding]] dalam Canvas.
+8. [[Docs/Modul Data/Table/Mempublikasi]]: mengatur publikasi Table.
+9. [[Docs/Modul Data/Table/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
+
+## Antarmuka
+
+Penjelasan antarmuka Canvas lihat selengkap nya di [[Docs/Modul Interface/Canvas/Antarmuka|Antarmuka Canvas]].
+
+## Mengatur Template Kartu
+
+Kartu didalam Canvas bisa disesuaikan sesuai kebutuhan agar membuat interaksi menjadi lebih mudah, selengkapnya lihat [[Docs/Modul Interface/Canvas/Mengatur Templat]].
+
+Selengkapnya tentang penjelasan khusus setiap Elemen dapat dilihat pada halaman masing-masing di [[#Memahami Elemen]].
 
 ## Praktik Terbaik
 
@@ -60,7 +85,7 @@ Canvas memberi fleksibilitas untuk membuat diagram, tabel, maupun proyeksi tanpa
 - Widget yang menyerupai komponen Interface lain bersifat lite. Query diatur melalui [[^button/q]], sedangkan isinya (data hasil [[Docs/Tipe Data/Query|Query]]) tidak dapat dimanipulasi dari Canvas.
 - Canvas hanya memiliki satu jenis [[#Layout Canvas|Layout]], yang dapat ditumpuk di dalam Layout lain. Tipe horizontal atau vertical dapat diubah dengan toggle pada header toolbar.
 - Panel tata letak pada [[#Header Toolbar dan Design Toolbar|design toolbar]] sama di semua widget, sedangkan header toolbar dan panel tampilan bersifat unik untuk setiap widget.
-- Nama [[#Binding Canvas|Binding]] harus unik dan dipakai dalam Query widget. [[^field|Header]] bernilai N/A bila Format tidak membutuhkannya.
+- Nama [[#Binding Canvas|Binding]] harus unik dan dipakai dalam Query widget. [[^field|Header]] bernilai N/A bila Canvasat tidak membutuhkannya.
 - [[^button/refresh|Refresh]] tidak dapat dilakukan ketika Canvas sedang menyimpan perubahan.
 - Tautan [[#Mempublikasikan Canvas|Publish]] yang Active dapat dibuka publik dalam View Mode, termasuk menekan widget Button.
 - Menghapus Canvas hanya menghapus template dan properti termasuk Query. Data sumber tetap aman, tetapi tautan yang sudah dibagikan melalui [[#Mempublikasikan Canvas|Publish]] menjadi tidak valid.
