@@ -27,20 +27,20 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Input Basic
 
-Klik kiri Display Chrono di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+Klik kiri Input Basic di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label Column (berikon kolom) juga tampil di atas Input Basic sebagai informasi Binding.
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-accordion.png]]
-Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Accordion]].
+![[Docs/Modul Interface/Form/Elemen Form/Input/toolbar-form-input.png]]
+Selain tombol [[^button/delete|Remove]], Header Toolbar Input Basic memiliki pengaturan teks untuk Label: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks Label yang sedang dipilih.
+
+<!--
+  * [TODO] Tempatkan screenshot Header Toolbar Input Basic (toolbar-form-input.png) di folder Input. Gambar sebelumnya (header-form-accordion.png) berasal dari halaman Accordion.
+-->
 
 ### Properties Panel
 
-Selain tombol [[^button/delete|Remove]], Header Toolbar Input Basic memiliki pengaturan teks untuk Label: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks Label yang sedang dipilih.
-
 ![[Docs/Modul Interface/Form/Elemen Form/Input/properties-form-input.png]]
-Klik kiri Input Basic di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar. Label Column (berikon kolom) juga tampil di atas Input Basic sebagai informasi Binding.
-
 #### Binding
 
 | Bagian | Fungsi |
@@ -89,4 +89,4 @@ Mengubah ukuran, *padding*, dan *margin* Input Basic dilakukan lewat Layout Pane
 Langkah menghapus Input Basic sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Input Basic
-> Menghapus Input Basic akan menghapus seluruh step di dalamnya. Aksi tidak bisa dikembalikan.  
+> Menghapus Input Basic akan menghapus isian ini dari Form. Aksi tidak bisa dikembalikan.
