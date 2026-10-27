@@ -24,7 +24,7 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Display Text
 
-Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]].
+Klik kiri Display Text di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]].
 
 ### Header Toolbar
 
@@ -54,5 +54,5 @@ Menampilkan Layout tempat Display Text berada. Ukuran, *padding*, dan *margin* D
 
 Langkah menghapus Display Text sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
 
->**danger** Dampak penghapusan Card
-> Menghapus Card akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.
+>**danger** Dampak penghapusan Display Text
+> Menghapus Display Text akan menghapus teks beserta isinya. Aksi tidak bisa dikembalikan.
