@@ -22,7 +22,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 ## Mengonfigurasi Layout Accordion
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/accordion-header-form.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-accordion.png]]
 ![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-accordion.png]]
 Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Layout Accordion sebagai informasi Binding.
 

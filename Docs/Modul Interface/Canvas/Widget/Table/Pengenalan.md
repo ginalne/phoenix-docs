@@ -11,13 +11,6 @@ Widget Table adalah widget untuk menampilkan data [[Docs/Modul Data/Table/Apa it
 
 Widget Table bekerja seperti [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] dalam versi lite: widget hanya menyajikan satu data, dan isinya tidak dapat dimanipulasi dari Canvas.
 
-## Mengapa Menggunakan Widget Table?
-
-- **Tabel ringkas di tengah desain.** Anda dapat menempatkan tabel berdampingan dengan grafik, teks, dan widget lain dalam satu Canvas.
-- **Mudah ditelusuri.** Pagination dan toolbar search dapat diaktifkan sesuai kebutuhan pembaca.
-- **Hanya menampilkan yang perlu.** Kolom dan baris ditentukan oleh [[Docs/Tipe Data/Query]], sehingga tampilan tetap ringkas.
-- **Data sumber tetap aman.** Isi widget tidak dapat diubah dari Canvas, sehingga cocok untuk dibagikan melalui [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas|Publish]].
-
 ## Menambahkan Widget Table
 
 1. Pindah ke Edit Mode melalui toggle [[^field|mode]] pada [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mode View dan Edit|Canvas]]
@@ -27,11 +20,6 @@ Widget Table bekerja seperti [[Docs/Modul Interface/Table View/Apa itu Table Vie
 
 >**success** Widget Table berhasil ditambahkan
 > Widget tampil di Canvas. Klik kiri widget untuk menampilkan [[#Antarmuka Widget Table|header toolbar dan design toolbar]].
-
-<!--
-  * [TODO] Konfirmasi: tampilan widget sebelum Data dipilih (kosong, pesan khusus, atau Empty) dan cara memilih Table pada Data (dropdown atau popup).
-  * [TODO] Konfirmasi: apakah `/table` (Add table) langsung menambahkan Widget Table atau menampilkan pilihan lain pada dropdown.
--->
 
 ## Antarmuka Widget Table
 
@@ -90,6 +78,7 @@ Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
 
 <!--
   * [TODO] Ikon tabel di sebelah kiri tombol 123 pada header toolbar belum dijelaskan penulis. Mohon jelaskan fungsinya.
+    Jawaban : Ikon tabel disebelah
   * [TODO] Konfirmasi bahwa Widget Table memang tidak memiliki panel tampilan (palet) seperti Widget Chart Pie, atau panel tersebut tersembunyi.
   * [TODO] Konfirmasi fungsi tombol Expand pada design toolbar (pada screenshot aktif dengan h = 40%) dan arti panah ▼ di sisi kiri panel (diasumsikan melipat panel).
   * [TODO] Konfirmasi: nama tombol kaca pembesar (diberi nama Search), cakupan Search Data... (diasumsikan semua kolom, seperti Table View), dan apakah toolbar search serta pagination yang aktif juga tampil pada View Mode dan tautan Publish.

@@ -7,20 +7,13 @@
 
 >**note** Text merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Text adalah [[Docs/Modul Interface/Form/Elemen Form/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan teks statis di Form, misalnya judul, keterangan, atau petunjuk pengisian.
+Display Text adalah [[Docs/Modul Interface/Form/Elemen Form/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan teks statis di Form, misalnya judul, keterangan, atau petunjuk pengisian.
 
-Dengan Text, Anda dapat memberi konteks kepada pengisi tanpa memengaruhi data. Teksnya dapat diatur ukuran dan gayanya langsung dari Header Toolbar.
+Dengan Display Text, Anda dapat memberi konteks kepada pengisi tanpa memengaruhi data. Teksnya dapat diatur ukuran dan gayanya langsung dari Header Toolbar.
 
-Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen Form/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Text.
+Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen Form/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Text.
 
-## Mengapa Menggunakan Text?
-
-- **Pengisi lebih paham.** Judul dan petunjuk membuat tujuan Form dan cara mengisinya jelas.
-- **Mudah diatur.** Isi teks cukup diubah pada field [[^field|Content]], tanpa Binding.
-- **Tampilan dapat disesuaikan.** Ukuran font, *bold*, *italic*, *underline*, dan rata teks diatur dari Header Toolbar.
-- **Tidak memengaruhi data.** Text hanya menampilkan informasi, sehingga tidak menambah isian ke Table.
-
-## Menambahkan Text
+## Menambahkan Display Text
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] pada [[Docs/Modul Interface/Form/Antarmuka|halaman kerja Form]]
 2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Layout]]
@@ -29,18 +22,18 @@ Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Eleme
 
 Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]].
 
-## Mengonfigurasi Text
+## Mengonfigurasi Display Text
 
 ![[Docs/Modul Interface/Form/Elemen Form/Display/properties-form-text.png]]
 Klik kiri Text di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar.
 
-### State Text
+### State Display Text
 
 | State | Fungsi |
 | --- | --- |
 | [[^field|Visible]] | Menampilkan atau menyembunyikan Text. |
 
-### Attributes Text
+### Attributes Display Text
 
 | Atribut | Fungsi |
 | --- | --- |
@@ -48,9 +41,20 @@ Klik kiri Text di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mo
 
 ### Parent
 
-Menampilkan Layout tempat Text berada. Ukuran, *padding*, dan *margin* Text diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
+Menampilkan Layout tempat Display Text berada. Ukuran, *padding*, dan *margin* Display Text diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
 
 ### Header Toolbar teks
 
 ![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-text.png]]
-Selain tombol [[^button/delete|Remove]], Header Toolbar Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
+Selain tombol [[^button/delete|Remove]], Header Toolbar Display Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
+
+### Children
+
+Tidak ada elemen apapun sebagai anak pada Display Text.
+
+## Menghapus Display Text
+
+Langkah menghapus Display Text sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+
+>**danger** Dampak penghapusan Card
+> Menghapus Card akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.

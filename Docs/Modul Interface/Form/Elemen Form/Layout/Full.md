@@ -20,7 +20,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 ## Mengonfigurasi Layout Full
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/full-header-form.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-full.png]]
 ![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-full.png]]
 Klik kiri Layout Full di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Layout Full sebagai informasi Binding.
 
@@ -52,9 +52,13 @@ Tidak ada atribut yang dapat dikonfigurasi pada Layout Full.
 
 Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Layout Full. Setiap baris diberi kategori ([[^field|layout]], [[^field|display]] atau [[^field|input]]) dan nama Elemen. Tambahkan Elemen baru lewat [[^field|Type something here to add...]] di bagian bawah Layout Full.
 
+### Attribute
+
+Tidak ada atribut yang dapat dikonfigurasi pada Layout Card.
+
 ## Menghapus Layout Full
 
 Langkah menghapus Layout Full sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan LayoutFull
-> Menghapus LayoutFull akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.
+> Menghapus Layout Full akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.

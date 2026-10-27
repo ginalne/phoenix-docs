@@ -23,7 +23,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 ## Mengonfigurasi Layout Split
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/split-header-form.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-split.png]]
 ![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-split.png]]
 Klik kiri Layout Split di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Layout Split sebagai informasi Binding.
 
@@ -45,7 +45,7 @@ Binding dalam Layout Split sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul
 
 ### State
 
-State dalam LayoutSplit sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
+State dalam Layout Split sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
 
 ### Attribute
 
@@ -59,5 +59,5 @@ Layout Split memiliki dua sisi, kiri dan kanan, dan setiap sisi adalah Layout [[
 
 Langkah menghapus Layout Split sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
 
->**danger** Dampak penghapusan Split
-> Menghapus Split akan menghapus semua Elemen di sisi kiri dan sisi kanan. Aksi tidak bisa dikembalikan.
+>**danger** Dampak penghapusan LayoutSplit
+> Menghapus Layout Split akan menghapus semua Elemen di sisi kiri dan sisi kanan. Aksi tidak bisa dikembalikan.
