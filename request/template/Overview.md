@@ -12,7 +12,7 @@
 >Sekolah dalam studi kasus ini fiktif, dibuat sebagai ilustrasi. Angka yang tertera adalah contoh, bukan hasil peninjauan.
 
 ## Ringkasan
-Sekolah menengah dengan 600 siswa, masih melakukan kegiatan akademik seperti pencatatan penilaian, kehadiran, dan kalender, dengan kertas atau spreadsheet manual. Dan masih memberi pengumuman secara manual satu per satu, kemudian semua proses tersebut disatukan kedalam satu Pro di Phoenix. Dengan kondisi khusus dimana setiap peran, yaitu guru, wali kelas, tata usaha, dan kepala sekolah hanya melihat dan mengubah data yang menjadi bagiannya. 
+Sekolah menengah dengan 600 siswa, masih melakukan kegiatan akademik seperti pencatatan penilaian, kehadiran, dan kalender akademik, dengan kertas atau spreadsheet manual. Dan masih memberi pengumuman secara manual satu per satu, kemudian semua proses tersebut disatukan kedalam satu Pro di Phoenix. Dengan kondisi khusus dimana setiap peran, yaitu guru, wali kelas, tata usaha, dan kepala sekolah hanya melihat dan mengubah data yang menjadi bagiannya. 
 
 ### Situasi
 Setiap awal semester, guru mata pelajaran membuat catatan atau spreadsheet nilai sendiri. Wali kelas mencatat kehadiran di buku, lalu tata usaha mengetik ulang ke dalam dokumen digital. Menjelang pembagian rapor, kepala sekolah meminta rekap data (data apa saja? prefer disebutkan), lalu staf menggabungkan belasan file secara manual.
