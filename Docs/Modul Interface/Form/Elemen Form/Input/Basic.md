@@ -2,6 +2,9 @@
     status: release
     title: Input Basic (Elemen Input)
     description: Input Basic adalah Elemen Input pada Form untuk mengisi satu Column dari Table, dengan format isian yang mengikuti Column tersebut.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Input : Input Basic
 
