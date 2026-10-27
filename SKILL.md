@@ -313,6 +313,20 @@ Catatan format:
 - Label pilihan di Start Building mengikuti pola `[[^field|Card Layout]]`; untuk Layout lain diasumsikan `Full Layout`, `Split Layout`, `Accordion Layout` dan ditandai TODO.
 - Contoh Penggunaan Elemen tidak wajib; bila ada, tidak memakai diagram Flow.
 
+#### 4b. Halaman Elemen Display (`Docs/Modul Interface/Form/Elemen Form/Display/<Nama>`)
+
+Acuan: halaman Display Text yang sudah final. Berbeda dengan Elemen Layout, halaman Display **tidak memakai bagian "Mengapa Menggunakan"**.
+
+- Front matter: `title: "Form Display : <Nama>"` (diberi tanda kutip karena memuat titik dua) dan H1 `# Form Display : <Nama>`. Deskripsi: `<Nama> adalah Elemen Display pada Form untuk ...`.
+- Urutan: callout `>**note**` pengenalan (tautan ke `Apa itu Form#Elemen Display`), paragraf definisi ("Display <Nama> adalah Elemen Display yang dapat digunakan untuk ..."), paragraf manfaat (memberi informasi tanpa memengaruhi data), paragraf penunjuk ke `Apa itu Form#Mengelola Elemen Form` ("Halaman ini fokus pada keunikan Display <Nama>."), `## Menambahkan Display <Nama>` (daftar bernomor 4 langkah: Edit Mode, klik `[[^field|Type something here to add...]]`, pilih Elemen dari daftar, isi atribut), `## Mengonfigurasi Display <Nama>`, `## Menghapus Display <Nama>`.
+- Mengonfigurasi: kalimat "Klik kiri Display <Nama> di Edit Mode ...", lalu `### Header Toolbar` (gambar `toolbar-form-<nama>.png`), lalu `### Properties Panel` (gambar `properties-form-<nama>.png`) dengan `#### State` (tabel, Visible), `#### Attributes` (tabel Atribut dan Fungsi, atau kalimat bila kosong), dan `#### Parent` (kalimat penunjuk ke Layout Panel).
+- Header Toolbar: semua Display hanya memiliki tombol `[[^button/delete|Remove]]`, kecuali Text yang juga memiliki pengaturan teks.
+- Bila Elemen punya interaksi langsung di halaman (misalnya Table dan Chrono), tambahkan `## Mengelola <Hal>` di antara Menambahkan dan Mengonfigurasi, berisi tabel Aksi dan Cara. Menu klik kanan memakai `[[^field/<slug>|<Label>]]`, tombol ikon tanpa label memakai `[[^button/add]]`.
+- Callout `>**danger**` di akhir harus menyebut Elemen halaman itu dan dampak yang benar. Elemen Display tidak menampung Elemen lain, jadi dampaknya hanya hilangnya Elemen beserta isinya.
+- Penulis menemukan salin-tempel keliru pada halaman final (kalimat "Klik kiri Layout Accordion" di halaman Text dan callout "Dampak penghapusan Card"). Setelah menyalin pola dari halaman lain, periksa ulang semua nama Elemen, termasuk di callout.
+- Bila fitur belum dibuat, usulkan nama isian dan ketentuan terbaik, lalu tandai dengan TODO bahwa itu usulan.
+- Nama Elemen di UI mengikuti path halaman (misalnya `Qr`), bukan singkatan umum (`QR`).
+
 ### 5. Halaman pendamping Properties Panel (State dan Validators)
 
 - Bagian Properties Panel yang berlaku untuk banyak Elemen dijelaskan di halaman pendamping Form, bukan diulang di setiap halaman Elemen: `Docs/Modul Interface/Form/Elemen Form/State` dan `Docs/Modul Interface/Form/Elemen Form/Validators`. Halaman Elemen cukup menyebut State atau Validators apa saja yang tersedia untuk Elemen itu dan menautkan ke halaman pendamping.
