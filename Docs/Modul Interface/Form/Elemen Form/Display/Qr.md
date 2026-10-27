@@ -1,7 +1,10 @@
 ---
-    status: draft
+    status: release
     title: "Form Display : Qr"
     description: Qr adalah Elemen Display pada Form untuk menampilkan kode QR yang siap di-scan, dengan isi yang diatur lewat atribut Content.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Display : Qr
 
@@ -52,11 +55,6 @@ Header Toolbar Display Qr hanya memiliki tombol [[^button/delete|Remove]] untuk 
 #### Parent
 
 Menampilkan Layout tempat Display Qr berada. Ukuran, *padding*, dan *margin* Display Qr diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
-
-<!--
-  * [TODO] Tempatkan screenshot Header Toolbar (toolbar-form-qr.png) dan Properties Panel (properties-form-qr.png) di folder Display. Anotasi yang disarankan: nomor 1 pada tombol Remove, nomor 2 pada Content. Tambahkan juga gambar View Mode yang menampilkan kode QR sebenarnya.
-  * [TODO] Konfirmasi penulisan nama Elemen di UI: "Qr" (mengikuti path) atau "QR".
--->
 
 ## Menghapus Display Qr
 

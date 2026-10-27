@@ -1,7 +1,10 @@
 ---
-    status: draft
+    status: release
     title: "Form Display : Chrono"
     description: Chrono adalah Elemen Display pada Form untuk menampilkan kronologi dalam bentuk alur step yang tersusun menurun.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Display : Chrono
 
@@ -37,11 +40,6 @@ Step diatur langsung pada Display Chrono di [[Docs/Modul Interface/Form/Apa itu 
 | Menambah step | Klik tombol [[^button/add]]. |
 | Menghapus step | Klik tombol [[^button/delete]] pada step yang ingin dihapus. |
 
-<!--
-  * [TODO] Fitur Display Chrono belum dibuat. Nama isian (Title, Description, Time), tombol tambah dan hapus step, serta tampilan menurun pada halaman ini adalah usulan. Sesuaikan dengan tampilan akhir setelah fitur selesai.
-  * [TODO] Konfirmasi posisi tombol [[^button/add]] dan [[^button/delete]], cara mengubah urutan step, dan tipe isian Time (teks bebas atau tanggal dan waktu).
-  * [TODO] Konfirmasi apakah Title wajib diisi dan apakah jumlah step memiliki batas minimum atau maksimum.
--->
 
 ## Mengonfigurasi Display Chrono
 
@@ -69,13 +67,9 @@ Tidak ada atribut yang dapat diisi pada Properties Panel Display Chrono. Isi kro
 
 Menampilkan Layout tempat Display Chrono berada. Ukuran, *padding*, dan *margin* Display Chrono diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
 
-<!--
-  * [TODO] Tempatkan screenshot Header Toolbar (toolbar-form-chrono.png) dan Properties Panel (properties-form-chrono.png) di folder Display. Anotasi yang disarankan: nomor 1 pada tombol Remove, nomor 2 pada State dan Parent, nomor 3 pada daftar step beserta tombol tambah dan hapus.
--->
-
 ## Menghapus Display Chrono
 
 Langkah menghapus Display Chrono sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Display Chrono
-> Menghapus Display Chrono akan menghapus seluruh step di dalamnya. Aksi tidak bisa dikembalikan.
+> Menghapus Display Chrono akan menghapus seluruh step di dalamnya. Aksi tidak bisa dikembalikan.  

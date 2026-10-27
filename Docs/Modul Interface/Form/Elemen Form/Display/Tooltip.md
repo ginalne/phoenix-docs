@@ -1,7 +1,10 @@
 ---
-    status: draft
+    status: release
     title: "Form Display : Tooltip"
     description: Tooltip adalah Elemen Display pada Form untuk menampilkan kotak informasi berisi label dan keterangan yang selalu terlihat oleh pengisi.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Display : Tooltip
 
@@ -50,18 +53,9 @@ Header Toolbar Display Tooltip hanya memiliki tombol [[^button/delete|Remove]] u
 | [[^field|Label]] | Judul kotak informasi. |
 | [[^field|Content]] | Isi keterangan yang ditampilkan pada kotak informasi. |
 
-<!--
-  * [TODO] Konfirmasi fungsi Label: apakah judul kotak informasi seperti yang ditulis di tabel Attributes, atau fungsi lain.
-  * [TODO] Konfirmasi apakah Label dan Content hanya teks statis seperti Display Text. Jika ya, tambahkan kalimat "Saat ini hanya berupa teks statis dan belum dapat berisi [[Docs/Tipe Data/Expression]]." pada kedua baris.
--->
-
 #### Parent
 
 Menampilkan Layout tempat Display Tooltip berada. Ukuran, *padding*, dan *margin* Display Tooltip diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
-
-<!--
-  * [TODO] Tempatkan screenshot Header Toolbar (toolbar-form-tooltip.png) dan Properties Panel (properties-form-tooltip.png) di folder Display. Anotasi yang disarankan: nomor 1 pada tombol Remove, nomor 2 pada Label dan Content.
--->
 
 ## Menghapus Display Tooltip
 

@@ -1,7 +1,10 @@
 ---
-    status: draft
+    status: release
     title: "Form Display : Table"
     description: Table adalah Elemen Display pada Form untuk menampilkan tabel berisi teks biasa, dengan kolom dan baris yang dapat ditambah dan dihapus.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Display : Table
 
@@ -36,12 +39,6 @@ Kolom dan baris diatur langsung pada tabel di [[Docs/Modul Interface/Form/Apa it
 | Menghapus baris | Klik kanan sel pada baris tersebut, lalu pilih [[^field/delete|Remove Row]]. |
 | Menghapus kolom | Klik kanan sel pada kolom tersebut, lalu pilih [[^field/delete|Remove Column]]. |
 
-<!--
-  * [TODO] Konfirmasi posisi tombol [[^button/add]]: border mana yang menambah kolom dan border mana yang menambah baris.
-  * [TODO] Konfirmasi apakah ada batas minimum ukuran tabel (misalnya apakah baris atau kolom terakhir dapat dihapus).
-  * [TODO] Konfirmasi cara mengisi sel (klik sel lalu ketik) dan objek yang di-klik kanan untuk Remove Row dan Remove Column.
--->
-
 ## Mengonfigurasi Display Table
 
 Klik kiri Display Table di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]].
@@ -67,10 +64,6 @@ Tidak ada atribut yang dapat dikonfigurasi pada Display Table. Isi tabel diatur 
 #### Parent
 
 Menampilkan Layout tempat Display Table berada. Ukuran, *padding*, dan *margin* Display Table diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
-
-<!--
-  * [TODO] Tempatkan screenshot Header Toolbar (toolbar-form-table.png) dan Properties Panel (properties-form-table.png) di folder Display. Anotasi yang disarankan: nomor 1 pada tombol Remove, nomor 2 pada State dan Parent, nomor 3 pada tombol [[^button/add]] di border tabel.
--->
 
 ## Menghapus Display Table
 

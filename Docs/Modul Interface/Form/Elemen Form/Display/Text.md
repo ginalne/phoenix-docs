@@ -2,6 +2,9 @@
     status: release
     title: "Form Display : Text"
     description: Text adalah Elemen Display pada Form untuk menampilkan teks statis seperti judul, keterangan, dan petunjuk pengisian.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Display : Text
 
