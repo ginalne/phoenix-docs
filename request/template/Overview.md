@@ -15,7 +15,7 @@
 Sekolah menengah dengan 600 siswa, masih melakukan kegiatan akademik seperti pencatatan penilaian, kehadiran, dan kalender akademik, dengan kertas atau spreadsheet manual. Dan masih memberi pengumuman secara manual satu per satu, kemudian semua proses tersebut disatukan kedalam satu Pro di Phoenix. Dengan kondisi khusus dimana setiap peran, yaitu guru, wali kelas, tata usaha, dan kepala sekolah hanya melihat dan mengubah data yang menjadi bagiannya. 
 
 ### Situasi
-Setiap awal semester, guru mata pelajaran membuat catatan atau spreadsheet nilai sendiri. Wali kelas mencatat kehadiran di buku, lalu tata usaha merekap ke dalam dokumen digital. Menjelang pembagian rapor, kepala sekolah meminta rekap data4r gggg, lalu staf menggabungkan belasan file secara manual.
+Setiap awal semester, guru mata pelajaran membuat catatan atau spreadsheet nilai sendiri. Wali kelas mencatat kehadiran di buku, lalu tata usaha merekap ke dalam dokumen digital. Menjelang pembagian rapor, kepala sekolah meminta rekap data, lalu staf menggabungkan belasan file secara manual.
 
 Tiga hal yang membuat situasi ini sulit dibiarkan:
 - **Data ganda.** Satu data siswa tercatat di banyak file dengan penulisan identitas yang berbeda.
