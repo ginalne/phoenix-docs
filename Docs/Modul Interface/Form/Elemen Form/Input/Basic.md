@@ -1,30 +1,30 @@
 ---
     status: release
-    title: Basic (Elemen Input)
-    description: Basic adalah Elemen Input pada Form untuk mengisi satu Column dari Table, dengan format isian yang mengikuti Column tersebut.
+    title: Input Basic (Elemen Input)
+    description: Input Basic adalah Elemen Input pada Form untuk mengisi satu Column dari Table, dengan format isian yang mengikuti Column tersebut.
 ---
-# Form Input : Basic
+# Form Input : Input Basic
 
->**note** Basic merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Input|Elemen Input]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
+>**note** Input Basic merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Input|Elemen Input]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Basic adalah Elemen Input yang dapat digunakan untuk mengisi satu [[Docs/Tipe Data/Column]] dari [[Docs/Modul Data/Table/Apa itu Table|Table]]. Format isiannya mengikuti Column yang diikat, sehingga pengisi hanya memasukkan data sesuai tipe yang benar.
+Input Basic adalah Elemen Input yang dapat digunakan untuk mengisi satu [[Docs/Tipe Data/Column]] dari [[Docs/Modul Data/Table/Apa itu Table|Table]]. Format isiannya mengikuti Column yang diikat, sehingga pengisi hanya memasukkan data sesuai tipe yang benar.
 
-Dengan Basic, Anda dapat mengatur isian wajib, nilai bawaan, kondisi tampil, dan kondisi aktif langsung dari Properties Panel tanpa menulis logika tambahan.
+Dengan Input Basic, Anda dapat mengatur isian wajib, nilai bawaan, kondisi tampil, dan kondisi aktif langsung dari Properties Panel tanpa menulis logika tambahan.
 
-Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara menghapus Elemen ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Basic.
+Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara menghapus Elemen ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Input Basic.
 
-## Menambahkan Basic
+## Menambahkan Input Basic
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]]
 2. Klik [[^field|Type something here to add...]] pada Layout
-3. Pilih Basic dari daftar, atau ketik untuk mencarinya
+3. Pilih Input Basic dari daftar, atau ketik untuk mencarinya
 4. Pilih [[^field|Column]] pada [[^field|Binding]]
 
 Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]].
 
-## Mengonfigurasi Basic
+## Mengonfigurasi Input Basic
 
-Klik kiri Display Chrono di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]
+Klik kiri Display Chrono di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ### Header Toolbar
 
@@ -33,25 +33,25 @@ Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/dele
 
 ### Properties Panel
 
-Selain tombol [[^button/delete|Remove]], Header Toolbar Basic memiliki pengaturan teks untuk Label: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks Label yang sedang dipilih.
+Selain tombol [[^button/delete|Remove]], Header Toolbar Input Basic memiliki pengaturan teks untuk Label: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks Label yang sedang dipilih.
 
 ![[Docs/Modul Interface/Form/Elemen Form/Input/properties-form-input.png]]
-Klik kiri Basic di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar. Label Column (berikon kolom) juga tampil di atas Basic sebagai informasi Binding.
+Klik kiri Input Basic di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar. Label Column (berikon kolom) juga tampil di atas Input Basic sebagai informasi Binding.
 
 #### Binding
 
 | Bagian | Fungsi |
 | --- | --- |
-| [[^field|Table]] | Table sumber data Basic. |
-| [[^field|Column]] | Column tempat isian Basic disimpan. Format isian Basic mengikuti Column ini. |
+| [[^field|Table]] | Table sumber data Input Basic. |
+| [[^field|Column]] | Column tempat isian Input Basic disimpan. Format isian Input Basic mengikuti Column ini. |
 
 #### State
 
 | State | Fungsi |
 | --- | --- |
-| [[^field|Visible]] | Menampilkan atau menyembunyikan Basic. |
+| [[^field|Visible]] | Menampilkan atau menyembunyikan Input Basic. |
 | [[^field|Enable]] | Mengaktifkan Binding. Jika [[^value/boolean/false]], Binding tidak aktif dan isian tidak berpengaruh ke Row. |
-| [[^field|Readonly]] | Jika [[^value/boolean/true]], isi Basic tidak dapat diubah oleh pengisi. |
+| [[^field|Readonly]] | Jika [[^value/boolean/true]], isi Input Basic tidak dapat diubah oleh pengisi. |
 
 #### Validator
 
@@ -73,7 +73,17 @@ Saat ini [[^field|Required]] adalah satu-satunya validator.
 | [[^field|Format Type]] | Format isian. Mengikuti Column pada Binding, misalnya `String` untuk teks. |
 | [[^field|Default Value]] | Nilai bawaan yang sudah terisi saat pengisi baru (publik) membuka Form. |
 
-
 #### Parent
 
-Menampilkan Layout tempat Basic berada. Mengubah ukuran, *padding*, dan *margin* Basic dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
+Menampilkan Layout tempat Input Basic berada.
+
+### Layout Panel
+
+Mengubah ukuran, *padding*, dan *margin* Input Basic dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+
+## Menghapus Input Basic
+
+Langkah menghapus Input Basic sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+
+>**danger** Dampak penghapusan Input Basic
+> Menghapus Input Basic akan menghapus seluruh step di dalamnya. Aksi tidak bisa dikembalikan.  

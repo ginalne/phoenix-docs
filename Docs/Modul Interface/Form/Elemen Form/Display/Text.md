@@ -51,7 +51,11 @@ Selain tombol [[^button/delete|Remove]], Header Toolbar Display Text memiliki pe
 
 #### Parent
 
-Menampilkan Layout tempat Display Text berada. Ukuran, *padding*, dan *margin* Display Text diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
+Menampilkan Layout tempat Display Text berada.
+
+### Layout Panel
+
+Mengubah ukuran, *padding*, dan *margin* Display Text dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Display Text
 

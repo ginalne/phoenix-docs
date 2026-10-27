@@ -65,7 +65,11 @@ Tidak ada atribut yang dapat diisi pada Properties Panel Display Chrono. Isi kro
 
 #### Parent
 
-Menampilkan Layout tempat Display Chrono berada. Ukuran, *padding*, dan *margin* Display Chrono diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
+Menampilkan Layout tempat Display Chrono berada.
+
+### Layout Panel
+
+Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Display Chrono
 

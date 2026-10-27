@@ -63,7 +63,11 @@ Tidak ada atribut yang dapat dikonfigurasi pada Display Table. Isi tabel diatur 
 
 #### Parent
 
-Menampilkan Layout tempat Display Table berada. Ukuran, *padding*, dan *margin* Display Table diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
+Menampilkan Layout tempat Display Table berada.
+
+### Layout Panel
+
+Mengubah ukuran, *padding*, dan *margin* Display Table dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Display Table
 
