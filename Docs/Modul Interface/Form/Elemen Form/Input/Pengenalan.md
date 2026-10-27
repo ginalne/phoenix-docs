@@ -6,7 +6,7 @@
       tree:
         priority: 4
 ---
-# Elemen Input
+ # Elemen Input
 
 Elemen Layout adalah kategori dari [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]] yang berfungsi untuk mengisi atau menampilkan informasi yang berlaku pada Binding. Pada Form yang dipublikasikan, Elemen Input inilah yang diisi oleh pengguna dan dikirim sebagai Submission.
 
