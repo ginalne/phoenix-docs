@@ -3,7 +3,10 @@
     title: Basic (Elemen Input)
     description: Basic adalah Elemen Input pada Form untuk mengisi satu Column dari Table, dengan format isian yang mengikuti Column tersebut.
 ---
-# Form Input : Basic
+ 
+ 
+ 
+ # Form Input : Basic
 
 >**note** Basic merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Input|Elemen Input]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
