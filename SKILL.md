@@ -4,6 +4,7 @@ pageDecoration:
   icon: info
 description: Menulis, melengkapi, merevisi, atau mereview dokumentasi produk Phoenix dalam format Silverbullet berbahasa Indonesia. Gunakan skill ini setiap kali pengguna meminta konten dokumentasi Phoenix. Output selalu berupa file .md.
 ---
+
 # Dokumentasi Phoenix (format Silverbullet)
 
 Skill ini memastikan setiap halaman dokumentasi Phoenix memakai gaya penulisan, struktur, dan sintaks yang sama dengan halaman yang sudah dibuat penulisnya. Konsistensi penting karena halaman-halaman ini saling terhubung lewat wikilink dan dibaca sebagai satu kesatuan dokumentasi.
@@ -325,6 +326,21 @@ Acuan: halaman Display Text yang sudah final. Berbeda dengan Elemen Layout, hala
 - Penulis menemukan salin-tempel keliru pada halaman final (kalimat "Klik kiri Layout Accordion" di halaman Text dan callout "Dampak penghapusan Card"). Setelah menyalin pola dari halaman lain, periksa ulang semua nama Elemen, termasuk di callout.
 - Bila fitur belum dibuat, usulkan nama isian dan ketentuan terbaik, lalu tandai dengan TODO bahwa itu usulan.
 - Nama Elemen di UI mengikuti path halaman (misalnya `Qr`), bukan singkatan umum (`QR`).
+
+#### 4c. Halaman Elemen Input (`Docs/Modul Interface/Form/Elemen Form/Input/<Nama>`)
+
+Acuan: halaman Input Basic yang sudah final (setelah perbaikan salin-tempel).
+
+- Front matter: `title: Input <Nama> (Elemen Input)` dan H1 `# Form Input : Input <Nama>`. Deskripsi: `Input <Nama> adalah Elemen Input pada Form untuk ...`. Sama seperti Display, tidak ada bagian "Mengapa Menggunakan".
+- Urutan: callout `>**note**` pengenalan (tautan ke `Apa itu Form#Elemen Input`), paragraf definisi (mengisi satu `[[Docs/Tipe Data/Column]]` dari `[[Docs/Modul Data/Table/Apa itu Table|Table]]`), paragraf manfaat ("tanpa menulis logika tambahan"), paragraf penunjuk ke `Apa itu Form#Mengelola Elemen Form`, `## Menambahkan Input <Nama>` (daftar bernomor, langkah terakhir memilih Column pada Binding; nama Elemen pada langkah memilih ditulis biasa), `## Mengonfigurasi Input <Nama>`, `## Menghapus Input <Nama>`.
+- Mengonfigurasi: kalimat "Klik kiri Input <Nama> di Edit Mode untuk menampilkan Properties Panel, Header Toolbar dan Layout Panel. Label Column (berikon kolom) juga tampil di atas ... sebagai informasi Binding." diletakkan **sekali** di awal, lalu `### Header Toolbar`, `### Properties Panel` (gambar `properties-form-input.png`), `### Layout Panel`.
+- Header Toolbar Elemen Input: tombol `[[^button/delete|Remove]]` ditambah pengaturan teks untuk Label (ukuran font, bold, italic, underline, rata kiri, tengah, kanan). Paragraf ini milik bagian Header Toolbar, bukan Properties Panel. Nama gambar `toolbar-form-<nama>.png` di folder `Input/`.
+- Properties Panel Elemen Input memakai sub-bagian `#### Binding` (tabel Table dan Column), `#### State` (Visible, Enable, Readonly), `#### Validator` (Required, dengan callout "Kapan Required tidak berlaku"), `#### Attributes` (Label, Placeholder, Format Type, Default Value), `#### Parent`.
+- Callout danger harus menyebut dampak yang benar untuk Elemen itu. Input Basic hanya menghapus isian dari Form. Contoh salin-tempel keliru yang pernah terjadi: "Klik kiri Display Chrono", gambar `header-form-accordion.png`, dan "menghapus seluruh step" pada halaman Input Basic.
+- **Quiz:** Binding sama dengan Basic. Attributes Label, Format Type, Default Value (dipilih dari jawaban opsi). Tampil sebagai radio button, satu jawaban. Tambahkan `## Mengelola Opsi` (tabel Aksi dan Cara: Add Option, isi jawaban, ikat opsi ke value sesuai Format Type, Delete per baris) sebelum Mengonfigurasi.
+- **Table dan List (wadah):** Binding harus pivot (isi kolom pivot). Attributes hanya Label. State dan Validator ada pada wadah dan memengaruhi semua kolom. Tambahkan `## Mengelola Kolom` (Add Column otomatis menambah widget Table Column atau List Column, yang dapat difokuskan untuk dikonfigurasi) dan `## Cara Pengisi Menggunakan Input <Nama>` (Add Row, tombol Delete di kolom action untuk Table, tombol ikon sampah di ujung kanan atas blok untuk List).
+- **Table Column dan List Column:** tidak ditambahkan lewat daftar Elemen, melainkan otomatis lewat Add Column pada wadahnya. Binding mengisi Column dengan pivot dari wadah. Attributes Label (judul kolom), Placeholder, Format Type (tanpa Default Value). Beri callout bahwa State wadah berlaku untuk semua kolom.
+- Bila ada hal yang belum dikonfirmasi (nama field Binding wadah, arti Required pada wadah, Header Toolbar dan Layout Panel untuk kolom), tandai dengan TODO.
 
 ### 5. Halaman pendamping Properties Panel (State dan Validators)
 
