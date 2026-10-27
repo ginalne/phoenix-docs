@@ -30,25 +30,15 @@ Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/dele
 ### Properties Panel
 
 ![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-card.png]]
-| Bagian | Fungsi |
-| --- | --- |
-| [[^field|Binding]] | Menentukan header Layout Card. Lihat [[#Binding]]. |
-| [[^field|State]] | Mengatur kondisi Layout Card. [[^field|Visible]] menampilkan atau menyembunyikan LayoutCard. |
-| [[^field|Children]] | Daftar Elemen di dalam Layout Card, lengkap dengan kategorinya ([[^field|display]] atau [[^field|input]]) dan namanya. |
-
-### Binding
+#### Binding
 
 Binding dalam Layout Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/Binding#Binding Layout]].
 
-### State
+#### State
 
 State dalam Layout Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
 
-### Attribute
-
-Tidak ada atribut yang dapat dikonfigurasi pada Layout Card.
-
-### Children
+#### Children
 
 Daftar [[^field|Children]] menampilkan setiap Elemen di dalamLayout Card. Setiap baris diberi kategori ([[^field|layout]], [[^field|display]] atau [[^field|input]]) dan nama Elemen. Tambahkan Elemen baru lewat [[^field|Type something here to add...]] di bagian bawah Layout Card.
 

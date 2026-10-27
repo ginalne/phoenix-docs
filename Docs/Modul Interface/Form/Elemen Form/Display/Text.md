@@ -24,33 +24,31 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Display Text
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/properties-form-text.png]]
-Klik kiri Text di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan Properties Panel dan Header Toolbar.
+Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]].
 
-### State Display Text
+### Header Toolbar
+
+![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-text.png]]
+Selain tombol [[^button/delete|Remove]], Header Toolbar Display Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
+
+### Properties Panel
+
+![[Docs/Modul Interface/Form/Elemen Form/Display/properties-form-text.png]]
+#### State
 
 | State | Fungsi |
 | --- | --- |
 | [[^field|Visible]] | Menampilkan atau menyembunyikan Text. |
 
-### Attributes Display Text
+#### Attributes
 
 | Atribut | Fungsi |
 | --- | --- |
 | [[^field|Content]] | Isi teks yang ditampilkan. Saat ini hanya berupa teks statis dan belum dapat berisi [[Docs/Tipe Data/Expression]]. |
 
-### Parent
+#### Parent
 
 Menampilkan Layout tempat Display Text berada. Ukuran, *padding*, dan *margin* Display Text diatur lewat Layout Panel. Lihat [[Docs/Modul Interface/Form/Apa itu Form#Layout Panel]].
-
-### Header Toolbar teks
-
-![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-text.png]]
-Selain tombol [[^button/delete|Remove]], Header Toolbar Display Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
-
-### Children
-
-Tidak ada elemen apapun sebagai anak pada Display Text.
 
 ## Menghapus Display Text
 

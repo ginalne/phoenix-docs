@@ -22,34 +22,27 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 ## Mengonfigurasi Layout Accordion
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-accordion.png]]
-![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-accordion.png]]
 Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Layout Accordion sebagai informasi Binding.
 
 ### Header Toolbar
 
+![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-accordion.png]]
 Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Accordion]].
 
 ### Properties Panel
 
-| Bagian | Fungsi |
-| --- | --- |
-| [[^field|Binding]] | Menentukan header Accordion. Lihat [[#Binding]]. |
-| [[^field|State]] | Mengatur kondisi Accordion. [[^field|Visible]] menampilkan atau menyembunyikan seluruh Accordion. |
-| [[^field|Attribute]] | Mengatur [[^field|Label]] pada header dan [[^field|Default State]]. Lihat [[#Attribute]]. |
-| [[^field|Children]] | Daftar Elemen di dalam Accordion, lengkap dengan kategorinya ([[^field|display]] atau [[^field|input]]) dan namanya. |
-
-### Binding
+![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-accordion.png]]
+#### Binding
 
 Binding dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/Binding#Binding Layout]].
 
-### State
+#### State
 
 State dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
 
 [[^field|Visible]] berbeda dengan kondisi `Collapsed` pada [[^field|Default State]]. [[^field|Visible]] bernilai [[^value/boolean/false]] menyembunyikan seluruh Layout Accordion, sedangkan `Collapsed` hanya menyembunyikan isinya dan header tetap tampil.
 
-### Attribute
+#### Attribute
 
 Layout Accordion memiliki dua atribut yang dapat dikonfigurasi:
 
@@ -58,7 +51,7 @@ Layout Accordion memiliki dua atribut yang dapat dikonfigurasi:
 | [[^field|Label]] | Teks yang tampil sebagai title pada header Accordion. Hanya berupa teks statis dan tidak dapat memakai expression. |
 | [[^field|Default State]] | Menentukan kondisi bawaan Accordion saat Form dibuka. Pilihannya `Expanded` (isi ditampilkan) dan `Collapsed` (isi disembunyikan). |
 
-### Children
+#### Children
 
 Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Layout Accordion. Setiap baris diberi kategori ([[^field|layout]], [[^field|display]] atau [[^field|input]]) dan nama Elemen. Tambahkan Elemen baru lewat [[^field|Type something here to add...]] di bagian bawah Layout Accordion.
 
