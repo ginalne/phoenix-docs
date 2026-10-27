@@ -6,8 +6,8 @@
     meta
     prompt
 ---
-
 2026-10-23 16:00
+
 ![[prompt/2026-10-23_16-17-18.png]]
 ![[prompt/2026-10-23_16-17-22.png]]
 Semua sudah ok, selanjut bisakah kita buat beberapa halaman (struktur akan diikuti oleh Widget lain) yaitu Widget Table dan Widget Pie.

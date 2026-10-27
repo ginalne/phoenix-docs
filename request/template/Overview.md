@@ -12,10 +12,10 @@
 >Sekolah dalam studi kasus ini fiktif, dibuat sebagai ilustrasi. Angka yang tertera adalah contoh, bukan hasil peninjauan.
 
 ## Ringkasan
-Sekolah menengah dengan 600 siswa, masih melakukan kegiatan akademik seperti pencatatan penilaian, kehadiran, dan kalender, dengan kertas atau spreadsheet manual. Dan masih memberi pengumuman secara manual satu per satu, kemudian semua proses tersebut disatukan kedalam satu Pro di Phoenix. Dengan kondisi khusus dimana setiap peran, yaitu guru, wali kelas, tata usaha, dan kepala sekolah hanya melihat dan mengubah data yang menjadi bagiannya. 
+Sekolah menengah dengan 600 siswa, masih melakukan kegiatan akademik seperti pencatatan penilaian, kehadiran, dan kalender akademik, dengan kertas atau spreadsheet manual. Dan masih memberi pengumuman secara manual satu per satu, kemudian semua proses tersebut disatukan kedalam satu Pro di Phoenix. Dengan kondisi khusus dimana setiap peran, yaitu guru, wali kelas, tata usaha, dan kepala sekolah hanya melihat dan mengubah data yang menjadi bagiannya. 
 
 ### Situasi
-Setiap awal semester, guru mata pelajaran membuat catatan atau spreadsheet nilai sendiri. Wali kelas mencatat kehadiran di buku, lalu tata usaha mengetik ulang ke dalam dokumen digital. Menjelang pembagian rapor, kepala sekolah meminta rekap data (data apa saja? prefer disebutkan), lalu staf menggabungkan belasan file secara manual.
+Setiap awal semester, guru mata pelajaran membuat catatan atau spreadsheet nilai sendiri. Wali kelas mencatat kehadiran di buku, lalu tata usaha merekap ke dalam dokumen digital. Menjelang pembagian rapor, kepala sekolah meminta rekap data4r gggg, lalu staf menggabungkan belasan file secara manual.
 
 Tiga hal yang membuat situasi ini sulit dibiarkan:
 - **Data ganda.** Satu data siswa tercatat di banyak file dengan penulisan identitas yang berbeda.
@@ -35,7 +35,7 @@ Tiga hal yang membuat situasi ini sulit dibiarkan:
 | **Organisasi** | SMA Nusantara Mandiri (fiktif) |
 | **Skala** | 600 siswa, 45 guru, 4 staf tata usaha, 1 kepala sekolah |
 | **Masalah utama** | Data tersebar di banyak file dan tidak ada kontrol akses |
-| **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Data/Table View/Apa itu Table View|Table View]], [[Docs/Modul Data/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], [[Docs/Publish/Pengenalan|Publish]] |
+| **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] |
 | **Hasil yang dituju** | Satu sumber data, akses sesuai peran, pengingat yang berjalan otomatis |
 
 ### Tujuan
@@ -52,14 +52,14 @@ Seluruh komponen ditempatkan dalam satu rangkaian [[Docs/Folder/Pengenalan|Folde
 ```
 Origin
 ├── Akademik
-│   ├── Data Siswa          (Table View)
-│   ├── Kehadiran           (Table View)
-│   ├── Nilai               (Table View)
+│   ├── Data Siswa          (Table)
+│   ├── Kehadiran           (Table)
+│   ├── Nilai               (Table)
 │   └── Kalender Akademik   (Timeline)
 ├── Otomasi
 │   └── Tindak Lanjut Nilai (Flow)
 └── Informasi
-    └── Pengumuman          (Table View, dipublikasikan)
+    └── Pengumuman          (Table, dipublikasikan)
  ```
 
 Pola ini memudahkan pengaturan akses: izin diberikan per folder, dan folder yang tidak boleh dilihat sebuah Group cukup diberi `disallow` pada **Visible**.
@@ -104,7 +104,7 @@ Pengaturan **Visible** pada folder induk berlaku untuk seluruh isinya, jadi ranc
 | Kalender Akademik | Awal semester, ujian, libur, pembagian rapor |
 | Pengumuman | Judul, isi, tanggal terbit |
 
-Selengkapnya tentang membuat tabel dan menentukan tipe kolom lihat [[Docs/Modul Data/Table View/Apa itu Table View|Table View]].
+Selengkapnya tentang membuat tabel dan menentukan tipe kolom lihat [[Docs/Modul Data/Table/Apa itu Table|Table]].
 
 ### Otomasi dengan Flow
 [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] **Tindak Lanjut Nilai** menyusun alur komposit pada Blueprint:
@@ -115,7 +115,7 @@ Selengkapnya tentang membuat tabel dan menentukan tipe kolom lihat [[Docs/Modul 
 Pantau jalannya proses pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. Cara menghubungkan Event dari tabel ke Flow dijelaskan di [[Docs/Event/Menghubungkan Event]].
 
 ### Berbagi Pengumuman
-Tata Usaha memakai [[Docs/Publish/Pengenalan|Publish]] pada tabel **Pengumuman**, lalu menyalin *publish link* untuk dibagikan ke orang tua. Komponen lain tidak ikut terbuka karena konfigurasi publikasi berlaku untuk komponen tersebut saja.
+Tata Usaha memakai [[Docs/Modul Data/Table/Mempublikasi|Publish]] pada tabel **Pengumuman**, lalu menyalin *publish link* untuk dibagikan ke orang tua. Komponen lain tidak ikut terbuka karena konfigurasi publikasi berlaku untuk komponen tersebut saja.
 
 ---
 ## Skenario Penggunaan
@@ -160,18 +160,5 @@ Kepala Sekolah membuka **Nilai** dan **Kehadiran** langsung dari Workspace, tanp
 
 ---
 ## TL;DR
-Satu [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dengan empat [[Docs/Modul Developer/Group/Apa itu Group|Group]] menjaga akses sesuai peran. [[Docs/Modul Data/Table View/Apa itu Table View|Table View]] dan [[Docs/Modul Data/Timeline/Apa itu Timeline|Timeline]] menyimpan data akademik. [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] menandai siswa yang perlu tindak lanjut, dan [[Docs/Publish/Pengenalan|Publish]] membagikan pengumuman lewat tautan.
-
-* [ ] TODO (konsolidasi): Path wikilink untuk Workspace, Group, Table View, Timeline, Publish, Folder, dan Pro adalah tebakan mengikuti pola yang ada. Mohon dicek dan disesuaikan.
-* [ ] TODO: Pastikan Flow dapat dipicu oleh penambahan baris pada Table View dan dapat memeriksa kondisi skor. Penjelasan Flow di atas masih tingkat konsep.
-* [ ] TODO: Pastikan kebutuhan pembatasan data per kelas. Matriks akses diasumsikan per komponen.
-* [ ] TODO: Matriks akses (Data Access dan Function Access) diasumsikan. Cek nilai per Group.
-* [ ] TODO: Tambahkan tangkapan layar Workspace, folder, dan Blueprint jika tersedia.
-
-
-
-
-
-
-
+Satu [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dengan empat [[Docs/Modul Developer/Group/Apa itu Group|Group]] menjaga akses sesuai peran. [[Docs/Modul Data/Table/Apa itu Table|Table]] dan [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] menyimpan data akademik. [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] menandai siswa yang perlu tindak lanjut, dan [[Docs/Modul Data/Table/Mempublikasi|Publish]] membagikan pengumuman lewat tautan.
 

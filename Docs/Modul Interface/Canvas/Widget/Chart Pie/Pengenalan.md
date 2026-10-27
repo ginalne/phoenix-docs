@@ -11,13 +11,6 @@ Widget Chart Pie adalah widget untuk menampilkan data [[Docs/Modul Data/Table/Ap
 
 Anda dapat mengatur jumlah data yang muncul, bentuk pie, warna, label, legenda, dan total di tengah pie melalui header toolbar dan design toolbar.
 
-## Mengapa Menggunakan Widget Chart Pie?
-
-- **Komposisi terbaca sekilas.** Pembaca langsung melihat porsi setiap data terhadap keseluruhan.
-- **Tampilan mudah disesuaikan.** Lubang, gap, tema warna, gradasi, label, legenda, dan total dapat diatur sesuai desain Canvas.
-- **Jumlah data terkendali.** [[^field|Limit]] membatasi jumlah data yang muncul agar pie tidak terlalu padat.
-- **Selalu mengikuti data.** Pie membaca Table sumber melalui Query, sehingga tampilan mengikuti data terbaru.
-
 ## Menambahkan Widget Chart Pie
 
 1. Pindah ke Edit Mode melalui toggle [[^field|mode]] pada [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mode View dan Edit|Canvas]]

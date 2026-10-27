@@ -46,6 +46,7 @@ flowchart LR
 Anggota hanya boleh tergabung dalam satu Group, akses yang dimilikinya merupakan gabungan dari seluruh Workspace dalam Group tersebut.
 
 ## Membuat Group
+
 1. Klik kanan pada [[Docs/Antarmuka#Area Manajemen Folder]].
 2. Pilih [[field/add|Add]] > [[field|Developer]] > [[field/group| Group]]
 3. Isi [[field|Name]] dan [[field|Description]]
