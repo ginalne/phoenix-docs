@@ -40,19 +40,18 @@ Step diatur langsung pada Display Chrono di [[Docs/Modul Interface/Form/Apa itu 
 | Menambah step | Klik tombol [[^button/add]]. |
 | Menghapus step | Klik tombol [[^button/delete]] pada step yang ingin dihapus. |
 
-
 ## Mengonfigurasi Display Chrono
 
-Klik kiri Display Chrono di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]].
+Klik kiri Display Chrono di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-chrono.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Display/header-chrono-form.png]]
 Header Toolbar Display Chrono hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Display Chrono]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/properties-form-chrono.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Display/properties-chrono-form.png]]
 #### State
 
 | State | Fungsi |

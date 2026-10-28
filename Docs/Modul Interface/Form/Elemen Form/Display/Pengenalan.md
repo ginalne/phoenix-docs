@@ -14,6 +14,5 @@ Kategori ini memiliki elemen sebagai berikut:
 
 1. [[Docs/Modul Interface/Form/Elemen Form/Display/Text]]
 2. [[Docs/Modul Interface/Form/Elemen Form/Display/Table]]
-3. [[Docs/Modul Interface/Form/Elemen Form/Display/Tooltip]]
-4. [[Docs/Modul Interface/Form/Elemen Form/Display/QR]]
-5. [[Docs/Modul Interface/Form/Elemen Form/Display/Chrono]]
+3. [[Docs/Modul Interface/Form/Elemen Form/Display/QR]]
+4. [[Docs/Modul Interface/Form/Elemen Form/Display/Chrono]]

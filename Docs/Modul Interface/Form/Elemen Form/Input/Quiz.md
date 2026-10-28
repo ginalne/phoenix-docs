@@ -43,12 +43,12 @@ Klik kiri Input Quiz di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan E
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Input/toolbar-form-quiz.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Input/header-quiz-form.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Input Quiz memiliki pengaturan teks untuk Label: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks Label yang sedang dipilih.
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Input/properties-form-quiz.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Input/properties-quiz-form.png]]
 #### Binding
 
 | Bagian | Fungsi |

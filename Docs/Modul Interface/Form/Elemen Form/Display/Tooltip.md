@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: "Form Display : Tooltip"
     description: Tooltip adalah Elemen Display pada Form untuk menampilkan kotak informasi berisi label dan keterangan yang selalu terlihat oleh pengisi.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---
@@ -30,7 +31,7 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Display Tooltip
 
-Klik kiri Display Tooltip di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]].
+Klik kiri Display Tooltip di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ### Header Toolbar
 

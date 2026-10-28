@@ -41,16 +41,16 @@ Kolom dan baris diatur langsung pada tabel di [[Docs/Modul Interface/Form/Apa it
 
 ## Mengonfigurasi Display Table
 
-Klik kiri Display Table di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]].
+Klik kiri Display Table di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-table.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Display/header-table-form.png]]
 Header Toolbar Display Table hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Display Table]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/properties-form-table.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Display/properites-table-form.png]]
 #### State
 
 | State | Fungsi |

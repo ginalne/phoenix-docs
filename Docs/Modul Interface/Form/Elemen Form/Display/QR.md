@@ -30,16 +30,16 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Display QR
 
-Klik kiri Display QR di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]].
+Klik kiri Display QR di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-QR.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Display/header-qr-form.png]]
 Header Toolbar Display QR hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Display QR]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/properties-form-QR.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Display/properties-qr-form.png]]
 #### State
 
 | State | Fungsi |

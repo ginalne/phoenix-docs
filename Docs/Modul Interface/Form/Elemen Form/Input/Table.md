@@ -51,12 +51,12 @@ Klik kiri Input Table di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan 
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Input/toolbar-form-table.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Input/header-table-form.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Input Table memiliki pengaturan teks untuk Label: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks Label yang sedang dipilih.
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Input/properties-form-table.png]]
+![[Docs/Modul Interface/Form/Elemen Form/Input/properties-table-form.png]]
 #### Binding
 
 | Bagian | Fungsi |
