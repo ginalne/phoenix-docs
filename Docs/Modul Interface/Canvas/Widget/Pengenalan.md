@@ -14,12 +14,12 @@ Widget adalah elemen penyusun tampilan Canvas. Widget yang tersedia:
 | Widget                                                                                      | Kelompok                |
 | ------------------------------------------------------------------------------------------- | ----------------------- |
 | [[Docs/Modul Interface/Canvas/Widget/Text/Pengenalan|Text]]                                  | Teks                    |
-| [[Docs/Modul Interface/Canvas/Widget/Chart Pie/Pengenalan|Chart Pie]]                        | Grafik                  |
+| [[Docs/Modul Interface/Canvas/Widget/Chart Pie|Chart Pie]]                        | Grafik                  |
 | [[Docs/Modul Interface/Canvas/Widget/Chart Line/Pengenalan|Chart Line]]                      | Grafik                  |
 | [[Docs/Modul Interface/Canvas/Widget/Chart Bar/Pengenalan|Chart Bar]]                        | Grafik                  |
 | [[Docs/Modul Interface/Canvas/Widget/Chart Radial/Pengenalan|Chart Radial]]                  | Grafik                  |
 | [[Docs/Modul Interface/Canvas/Widget/Chart Linear/Pengenalan|Chart Linear]]                  | Grafik                  |
-| [[Docs/Modul Interface/Canvas/Widget/Table/Pengenalan|Table]]                                | Tampilan data           |
+| [[Docs/Modul Interface/Canvas/Widget/Table|Table]]                                | Tampilan data           |
 | [[Docs/Modul Interface/Canvas/Widget/Kanban/Pengenalan|Kanban]]                              | Tampilan data           |
 | [[Docs/Modul Interface/Canvas/Widget/Gantt/Pengenalan|Gantt]]                                | Tampilan data           |
 | [[Docs/Modul Interface/Canvas/Widget/Timeline/Pengenalan|Timeline]]                          | Tampilan data           |
