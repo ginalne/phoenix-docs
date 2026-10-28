@@ -54,8 +54,6 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 | [[^field|total]]           | Toggle untuk menampilkan total di tengah pie.                                                                                                                  |
 | [[^field|size]]            | Ukuran font total yang tampil di tengah pie.                                                                                                                   |
 
-Pada contoh di atas, nilai yang tampil adalah [[^field|hole]] 45%, [[^field|gap]] 6, [[^field|theme]] `fun`, [[^field|gradient]] 0%, [[^field|offset]] 0%, [[^field|label]] `none`, [[^field|min]] 20, [[^field|legends]] `right`, [[^field|total]] aktif, dan [[^field|size]] 22.
-
 ## Menghapus Widget Table
 
 Langkah menghapus Widget Table sama dengan menghapus widget lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].

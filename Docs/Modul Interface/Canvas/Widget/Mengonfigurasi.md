@@ -13,11 +13,11 @@
 ![[Docs/Modul Interface/Canvas/Widget/configuration-widget-form.png]]
 Klik kiri pada Widget di [[^mode/edit|Edit]] untuk memfokuskannya. Setelah itu muncul [[#Header Toolbar]], dan beberapa panel lain yang tersedia. Selain itu, [[#Layout Panel]] dan beberapa panel lainnya dapat dibuka lewat ikon kecil di bawah Widget yang difokuskan.
 
-#### Header Toolbar
+## Header Toolbar
 
 Bilah konfigurasi atribut dan pintasan aksi yang selalu memiliki tombol [[^button/delete|Remove]] untuk menghapus Elemen.
 
-#### Layout Panel
+## Layout Panel
 
 Panel untuk mengatur ukuran, *padding*, *margin*, dan beberapa *styling* Elemen. Setiap Elemen memiliki pengaturan ini, dan panel dibuka lewat ikon kecil di bawah Elemen yang difokuskan.
 
@@ -28,10 +28,10 @@ Panel untuk mengatur ukuran, *padding*, *margin*, dan beberapa *styling* Elemen.
 | [[^field|padding]] | Mengatur jarak di bagian dalam Elemen, yaitu antara batas Elemen dan kontennya. |
 | [[^field|margin]] | Mengatur jarak di luar Elemen, yaitu ruang antara Elemen tersebut dan Elemen lain di sekitarnya. |
 
-#### Data Panel
+## Data Panel
 
 Panel untuk mengatur data widget. Setiap Elemen memiliki isi yang berbeda-beda dan mungkin tidak memiliki panel ini.
 
-#### Design Panel
+## Design Panel
 
 Panel untuk mengatur tampilan widget. Setiap Elemen memiliki isi yang berbeda-beda dan mungkin tidak memiliki panel ini.
