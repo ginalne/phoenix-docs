@@ -74,16 +74,6 @@ Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
 | Berpindah halaman                   | Klik [[^button|Prev]] atau [[^button|Next]], atau isi nomor halaman lalu klik [[^button|Go]].                      |
 | Memindahkan widget                  | Gunakan ikon pegangan ⋮⋮ pada header toolbar.                                                                         |
 
-<!--
-  * [TODO] Ikon tabel di sebelah kiri tombol 123 pada header toolbar belum dijelaskan penulis. Mohon jelaskan fungsinya.
-    Jawaban : Ikon tabel disebelah
-  * [TODO] Konfirmasi bahwa Widget Table memang tidak memiliki panel tampilan (palet) seperti Widget Chart Pie, atau panel tersebut tersembunyi.
-  * [TODO] Konfirmasi fungsi tombol Expand pada design toolbar (pada screenshot aktif dengan h = 40%) dan arti panah ▼ di sisi kiri panel (diasumsikan melipat panel).
-  * [TODO] Konfirmasi: nama tombol kaca pembesar (diberi nama Search), cakupan Search Data... (diasumsikan semua kolom, seperti Table View), dan apakah toolbar search serta pagination yang aktif juga tampil pada View Mode dan tautan Publish.
-  * [TODO] Konfirmasi: tombol Refresh List hanya memuat ulang data widget (bukan seluruh Canvas) dan pengaruh pada pagination.
-  * [TODO] Screenshot menampilkan nama Table "Pesanan" serta kolom dan data pribadi. Mohon ganti dengan data generik pada gambar bila perlu. Saran keterangan gambar: "Contoh gambar di atas merupakan Widget Table dengan pagination dan toolbar search aktif."
--->
-
 ## Mengatur Widget Table
 
 ### Mengatur Data dan Query

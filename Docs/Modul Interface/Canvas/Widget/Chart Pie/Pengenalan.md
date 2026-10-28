@@ -13,8 +13,15 @@ Anda dapat mengatur jumlah data yang muncul, bentuk pie, warna, label, legenda, 
 
 ## Menambahkan Widget Chart Pie
 
+Anda dapat menambahkan Layout Accordion dengan dua cara:
+
+- Memilih [[^field|Accordion Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
+- Memilih Layout Accordion pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
+
+Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
+
 1. Pindah ke Edit Mode melalui toggle [[^field|mode]] pada [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mode View dan Edit|Canvas]]
-2. Klik [[^field|Type something here to add...]]
+2. Klik [[^field|Type something here to add...]] pada Layout.
 3. Ketik `/chart`, lalu pilih Chart Pie dari dropdown
 4. Pilih Table sumber pada [[^field|Data]], lalu atur Query melalui [[^button/q]]. Lihat [[#Mengatur Data dan Query]].
 
