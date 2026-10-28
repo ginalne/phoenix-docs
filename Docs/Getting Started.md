@@ -4,7 +4,7 @@
     description: Learn what Phoenix is all about and how to get started quickly.
     pageDecoration:
       tree:
-        priority: 4
+        priority: 50
     tags:
     - welcome
     - introduction

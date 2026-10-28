@@ -4,7 +4,7 @@
     description: Halaman pendahuluan untuk menjelaskan phoenix secara umum.
     pageDecoration: 
       tree:
-        priority: 3
+        priority: 49
     tags:
     - introduction
 ---

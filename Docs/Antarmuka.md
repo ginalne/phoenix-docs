@@ -4,7 +4,7 @@
     description: 
     pageDecoration:
       tree:
-        priority: 1
+        priority: 47
 ---
 # Antarmuka
 
@@ -35,7 +35,7 @@ Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix deng
 ## Area Manajemen Folder
 
 ![[Docs/area+manajemen+folder.png|Area Manajemen Folder dan Komponen Phoenix]]
-Bagian ini merupakan tempat Anda mengatur daftar folder dan komponen dalam Phoenix dengan rincian seperti berikut:
+Bagian ini merupakan tempat Anda mengatur daftar [[Docs/Folder/Apa itu Folder]] dan [[Docs/Folder/Apa itu Komponen|Komponen]] dalam Phoenix dengan rincian seperti berikut:
 
 1. Pengenal Workspace : informasi Workspace yang sedang dibuka saat ini serta tombol agar dapat mengganti ke Workspace lain.
 2. Tombol Penyegaran : tombol untuk menyegarkan (refresh) kembali daftar folder dan komponen.
