@@ -1,15 +1,16 @@
 ---
-    status: draft
+    status: release
+    title: "Mengelola Timeline Data"
+    description: 
     pageDecoration:
-      icon: x
       tree:
-        priority: 4
+        priority: 6
 ---
-# Mengelola Timeline Data
+# Timeline Data
 
 Timeline Data berfungsi untuk membuka data sumber di sumbu waktu dengan bantuan [[Docs/Tipe Data/Query|Query]]. Setiap Row hasil Query tampil sebagai satu blok. Satu Timeline dapat memiliki beberapa Timeline Data.
 
-## Query Timeline Data
+## Query
 
 Query pada Timeline Data mengikuti kaidah Timeline Output ([[Docs/Tipe Data/Query#Timeline Output]]). Cara menyusun sumber data dan [[Docs/Tipe Data/Query#Filter|Filter]] sama seperti Query lainnya. Pada bagian [[Docs/Tipe Data/Query#Show or Hide|Show]], label [[^field|Name]], [[^field|Start]], dan [[^field|End]] menunjukkan [[Docs/Tipe Data/Column|Column]] yang dipakai Timeline.
 
@@ -24,38 +25,14 @@ Label yang wajib hanya [[^field|Name]] dan [[^field|Start]].
 >**warning** Query belum valid
 > Selama Query tidak memenuhi kaidah Timeline Output, misalnya belum menampilkan paling sedikit dua Column, Timeline Data menampilkan baris [[^field|Error]] dengan pesan "Query must at least have 2 showed columns!" dan tidak ada Row yang tampil. Penjelasan kesalahan lain ada di [[Docs/Tipe Data/Query#Error]].
 
-## Menambahkan Timeline Data
+## Mengelola Timeline Data
 
-1. Klik [[^button/add|Add Data]], atau klik kanan ➜ [[^field|Add Data]]
-2. Timeline Data baru tampil dengan Query kosong ([[^field|Empty]]) dan nama awal `New Data (n)`
-3. Klik [[^button/q]] pada Timeline Data untuk mengatur [[Docs/Tipe Data/Query|Query]]
-4. Pada bagian [[Docs/Tipe Data/Query#Show or Hide|Show]], pastikan Column untuk label [[^field|Name]], [[^field|Start]], dan [[^field|End]] sudah sesuai
-5. Tutup popup Query dengan klik di luar popup
-
->**success** Timeline Data berhasil diatur
-> Query tersimpan otomatis ketika popup ditutup, dan Row hasil Query langsung tampil sebagai blok di sumbu waktu.
-
-## Mengubah Query Timeline Data
-
-1. Klik [[^button/q]] pada Timeline Data
-2. Ubah Query
-3. Tutup popup Query dengan klik di luar popup
-
-Perubahan Query tersimpan otomatis dan Row menyesuaikan hasil Query yang baru. Tidak ada tombol simpan.
-
-## Mengubah Nama Timeline Data
-
-1. Klik kanan judul Timeline Data ➜ [[^field|Rename Data]]
-2. Isi nama baru
-3. Klik [[^button/ok|Ok]]
-
-## Menghapus Timeline Data
-
-1. Klik kanan judul Timeline Data ➜ [[^field|Delete Data]]
-2. Konfirmasi dengan klik [[^button|Delete]]
-
->**warning** Hanya konfigurasi yang terhapus
-> [[^field|Delete Data]] hanya menghapus konfigurasi dan Query Timeline Data. Row pada data sumber tidak terhapus.
+Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+1. [[Docs/Modul Interface/Timeline/Timeline Data/Menambahkan]] Timeline Data.
+2. [[Docs/Modul Interface/Timeline/Timeline Data/Mengganti Nama]] pada Timeline Data.
+3. [[Docs/Modul Interface/Timeline/Timeline Data/Mengatur Query]] pada Timeline Data.
+4. [[Docs/Modul Interface/Timeline/Timeline Data/Menghapus]] Timeline Data.
+5. [[Docs/Modul Interface/Timeline/Timeline Data/Mengelola Row]] dalam Timeline Data.
 
 ## Hak Akses Timeline Data
 

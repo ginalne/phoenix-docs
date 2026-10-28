@@ -2,6 +2,9 @@
     status: release
     title: Split (Elemen Layout)
     description: Split adalah Elemen Layout pada Form yang menampung Elemen lain dalam tampilan dibelah menjadi sisi kiri dan kanan, sekaligus menjadi header Table bagi Elemen di dalamnya.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Layout : Split
 
@@ -23,7 +26,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 ## Mengonfigurasi Layout Split
 
-Klik kiri Layout Split di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Layout Split sebagai informasi Binding.
+Klik kiri Layout Split di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Split sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -48,6 +51,10 @@ Tidak ada atribut yang dapat dikonfigurasi pada Layout Split.
 #### Children
 
 Layout Split memiliki dua sisi, kiri dan kanan, dan setiap sisi adalah Layout [[Docs/Modul Interface/Form/Elemen Form/Layout/Full|Full]]. Fungsi menambahkan Elemen sama dengan Full: tambahkan Elemen baru lewat [[^field|Type something here to add...]] pada masing-masing sisi. Daftar [[^field|Children]] pada Layout Split adalah dua Elemen Full.
+
+### Layout Panel
+
+Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Layout Split
 

@@ -2,6 +2,9 @@
     status: release
     title: Accordion (Elemen Layout)
     description: Accordion adalah Elemen Layout pada Form yang menampung Elemen lain dalam kartu dengan header yang dapat di-toggle, sekaligus menjadi header Table bagi Elemen di dalamnya.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Layout : Accordion
 
@@ -22,7 +25,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 ## Mengonfigurasi Layout Accordion
 
-Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Layout Accordion sebagai informasi Binding.
+Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Accordion sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -54,6 +57,10 @@ Layout Accordion memiliki dua atribut yang dapat dikonfigurasi:
 #### Children
 
 Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Layout Accordion. Setiap baris diberi kategori ([[^field|layout]], [[^field|display]] atau [[^field|input]]) dan nama Elemen. Tambahkan Elemen baru lewat [[^field|Type something here to add...]] di bagian bawah Layout Accordion.
+
+### Layout Panel
+
+Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Layout Accordion
 

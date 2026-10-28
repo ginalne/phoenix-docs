@@ -1,6 +1,6 @@
 ---
     status: release
-    title: "Menambahkan Elemen"
+    title: "Menghapus Elemen"
     description:  Penjelasan cara menghapus elemen dalam komponen Form
     pageDecoration:
       tree:
@@ -8,7 +8,7 @@
     tags:
       draft
 ---
-## Menghapus Elemen
+# Menghapus Elemen
 
 Menghapus elemen dapat dilakukan dengan 2 cara, yaitu melalui toolbar dan menu konteks.
 

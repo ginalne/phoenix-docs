@@ -6,7 +6,6 @@
       tree: 
         priority: 5
 ---
-
 # Apa itu Timeline?
 
 >**note** Timeline merupakan salah satu komponen dalam modul [[Docs/Modul Interface/Pengenalan|Interface]] di Phoenix.
@@ -49,8 +48,8 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Timeline:
 1. [[Docs/Modul Interface/Timeline/Membuat Baru]] Timeline dalam halaman kerja.
 2. [[Docs/Modul Interface/Timeline/Mengubah]] Atribut Timeline seperti [[^field|Name]] atau [[^field|Description]].
 3. [[Docs/Modul Interface/Timeline/Menghapus]] Timeline.
-4. [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Mengelola Event]] Timeline seperti menambahkan, mengubah atau memperbarui Data.
-4. [[Docs/Modul Interface/Timeline/Timeline Data/Pengenalan|Mengelola Data]] Timeline seperti menambahkan, mengubah atau memperbarui Data.
+4. [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Mengelola Event]] Timeline seperti menambahkan, mengubah atau memperbarui Event.
+5. [[Docs/Modul Interface/Timeline/Timeline Data/Pengenalan|Mengelola Data]] Timeline seperti menambahkan, mengubah atau memperbarui Data.
 
 ## Antarmuka
 

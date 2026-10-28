@@ -2,6 +2,9 @@
     status: release
     title: Card (Elemen Layout)
     description: Card adalah Elemen Layout pada Form yang menampung Elemen lain dalam satu kartu sekaligus menjadi header Table bagi Elemen di dalamnya.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 # Form Layout : Card
 
@@ -20,7 +23,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 ## Mengonfigurasi Layout Card
 
-Klik kiri Layout Card di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Table (berikon tabel) juga tampil di atas Layout Card sebagai informasi Binding.
+Klik kiri Layout Card di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Card sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -41,6 +44,10 @@ State dalam Layout Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul In
 #### Children
 
 Daftar [[^field|Children]] menampilkan setiap Elemen di dalamLayout Card. Setiap baris diberi kategori ([[^field|layout]], [[^field|display]] atau [[^field|input]]) dan nama Elemen. Tambahkan Elemen baru lewat [[^field|Type something here to add...]] di bagian bawah Layout Card.
+
+### Layout Panel
+
+Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Layout Card
 

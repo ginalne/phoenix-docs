@@ -1,11 +1,10 @@
 ---
-    status: draft
+    status: release
+    title: "Mengelola Timeline Event"
+    description: 
     pageDecoration:
-      icon: x
       tree:
-        priority: 4
-    tags:
-      draft
+        priority: 6
 ---
 # Mengelola Timeline Event
 
@@ -31,35 +30,12 @@ Pilihan [[^field|Interval]] adalah [[^field|Custom]], [[^field|Minutely]], [[^fi
 >**note** Menonaktifkan jadwal
 > Matikan [[^field|Active]] untuk menghentikan jadwal tanpa menghapus Timeline Event. Aktifkan kembali saat jadwal perlu berjalan.
 
-## Menambahkan Timeline Event
+## Mengelola Timeline Event
 
-![[Docs/Modul Interface/Timeline/add-timeline-event.png]]
-1. Klik [[^button/add|Add Event]], atau klik kanan ➜ [[^field|Add Event]]
-2. Isi [[^field|Name]]
-3. Pilih Flow Block Pulser yang akan dipicu di [[^field|Pulser Event]]
-4. Isi waktu mulai di [[^field|Start]]
-5. Aktifkan [[^field|Repeat]] bila pemicu perlu berulang, lalu isi [[^field|End]] dan [[^field|Interval]]
-6. Pastikan [[^field|Active]] aktif agar jadwal berjalan
-7. Klik [[^button|Create]]
-
->**success** Timeline Event berhasil dibuat
-> Pemicu berjalan pada jadwal yang ditentukan selama [[^field|Active]] aktif.
-
-## Mengubah Timeline Event
-
-1. Klik kanan blok Timeline Event ➜ [[^field|Edit]]
-2. Ubah atribut yang diperlukan
-3. Klik [[^button|Update]]
-
-Waktu [[^field|Start]] dan [[^field|End]] juga dapat dipindahkan dengan menggeser blok, lihat [[#Interaksi Antarmuka Timeline]].
-
-## Menghapus Timeline Event
-
-1. Klik kanan blok Timeline Event ➜ [[^field|Delete Event]]
-2. Konfirmasi dengan klik [[^button|Delete]]
-
->**warning** Hanya Timeline Event yang terhapus
-> [[^field|Delete Event]] hanya menghapus Timeline Event. Flow Block Pulser tidak ikut terhapus, tetapi tidak lagi dipicu oleh Timeline Event tersebut. Bila jadwal hanya perlu dihentikan sementara, matikan [[^field|Active]].
+Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+1. [[Docs/Modul Interface/Timeline/Timeline Event/Menambahkan]] Timeline Event.
+2. [[Docs/Modul Interface/Timeline/Timeline Event/Mengubah]] Timeline Event.
+3. [[Docs/Modul Interface/Timeline/Timeline Event/Menghapus]] Timeline Event.
 
 ## Hak Akses Timeline Event
 

@@ -7,9 +7,7 @@ description: Widget Table menampilkan data Table dalam bentuk tabel pada Canvas,
 
 >**note** Widget Table merupakan salah satu widget pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Daftar widget lainnya ada di [[Docs/Modul Interface/Canvas/Widget/Pengenalan|Widget Canvas]].
 
-Widget Table adalah widget untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] dalam bentuk tabel di dalam Canvas. Data diambil melalui [[Docs/Tipe Data/Query]], lalu dapat dilengkapi pagination dan toolbar search agar pembaca mudah menelusuri baris.
-
-Widget Table bekerja seperti [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] dalam versi lite: widget hanya menyajikan satu data, dan isinya tidak dapat dimanipulasi dari Canvas.
+Widget Table adalah widget untuk menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] dalam bentuk tabel di dalam [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Data diambil melalui [[Docs/Tipe Data/Query]], lalu dapat dilengkapi pagination dan toolbar search agar pembaca mudah menelusuri baris, dan isinya tidak dapat dimanipulasi dari Canvas.
 
 ## Menambahkan Widget Table
 

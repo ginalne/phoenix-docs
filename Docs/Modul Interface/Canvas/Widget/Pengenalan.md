@@ -10,21 +10,23 @@
 
 Widget adalah elemen penyusun tampilan Canvas. Widget yang tersedia:
 
+
 | Widget                                                                                      | Kelompok                |
 | ------------------------------------------------------------------------------------------- | ----------------------- |
-| [[Docs/Modul Interface/Form/Widget/Text/Penjelasan|Text]]                                  | Teks                    |
-| [[Docs/Modul Interface/Form/Widget/Chart Pie/Penjelasan|Chart Pie]]                        | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Chart Line/Penjelasan|Chart Line]]                      | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Chart Bar/Penjelasan|Chart Bar]]                        | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Chart Radial/Penjelasan|Chart Radial]]                  | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Chart Linear/Penjelasan|Chart Linear]]                  | Grafik                  |
-| [[Docs/Modul Interface/Form/Widget/Table/Penjelasan|Table]]                                | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Kanban/Penjelasan|Kanban]]                              | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Gantt/Penjelasan|Gantt]]                                | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Timeline/Penjelasan|Timeline]]                          | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Gallery/Penjelasan|Gallery]]                            | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Space/Penjelasan|Space]]                                | Tampilan data           |
-| [[Docs/Modul Interface/Form/Widget/Button/Penjelasan|Button]]                              | Aksi                    |
+| [[Docs/Modul Interface/Canvas/Widget/Text/Pengenalan|Text]]                                  | Teks                    |
+| [[Docs/Modul Interface/Canvas/Widget/Chart Pie/Pengenalan|Chart Pie]]                        | Grafik                  |
+| [[Docs/Modul Interface/Canvas/Widget/Chart Line/Pengenalan|Chart Line]]                      | Grafik                  |
+| [[Docs/Modul Interface/Canvas/Widget/Chart Bar/Pengenalan|Chart Bar]]                        | Grafik                  |
+| [[Docs/Modul Interface/Canvas/Widget/Chart Radial/Pengenalan|Chart Radial]]                  | Grafik                  |
+| [[Docs/Modul Interface/Canvas/Widget/Chart Linear/Pengenalan|Chart Linear]]                  | Grafik                  |
+| [[Docs/Modul Interface/Canvas/Widget/Table/Pengenalan|Table]]                                | Tampilan data           |
+| [[Docs/Modul Interface/Canvas/Widget/Kanban/Pengenalan|Kanban]]                              | Tampilan data           |
+| [[Docs/Modul Interface/Canvas/Widget/Gantt/Pengenalan|Gantt]]                                | Tampilan data           |
+| [[Docs/Modul Interface/Canvas/Widget/Timeline/Pengenalan|Timeline]]                          | Tampilan data           |
+| [[Docs/Modul Interface/Canvas/Widget/Gallery/Pengenalan|Gallery]]                            | Tampilan data           |
+| [[Docs/Modul Interface/Canvas/Widget/Space/Pengenalan|Space]]                                | Tampilan data           |
+| [[Docs/Modul Interface/Canvas/Widget/Button/Pengenalan|Button]]                              | Aksi                    |
+
 
 Beberapa widget bekerja seperti komponen Interface lain dalam versi lite. Sebagai contoh, komponen [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] memiliki Event dan banyak data, sedangkan widget Timeline pada Canvas hanya menyajikan satu data.
 
