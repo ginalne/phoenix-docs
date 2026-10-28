@@ -27,11 +27,15 @@ Widget adalah elemen penyusun tampilan Canvas. Widget yang tersedia:
 | [[Docs/Modul Interface/Canvas/Widget/Space/Pengenalan|Space]]                                | Tampilan data           |
 | [[Docs/Modul Interface/Canvas/Widget/Button/Pengenalan|Button]]                              | Aksi                    |
 
-
-Beberapa widget bekerja seperti komponen Interface lain dalam versi lite. Sebagai contoh, komponen [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] memiliki Event dan banyak data, sedangkan widget Timeline pada Canvas hanya menyajikan satu data.
-
 [[Docs/Tipe Data/Query]] setiap widget diatur melalui tombol [[^button/q]] pada header toolbar. Isi widget, yaitu data hasil Query, tidak dapat dimanipulasi dari Canvas.
 
 Widget Button dapat berfungsi sebagai pemicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] melalui Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]], atau membuka komponen apa pun.
 
 Penjelasan keunikan masing-masing widget ada di halaman widget yang bersangkutan.
+
+## Mengelola Widget
+
+Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+1. [[Docs/Modul Interface/Form/Elemen Form/Menambahkan]] Widget.
+3. [[Docs/Modul Interface/Form/Elemen Form/Menghapus]] Widget.
+2. [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi]] properti dan desain dalam Elemen.

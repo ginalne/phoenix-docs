@@ -25,7 +25,7 @@ Penjelasan keunikan masing-masing Elemen ada di halaman Elemen tersebut.
 Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
 1. [[Docs/Modul Interface/Form/Elemen Form/Menambahkan]] Elemen.
 3. [[Docs/Modul Interface/Form/Elemen Form/Menghapus]] Elemen.
-2. [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi]] properti dan atirbut dalam Elemen seperti [[^field|Binding]], [[^field|State]], [[^field|Validators]],[[^field|Attributes]].
+2. [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi]] properti dan atribut dalam Elemen seperti [[^field|Binding]], [[^field|State]], [[^field|Validators]],[[^field|Attributes]].
 3. [[Docs/Modul Interface/Form/Elemen Form/Binding|Memahami Binding]] dalam Elemen.
 4. [[Docs/Modul Interface/Form/Elemen Form/State|Memahami State]] dalam Elemen.
 4. [[Docs/Modul Interface/Form/Elemen Form/Validator|Memahami Validator]] dalam Elemen.

@@ -22,7 +22,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 1. Pindah ke Edit Mode melalui toggle [[^field|mode]] pada [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mode View dan Edit|Canvas]]
 2. Klik [[^field|Type something here to add...]] pada Layout.
-3. Ketik `/chart`, lalu pilih Chart Pie dari dropdown
+3. Ketik `/chart pie`, lalu pilih item dari dropdown
 4. Pilih Table sumber pada [[^field|Data]], lalu atur Query melalui [[^button/q]]. Lihat [[#Mengatur Data dan Query]].
 
 >**success** Widget Chart Pie berhasil ditambahkan
