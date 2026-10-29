@@ -65,23 +65,7 @@ Langkah menghapus Widget Table sama dengan menghapus widget lain. Lihat [[Docs/M
 - **Aktifkan [[^toggle/search|Search]] bila pembaca perlu mencari.** Toolbar search memudahkan menemukan baris tanpa menggulir seluruh data.
 - **Batasi data lewat [[Docs/Tipe Data/Query|Query]].** Tampilkan hanya kolom dan baris yang dibutuhkan pembaca agar tabel tetap ringkas.
 - **Atur [[^field|min.]] tinggi dan lebar.** Beri ruang cukup agar tabel dan pagination tidak terpotong oleh widget lain pada Canvas.
-- **Gunakan [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] untuk mengelola data.** Widget Table hanya untuk menampilkan.
-- **Perhatikan Canvas yang dipublikasikan.** Data pada widget dapat dilihat publik bila Canvas berstatus [[^value/radio|Active]].
-
-## Batasan dan Catatan
-
-- [[Docs/Tipe Data/Query|Query]] diatur melalui [[^button/q]], sedangkan isinya (data hasil Query) tidak dapat dimanipulasi dari Canvas.
-- Widget Table hanya memiliki [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Layout Panel]]. Tidak ada panel tampilan tambahan.
-- Menghapus widget hanya menghapus tampilan dan Query, Table sumber tetap aman.
-- Menambah, mengubah, dan menghapus widget mengikuti [[Docs/Modul Interface/Canvas/Hak Akses|Hak Akses Canvas]].
-
-## TL:DR
-.
-- Tambahkan melalui [[^field|Type something here to add...]] dengan perintah `/table` pada Edit Mode. Lihat [[#Menambahkan Widget Table]].
-- Header toolbar berisi [[^toggle|123]], [[^toggle/search|Search]], [[^field|Data]] [[^button/q]], dan [[^button/delete|Remove]]. Design toolbar berisi panel [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Layout Panel]]. Lihat [[#Antarmuka Widget Table]].
-- Pilih Table sumber di [[^field|Data]] [[Docs/Tipe Data/Query]] lewat [[^button/q]].
-- Aktifkan [[^toggle|123]] untuk pagination dan [[^toggle/search|Search]] untuk toolbar search.
-- Menghapus widget tidak menghapus data sumber, dan semua perubahan mengikuti Data Access Canvas.
+- **Gunakan [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] untuk mengelola data.** Widget Table hanya untuk menampilkan..
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
@@ -91,7 +75,7 @@ Langkah menghapus Widget Table sama dengan menghapus widget lain. Lihat [[Docs/M
 > **Untuk apa tombol kaca pembesar?**
 > [[^toggle/search|Search]] adalah toggle untuk memunculkan toolbar search di bagian atas widget, berisi [[^button/refresh|Refresh List]] dan [[^field|Search Data...]].
 > **Mengapa saya tidak dapat mengubah isi tabel?**
-> Widget Table adalah versi lite dari Table View, sehingga isinya (data hasil [[Docs/Tipe Data/Query|Query]]) tidak dapat dimanipulasi dari Canvas. Gunakan [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] untuk mengelola baris.
+> Data hasil [[Docs/Tipe Data/Query|Query]]tidak dapat dimanipulasi dari Canvas. Gunakan [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] untuk mengelola baris.
 > **Bagaimana mengatur kolom yang tampil?**
 > Kolom dan baris yang tampil ditentukan oleh [[Docs/Tipe Data/Query|Query]]. Klik [[^button/q]] pada header toolbar untuk mengaturnya.
 > **Berapa data yang tampil per halaman?**
