@@ -70,12 +70,3 @@ Langkah menghapus Widget Kanban sama dengan menghapus widget lain. Lihat [[Docs/
 > **Apakah menghapus widget menghapus data sumber?**
 > Tidak. Menghapus widget hanya menghapus tampilan dan konfigurasinya, termasuk [[Docs/Tipe Data/Query|Query]]. Data sumber tetap aman.
 
-<!--
-  * [TODO] Screenshot Widget Kanban belum dilampirkan. Mohon sediakan `interface-widget-kanban.png`. Path gambar mengikuti halaman Widget Table dan Widget Chart Pie (`Docs/Modul Interface/Form/Widget/<Nama>/...`), mohon konfirmasi apakah dipindah ke `Docs/Modul Interface/Canvas/Widget/<Nama>/`.
-  * [TODO] Header Toolbar diasumsikan hanya berisi ikon jenis widget, ikon pegangan, Data (Query) dengan tombol Q, dan Remove, mengikuti penjelasan penulis (hanya pengaturan Query), dan Layout Panel diasumsikan sama dengan widget lain (tidak ada Design Panel).
-  * [TODO] Kaidah Query Widget Kanban diasumsikan `Docs/Tipe Data/Query#Kanban Output` (mengikuti pola Table Output, Timeline Output, Series Output). Mohon definisikan di halaman Query: kolom yang diperlukan dan cara kolom Kanban ditentukan (pada komponen Kanban dari Column berformat EnumData).
-  * [TODO] Konfirmasi: header kolom pada widget tidak memiliki tombol Setting atau template kartu (diasumsikan, karena header toolbar hanya memiliki pengaturan Query). Mohon jelaskan bagaimana isi kartu ditentukan pada widget.
-  * [TODO] Konfirmasi: pada widget tidak tersedia drag and drop kartu, Move To, Detail, Add Row, dan Delete Row (diasumsikan dari aturan isi widget tidak dapat dimanipulasi).
-  * [TODO] Konfirmasi gestur gulir pada tabel Interaksi (diambil dari komponen Kanban).
-  * [TODO] Halaman baru yang diusulkan: `Docs/Tipe Data/Query#Kanban Output`, `Docs/Modul Interface/Canvas/Widget/Pengenalan`, `Docs/Modul Interface/Canvas/Widget/Menambahkan`, `Docs/Modul Interface/Canvas/Widget/Mengonfigurasi`, dan `Docs/Modul Interface/Canvas/Widget/Kanban` (halaman ini).
--->
