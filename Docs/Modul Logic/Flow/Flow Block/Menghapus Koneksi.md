@@ -1,14 +1,14 @@
 ---
-    status: draft
+    status: release
+    title: ""
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 6
     tags:
       draft
 ---
-## Menghapus Koneksi Flow Block
-
+# Menghapus Koneksi Flow Block
 ```excalidraw
 url:Docs/Modul Logic/Flow/Flow Block/remove-connection-block-flow.excalidraw
 height:500px
