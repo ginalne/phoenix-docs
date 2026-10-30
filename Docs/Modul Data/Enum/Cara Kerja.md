@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 3
-    tags:
-      draft
 ---
 # Cara Kerja Enum
 
@@ -20,3 +18,4 @@ flowchart LR
 ```
 
 Hanya [[Docs/Tipe Data/EnumData]] dengan [[^field|Selectable]] bernilai [[^value/boolean/true]] yang tampil pada daftar pilihan. [[Docs/Tipe Data/EnumData]] dengan nilai [[^value/boolean/false]] tidak tampil sebagai pilihan di field, tetapi tetap dapat dipakai di tempat lain.
+

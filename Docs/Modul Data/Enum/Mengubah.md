@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 1.5
-    tags:
-      draft
 ---
 # Mengubah Enum
 

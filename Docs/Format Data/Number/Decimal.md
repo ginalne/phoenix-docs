@@ -6,7 +6,8 @@
       tree:
         priority: 0
     tags:
-      draft
+      format
+      data
 ---
 # Format Data : Decimal
 

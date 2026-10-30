@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 10
-    tags:
-      draft
 ---
 # Apa itu Flow Block
 

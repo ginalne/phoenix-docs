@@ -1,15 +1,13 @@
 ---
-    status: draft
+    status: release
     title: "Format Data : Geo"
     description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
     tags:
-      draft
-      data
       format
+      data
 ---
 # Format Data : Geo
 

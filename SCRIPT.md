@@ -257,26 +257,29 @@ slashCommand.define {
           block = tages
           rest = ""
         end
+
+        block = string.gsub(
+          block,
+          "\n%s*draft[%s\n]",
+          "\n",
+          1
+        )
         
         editor.flashNotification(block)
         
         block = string.gsub(
           block,
-          "\n%s*draft%s*\n?",
+          "%s*draft%f[%s\n]\n",
           "",
           1
         )
         
-        block = string.gsub(
-          block,
-          "%sdraft%s*\n?",
-          "",
-          1
-        )
+        editor.flashNotification(block)
+        
 
         block = string.gsub(
           block,
-          "^(%s*draft)$",
+          "\n*%s*draft%s*",
           "",
           1
         )

@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 0
-    tags:
-      draft
 ---
 # Complex
 

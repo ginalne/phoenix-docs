@@ -5,6 +5,9 @@
     pageDecoration:
       tree:
         priority: 0
+    tags:
+      format
+      data
 ---
 # Format Data : 2D Vector
 
