@@ -13,7 +13,7 @@
 
 Template Kartu menentukan [[Docs/Tipe Data/Column]] mana dari [[Docs/Tipe Data/Table]] sumber yang tampil pada kartu, di posisi mana, dan dengan desain apa. Setiap [[Docs/Tipe Data/Row]] pada Table tampil sebagai satu kartu, dan semua kartu di Gallery mengikuti template yang sama.
 
-Dengan template, Anda dapat menonjolkan gambar atau konten yang paling penting dari setiap data, lalu menyesuaikan desainnya melalui [[Docs/Styling/Styling Class|Styling]].
+Dengan template, Anda dapat menonjolkan gambar atau konten yang paling penting dari setiap data, lalu menyesuaikan desainnya melalui [[Docs/Styling/Pengenalan|Styling]].
 
 ## Konsep Utama
 
