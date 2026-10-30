@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 5
-    tags:
-      draft
 ---
 # Mengubah Query Timeline Data
 

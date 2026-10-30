@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 2
-    tags:
-      draft
 ---
 # Table View Data : Mengatur Tampilan
 

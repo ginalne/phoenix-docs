@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 2.5
-    tags:
-      draft
 ---
 # Membuat Flow
 

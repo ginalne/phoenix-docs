@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: -3
-    tags:
-      draft
 ---
 # Contoh Penggunaan
 

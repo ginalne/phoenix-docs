@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 3
-    tags:
-      draft
 ---
 # Cara Kerja Flow
 Flow Block Event memicu proses, lalu hasilnya mengalir lewat koneksi dari satu Flow Block ke Flow Block berikutnya hingga menghasilkan keluaran.

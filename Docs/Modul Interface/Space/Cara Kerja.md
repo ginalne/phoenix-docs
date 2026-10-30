@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 9
-    tags:
-      draft
 ---
 # Cara Kerja Space
 

@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: -1
-    tags:
-      draft
 ---
 
 Publish adalah konfigurasi untuk mengubah Canvas menjadi dipublikasikan. Klik [[^button/publish|Publish]] untuk membuka modal konfigurasinya, yang hanya berisi dua kolom:

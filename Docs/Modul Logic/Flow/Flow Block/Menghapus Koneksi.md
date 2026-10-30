@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 6
-    tags:
-      draft
 ---
 # Menghapus Koneksi Flow Block
 ```excalidraw

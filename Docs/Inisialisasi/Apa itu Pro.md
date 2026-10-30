@@ -4,8 +4,6 @@
       icon: x
       tree:
         priority: 0
-    tags:
-      draft
 ---
 # Apa itu Pro?
 

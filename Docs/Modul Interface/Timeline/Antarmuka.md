@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 0
-    tags:
-      draft
 ---
 # Antarmuka Timeline
  ![[Docs/Modul Interface/Timeline/interface-timeline.png]]

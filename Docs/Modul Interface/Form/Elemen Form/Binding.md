@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 4
-    tags:
-      draft
 ---
 # Binding dalam Elemen Form
 

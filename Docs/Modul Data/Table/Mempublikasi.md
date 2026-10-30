@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: -1
-    tags:
-      draft
 ---
 # Mempublikasi Table
 

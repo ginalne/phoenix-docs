@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 7
-    tags:
-      draft
 ---
 # Menghubungkan Flow Block
 ```excalidraw

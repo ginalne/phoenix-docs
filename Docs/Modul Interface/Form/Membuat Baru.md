@@ -5,8 +5,6 @@
     pageDecoration:
       tree:
         priority: 8
-    tags:
-      draft
 ---
 # Membuat Form Baru
 
