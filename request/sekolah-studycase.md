@@ -19,7 +19,7 @@
 | **Organisasi** | SMA Nusantara Mandiri (fiktif) |
 | **Skala** | 600 siswa, 45 guru, 4 staf tata usaha, 1 kepala sekolah |
 | **Masalah utama** | Data tersebar di banyak file dan tidak ada kontrol akses |
-| **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Data/Table View/Apa itu Table View|Table View]], [[Docs/Modul Data/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], [[Docs/Publish/Pengenalan|Publish]] |
+| **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]], [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], [[Docs/Publish/Pengenalan|Publish]] |
 | **Hasil yang dituju** | Satu sumber data, akses sesuai peran, pengingat berjalan otomatis |
 
 ## Latar Belakang

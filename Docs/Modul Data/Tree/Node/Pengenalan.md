@@ -18,8 +18,8 @@ Berikut adalah aksi yang bisa dilakukan untuk mengelolanya dalam halaman kerja T
 4. [[Docs/Modul Data/Tree/Node/Menghapus]]
 5. [[Docs/Modul Data/Tree/Node/Melihat Detail]]
 6. [[Docs/Modul Data/Tree/Node/Mengatur Tampilan]]
-7. [[Docs/Modul Data/Tree/Node/Ekspor]]
-8. [[Docs/Modul Data/Tree/Node/Impor]]
+7. [[Docs/Modul Data/Tree/Node/Mengekspor]]
+8. [[Docs/Modul Data/Tree/Node/Mengimpor]]
 
 ## Menu Konteks Node
 

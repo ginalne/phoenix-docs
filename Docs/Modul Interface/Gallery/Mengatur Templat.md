@@ -23,7 +23,7 @@ Dengan template, Anda dapat menonjolkan gambar atau konten yang paling penting d
 | [[#Bagian Template Kartu|Body]] | Bagian isi kartu. Column tersusun menurun dari atas ke bawah. |
 | [[#Bagian Template Kartu|Footer]] | Bagian paling bawah kartu. Column tersusun mendatar dari kiri ke kanan. |
 | [[Docs/Tipe Data/Column]] | Kolom Table sumber yang dipilih untuk tampil pada kartu. |
-| [[Docs/Styling/Styling Class|Styling]] | Nama class yang menyesuaikan desain sebuah Column pada kartu. |
+| [[Docs/Styling/Pengenalan|Styling]] | Nama class yang menyesuaikan desain sebuah Column pada kartu. |
 | [[#Mengubah Urutan Column|Urutan]] | Posisi Column dalam sebuah bagian, yang dapat diubah dengan *drag and drop*. |
 | [[#Template Kosong]] | Kondisi awal Gallery sebelum ada Column pada template. |
 
@@ -78,7 +78,7 @@ Anda dapat klik [[^button|Cancel]] untuk membatalkan perubahan template. Setelah
 
 ### Mengisi Styling
 
-[[^field|Styling]] berisi nama class styling untuk menyesuaikan desain Column, misalnya perataan teks atau ketebalan huruf. Anda dapat mengisi beberapa class sekaligus dengan memisahkannya menggunakan spasi, misalnya `text-right font-semibold`. Daftar class beserta contoh yang benar ada di [[Docs/Styling/Styling Class]].
+[[^field|Styling]] berisi nama class styling untuk menyesuaikan desain Column, misalnya perataan teks atau ketebalan huruf. Anda dapat mengisi beberapa class sekaligus dengan memisahkannya menggunakan spasi, misalnya `text-right font-semibold`. Daftar class beserta contoh yang benar ada di [[Docs/Styling/Pengenalan|Styling]].
 
 ### Mengubah Urutan Column
 
@@ -101,7 +101,7 @@ Saat Gallery pertama kali dibuat, template masih kosong dan setiap bagian menamp
 
 - **Letakkan Column pengenal**, seperti nama atau judul, di [[^field|Header]], konten visual seperti gambar di [[^field|Body]], dan informasi pendukung di [[^field|Footer]].
 - **Manfaatkan Column yang bisa dipakai berkali-kali** untuk menampilkan nilai yang sama pada bagian berbeda dengan [[^field|Styling]] yang berbeda.
-- **Gunakan [[^field|Styling]] secukupnya** dan rujuk [[Docs/Styling/Styling Class]] agar nama class sudah benar.
+- **Gunakan [[^field|Styling]] secukupnya** dan rujuk [[Docs/Styling/Pengenalan|Styling]] agar nama class sudah benar.
 - **Periksa kartu di halaman kerja** setelah klik [[^button|Update]] untuk memastikan susunan dan urutan sesuai harapan.
 - **Pastikan Anda memiliki izin Data Access** di [[Docs/Modul Developer/Workspace/Data Access|Workspace]] sebelum mengubah template.
 
@@ -129,7 +129,7 @@ Saat Gallery pertama kali dibuat, template masih kosong dan setiap bagian menamp
 > **Column apa saja yang dapat dipilih pada template?**
 > Hanya Column dari Table sumber Gallery. Satu Column dapat dipakai berkali-kali.
 > **Bagaimana mengisi lebih dari satu class pada Styling?**
-> Pisahkan setiap class dengan spasi, misalnya `text-right font-semibold`. Contoh class yang benar ada di [[Docs/Styling/Styling Class]].
+> Pisahkan setiap class dengan spasi, misalnya `text-right font-semibold`. Contoh class yang benar ada di [[Docs/Styling/Pengenalan|Styling]].
 > **Apakah menghapus baris template menghapus data?**
 > Tidak. [[^button/delete|Delete]] hanya menghapus Column dari template. Column dan data di Table sumber tetap ada.
 > **Mengapa saya tidak bisa menyimpan perubahan template?**

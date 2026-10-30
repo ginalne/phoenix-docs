@@ -18,7 +18,7 @@ Environment adalah data yang tampil sebagai objek 3D statis tanpa logika. Anda c
 | [[^field|Description]] | [[Docs/Tipe Data/String]] | Keterangan Environment. |
 | [[^field|Position]] | [[Docs/Format Data/Complex/3D Vector|3D Vector]] | Posisi Environment di ruang 3D. |
 | [[^field|Scale]] | [[Docs/Format Data/Complex/Volume Unit|Volume Unit]] | Ukuran (skala) Environment pada sumbu x, y, dan z. |
-| [[^field|Rotation]] | [[Docs/Format Data/Complex/Euler Angle|Euler Angle]] | Rotasi Environment. |
+| [[^field|Rotation]] | [[Docs/Format Data/Complex/Angle Unit]] | Rotasi Environment. |
 | [[^field|Model]] | File 3D | File 3D yang di-*upload* sebagai wujud Environment. |
 
 ## Mengelola Environment

@@ -33,7 +33,7 @@ Gallery ideal untuk koleksi yang bersifat visual, seperti katalog, portofolio, a
 | [[Docs/Tipe Data/Table]] | Sumber data Gallery. Wajib dipilih saat membuat Gallery dan tidak dapat diubah setelahnya. |
 | [[Docs/Tipe Data/Row]] | Satu baris pada Table. Setiap Row tampil sebagai satu kartu di Gallery. |
 | [[#Cara Kerja Gallery|Kartu]] | Tampilan satu Row di Gallery. Isi dan tata letaknya ditentukan oleh template. |
-| [[Docs/Modul Interface/Gallery/Template Kartu|Template Kartu]] | Pengaturan tata letak kartu yang terdiri dari [[^field|Header]], [[^field|Body]], dan [[^field|Footer]]. |
+| [[Docs/Modul Interface/Gallery/Mengatur Templat|Template Kartu]] | Pengaturan tata letak kartu yang terdiri dari [[^field|Header]], [[^field|Body]], dan [[^field|Footer]]. |
 | [[Docs/Tipe Data/Column]] | Kolom Table yang ditambahkan ke template dan tampil pada kartu sesuai posisinya. |
 | [[Docs/Styling/Pengenalan|Styling]] | Nama class yang menyesuaikan desain Column pada kartu. |
 | [[Docs/Tipe Data/Query#Filter|Filter]] | Daftar kondisi (kolom, operator, dan operand) untuk menyaring Row yang tampil sebagai kartu. |

@@ -22,4 +22,4 @@ Berikut adalah pertanyaan yang sering diajukan pada komponen Table:
 > **Dari mana kolom ID dan Action berasal?**
 > Keduanya kolom tambahan pada halaman kerja Table, ID di bagian awal (terisi otomatis) dan Action di bagian akhir.
 > **Di mana saya bisa mempelajari fungsi Merge, Publish, dan Event?**
-> Lihat [[Docs/Modul Data/Table/TableData Merge|Merge]], [[Docs/Modul Data/Table/Publish|Publish]], dan [[Docs/Modul Data/Table/Event|Event]].
+> Lihat [[Docs/Modul Data/Table/Table Row/Menggabungkan|Merge]], [[Docs/Modul Data/Table/Mempublikasi|Publish]], dan [[Docs/Modul Data/Table/Mengotomasi|Event]].

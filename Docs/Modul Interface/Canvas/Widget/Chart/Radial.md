@@ -57,7 +57,7 @@ Design Panel (ikon palet) mengatur tampilan bar, track, dan needle:
 | Dropdown bentuk lengkungan (contoh `Horseshoe`) | Bentuk lengkungan: `Full`, `Semi`, `Horseshoe`, `Fan`, atau `Custom`. Pilihan `Custom` menampilkan input tambahan dari derajat awal (from°) sampai derajat akhir (to°). |
 | Ikon ketebalan (contoh 25) | *Thickness*, yaitu ketebalan bar. Nilai bawaan 25. |
 | [[^field|arc]] | Bentuk ujung bar: `Round`, `Square`, atau `Butt`. |
-| [[^field|style]] | Tema pewarnaan. Pilihan sama dengan theme pada [[Docs/Modul Interface/Canvas/Widget/Chart Line#Design Panel|Chart Line]]. |
+| [[^field|theme]] | Tema pewarnaan : `monochrome`, `phoenix`, `fun`, `classy`, `futuristic`, `elegant`, `aurora`, `forest`, `royal`, `obsidian`, `celestial`, `volcanic`, `lotus`, `cyberpunk`, `desert`. |
 | Ikon opacity (contoh 100%) | Opacity bar. |
 | Ikon arc gap (contoh 17) | Jarak antar arc. |
 | [[^button/add|+ threshold]] | Menambahkan titik threshold. Setiap titik memiliki input [[^field|at]] (dalam persen) dan warna. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan. |

@@ -51,7 +51,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
 3. [[Docs/Modul Data/Table/Menghapus]] Table.
 4. [[Docs/Modul Data/Table/Table Row/Pengenalan|Mengelola Baris]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/Row]].
 5. [[Docs/Modul Data/Table/Mempublikasi]]: mengatur publikasi Table.
-6. [[Docs/Modul Data/Table/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
+6. [[Docs/Modul Data/Table/Mengotomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
 Anda juga dapat memperdalam tentang Tipe Data yang berhubungan dengan data yaitu: [[Docs/Tipe Data/Column]], [[Docs/Tipe Data/Row]], dan [[Docs/Tipe Data/TableData]].
 

@@ -85,6 +85,28 @@ slashCommand.define {
   end
 }
 slashCommand.define {
+  name = "toggle",
+  run = function()
+    local text = editor.getText()
+
+    -- Existing frontmatter
+    local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
+    if not fmStart then
+      editor.insertAtPos([==[---
+  tags:
+    meta/library
+    toggle
+  pageDecoration:
+    icon: 
+---
+]==], 0, true)
+    editor.flashNotification("Add Frontmatter button succeed!")
+    else
+    editor.flashNotification("Frontmatter is exists!")
+    end
+  end
+}
+slashCommand.define {
   name = "field",
   run = function()
     local text = editor.getText()

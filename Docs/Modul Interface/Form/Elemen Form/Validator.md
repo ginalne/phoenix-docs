@@ -27,7 +27,7 @@ Seperti [[Docs/Modul Interface/Form/Elemen Form/State]], [[^field|Required]] dap
 Nilai awal [[^field|Required]] pada Elemen input yang baru ditambahkan adalah [[^value/boolean/false]].
 
 >**note** Required mengikuti State
-> Elemen yang tidak terlihat atau tidak aktif tidak dapat diisi oleh pengisi, sehingga [[^field|Required]] tidak berlaku pada Elemen tersebut. Selengkapnya lihat [[Docs/Modul Interface/Form/State|State]].
+> Elemen yang tidak terlihat atau tidak aktif tidak dapat diisi oleh pengisi, sehingga [[^field|Required]] tidak berlaku pada Elemen tersebut. Selengkapnya lihat [[Docs/Modul Interface/Form/Elemen Form/State|State]].
 
 ## Antarmuka Validator
 

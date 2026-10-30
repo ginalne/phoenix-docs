@@ -45,7 +45,7 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [[^field|hole]]            | Besar lubang di tengah pie, dalam persen.                                                                                                                      |
 | [[^field|gap]]             | Jarak antar data (antar irisan).                                                                                                                               |
-| [[^field|theme]]           | Tema warna pie.                                                                                                                                                |
+| [[^field|theme]]           | Tema warna pie : `monochrome`, `phoenix`, `fun`, `classy`, `futuristic`, `elegant`, `aurora`, `forest`, `royal`, `obsidian`, `celestial`, `volcanic`, `lotus`, `cyberpunk`, `desert`.                                                                                                                          |
 | [[^field|gradient]]        | Gradasi warna dari tengah ke pinggir (dari transparan ke warna), dalam persen.                                                                                 |
 | [[^field|offset]]          | Batas akhir gradasi. Jika 75%, gradasi berjalan dari tengah sampai sekitar 75% ke ujung lingkaran.                                                             |
 | [[^field|label]]           | Isi label di dalam pie: `none`, `label`, `value`, `percent`, atau `all` (label - value).                                                                       |

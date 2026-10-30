@@ -49,9 +49,8 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
 1. [[Docs/Modul Data/Enum/Membuat Baru]] Enum dalam halaman kerja.
 2. [[Docs/Modul Data/Enum/Mengubah]] Atribut Enum seperti [[^field|Name]], [[^field|Description]].
 3. [[Docs/Modul Data/Enum/Menghapus]] Enum.
-4. [[Docs/Modul Data/Enum/Enum Data/Pengenalan|Mengelola Data]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/EnumData]].
-5. [[Docs/Modul Data/Enum/Publikasi]]: mengatur publikasi Table.
-6. [[Docs/Modul Data/Enum/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
+4. [[Docs/Modul Data/Enum/Enum Data/Pengenalan|Mengelola Data]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/EnumData]]
+5. [[Docs/Modul Data/Enum/Mengotomasi]]: menghubungkan [[Docs/Tipe Data/Enum]] dengan [[Docs/Event/Apa itu Event|Event]].
 
 Anda juga dapat memperdalam tentang Tipe Data yang berhubungan dengan data yaitu: [[Docs/Tipe Data/EnumData]].
 

@@ -12,7 +12,7 @@ Berikut adalah pertanyaan yang Sering Diajukan pada komponen Form:
 
 > **faq**
 > **Apa bedanya tombol Edit dan toggle mode?**
-> Tombol [[^button/edit|Edit]] mengubah atribut Form ([[^field|Name]] dan [[^field|Description]]), sedangkan toggle [[^field|mode]] berpindah antara [[^value/radio|View]] dan [[^value/radio|Edit]] untuk menyusun isi Form.
+> Tombol [[^button/edit|Edit]] mengubah atribut Form ([[^field|Name]] dan [[^field|Description]]), sedangkan toggle [[^field|mode]] berpindah antara [[^mode/view]] dan [[^mode/edit]] untuk menyusun isi Form.
 > **Mengapa saya tidak bisa beralih ke Edit Mode?**
 > Beralih ke Edit Mode membutuhkan [[^field|Data Access]] di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang mengizinkan perubahan Form. Hubungi pengelola Workspace Anda.
 > **Apakah saya harus menekan Save setiap kali mengubah Form?**
@@ -24,4 +24,4 @@ Berikut adalah pertanyaan yang Sering Diajukan pada komponen Form:
 > **Kapan Form dapat disubmit?**
 > Form hanya dapat disubmit setelah pengisi mencapai Page terakhir pada [[#Mengelola Page Form|Form Flow]].
 > **Di mana penjelasan setiap Elemen?**
-> Setiap Elemen punya halaman sendiri, misalnya [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]] dan [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]]. Lihat daftarnya di [[#Memahami Elemen]].
+> Setiap Elemen punya halaman sendiri, misalnya [[Docs/Modul Interface/Form/Elemen Form/Layout/Card]] dan [[Docs/Modul Interface/Form/Elemen Form/Input/Basic]]. Lihat daftarnya di [[#Memahami Elemen]].

@@ -19,7 +19,7 @@ Halaman kerja Enum terdiri dari bilah navigasi di bagian atas dan tabel data di 
 | Judul Enum ([[^field/enum|Pelayan]] di gambar) | Menampilkan ikon Enum dan [[^field|Header Name]]. |
 | [[^button/edit|Edit]] | Mengubah atribut Enum (lihat [[#Mengubah Enum]]). |
 | [[^button/merge|Merge]] | Menggabungkan data. Selengkapnya lihat [[Docs/Modul Data/Enum/Enum Data/Menggabungkan]]. |
-| [[^button/event|Event]] | Menghubungkan [[Docs/Event/Apa itu Event|Event]] dari Enum. Selengkapnya lihat [[Docs/Modul Data/Enum/Event]]. |
+| [[^button/event|Event]] | Menghubungkan [[Docs/Event/Apa itu Event|Event]] dari Enum. Selengkapnya lihat [[Docs/Modul Data/Enum/Mengotomasi]]. |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan halaman kerja. |
 | [[^field|Search Enum Data...]] | Mencari [[Docs/Tipe Data/EnumData]] di dalam Enum. |
 

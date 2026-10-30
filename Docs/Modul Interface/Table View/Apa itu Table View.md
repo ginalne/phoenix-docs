@@ -30,7 +30,7 @@ Satu Table View dapat memiliki lebih dari satu Data. Setiap Data menampung satu 
 
 | Istilah | Penjelasan |
 | ------- | ---------- |
-| [[Docs/Modul Interface/Table View/Table View Data|Data]] | Satu unit tampilan pada Table View yang menampung nama, konfigurasi tampilan dan [[Docs/Tipe Data/Query]]. Satu Table View dapat memiliki lebih dari satu Data. |
+| [[Docs/Modul Interface/Table View/Table View Data/Pengenalan|Data]] | Satu unit tampilan pada Table View yang menampung nama, konfigurasi tampilan dan [[Docs/Tipe Data/Query]]. Satu Table View dapat memiliki lebih dari satu Data. |
 | [[Docs/Tipe Data/Query]] | Tipe data yang merumuskan data yang tampil pada setiap Table View Data. |
 | [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] | Pengaturan di [[Docs/Tipe Data/Query]] untuk menampilkan atau menyembunyikan kolom tertentu. |
 | [[Docs/Tipe Data/Query#Filter|Filter]] | Kondisi di [[Docs/Tipe Data/Query]] untuk memfilter daftar yang tampil. |
@@ -46,7 +46,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
 1. [[Docs/Modul Interface/Table View/Membuat Baru]] Table View dalam halaman kerja.
 2. [[Docs/Modul Interface/Table View/Mengubah]] Atribut Table View seperti [[^field|Name]], [[^field|Description]], atau [[^field|Table - Column]].
 3. [[Docs/Modul Interface/Table View/Menghapus]] Table View.
-4. [[Docs/Modul Interface/Table View/Table View Data|Mengelola Data]] Table View seperti menambahkan, mengubah atau memperbarui Data.
+4. [[Docs/Modul Interface/Table View/Table View Data/Pengenalan|Mengelola Data]] Table View seperti menambahkan, mengubah atau memperbarui Data.
 
 ## Antarmuka
 
@@ -72,7 +72,7 @@ Penjelasan antarmuka lihat selengkapnya di [[Docs/Modul Interface/Table View/Ant
 
 ## TL:DR
 
-- [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] menampilkan data sumber seperti [[Docs/Modul Data/Table/Apa itu Table|Table]] menggunakan [[Docs/Tipe Data/Query|Query]], dan dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/TableViewData|Data]].
+- [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] menampilkan data sumber seperti [[Docs/Modul Data/Table/Apa itu Table|Table]] menggunakan [[Docs/Tipe Data/Query|Query]], dan dapat memiliki lebih dari satu [[Docs/Modul Interface/Table View/Table View Data/Pengenalan|Data]].
 - Setiap Data menampung satu [[Docs/Tipe Data/Query]], nama, dan tampilan ([[^value/radio|full]], [[^value/radio|half]], atau [[^value/radio|quarter]]), dan dapat dilipat dengan klik.
 - Atur kolom dengan [[Docs/Tipe Data/Query#Show dan Hide|Show/Hide]] dan kondisi dengan [[Docs/Tipe Data/Query#Filter|Filter]]; Query wajib memakai kaidah [[Docs/Tipe Data/Query#Table Output]].
 - Baris dikelola seperti pada Table, dan kolom syarat [[Docs/Tipe Data/Query#Filter|Filter]] yang tidak tampil terisi otomatis agar baris tidak hilang setelah [[^button/refresh|Refresh]].

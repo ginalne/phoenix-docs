@@ -20,9 +20,9 @@ Jenis State yang tersedia bergantung pada jenis Elemen. Elemen layout dan displa
 
 | Jenis Elemen | Elemen | [[^field|Visible]] | [[^field|Enable]] | [[^field|Readonly]] |
 | ------------ | ------ | ------------------ | ----------------- | ------------------- |
-| Layout | [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]], [[Docs/Modul Interface/Form/Layout/Full/Penjelasan|Full]], [[Docs/Modul Interface/Form/Layout/Split/Penjelasan|Split]], [[Docs/Modul Interface/Form/Layout/Accordion/Penjelasan|Accordion]] | Ada | Tidak ada | Tidak ada |
-| Display | [[Docs/Modul Interface/Form/Display/Text/Penjelasan|Text]], [[Docs/Modul Interface/Form/Display/Table/Penjelasan|Table]], [[Docs/Modul Interface/Form/Display/Tooltip/Penjelasan|Tooltip]], [[Docs/Modul Interface/Form/Display/Qr/Penjelasan|Qr]], [[Docs/Modul Interface/Form/Display/Chrono/Penjelasan|Chrono]] | Ada | Tidak ada | Tidak ada |
-| Input | [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]], [[Docs/Modul Interface/Form/Input/Quiz/Penjelasan|Quiz]], [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]], [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] | Ada | Ada | Ada |
+| Layout | [[Docs/Modul Interface/Form/Elemen Form/Layout/Card]], [[Docs/Modul Interface/Form/Elemen Form/Layout/Full]], [[Docs/Modul Interface/Form/Elemen Form/Layout/Split]], [[Docs/Modul Interface/Form/Elemen Form/Layout/Accordion]] | Ada | Tidak ada | Tidak ada |
+| Display | [[Docs/Modul Interface/Form/Elemen Form/Display/Text]], [[Docs/Modul Interface/Form/Elemen Form/Display/Table]], [[Docs/Modul Interface/Form/Elemen Form/Display/Tooltip]], [[Docs/Modul Interface/Form/Elemen Form/Display/Qr]], [[Docs/Modul Interface/Form/Elemen Form/Display/Chrono]] | Ada | Tidak ada | Tidak ada |
+| Input | [[Docs/Modul Interface/Form/Elemen Form/Input/Basic]], [[Docs/Modul Interface/Form/Elemen Form/Input/Quiz]], [[Docs/Modul Interface/Form/Elemen Form/Input/Table]], [[Docs/Modul Interface/Form/Elemen Form/Input/List]] | Ada | Ada | Ada |
 
 Nilai awal ketiga State pada Elemen input yang baru ditambahkan selalu sama:
 

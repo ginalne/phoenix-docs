@@ -25,7 +25,7 @@ Setiap baris template berisi [[^field|Column]] yang akan ditampilkan, [[^field|S
 
 1. Klik [[^button/setting|Setting]] pada header kolom [[Docs/Tipe Data/EnumData]] yang ingin diatur
 2. Pada modal [[^field|Setup Kanban Template]], pilih cakupan template di [[^field|Column Template]] (lihat [[#Global dan Local]])
-3. Tambahkan [[^field|Column]] pada bagian [[^field|Header]], [[^field|Body]], atau [[^field|Footer]]. Langkah rincinya ada di [[Docs/Modul Interface/Kanban/Template Kartu]]
+3. Tambahkan [[^field|Column]] pada bagian [[^field|Header]], [[^field|Body]], atau [[^field|Footer]]. Langkah rincinya ada di [[Docs/Modul Interface/Kanban/Mengatur Templat|Template Kartu]]
 4. Klik [[^button|Update]]
 
 ### Global dan Local

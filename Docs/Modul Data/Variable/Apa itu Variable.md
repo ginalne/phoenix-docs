@@ -41,7 +41,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
 1. [[Docs/Modul Data/Variable/Menambahkan Data]]
 2. [[Docs/Modul Data/Variable/Mengubah Data]]
 3. [[Docs/Modul Data/Variable/Menghapus Data]]
-4. [[Docs/Modul Data/Enum/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
+4. [[Docs/Modul Data/Variable/Mengotomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
 Anda juga dapat memperdalam tentang Tipe Data yang relevan yaitu: [[Docs/Tipe Data/Variable]].
 

@@ -8,7 +8,7 @@
 ---
 ## Hak Akses Table View
 
-Hak akses pada Table View diatur berlapis. Pengelolaan [[Docs/Modul Interface/Table View/Table View Data]] diatur di Workspace, sedangkan perubahan Row dan cell diatur di konfigurasi Data dan di hak akses Table.
+Hak akses pada Table View diatur berlapis. Pengelolaan [[Docs/Modul Interface/Table View/Table View Data/Pengenalan|Table View Data]] diatur di Workspace, sedangkan perubahan Row dan cell diatur di konfigurasi Data dan di hak akses Table.
 
 | Yang dikelola | Diatur melalui | Penjelasan |
 | ------------- | -------------- | ---------- |

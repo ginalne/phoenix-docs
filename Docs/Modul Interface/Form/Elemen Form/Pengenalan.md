@@ -14,9 +14,9 @@ Elemen dikelompokkan dalam tiga kategori:
 
 | Kategori | Fungsi | Elemen |
 | --- | --- | --- |
-| [[#Elemen Layout|Layout]] | Menjadi templat tempat Elemen lain diletakkan. | [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]], [[Docs/Modul Interface/Form/Layout/Full/Penjelasan|Full]], [[Docs/Modul Interface/Form/Layout/Split/Penjelasan|Split]], [[Docs/Modul Interface/Form/Layout/Accordion/Penjelasan|Accordion]] |
-| [[#Elemen Display|Display]] | Menampilkan informasi. | [[Docs/Modul Interface/Form/Display/Text/Penjelasan|Text]], [[Docs/Modul Interface/Form/Display/Table/Penjelasan|Table]], [[Docs/Modul Interface/Form/Display/Tooltip/Penjelasan|Tooltip]], [[Docs/Modul Interface/Form/Display/Qr/Penjelasan|Qr]], [[Docs/Modul Interface/Form/Display/Chrono/Penjelasan|Chrono]] |
-| [[#Elemen Input|Input]] | Mengisi atau menampilkan informasi yang berlaku pada Binding. | [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]], [[Docs/Modul Interface/Form/Input/Quiz/Penjelasan|Quiz]], [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]], [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] |
+| [[#Elemen Layout|Layout]] | Menjadi templat tempat Elemen lain diletakkan. | [[Docs/Modul Interface/Form/Elemen Form/Layout/Card]], [[Docs/Modul Interface/Form/Elemen Form/Layout/Full]], [[Docs/Modul Interface/Form/Elemen Form/Layout/Split]], [[Docs/Modul Interface/Form/Elemen Form/Layout/Accordion]] |
+| [[#Elemen Display|Display]] | Menampilkan informasi. | [[Docs/Modul Interface/Form/Elemen Form/Display/Text]], [[Docs/Modul Interface/Form/Elemen Form/Display/Table]], [[Docs/Modul Interface/Form/Elemen Form/Display/Tooltip]], [[Docs/Modul Interface/Form/Elemen Form/Display/Qr]], [[Docs/Modul Interface/Form/Elemen Form/Display/Chrono]] |
+| [[#Elemen Input|Input]] | Mengisi atau menampilkan informasi yang berlaku pada Binding. | [[Docs/Modul Interface/Form/Elemen Form/Input/Basic]], [[Docs/Modul Interface/Form/Elemen Form/Input/Quiz]], [[Docs/Modul Interface/Form/Elemen Form/Input/Table]], [[Docs/Modul Interface/Form/Elemen Form/Input/List]] |
 
 Penjelasan keunikan masing-masing Elemen ada di halaman Elemen tersebut.
 

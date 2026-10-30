@@ -58,14 +58,14 @@ Design Panel (ikon palet) mengatur tampilan batang:
 | --- | --- |
 | [[^toggle|diverging]], [[^toggle|reversed]], [[^toggle|orientasi]] | Tiga toggle pada baris [[^field|mode]]: mode diverging, mode reversed, dan orientasi batang. Orientasi nonaktif berarti vertikal. |
 | Radio button mode batang | Pilihan `Grouped`, `Stacked`, atau `Full`. |
-| [[^field|style]] | Tema pewarnaan. Pilihan sama dengan theme pada [[Docs/Modul Interface/Canvas/Widget/Chart/Line#Design Panel|Chart Line]]. |
+| [[^field|theme]] | Tema pewarnaan: `monochrome`, `phoenix`, `fun`, `classy`, `futuristic`, `elegant`, `aurora`, `forest`, `royal`, `obsidian`, `celestial`, `volcanic`, `lotus`, `cyberpunk`, `desert`. |
 | Ikon opacity (contoh 90%) | *Bar opacity*, yaitu opacity batang. |
 | Ikon radius (contoh 4) | *Bar border radius*, yaitu kelengkungan sudut batang. |
 | [[^field|p]] | *Bar padding*, yaitu jarak antar batang (contoh 0.25%). |
 | [[^field|marker]] | Pengaturan marker: warna marker, *marker length* (contoh 70%), dan *marker width* (contoh 3). |
 | [[^field|pattern]] | Pola pada batang: `off`, `basic`, `all`, atau `series`. `basic` memakai pola garis-garis. `all` menerapkan satu pola ke semua batang dengan pilihan `Hatch`, `Dots`, `Cross`, atau `ZigZag`. `series` menentukan pola menurut urutan series, dan tombol [[^button/add|+]] menambahkan urutan. |
 | [[^field|legends]] | Posisi legenda: `right`, `bottom`, `left`, `top`, atau `hidden`. |
-| [[^toggle/zoom|Zoom]] (ikon kaca pembesar) | Toggle untuk mengaktifkan interaksi zoom pada chart. |
+| [[^toggle/zoom]] (ikon kaca pembesar) | Toggle untuk mengaktifkan interaksi zoom pada chart. |
 | [[^toggle/grid|Grid]] (ikon grid) | Toggle untuk menampilkan grid. |
 | [[^toggle/123]] | Toggle untuk menampilkan label nilai di atas batang. |
 | [[^field|size]] | Ukuran font label nilai (contoh 11). |

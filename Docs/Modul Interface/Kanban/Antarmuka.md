@@ -36,7 +36,7 @@ Header setiap kolom berisi tiga bagian dari kiri ke kanan:
 | Fungsi | Aksi |
 | ------ | ---- |
 | Memindahkan kartu antar kolom | Seret kartu ke kolom tujuan (*drag and drop*), atau klik kanan kartu ➜ [[^field|Move To]] lalu pilih kolom tujuan. |
-| Melihat atau mengubah isi kartu | Klik kartu untuk membuka [[Docs/Modul Data/Table/Form Table|Form Table]], yaitu [[Docs/Tipe Data/Row]] dalam bentuk form, lalu ubah isinya secara langsung. |
+| Melihat atau mengubah isi kartu | Klik kartu untuk membuka [[Docs/Modul Data/Table/Row Form|Row Form]], yaitu [[Docs/Tipe Data/Row]] dalam bentuk form, lalu ubah isinya secara langsung. |
 | Membuka menu konteks kartu | Klik kanan pada kartu. Lihat [[#Menu Konteks Kartu]]. |
 | Menggulir daftar kartu | Arahkan kursor pada satu kolom, lalu gulir ke bawah atau ke atas. Ini berlaku jika tinggi tampilan kartu lebih besar dari layar Anda. |
 | Menggulir kolom | Arahkan kursor pada halaman kerja, lalu gulir ke kiri atau ke kanan. Ini berlaku jika jumlah kolom cukup banyak sehingga lebar tampilan lebih besar dari layar Anda. |
@@ -45,7 +45,7 @@ Header setiap kolom berisi tiga bagian dari kiri ke kanan:
 
 | Menu | Fungsi |
 | ---- | ------ |
-| [[^field|Detail]] | Membuka [[Docs/Modul Data/Table/Form Table|Form Table]], sama seperti klik kiri pada kartu. |
+| [[^field|Detail]] | Membuka [[Docs/Modul Data/Table/Row Form|Row Form]], sama seperti klik kiri pada kartu. |
 | [[^field/add|Add Row]] | Menambahkan [[Docs/Tipe Data/Row]] baru. Nilai [[Docs/Tipe Data/EnumData]] langsung terisi sesuai kolom tempat kursor berada. |
 | [[^field/delete|Delete Row]] | Menghapus [[Docs/Tipe Data/Row]] dari [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber. |
 | [[^field|Move To]] | Menampilkan daftar kolom yang tersedia, kecuali kolom yang sedang menampung kartu tersebut. Pilih kolom untuk memindahkan kartu. |

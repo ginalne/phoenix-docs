@@ -19,8 +19,8 @@ Binding juga menjadi dasar relasi antar Table pada satu Form, penanda title [[Do
 | Elemen | Binding | Yang dipilih |
 | ------ | ------- | ------------ |
 | Elemen layout | Binding Type [[^value/radio|Table]] atau [[^value/radio|Pivot]] | [[Docs/Tipe Data/Table]] sebagai header, atau [[Docs/Tipe Data/Column]] sebagai pivot. |
-| Elemen input satu isian, misalnya [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]] | Column | Column dari Table header. Table terisi otomatis dari Layout. |
-| Elemen input multi row, yaitu [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]] dan [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] | Pivot | Column dari Table lain (pivot). Table terisi otomatis dari Layout |
+| Elemen input satu isian, misalnya [[Docs/Modul Interface/Form/Elemen Form/Input/Basic]] | Column | Column dari Table header. Table terisi otomatis dari Layout. |
+| Elemen input multi row, yaitu [[Docs/Modul Interface/Form/Elemen Form/Input/Table]] dan [[Docs/Modul Interface/Form/Elemen Form/Input/List]] | Pivot | Column dari Table lain (pivot). Table terisi otomatis dari Layout |
 
 ### Binding Layout
 
@@ -45,11 +45,11 @@ Pada pivot, satu-satunya isian yang dipilih adalah [[^field|Column]], dengan inf
 
 Elemen input tidak memiliki pilihan Binding Type. Anda langsung mengisi [[^field|Column]], sedangkan [[^field|Table]] terisi otomatis dari Layout tempat Elemen berada. Anda cukup memilih [[^field|Column]] dari Table header yang sudah ditunjukkan oleh Phoenix.
 
-Elemen input multi row seperti [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]] dan [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] mengisi [[^field|Column]] dari Table lain (pivot). Table tersebut harus memiliki Column bertipe [[Docs/Tipe Data/Row|Row]] dengan [[^field|Header]] berupa Table header.
+Elemen input multi row seperti [[Docs/Modul Interface/Form/Elemen Form/Input/Table]] dan [[Docs/Modul Interface/Form/Elemen Form/Input/List]] mengisi [[^field|Column]] dari Table lain (pivot). Table tersebut harus memiliki Column bertipe [[Docs/Tipe Data/Row|Row]] dengan [[^field|Header]] berupa Table header.
 
 ### Alias
 
-Alias bersifat opsional dan berfungsi mendaftarkan Elemen input sebagai parameter yang dapat dipakai Elemen lain, misalnya pada [[Docs/Tipe Data/Expression]] di [[Docs/Modul Interface/Form/State|State]] dan [[Docs/Modul Interface/Form/Validators|Validators]]. Tampilannya berupa checkbox. Saat checkbox bernilai [[^value/boolean/true]], kolom isian teks tampil untuk menulis nama Alias.
+Alias bersifat opsional dan berfungsi mendaftarkan Elemen input sebagai parameter yang dapat dipakai Elemen lain, misalnya pada [[Docs/Tipe Data/Expression]] di [[Docs/Modul Interface/Form/Elemen Form/State]] dan [[Docs/Modul Interface/Form/Elemen Form/Validator]]. Tampilannya berupa checkbox. Saat checkbox bernilai [[^value/boolean/true]], kolom isian teks tampil untuk menulis nama Alias.
 
 Nama Alias harus unik dalam satu Form dan boleh memakai karakter ASCII apa pun.
 
@@ -148,7 +148,7 @@ Pengisi tidak membutuhkan pengaturan akses tambahan. Saat pembuat Form memilih T
 - Layout memiliki Binding Type [[^value/radio|table]] atau [[^value/radio|pivot]], sedangkan Elemen input tidak memiliki pilihan Binding Type dan langsung mengisi Column.
 - [[^field|Table]] pada Elemen input terisi otomatis dari Layout. Anda hanya mengisi [[^field|Column]].
 - Pilihan pivot hanya tersedia bila Table header memiliki relasi, dan pilihannya kosong bila tidak ada.
-- Elemen input multi row ([[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]] dan [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]]) mengisi Column dari Table lain yang memiliki Column bertipe [[Docs/Tipe Data/Row|Row]].
+- Elemen input multi row ([[Docs/Modul Interface/Form/Elemen Form/Input/Table|Table]] dan [[Docs/Modul Interface/Form/Elemen Form/Input/List|List]]) mengisi Column dari Table lain yang memiliki Column bertipe [[Docs/Tipe Data/Row|Row]].
 - Setiap pengisian baru menambah [[Docs/Tipe Data/Row|Row]] baru. Mengubah isian yang sudah dikirim membutuhkan Submission ID.
 - Alias bersifat opsional, harus unik, boleh memakai karakter ASCII apa pun, dan dipakai Elemen lain sebagai parameter expression.
 - Mengganti Table pada Layout membuat Elemen input di dalamnya menampilkan pesan dari *binding checker*. Pesan tidak menghalangi Save maupun Publish.

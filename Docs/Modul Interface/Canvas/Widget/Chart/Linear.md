@@ -56,7 +56,7 @@ Design Panel (ikon palet) mengatur tampilan bar:
 | [[^toggle|orientasi]] | Toggle orientasi. Aktif berarti horizontal. |
 | [[^toggle|show track]] | Toggle untuk menampilkan track. Jika aktif, tampil isian [[^field|track]] berupa opacity track (contoh 20%) dan warna track. |
 | [[^toggle|show marker]] | Toggle untuk menampilkan marker. Jika aktif, tampil isian [[^field|marker]] berupa *marker width* (contoh 2), *marker height* (contoh 14%), dan warna marker. |
-| [[^field|theme]] | Tema pewarnaan. Pilihan sama dengan theme pada [[Docs/Modul Interface/Canvas/Widget/Chart Line#Design Panel|Chart Line]]. |
+| [[^field|theme]] | Tema pewarnaan : `monochrome`, `phoenix`, `fun`, `classy`, `futuristic`, `elegant`, `aurora`, `forest`, `royal`, `obsidian`, `celestial`, `volcanic`, `lotus`, `cyberpunk`, `desert`. |
 | Ikon opacity (contoh 100%) | *Bar opacity*, yaitu opacity bar. |
 | Ikon radius (contoh 3) | *Bar border radius*, yaitu kelengkungan sudut bar. |
 | [[^button/add|+ threshold]] | Menambahkan titik threshold. Setelah ada threshold, tampil toggle legenda threshold dan daftar titik. Setiap titik memiliki input [[^field|at]] (dalam persen), warna, dan tombol hapus. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan. |

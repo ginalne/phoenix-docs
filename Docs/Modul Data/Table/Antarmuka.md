@@ -18,9 +18,9 @@ Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|I
 | Tombol                                         | Fungsi                                                                                                   |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | [[^button/edit|Edit]]                          | Mengubah atribut Table, termasuk Column. Lihat [[#Mengubah Table]].                                      |
-| [[^button/merge|Merge]]                        | Menggabungkan data Table. Penjelasan lengkap di [[Docs/Modul Data/Table/TableData Merge]].                         |
-| [[^button/publish|Publish]]                    | Mengatur publikasi Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Publish]].                       |
-| [[^button/event|Event]]                        | Menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]]. Penjelasan lengkap di [[Docs/Modul Data/Table/Event]]. |
+| [[^button/merge|Merge]]                        | Menggabungkan data Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Table Row/Menggabungkan]].                         |
+| [[^button/publish|Publish]]                    | Mengatur publikasi Table. Penjelasan lengkap di [[Docs/Modul Data/Table/Mempublikasi]].                       |
+| [[^button/event|Event]]                        | Menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]]. Penjelasan lengkap di [[Docs/Modul Data/Table/Mengotomasi]]. |
 | [[^button/refresh|Refresh]]                    | Memuat ulang tampilan halaman kerja.                                                                     |
 | [[^field|Search Table Data...]]                | Mencari data pada Table.                                                                                 |
 

@@ -15,4 +15,8 @@ where not string.startsWith(p.name, "button")
 and not string.startsWith(p.name, "value")
 and not string.startsWith(p.page, "STYLING")
 and not string.startsWith(p.page, "Library")
+and not string.startsWith(p.name, "toggle")
+and not string.startsWith(p.page, "request")
+and not string.startsWith(p.page, "Docs/Modul Logic/Flow")
+and not string.startsWith(p.name, "Docs/Modul Logic/Flow")
 ]]}

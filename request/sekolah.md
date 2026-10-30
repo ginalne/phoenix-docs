@@ -8,7 +8,7 @@
 ---
 # Tutorial: Membuat Sistem Data Akademik Sekolah
 
-Tutorial ini membawa Anda membangun [[Docs/Studi Kasus/Sekolah|studi kasus sekolah]] di Phoenix dari nol sampai bisa dipakai. Di akhir, Anda memiliki satu Pro dengan data siswa, kehadiran, nilai, kalender, pengumuman, akses sesuai peran, dan otomasi yang mencatat siswa yang perlu remedial.
+Tutorial ini membawa Anda membangun [[Example/Studi Kasus/Sekolah|studi kasus sekolah]] di Phoenix dari nol sampai bisa dipakai. Di akhir, Anda memiliki satu Pro dengan data siswa, kehadiran, nilai, kalender, pengumuman, akses sesuai peran, dan otomasi yang mencatat siswa yang perlu remedial.
 
 > Sekolah dan datanya fiktif. Semua nama dan angka pada tutorial ini adalah contoh.
 

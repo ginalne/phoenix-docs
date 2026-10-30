@@ -65,7 +65,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table View:
 3. [[Docs/Modul Data/Tree/Menghapus]] Table View.
 4. [[Docs/Modul Data/Tree/Node/Pengenalan|Mengelola Node]] seperti menambahkan, mengubah atau memperbarui Node.
 5. [[Docs/Modul Data/Tree/Mempublikasi]]: mengatur publikasi Table.
-6. [[Docs/Modul Data/Tree/Otomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
+6. [[Docs/Modul Data/Tree/Mengotomasi]]: menghubungkan Table dengan [[Docs/Event/Apa itu Event|Event]].
 
 ## Praktik Terbaik
 
