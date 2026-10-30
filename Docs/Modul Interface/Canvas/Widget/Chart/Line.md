@@ -110,12 +110,4 @@ Langkah menghapus Widget Chart Line sama dengan menghapus widget lain. Lihat [[D
 > **Apakah menghapus widget menghapus data sumber?**
 > Tidak. Menghapus widget hanya menghapus tampilan dan konfigurasinya, termasuk [[Docs/Tipe Data/Query|Query]]. Data sumber tetap aman.
 
-<!--
-  * [TODO] Screenshot menampilkan nama Table dan nama data pribadi (misalnya "Catatan ..." dan nama status). Mohon ganti dengan data generik pada gambar bila perlu.
-  * [TODO] Nama slug ikon untuk toggle dan tombol tanpa label (zoom, grid, tag, A, Auto, dan sebagainya) adalah tebakan. Mohon sesuaikan dengan nama ikon yang sebenarnya.
-  * [TODO] Kaidah Query Chart Line diasumsikan Series Output (legend pada gambar memakai agregasi COUNT). Mohon konfirmasi.
-  * [TODO] Penulis menyebut Data Panel Chart Line kemungkinan akan diganti seperti Chart Bar (label sumbu, Auto, dan sebagainya). Halaman ini mengikuti screenshot saat ini (toggle A, ikon label, tick, format). Perbarui setelah panel diganti.
-  * [TODO] Konfirmasi: tombol Y2 menampilkan atau mengaktifkan sumbu Y kedua (pada Chart Line nonaktif, pada Chart Bar aktif dan sumbu kanan tampil).
-  * [TODO] Konfirmasi gestur zoom (scroll, drag, atau tombol) serta isi tooltip.
-  * [TODO] Halaman baru yang diusulkan: `Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Data Panel` (anchor baru untuk Data Panel), serta `Docs/Tipe Data/Query#Series Output`.
--->
+
