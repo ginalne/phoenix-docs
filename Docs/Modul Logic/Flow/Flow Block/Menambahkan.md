@@ -1,13 +1,13 @@
 ---
-    status: draft
+    status: release
+    title: "Menambahkan Flow Block"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 9
     tags:
       draft
 ---
-
 # Menambahkan Flow Block
 
 ![[Docs/Modul Logic/Flow/Flow Block/add-flow-block.png]]

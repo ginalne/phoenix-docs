@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Apa itu Flow Block"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 10
     tags:
@@ -30,7 +31,7 @@ Berikut adalah cara mengelola Flow Block didalam Flow:
 4. [[Docs/Modul Logic/Flow/Flow Block/Menghapus Koneksi]]
 
 ## TL:DR
-- Tambahkan block lewat klik kanan pada blueprint > [[^field/add|Add]].
+- Tambahkan block lewat klik kanan pada blueprint ➜ [[^field/add|Add]].
 - Hubungkan block dengan menahan klik pada output, lalu lepaskan di input. Hapus hubungan dengan melepas pada bagian kosong.
 - Jalankan manual dengan tombol pada Block Event, lalu pantau lewat [[^button/activity|Activity]].
 

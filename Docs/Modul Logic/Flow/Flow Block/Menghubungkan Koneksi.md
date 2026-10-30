@@ -1,7 +1,8 @@
 ---
-    status: draft
+    status: release
+    title: "Menghubungkan Flow Block"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 7
     tags:

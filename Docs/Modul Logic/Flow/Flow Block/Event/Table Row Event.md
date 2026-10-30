@@ -8,4 +8,3 @@
       draft
 ---
 # Table Row Event
-

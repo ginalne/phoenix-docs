@@ -70,16 +70,6 @@ Langkah menghapus Widget Table sama dengan menghapus widget lain. Lihat [[Docs/M
 - **Aktifkan [[^field|total]] untuk ringkasan.** Total di tengah memudahkan pembaca melihat jumlah keseluruhan.
 - **Pastikan Query mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]].** Query yang tidak sesuai membuat pie tidak tampil dengan benar.
 
-## Batasan dan Catatan
-
-- [[Docs/Tipe Data/Query|Query]] wajib mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]] dan diatur melalui [[^button/q]], sedangkan isinya (data hasil Query) tidak dapat dimanipulasi dari Canvas.
-- [[^field|Limit]] membatasi jumlah data yang muncul pada pie.
-- [[^field|min]] adalah derajat minimum irisan agar label tampil, jadi irisan yang lebih kecil tidak menampilkan label.
-- [[^field|total]] adalah toggle, dan [[^field|size]] mengatur ukuran font total di tengah pie.
-- Panel tata letak sama di semua widget, sedangkan panel tampilan khusus Chart Pie.
-- Menghapus widget hanya menghapus tampilan dan Query, Table sumber tetap aman.
-- Menambah, mengubah, dan menghapus widget mengikuti Data Access Canvas (Add, Update, Delete).
-
 ## TL:DR
 
 - Widget Chart Pie menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai diagram pie di [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]].
