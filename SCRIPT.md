@@ -1,10 +1,6 @@
 ---
     status: draft
-    description: 
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 0
+    title: "Script Section"
     tags:
       meta
 ---
@@ -155,7 +151,10 @@ slashCommand.define {
     end
   end
 }
+```
 
+${widgets.commandButton "System: Reload"} 
+```space-lua
 slashCommand.define {
   name = "release",
   run = function()
@@ -168,7 +167,7 @@ slashCommand.define {
       or string.match(text, "^%*%s+([^\n]+)")
     title = title or ""
     title = string.format("%q", title)
-    
+
     local fmStart, fmEnd = string.find(text, "^%-%-%-\n")
     if not fmStart then
       local newFrontmatter = "---\n"
@@ -196,6 +195,7 @@ slashCommand.define {
     local frontmatter =
       string.sub(text, contentStart, endStart - 1)
 
+    -- Update status
     if string.match(frontmatter, "^%s+status%s*:") then
       frontmatter = string.gsub(
         frontmatter,
@@ -214,9 +214,10 @@ slashCommand.define {
       frontmatter = "    status: release\n" .. frontmatter
     end
 
+    -- Add title if missing
     if not string.match(frontmatter, "^%s+title%s*:") and
        not string.match(frontmatter, "\n%s+title%s*:") then
-    
+
       frontmatter = string.gsub(
         frontmatter,
         "(status%s*:%s*[^\n]*)",
@@ -224,10 +225,11 @@ slashCommand.define {
         1
       )
     end
-    
+
+    -- Add description if missing
     if not string.match(frontmatter, "^%s+description%s*:") and
        not string.match(frontmatter, "\n%s+description%s*:") then
-    
+
       frontmatter = string.gsub(
         frontmatter,
         "(title%s*:%s*[^\n]*)",
@@ -235,7 +237,69 @@ slashCommand.define {
         1
       )
     end
+    
+    -- Remove draft tag
+    if string.match(frontmatter, "tags%s*:%s*\n") then
+      local before, tages =
+        string.match(
+          frontmatter,
+          "^(.-tags%s*:\n)(.*)$"
+        )
 
+      if tages then
+        local block, rest =
+          string.match(
+            tages,
+            "^(.-)\n([^%s].*)$"
+          )
+
+        if not block then
+          block = tages
+          rest = ""
+        end
+        
+        editor.flashNotification(block)
+        
+        block = string.gsub(
+          block,
+          "\n%s*draft%s*\n?",
+          "",
+          1
+        )
+        
+        block = string.gsub(
+          block,
+          "%sdraft%s*\n?",
+          "",
+          1
+        )
+
+        block = string.gsub(
+          block,
+          "^(%s*draft)$",
+          "",
+          1
+        )
+        
+        editor.flashNotification(block)
+
+        if block == "" then
+          before = string.gsub(
+            before,
+            "%s*tags%s*:%f[%s\n]\n",
+            "",
+            1
+          )
+        end
+
+        frontmatter = before .. block
+        if rest ~= "" then
+          frontmatter = frontmatter .. rest
+        end
+      end
+    end
+
+    -- Clean pageDecoration icon
     if string.match(frontmatter, "pageDecoration%s*:%s*\n") then
       local before, decoration =
         string.match(
@@ -254,14 +318,14 @@ slashCommand.define {
           block = decoration
           rest = ""
         end
-        
+
         block = string.gsub(
           block,
           "%s*icon%s*:%s*x%f[%s\n]\n",
           "",
           1
         )
-        
+
         block = string.gsub(
           block,
           "^(%s*icon%s*:%s*x)$",
@@ -270,15 +334,14 @@ slashCommand.define {
         )
 
         if block == "" then
-          editor.flashNotification(before)
           before = string.gsub(
             before,
-          "%s*pageDecoration%s*:%f[%s\n]\n",
+            "%s*pageDecoration%s*:%f[%s\n]\n",
             "",
             1
           )
         end
-        
+
         frontmatter = before .. block
         if rest ~= "" then
           frontmatter = frontmatter .. rest
