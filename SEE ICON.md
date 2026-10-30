@@ -3,7 +3,6 @@
   
 ---
 
-
 >**success**mentioned toggle
 >${query[[
   from p = index.tag "toggle"
@@ -43,7 +42,6 @@
   select "- <i style=\"color:#faa\">" .. p.name .. "</i> — <small style=\"color:#ffa\">".. templates.paragraphItem(p) .. "</small>"
   where string.startsWith(p.name, "mode")
 ]]}
-
 
 >**success**mentioned field
 >${query[[
