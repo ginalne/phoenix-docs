@@ -279,7 +279,7 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Belum terkonfirmasi:** pilihan Format Type selain String, nilai awal Label dan Default State pada Accordion, cara men-toggle header Accordion, apakah Elemen di Accordion Collapsed tetap tersimpan saat submit, arti visual tampilan penuh pada Full, urutan atas-bawah Split di mobile, tampilan daftar Children pada Split, fungsi ikon `T` pada toolbar Text, apakah Text ikut dikirim sebagai Submission, tampilan Elemen saat Enable = false, nilai awal Visible pada Elemen layout dan display, apakah Default Value Elemen yang tersembunyi ikut tersimpan, daftar operator dan fungsi expression, apakah bintang muncul saat As Title bernilai Yes, apakah hanya satu Elemen per Form yang boleh As Title Yes, tampilan title di Submission List, letak tampil pesan binding checker, nama resmi ikon saklar dan kolom isian expression, bentuk pesan checker expression, umpan balik saat Required belum terisi, perilaku Required pada Elemen Readonly, dan rencana Validators lain.
 
 ## Canvas (Modul Interface)
-
+ 
 *   **Definisi:** Canvas adalah komponen modul Interface untuk menyusun, menghubungkan, dan memetakan data atau presentasi secara visual. Memberi fleksibilitas membuat diagram, tabel, maupun proyeksi tanpa dibatasi struktur baris dan kolom.
 *   **Path:** `Docs/Modul Interface/Canvas/Apa itu Canvas` (dikonfirmasi). Seluruh isi ditulis lengkap di halaman yang sama.
 *   **Widget:** Text, Chart Pie, Chart Line, Chart Bar, Chart Radial, Chart Linear, Table, Kanban, Gantt, Timeline, Gallery, Space, Button. **Nama widget ditulis Title Case dengan spasi**; slug (`chart_pie`, dst.) hanya informasi data key di kode dan tidak dipakai di dokumentasi. Pengelompokan di halaman: Teks, Grafik, Tampilan data, Aksi (disetujui penulis).
@@ -311,20 +311,22 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Belum terkonfirmasi:** apakah Layout dan Template mengikuti Data Access Add, Update, Delete yang sama dengan widget, widget lain yang tergolong "versi lite", label tombol penyimpan di modal Publish, tombol di modal Binding, dan letak tombol Binding pada bilah navigasi.
 *   **Penamaan pada screenshot** (nama Canvas "Test", nama Data pada Chart Pie, serta nama dan nilai pada grafik) adalah kasus pribadi dan tidak disebut di dokumentasi.
 
-## Widget Canvas (struktur halaman)
-
-*   **Path:** `Docs/Modul Interface/Form/Widget/<Nama Widget>/Penjelasan`, nama folder Title Case (`Table`, `Chart Pie`). **Penulis menyebut halamannya "Widget Table" dan "Widget Pie".** Draf memakai judul "Widget Chart Pie" mengikuti keputusan nama widget sebelumnya (Chart Pie). Mohon konfirmasi.
-*   **Struktur** akan diikuti widget lain (Text, Chart Line, Chart Bar, Chart Radial, Chart Linear, Kanban, Gantt, Timeline, Gallery, Space, Button).
-*   **Panel tata letak** sama di semua widget: min. (w, h persen), tombol Expand (ikon panah diagonal, fungsi belum terkonfirmasi), padding dan margin (4 sisi), panah ▼ di sisi kiri panel.
+## Widget Canvas (struktur dan istilah)
+ 
+*   **Path:** `Docs/Modul Interface/Canvas/Widget/<Nama Widget>` (contoh `Table`, `Chart Pie`, `Kanban`). Halaman pendukung: `.../Widget/Pengenalan`, `.../Widget/Menambahkan`, `.../Widget/Mengonfigurasi` (anchor `#Header Toolbar`, `#Layout Panel`, `#Design Panel`). Menghapus widget ditautkan ke `Docs/Modul Interface/Form/Elemen Form/Menghapus`.
+*   **Istilah toolbar (mengikuti Form):** **Header Toolbar** (di atas widget), **Layout Panel** (di bawah widget, ukuran, padding, margin, sama di semua widget), **Design Panel** (di bawah widget, pengaturan tampilan khusus widget, mis. Chart Pie). Bukan "design toolbar".
+*   **Field Data di Header Toolbar** adalah **Query untuk data yang ditampilkan widget**, dengan tombol Q di dalamnya. Kaidah Query per widget: Table = **Table Output**, Chart Pie = **Series Output**, Timeline = **Timeline Output** (belum terkonfirmasi untuk Kanban, Gantt, Gallery).
+*   **Menambahkan:** ketik perintah (`/table`, `/chart pie`) dalam field "Type something here to add..." untuk menampilkan variasi lalu pilih salah satunya.
+*   **Widget tampilan data (Table, Kanban, Gantt, Timeline, Gallery)** hanya memiliki pengaturan Query di Header Toolbar dan hanya Layout Panel (tanpa Design Panel).
+*   **Isi widget (data hasil Query) tidak dapat dimanipulasi dari Canvas.** Pengelolaan data dilakukan di komponen aslinya (Table View, Kanban, Timeline, Gallery).
+*   **Menghapus widget:** callout danger. Menghapus konfigurasi termasuk Query, data sumber dan barisnya aman, tidak bisa dikembalikan.
+*   **Struktur halaman widget ringkas:** note, definisi, Menambahkan, Antarmuka (Header Toolbar, Layout Panel, Design Panel bila ada, Tampilan, Interaksi), Menghapus, Praktik Terbaik, TL:DR (hanya Chart Pie), FAQ. Tidak ada Mengapa, Konsep Utama, Cara Kerja, Hak Akses, Contoh Penggunaan, Batasan.
 
 ## Widget Table
-
-*   **Definisi:** menampilkan data Table sebagai tabel di Canvas. Versi lite Table View: hanya satu data, tanpa kolom Action, tanpa Add Row, isi tidak dapat dimanipulasi.
-*   **Header toolbar** (`interface-widget-table.png`): ikon Table (jenis widget), ikon pegangan ⋮⋮ (memindahkan), ikon tabel kecil di kiri tombol 123 (**belum dijelaskan**), tombol **123 = toggle pagination**, tombol **kaca pembesar = toggle toolbar search**, Data (ikon Table dan nama Table), tombol Q, Remove. Toggle aktif ditandai latar berwarna.
-*   **Design toolbar:** hanya panel tata letak (tidak ada panel tampilan pada screenshot). Pada screenshot min. w 0% dan h 40%, Expand aktif.
-*   **Tampilan:** toolbar search di atas (tombol **Refresh List**, kolom **Search Data...**), tabel (kolom ID, kolom hasil Query dengan ikon tipe data di samping nama, cell kosong menampilkan "Empty"), pagination di bawah ("Show 50 of 8 items, on page", input nomor halaman, Go, Prev, nomor halaman, Next). 50 adalah batas data per halaman.
-*   **Query:** diatur lewat Q. Kaidah (**asumsi: Table Output**, belum terkonfirmasi).
-*   **Belum terkonfirmasi:** fungsi ikon tabel di kiri 123, fungsi Expand, cakupan Search Data..., apakah search dan pagination tampil di View Mode dan tautan Publish, perilaku Refresh List, kaidah Query, cara memilih Data, tampilan sebelum Data dipilih.
+ 
+*   **Header Toolbar** (`interface-widget-table.png`): ikon Table, ikon pegangan ⋮⋮ (memindahkan), **toggle 123 = pagination**, **toggle kaca pembesar = toolbar search**, Data (Query, kaidah Table Output), tombol Q, Remove. Toggle aktif ditandai latar berwarna. Ikon tabel kecil di kiri 123 belum dijelaskan.
+*   **Layout Panel** saja. Tombol Expand dan panah ▼ belum dijelaskan.
+*   **Tampilan:** kolom ID dan kolom hasil Query (ikon tipe data di samping nama), cell kosong "Empty", toolbar search (Refresh List, Search Data...), pagination ("Show 50 of 8 items, on page", Go, Prev, Next; 50 adalah batas data per halaman).
 
 ## Widget Chart Pie
 
@@ -345,6 +347,55 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Tampilan:** irisan per data, total di tengah, legenda "label (persen)".
 *   **Belum terkonfirmasi:** definisi kaidah **Series Output** (anchor `Docs/Tipe Data/Query#Series Output`: kolom, contoh, Error), satuan gap dan size, arti nilai persen gradient, daftar theme, apakah `all` memuat percent, arti Limit kosong, ikon tanpa nama pada panel tampilan, cara memilih Data.
 *   **Penamaan pada screenshot** (Table "Pesanan" dan "Barang pesanan", nama barang dan kolom) adalah data pribadi dan tidak disebut di dokumentasi.
+## Widget Chart Pie
+ 
+*   **Header Toolbar** (`interface-widget-chart-pie.png`): ikon pie, ikon pegangan, **Data (Query, kaidah Series Output) dengan tombol Q**, **Limit = jumlah maksimal data yang muncul** ("Empty" bila belum diisi), Remove. **Tidak ada toggle 123 dan Search** (tersisa keliru pada revisi penulis).
+*   **Layout Panel dan Design Panel.** Design Panel: hole (berapa lubang pada pie, persen), gap (gap antar data), theme (tema warna), gradient (gradasi dari tengah ke pinggir, transparent to color), offset (batas akhir gradasi, 75% = dari tengah sampai sekitar 75% ke ujung lingkaran), label (`none`, `label`, `value`, `percent`, `all` = label - value), min (derajat minimum pie untuk menampilkan label), legends (`right`, `bottom`, `hidden`), total (toggle, total di tengah), size (font size total).
+*   **Belum terkonfirmasi:** definisi Series Output (anchor `Docs/Tipe Data/Query#Series Output`), satuan gap dan size, arti persen gradient, daftar theme, ikon tanpa nama pada Design Panel, arti Limit kosong.
+## Widget Kanban, Gantt, Timeline, Gallery (draf tanpa screenshot)
+ 
+*   **Penjelasan penulis:** semuanya "hanya memiliki pengaturan Query di header dan hanya memiliki panel layout" seperti Widget Table. Path: `Docs/Modul Interface/Canvas/Widget/Kanban`, `.../Gantt`, `.../Timeline`, `.../Gallery`. Screenshot belum ada.
+*   **Kanban:** kolom dan kartu berdasarkan status atau kategori. **Gantt:** bilah jadwal pada sumbu waktu (**belum ada di knowledge, isi umum**). **Timeline:** data dalam urutan waktu, **widget hanya menyajikan satu data** (komponen punya Timeline Event dan banyak Timeline Data); kaidah Timeline Output (Name, Start, End; Start dan End berformat DateTime, Date, DateTimeZone). **Gallery:** kartu visual yang menonjolkan gambar atau konten.
+*   **Belum terkonfirmasi:** kaidah Query Kanban, Gantt, Gallery (anchor tebakan `#Kanban Output`, `#Gantt Output`, `#Gallery Output`), isi tampilan dan interaksi pada widget (diambil dari komponen aslinya), cara isi kartu ditentukan pada widget Kanban dan Gallery, kolom Query untuk Gantt.
+*   **Penamaan pada screenshot** (nama Table "Pesanan" dan "Barang pesanan", nama barang, dan kolom) adalah data pribadi dan tidak disebut di dokumentasi.
+---
+ 
+# Tambahan (Space, Chart Line, Chart Bar, Chart Radial, Chart Linear)
+ 
+**Alasan:** penulis memberi 4 screenshot dan penjelasan setiap input chart. Space disebut ketinggalan, tetapi belum ada informasinya.
+ 
+## Aturan umum Widget Chart
+ 
+*   **Panel di bawah widget:** Layout Panel (ikon layout), **Data Panel** (ikon database), Design Panel (ikon palet). Header Toolbar: ikon, pegangan, Data (Query dengan Q), Remove. Kaidah Query Data: **Series Output** (Pie sudah terkonfirmasi, chart lain diasumsikan).
+*   **Perintah tambah:** `/chart line`, `/chart bar`, `/chart radial`, `/chart linear`.
+*   **Theme** (daftar lengkap): monochrome, phoenix, fun, classy, futuristic, elegant, aurora, forest, royal, obsidian, celestial, volcanic, lotus, cyberpunk, desert. Label dropdown: `theme` (Line, Linear), `style` (Bar, Radial).
+*   **legends** (Line, Bar): right, bottom, left, top, hidden. Pada Radial legends adalah toggle.
+*   **Threshold** (Radial, Linear): tombol + threshold, tiap titik punya `at` (persen) dan warna. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan.
+*   **min/max:** toggle Auto (otomatis). Jika nonaktif mengikuti from dan until. Pada Chart Line, kolom yang dikosongkan berarti auto.
+## Widget Chart Line (`interface-widget-chart-line.png`)
+ 
+*   **Data Panel:** tiga sumbu X, Y, Y2, masing-masing min/max dengan toggle **A**, ikon tag (toggle label), tick (banyak label), format (kosong = default). **Penulis menyebut panel ini kemungkinan diganti seperti Chart Bar.**
+*   **Design Panel:** ketebalan garis (contoh 2.5), jenis garis (`smooth`, `sharp`, `step`), dot radius (contoh 4), toggle zoom (kaca pembesar, interaksi zoom in dan out), toggle grid, theme, area (persen opacity area line), legends.
+*   **Tampilan:** tooltip pada titik (waktu dan nilai series), legend di bawah.
+## Widget Chart Bar (`interface-widget-chart-bar.png`)
+ 
+*   **Data Panel:** X (label), Y dan Y2 (min/max dengan toggle Auto, label, tick, format). Y2 tampil sebagai sumbu kanan saat aktif.
+*   **Design Panel:** mode (toggle **diverging**, **reversed**, **orientasi**: nonaktif = vertikal; radio **Grouped**, **Stacked**, **Full**), style (theme), bar opacity (contoh 90%), bar border radius (contoh 4), bar padding (contoh 0.25%), marker (warna, length contoh 70%, width contoh 3), **pattern** (`off`, `basic` = garis-garis, `all` = satu pola ke semua dengan pilihan Hatch, Dots, Cross, ZigZag, `series` = pola per urutan series dengan tombol + untuk tambah urutan), legends, toggle zoom, toggle grid, toggle **123** (label nilai di atas bar), size (font label nilai, contoh 11).
+## Widget Chart Radial (`interface-widget-chart-radial.png`)
+ 
+*   **Header Toolbar:** **Needle** (Query kaidah **Single Output** untuk nilai arah needle, "Empty" bila belum diisi, dengan Q), Data (Query Series Output dengan Q). Angka dan ikon filter di samping nama Table pada Data belum dijelaskan.
+*   **Data Panel:** ruler (toggle), ticks (banyak tick dan warna), min/max (toggle Auto), label (label nilai needle), value (`Value`, `Percent`, `Ratio`, `None`), ukuran (0 sampai 100%) dan warna label.
+*   **Design Panel:** mode (`Multi`, `Stacked`), bentuk lengkungan (`Full`, `Semi`, `Horseshoe`, `Fan`, `Custom`; Custom menampilkan input from° dan until°), thickness (bawaan 25), arc (`Round`, `Square`, `Butt`), style (theme), opacity bar (contoh 100%), arc gap (contoh 17), + threshold, track (warna, opacity contoh 15%), needle (warna, panjang contoh 120%, 120% = mengenai bar), toggle legends, toggle **animation at start** (animasi needle saat pertama dibuka).
+*   **Ejaan antarmuka:** tombol tertulis "treshold".
+## Widget Chart Linear (`interface-widget-chart-linear.png`)
+ 
+*   **Data Panel:** min/max (toggle Auto), value (`Inside`, `End`, `Above`, `Below`, `None`), format (`Value`, `Percent`, `Custom`), size (contoh 13).
+*   **Design Panel:** mode (`Bars`, `Multi`, `Stacked`), shape (`Plain`, `Split`, `Stepped`), toggle diverging, toggle orientasi (aktif = horizontal), toggle show track (menampilkan track opacity contoh 20% dan warna), toggle show marker (menampilkan marker width contoh 2, height contoh 14%, dan warna), theme, bar opacity (contoh 100%), bar border radius (contoh 3), + threshold (setelah ada: toggle legend threshold dan titik at % dan warna), step ticks (contoh 10) dan step gap (contoh 3) **hanya saat Stepped**, label (`start`, `end`, `above`, `below`, `none`), label size (contoh 12), bar gap (contoh 11), toggle **count up** (animasi saat pertama dibuka).
+## Widget Space
+ 
+*   **Belum ada informasi.** Space disebut ketinggalan dalam daftar widget tampilan data. Halaman berupa kerangka minimal (Header Toolbar dengan Data dan Q, Layout Panel). Perlu: definisi Space, sumber data, kaidah Query (`Space Output`?), dan screenshot.
+*   **Belum terkonfirmasi untuk semua chart:** kaidah Query selain Pie, arti diverging, reversed, marker, step ticks, step gap, Split, Multi, Stacked, fungsi Y2 (toggle sumbu kedua), gestur zoom, arti angka dan filter pada Data Chart Radial, dan nama slug ikon toggle.
+*   **Penamaan pada screenshot** (Table "Catatan Raven" dan "Catatan Phoenix", nama status) adalah data pribadi dan tidak disebut di dokumentasi.
 
 ## Space (Modul Interface)
 
