@@ -26,8 +26,8 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon garis (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field\|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
-| [[^button/delete\|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Line]]. |
+| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
+| [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Line]]. |
 
 ### Layout Panel
 
@@ -39,11 +39,11 @@ Data Panel (ikon database) mengatur tiga sumbu chart: X, Y, dan Y2. Setiap sumbu
 
 | Pengaturan | Fungsi |
 | --- | --- |
-| [[^field\|min/max]] dan toggle [[^toggle/auto\|A]] | Batas bawah dan batas atas sumbu. Toggle A mengatur batas otomatis. Jika nonaktif, sumbu mengikuti nilai pada kolom awal sampai kolom [[^field\|until]]. Kolom yang dikosongkan berarti auto. |
+| [[^field|min/max]] dan toggle [[^toggle/auto|A]] | Batas bawah dan batas atas sumbu. Toggle A mengatur batas otomatis. Jika nonaktif, sumbu mengikuti nilai pada kolom awal sampai kolom [[^field|until]]. Kolom yang dikosongkan berarti auto. |
 | Ikon label (tag) | Toggle untuk menggunakan label pada sumbu. |
-| [[^field\|tick]] | Banyaknya label pada sumbu. |
-| [[^field\|format]] | Penulisan label. Kosong berarti default. |
-| [[^toggle\|Y2]] | Sumbu Y kedua (sisi kanan) dengan isi konfigurasi yang sama dengan sumbu Y. |
+| [[^field|tick]] | Banyaknya label pada sumbu. |
+| [[^field|format]] | Penulisan label. Kosong berarti default. |
+| [[^toggle|Y2]] | Sumbu Y kedua (sisi kanan) dengan isi konfigurasi yang sama dengan sumbu Y. |
 
 ### Design Panel
 
@@ -54,18 +54,18 @@ Design Panel (ikon palet) mengatur tampilan garis dan chart:
 | Ikon ketebalan garis (contoh 2.5) | Ketebalan garis. |
 | Dropdown jenis garis (contoh `smooth`) | Jenis garis: `smooth`, `sharp`, atau `step`. |
 | Ikon titik (contoh 4) | *Dot radius*, yaitu radius titik data. |
-| [[^toggle/zoom\|Zoom]] (ikon kaca pembesar) | Toggle untuk mengaktifkan interaksi zoom in dan zoom out pada chart. |
-| [[^toggle/grid\|Grid]] (ikon grid) | Toggle untuk menampilkan grid. |
-| [[^field\|theme]] | Tema pewarnaan: `monochrome`, `phoenix`, `fun`, `classy`, `futuristic`, `elegant`, `aurora`, `forest`, `royal`, `obsidian`, `celestial`, `volcanic`, `lotus`, `cyberpunk`, `desert`. |
-| [[^field\|area]] | Persentase opacity area di bawah garis. |
-| [[^field\|legends]] | Posisi legenda: `right`, `bottom`, `left`, `top`, atau `hidden`. |
+| [[^toggle/zoom|Zoom]] (ikon kaca pembesar) | Toggle untuk mengaktifkan interaksi zoom in dan zoom out pada chart. |
+| [[^toggle/grid|Grid]] (ikon grid) | Toggle untuk menampilkan grid. |
+| [[^field|theme]] | Tema pewarnaan: `monochrome`, `phoenix`, `fun`, `classy`, `futuristic`, `elegant`, `aurora`, `forest`, `royal`, `obsidian`, `celestial`, `volcanic`, `lotus`, `cyberpunk`, `desert`. |
+| [[^field|area]] | Persentase opacity area di bawah garis. |
+| [[^field|legends]] | Posisi legenda: `right`, `bottom`, `left`, `top`, atau `hidden`. |
 
 ### Interaksi pada Widget Chart Line
 
 | Fungsi | Aksi |
 | --- | --- |
 | Melihat nilai data | Arahkan kursor ke titik pada chart. Tooltip menampilkan waktu dan nilai data. |
-| Zoom in dan zoom out | Aktifkan toggle [[^toggle/zoom\|Zoom]], lalu gunakan interaksi zoom pada chart. |
+| Zoom in dan zoom out | Aktifkan toggle [[^toggle/zoom|Zoom]], lalu gunakan interaksi zoom pada chart. |
 
 ## Menghapus Widget Chart Line
 

@@ -24,8 +24,8 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon Kanban (paling kiri)                  | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^field\|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Kanban Output]] |
-| [[^button/delete\|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Kanban]].                                                               |
+| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Kanban Output]] |
+| [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Kanban]].                                                               |
 
 ### Layout Panel
 
@@ -36,7 +36,7 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 | Bagian                         | Isi                                                                                                                                                |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Kolom | Satu kolom untuk setiap status atau kategori. Header kolom menampilkan jumlah kartu dan nama kolom. |
-| Kartu | Setiap data hasil [[Docs/Tipe Data/Query\|Query]] tampil sebagai satu kartu pada kolom yang sesuai. |
+| Kartu | Setiap data hasil [[Docs/Tipe Data/Query|Query]] tampil sebagai satu kartu pada kolom yang sesuai. |
 
 ### Interaksi pada Widget Kanban
 

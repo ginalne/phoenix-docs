@@ -20,9 +20,9 @@ Seperti [[Docs/Modul Interface/Form/Elemen Form/State]], [[^field|Required]] dap
 
 | Kondisi | Hasil |
 | ------- | ----- |
-| [[^field\|Required]] bernilai [[^value/boolean/true]] | Pengisi wajib mengisi Elemen agar dapat mengirim Form. |
-| [[^field\|Required]] bernilai [[^value/boolean/false]] | Elemen boleh dikosongkan. |
-| [[^field\|Visible]] atau [[^field\|Enable]] bernilai [[^value/boolean/false]] | [[^field\|Required]] tidak berlaku, apa pun nilainya. |
+| [[^field|Required]] bernilai [[^value/boolean/true]] | Pengisi wajib mengisi Elemen agar dapat mengirim Form. |
+| [[^field|Required]] bernilai [[^value/boolean/false]] | Elemen boleh dikosongkan. |
+| [[^field|Visible]] atau [[^field|Enable]] bernilai [[^value/boolean/false]] | [[^field|Required]] tidak berlaku, apa pun nilainya. |
 
 Nilai awal [[^field|Required]] pada Elemen input yang baru ditambahkan adalah [[^value/boolean/false]].
 
@@ -36,7 +36,7 @@ Validator berada di Properties Panel, di bawah bagian [[^field|State]]. Baris [[
 
 | Bagian | Fungsi |
 | ------ | ------ |
-| Label Validator | Nama aturan, saat ini [[^field\|Required]]. |
+| Label Validator | Nama aturan, saat ini [[^field|Required]]. |
 | Ikon saklar | Ikon kecil di sebelah kanan label. Klik untuk beralih antara nilai statis dan expression. |
 | Saklar nilai | Tampil saat memakai nilai statis. Hijau berarti [[^value/boolean/true]], abu-abu berarti [[^value/boolean/false]]. |
 | Kolom isian expression | Tampil menggantikan saklar nilai saat memakai expression. Memiliki *autocomplete* dan *checker*. |
@@ -69,7 +69,7 @@ Aturan penulisan expression pada Validator:
 
 | Contoh expression | Arti |
 | ----------------- | ---- |
-| `Email not empty` | Elemen menjadi wajib bila isian dengan [[^field\|Label]] "Email" sudah terisi. |
+| `Email not empty` | Elemen menjadi wajib bila isian dengan [[^field|Label]] "Email" sudah terisi. |
 
 ## Praktik Terbaik
 

@@ -24,8 +24,8 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon Gantt (paling kiri)                  | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^field\|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Gantt Output]] |
-| [[^button/delete\|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Gantt]].                                                               |
+| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Gantt Output]] |
+| [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Gantt]].                                                               |
 
 ### Layout Panel
 
@@ -36,7 +36,7 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 | Bagian                         | Isi                                                                                                                                                |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Header waktu | Skala waktu di bagian atas widget sebagai acuan posisi bilah. |
-| Bilah | Satu bilah untuk setiap data hasil [[Docs/Tipe Data/Query\|Query]]. Posisi dan panjang bilah mengikuti waktu mulai dan waktu selesai data. |
+| Bilah | Satu bilah untuk setiap data hasil [[Docs/Tipe Data/Query|Query]]. Posisi dan panjang bilah mengikuti waktu mulai dan waktu selesai data. |
 
 ### Interaksi pada Widget Gantt
 

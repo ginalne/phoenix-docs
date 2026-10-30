@@ -24,8 +24,8 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon Gallery (paling kiri)                  | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^field\|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Gallery Output]] |
-| [[^button/delete\|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Gallery]].                                                               |
+| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Gallery Output]] |
+| [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Gallery]].                                                               |
 
 ### Layout Panel
 
@@ -35,7 +35,7 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 
 | Bagian                         | Isi                                                                                                                                                |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kartu | Satu kartu visual untuk setiap data hasil [[Docs/Tipe Data/Query\|Query]], menonjolkan gambar atau konten data. |
+| Kartu | Satu kartu visual untuk setiap data hasil [[Docs/Tipe Data/Query|Query]], menonjolkan gambar atau konten data. |
 
 ### Interaksi pada Widget Gallery
 

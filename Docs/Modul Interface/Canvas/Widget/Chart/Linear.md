@@ -26,8 +26,8 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon linear (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field\|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
-| [[^button/delete\|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Linear]]. |
+| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
+| [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Linear]]. |
 
 ### Layout Panel
 
@@ -39,10 +39,10 @@ Data Panel (ikon database) mengatur skala dan tampilan nilai:
 
 | Pengaturan | Fungsi |
 | --- | --- |
-| [[^field\|min/max]] dan toggle [[^toggle/auto\|Auto]] | Batas bawah dan batas atas skala. Toggle Auto mengatur batas otomatis. Jika nonaktif, skala mengikuti nilai pada kolom min sampai kolom [[^field\|until]]. |
-| [[^field\|value]] | Posisi nilai pada bar: `Inside`, `End`, `Above`, `Below`, atau `None`. |
-| [[^field\|format]] | Format nilai: `Value`, `Percent`, atau `Custom`. |
-| [[^field\|size]] | Ukuran nilai (contoh 13). |
+| [[^field|min/max]] dan toggle [[^toggle/auto|Auto]] | Batas bawah dan batas atas skala. Toggle Auto mengatur batas otomatis. Jika nonaktif, skala mengikuti nilai pada kolom min sampai kolom [[^field|until]]. |
+| [[^field|value]] | Posisi nilai pada bar: `Inside`, `End`, `Above`, `Below`, atau `None`. |
+| [[^field|format]] | Format nilai: `Value`, `Percent`, atau `Custom`. |
+| [[^field|size]] | Ukuran nilai (contoh 13). |
 
 ### Design Panel
 
@@ -50,27 +50,27 @@ Design Panel (ikon palet) mengatur tampilan bar:
 
 | Pengaturan | Fungsi |
 | --- | --- |
-| [[^field\|mode]] | Mode bar: `Bars`, `Multi`, atau `Stacked`. |
+| [[^field|mode]] | Mode bar: `Bars`, `Multi`, atau `Stacked`. |
 | Dropdown bentuk bar (contoh `Stepped`) | Bentuk bar: `Plain`, `Split`, atau `Stepped`. |
-| [[^toggle\|diverging]] | Toggle mode diverging. |
-| [[^toggle\|orientasi]] | Toggle orientasi. Aktif berarti horizontal. |
-| [[^toggle\|show track]] | Toggle untuk menampilkan track. Jika aktif, tampil isian [[^field\|track]] berupa opacity track (contoh 20%) dan warna track. |
-| [[^toggle\|show marker]] | Toggle untuk menampilkan marker. Jika aktif, tampil isian [[^field\|marker]] berupa *marker width* (contoh 2), *marker height* (contoh 14%), dan warna marker. |
-| [[^field\|theme]] | Tema pewarnaan. Pilihan sama dengan theme pada [[Docs/Modul Interface/Canvas/Widget/Chart Line#Design Panel\|Chart Line]]. |
+| [[^toggle|diverging]] | Toggle mode diverging. |
+| [[^toggle|orientasi]] | Toggle orientasi. Aktif berarti horizontal. |
+| [[^toggle|show track]] | Toggle untuk menampilkan track. Jika aktif, tampil isian [[^field|track]] berupa opacity track (contoh 20%) dan warna track. |
+| [[^toggle|show marker]] | Toggle untuk menampilkan marker. Jika aktif, tampil isian [[^field|marker]] berupa *marker width* (contoh 2), *marker height* (contoh 14%), dan warna marker. |
+| [[^field|theme]] | Tema pewarnaan. Pilihan sama dengan theme pada [[Docs/Modul Interface/Canvas/Widget/Chart Line#Design Panel|Chart Line]]. |
 | Ikon opacity (contoh 100%) | *Bar opacity*, yaitu opacity bar. |
 | Ikon radius (contoh 3) | *Bar border radius*, yaitu kelengkungan sudut bar. |
-| [[^button/add\|+ threshold]] | Menambahkan titik threshold. Setelah ada threshold, tampil toggle legenda threshold dan daftar titik. Setiap titik memiliki input [[^field\|at]] (dalam persen), warna, dan tombol hapus. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan. |
+| [[^button/add|+ threshold]] | Menambahkan titik threshold. Setelah ada threshold, tampil toggle legenda threshold dan daftar titik. Setiap titik memiliki input [[^field|at]] (dalam persen), warna, dan tombol hapus. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan. |
 | Ikon step ticks (contoh 10) dan step gap (contoh 3) | Tampil jika bentuk bar adalah `Stepped`. *Step ticks* mengatur jumlah langkah pada bar dan *step gap* mengatur jarak antar langkah. |
-| [[^field\|label]] | Posisi label: `start`, `end`, `above`, `below`, atau `none`. |
-| [[^field\|size]] | Ukuran label (contoh 12). |
+| [[^field|label]] | Posisi label: `start`, `end`, `above`, `below`, atau `none`. |
+| [[^field|size]] | Ukuran label (contoh 12). |
 | Ikon bar gap (contoh 11) | Jarak antar bar. |
-| [[^toggle/animation\|count up]] | Toggle untuk memberi animasi *count up* saat widget pertama kali dibuka. |
+| [[^toggle/animation|count up]] | Toggle untuk memberi animasi *count up* saat widget pertama kali dibuka. |
 
 ### Interaksi pada Widget Chart Linear
 
 | Fungsi | Aksi |
 | --- | --- |
-| Melihat nilai data | Nilai tampil pada bar sesuai pengaturan [[^field\|value]] dan [[^field\|format]]. |
+| Melihat nilai data | Nilai tampil pada bar sesuai pengaturan [[^field|value]] dan [[^field|format]]. |
 
 ## Menghapus Widget Chart Linear
 

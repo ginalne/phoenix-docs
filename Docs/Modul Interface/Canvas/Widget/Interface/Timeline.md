@@ -26,8 +26,8 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon Timeline (paling kiri)                  | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^field\|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Timeline Output]] |
-| [[^button/delete\|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Timeline]].                                                               |
+| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Timeline Output]] |
+| [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Timeline]].                                                               |
 
 ### Layout Panel
 
@@ -37,7 +37,7 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 
 | Bagian                         | Isi                                                                                                                                                |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[^field\|Item List]] | Kolom di sisi kiri yang memuat nama setiap Row hasil [[Docs/Tipe Data/Query\|Query]]. |
+| [[^field|Item List]] | Kolom di sisi kiri yang memuat nama setiap Row hasil [[Docs/Tipe Data/Query|Query]]. |
 | Header waktu | Skala waktu di bagian atas widget. |
 | Garis now | Garis dan penanda yang menunjukkan waktu saat ini. |
 | Blok data | Satu blok untuk setiap Row, dari waktu Start sampai End. |
