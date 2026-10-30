@@ -43,7 +43,7 @@ Data Panel (ikon database) mengatur tiga sumbu chart: X, Y, dan Y2. Setiap sumbu
 | Ikon label (tag) | Toggle untuk menggunakan label pada sumbu. |
 | [[^field|tick]] | Banyaknya label pada sumbu. |
 | [[^field|format]] | Penulisan label. Kosong berarti default. |
-| [[^toggle|Y2]] | Sumbu Y kedua (sisi kanan) dengan isi konfigurasi yang sama dengan sumbu Y. |
+| [[^toggle/y2]] | Sumbu Y kedua (sisi kanan) dengan isi konfigurasi yang sama dengan sumbu Y. |
 
 ### Design Panel
 

@@ -67,7 +67,7 @@ Design Panel (ikon palet) mengatur tampilan batang:
 | [[^field|legends]] | Posisi legenda: `right`, `bottom`, `left`, `top`, atau `hidden`. |
 | [[^toggle/zoom|Zoom]] (ikon kaca pembesar) | Toggle untuk mengaktifkan interaksi zoom pada chart. |
 | [[^toggle/grid|Grid]] (ikon grid) | Toggle untuk menampilkan grid. |
-| [[^toggle/123|123]] | Toggle untuk menampilkan label nilai di atas batang. |
+| [[^toggle/123]] | Toggle untuk menampilkan label nilai di atas batang. |
 | [[^field|size]] | Ukuran font label nilai (contoh 11). |
 
 ### Interaksi pada Widget Chart Bar

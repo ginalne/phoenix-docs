@@ -251,6 +251,36 @@ test [[button/edit|Edit]] [[button|Create]]
 }
 ```
 
+Run ${widgets.commandButton "System: Reload"} to reload. 
+awdadw awd [[^toggle/123|1531531315]] awdawd
+```space-style
+
+#sb-main .cm-editor a[href^="toggle/"] {
+  display:inline-block !important;
+  position:relative;
+  padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+  margin: 0.5rem 0.3rem;
+  color: #bdbdbd !important;
+  border: 1px solid rgb(63 63 70);
+  font-size: 0rem;
+  border-radius: 9999px !important;
+  background-color: #161616;
+  pointer-events: none;
+  transform: translate(0, -.3rem) !important;
+}
+#sb-main .cm-editor i a[href^="toggle/"] {
+  pointer-events: auto !important;
+  font-size: 1rem !important;
+}
+#sb-main .cm-editor a[href^="toggle/"] span {
+  position:absolute;
+  left:50%;
+  top:50%;
+  font-size: 1.7rem;
+  transform: translate(-50%, -50%);
+}
+```
+
 Run ${widgets.commandButton "System: Reload"} to reload.
 
 >**note**Tips

@@ -1,11 +1,10 @@
 ---
-    status: draft
+    status: release
+    title: "Styling dalam Phoenix"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 0
-    tags:
-      draft
 ---
 # Styling dalam Phoenix
 

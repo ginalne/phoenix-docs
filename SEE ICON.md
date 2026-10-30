@@ -4,6 +4,20 @@
 ---
 
 
+>**success**mentioned toggle
+>${query[[
+  from p = index.tag "toggle"
+  select "- " .. p.name .. "         [[" .. p.name .. "]]" 
+]]}
+
+>**danger** mentioned toggle but not exists
+>${query[[
+  from p = index.aspiringPages()
+  select "- <i style=\"color:#faa\">[[" .. p.name .. "]]</i> — <small style=\"color:#ffa\">".. templates.paragraphItem(p) .. "</small>"
+  where string.startsWith(p.name, "toggle")
+]]}
+
+
 >**success**mentioned button
 >${query[[
   from p = index.tag "button"
