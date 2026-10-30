@@ -24,7 +24,7 @@ Kolom pada tabel Variable adalah:
 | Kolom | Penjelasan | Pengisian |
 | --- | --- | --- |
 | [[^field|Name]] | Nama Variable. Tidak boleh sama dengan baris lain. | Diisi oleh Anda |
-| [[^field|Type]] | Tipe data dari nilai yang disimpan, misalnya [[Docs/Tipe Data/String\|String]]. | Diisi oleh Anda |
+| [[^field|Type]] | Tipe data dari nilai yang disimpan, misalnya [[Docs/Tipe Data/String|String]]. | Diisi oleh Anda |
 | [[^field|Value]] | Nilai yang disimpan, menyesuaikan Type. | Diisi oleh Anda |
 | [[^field|Description]] | Keterangan tentang kegunaan Variable. | Diisi oleh Anda |
 | [[^field|Created At]] | Waktu baris dibuat. | Terisi otomatis |

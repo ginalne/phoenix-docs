@@ -26,9 +26,9 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon radial (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field\|Needle]] | [[Docs/Tipe Data/Query]] untuk nilai arah needle. Klik [[^button/q]] di sebelah kanannya untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Single Output]]. Menampilkan [[^field\|Empty]] bila belum diisi. |
-| [[^field\|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
-| [[^button/delete\|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Radial]]. |
+| [[^field|Needle]] | [[Docs/Tipe Data/Query]] untuk nilai arah needle. Klik [[^button/q]] di sebelah kanannya untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Single Output]]. Menampilkan [[^field|Empty]] bila belum diisi. |
+| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
+| [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Radial]]. |
 
 ### Layout Panel
 
@@ -40,11 +40,11 @@ Data Panel (ikon database) mengatur skala dan tampilan nilai:
 
 | Pengaturan | Fungsi |
 | --- | --- |
-| [[^field\|ruler]] | Toggle untuk menampilkan atau menyembunyikan ruler. |
-| [[^field\|ticks]] | Banyaknya tick pada ruler, dilengkapi pilihan warna tick. |
-| [[^field\|min/max]] dan toggle [[^toggle/auto\|Auto]] | Batas bawah dan batas atas skala. Toggle Auto mengatur batas otomatis. Jika nonaktif, skala mengikuti nilai pada kolom min sampai kolom [[^field\|until]]. |
-| [[^field\|label]] | Label dari nilai needle. Isi untuk mengganti label bawaan. |
-| [[^field\|value]] | Tampilan nilai: `Value`, `Percent`, `Ratio`, atau `None`. |
+| [[^field|ruler]] | Toggle untuk menampilkan atau menyembunyikan ruler. |
+| [[^field|ticks]] | Banyaknya tick pada ruler, dilengkapi pilihan warna tick. |
+| [[^field|min/max]] dan toggle [[^toggle/auto|Auto]] | Batas bawah dan batas atas skala. Toggle Auto mengatur batas otomatis. Jika nonaktif, skala mengikuti nilai pada kolom min sampai kolom [[^field|until]]. |
+| [[^field|label]] | Label dari nilai needle. Isi untuk mengganti label bawaan. |
+| [[^field|value]] | Tampilan nilai: `Value`, `Percent`, `Ratio`, atau `None`. |
 | Ukuran dan warna teks (contoh 100%) | Ukuran (0 sampai 100%) dan warna teks label. |
 
 ### Design Panel
@@ -53,24 +53,24 @@ Design Panel (ikon palet) mengatur tampilan bar, track, dan needle:
 
 | Pengaturan | Fungsi |
 | --- | --- |
-| [[^field\|mode]] | Mode bar: `Multi` atau `Stacked`. |
+| [[^field|mode]] | Mode bar: `Multi` atau `Stacked`. |
 | Dropdown bentuk lengkungan (contoh `Horseshoe`) | Bentuk lengkungan: `Full`, `Semi`, `Horseshoe`, `Fan`, atau `Custom`. Pilihan `Custom` menampilkan input tambahan dari derajat awal (from°) sampai derajat akhir (to°). |
 | Ikon ketebalan (contoh 25) | *Thickness*, yaitu ketebalan bar. Nilai bawaan 25. |
-| [[^field\|arc]] | Bentuk ujung bar: `Round`, `Square`, atau `Butt`. |
-| [[^field\|style]] | Tema pewarnaan. Pilihan sama dengan theme pada [[Docs/Modul Interface/Canvas/Widget/Chart Line#Design Panel\|Chart Line]]. |
+| [[^field|arc]] | Bentuk ujung bar: `Round`, `Square`, atau `Butt`. |
+| [[^field|style]] | Tema pewarnaan. Pilihan sama dengan theme pada [[Docs/Modul Interface/Canvas/Widget/Chart Line#Design Panel|Chart Line]]. |
 | Ikon opacity (contoh 100%) | Opacity bar. |
 | Ikon arc gap (contoh 17) | Jarak antar arc. |
-| [[^button/add\|+ threshold]] | Menambahkan titik threshold. Setiap titik memiliki input [[^field\|at]] (dalam persen) dan warna. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan. |
-| [[^field\|track]] | Warna track (contoh abu-abu), dengan ikon opacity track di sebelahnya (contoh 15%). |
-| [[^field\|needle]] | Warna needle (contoh hitam), dengan ikon panjang needle di sebelahnya (contoh 120%). Panjang dihitung dari persentase ruang di tengah. Nilai 120% membuat needle mengenai bar. |
-| [[^toggle/legends\|Legends]] | Toggle untuk menampilkan atau menyembunyikan legenda. |
-| [[^toggle/animation\|Animation at start]] | Toggle untuk memberi animasi needle saat widget pertama kali dibuka. |
+| [[^button/add|+ threshold]] | Menambahkan titik threshold. Setiap titik memiliki input [[^field|at]] (dalam persen) dan warna. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan. |
+| [[^field|track]] | Warna track (contoh abu-abu), dengan ikon opacity track di sebelahnya (contoh 15%). |
+| [[^field|needle]] | Warna needle (contoh hitam), dengan ikon panjang needle di sebelahnya (contoh 120%). Panjang dihitung dari persentase ruang di tengah. Nilai 120% membuat needle mengenai bar. |
+| [[^toggle/legends|Legends]] | Toggle untuk menampilkan atau menyembunyikan legenda. |
+| [[^toggle/animation|Animation at start]] | Toggle untuk memberi animasi needle saat widget pertama kali dibuka. |
 
 ### Interaksi pada Widget Chart Radial
 
 | Fungsi | Aksi |
 | --- | --- |
-| Melihat nilai data | Nilai setiap data tampil pada legenda di tengah chart bila toggle [[^toggle/legends\|Legends]] aktif. |
+| Melihat nilai data | Nilai setiap data tampil pada legenda di tengah chart bila toggle [[^toggle/legends|Legends]] aktif. |
 
 ## Menghapus Widget Chart Radial
 

@@ -18,19 +18,19 @@ Dengan State, satu Form dapat menyesuaikan diri dengan pengisinya: pertanyaan la
 
 Jenis State yang tersedia bergantung pada jenis Elemen. Elemen layout dan display hanya memiliki [[^field|Visible]], sedangkan Elemen input memiliki ketiganya.
 
-| Jenis Elemen | Elemen | [[^field\|Visible]] | [[^field\|Enable]] | [[^field\|Readonly]] |
+| Jenis Elemen | Elemen | [[^field|Visible]] | [[^field|Enable]] | [[^field|Readonly]] |
 | ------------ | ------ | ------------------ | ----------------- | ------------------- |
-| Layout | [[Docs/Modul Interface/Form/Layout/Card/Penjelasan\|Card]], [[Docs/Modul Interface/Form/Layout/Full/Penjelasan\|Full]], [[Docs/Modul Interface/Form/Layout/Split/Penjelasan\|Split]], [[Docs/Modul Interface/Form/Layout/Accordion/Penjelasan\|Accordion]] | Ada | Tidak ada | Tidak ada |
-| Display | [[Docs/Modul Interface/Form/Display/Text/Penjelasan\|Text]], [[Docs/Modul Interface/Form/Display/Table/Penjelasan\|Table]], [[Docs/Modul Interface/Form/Display/Tooltip/Penjelasan\|Tooltip]], [[Docs/Modul Interface/Form/Display/Qr/Penjelasan\|Qr]], [[Docs/Modul Interface/Form/Display/Chrono/Penjelasan\|Chrono]] | Ada | Tidak ada | Tidak ada |
-| Input | [[Docs/Modul Interface/Form/Input/Basic/Penjelasan\|Basic]], [[Docs/Modul Interface/Form/Input/Quiz/Penjelasan\|Quiz]], [[Docs/Modul Interface/Form/Input/Table/Penjelasan\|Table]], [[Docs/Modul Interface/Form/Input/List/Penjelasan\|List]] | Ada | Ada | Ada |
+| Layout | [[Docs/Modul Interface/Form/Layout/Card/Penjelasan|Card]], [[Docs/Modul Interface/Form/Layout/Full/Penjelasan|Full]], [[Docs/Modul Interface/Form/Layout/Split/Penjelasan|Split]], [[Docs/Modul Interface/Form/Layout/Accordion/Penjelasan|Accordion]] | Ada | Tidak ada | Tidak ada |
+| Display | [[Docs/Modul Interface/Form/Display/Text/Penjelasan|Text]], [[Docs/Modul Interface/Form/Display/Table/Penjelasan|Table]], [[Docs/Modul Interface/Form/Display/Tooltip/Penjelasan|Tooltip]], [[Docs/Modul Interface/Form/Display/Qr/Penjelasan|Qr]], [[Docs/Modul Interface/Form/Display/Chrono/Penjelasan|Chrono]] | Ada | Tidak ada | Tidak ada |
+| Input | [[Docs/Modul Interface/Form/Input/Basic/Penjelasan|Basic]], [[Docs/Modul Interface/Form/Input/Quiz/Penjelasan|Quiz]], [[Docs/Modul Interface/Form/Input/Table/Penjelasan|Table]], [[Docs/Modul Interface/Form/Input/List/Penjelasan|List]] | Ada | Ada | Ada |
 
 Nilai awal ketiga State pada Elemen input yang baru ditambahkan selalu sama:
 
 | State | Nilai awal | Jika [[^value/boolean/true]] | Jika [[^value/boolean/false]] |
 | ----- | ---------- | ---------------------------- | ----------------------------- |
-| [[^field\|Visible]] | [[^value/boolean/true]] | Elemen tampil. | Elemen tersembunyi. Pada Elemen layout, semua Elemen di dalamnya ikut tersembunyi. |
-| [[^field\|Enable]] | [[^value/boolean/true]] | Elemen aktif dan menyimpan isiannya ke Row saat Form dikirim. | Elemen tidak menyimpan isiannya ke Row. |
-| [[^field\|Readonly]] | [[^value/boolean/false]] | Isi Elemen tidak dapat diubah pengisi. | Pengisi dapat mengisi Elemen. |
+| [[^field|Visible]] | [[^value/boolean/true]] | Elemen tampil. | Elemen tersembunyi. Pada Elemen layout, semua Elemen di dalamnya ikut tersembunyi. |
+| [[^field|Enable]] | [[^value/boolean/true]] | Elemen aktif dan menyimpan isiannya ke Row saat Form dikirim. | Elemen tidak menyimpan isiannya ke Row. |
+| [[^field|Readonly]] | [[^value/boolean/false]] | Isi Elemen tidak dapat diubah pengisi. | Pengisi dapat mengisi Elemen. |
 
 ### Visible
 
@@ -63,7 +63,7 @@ State berada di Properties Panel, di bawah bagian [[^field|Binding]]. Setiap bar
 
 | Bagian | Fungsi |
 | ------ | ------ |
-| Label State | Nama State, yaitu [[^field\|Visible]], [[^field\|Enable]], atau [[^field\|Readonly]]. |
+| Label State | Nama State, yaitu [[^field|Visible]], [[^field|Enable]], atau [[^field|Readonly]]. |
 | Ikon saklar | Ikon kecil di sebelah kanan label. Klik untuk beralih antara nilai statis dan expression. |
 | Saklar nilai | Tampil saat memakai nilai statis. Hijau berarti [[^value/boolean/true]], abu-abu berarti [[^value/boolean/false]]. |
 | Kolom isian expression | Tampil menggantikan saklar nilai saat memakai expression. Memiliki *autocomplete* dan *checker*. |
