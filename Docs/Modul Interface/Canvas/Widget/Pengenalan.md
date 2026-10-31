@@ -12,7 +12,7 @@ Widget adalah elemen penyusun tampilan Canvas. Widget yang tersedia:
 
 | Widget                                                                            | Kelompok                |
 | --------------------------------------------------------------------------------- | ----------------------- |
-| [[Docs/Modul Interface/Canvas/Widget/Text|Text]]                                  | Basic                    |
+| [[Docs/Modul Interface/Canvas/Widget/Basic/Text|Text]]                                  | Basic                    |
 | [[Docs/Modul Interface/Canvas/Widget/Chart/Pie|Chart Pie]]                        | Graph                  |
 | [[Docs/Modul Interface/Canvas/Widget/Chart/Line|Chart Line]]                      | Graph                  |
 | [[Docs/Modul Interface/Canvas/Widget/Chart/Bar|Chart Bar]]                        | Graph                  |
@@ -24,7 +24,7 @@ Widget adalah elemen penyusun tampilan Canvas. Widget yang tersedia:
 | [[Docs/Modul Interface/Canvas/Widget/Interface/Timeline|Timeline]]                          | Interface           |
 | [[Docs/Modul Interface/Canvas/Widget/Interface/Gallery|Gallery]]                            | Interface           |
 | [[Docs/Modul Interface/Canvas/Widget/Interface/Space|Space]]                                | Interface           |
-| [[Docs/Modul Interface/Canvas/Widget/Button|Button]]                              | Action                    |
+| [[Docs/Modul Interface/Canvas/Widget/Basic/Button|Button]]                              | Basic                    |
 
 [[Docs/Tipe Data/Query]] setiap widget diatur melalui tombol [[^button/q]] pada header toolbar. Isi widget, yaitu data hasil Query, tidak dapat dimanipulasi dari Canvas.
 
