@@ -51,7 +51,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   - **I/O:** Branch, Passer. **Query:** Condition, Execute.
   - **Operator:** Number (Increment), String (Concatenate, Implode, Pad Left, Pad Right), Table (TableRow Parse), Object (Assign, Merge, Parse, Stringify), Boolean (If), Tree (Node Parse).
   - **Modular:** API (HTTP Request), AI (OpenAI 4).
-  - **Misc. (asumsi):** Chrono (Delay), Error (Error Message).
+  - **Misc.:** Chrono (Delay), Error (Error Message).
 - **Menghubungkan block:** klik dan tahan (hold press) pada output, arahkan ke input, lalu lepaskan (release). Output di sisi kanan, input di sisi kiri.
 - **Eksekusi manual:** lewat antarmuka Flow, gunakan tombol pada Flow Block Event (misalnya Trigger pada Pulser).
 - **Event dari komponen:** Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol Event pada masing-masing komponen.
