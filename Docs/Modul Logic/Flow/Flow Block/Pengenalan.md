@@ -26,8 +26,10 @@ Setiap Flow Block tersusun dari [[#Trigger]], [[#Input]], [[#Control]], dan [[#O
 
 ## Anatomi Flow Block
 
-![[Docs/Modul Logic/Flow/Flow Block/anatomi-flow-block.png]]
+![[Docs/Modul Logic/Flow/Flow Block/flowlock-anatomy.png]]
 Bagian-bagian Flow Block ditempatkan pada posisi berikut:
+
+![[Docs/Modul Logic/Flow/Flow Block/2026-11-02_19-31-16.png]]
 
 | Bagian | Posisi pada block |
 | --- | --- |
