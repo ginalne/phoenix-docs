@@ -14,7 +14,7 @@ Display Chrono adalah [[Docs/Modul Interface/Form/Elemen/Display/Pengenalan|Elem
 
 Dengan Display Chrono, Anda dapat menunjukkan urutan tahapan atau peristiwa kepada pengisi tanpa memengaruhi data. Isi kronologi diatur langsung di halaman, bukan lewat Properties Panel.
 
-Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen Form/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Chrono.
+Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Chrono.
 
 ## Menambahkan Display Chrono
 
@@ -72,7 +72,7 @@ Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout P
 
 ## Menghapus Display Chrono
 
-Langkah menghapus Display Chrono sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Display Chrono sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Display Chrono
 > Menghapus Display Chrono akan menghapus seluruh step di dalamnya. Aksi tidak bisa dikembalikan.  

@@ -10,7 +10,7 @@
 
 >**note** Layout Card merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Layout Card adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam satu kartu.
+Layout Card adalah [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam satu kartu.
 
 ## Menambahkan Layout Card
 
@@ -51,7 +51,7 @@ Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout P
 
 ## Menghapus Layout Card
 
-Langkah menghapus Layout Card sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Layout Card sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Layout Card
 > Menghapus Layout Card akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.

@@ -10,7 +10,7 @@
 
 >**note** Layout Full merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Layout Full adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam tampilan penuh, sekaligus menentukan [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber data bagi Elemen di dalamnya.
+Layout Full adalah [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam tampilan penuh, sekaligus menentukan [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber data bagi Elemen di dalamnya.
 
 ## Menambahkan Layout Full
 
@@ -61,7 +61,7 @@ Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout P
 
 ## Menghapus Layout Full
 
-Langkah menghapus Layout Full sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Layout Full sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan LayoutFull
 > Menghapus Layout Full akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.

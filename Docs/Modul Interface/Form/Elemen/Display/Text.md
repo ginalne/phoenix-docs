@@ -14,7 +14,7 @@ Display Text adalah [[Docs/Modul Interface/Form/Elemen/Display/Pengenalan|Elemen
 
 Dengan Display Text, Anda dapat memberi konteks kepada pengisi tanpa memengaruhi data. Teksnya dapat diatur ukuran dan gayanya langsung dari Header Toolbar.
 
-Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen Form/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Text.
+Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Text.
 
 ## Menambahkan Display Text
 
@@ -59,7 +59,7 @@ Mengubah ukuran, *padding*, dan *margin* Display Text dilakukan lewat Layout Pan
 
 ## Menghapus Display Text
 
-Langkah menghapus Display Text sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Display Text sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Display Text
 > Menghapus Display Text akan menghapus teks beserta isinya. Aksi tidak bisa dikembalikan.

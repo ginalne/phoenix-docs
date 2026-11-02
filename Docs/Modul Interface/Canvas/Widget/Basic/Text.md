@@ -49,7 +49,7 @@ Data Panel (ikon kode) berisi daftar binding untuk mengganti teks dengan nilai d
 
 ## Menghapus Widget Text
 
-Langkah menghapus Widget Text sama dengan menghapus widget lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Widget Text sama dengan menghapus widget lain. Lihat [[Docs/Modul Interface/Canvas/Widget/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan
 > Menghapus widget akan menghapus semua konfigurasi yang ada termasuk teks dan Query pada binding yang sudah dibuat. Data sumber dan barisnya tetap aman. Setelah terhapus, aksi tidak bisa dikembalikan.

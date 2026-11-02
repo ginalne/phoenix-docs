@@ -10,7 +10,7 @@
 
 >**note** Input List Column merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Input|Elemen Input]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Input List Column adalah Elemen Input yang menjadi satu kolom di dalam [[Docs/Modul Interface/Form/Elemen Form/Input/List|Input List]]. Binding Input List Column mengisi [[Docs/Tipe Data/Column]] dengan pivot dari Table yang dipilih pada Input List.
+Input List Column adalah Elemen Input yang menjadi satu kolom di dalam [[Docs/Modul Interface/Form/Elemen/Input/List|Input List]]. Binding Input List Column mengisi [[Docs/Tipe Data/Column]] dengan pivot dari Table yang dipilih pada Input List.
 
 Dengan Input List Column, Anda dapat mengatur judul kolom, teks petunjuk, dan format hasil isian untuk setiap kolom daftar secara terpisah.
 
@@ -21,12 +21,12 @@ Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Eleme
 Input List Column tidak ditambahkan lewat daftar Elemen. Widget ini ditambahkan otomatis saat Anda menambah kolom pada Input List.
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]]
-2. Pilih [[Docs/Modul Interface/Form/Elemen Form/Input/List|Input List]] yang sudah memiliki pivot pada [[^field|Binding]]
+2. Pilih [[Docs/Modul Interface/Form/Elemen/Input/List|Input List]] yang sudah memiliki pivot pada [[^field|Binding]]
 3. Klik tombol [[^button/add|Add Column]] pada Input List
 4. Klik kiri widget Input List Column yang baru muncul untuk memfokuskannya, lalu atur lewat Properties Panel
 5. Pilih [[^field|Column]] pada [[^field|Binding]]
 
-Selengkapnya lihat [[Docs/Modul Interface/Form/Elemen Form/Input/List#Mengelola Kolom|Mengelola Kolom]] pada halaman [[Docs/Modul Interface/Form/Elemen Form/Input/List|Input List]].
+Selengkapnya lihat [[Docs/Modul Interface/Form/Elemen/Input/List#Mengelola Kolom|Mengelola Kolom]] pada halaman [[Docs/Modul Interface/Form/Elemen/Input/List|Input List]].
 
 ## Mengonfigurasi Input List Column
 
@@ -50,7 +50,7 @@ Selain tombol [[^button/delete|Remove]], Header Toolbar Input List Column memili
 #### State
 
 >**note** Pengaruh State Input List
-> [[^field|Visible]], [[^field|Enable]], dan [[^field|Readonly]] pada [[Docs/Modul Interface/Form/Elemen Form/Input/List|Input List]] berlaku untuk semua kolomnya. Jika [[^field|Enable]] pada Input List bernilai [[^value/boolean/false]], kolom tidak aktif. Jika [[^field|Readonly]] bernilai [[^value/boolean/true]], kolom menjadi readonly.
+> [[^field|Visible]], [[^field|Enable]], dan [[^field|Readonly]] pada [[Docs/Modul Interface/Form/Elemen/Input/List|Input List]] berlaku untuk semua kolomnya. Jika [[^field|Enable]] pada Input List bernilai [[^value/boolean/false]], kolom tidak aktif. Jika [[^field|Readonly]] bernilai [[^value/boolean/true]], kolom menjadi readonly.
 
 | State | Fungsi |
 | --- | --- |
@@ -79,11 +79,11 @@ Saat ini [[^field|Required]] adalah satu-satunya validator.
 
 #### Parent
 
-Menampilkan [[Docs/Modul Interface/Form/Elemen Form/Input/List|Input List]] tempat Input List Column berada.
+Menampilkan [[Docs/Modul Interface/Form/Elemen/Input/List|Input List]] tempat Input List Column berada.
 
 ## Menghapus Input List Column
 
-Langkah menghapus Input List Column sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Input List Column sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Input List Column
 > Menghapus Input List Column akan menghapus kolom tersebut dari Input List. Aksi tidak bisa dikembalikan.

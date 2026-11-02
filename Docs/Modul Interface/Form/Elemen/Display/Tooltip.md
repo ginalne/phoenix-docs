@@ -64,7 +64,7 @@ Mengubah ukuran, *padding*, dan *margin* Display Tooltip dilakukan lewat Layout 
 
 ## Menghapus Display Tooltip
 
-Langkah menghapus Display Tooltip sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Display Tooltip sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Display Tooltip
 > Menghapus Display Tooltip akan menghapus kotak informasi beserta isinya. Aksi tidak bisa dikembalikan.

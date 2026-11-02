@@ -93,7 +93,7 @@ Mengubah ukuran, *padding*, dan *margin* Input Quiz dilakukan lewat Layout Panel
 
 ## Menghapus Input Quiz
 
-Langkah menghapus Input Quiz sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Input Quiz sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Input Quiz
 > Menghapus Input Quiz akan menghapus Quiz beserta seluruh opsinya. Aksi tidak bisa dikembalikan.

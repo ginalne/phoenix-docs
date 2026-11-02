@@ -82,7 +82,7 @@ Mengubah ukuran, *padding*, dan *margin* Input Basic dilakukan lewat Layout Pane
 
 ## Menghapus Input Basic
 
-Langkah menghapus Input Basic sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Input Basic sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Input Basic
 > Menghapus Input Basic akan menghapus isian ini dari Form. Aksi tidak bisa dikembalikan.

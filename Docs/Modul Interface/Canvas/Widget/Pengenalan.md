@@ -35,6 +35,6 @@ Penjelasan keunikan masing-masing widget ada di halaman widget yang bersangkutan
 ## Mengelola Widget
 
 Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
-1. [[Docs/Modul Interface/Form/Elemen Form/Menambahkan]] Widget.
-3. [[Docs/Modul Interface/Form/Elemen Form/Menghapus]] Widget.
+1. [[Docs/Modul Interface/Canvas/Widget/Menambahkan]] Widget.
+3. [[Docs/Modul Interface/Canvas/Widget/Menghapus]] Widget.
 2. [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi]] properti dan desain dalam Elemen.

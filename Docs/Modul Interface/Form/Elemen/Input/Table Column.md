@@ -10,7 +10,7 @@
 
 >**note** Input Table Column merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Input|Elemen Input]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Input Table Column adalah Elemen Input yang menjadi satu kolom di dalam [[Docs/Modul Interface/Form/Elemen Form/Input/Table|Input Table]]. Binding Input Table Column mengisi [[Docs/Tipe Data/Column]] dengan pivot dari Table yang dipilih pada Input Table.
+Input Table Column adalah Elemen Input yang menjadi satu kolom di dalam [[Docs/Modul Interface/Form/Elemen/Input/Table|Input Table]]. Binding Input Table Column mengisi [[Docs/Tipe Data/Column]] dengan pivot dari Table yang dipilih pada Input Table.
 
 Dengan Input Table Column, Anda dapat mengatur judul kolom, teks petunjuk, dan format hasil isian untuk setiap kolom tabel secara terpisah.
 
@@ -21,12 +21,12 @@ Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Eleme
 Input Table Column tidak ditambahkan lewat daftar Elemen. Widget ini ditambahkan otomatis saat Anda menambah kolom pada Input Table.
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]]
-2. Pilih [[Docs/Modul Interface/Form/Elemen Form/Input/Table|Input Table]] yang sudah memiliki pivot pada [[^field|Binding]]
+2. Pilih [[Docs/Modul Interface/Form/Elemen/Input/Table|Input Table]] yang sudah memiliki pivot pada [[^field|Binding]]
 3. Klik tombol [[^button/add|Add Column]] pada Input Table
 4. Klik kiri widget Input Table Column yang baru muncul untuk memfokuskannya, lalu atur lewat Properties Panel
 5. Pilih [[^field|Column]] pada [[^field|Binding]]
 
-Selengkapnya lihat [[Docs/Modul Interface/Form/Elemen Form/Input/Table#Mengelola Kolom|Mengelola Kolom]] pada halaman [[Docs/Modul Interface/Form/Elemen Form/Input/Table|Input Table]].
+Selengkapnya lihat [[Docs/Modul Interface/Form/Elemen/Input/Table#Mengelola Kolom|Mengelola Kolom]] pada halaman [[Docs/Modul Interface/Form/Elemen/Input/Table|Input Table]].
 
 ## Mengonfigurasi Input Table Column
 
@@ -50,7 +50,7 @@ Selain tombol [[^button/delete|Remove]], Header Toolbar Input Table Column memil
 #### State
 
 >**note** Pengaruh State Input Table
-> [[^field|Visible]], [[^field|Enable]], dan [[^field|Readonly]] pada [[Docs/Modul Interface/Form/Elemen Form/Input/Table|Input Table]] berlaku untuk semua kolomnya. Jika [[^field|Enable]] pada Input Table bernilai [[^value/boolean/false]], kolom tidak aktif. Jika [[^field|Readonly]] bernilai [[^value/boolean/true]], kolom menjadi readonly.
+> [[^field|Visible]], [[^field|Enable]], dan [[^field|Readonly]] pada [[Docs/Modul Interface/Form/Elemen/Input/Table|Input Table]] berlaku untuk semua kolomnya. Jika [[^field|Enable]] pada Input Table bernilai [[^value/boolean/false]], kolom tidak aktif. Jika [[^field|Readonly]] bernilai [[^value/boolean/true]], kolom menjadi readonly.
 
 | State | Fungsi |
 | --- | --- |
@@ -79,11 +79,11 @@ Saat ini [[^field|Required]] adalah satu-satunya validator.
 
 #### Parent
 
-Menampilkan [[Docs/Modul Interface/Form/Elemen Form/Input/Table|Input Table]] tempat Input Table Column berada.
+Menampilkan [[Docs/Modul Interface/Form/Elemen/Input/Table|Input Table]] tempat Input Table Column berada.
 
 ## Menghapus Input Table Column
 
-Langkah menghapus Input Table Column sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Input Table Column sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Input Table Column
 > Menghapus Input Table Column akan menghapus kolom tersebut dari Input Table. Aksi tidak bisa dikembalikan.

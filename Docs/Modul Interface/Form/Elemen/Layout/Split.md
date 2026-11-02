@@ -58,7 +58,7 @@ Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout P
 
 ## Menghapus Layout Split
 
-Langkah menghapus Layout Split sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Layout Split sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan LayoutSplit
 > Menghapus Layout Split akan menghapus semua Elemen di sisi kiri dan sisi kanan. Aksi tidak bisa dikembalikan.

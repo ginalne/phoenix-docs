@@ -21,8 +21,8 @@ Jenis State yang tersedia bergantung pada jenis Elemen. Elemen layout dan displa
 | Jenis Elemen | Elemen | [[^field|Visible]] | [[^field|Enable]] | [[^field|Readonly]] |
 | ------------ | ------ | ------------------ | ----------------- | ------------------- |
 | Layout | [[Docs/Modul Interface/Form/Elemen/Layout/Card]], [[Docs/Modul Interface/Form/Elemen/Layout/Full]], [[Docs/Modul Interface/Form/Elemen/Layout/Split]], [[Docs/Modul Interface/Form/Elemen/Layout/Accordion]] | Ada | Tidak ada | Tidak ada |
-| Display | [[Docs/Modul Interface/Form/Elemen/Display/Text]], [[Docs/Modul Interface/Form/Elemen/Display/Table]], [[Docs/Modul Interface/Form/Elemen/Display/Tooltip]], [[Docs/Modul Interface/Form/Elemen Form/Display/Qr]], [[Docs/Modul Interface/Form/Elemen/Display/Chrono]] | Ada | Tidak ada | Tidak ada |
-| Input | [[Docs/Modul Interface/Form/Elemen Form/Input/Basic]], [[Docs/Modul Interface/Form/Elemen/Input/Quiz]], [[Docs/Modul Interface/Form/Elemen/Input/Table]], [[Docs/Modul Interface/Form/Elemen Form/Input/List]] | Ada | Ada | Ada |
+| Display | [[Docs/Modul Interface/Form/Elemen/Display/Text]], [[Docs/Modul Interface/Form/Elemen/Display/Table]], [[Docs/Modul Interface/Form/Elemen/Display/Tooltip]], [[Docs/Modul Interface/Form/Elemen/Display/Qr]], [[Docs/Modul Interface/Form/Elemen/Display/Chrono]] | Ada | Tidak ada | Tidak ada |
+| Input | [[Docs/Modul Interface/Form/Elemen/Input/Basic]], [[Docs/Modul Interface/Form/Elemen/Input/Quiz]], [[Docs/Modul Interface/Form/Elemen/Input/Table]], [[Docs/Modul Interface/Form/Elemen/Input/List]] | Ada | Ada | Ada |
 
 Nilai awal ketiga State pada Elemen input yang baru ditambahkan selalu sama:
 

@@ -10,7 +10,7 @@
 
 >**note** Layout Accordion merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Layout Accordion adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam satu kartu dengan header yang dapat di-toggle untuk menyembunyikan dan menampilkan isinya, sehingga Layout ini berguna untuk bagian Form yang tidak perlu selalu terlihat.
+Layout Accordion adalah [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam satu kartu dengan header yang dapat di-toggle untuk menyembunyikan dan menampilkan isinya, sehingga Layout ini berguna untuk bagian Form yang tidak perlu selalu terlihat.
 
 Layout Accordion memiliki header dengan [[^field|Label]] dan kondisi bawaan lewat [[^field|Default State]]. 
 
@@ -21,7 +21,7 @@ Anda dapat menambahkan Layout Accordion dengan dua cara:
 - Memilih [[^field|Accordion Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
 - Memilih Layout Accordion pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
 
-Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
+Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen/Menambahkan|Menambahkan Elemen]].
 
 ## Mengonfigurasi Layout Accordion
 
@@ -64,7 +64,7 @@ Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout P
 
 ## Menghapus Layout Accordion
 
-Langkah menghapus Layout Accordion sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Layout Accordion sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Layout Accordion
 > Menghapus Layout Accordion akan menghapus semua Elemen di dalamnya. Aksi tidak bisa dikembalikan.

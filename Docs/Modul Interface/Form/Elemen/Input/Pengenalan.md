@@ -13,6 +13,6 @@ Elemen Input adalah kategori dari [[Docs/Modul Interface/Form/Elemen/Pengenalan|
 Kategori ini memiliki elemen sebagai berikut:
 
 1. [[Docs/Modul Interface/Form/Elemen/Input/Basic]]
-2.  [[Docs/Modul Interface/Form/Elemen Form/Input/Quiz]]
-3.  [[Docs/Modul Interface/Form/Elemen Form/Input/Table]] dengan turunan [[Docs/Modul Interface/Form/Elemen Form/Input/Table Column]]
-4.   [[Docs/Modul Interface/Form/Elemen Form/Input/List]] dengan turunan [[Docs/Modul Interface/Form/Elemen Form/Input/List Column]]
+2.  [[Docs/Modul Interface/Form/Elemen/Input/Quiz]]
+3.  [[Docs/Modul Interface/Form/Elemen/Input/Table]] dengan turunan [[Docs/Modul Interface/Form/Elemen/Input/Table Column]]
+4.   [[Docs/Modul Interface/Form/Elemen/Input/List]] dengan turunan [[Docs/Modul Interface/Form/Elemen/Input/List Column]]

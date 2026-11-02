@@ -96,7 +96,7 @@ Mengubah ukuran, *padding*, dan *margin* Input Table dilakukan lewat Layout Pane
 
 ## Menghapus Input Table
 
-Langkah menghapus Input Table sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Input Table sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Input Table
 > Menghapus Input Table akan menghapus semua Input Table Column di dalamnya. Aksi tidak bisa dikembalikan.

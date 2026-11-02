@@ -47,7 +47,7 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 
 ## Menghapus Widget Kanban
 
-Langkah menghapus Widget Kanban sama dengan menghapus widget lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Widget Kanban sama dengan menghapus widget lain. Lihat [[Docs/Modul Interface/Canvas/Widget/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan
 > Menghapus widget akan menghapus semua konfigurasi yang ada termasuk Query yang sudah dibuat. Data sumber dan barisnya tetap aman. Setelah terhapus, aksi tidak bisa dikembalikan.
