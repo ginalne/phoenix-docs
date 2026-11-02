@@ -1,7 +1,7 @@
 ---
   pageDecoration:
     tree:
-      priority: 
+      priority: -13
   tags:
     meta
     prompt
