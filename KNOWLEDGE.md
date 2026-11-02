@@ -353,6 +353,7 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Header Toolbar** (`interface-widget-chart-pie.png`): ikon pie, ikon pegangan, **Data (Query, kaidah Series Output) dengan tombol Q**, **Limit = jumlah maksimal data yang muncul** ("Empty" bila belum diisi), Remove. **Tidak ada toggle 123 dan Search** (tersisa keliru pada revisi penulis).
 *   **Layout Panel dan Design Panel.** Design Panel: hole (berapa lubang pada pie, persen), gap (gap antar data), theme (tema warna), gradient (gradasi dari tengah ke pinggir, transparent to color), offset (batas akhir gradasi, 75% = dari tengah sampai sekitar 75% ke ujung lingkaran), label (`none`, `label`, `value`, `percent`, `all` = label - value), min (derajat minimum pie untuk menampilkan label), legends (`right`, `bottom`, `hidden`), total (toggle, total di tengah), size (font size total).
 *   **Belum terkonfirmasi:** definisi Series Output (anchor `Docs/Tipe Data/Query#Series Output`), satuan gap dan size, arti persen gradient, daftar theme, ikon tanpa nama pada Design Panel, arti Limit kosong.
+* 
 ## Widget Kanban, Gantt, Timeline, Gallery (draf tanpa screenshot)
  
 *   **Penjelasan penulis:** semuanya "hanya memiliki pengaturan Query di header dan hanya memiliki panel layout" seperti Widget Table. Path: `Docs/Modul Interface/Canvas/Widget/Kanban`, `.../Gantt`, `.../Timeline`, `.../Gallery`. Screenshot belum ada.
@@ -373,32 +374,37 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **legends** (Line, Bar): right, bottom, left, top, hidden. Pada Radial legends adalah toggle.
 *   **Threshold** (Radial, Linear): tombol + threshold, tiap titik punya `at` (persen) dan warna. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan.
 *   **min/max:** toggle Auto (otomatis). Jika nonaktif mengikuti from dan until. Pada Chart Line, kolom yang dikosongkan berarti auto.
+* 
 ## Widget Chart Line (`interface-widget-chart-line.png`)
  
 *   **Data Panel:** tiga sumbu X, Y, Y2, masing-masing min/max dengan toggle **A**, ikon tag (toggle label), tick (banyak label), format (kosong = default). **Penulis menyebut panel ini kemungkinan diganti seperti Chart Bar.**
 *   **Design Panel:** ketebalan garis (contoh 2.5), jenis garis (`smooth`, `sharp`, `step`), dot radius (contoh 4), toggle zoom (kaca pembesar, interaksi zoom in dan out), toggle grid, theme, area (persen opacity area line), legends.
 *   **Tampilan:** tooltip pada titik (waktu dan nilai series), legend di bawah.
+  
 ## Widget Chart Bar (`interface-widget-chart-bar.png`)
  
 *   **Data Panel:** X (label), Y dan Y2 (min/max dengan toggle Auto, label, tick, format). Y2 tampil sebagai sumbu kanan saat aktif.
 *   **Design Panel:** mode (toggle **diverging**, **reversed**, **orientasi**: nonaktif = vertikal; radio **Grouped**, **Stacked**, **Full**), style (theme), bar opacity (contoh 90%), bar border radius (contoh 4), bar padding (contoh 0.25%), marker (warna, length contoh 70%, width contoh 3), **pattern** (`off`, `basic` = garis-garis, `all` = satu pola ke semua dengan pilihan Hatch, Dots, Cross, ZigZag, `series` = pola per urutan series dengan tombol + untuk tambah urutan), legends, toggle zoom, toggle grid, toggle **123** (label nilai di atas bar), size (font label nilai, contoh 11).
+  
 ## Widget Chart Radial (`interface-widget-chart-radial.png`)
  
 *   **Header Toolbar:** **Needle** (Query kaidah **Single Output** untuk nilai arah needle, "Empty" bila belum diisi, dengan Q), Data (Query Series Output dengan Q). Angka dan ikon filter di samping nama Table pada Data belum dijelaskan.
 *   **Data Panel:** ruler (toggle), ticks (banyak tick dan warna), min/max (toggle Auto), label (label nilai needle), value (`Value`, `Percent`, `Ratio`, `None`), ukuran (0 sampai 100%) dan warna label.
 *   **Design Panel:** mode (`Multi`, `Stacked`), bentuk lengkungan (`Full`, `Semi`, `Horseshoe`, `Fan`, `Custom`; Custom menampilkan input from° dan until°), thickness (bawaan 25), arc (`Round`, `Square`, `Butt`), style (theme), opacity bar (contoh 100%), arc gap (contoh 17), + threshold, track (warna, opacity contoh 15%), needle (warna, panjang contoh 120%, 120% = mengenai bar), toggle legends, toggle **animation at start** (animasi needle saat pertama dibuka).
 *   **Ejaan antarmuka:** tombol tertulis "treshold".
+  
 ## Widget Chart Linear (`interface-widget-chart-linear.png`)
  
 *   **Data Panel:** min/max (toggle Auto), value (`Inside`, `End`, `Above`, `Below`, `None`), format (`Value`, `Percent`, `Custom`), size (contoh 13).
 *   **Design Panel:** mode (`Bars`, `Multi`, `Stacked`), shape (`Plain`, `Split`, `Stepped`), toggle diverging, toggle orientasi (aktif = horizontal), toggle show track (menampilkan track opacity contoh 20% dan warna), toggle show marker (menampilkan marker width contoh 2, height contoh 14%, dan warna), theme, bar opacity (contoh 100%), bar border radius (contoh 3), + threshold (setelah ada: toggle legend threshold dan titik at % dan warna), step ticks (contoh 10) dan step gap (contoh 3) **hanya saat Stepped**, label (`start`, `end`, `above`, `below`, `none`), label size (contoh 12), bar gap (contoh 11), toggle **count up** (animasi saat pertama dibuka).
+  
 ## Widget Space
  
 *   **Belum ada informasi.** Space disebut ketinggalan dalam daftar widget tampilan data. Halaman berupa kerangka minimal (Header Toolbar dengan Data dan Q, Layout Panel). Perlu: definisi Space, sumber data, kaidah Query (`Space Output`?), dan screenshot.
 *   **Belum terkonfirmasi untuk semua chart:** kaidah Query selain Pie, arti diverging, reversed, marker, step ticks, step gap, Split, Multi, Stacked, fungsi Y2 (toggle sumbu kedua), gestur zoom, arti angka dan filter pada Data Chart Radial, dan nama slug ikon toggle.
 *   **Penamaan pada screenshot** (Table "Catatan Raven" dan "Catatan Phoenix", nama status) adalah data pribadi dan tidak disebut di dokumentasi.
 
-## Space (Modul Interface)
+# Space (Modul Interface)
 
 *   **Definisi:** Space adalah komponen modul Interface yang menaungi dan mengorganisasi data dalam bentuk 3D (tiga dimensi). Data dan hubungan antar data divisualisasikan dalam ruang tiga dimensi dan dapat dijelajahi dari berbagai sudut pandang, sehingga pola dan keterkaitan yang sulit terlihat pada tampilan tabel menjadi lebih mudah dipahami.
 *   **Path dan struktur:** `Docs/Modul Interface/Space/Apa itu Space`. **Seluruh isi Weather, Environment, dan Object ditulis lengkap di halaman ini, tanpa subhalaman**, ditautkan lewat anchor (`#Mengelola Weather`, `#Mengelola Environment`, `#Mengelola Object`, `#Mengatur Model Attribute`, `#Panel Properti`, `#Hak Akses Space`).
