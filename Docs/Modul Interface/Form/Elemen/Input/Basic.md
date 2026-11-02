@@ -31,12 +31,12 @@ Klik kiri Input Basic di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan 
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Input/header-basic-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Input/header-basic-form.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Input Basic memiliki pengaturan teks untuk Label: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks Label yang sedang dipilih.
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Input/properties-basic-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Input/properties-basic-form.png]]
 #### Binding
 
 | Bagian | Fungsi |

@@ -10,7 +10,7 @@
 
 >**note** Layout Accordion merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Layout Accordion adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] lain dalam satu kartu dengan header yang dapat di-toggle untuk menyembunyikan dan menampilkan isinya, sehingga Layout ini berguna untuk bagian Form yang tidak perlu selalu terlihat.
+Layout Accordion adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam satu kartu dengan header yang dapat di-toggle untuk menyembunyikan dan menampilkan isinya, sehingga Layout ini berguna untuk bagian Form yang tidak perlu selalu terlihat.
 
 Layout Accordion memiliki header dengan [[^field|Label]] dan kondisi bawaan lewat [[^field|Default State]]. 
 
@@ -29,15 +29,15 @@ Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-accordion.png]]
+![[Docs/Modul Interface/Form/Elemen/Layout/header-form-accordion.png]]
 Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Accordion]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-accordion.png]]
+![[Docs/Modul Interface/Form/Elemen/Layout/properties-form-accordion.png]]
 #### Binding
 
-Binding dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/Binding#Binding Layout]].
+Binding dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen/Binding#Binding Layout]].
 
 #### State
 

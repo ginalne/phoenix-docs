@@ -10,19 +10,19 @@
 
 >**note** QR merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Display QR adalah [[Docs/Modul Interface/Form/Elemen Form/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan kode QR di Form. Kode QR yang tampil siap di-scan, dan isinya diatur lewat atribut [[^field|Content]].
+Display QR adalah [[Docs/Modul Interface/Form/Elemen/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan kode QR di Form. Kode QR yang tampil siap di-scan, dan isinya diatur lewat atribut [[^field|Content]].
 
 Dengan Display QR, Anda dapat membagikan informasi kepada pengisi lewat kode QR tanpa memengaruhi data.
 
 >**note** Perbedaan tampilan Edit Mode dan View Mode
 > Di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]], Display QR menampilkan isi QR dalam bentuk teks. Di View Mode, yang tampil adalah kode QR yang sebenarnya.
 
-Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen Form/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display QR.
+Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display QR.
 
 ## Menambahkan Display QR
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] pada [[Docs/Modul Interface/Form/Antarmuka|halaman kerja Form]]
-2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Layout]]
+2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Layout]]
 3. Pilih [[^field|QR]] dari daftar, atau ketik untuk mencarinya
 4. Isi [[^field|Content]]
 
@@ -34,12 +34,12 @@ Klik kiri Display QR di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan E
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/header-qr-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Display/header-qr-form.png]]
 Header Toolbar Display QR hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Display QR]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/properties-qr-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Display/properties-qr-form.png]]
 #### State
 
 | State | Fungsi |
@@ -62,7 +62,7 @@ Mengubah ukuran, *padding*, dan *margin* Display QR dilakukan lewat Layout Panel
 
 ## Menghapus Display QR
 
-Langkah menghapus Display QR sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Display QR sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Display QR
 > Menghapus Display QR akan menghapus kode QR beserta isinya. Aksi tidak bisa dikembalikan.

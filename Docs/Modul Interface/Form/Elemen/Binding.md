@@ -19,8 +19,8 @@ Binding juga menjadi dasar relasi antar Table pada satu Form, penanda title [[Do
 | Elemen | Binding | Yang dipilih |
 | ------ | ------- | ------------ |
 | Elemen layout | Binding Type [[^value/radio|Table]] atau [[^value/radio|Pivot]] | [[Docs/Tipe Data/Table]] sebagai header, atau [[Docs/Tipe Data/Column]] sebagai pivot. |
-| Elemen input satu isian, misalnya [[Docs/Modul Interface/Form/Elemen Form/Input/Basic]] | Column | Column dari Table header. Table terisi otomatis dari Layout. |
-| Elemen input multi row, yaitu [[Docs/Modul Interface/Form/Elemen Form/Input/Table]] dan [[Docs/Modul Interface/Form/Elemen Form/Input/List]] | Pivot | Column dari Table lain (pivot). Table terisi otomatis dari Layout |
+| Elemen input satu isian, misalnya [[Docs/Modul Interface/Form/Elemen/Input/Basic]] | Column | Column dari Table header. Table terisi otomatis dari Layout. |
+| Elemen input multi row, yaitu [[Docs/Modul Interface/Form/Elemen/Input/Table]] dan [[Docs/Modul Interface/Form/Elemen Form/Input/List]] | Pivot | Column dari Table lain (pivot). Table terisi otomatis dari Layout |
 
 ### Binding Layout
 
@@ -45,7 +45,7 @@ Pada pivot, satu-satunya isian yang dipilih adalah [[^field|Column]], dengan inf
 
 Elemen input tidak memiliki pilihan Binding Type. Anda langsung mengisi [[^field|Column]], sedangkan [[^field|Table]] terisi otomatis dari Layout tempat Elemen berada. Anda cukup memilih [[^field|Column]] dari Table header yang sudah ditunjukkan oleh Phoenix.
 
-Elemen input multi row seperti [[Docs/Modul Interface/Form/Elemen Form/Input/Table]] dan [[Docs/Modul Interface/Form/Elemen Form/Input/List]] mengisi [[^field|Column]] dari Table lain (pivot). Table tersebut harus memiliki Column bertipe [[Docs/Tipe Data/Row|Row]] dengan [[^field|Header]] berupa Table header.
+Elemen input multi row seperti [[Docs/Modul Interface/Form/Elemen/Input/Table]] dan [[Docs/Modul Interface/Form/Elemen Form/Input/List]] mengisi [[^field|Column]] dari Table lain (pivot). Table tersebut harus memiliki Column bertipe [[Docs/Tipe Data/Row|Row]] dengan [[^field|Header]] berupa Table header.
 
 ### Alias
 
@@ -74,7 +74,7 @@ Binding berada di Properties Panel, di bagian paling atas. Bagian yang tampil be
 
 ### Label Binding di Edit Mode
 
-![[Docs/Modul Interface/Form/Elemen Form/label-binding-form.png]]
+![[Docs/Modul Interface/Form/Elemen/label-binding-form.png]]
 Pada [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit|Edit Mode]], Phoenix menampilkan label binding di atas Elemen agar Anda mudah melihat ikatan yang sudah dibuat.
 
 | Label | Warna | Menandai |
@@ -131,7 +131,7 @@ Pengisi tidak membutuhkan pengaturan akses tambahan. Saat pembuat Form memilih T
 | There is an input bound by a column, but the column type and the Format Type do not match | Tipe Column tidak cocok dengan [[^field|Format Type]] yang diatur pada Elemen input. | Samakan [[^field|Format Type]] pada Elemen input dengan tipe Column, atau pilih Column lain. |
 
 >**warning** Mengganti Table pada Layout memicu pesan kesalahan
-> Bila Table pada Layout diganti, Elemen input di dalamnya akan menampilkan pesan error. Pilih ulang [[^field|Column]] pada setiap [[Docs/Modul Interface/Form/Elemen Form/Input/Pengenalan|Elemen Input]]yang terdampak.
+> Bila Table pada Layout diganti, Elemen input di dalamnya akan menampilkan pesan error. Pilih ulang [[^field|Column]] pada setiap [[Docs/Modul Interface/Form/Elemen/Input/Pengenalan|Elemen Input]]yang terdampak.
 
 ## Praktik Terbaik
 

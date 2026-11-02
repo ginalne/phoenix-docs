@@ -10,7 +10,7 @@
 
 >**note** Layout Full merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Layout Full adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] lain dalam tampilan penuh, sekaligus menentukan [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber data bagi Elemen di dalamnya.
+Layout Full adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam tampilan penuh, sekaligus menentukan [[Docs/Modul Data/Table/Apa itu Table|Table]] sumber data bagi Elemen di dalamnya.
 
 ## Menambahkan Layout Full
 
@@ -19,7 +19,7 @@ Anda dapat menambahkan Layout Full dengan dua cara:
 - Memilih [[^field|Full Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
 - Memilih Layout Full pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
 
-Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
+Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen/Menambahkan|Menambahkan Elemen]].
 
 ## Mengonfigurasi Layout Full
 
@@ -27,12 +27,12 @@ Klik kiri Layout Full di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan 
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-full.png]]
+![[Docs/Modul Interface/Form/Elemen/Layout/header-form-full.png]]
 Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Layout Full]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-full.png]]
+![[Docs/Modul Interface/Form/Elemen/Layout/properties-form-full.png]]
 | Bagian | Fungsi |
 | --- | --- |
 | [[^field|Binding]] | Menentukan header Layout Full. Lihat [[#Binding]]. |
@@ -41,7 +41,7 @@ Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/dele
 
 #### Binding
 
-Binding dalam Layout Full sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/Binding#Binding Layout]].
+Binding dalam Layout Full sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen/Binding#Binding Layout]].
 
 #### State
 

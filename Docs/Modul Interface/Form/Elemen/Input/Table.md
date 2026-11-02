@@ -10,7 +10,7 @@
 
 >**note** Input Table merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Input|Elemen Input]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Input Table adalah Elemen Input yang dapat digunakan untuk mengisi banyak baris data dengan tampilan tabel. Binding Input Table harus berupa pivot, dan kolomnya diatur lewat [[Docs/Modul Interface/Form/Elemen Form/Input/Table Column|Input Table Column]].
+Input Table adalah Elemen Input yang dapat digunakan untuk mengisi banyak baris data dengan tampilan tabel. Binding Input Table harus berupa pivot, dan kolomnya diatur lewat [[Docs/Modul Interface/Form/Elemen/Input/Table Column|Input Table Column]].
 
 Dengan Input Table, pengisi dapat menambahkan dan menghapus baris langsung di Form, sedangkan Anda menambahkan kolom lewat tombol [[^button/add|Add Column]] tanpa menulis logika tambahan.
 
@@ -32,9 +32,9 @@ Kolom Input Table diatur langsung di halaman kerja pada [[Docs/Modul Interface/F
 
 | Aksi | Cara |
 | --- | --- |
-| Menambah kolom | Klik tombol [[^button/add|Add Column]]. Widget [[Docs/Modul Interface/Form/Elemen Form/Input/Table Column|Input Table Column]] langsung ditambahkan otomatis. |
-| Mengonfigurasi kolom | Klik kiri widget Input Table Column untuk memfokuskannya, lalu atur lewat Properties Panel. Lihat [[Docs/Modul Interface/Form/Elemen Form/Input/Table Column|Input Table Column]]. |
-| Menghapus kolom | Hapus widget Input Table Column seperti menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Input/Table Column#Menghapus Input Table Column]]. |
+| Menambah kolom | Klik tombol [[^button/add|Add Column]]. Widget [[Docs/Modul Interface/Form/Elemen/Input/Table Column|Input Table Column]] langsung ditambahkan otomatis. |
+| Mengonfigurasi kolom | Klik kiri widget Input Table Column untuk memfokuskannya, lalu atur lewat Properties Panel. Lihat [[Docs/Modul Interface/Form/Elemen/Input/Table Column|Input Table Column]]. |
+| Menghapus kolom | Hapus widget Input Table Column seperti menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Input/Table Column#Menghapus Input Table Column]]. |
 
 ## Cara Pengisi Menggunakan Input Table
 
@@ -51,12 +51,12 @@ Klik kiri Input Table di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan 
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Input/header-table-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Input/header-table-form.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Input Table memiliki pengaturan teks untuk Label: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks Label yang sedang dipilih.
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Input/properties-table-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Input/properties-table-form.png]]
 #### Binding
 
 | Bagian | Fungsi |

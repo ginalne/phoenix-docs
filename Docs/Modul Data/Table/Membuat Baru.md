@@ -19,7 +19,7 @@
 8. Pilih satu Column sebagai Alias dengan mengklik ikon bintang pada kolom [[^field|Alias]]
 9. Klik [[^button|Create]]
 
-Anda juga dapat membuat Table dari file dengan mengklik [[^button/upload|Upload]] di pojok kanan atas dialog. Selengkapnya lihat [[Docs/Modul Data/Table/Import]].
+Anda juga dapat membuat Table dari file dengan mengklik [[^button/upload|Upload]] di pojok kanan atas dialog. Selengkapnya lihat [[Docs/Modul Data/Table/Mengimpor]].
 
 Beberapa aturan penting:
 

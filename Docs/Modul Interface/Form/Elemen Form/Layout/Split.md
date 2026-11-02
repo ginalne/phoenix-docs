@@ -10,7 +10,7 @@
 
 >**note** Layout Split merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Layout Split adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] lain dalam tampilan dibelah menjadi sisi kiri dan sisi kanan.
+Layout Split adalah [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam tampilan dibelah menjadi sisi kiri dan sisi kanan.
 
 >**note** Perbedaan tampilan desktop dan mobile
 > Di desktop,Layout Split tampil dibelah menjadi sisi kiri dan kanan. Di mobile, Layout Split tampil sebagai potongan atas dan bawah.
@@ -22,7 +22,7 @@ Anda dapat menambahkan Layout Split dengan dua cara:
 - Memilih [[^field|Split Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
 - Memilih Layout Split pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
 
-Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
+Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen/Menambahkan|Menambahkan Elemen]].
 
 ## Mengonfigurasi Layout Split
 
@@ -30,15 +30,15 @@ Klik kiri Layout Split di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/header-form-split.png]]
+![[Docs/Modul Interface/Form/Elemen/Layout/header-form-split.png]]
 Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Split]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-split.png]]
+![[Docs/Modul Interface/Form/Elemen/Layout/properties-form-split.png]]
 #### Binding
 
-Binding dalam Layout Split berbeda dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/Binding#Binding Layout]]. Karena setiap sisi adalah Layout Full, kedua sisi juga dapat menentukan Table header masing-masing.
+Binding dalam Layout Split berbeda dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen/Binding#Binding Layout]]. Karena setiap sisi adalah Layout Full, kedua sisi juga dapat menentukan Table header masing-masing.
 
 #### State
 
@@ -50,7 +50,7 @@ Tidak ada atribut yang dapat dikonfigurasi pada Layout Split.
 
 #### Children
 
-Layout Split memiliki dua sisi, kiri dan kanan, dan setiap sisi adalah Layout [[Docs/Modul Interface/Form/Elemen Form/Layout/Full|Full]]. Fungsi menambahkan Elemen sama dengan Full: tambahkan Elemen baru lewat [[^field|Type something here to add...]] pada masing-masing sisi. Daftar [[^field|Children]] pada Layout Split adalah dua Elemen Full.
+Layout Split memiliki dua sisi, kiri dan kanan, dan setiap sisi adalah Layout [[Docs/Modul Interface/Form/Elemen/Layout/Full|Full]]. Fungsi menambahkan Elemen sama dengan Full: tambahkan Elemen baru lewat [[^field|Type something here to add...]] pada masing-masing sisi. Daftar [[^field|Children]] pada Layout Split adalah dua Elemen Full.
 
 ### Layout Panel
 

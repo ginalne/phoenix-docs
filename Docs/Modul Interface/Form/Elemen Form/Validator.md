@@ -31,7 +31,7 @@ Nilai awal [[^field|Required]] pada Elemen input yang baru ditambahkan adalah [[
 
 ## Antarmuka Validator
 
-![[Docs/Modul Interface/Form/Elemen Form/validator-form.png]]
+![[Docs/Modul Interface/Form/Elemen/validator-form.png]]
 Validator berada di Properties Panel, di bawah bagian [[^field|State]]. Baris [[^field|Required]] terdiri dari label, ikon saklar, dan nilai.
 
 | Bagian | Fungsi |

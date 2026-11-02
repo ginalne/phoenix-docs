@@ -10,7 +10,7 @@
 
 >**note** Chrono merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Display Chrono adalah [[Docs/Modul Interface/Form/Elemen Form/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan kronologi di Form dalam bentuk alur step. Step tersusun menurun dalam bentuk daftar, dan setiap step memiliki judul serta keterangan.
+Display Chrono adalah [[Docs/Modul Interface/Form/Elemen/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan kronologi di Form dalam bentuk alur step. Step tersusun menurun dalam bentuk daftar, dan setiap step memiliki judul serta keterangan.
 
 Dengan Display Chrono, Anda dapat menunjukkan urutan tahapan atau peristiwa kepada pengisi tanpa memengaruhi data. Isi kronologi diatur langsung di halaman, bukan lewat Properties Panel.
 
@@ -19,7 +19,7 @@ Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Eleme
 ## Menambahkan Display Chrono
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] pada [[Docs/Modul Interface/Form/Antarmuka|halaman kerja Form]]
-2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Layout]]
+2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Layout]]
 3. Pilih [[^field|Chrono]] dari daftar, atau ketik untuk mencarinya
 4. Tambahkan step dan isi kronologinya. Lihat [[#Mengelola Step]]
 
@@ -46,12 +46,12 @@ Klik kiri Display Chrono di [[Docs/Modul Interface/Form/Apa itu Form#Mode View d
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/header-chrono-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Display/header-chrono-form.png]]
 Header Toolbar Display Chrono hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Display Chrono]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/properties-chrono-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Display/properties-chrono-form.png]]
 #### State
 
 | State | Fungsi |

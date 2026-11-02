@@ -10,19 +10,19 @@
 
 >**note** Table merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Display Table adalah [[Docs/Modul Interface/Form/Elemen Form/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan tabel di Form. Saat pertama kali ditambahkan, tabel tampil dengan ukuran 2x2, yaitu dua kolom dan dua baris.
+Display Table adalah [[Docs/Modul Interface/Form/Elemen/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan tabel di Form. Saat pertama kali ditambahkan, tabel tampil dengan ukuran 2x2, yaitu dua kolom dan dua baris.
 
 Isi setiap sel berupa teks biasa, tanpa binding dan tanpa expression, sehingga Display Table dapat memberi informasi kepada pengisi tanpa memengaruhi data.
 
 >**note** Display Table berbeda dengan [[Docs/Modul Data/Table/Apa itu Table|Table]] pada Modul Data
 > Display Table tidak terhubung ke Table mana pun. Isinya hanya teks yang Anda ketik langsung di halaman.
 
-Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen Form/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Table.
+Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Table.
 
 ## Menambahkan Display Table
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] pada [[Docs/Modul Interface/Form/Antarmuka|halaman kerja Form]]
-2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Layout]]
+2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Layout]]
 3. Pilih [[^field|Table]] dari daftar, atau ketik untuk mencarinya
 4. Isi sel tabel, lalu tambahkan kolom atau baris bila perlu. Lihat [[#Mengelola Kolom dan Baris]]
 
@@ -45,12 +45,12 @@ Klik kiri Display Table di [[Docs/Modul Interface/Form/Apa itu Form#Mode View da
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/header-table-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Display/header-table-form.png]]
 Header Toolbar Display Table hanya memiliki tombol [[^button/delete|Remove]] untuk [[#Menghapus Display Table]].
 
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/properites-table-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Display/properites-table-form.png]]
 #### State
 
 | State | Fungsi |
@@ -71,7 +71,7 @@ Mengubah ukuran, *padding*, dan *margin* Display Table dilakukan lewat Layout Pa
 
 ## Menghapus Display Table
 
-Langkah menghapus Display Table sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Display Table sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Display Table
 > Menghapus Display Table akan menghapus tabel beserta seluruh isinya. Aksi tidak bisa dikembalikan.

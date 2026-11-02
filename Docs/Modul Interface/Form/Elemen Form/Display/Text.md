@@ -10,7 +10,7 @@
 
 >**note** Text merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Display Text adalah [[Docs/Modul Interface/Form/Elemen Form/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan teks statis di Form, misalnya judul, keterangan, atau petunjuk pengisian.
+Display Text adalah [[Docs/Modul Interface/Form/Elemen/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan teks statis di Form, misalnya judul, keterangan, atau petunjuk pengisian.
 
 Dengan Display Text, Anda dapat memberi konteks kepada pengisi tanpa memengaruhi data. Teksnya dapat diatur ukuran dan gayanya langsung dari Header Toolbar.
 
@@ -19,7 +19,7 @@ Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Eleme
 ## Menambahkan Display Text
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] pada [[Docs/Modul Interface/Form/Antarmuka|halaman kerja Form]]
-2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Layout]]
+2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Layout]]
 3. Pilih [[^field|Text]] dari daftar, atau ketik untuk mencarinya
 4. Isi [[^field|Content]]
 
@@ -31,7 +31,7 @@ Klik kiri Display Text di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan
 
 ### Header Toolbar
 
-![[Docs/Modul Interface/Form/Elemen Form/Display/toolbar-form-text.png]]
+![[Docs/Modul Interface/Form/Elemen/Display/toolbar-form-text.png]]
 Selain tombol [[^button/delete|Remove]], Header Toolbar Display Text memiliki pengaturan teks: ukuran font, *bold*, *italic*, *underline*, serta rata kiri, tengah, dan kanan. Pengaturan ini berlaku pada teks yang sedang dipilih.
 
 ### Properties Panel

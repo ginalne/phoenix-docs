@@ -10,7 +10,7 @@
 
 >**note** Layout Card merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Layout|Elemen Layout]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Layout Card adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen]] lain dalam satu kartu.
+Layout Card adalah [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Elemen Layout]] yang dapat digunakan untuk menampung [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen]] lain dalam satu kartu.
 
 ## Menambahkan Layout Card
 
@@ -19,7 +19,7 @@ Anda dapat menambahkan Layout Card dengan dua cara:
 - Memilih [[^field|Card Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
 - Memilih Layout Card pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
 
-Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
+Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen/Menambahkan|Menambahkan Elemen]].
 
 ## Mengonfigurasi Layout Card
 
@@ -29,13 +29,13 @@ Klik kiri Layout Card di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan 
 
 Tidak ada perbedaan dari Elemen lain, yaitu hanya memiliki tombol [[^button/delete|Remove]]  untuk [[#Menghapus Card]].
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/card-header-form.png]]
+![[Docs/Modul Interface/Form/Elemen/Layout/card-header-form.png]]
 ### Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/Layout/properties-form-card.png]]
+![[Docs/Modul Interface/Form/Elemen/Layout/properties-form-card.png]]
 #### Binding
 
-Binding dalam Layout Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/Binding#Binding Layout]].
+Binding dalam Layout Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen/Binding#Binding Layout]].
 
 #### State
 

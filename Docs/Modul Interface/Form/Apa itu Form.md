@@ -65,7 +65,7 @@ Penjelasan antarmuka Form lihat selengkap nya di [[Docs/Modul Interface/Form/Ant
 
 ## Mengelola Templat Form
 
-Form dapat di desain dan disesuaikan sesuai kebutuhan agar membuat pengumpulan data menjadi lebih mudah menggunakan Elemen Form, selengkapnya lihat [[Docs/Modul Interface/Form/Elemen Form/Pengenalan|Elemen Form]].
+Form dapat di desain dan disesuaikan sesuai kebutuhan agar membuat pengumpulan data menjadi lebih mudah menggunakan Elemen Form, selengkapnya lihat [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen Form]].
 
 ## Hak Akses
 

@@ -11,19 +11,19 @@
 
 >**note** Tooltip merupakan salah satu [[Docs/Modul Interface/Form/Apa itu Form#Elemen Display|Elemen Display]] dalam [[Docs/Modul Interface/Form/Apa itu Form|Form]] di Phoenix.
 
-Display Tooltip adalah [[Docs/Modul Interface/Form/Elemen Form/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan kotak informasi di Form. Isinya diatur lewat dua atribut, yaitu [[^field|Label]] dan [[^field|Content]].
+Display Tooltip adalah [[Docs/Modul Interface/Form/Elemen/Display/Pengenalan|Elemen Display]] yang dapat digunakan untuk menampilkan kotak informasi di Form. Isinya diatur lewat dua atribut, yaitu [[^field|Label]] dan [[^field|Content]].
 
 Dengan Display Tooltip, Anda dapat menyampaikan informasi tambahan kepada pengisi tanpa memengaruhi data.
 
 >**note** Kotak informasi selalu tampil
 > Meskipun bernama Tooltip, kotak informasi pada Display Tooltip selalu tampil dan tidak perlu diarahkan kursor terlebih dahulu.
 
-Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen Form/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Tooltip.
+Penjelasan umum tentang Elemen, Header Toolbar, Layout Panel, Menu Konteks Elemen, dan cara [[Docs/Modul Interface/Form/Elemen/Menghapus|menghapus Elemen]] ada di [[Docs/Modul Interface/Form/Apa itu Form#Mengelola Elemen Form|Apa itu Form?]]. Halaman ini fokus pada keunikan Display Tooltip.
 
 ## Menambahkan Display Tooltip
 
 1. Aktifkan [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] pada [[Docs/Modul Interface/Form/Antarmuka|halaman kerja Form]]
-2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen Form/Layout/Pengenalan|Layout]]
+2. Klik [[^field|Type something here to add...]] pada [[Docs/Modul Interface/Form/Elemen/Layout/Pengenalan|Layout]]
 3. Pilih [[^field|Tooltip]] dari daftar, atau ketik untuk mencarinya
 4. Isi [[^field|Label]] dan [[^field|Content]]
 

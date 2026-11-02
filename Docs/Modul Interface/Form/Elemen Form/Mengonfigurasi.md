@@ -8,12 +8,12 @@
 ---
 # Mengonfigurasi Elemen
 
-![[Docs/Modul Interface/Form/Elemen Form/configuration-form.png]]
+![[Docs/Modul Interface/Form/Elemen/configuration-form.png]]
 Klik kiri pada Elemen di [[#Mode View dan Edit Mode|Edit Mode]] untuk memfokuskannya. Setelah itu muncul [[#Properties Panel]] dan [[#Header Toolbar]]. Selain itu, [[#Layout Panel]] dapat dibuka lewat ikon kecil di bawah Elemen yang difokuskan.
 
 ## Properties Panel
 
-![[Docs/Modul Interface/Form/Elemen Form/properties-panel-form.png]]
+![[Docs/Modul Interface/Form/Elemen/properties-panel-form.png]]
 Panel untuk mengatur properti Elemen secara rinci, seperti [[^field|Binding]], [[^field|State]], [[^field|Validators]], [[^field|Attributes]], [[^field|Children]], dan [[^field|Parent]]. Isinya berbeda-beda pada setiap Elemen.
 
 | Bagian | Fungsi |
