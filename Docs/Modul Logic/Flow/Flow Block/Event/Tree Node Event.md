@@ -107,7 +107,7 @@ Kombinasi yang berguna: `Old` menyimpan seluruh isi Node yang dihapus, sehingga 
 <!--
   * [DONE] Nama Tree dan Node pada contoh (Perangkat Mobile, Gawai) adalah penamaan generik buatan Claude. Sesuaikan bila perlu.
   * [TODO] Konfirmasi field Node yang dapat muncul di `Old`. Draf ini mengasumsikan Name, Order, dan Children berdasarkan atribut External Read Only pada Tree.
-    Jawaban: Betul
+    Jawaban: Parent juga.
   * [TODO] Konfirmasi apakah memindahkan Node ke induk lain dihitung sebagai `update`, dan apakah menghapus Node yang memiliki Children menghasilkan satu atau beberapa peristiwa `delete`.
     Jawaban: 
   * [TODO] Konfirmasi apakah Node hasil clone pada Tree Merger juga memicu Tree Node Event.
