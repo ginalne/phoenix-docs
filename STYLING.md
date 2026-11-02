@@ -12,6 +12,7 @@
 @media screen and (min-width: 3200px) {
   #sb-main .cm-editor .cm-content {
       max-width: none;
+      margin-left: 4rem;
   }
 }
 table {

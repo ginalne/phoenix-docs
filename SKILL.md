@@ -37,7 +37,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 6. **Draf dulu, TODO kemudian.** TODO tidak menggantikan draf. Setiap bagian, termasuk warning dampak penghapusan, catatan perbedaan mode, dan langkah yang belum pasti, ditulis dalam bentuk terbaik, lalu ditandai untuk konfirmasi. Dampak penghapusan konteks (apa yang hilang dan apa yang terputus) selalu ditulis sebagai callout warning.
 7. **Ringkasan harus mengikuti isi.** Batasan dan Catatan, TL:DR, dan FAQ adalah ringkasan. Setiap kali isi halaman berubah atau dipindah, sinkronkan keempatnya: (a) langkah yang sudah pindah ke subhalaman diganti satu tautan; (b) Batasan berisi perilaku, dampak, dan ketergantungan (warning, perbedaan mode, relasi hak akses, apa yang tidak dicakup sebuah tombol), bukan lokasi tombol atau langkah yang sudah ada di isi halaman; (c) TL:DR berisi 4 sampai 6 poin yang mengikuti peta halaman (definisi, antarmuka, membangun, menjalankan, memantau, hal yang perlu hati-hati); (d) setiap anchor`#...` harus ada di halaman tujuan atau di daftar halaman yang diusulkan.
 8. **Revisi penulis adalah sumber belajar.** Bandingkan halaman yang dikembalikan dengan versi sebelumnya. Yang dihapus biasanya salah level atau bukan konten, yang diganti biasanya istilah atau struktur, dan yang ditambah biasanya bagian yang terlewat. Ubah temuan menjadi aturan di skill silverbullet.md dan knowledge.md (path, istilah, perilaku). Jadikan struktur dan istilah penulis sebagai dasar untuk halaman berikutnya.
-9. **Ikon di judul halaman kerja adalah ikon komponen.** Jangan menafsirkannya sebagai jenis atau tombol (contoh: "2D" pada Canvas). Tulis "ikon <Komponen> dan Header Name".
+9. **Ikon di judul halaman kerja (konteks = komponen) adalah ikon komponen.** Jangan menafsirkannya sebagai jenis atau tombol (contoh: "2D" pada Canvas). Tulis "ikon <Komponen> dan Header Name".
 10. **Fitur rilis berikutnya tetap ditulis.** Jika penulis memberi informasi fitur yang belum ada pada lampiran karena baru tersedia di rilis selanjutnya (contoh: Binding Canvas), tulis drafnya lengkap, jangan menaruh letak tombol atau antarmuka sebagai fakta, dan tandai dengan satu TODO yang meminta screenshot dan verifikasi ulang setelah rilis.
 11. **Contoh dalam penjelasan fitur harus generik.** Hindari inisial atau label seperti "pesanan A dan pesanan B". Tulis misalnya "nomor pesanan" dan "nomor pesanan lain". Berlaku juga di FAQ.
 12. **Ikon di judul halaman kerja adalah ikon komponen.** Jangan menafsirkannya sebagai jenis atau tombol (contoh: "2D" pada Canvas). Tulis "ikon <Komponen> dan Header Name".
@@ -45,35 +45,27 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 14. **TODO yang sudah dijawab dihapus dari draf berikutnya.** Pertahankan hanya TODO baru atau yang belum terjawab, dan terapkan setiap jawaban ke seluruh bagian terdampak (isi, Batasan, TL:DR, FAQ, Praktik Terbaik).
 15. **Halaman widget pendek, fitur umum ditautkan.** Penulis menghapus semua bagian yang menjelaskan hal yang berlaku untuk semua widget. Jangan menulis ulang konsep, cara kerja, hak akses, atau contoh penggunaan di halaman widget. Jangan menyebut widget sebagai "versi lite" (itu dijelaskan di halaman Canvas). Fakta "isi widget tidak dapat dimanipulasi" cukup muncul di FAQ.
 16. **Tulis hanya pengaturan yang terlihat dan dijelaskan penulis.** Ikon yang belum dijelaskan, satuan, dan rentang nilai ditandai TODO, bukan ditulis sebagai fakta.
-17. **Periksa sisa salinan antarwidget.** Saat halaman widget dibuat dari halaman widget lain, cek setiap baris Header Toolbar, judul bagian, dan tautan anchor. Pada revisi Chart Pie masih tersisa baris toggle 123 dan Search, "Ikon Table", dan "Menghapus Widget Table" dari Widget Table. Pastikan nama widget pada judul, anchor, dan callout sesuai halaman.
-18. **Satu pengaturan, satu penjelasan lengkap.** Perilaku pengaturan ditulis dalam kalimat penulis (mis. offset 75%) tanpa aturan turunan yang tidak diberikan.
-19. **Widget tanpa screenshot tetap dibuat** dengan placeholder gambar dan TODO, dan struktur mengikuti widget serupa (Table untuk widget tampilan data dengan hanya pengaturan Query).
-20. **Kaidah Query per widget** memakai anchor `Docs/Tipe Data/Query#<Nama> Output` (Table Output, Series Output, Timeline Output). Anchor baru (Kanban, Gantt, Gallery) adalah tebakan dan harus ditandai TODO agar penulis mendefinisikannya di halaman Query.
-21. **Input tanpa label ditulis sebagai "Ikon <fungsi> (contoh <nilai>)".** Nilai pada screenshot ditulis sebagai contoh, bukan nilai bawaan, kecuali penulis menyebut "default". Contoh: "Ikon ketebalan garis (contoh 2.5)".
-22. **Satu input, satu baris.** Aturan kondisional ("jika Custom, tampil input from dan to", "jika show track aktif, tampil opacity dan warna track", "jika Stepped, tampil step ticks dan step gap") ditulis pada baris input pemicunya, bukan baris terpisah.
-23. **Daftar pilihan yang sama antarwidget ditulis sekali.** Daftar theme lengkap ada di Chart Line (`#Design Panel`), halaman chart lain menautkannya. Label dropdown ditulis sesuai antarmuka (`style` pada Chart Bar dan Chart Radial, `theme` pada Chart Line dan Chart Linear).
-24. **Hal yang belum dijelaskan penulis tetap ditulis sebatas inputnya** (contoh: marker, diverging, reversed, step ticks), dengan TODO yang meminta penjelasan perilaku. Jangan menebak perilaku.
-25. **Tanda panel yang akan diganti.** Jika penulis menyebut sebuah panel akan berubah (Data Panel Chart Line akan disamakan dengan Chart Bar), tulis sesuai screenshot saat ini dan beri TODO.
-26. **Widget tanpa informasi sama sekali (Space)** ditulis sebagai kerangka minimal mengikuti widget tampilan data, tanpa tabel Tampilan dan Interaksi, dengan TODO yang meminta definisi dan screenshot.
 
 
 ## Konvensi tautan
 
 |Halaman|Format|Variasi|Contoh|
 |-|-|-|-|
-|Halaman konsep umum|`[[Inisialisasi/Apa itu Pro?|Pro]]`, `[[Docs/Apa itu Komponen?]]`, `[[Docs/Folder/Apa itu Folder?]]`|Pro, Komponen, Folder|`[[Docs/Folder/Apa itu Folder?#Informasi Data]]`|
-|Event|`[[Docs/Event/Apa itu Event|Event]]`, `[[Docs/Event/Menghubungkan Event]]`     | Menggantikan`Docs/Event/Pengenalan`|-|
-|Subhalaman komponen|`[[Docs/Modul <Nama>/<Komponen>/<Subhalaman>]]`|Data Access, TimelineData, Flow Activity|`[[Docs/Modul Developer/Workspace/Data Access]]`, `[[Docs/Modul Logic/Flow/Flow Activity]]`   |
-|Halaman pendamping Properties Panel Elemen|`[[Docs/Modul Interface/Form/Elemen Form/State]]`, `[[Docs/Modul Interface/Form/Elemen Form/Validators]]`, `[[Docs/Modul Interface/Form/Elemen Form/Binding]]`|State, Validators, dan Binding pada Form|`[[Docs/Modul Interface/Form/Elemen Form/State|State]]`|
+| Halaman konsep umum | - | `[[Inisialisasi/Apa itu Pro?|Pro]]`, `[[Docs/Apa itu Komponen?|Komponen]]`, `[[Docs/Folder/Apa itu Folder?]]` | - |
+| Event | - | `[[Docs/Event/Apa itu Event|Event]]`, `[[Docs/Event/Menghubungkan Event]]` | - |
+| Penjelasan Antarmuka Utama |`[[Docs/Antar Muka#<Anchor>]]` | Bilah Navigasi (Header Navigation Phoenix), Area Manajemen Folder (bagian pengelolaan folder dan komponen), Halaman Kerja (antarmuka kerja komponen)| `[[Docs/Antarmuka#Area Manajemen Folder]]` |
+| Penjelasan Modul |`[[Docs/Modul <Nama>/Pengenalan|<Nama>]]`  | Data, Interface, Logic, Developer | `[[Docs/Modul Developer/Pengenalan|Developer]]` |
+
+|Halaman Styling|`[[Docs/Styling/Styling Class]]`| | |
+
+| Halaman pendamping Properties Panel Elemen |`[[Docs/Modul Interface/Form/Elemen Form/State]]`, `[[Docs/Modul Interface/Form/Elemen Form/Validators]]`, `[[Docs/Modul Interface/Form/Elemen Form/Binding]]`|State, Validators, dan Binding pada Form|`[[Docs/Modul Interface/Form/Elemen Form/State|State]]`|
 |Item anak komponen (misalnya Flow Block)|`[[Docs/Modul <Nama>/<Komponen>/<Item>/Pengenalan]]` untuk halaman pintu masuk, `[[Docs/Modul <Nama>/<Komponen>/<Item>/<Kategori>/Pengenalan]]` untuk kategori, `...#<Bagian>` untuk bagian di dalamnya|Flow Block: kategori Event, Data, Operator, Modular, dan seterusnya|`[[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan]]`, `[[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block]]` |
 |Flow Block spesifik|`[[Docs/Modul Logic/Flow/Flow Block/<Kategori>/<Nama Block>|<Nama Block>]]`|Dipakai pada tabel langkah Contoh Penggunaan, bukan halaman Pengenalan kategori|`[[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]`, `[[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]`|
 |Data milik komponen|`[[Docs/Modul <Nama>/<Komponen>/<Tipe>]]`|Timeline Data, Timeline Event, TableView Data, SpaceObject, SpaceEnvironment, SpaceWeather|`[[Docs/Modul Interface/Timeline/Timeline Data]]`|
-|Modul <Nama>|`[[Docs/Modul <Nama>/Pengenalan|<Nama>]]`  | Data, Interface, Logic, Developer`[[Docs/Modul Developer/Pengenalan|Developer]]` |
 |Komponen|`[[Docs/Modul <Nama>/<Komponen>/Apa itu <Komponen>]]`|Data: Variable, Enum, Table, Tree. Interface: Table View, Gallery, Canvas, Kanban, Space, Timeline, Form. Logic: Flow. Developer: Group, Workspace, Model|`[[Docs/Modul Logic/Flow/Apa itu Flow]]`|
 |Tipe Data|`[[Docs/Tipe Data/<Nama>]]`|Color, Tree, Expression, Mixed, Array, Boolean, Column, Number, Enum, EnumData, Complex, Month, Thing, Year, MonthYear, Text, Matrices, Node, Object, File, Query, Row, String, Table, TableData, Variable, Date, Time, DateTime, DateTimeZone|`[[Docs/Tipe Data/String]]` |
 |Format Data|`[[Docs/Format Data/<Tipe Data>/<Nama>]]`|String: Short Text, Password, Email, Phone Number, Mobile Number, URL, Slug, Username, Full Name, First Name, Initial, Country Code, Postal Code, License Plate, National ID, Passport Number, Tax ID, Bank Account, IBAN, Credit Card, MAC Address, IPv4, IPv6, UUID, Emoji. Number: Number, Integer, Decimal, Percentage, Rating. Text: Long Text, Rich Text, Markdown, Note, Chat. Complex: Numeration Unit, Length Unit, Area Unit, Volume Unit, Euler Angle, Quaternion Unit, 1D Vector, 2D Vector, 3D Vector, 4D Vector, Geo, Currency. File: Attachment, Document, Media, Image, Photo, Audio, Video, Icon. Array: Popup List, Checkboxes, Direct List, Multiple Select. EnumData: Dropdown, Multiple Choices.|`[[Docs/Format Data/String/Short Text]]`      |
 |Anchor di halaman yang sama|`[[#Nama Bagian]]`|-|`[[#Flow]]`       |
-|Anchor di halaman lain|`[[Docs/Antar Muka#Area Manajemen Folder]]` | [[Docs/Antarmuka#Bilah Navigasi]]`Header Navigation Phoenix.`[[#Area Manajemen Folder]]` bagian pengelolaan folder dan komponen. [[#Halaman Kerja]]` antarmuka kerja komponen||
 |Gambar|`![[Docs/Modul <Nama>/<Komponen>/<nama-gambar>.png]]`|Nama file huruf kecil dipisah tanda hubung, ditaruh di folder komponen|`![[Docs/Modul Logic/Flow/blueprint-flow.png]]` |
 |Menu atau contextmenu antarmuka|`[[^field/<icon>|<Label>]]`    | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [slug komponen]. Kategori dan item menu tanpa icon memakai`[[^field|<Label>]]`     |`[[^field/add|Add]]`, `[[^field|Event]]`, `[[^field|Pulser]]`  |
 |Label isian, kolom isian dan teks informasi antarmuka|`[[^field|<Label>]]`|Berlaku untuk kolom isian, kolom pencarian, dan teks yang tampil di antarmuka (misalnya keterangan kosong atau informasi koordinat)|`[[^field|Name]]`, `[[^field|Search]]`, `[[^field|No Activity]]`         |
@@ -83,7 +75,6 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 |Pilihan radio atau toggle |`[[^value/radio|<Label>]]`|full, half, quarter pada Table View, static, bind pada Space|`[[^value/radio|full]]`|
 |Nama Column pada baris tabel atau kalimat|`[[^field/column|<Nama>]]`|Dipakai di tabel Komponen yang terlibat|`[[^field/column|Status]]`|
 |Nilai EnumData pada baris tabel atau kalimat|`[[^value/enumdata|<Nama>]]`|Nilai dari Enum, bukan nama Enum|`[[^value/enumdata|Menunggu]]`|
-|Halaman Styling|`[[Docs/Styling/Styling Class]]`| | |
 |Tombol hanya ikon (tanpa label)|`[[^button/<icon>]]`| q (Query) | `[[^button/q]]` |
 | Toggle mode pada bilah navigasi | `[[^mode/view|View]]` dan `[[^mode/edit|Edit]]`, satu baris per mode, deskripsi menjelaskan fungsi saklar saat mode itu tampil | Form | `[[^mode/view|View]]` |
 | Menu konteks Elemen | `[[^field/copy|Copy Layout Style]]`, `[[^field/paste|Paste Layout Style]]`, `[[^field/up|Move Back]]`, `[[^field/down|Move Next]]` | Form | `[[^field/up|Move Back]]` |
@@ -99,7 +90,8 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 |Template Canvas|`[[Docs/Modul Interface/Canvas/Template|Template Canvas]]`|Halaman usulan, daftar Template dan cara memakainya|`[[#Template Canvas|Template]]`|
 |Toggle mode antarmuka|`[[^field|mode]]` untuk toggle, `[[^value/radio|View]]` dan `[[^value/radio|Edit]]` untuk nilainya|Status Active dan Non-Active juga memakai `[[^value/radio|...]]`|`[[^field|mode]]`|
 |Tombol Binding|`[[^button/setting|Binding]]`|Ikon setting (roda gigi) dipakai untuk Binding pada Canvas|`[[^button/setting|Binding]]`|
-
+| Penjelasan dasar Flow Block | `[[Docs/Modul Logic/Flow/Flow Block/<Konteks>]]` | Konteks: Menambahkan, Menghapus, Menghubungkan Koneksi, Menghapus Koneksi, Aturan Koneksi, Syarat Eksekusi, Flow Activity | `[[Docs/Modul Logic/Flow/Flow Block/Menambahkan]]` |
+| Antarmuka Flow Block | `[[Docs/Modul Logic/Flow/Flow Block/Antarmuka#<Anchor>\|<Istilah>]]` | Anchor: Trigger, Input, Control, Output, Aturan Koneksi, Syarat Flow Block Diproses | `[[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Trigger\|Trigger]]` |
 
 Catatan: alias tidak boleh diawali spasi (contoh salah: `[[^field/workspace| Workspace]]`).
 
@@ -315,12 +307,31 @@ Catatan format:
 * **Peringatan keamanan halaman publik.** Jika tautan Publish dapat dibuka publik dan memuat elemen aksi (Canvas: widget Button yang memicu Flow), tulis callout `>**warning**` di bagian Publish, dan ulangi di Praktik Terbaik, Batasan, TL:DR, dan FAQ.
 * **Toolbar widget.** Contohkan satu widget saja lalu arahkan keunikan lainnya ke halaman widget. Beri tahu pembaca bagian toolbar mana yang sama di semua widget dan mana yang unik.
 
-## Pola yang dipakai penulis untuk konteks = Elemen form:
+## Pola yang dipakai penulis untuk konteks = Elemen Form:
 - Judul halaman: <Nama Elemen> (Elemen <Tipe>), misalnya Card (Elemen Layout). Untuk Elemen Layout, pakai kerangka sederhana di bagian 4 (tanpa Konsep Utama sampai FAQ).
 - Fokus pada keunikan Elemen. Hal yang berlaku untuk semua Elemen (Header Toolbar, Layout Panel, Menu Konteks Elemen, Menambahkan dan Menghapus Elemen, Binding Form) cukup ditautkan ke [[Docs/Modul Interface/Form/Apa itu Form#<Bagian>]], tidak ditulis ulang.
 - Kerangka isi Elemen non-Layout: Konsep Utama, Cara Kerja (diagram relasi), Menambahkan, Mengonfigurasi (sub-bagian per bagian Properties Panel: Binding, State, Validators, Attributes, Children atau Parent, Header Toolbar teks), Contoh Penggunaan, Praktik Terbaik, Batasan dan Catatan, TL:DR, FAQ. Elemen Layout memakai kerangka sederhana di bagian 4.
 - Contoh Penggunaan Elemen tidak wajib memakai diagram Flow; cukup komponen yang terlibat, hasil yang dirasakan, dan ide skenario lain.
 
+## Pola yang dipakai penulis untuk konteks = Widget Canvas:
+* Periksa sisa salinan antarwidget. Saat halaman widget dibuat dari halaman widget lain, cek setiap baris Header Toolbar, judul bagian, dan tautan anchor. Pada revisi Chart Pie masih tersisa baris toggle 123 dan Search, "Ikon Table", dan "Menghapus Widget Table" dari Widget Table. Pastikan nama widget pada judul, anchor, dan callout sesuai halaman.
+* Satu pengaturan, satu penjelasan lengkap. Perilaku pengaturan ditulis dalam kalimat penulis (mis. offset 75%) tanpa aturan turunan yang tidak diberikan.
+* Widget tanpa screenshot tetap dibuat dengan placeholder gambar dan TODO, dan struktur mengikuti widget serupa (Table untuk widget tampilan data dengan hanya pengaturan Query).
+* Kaidah Query per widget memakai anchor `Docs/Tipe Data/Query#<Nama> Output` (Table Output, Series Output, Timeline Output). Anchor baru (Kanban, Gantt, Gallery) adalah tebakan dan harus ditandai TODO agar penulis mendefinisikannya di halaman Query.
+* Input tanpa label ditulis sebagai "Ikon <fungsi> (contoh <nilai>)". Nilai pada screenshot ditulis sebagai contoh, bukan nilai bawaan, kecuali penulis menyebut "default". Contoh: "Ikon ketebalan garis (contoh 2.5)".
+* Satu input, satu baris. Aturan kondisional ("jika Custom, tampil input from dan to", "jika show track aktif, tampil opacity dan warna track", "jika Stepped, tampil step ticks dan step gap") ditulis pada baris input pemicunya, bukan baris terpisah.
+* Daftar pilihan yang sama antarwidget ditulis sekali. Daftar theme lengkap ada di Chart Line (`#Design Panel`), halaman chart lain menautkannya. Label dropdown ditulis sesuai antarmuka (`style` pada Chart Bar dan Chart Radial, `theme` pada Chart Line dan Chart Linear).
+* Hal yang belum dijelaskan penulis tetap ditulis sebatas inputnya (contoh: marker, diverging, reversed, step ticks), dengan TODO yang meminta penjelasan perilaku. Jangan menebak perilaku.
+* Tanda panel yang akan diganti. Jika penulis menyebut sebuah panel akan berubah (Data Panel Chart Line akan disamakan dengan Chart Bar), tulis sesuai screenshot saat ini dan beri TODO.
+* Widget tanpa informasi sama sekali (Space) ditulis sebagai kerangka minimal mengikuti widget tampilan data, tanpa tabel Tampilan dan Interaksi, dengan TODO yang meminta definisi dan screenshot.
+
+## Pola yang dipakai penulis untuk konteks = Flow Block"
+ 
+- Halaman Pengenalan Flow Block memuat Konsep Utama, Anatomi Flow Block (gambar `anatomi-flow-block.png`, posisi tiap bagian, lalu subbagian Trigger, Input, Control, Output), Aturan Koneksi, Syarat Flow Block Diproses, Variasi Antar Jenis Flow Block, katalog Jenis Flow Block, dan Mengelola Flow Block.
+- Istilah: **Trigger** (huruf kapital) adalah bagian block yang menjadi syarat eksekusi, sedangkan tombol `[[^button/empty|Trigger]]` pada Pulser adalah Control. Untuk kata kerja gunakan "memicu" agar tidak tertukar dengan Trigger. Area kerja Flow ditulis Blueprint.
+- Syarat eksekusi hanya berlaku untuk Flow Block non-Event. Flow Block Event tidak memiliki Trigger maupun Input.
+- Jangan menulis rencana fitur yang belum rilis (misalnya Control berupa grafik) di dokumentasi.
+  
 ### 4. Halaman Elemen (`Docs/Modul Interface/Form/Elemen Form/<Tipe>/<Nama Elemen>`)
 
 - Judul halaman (front matter): `<Nama Elemen> (Elemen <Tipe>)`, misalnya `Card (Elemen Layout)`. Judul H1: `Form Layout : <Nama>` untuk Elemen Layout. Path halaman Elemen: `Docs/Modul Interface/Form/Elemen Form/Layout/Card` (tanpa subfolder per Elemen dan tanpa `/Penjelasan`).
