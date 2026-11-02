@@ -49,7 +49,7 @@ Elemen input multi row seperti [[Docs/Modul Interface/Form/Elemen/Input/Table]] 
 
 ### Alias
 
-Alias bersifat opsional dan berfungsi mendaftarkan Elemen input sebagai parameter yang dapat dipakai Elemen lain, misalnya pada [[Docs/Tipe Data/Expression]] di [[Docs/Modul Interface/Form/Elemen Form/State]] dan [[Docs/Modul Interface/Form/Elemen Form/Validator]]. Tampilannya berupa checkbox. Saat checkbox bernilai [[^value/boolean/true]], kolom isian teks tampil untuk menulis nama Alias.
+Alias bersifat opsional dan berfungsi mendaftarkan Elemen input sebagai parameter yang dapat dipakai Elemen lain, misalnya pada [[Docs/Tipe Data/Expression]] di [[Docs/Modul Interface/Form/Elemen/State]] dan [[Docs/Modul Interface/Form/Elemen Form/Validator]]. Tampilannya berupa checkbox. Saat checkbox bernilai [[^value/boolean/true]], kolom isian teks tampil untuk menulis nama Alias.
 
 Nama Alias harus unik dalam satu Form dan boleh memakai karakter ASCII apa pun.
 
@@ -87,7 +87,7 @@ Pada [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit|Edit Mode]], Ph
 
 1. Beralih ke [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit|Edit Mode]]
 2. Klik kiri Layout yang ingin diatur
-3. Pada bagian [[^field|Binding]] di [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], pilih Binding Type [[^value/radio|table]] atau [[^value/radio|pivot]]
+3. Pada bagian [[^field|Binding]] di [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Properties Panel]], pilih Binding Type [[^value/radio|table]] atau [[^value/radio|pivot]]
 4. Pilih [[Docs/Tipe Data/Table]] sebagai header untuk [[^value/radio|table]], atau pilih [[Docs/Tipe Data/Column|Kolom Pivot]] untuk [[^value/radio|pivot]]
 5. Klik [[^button/save|Save]], atau tunggu *auto save* sekitar 3 detik
 

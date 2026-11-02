@@ -19,11 +19,11 @@ Anda dapat menambahkan Layout Full dengan dua cara:
 - Memilih [[^field|Full Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
 - Memilih Layout Full pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
 
-Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
+Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen/Menambahkan|Menambahkan Elemen]].
 
 ## Mengonfigurasi Layout Full
 
-Klik kiri Layout Full di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Full sebagai informasi Binding.
+Klik kiri Layout Full di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] menampilkan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Full sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -45,7 +45,7 @@ Binding dalam Layout Full sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul 
 
 #### State
 
-State dalam Layout Full sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
+State dalam Layout Full sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen/State]].
 
 #### Attribute
 
@@ -57,7 +57,7 @@ Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Layout Full. Setia
 
 ### Layout Panel
 
-Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Layout Full
 

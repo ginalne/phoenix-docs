@@ -49,7 +49,7 @@ Setiap baris pada Input List tampil sebagai satu blok yang berisi kolom-kolomnya
 
 ## Mengonfigurasi Input List
 
-Klik kiri Input List di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label pivot juga tampil di atas Input List sebagai informasi Binding.
+Klik kiri Input List di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]]. Label pivot juga tampil di atas Input List sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -94,11 +94,11 @@ Menampilkan Layout tempat Input List berada.
 
 ### Layout Panel
 
-Mengubah ukuran, *padding*, dan *margin* Input List dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+Mengubah ukuran, *padding*, dan *margin* Input List dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Input List
 
-Langkah menghapus Input List sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Input List sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Input List
 > Menghapus Input List akan menghapus semua Input List Column di dalamnya. Aksi tidak bisa dikembalikan.

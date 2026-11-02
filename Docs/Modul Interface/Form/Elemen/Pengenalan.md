@@ -14,8 +14,8 @@ Elemen dikelompokkan dalam tiga kategori:
 
 | Kategori | Fungsi | Elemen |
 | --- | --- | --- |
-| [[#Elemen Layout|Layout]] | Menjadi templat tempat Elemen lain diletakkan. | [[Docs/Modul Interface/Form/Elemen/Layout/Card]], [[Docs/Modul Interface/Form/Elemen Form/Layout/Full]], [[Docs/Modul Interface/Form/Elemen/Layout/Split]], [[Docs/Modul Interface/Form/Elemen/Layout/Accordion]] |
-| [[#Elemen Display|Display]] | Menampilkan informasi. | [[Docs/Modul Interface/Form/Elemen/Display/Text]], [[Docs/Modul Interface/Form/Elemen/Display/Table]], [[Docs/Modul Interface/Form/Elemen Form/Display/Tooltip]], [[Docs/Modul Interface/Form/Elemen Form/Display/Qr]], [[Docs/Modul Interface/Form/Elemen/Display/Chrono]] |
+| [[#Elemen Layout|Layout]] | Menjadi templat tempat Elemen lain diletakkan. | [[Docs/Modul Interface/Form/Elemen/Layout/Card]], [[Docs/Modul Interface/Form/Elemen/Layout/Full]], [[Docs/Modul Interface/Form/Elemen/Layout/Split]], [[Docs/Modul Interface/Form/Elemen/Layout/Accordion]] |
+| [[#Elemen Display|Display]] | Menampilkan informasi. | [[Docs/Modul Interface/Form/Elemen/Display/Text]], [[Docs/Modul Interface/Form/Elemen/Display/Table]], [[Docs/Modul Interface/Form/Elemen/Display/Tooltip]], [[Docs/Modul Interface/Form/Elemen Form/Display/Qr]], [[Docs/Modul Interface/Form/Elemen/Display/Chrono]] |
 | [[#Elemen Input|Input]] | Mengisi atau menampilkan informasi yang berlaku pada Binding. | [[Docs/Modul Interface/Form/Elemen Form/Input/Basic]], [[Docs/Modul Interface/Form/Elemen Form/Input/Quiz]], [[Docs/Modul Interface/Form/Elemen/Input/Table]], [[Docs/Modul Interface/Form/Elemen Form/Input/List]] |
 
 Penjelasan keunikan masing-masing Elemen ada di halaman Elemen tersebut.
@@ -23,12 +23,12 @@ Penjelasan keunikan masing-masing Elemen ada di halaman Elemen tersebut.
 ## Mengelola Elemen
 
 Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
-1. [[Docs/Modul Interface/Form/Elemen Form/Menambahkan]] Elemen.
-3. [[Docs/Modul Interface/Form/Elemen Form/Menghapus]] Elemen.
-2. [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi]] properti dan atribut dalam Elemen seperti [[^field|Binding]], [[^field|State]], [[^field|Validators]],[[^field|Attributes]].
+1. [[Docs/Modul Interface/Form/Elemen/Menambahkan]] Elemen.
+3. [[Docs/Modul Interface/Form/Elemen/Menghapus]] Elemen.
+2. [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi]] properti dan atribut dalam Elemen seperti [[^field|Binding]], [[^field|State]], [[^field|Validators]],[[^field|Attributes]].
 3. [[Docs/Modul Interface/Form/Elemen/Binding|Memahami Binding]] dalam Elemen.
-4. [[Docs/Modul Interface/Form/Elemen Form/State|Memahami State]] dalam Elemen.
-4. [[Docs/Modul Interface/Form/Elemen Form/Validator|Memahami Validator]] dalam Elemen.
+4. [[Docs/Modul Interface/Form/Elemen/State|Memahami State]] dalam Elemen.
+4. [[Docs/Modul Interface/Form/Elemen/Validator|Memahami Validator]] dalam Elemen.
 
 ## Menu Konteks Elemen
 

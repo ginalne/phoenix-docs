@@ -12,7 +12,7 @@
 
 Validator adalah aturan pemeriksaan yang harus dipenuhi isian pengisi sebelum Form dapat dikirim. Saat ini Validators hanya memiliki satu aturan, yaitu [[^field|Required]], dan hanya tersedia pada Elemen input.
 
-Seperti [[Docs/Modul Interface/Form/Elemen Form/State]], [[^field|Required]] dapat diisi dengan nilai statis atau [[Docs/Tipe Data/Expression]], sehingga sebuah isian dapat menjadi wajib hanya pada kondisi tertentu.
+Seperti [[Docs/Modul Interface/Form/Elemen/State]], [[^field|Required]] dapat diisi dengan nilai statis atau [[Docs/Tipe Data/Expression]], sehingga sebuah isian dapat menjadi wajib hanya pada kondisi tertentu.
 
 ## Required
 
@@ -27,7 +27,7 @@ Seperti [[Docs/Modul Interface/Form/Elemen Form/State]], [[^field|Required]] dap
 Nilai awal [[^field|Required]] pada Elemen input yang baru ditambahkan adalah [[^value/boolean/false]].
 
 >**note** Required mengikuti State
-> Elemen yang tidak terlihat atau tidak aktif tidak dapat diisi oleh pengisi, sehingga [[^field|Required]] tidak berlaku pada Elemen tersebut. Selengkapnya lihat [[Docs/Modul Interface/Form/Elemen Form/State|State]].
+> Elemen yang tidak terlihat atau tidak aktif tidak dapat diisi oleh pengisi, sehingga [[^field|Required]] tidak berlaku pada Elemen tersebut. Selengkapnya lihat [[Docs/Modul Interface/Form/Elemen/State|State]].
 
 ## Antarmuka Validator
 

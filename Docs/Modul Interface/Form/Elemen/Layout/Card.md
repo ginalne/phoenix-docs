@@ -19,11 +19,11 @@ Anda dapat menambahkan Layout Card dengan dua cara:
 - Memilih [[^field|Card Layout]] pada [[Docs/Modul Interface/Form/Form Page#Start Building|Start Building]] saat membuat Page.
 - Memilih Layout Card pada [[^field|Type something here to add...]] di dalam Layout lain (menjadi Layout anak).
 
-Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Menambahkan Elemen]].
+Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen/Menambahkan|Menambahkan Elemen]].
 
 ## Mengonfigurasi Layout Card
 
-Klik kiri Layout Card di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Card sebagai informasi Binding.
+Klik kiri Layout Card di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Card sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -39,7 +39,7 @@ Binding dalam Layout Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul 
 
 #### State
 
-State dalam Layout Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
+State dalam Layout Card sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen/State]].
 
 #### Children
 
@@ -47,7 +47,7 @@ Daftar [[^field|Children]] menampilkan setiap Elemen di dalamLayout Card. Setiap
 
 ### Layout Panel
 
-Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Layout Card
 

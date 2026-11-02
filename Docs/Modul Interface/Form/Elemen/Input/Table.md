@@ -47,7 +47,7 @@ Pada View Mode, pengisi mengelola baris sendiri.
 
 ## Mengonfigurasi Input Table
 
-Klik kiri Input Table di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label pivot juga tampil di atas Input Table sebagai informasi Binding.
+Klik kiri Input Table di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]]. Label pivot juga tampil di atas Input Table sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -92,7 +92,7 @@ Menampilkan Layout tempat Input Table berada.
 
 ### Layout Panel
 
-Mengubah ukuran, *padding*, dan *margin* Input Table dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+Mengubah ukuran, *padding*, dan *margin* Input Table dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Input Table
 

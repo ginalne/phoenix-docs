@@ -30,7 +30,7 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Apa itu Form#Menambahkan Elemen]]
 
 ## Mengonfigurasi Display QR
 
-Klik kiri Display QR di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+Klik kiri Display QR di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]].
 
 ### Header Toolbar
 
@@ -58,11 +58,11 @@ Menampilkan Layout tempat Display QR berada.
 
 ### Layout Panel
 
-Mengubah ukuran, *padding*, dan *margin* Display QR dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+Mengubah ukuran, *padding*, dan *margin* Display QR dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Display QR
 
-Langkah menghapus Display QR sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen Form/Menghapus|Menghapus Elemen]].
+Langkah menghapus Display QR sama dengan menghapus Elemen lain. Lihat [[Docs/Modul Interface/Form/Elemen/Menghapus|Menghapus Elemen]].
 
 >**danger** Dampak penghapusan Display QR
 > Menghapus Display QR akan menghapus kode QR beserta isinya. Aksi tidak bisa dikembalikan.

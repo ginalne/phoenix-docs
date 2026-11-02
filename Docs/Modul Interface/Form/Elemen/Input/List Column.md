@@ -30,7 +30,7 @@ Selengkapnya lihat [[Docs/Modul Interface/Form/Elemen Form/Input/List#Mengelola 
 
 ## Mengonfigurasi Input List Column
 
-Klik kiri Input List Column di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]. Label Column (berikon kolom) juga tampil di atas Input List Column sebagai informasi Binding.
+Klik kiri Input List Column di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Properties Panel]] dan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Header Toolbar]]. Label Column (berikon kolom) juga tampil di atas Input List Column sebagai informasi Binding.
 
 ### Header Toolbar
 

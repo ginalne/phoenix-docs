@@ -25,7 +25,7 @@ Langkah lengkapnya ada di [[Docs/Modul Interface/Form/Elemen Form/Menambahkan|Me
 
 ## Mengonfigurasi Layout Accordion
 
-Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Accordion sebagai informasi Binding.
+Klik kiri Layout Accordion di [[Docs/Modul Interface/Form/Apa itu Form#Mode View dan Edit Mode|Edit Mode]] untuk menampilkan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Properties Panel]], [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Header Toolbar]] dan [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]]. Label Table (berikon tabel) juga tampil di atas Layout Accordion sebagai informasi Binding.
 
 ### Header Toolbar
 
@@ -41,7 +41,7 @@ Binding dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/M
 
 #### State
 
-State dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen Form/State]].
+State dalam Layout Accordion sama dengan Elemen Layout lainnya. Lihat [[Docs/Modul Interface/Form/Elemen/State]].
 
 [[^field|Visible]] berbeda dengan kondisi `Collapsed` pada [[^field|Default State]]. [[^field|Visible]] bernilai [[^value/boolean/false]] menyembunyikan seluruh Layout Accordion, sedangkan `Collapsed` hanya menyembunyikan isinya dan header tetap tampil.
 
@@ -60,7 +60,7 @@ Daftar [[^field|Children]] menampilkan setiap Elemen di dalam Layout Accordion. 
 
 ### Layout Panel
 
-Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Layout Panel]].
+Mengubah ukuran, *padding*, dan *margin* Display Chrono dilakukan lewat Layout Panel (ikon kecil di bawah Elemen yang difokuskan). Lihat [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Layout Panel]].
 
 ## Menghapus Layout Accordion
 

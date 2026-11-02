@@ -15,6 +15,6 @@ Anda dapat menggunakan elemen ini untuk memetakan [[Docs/Tipe Data/Table]] pada 
 Kategori ini memiliki elemen sebagai berikut:
 
  1. [[Docs/Modul Interface/Form/Elemen/Layout/Card]]
- 2. [[Docs/Modul Interface/Form/Elemen Form/Layout/Full]]
- 3. [[Docs/Modul Interface/Form/Elemen Form/Layout/Split]]
+ 2. [[Docs/Modul Interface/Form/Elemen/Layout/Full]]
+ 3. [[Docs/Modul Interface/Form/Elemen/Layout/Split]]
  4. [[Docs/Modul Interface/Form/Elemen/Layout/Accordion]]

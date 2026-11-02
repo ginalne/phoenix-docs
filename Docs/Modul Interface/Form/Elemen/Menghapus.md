@@ -14,7 +14,7 @@ Menghapus elemen dapat dilakukan dengan 2 cara, yaitu melalui toolbar dan menu k
 
 1. Aktifkan [[#Mode View dan Edit Mode|Edit Mode]]
 2. Klik kiri Elemen yang akan dihapus
-3. Klik [[^button/delete|Remove]] pada [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi#Header Toolbar]]
+3. Klik [[^button/delete|Remove]] pada [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi#Header Toolbar]]
 4. Konfirmasi penghapusan Elemen dengan klik [[^button|Remove]]
 
 ## Melalui Menu Konteks

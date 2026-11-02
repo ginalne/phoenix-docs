@@ -37,4 +37,4 @@ Penjelasan keunikan masing-masing widget ada di halaman widget yang bersangkutan
 Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
 1. [[Docs/Modul Interface/Form/Elemen Form/Menambahkan]] Widget.
 3. [[Docs/Modul Interface/Form/Elemen Form/Menghapus]] Widget.
-2. [[Docs/Modul Interface/Form/Elemen Form/Mengonfigurasi]] properti dan desain dalam Elemen.
+2. [[Docs/Modul Interface/Form/Elemen/Mengonfigurasi]] properti dan desain dalam Elemen.
