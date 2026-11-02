@@ -5,6 +5,27 @@ pageDecoration:
 description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi phoenix.
 ---
 
+# Group (Modul Developer)
+
+*   **Definisi (versi penulis):** Group adalah komponen untuk mengatur komposisi tim dan akses Workspace yang diberikan kepada setiap anggota. Akses tidak diatur per orang, melainkan anggota dikelompokkan ke Group lalu ditentukan Workspace yang dapat diakses Group tersebut.
+*   **Path:** `Docs/Modul Developer/Group/Apa itu Group`. Gambar: `add-group.png` (dialog Create Group) dan `interface-group.png` (halaman kerja). Slug komponen: `group`.
+*   **Dialog Create Group** (`add-group.png`): baris Name berisi bagian kiri tanda `/` (tampil "root", **terkonfirmasi sebagai direktori tujuan**), kolom Name, Description, Parent (Select...), tombol Cancel dan Create.
+*   **Dua pintu pembuatan:**
+    *   **Area Manajemen Folder** (klik kanan > Add > Developer > Group): menambahkan Group sebagai komponen di folder, **Parent wajib diisi**.
+    *   **Halaman kerja Group (tombol Add Group):** form sama tanpa bagian direktori, **Parent terisi otomatis** dengan Group tempat tombol diklik, dan Group tidak otomatis menjadi komponen di folder.
+*   **Tombol Add Group** ada di bagian akhir **setiap** Group (setelah daftar anaknya) saat Group dibuka (expand).
+*   **Group berstatus default:** saat inisiasi Pro baru, otomatis ada Group bernama **Administrator** yang menjadi default. User baru ditempatkan sistem ke sini.
+*   **Aturan keanggotaan:** **satu User hanya dapat berada dalam satu Group.** Memindahkan User dengan *drag and drop* dari Group lama ke Group tujuan.
+*   **Pewarisan:** **Group anak tidak mewarisi Workspace dari Group induk.** Workspace harus diisi ulang di setiap Group.
+*   **Halaman kerja:** bilah navigasi berisi judul (ikon Group dan Header Name), Edit, Refresh, dan kolom "Search Group Data..." (**mencari nama dan deskripsi Group saja**). Tidak ada perbedaan desktop dan mobile pada bilah navigasi. Area kerja menampilkan Group beserta Group anak bertingkat; setiap Group memiliki judul, deskripsi, kolom Workspace (kiri), dan kolom User (kanan). Pesan kolom User kosong: "(User Is Empty)". Panah di kiri judul Group membuka dan menutup daftar anak.
+*   **Edit:** tombol Edit pada header hanya mengubah Name dan Description. Menu Edit pada Group anak berbeda (atribut yang dapat diubah belum terkonfirmasi).
+*   **Menu konteks Group anak (klik kanan):** Edit, Add Children, Place to Directory, Delete.
+    *   **Place to Directory:** menempatkan Group anak (yang juga komponen) ke Area Manajemen Folder di **root dari Workspace yang aktif saat itu**. Ada dialog konfirmasi (label dan isi belum terkonfirmasi).
+*   **Workspace pada Group:** tambah lewat kolom "Search workspace to add..." lalu pilih (otomatis masuk daftar). Hapus dengan klik Workspace pada daftar lalu konfirmasi **Remove**.
+*   **Menghapus Group:** yang hilang hanya daftar Workspace-nya. **Group anak ikut terhapus, dan Group yang dihapus (beserta anaknya) tidak boleh masih memiliki User**, jadi semua User harus dipindahkan dulu.
+*   **Belum terkonfirmasi:** atribut yang dapat diubah lewat Edit Group anak, label dan isi dialog Place to Directory, apakah status default dapat dipindahkan ke Group lain, tombol konfirmasi hapus Group anak (diasumsikan Delete), dan apakah Parent pada Add Children terisi otomatis.
+*   **Penamaan pada screenshot** (nama Group anak, Workspace, dan User) adalah kasus pribadi dan tidak disebut di dokumentasi. Group Administrator adalah bawaan sistem sehingga boleh disebut.
+  
 # Workspace (Modul Developer)
 
 - Workspace adalah komponen untuk mengatur ruang kerja pengembangan: komponen yang dapat dilihat, dikelola, dan diubah, serta **fungsi di dalamnya** (bukan "integrasi yang digunakan", sesuai versi akhir penulis).
@@ -83,7 +104,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   - Variable Getter (Flow Block) mengambil nilai Variable dengan mengisi Name.
 - **Akses:** anggota yang tidak memiliki akses komponen Variable tidak dapat mengetahui Value, tetapi tetap dapat memakainya untuk otomasi atau integrasi. Anggota yang memiliki akses melihat Value secara terbuka di halaman kerja.
 - **Pemisahan halaman:** halaman komponen Variable membahas pengelolaan. Penjelasan Variable sebagai tipe data ada di halaman Tipe Data (`Docs/Tipe Data/Variable`).
-- 
+  
 # Enum (Modul Data)
 
 Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direvisi penulis.
@@ -347,24 +368,18 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Tampilan:** irisan per data, total di tengah, legenda "label (persen)".
 *   **Belum terkonfirmasi:** definisi kaidah **Series Output** (anchor `Docs/Tipe Data/Query#Series Output`: kolom, contoh, Error), satuan gap dan size, arti nilai persen gradient, daftar theme, apakah `all` memuat percent, arti Limit kosong, ikon tanpa nama pada panel tampilan, cara memilih Data.
 *   **Penamaan pada screenshot** (Table "Pesanan" dan "Barang pesanan", nama barang dan kolom) adalah data pribadi dan tidak disebut di dokumentasi.
-  
-## Widget Chart Pie
- 
-*   **Header Toolbar** (`interface-widget-chart-pie.png`): ikon pie, ikon pegangan, **Data (Query, kaidah Series Output) dengan tombol Q**, **Limit = jumlah maksimal data yang muncul** ("Empty" bila belum diisi), Remove. **Tidak ada toggle 123 dan Search** (tersisa keliru pada revisi penulis).
-*   **Layout Panel dan Design Panel.** Design Panel: hole (berapa lubang pada pie, persen), gap (gap antar data), theme (tema warna), gradient (gradasi dari tengah ke pinggir, transparent to color), offset (batas akhir gradasi, 75% = dari tengah sampai sekitar 75% ke ujung lingkaran), label (`none`, `label`, `value`, `percent`, `all` = label - value), min (derajat minimum pie untuk menampilkan label), legends (`right`, `bottom`, `hidden`), total (toggle, total di tengah), size (font size total).
-*   **Belum terkonfirmasi:** definisi Series Output (anchor `Docs/Tipe Data/Query#Series Output`), satuan gap dan size, arti persen gradient, daftar theme, ikon tanpa nama pada Design Panel, arti Limit kosong.
-* 
-## Widget Kanban, Gantt, Timeline, Gallery (draf tanpa screenshot)
+   
+## Widget Kanban, Gantt, Timeline, Gallery
  
 *   **Penjelasan penulis:** semuanya "hanya memiliki pengaturan Query di header dan hanya memiliki panel layout" seperti Widget Table. Path: `Docs/Modul Interface/Canvas/Widget/Kanban`, `.../Gantt`, `.../Timeline`, `.../Gallery`. Screenshot belum ada.
 *   **Kanban:** kolom dan kartu berdasarkan status atau kategori. **Gantt:** bilah jadwal pada sumbu waktu (**belum ada di knowledge, isi umum**). **Timeline:** data dalam urutan waktu, **widget hanya menyajikan satu data** (komponen punya Timeline Event dan banyak Timeline Data); kaidah Timeline Output (Name, Start, End; Start dan End berformat DateTime, Date, DateTimeZone). **Gallery:** kartu visual yang menonjolkan gambar atau konten.
 *   **Belum terkonfirmasi:** kaidah Query Kanban, Gantt, Gallery (anchor tebakan `#Kanban Output`, `#Gantt Output`, `#Gallery Output`), isi tampilan dan interaksi pada widget (diambil dari komponen aslinya), cara isi kartu ditentukan pada widget Kanban dan Gallery, kolom Query untuk Gantt.
 *   **Penamaan pada screenshot** (nama Table "Pesanan" dan "Barang pesanan", nama barang, dan kolom) adalah data pribadi dan tidak disebut di dokumentasi.
----
- 
-# Tambahan (Space, Chart Line, Chart Bar, Chart Radial, Chart Linear)
- 
-**Alasan:** penulis memberi 4 screenshot dan penjelasan setiap input chart. Space disebut ketinggalan, tetapi belum ada informasinya.
+*   
+## Widget Space
+*   **Belum ada informasi.** Space disebut ketinggalan dalam daftar widget tampilan data. Halaman berupa kerangka minimal (Header Toolbar dengan Data dan Q, Layout Panel). Perlu: definisi Space, sumber data, kaidah Query (`Space Output`?), dan screenshot.
+*   **Belum terkonfirmasi untuk semua chart:** kaidah Query selain Pie, arti diverging, reversed, marker, step ticks, step gap, Split, Multi, Stacked, fungsi Y2 (toggle sumbu kedua), gestur zoom, arti angka dan filter pada Data Chart Radial, dan nama slug ikon toggle.
+*   **Penamaan pada screenshot** (Table "Catatan Raven" dan "Catatan Phoenix", nama status) adalah data pribadi dan tidak disebut di dokumentasi.
  
 ## Aturan umum Widget Chart
  
@@ -375,34 +390,28 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Threshold** (Radial, Linear): tombol + threshold, tiap titik punya `at` (persen) dan warna. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan.
 *   **min/max:** toggle Auto (otomatis). Jika nonaktif mengikuti from dan until. Pada Chart Line, kolom yang dikosongkan berarti auto.
 * 
-## Widget Chart Line (`interface-widget-chart-line.png`)
+## Widget Chart Line
  
 *   **Data Panel:** tiga sumbu X, Y, Y2, masing-masing min/max dengan toggle **A**, ikon tag (toggle label), tick (banyak label), format (kosong = default). **Penulis menyebut panel ini kemungkinan diganti seperti Chart Bar.**
 *   **Design Panel:** ketebalan garis (contoh 2.5), jenis garis (`smooth`, `sharp`, `step`), dot radius (contoh 4), toggle zoom (kaca pembesar, interaksi zoom in dan out), toggle grid, theme, area (persen opacity area line), legends.
 *   **Tampilan:** tooltip pada titik (waktu dan nilai series), legend di bawah.
   
-## Widget Chart Bar (`interface-widget-chart-bar.png`)
+## Widget Chart Bar
  
 *   **Data Panel:** X (label), Y dan Y2 (min/max dengan toggle Auto, label, tick, format). Y2 tampil sebagai sumbu kanan saat aktif.
 *   **Design Panel:** mode (toggle **diverging**, **reversed**, **orientasi**: nonaktif = vertikal; radio **Grouped**, **Stacked**, **Full**), style (theme), bar opacity (contoh 90%), bar border radius (contoh 4), bar padding (contoh 0.25%), marker (warna, length contoh 70%, width contoh 3), **pattern** (`off`, `basic` = garis-garis, `all` = satu pola ke semua dengan pilihan Hatch, Dots, Cross, ZigZag, `series` = pola per urutan series dengan tombol + untuk tambah urutan), legends, toggle zoom, toggle grid, toggle **123** (label nilai di atas bar), size (font label nilai, contoh 11).
   
-## Widget Chart Radial (`interface-widget-chart-radial.png`)
+## Widget Chart Radial
  
 *   **Header Toolbar:** **Needle** (Query kaidah **Single Output** untuk nilai arah needle, "Empty" bila belum diisi, dengan Q), Data (Query Series Output dengan Q). Angka dan ikon filter di samping nama Table pada Data belum dijelaskan.
 *   **Data Panel:** ruler (toggle), ticks (banyak tick dan warna), min/max (toggle Auto), label (label nilai needle), value (`Value`, `Percent`, `Ratio`, `None`), ukuran (0 sampai 100%) dan warna label.
 *   **Design Panel:** mode (`Multi`, `Stacked`), bentuk lengkungan (`Full`, `Semi`, `Horseshoe`, `Fan`, `Custom`; Custom menampilkan input from° dan until°), thickness (bawaan 25), arc (`Round`, `Square`, `Butt`), style (theme), opacity bar (contoh 100%), arc gap (contoh 17), + threshold, track (warna, opacity contoh 15%), needle (warna, panjang contoh 120%, 120% = mengenai bar), toggle legends, toggle **animation at start** (animasi needle saat pertama dibuka).
 *   **Ejaan antarmuka:** tombol tertulis "treshold".
   
-## Widget Chart Linear (`interface-widget-chart-linear.png`)
+## Widget Chart Linear
  
 *   **Data Panel:** min/max (toggle Auto), value (`Inside`, `End`, `Above`, `Below`, `None`), format (`Value`, `Percent`, `Custom`), size (contoh 13).
 *   **Design Panel:** mode (`Bars`, `Multi`, `Stacked`), shape (`Plain`, `Split`, `Stepped`), toggle diverging, toggle orientasi (aktif = horizontal), toggle show track (menampilkan track opacity contoh 20% dan warna), toggle show marker (menampilkan marker width contoh 2, height contoh 14%, dan warna), theme, bar opacity (contoh 100%), bar border radius (contoh 3), + threshold (setelah ada: toggle legend threshold dan titik at % dan warna), step ticks (contoh 10) dan step gap (contoh 3) **hanya saat Stepped**, label (`start`, `end`, `above`, `below`, `none`), label size (contoh 12), bar gap (contoh 11), toggle **count up** (animasi saat pertama dibuka).
-  
-## Widget Space
- 
-*   **Belum ada informasi.** Space disebut ketinggalan dalam daftar widget tampilan data. Halaman berupa kerangka minimal (Header Toolbar dengan Data dan Q, Layout Panel). Perlu: definisi Space, sumber data, kaidah Query (`Space Output`?), dan screenshot.
-*   **Belum terkonfirmasi untuk semua chart:** kaidah Query selain Pie, arti diverging, reversed, marker, step ticks, step gap, Split, Multi, Stacked, fungsi Y2 (toggle sumbu kedua), gestur zoom, arti angka dan filter pada Data Chart Radial, dan nama slug ikon toggle.
-*   **Penamaan pada screenshot** (Table "Catatan Raven" dan "Catatan Phoenix", nama status) adalah data pribadi dan tidak disebut di dokumentasi.
 
 # Space (Modul Interface)
 

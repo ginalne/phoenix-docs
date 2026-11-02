@@ -44,6 +44,7 @@ flowchart LR
 
 <!--
   * [TODO] Konfirmasi apakah Group anak mewarisi Workspace dari Group induk, atau Workspace pada setiap Group diatur terpisah. Saat ini diagram dan teks hanya menyatakan setiap Group (termasuk Group anak) memiliki daftar Workspace sendiri.
+    Jawaban : Tidak, Group anak tidak mewarisi workspace dari group induk. Harus diisi kembali
 -->
 
 ## Membuat Group
@@ -57,8 +58,9 @@ Cara ini menambahkan Group sebagai komponen di dalam folder.
 ![[Docs/Modul Developer/Group/add-group.png]]
 
 <!--
-  * [TODO] Letakkan gambar dialog Create Group (add-group.png) di sini. Anotasi yang disarankan: (1) bagian direktori di kiri tanda `/` dan kolom Name, (2) Description, (3) Parent, (4) tombol Create.
+  * [DONE] Letakkan gambar dialog Create Group (add-group.png) di sini. Anotasi yang disarankan: (1) bagian direktori di kiri tanda `/` dan kolom Name, (2) Description, (3) Parent, (4) tombol Create.
   * [TODO] Konfirmasi bagian di kiri tanda `/` pada baris Name (tampil `root`) adalah direktori tujuan folder, dan nama labelnya di aplikasi.
+    Jawaban : Betul
 -->
 
 1. Buka folder tempat Group akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
@@ -75,7 +77,9 @@ Cara ini menambahkan Group sebagai komponen di dalam folder.
 
 <!--
   * [TODO] Konfirmasi jalur menu Add ➜ Developer ➜ Group (mengikuti pola komponen Developer lain).
+    Jawaban : Betul
   * [TODO] Konfirmasi Parent benar-benar wajib, dan bagaimana membuat Group induk paling atas bila Parent wajib diisi.
+    Jawaban : Betul
 -->
 
 ### Dari Halaman Kerja Group
@@ -92,7 +96,9 @@ Cara ini menambahkan Group langsung di halaman kerja Group. Form-nya sama dengan
 
 <!--
   * [TODO] Konfirmasi lokasi, ikon, dan label tombol Add Group (pada screenshot tidak terlihat karena berada di bagian bawah).
+    Jawaban : Sudah betul
   * [TODO] Konfirmasi apakah Parent terisi otomatis dengan Group tempat tombol Add Group diklik.
+    Jawaban : Iya terisi otomatis.
 -->
 
 ## Mengubah Group
@@ -104,6 +110,7 @@ Cara ini menambahkan Group langsung di halaman kerja Group. Form-nya sama dengan
 
 <!--
   * [TODO] Konfirmasi atribut apa saja yang dapat diubah lewat tombol Edit pada bilah navigasi (Name, Description, atau Parent), dan apakah Edit berlaku untuk seluruh halaman atau Group induk saja.
+    Jawaban : Edit Group pada header hanya dapat mengubah nama dan deskripsi, berbeda jika edit group pada anak (melalui konteks menu pada grup anak]) 
 -->
 
 ## Menyegarkan Group
@@ -121,6 +128,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 <!--
   * [TODO] Konfirmasi dampak penghapusan: apa yang terjadi pada User di dalam Group, Group anak, dan Workspace-nya.
+    Jawaban : Hanya kehilangan daftar workspacenya saja. Penghapusan group yang juga berdampak pada penghapusan group anak tidak boleh memiliki anggota (semua anggota harus dipindahkan dahulu)
 -->
 
 ## Antarmuka Group
@@ -130,8 +138,8 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 Contoh gambar di atas merupakan halaman kerja Group dengan satu Group induk dan dua Group anak.
 
 <!--
-  * [TODO] Letakkan gambar halaman kerja (interface-group.png) di sini. Anotasi yang disarankan: (1) judul dan bilah navigasi, (2) panah buka-tutup Group, (3) judul dan deskripsi Group, (4) kolom Workspace, (5) kolom User, (6) Group anak.
-  * [TODO] Sesuaikan keterangan gambar dengan nama Group milik Anda bila perlu. Nama pada screenshot tidak disebut di dokumentasi.
+  * [DONE] Letakkan gambar halaman kerja (interface-group.png) di sini. Anotasi yang disarankan: (1) judul dan bilah navigasi, (2) panah buka-tutup Group, (3) judul dan deskripsi Group, (4) kolom Workspace, (5) kolom User, (6) Group anak.
+  * [DONE] Sesuaikan keterangan gambar dengan nama Group milik Anda bila perlu. Nama pada screenshot tidak disebut di dokumentasi.
 -->
 
 Halaman kerja Group terdiri dari bilah navigasi di bagian atas dan daftar Group di bagian bawah. Setiap Group menampilkan judul, deskripsi, kolom [[^field|Workspace]] di sebelah kiri, dan kolom [[^field|User]] di sebelah kanan. Group anak tersusun di bawah Group induknya.
@@ -147,7 +155,9 @@ Halaman kerja Group terdiri dari bilah navigasi di bagian atas dan daftar Group 
 
 <!--
   * [TODO] Konfirmasi cakupan pencarian Search Group Data... (nama Group, Workspace, User, atau semuanya).
+    Jawaban : Hanya nama dan deskripsi grup.
   * [TODO] Konfirmasi perbedaan tampilan desktop dan mobile pada bilah navigasi.
+    Jawaban : Tidak ada.
 -->
 
 ### Interaksi Antarmuka Group
@@ -162,6 +172,7 @@ Halaman kerja Group terdiri dari bilah navigasi di bagian atas dan daftar Group 
 
 <!--
   * [TODO] Konfirmasi cara membuka menu Group anak (klik kanan atau tombol lain), dan gestur gulir vertikal atau horizontal beserta syarat berlakunya.
+    Jawaban : Sudah betul
 -->
 
 ## Mengelola Group Anak
@@ -187,6 +198,7 @@ Anda juga dapat menambahkan Group melalui tombol [[^button/add|Add Group]] pada 
 
 <!--
   * [TODO] Konfirmasi perbedaan Add Children (menu) dan Add Group (tombol): apakah Add Children membuat anak dari Group yang diklik, sedangkan Add Group membuat Group sejajar.
+    Jawaban : tombol add group selalu ada di setiap group (bagian akhir setelah anaknya) ketika di expand.
 -->
 
 ### Mengubah Group Anak
@@ -206,6 +218,7 @@ Group anak juga merupakan komponen. Gunakan [[^field|Place to Directory]] untuk 
 
 <!--
   * [TODO] Konfirmasi apakah ada dialog atau konfirmasi setelah memilih Place to Directory, dan apa yang dimaksud root folder (root dari seluruh Pro atau root folder tertentu).
+    Jawaban : Iya ada, dan root yang dimaksud adalah root dari workspace yang aktif saat itu.
 -->
 
 ### Menghapus Group Anak
@@ -250,7 +263,9 @@ Setelah dipindahkan, akses User mengikuti Workspace milik Group tujuan.
 
 <!--
   * [TODO] Konfirmasi nama Group berstatus default di aplikasi, dan apakah status default dapat diubah ke Group lain.
+    Jawaban : Ketika inisiasi Pro baru, akan ada Group bernama Administrator yang otomatis menjadi default. 
   * [TODO] Konfirmasi apakah satu User hanya dapat berada di satu Group (memindahkan) atau dapat di beberapa Group (menyalin).
+    Jawaban : Satu User hanya dapat berada dalam satu group
 -->
 
 ## Contoh Penggunaan
@@ -294,7 +309,7 @@ Sebuah organisasi memiliki beberapa tim dengan kebutuhan Workspace yang berbeda.
 Dengan Group, pengelolaan akses berpindah dari urusan per orang menjadi urusan per tim, sehingga tim yang bertambah besar tetap mudah diatur.
 
 <!--
-  * [TODO] Nama Group dan Workspace pada contoh bersifat generik. Sesuaikan dengan contoh yang Anda inginkan.
+  * [DONE] Nama Group dan Workspace pada contoh bersifat generik. Sesuaikan dengan contoh yang Anda inginkan.
 -->
 
 ## Praktik Terbaik
