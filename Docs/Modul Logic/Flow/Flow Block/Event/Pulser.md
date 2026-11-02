@@ -1,134 +1,103 @@
 ---
     status: release
-    title: Pulser (Flow Block Event)
-    description: Pulser adalah Flow Block Event yang memulai alur Flow lewat Trigger manual, Timeline Event, atau Button pada Canvas.
+    title: Pulser
+    description: Flow Block Event yang memulai alur secara manual, terjadwal, atau lewat tombol di Canvas.
     pageDecoration:
       icon: zap
       tree:
-        priority: 0
+        priority: 5
 ---
-# Flow Block Event : Pulser
+# Pulser
 
->**note** Pulser merupakan salah satu Flow Block kategori [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Event]] pada komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
+>**note** Pulser merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Pulser adalah Flow Block Event yang memulai alur ketika dipicu, tanpa terikat pada perubahan data tertentu. Pulser bekerja seperti sinyal: setiap kali dipicu, Pulser menghasilkan [[^field|Result]] yang dapat dihubungkan ke block lain.
+Pulser adalah Flow Block Event yang memulai alur dengan **denyut pemicu**. Berbeda dengan block Event lainnya, Pulser tidak memantau perubahan data, melainkan menunggu perintah untuk dijalankan: dari tombol [[^button/empty|Trigger]] di Blueprint, dari jadwal [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]], atau dari [[Docs/Modul Interface/Canvas/Widget/Basic/Button]] pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]].
 
-Karena tidak bergantung pada data, Pulser cocok untuk alur yang dijalankan sesuai jadwal atau atas permintaan pengguna di antarmuka. Pulser banyak digunakan pada komponen modul Interface, misalnya [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] dan [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]].
-
-## Kapan Pulser Berjalan
-
-| Pemicu | Penjelasan |
-| --- | --- |
-| [[^button/empty|Trigger]] | Tombol pada block untuk menjalankan alur secara manual dari antarmuka Flow. |
-| [[Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event|Timeline Event]] | Timeline Event memicu Pulser pada waktu yang ditentukan, dengan atau tanpa pengulangan. Pulser dipilih lewat field [[^field|Pulser Event]]. |
-| [[Docs/Modul Interface/Form/Widget/Button/Penjelasan|Button]] pada Canvas | Pengguna menekan Button untuk memicu Pulser. |
-
->**warning** Button pada Canvas yang dipublikasikan
->Button pada Canvas yang dipublikasikan dapat dipakai oleh publik. Pastikan alur yang dipicu Pulser aman dijalankan oleh siapa saja yang membuka tautan Publish.
-
-## Antarmuka Pulser
-
-![[Docs/Modul Logic/Flow/Flow Block/Event/block-pulser.png]]
-### Input
-
-| Input | Penjelasan |
-| --- | --- |
-| Input pemicu | Tanda segitiga biru di sebelah kiri judul. Input ini memungkinkan block dipicu dan berlaku untuk semua Flow Block. Pada Pulser input ini jarang dibutuhkan, karena Pulser sudah dapat dipicu lewat Trigger, Timeline Event, atau Button. |
-
-### Output
-
-| Output | Tipe Data | Penjelasan |
-| --- | --- | --- |
-| [[^field|Result]] | [[Docs/Tipe Data/Mixed]] | Hasil pemicuan yang diteruskan ke block berikutnya. Hubungkan ke input block lain untuk memulai alur. |
-
-## Menambahkan dan Menghubungkan Pulser
-
-Tambahkan block lewat menu [[^field/add|Add]] ➜ [[^field|Event]] ➜ [[^field|Pulser]] di Blueprint. Cara lengkapnya ada di [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block|Menambahkan Flow Block]]. Setelah itu:
-
-- Hubungkan [[^field|Result]] ke block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menghubungkan Koneksi|Menghubungkan Koneksi]].
-- Untuk jadwal, pilih Pulser pada field [[^field|Pulser Event]] saat membuat Timeline Event.
-- Untuk tombol, hubungkan Button pada Canvas ke Pulser.
-
-## Menjalankan Pulser Secara Manual
-
-1. Buka Flow yang berisi Pulser
-2. Klik [[^button/empty|Trigger]] pada Pulser
-
-Alur yang terhubung ke [[^field|Result]] langsung berjalan, dan prosesnya tercatat di [[Docs/Modul Logic/Flow/Flow Activity]].
-
+![[Docs/Modul Logic/Flow/Flow Block/Event/pulser.png|Pulser Event Block pada Blueprint]]
 <!--
-  * [TODO] Konfirmasi: apakah Trigger pada Pulser langsung menjalankan alur tanpa modal pemilihan data (asumsi saya).
+  * [DONE] Letakkan potongan gambar Pulser dari screenshot (file `pulser.png`). Anotasi yang disarankan: nomor 1 pada judul, nomor 2 pada tombol Trigger, nomor 3 pada output Result.
 -->
+
+## Kapan Pulser Terpicu
+
+Pulser terpicu ketika salah satu sumber berikut menjalankannya.
+
+| Sumber | Cara memicu | Frekuensi |
+| --- | --- | --- |
+| Blueprint | Klik tombol [[^button/empty|Trigger]] pada block. | Setiap kali tombol diklik. |
+| [[Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event|Timeline Event]] | Pilih Pulser pada field [[^field|Pulser Event]] saat membuat Timeline Event. | Satu kali pada Start, atau berulang bila Repeat aktif. |
+| [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] | Hubungkan Widget Button ke Pulser. | Setiap kali Button ditekan. |
+
+```mermaid
+flowchart LR
+    A@{ shape: rounded, label: "**Timeline Event**<br/>Jadwal tiba" } -.->|&nbsp;Memicu&nbsp;| P@{ shape: rounded, label: "**Pulser**" }
+    B@{ shape: rounded, label: "**Button Canvas**<br/>Ditekan" } -.->|&nbsp;Memicu&nbsp;| P
+    P -->|"&nbsp;**[Boolean]**&nbsp;<br>Result"| C@{ shape: processes, label: "Block selanjutnya<br/>menerima Result" }
+```
+## Input, Control dan Output
+
+Pulser tidak memiliki input koneksi. Block ini hanya memiliki satu control tombol dan satu output di sisi kanan.
+
+| Bagian | Jenis | Tipe Data | Penjelasan |
+| --- | --- | --- | --- |
+| [[^button/empty|Trigger]] | Control | - | Memicu Pulser secara manual dari Blueprint. |
+| [[^ouput|Result]] | Output | [[Docs/Tipe Data/Boolean]] | Hasil denyut Pulser yang diteruskan ke block berikutnya. |
+
+>**note** Tombol Trigger pada Pulser adalah Control
+> Tombol [[^button/empty|Trigger]] pada Pulser adalah Control untuk memicu block. Sedangkan Trigger sebagai bagian block yang menjadi syarat eksekusi hanya berlaku pada block non-Event. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Anatomi Flow Block|Anatomi Flow Block]].
+
+## Menggunakan Pulser
+
+1. Klik kanan pada bagian kosong Blueprint ➜ [[^field/add|Add]] ➜ [[^field|Event]] ➜ [[^field|Pulser]].
+2. Hubungkan output `Result` ke input block berikutnya. Langkah lengkap ada di [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|Menghubungkan Koneksi]].
+3. Hubungkan sumber pemicunya (Timeline Event atau Button Canvas), atau klik [[^button/empty|Trigger]] untuk menjalankan secara manual.
 
 ## Contoh Penggunaan
 
-**Menjalankan alur secara manual**
+Contoh berikut menunjukkan setiap sumber pemicu Pulser beserta output yang diterima block berikutnya.
 
-Anda ingin mengirim ringkasan data ke sistem lain sewaktu-waktu tanpa menunggu perubahan data.
+### Menjalankan alur secara manual
 
-```mermaid
-flowchart LR
-    P@{ shape: rounded, label: "**Pulser**" } -->|"&nbsp;**[Result]**&nbsp;"| H@{ shape: rounded, label: "**HTTP Request**" }
-    H --> S@{ shape: processes, label: "Sistem lain<br/>menerima data" }
-    H --> F@{ shape: circle, label: "Selesai" }
-```
+Anda dapat menjalankan alur kapan saja langsung dari Blueprint, misalnya untuk menjalankan proses rekap yang jarang dipakai.
 
-| Block | Peran dalam alur |
+| Aksi | Output `Result` |
 | --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] | Memulai alur saat [[^button/empty|Trigger]] diklik. |
-| [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]] | Mengirim data ke sistem lain begitu [[^field|Result]] diterima. |
+| Klik [[^button/empty|Trigger]] satu kali | Satu denyut dikirim ke block berikutnya. |
+| Klik [[^button/empty|Trigger]] tiga kali berturut-turut | Tiga denyut terpisah, masing-masing menjalankan alur satu kali. |
 
-**Menjalankan alur dari tombol di Canvas**
+### Menjalankan alur terjadwal
 
-Pengguna ingin menjalankan sebuah proses sendiri lewat tombol di halaman, misalnya menyinkronkan data ke sistem lain.
+Hubungkan Pulser ke [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]] agar alur berjalan otomatis pada waktu yang Anda tentukan, misalnya setiap awal pekan.
 
-```mermaid
-flowchart LR
-    B@{ shape: rounded, label: "**Canvas**<br/>Button ditekan" } -.->|&nbsp;Memicu&nbsp;| P@{ shape: rounded, label: "**Pulser**" }
-    P -->|"&nbsp;**[Result]**&nbsp;"| H@{ shape: rounded, label: "**HTTP Request**" }
-    H --> S@{ shape: processes, label: "Sistem lain<br/>menerima data" }
-    H --> F@{ shape: circle, label: "Selesai" }
-```
-
-| Block | Peran dalam alur |
+| Pengaturan Timeline Event | Output `Result` |
 | --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] | Menerima pemicu dari [[Docs/Modul Interface/Form/Widget/Button/Penjelasan|Button]] pada Canvas. |
-| [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]] | Menjalankan sinkronisasi ke sistem lain. |
+| Repeat nonaktif | Satu denyut pada waktu Start. |
+| Repeat aktif dengan Interval harian | Satu denyut setiap hari sampai batas End. |
+| Active dimatikan | Tidak ada denyut, Timeline Event tetap tersimpan. |
 
-**Menjalankan alur sesuai jadwal**
+### Menjalankan alur dari tombol di Canvas
 
-Anda ingin sebuah proses berjalan otomatis setiap periode, misalnya mengirim rekap harian.
+Hubungkan Pulser ke Button pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] agar pengguna dapat menjalankan alur dari halaman antarmuka tanpa membuka Flow.
 
-```mermaid
-flowchart LR
-    E@{ shape: rounded, label: "**Timeline Event**<br/>Start dan Repeat" } -.->|&nbsp;Memicu&nbsp;| P@{ shape: rounded, label: "**Pulser**" }
-    P -->|"&nbsp;**[Result]**&nbsp;"| H@{ shape: rounded, label: "**HTTP Request**" }
-    H --> S@{ shape: processes, label: "Sistem lain<br/>menerima rekap" }
-    H --> F@{ shape: circle, label: "Selesai" }
-```
-
-| Block | Peran dalam alur |
+| Aksi pengguna | Output `Result` |
 | --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] | Dipicu oleh [[Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event|Timeline Event]] pada setiap jadwal. |
-| [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]] | Mengirim rekap ke sistem lain pada setiap jadwal. |
+| Menekan Button satu kali | Satu denyut dikirim ke block berikutnya. |
+| Menekan Button berulang | Satu denyut untuk setiap penekanan. |
 
-### Variasi Pemicu
-
-| Pemicu | Cocok untuk |
-| --- | --- |
-| [[^button/empty|Trigger]] | Menguji alur dan menjalankan tugas sesekali. |
-| [[Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event|Timeline Event]] | Tugas terjadwal atau berulang. |
-| [[Docs/Modul Interface/Form/Widget/Button/Penjelasan|Button]] | Tugas yang dijalankan pengguna sesuai kebutuhan. |
-
-Dengan Pulser, jadwal dan tombol di antarmuka dapat langsung menjalankan alur yang terhubung ke data dan sistem lain.
+>**warning** Button pada Canvas yang dipublikasikan dapat dipakai publik
+> Jika Canvas dipublikasikan, siapa pun yang membuka tautan dapat menekan Button dan memicu Pulser. Pastikan alur yang dipicu aman dijalankan oleh pengguna publik.
 
 <!--
-  * [TODO] Nama konteks pada Contoh Penggunaan sudah dibuat generik. Detail input HTTP Request (alamat, metode, isi permintaan) tidak dijelaskan di sini dan perlu disesuaikan dengan halaman HTTP Request.
-  * [TODO] Asumsi halaman baru yang ditautkan: Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request, Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event, Docs/Modul Interface/Form/Widget/Button/Penjelasan, dan Docs/Modul Logic/Flow/Flow Activity.
+  * [TODO] Konfirmasi apakah Result membawa nilai berbeda pada setiap sumber pemicu (misalnya waktu terpicu atau sumber pemicu). Tabel contoh saat ini mengasumsikan Result hanya berupa denyut.
+    Jawaban: Output Result adalah data Boolean bernilai True.
+  * [TODO] Konfirmasi apakah klik Trigger berulang saat alur sebelumnya masih berjalan akan diantrekan atau dijalankan paralel.
+    Jawaban: Trigger berulang hanya membuat Activity baru, dimana proses antar activity bisa berjalan paralel pada Flow yang sama.
+  * [TODO] Halaman yang diusulkan untuk dibuat: anchor `Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event` dan `Docs/Modul Interface/Canvas/Apa itu Canvas`, dengan bagian Button pada Canvas.
+    Jawaban: Tautan sudah saya perbaiki
 -->
 
-## Block Terkait
+## Lihat Juga
 
-- [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Pengenalan Event]]: perbandingan Pulser dengan block Event lain.
-- [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event]]: memulai alur dari perubahan data Table.
-- [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]: mengirim hasil alur ke sistem lain.
+- [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]]
+- [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]]
+- [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]
