@@ -57,20 +57,12 @@ Tidak semua jenis Flow Block memiliki keempat bagian ini. Variasinya dijelaskan 
 - Bila salah satu koneksi bersifat rekursif, yaitu ketika ditelusuri mundur akan kembali ke block yang sama, Input dibaca sebagai satu data dari aliran terakhir dan koneksi lainnya diabaikan.
 - Apakah block tetap dapat berjalan ketika Input kosong bergantung pada block itu sendiri. Jika Input wajib diisi, kondisi kosong menghasilkan error pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
 
-<!--
-  * [TODO] Konfirmasi kalimat koneksi rekursif: apakah "aliran terakhir" sudah tepat, dan apakah perlu contoh sederhana (misalnya Output sebuah block kembali ke Input block yang sama)?
--->
-
 ### Control
 
 [[#Control]] adalah antarmuka interaktif di badan block yang dapat dioperasikan langsung di Blueprint. Control dapat memengaruhi proses yang terjadi pada Flow Block, atau memicu [[Docs/Modul Logic/Flow/Flow Activity|Activity]] baru.
 
 - Saat ini Control yang tersedia berupa tombol [[^button/empty|Trigger]], misalnya pada [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] untuk menjalankan Flow secara manual.
 - Tidak semua Flow Block memiliki Control.
-
-<!--
-  * [TODO] Konfirmasi: Control yang ada saat ini hanya tombol Trigger, dan tombol itu termasuk contoh Control yang memicu Activity baru. Jika ada jenis Control lain yang sudah tersedia, mohon disebutkan agar ditambahkan di sini.
--->
 
 ### Output
 
@@ -95,7 +87,7 @@ Langkah menghubungkan dan memutus koneksi ada di [[Docs/Modul Logic/Flow/Flow Bl
 
 ## Syarat Flow Block Diproses
 
-Syarat ini berlaku untuk Flow Block non-Event. Flow Block Event tidak memiliki [[#Trigger]] maupun [[#Input]], sehingga tidak dikenai syarat ini. Sebuah block diproses bila kedua syarat berikut terpenuhi:
+Sebuah block diproses bila kedua syarat berikut terpenuhi:
 
 1. Setiap [[#Input]] yang terhubung ke [[#Output]] block lain sudah memiliki data, artinya block sebelumnya sudah tereksekusi.
 2. [[#Trigger]] memiliki data setidaknya satu, artinya block sebelumnya sudah tereksekusi. Jika Trigger tidak terhubung, syarat ini selalu terpenuhi.
@@ -119,13 +111,9 @@ flowchart LR
 | Block B | [[#Input]] terhubung ke [[#Output]] Block A dan sudah berisi data setelah Block A tereksekusi. [[#Trigger]] tidak terhubung sehingga selalu aktif. |
 | Block C | [[#Trigger]] terhubung ke [[#Output]] Block B dan sudah berisi data setelah Block B tereksekusi. |
 
-<!--
-  * [TODO] Diagram dan tabel di atas memakai nama block generik (Block A, B, C) untuk menggambarkan syarat. Mohon ganti dengan contoh block asli yang menurut Anda paling mudah dipahami pembaca.
--->
-
 ### Data pada Input selama Activity
 
-Setelah block tereksekusi, data pada [[#Input]] dipertahankan selama [[Docs/Modul Logic/Flow/Flow Activity|Activity]] tersebut. Bila aliran Flow kembali ke block yang sama (rekursif), data terakhir yang digunakan.
+Setelah block tereksekusi, data pada [[#Input]] dipertahankan selama [[Docs/Modul Logic/Flow/Flow Activity|Activity]] tersebut berjalan. Bila aliran Flow kembali ke block yang sama (rekursif), data terakhir yang akan digunakan.
 
 ## Variasi Antar Jenis Flow Block
 
