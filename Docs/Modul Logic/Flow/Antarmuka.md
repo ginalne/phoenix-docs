@@ -4,7 +4,7 @@
     description: Penjelasan antarmuka di halaman kerja komponen Flow
     pageDecoration:
       tree:
-        priority: -1
+        priority: 0
 ---
 ## Antarmuka Flow
 

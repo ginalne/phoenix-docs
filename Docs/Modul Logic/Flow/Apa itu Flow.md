@@ -47,15 +47,18 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Flow:
 2. [[Docs/Modul Logic/Flow/Mengubah]] Atribut Flow seperti [[^field|Name]], [[^field|Description]], atau [[^field|Table - Column]].
 3. [[Docs/Modul Logic/Flow/Menghapus]] Flow.
 
+## Antarmuka
+
+Penjelasan antarmuka Flow lihat selengkap nya di [[Docs/Modul Logic/Flow/Antarmuka|Antarmuka Flow]].
+
 ## Membangun Logika Flow
 
 Membangun proses logika Flow dilakukan dengan cara pengelolaan Flow Block dengan aspek sebagai berikut:
 
-* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menambahkan Flow Block|Menambahkan Flow Block]]
-* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Konfigurasi Flow Block|Mengatur Konfigurasi Flow Block]]
-* [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Menghubungkan Koneksi|Menghubungkan Koneksi]]
+* [[Docs/Modul Logic/Flow/Flow Block/Menambahkan|Menambahkan Flow Block]]
+* [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|Menghubungkan Koneksi]]
 * [[#Menjalankan Flow Secara Manual]]
-* [[#Memantau Proses]]
+* [[Docs/Modul Logic/Flow/Flow Activity|Memantau Proses]]
 * [[#Menghubungkan Block Event dari Komponen]]
 
 ## Menjalankan Flow Secara Manual
@@ -74,15 +77,7 @@ Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol [[^
 
 ## Memantau Proses
 
-1. Pada halaman kerja Flow, klik menu [[^button/activity|Activity]] atau tombol di sebelah kanan [[^button/refresh|Refresh]] (mode desktop)
-2. Panel [[Docs/Modul Logic/Flow/Flow Activity]] akan terbuka
-3. Klik [[^button/refresh|Refresh List]] untuk memuat ulang daftar, atau gunakan [[^field|Search Activity]] untuk mencari proses
-
-Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Activity]].
-
->**note** Info
->Jika belum ada proses yang berjalan, panel menampilkan keterangan [[^field|No Activity]]
-
+Setiap aktifitas eksekusi dalam Flow dinamakan Flow Activity. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

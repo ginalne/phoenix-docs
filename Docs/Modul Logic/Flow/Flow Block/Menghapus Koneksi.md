@@ -1,6 +1,6 @@
 ---
     status: release
-    title: ""
+    title: "Menghapus Koneksi Flow Block"
     description: 
     pageDecoration:
       tree:

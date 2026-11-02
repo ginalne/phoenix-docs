@@ -1,127 +1,18 @@
 ---
 status: draft
-title: "Apa itu Flow Block"
+title: "Apa itu Flow Block?"
 description: Flow Block adalah unit terkecil penyusun Flow yang tersusun dari Trigger, Input, Control, dan Output untuk membangun logika.
 pageDecoration:
   tree:
     priority: 10
 ---
-# Apa itu Flow Block
+# Apa itu Flow Block?
 
 >**note** Flow Block merupakan bagian dari komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
 
 Flow Block adalah unit terkecil penyusun Flow. Setiap block memiliki fungsi, masukan, proses, dan keluaran yang berbeda-beda, dan dapat dihubungkan dengan block lain di [[Docs/Modul Logic/Flow/Apa itu Flow#Antarmuka Flow|Blueprint]] untuk membentuk logika.
 
-Setiap Flow Block tersusun dari [[#Trigger]], [[#Input]], [[#Control]], dan [[#Output]]. Prinsip pada halaman ini berlaku untuk semua jenis Flow Block, sehingga halaman setiap jenis hanya menjelaskan bagian yang khas bagi block tersebut.
-
-## Konsep Utama
-
-| Istilah | Penjelasan |
-| --- | --- |
-| [[#Trigger]] | Input di sebelah kiri judul block yang berfungsi sebagai syarat block dijalankan. |
-| [[#Input]] | Masukan data ke block untuk diproses lebih lanjut. |
-| [[#Control]] | Antarmuka interaktif di badan block yang dapat memengaruhi proses block atau memicu Activity baru. |
-| [[#Output]] | Keluaran block yang dapat dihubungkan ke Input atau Trigger block lain. |
-| Flow Block Event | Flow Block pemicu yang tidak memiliki Trigger maupun Input. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan]]. |
-
-## Anatomi Flow Block
-
-![[Docs/Modul Logic/Flow/Flow Block/flowlock-anatomy.png]]
-Bagian-bagian Flow Block ditempatkan pada posisi berikut:
-
-![[Docs/Modul Logic/Flow/Flow Block/2026-11-02_19-31-16.png]]
-
-| Bagian | Posisi pada block |
-| --- | --- |
-| [[#Trigger]] | Di sebelah kiri judul block |
-| [[#Input]] | Di sisi kiri, di bawah judul block |
-| [[#Control]] | Di badan block |
-| [[#Output]] | Di sisi kanan block |
-
-Tidak semua jenis Flow Block memiliki keempat bagian ini. Variasinya dijelaskan di [[#Variasi Antar Jenis Flow Block]].
-
-### Trigger
-
-[[#Trigger]] adalah Input yang berada di sebelah kiri judul block. Fungsinya sebagai syarat agar block dijalankan.
-
-- Trigger dapat menerima koneksi dari banyak [[#Output]] sekaligus. Syarat terpenuhi bila setidaknya satu koneksi sudah berisi data, artinya block sebelumnya sudah tereksekusi.
-- Trigger yang tidak memiliki koneksi dianggap selalu aktif.
-
-> **note** Trigger dan tombol Trigger
-> Trigger adalah bagian dari Flow Block yang menjadi syarat eksekusi. Tombol [[^button/empty|Trigger]] pada [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] adalah [[#Control]] dan tidak sama dengan Trigger ini.
-
-### Input
-
-[[#Input]] adalah masukan data ke block untuk diproses lebih lanjut.
-
-- Input yang tidak terhubung menampilkan field isian sehingga nilainya dapat diisi langsung. Field ini hilang ketika Input terhubung ke [[#Output]] block lain.
-- Bila satu Input menerima banyak koneksi, seluruh data dari koneksi tersebut dibaca sebagai [[Docs/Tipe Data/Array]] dalam proses block.
-- Bila salah satu koneksi bersifat rekursif, yaitu ketika ditelusuri mundur akan kembali ke block yang sama, Input dibaca sebagai satu data dari aliran terakhir dan koneksi lainnya diabaikan.
-- Apakah block tetap dapat berjalan ketika Input kosong bergantung pada block itu sendiri. Jika Input wajib diisi, kondisi kosong menghasilkan error pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
-
-### Control
-
-[[#Control]] adalah antarmuka interaktif di badan block yang dapat dioperasikan langsung di Blueprint. Control dapat memengaruhi proses yang terjadi pada Flow Block, atau memicu [[Docs/Modul Logic/Flow/Flow Activity|Activity]] baru.
-
-- Saat ini Control yang tersedia berupa tombol [[^button/empty|Trigger]], misalnya pada [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] untuk menjalankan Flow secara manual.
-- Tidak semua Flow Block memiliki Control.
-
-### Output
-
-[[#Output]] adalah keluaran block yang dapat dihubungkan ke [[#Input]] atau [[#Trigger]] block lain.
-
-- Setiap Output hanya dapat terhubung dengan satu Input atau Trigger block lain. Aturan lengkapnya ada di [[#Aturan Koneksi]].
-- Tipe data Output dapat bervariasi, dan kecocokannya dengan Input diperiksa saat Flow berjalan.
-
-## Aturan Koneksi
-
-Koneksi menghubungkan [[#Output]] sebuah block ke [[#Input]] atau [[#Trigger]] block lain. Jumlah koneksi yang diizinkan berbeda untuk setiap bagian:
-
-| Bagian | Jumlah koneksi |
-| --- | --- |
-| [[#Output]] | Hanya terhubung dengan satu Input atau Trigger block lain |
-| [[#Input]] | Dapat menerima koneksi sebanyak mungkin |
-| [[#Trigger]] | Dapat menerima koneksi sebanyak mungkin |
-
-Setiap koneksi harus memiliki tipe data yang cocok antara Output dan Input. Output dapat menghasilkan beberapa kemungkinan tipe data, dan Input yang lebih ketat tetap dapat menerimanya. Namun, jika data yang mengalir ternyata tidak cocok, error akan muncul di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
-
-Langkah menghubungkan dan memutus koneksi ada di [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi]] dan [[Docs/Modul Logic/Flow/Flow Block/Menghapus Koneksi]].
-
-## Syarat Flow Block Diproses
-
-Sebuah block diproses bila kedua syarat berikut terpenuhi:
-
-1. Setiap [[#Input]] yang terhubung ke [[#Output]] block lain sudah memiliki data, artinya block sebelumnya sudah tereksekusi.
-2. [[#Trigger]] memiliki data setidaknya satu, artinya block sebelumnya sudah tereksekusi. Jika Trigger tidak terhubung, syarat ini selalu terpenuhi.
-
-> **note** Block tanpa Trigger dan Input terhubung
-> Flow Block non-Event yang tidak memiliki koneksi pada [[#Trigger]] maupun [[#Input]] tidak menerima apa pun dari block lain, sehingga tidak akan aktif dalam [[Docs/Modul Logic/Flow/Flow Activity|Activity]].
-
-### Gambaran Syarat pada Alur
-
-```mermaid
-flowchart LR
-  E@{ shape: rounded, label: "**Flow Block Event**" } -->|"&nbsp;ke Trigger&nbsp;"| A@{ shape: rounded, label: "**Block A**" }
-  A -->|"&nbsp;ke Input&nbsp;"| B@{ shape: rounded, label: "**Block B**" }
-  B -->|"&nbsp;ke Trigger&nbsp;"| C@{ shape: rounded, label: "**Block C**" }
-  C --> S@{ shape: circle, label: "Selesai" }
-```
-
-| Block | Syarat terpenuhi karena |
-| --- | --- |
-| Block A | [[#Trigger]] terhubung ke Flow Block Event dan sudah berisi data setelah Event tereksekusi. |
-| Block B | [[#Input]] terhubung ke [[#Output]] Block A dan sudah berisi data setelah Block A tereksekusi. [[#Trigger]] tidak terhubung sehingga selalu aktif. |
-| Block C | [[#Trigger]] terhubung ke [[#Output]] Block B dan sudah berisi data setelah Block B tereksekusi. |
-
-### Data pada Input selama Activity
-
-Setelah block tereksekusi, data pada [[#Input]] dipertahankan selama [[Docs/Modul Logic/Flow/Flow Activity|Activity]] tersebut berjalan. Bila aliran Flow kembali ke block yang sama (rekursif), data terakhir yang akan digunakan.
-
-## Variasi Antar Jenis Flow Block
-
-Setiap jenis Flow Block memiliki variasi [[#Trigger]], [[#Input]], [[#Control]], dan [[#Output]] masing-masing. Ada jenis yang tidak memiliki Control, Input, atau Output. Contohnya Flow Block Event yang tidak memiliki Trigger maupun Input.
-
-Pada halaman setiap jenis Flow Block, hanya variasi yang khas bagi block itu yang dijelaskan. Prinsip umum pada halaman ini, yaitu [[#Aturan Koneksi]] dan [[#Syarat Flow Block Diproses]], tidak diulang di sana.
+Setiap Flow Block tersusun dari [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Trigger]], [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Input]], [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Control]], dan [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output]]. Prinsip pada halaman ini berlaku untuk semua jenis Flow Block, sehingga halaman setiap jenis hanya menjelaskan bagian yang khas bagi block tersebut.
 
 ## Jenis Flow Block
 
@@ -145,6 +36,18 @@ Berikut adalah cara mengelola Flow Block didalam Flow:
 2. [[Docs/Modul Logic/Flow/Flow Block/Menghapus]]
 3. [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi]]
 4. [[Docs/Modul Logic/Flow/Flow Block/Menghapus Koneksi]]
+
+## Antarmuka
+
+Penjelasan antarmuka Flow Block lihat selengkap nya di [[Docs/Modul Logic/Flow/Flow Block/Antarmuka|Antarmuka Flow Block]].
+
+## Aturan Koneksi
+
+Penjelasan aturan koneksi lihat selengkap nya di [[Docs/Modul Logic/Flow/Flow Block/Aturan Koneksi]].
+
+## Syarat Eksekusi
+
+Penjelasan syarat agar Flow Block dapat dieksekusi lihat selengkap nya di [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi]].
 
 ## TL:DR
 

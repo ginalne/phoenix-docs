@@ -1,11 +1,10 @@
 ---
-    status: draft
+    status: release
+    title: "Menghapus Flow Block"
+    description: 
     pageDecoration:
-      icon: x
       tree:
         priority: 8
-    tags:
-      draft
 ---
 # Menghapus Flow Block
 
