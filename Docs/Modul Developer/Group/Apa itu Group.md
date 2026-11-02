@@ -35,45 +35,27 @@ Alih-alih mengatur akses satu per satu untuk setiap orang, Anda cukup mengelompo
 | [[#Mengelola User dalam Group|Group Berstatus Default]] | Group tempat sistem menempatkan User yang baru terdaftar di [[Inisialisasi/Apa itu Pro?|Pro]]. Pro baru otomatis memiliki Group [[^field/group|Administrator]] sebagai Group berstatus default. |
 | [[#Menempatkan Group ke Direktori|Place to Directory]] | Menu untuk menempatkan Group anak sebagai komponen di Area Manajemen Folder. |
 
-## Contoh Penggunaan
+## Cara Kerja
 
-**Mengatur akses tim berdasarkan peran**
+Penjelasan cara kerja Group lihat selengkap nya di [[Docs/Modul Developer/Group/Cara Kerja|Cara Kerja Group]].
 
-Sebuah organisasi memiliki beberapa tim dengan kebutuhan Workspace yang berbeda. Dengan Group, administrator cukup menyusun tim sekali, lalu setiap anggota baru tinggal dipindahkan ke Group yang sesuai tanpa mengatur akses per orang.
+## Mengelola Group
 
-**Komponen yang terlibat**
+Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+1. [[Docs/Modul Developer/Group/Membuat Baru|Membuat Group baru]]
+2. [[Docs/Modul Developer/Group/Mengubah]] Atribut Group seperti [[^field|Name]], [[^field|Parent]], atau [[^field|Description]].
+3. [[Docs/Modul Developer/Group/Menghapus]] Group.
+4. [[Docs/Modul Developer/Group/Mengelola Group Anak]] dalam Group.
+4. [[Docs/Modul Developer/Group/Mengelola User]] dalam Group.
+4. [[Docs/Modul Developer/Group/Mengelola Workspace]] dalam Group.
 
-| Komponen | Peran |
-| -------- | ----- |
-| [[^field/group|Manajemen]] | Group induk yang menaungi seluruh tim. |
-| [[^field/group|Tim Lapangan]] | Group anak untuk anggota yang hanya memerlukan Workspace operasional. |
-| [[^field/workspace|Operasional]] | Workspace untuk pekerjaan harian tim. |
-| [[^field/workspace|Laporan]] | Workspace untuk melihat dan mengelola laporan. |
+## Antarmuka
 
-**Langkah pengaturan**
+Penjelasan antarmuka Group lihat selengkap nya di [[Docs/Modul Developer/Group/Antarmuka|Antarmuka Group]].
 
-| Langkah | Aksi | Hasil |
-| ------- | ---- | ----- |
-| 1 | Buat Group induk dan Group anak. Lihat [[#Membuat Group]] dan [[#Mengelola Group Anak]]. | Struktur tim tersusun. |
-| 2 | Tambahkan Workspace ke setiap Group, termasuk Group anak. Lihat [[#Mengelola Workspace dalam Group]]. | Setiap Group memiliki akses yang tepat. |
-| 3 | User baru terdaftar di [[Inisialisasi/Apa itu Pro?|Pro]]. | Sistem menempatkan User ke Group berstatus default. |
-| 4 | Pindahkan User ke Group tim dengan *drag and drop*. Lihat [[#Mengelola User dalam Group]]. | Akses User langsung mengikuti Workspace Group tujuan. |
+## Hak Akses
 
-**Hasil yang dirasakan**
-
-- Anggota baru langsung bekerja di Workspace yang tepat tanpa pengaturan akses satu per satu.
-- Administrator melihat seluruh susunan tim, Workspace, dan anggotanya dalam satu halaman kerja.
-- Perubahan akses tim cukup dilakukan pada Group, bukan pada setiap orang.
-
-**Ide skenario lain**
-
-| Kebutuhan | Contoh pengaturan |
-| --------- | ----------------- |
-| Pemisahan departemen | Satu Group per departemen, masing-masing dengan Workspace sendiri. |
-| Tim proyek sementara | Buat Group anak untuk proyek, lalu pindahkan anggotanya dan hapus Group setelah proyek selesai. |
-| Akses terbatas untuk tamu | Group khusus dengan satu Workspace yang hanya berisi data yang boleh dilihat. |
-
-Dengan Group, pengelolaan akses berpindah dari urusan per orang menjadi urusan per tim, sehingga tim yang bertambah besar tetap mudah diatur.
+Penjelasan tentang pengelolaan Hak Akses dalam komponen Canvas lihat selengkapnya di [[Docs/Modul Interface/Canvas/Hak Akses]].
 
 ## Praktik Terbaik
 
@@ -103,24 +85,5 @@ Dengan Group, pengelolaan akses berpindah dari urusan per orang menjadi urusan p
 - Group anak tersusun di bawah Group induk dan tidak mewarisi Workspace-nya. Menu Group anak adalah [[^field/edit|Edit]], [[^field/add|Add Children]], [[^field|Place to Directory]], dan [[^field/delete|Delete]].
 - Tambahkan Workspace lewat [[^field|Search workspace to add...]] dan hapus dengan klik Workspace lalu [[^button|Remove]].
 - User baru otomatis masuk Group berstatus default (pada Pro baru adalah Group [[^field/group|Administrator]]). Satu User hanya di satu Group, dan dipindahkan dengan *drag and drop*.
-- Sebelum menghapus Group, pindahkan seluruh User di Group tersebut dan Group anaknya, karena Group anak ikut terhapus.
+- Sebelum menghapus Group, pindahkan seluruh User di Group tersebut dan Group anaknya, karena Group anak ikut terhapus
 
-## FAQ : Pertanyaan yang Sering Diajukan
-
-> **faq**
-> **Apa bedanya menambahkan Group dari Area Manajemen Folder dan dari halaman kerja Group?**
-> Dari Area Manajemen Folder, Group ditambahkan sebagai komponen di folder dan [[^field|Parent]] wajib diisi. Dari halaman kerja Group, formnya tidak memiliki bagian direktori dan [[^field|Parent]] terisi otomatis.
-> **Mengapa Group yang saya buat dari halaman kerja tidak muncul di Area Manajemen Folder?**
-> Group tersebut belum ditempatkan sebagai komponen. Klik kanan Group ➜ [[^field|Place to Directory]] untuk menempatkannya di posisi *root* folder dari Workspace yang sedang aktif.
-> **Apakah Group anak mewarisi Workspace dari Group induk?**
-> Tidak. Tambahkan Workspace pada setiap Group melalui [[^field|Search workspace to add...]].
-> **Bagaimana cara memindahkan User ke Group lain?**
-> Buka halaman kerja Group, lalu *drag and drop* User dari Group lama ke Group tujuan. Lihat [[#Memindahkan User]].
-> **Apakah satu User dapat berada di beberapa Group?**
-> Tidak. Satu User hanya dapat berada dalam satu Group, jadi memindahkan User berarti mengeluarkannya dari Group lama.
-> **Apa yang terjadi bila Group tidak memiliki Workspace?**
-> Anggota Group tidak memiliki Workspace untuk dipakai. Pastikan setiap Group masih memiliki minimal satu Workspace.
-> **Mengapa Group tidak bisa dihapus?**
-> Group yang dihapus, beserta Group anaknya, tidak boleh masih memiliki User. Pindahkan semua User ke Group lain terlebih dahulu.
-> **Bagaimana cara menutup daftar Group anak?**
-> Klik panah di sebelah kiri judul Group.

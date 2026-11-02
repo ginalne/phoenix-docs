@@ -1,14 +1,14 @@
 ---
     status: release
-    title: "Membuat Group"
+    title: "Membuat Group Baru"
     description: Penjelasan cara membuat komponen Group baru.
     pageDecoration:
       tree:
         priority: 2
 ---
-# Membuat Group
+# Membuat Group Baru
 
-Group dapat dibuat dari dua tempat, dan hasilnya sedikit berbeda.
+Group dapat dibuat dari dua tempat yaitu [[#Dari Area Manajemen Folder]] atau [[#Dari Halaman Kerja Group]], dan hasilnya sedikit berbeda.
 
 ## Dari Area Manajemen Folder
 
