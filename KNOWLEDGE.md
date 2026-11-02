@@ -5,7 +5,7 @@ pageDecoration:
 description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi phoenix.
 ---
 
-## Workspace (Modul Developer)
+# Workspace (Modul Developer)
 
 - Workspace adalah komponen untuk mengatur ruang kerja pengembangan: komponen yang dapat dilihat, dikelola, dan diubah, serta **fungsi di dalamnya** (bukan "integrasi yang digunakan", sesuai versi akhir penulis).
 - Akses Workspace ke setiap anggota dikelola melalui Group. Setelah Group memetakan pengguna ke Workspace, Workspace dapat digunakan. Saat membuka Phoenix, pengguna masuk ke satu Workspace yang sudah memiliki struktur folder.
@@ -27,7 +27,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Pewarisan:** jika folder induk Visible = disallow, seluruh isinya tidak dapat diakses meski allow. Disallow juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan Tree.
 - Nama folder pada gambar contoh penulis adalah kasus pribadi dan tidak disebut di dokumentasi.
 
-## Flow (Modul Logic)
+# Flow (Modul Logic)
 
 - **Definisi (versi penulis):** Flow adalah komponen untuk mengatur logika dan proses pengelolaan data dengan pendekatan **alur komposit**, yaitu menyusun logika dengan menghubungkan blok demi blok. Setiap blok dapat dihubungkan dan dimonitor agar setiap Event yang terikat menghasilkan keluaran dan otomasi yang tepat.
 - **Istilah resmi:** area kerja Flow disebut **Blueprint** (bukan "kanvas"). Block pemicu disebut **Flow Block Event**.
@@ -57,7 +57,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Event dari komponen:** Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol Event pada masing-masing komponen.
 - **Memantau proses:** klik tombol Activity/Submission, panel Flow Activity terbuka. Panel memiliki tombol Refresh List, kolom Search Activity, kolom ID/Name, Status/Type, Start At, Updated At, dan menampilkan "No Activity" bila kosong.
 
-## Variable (Modul Data)
+# Variable (Modul Data)
 
 - **Komponen Variable** mengelola **Variable Data** (tipe data Variable) di dalam sebuah Pro. Nilai yang disimpan menjadi sumber kebenaran dan dapat dirujuk dari komponen mana pun.
 - **Komponen unik:** hanya ada satu per Pro, dibuat otomatis ketika Pro dimulai di folder root. Tidak dapat ditambah lewat Area Manajemen Folder, tidak dapat diduplikasi, dan tidak dapat dihapus. Boleh dipindahkan ke folder lain.
@@ -83,7 +83,8 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   - Variable Getter (Flow Block) mengambil nilai Variable dengan mengisi Name.
 - **Akses:** anggota yang tidak memiliki akses komponen Variable tidak dapat mengetahui Value, tetapi tetap dapat memakainya untuk otomasi atau integrasi. Anggota yang memiliki akses melihat Value secara terbuka di halaman kerja.
 - **Pemisahan halaman:** halaman komponen Variable membahas pengelolaan. Penjelasan Variable sebagai tipe data ada di halaman Tipe Data (`Docs/Tipe Data/Variable`).
-## Enum (Modul Data)
+- 
+# Enum (Modul Data)
 
 Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direvisi penulis.
 
@@ -100,7 +101,7 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 - **Add Row** menambahkan baris (EnumData).
 - Nama Enum dan isi pada screenshot penulis adalah kasus uji pribadi dan tidak disebut di dokumentasi.
 
-## Table (Modul Data)
+# Table (Modul Data)
 
 - **Definisi:** Table adalah komponen modul Data untuk menyimpan data secara kompleks, baik transaksional maupun generik. Table memiliki beberapa Column (`Docs/Tipe Data/Column`) dengan format berbeda, dan Row (`Docs/Tipe Data/Row`) yang masing-masing memiliki TableData (`Docs/Tipe Data/TableData`) sesuai kolom yang tersedia. Expression (`Docs/Tipe Data/Expression`) adalah Tipe Data untuk melakukan perhitungan dengan fungsi yang disediakan, dan dapat langsung digunakan pada Table.
 - **Path halaman:** `Docs/Modul Data/Table/Apa itu Table`. Judul: "Apa itu Table?". Subhalaman yang disepakati: `Docs/Modul Data/Table/Merge`, `.../Publish`, `.../Event`. Subhalaman yang diusulkan: `.../Upload`. Cara mengisi data per Format Column dirujuk penulis ke anchor `Docs/Modul Data/Table/Apa itu Table#Mengelola Data Table` (bukan subhalaman `Mengisi TableData`).
@@ -122,8 +123,7 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 - **Merge, Publish, Event:** detail dijelaskan di halaman masing-masing. Ketiganya dibatasi Function Access di Workspace.
 - **Penamaan pada screenshot** (nama Table, Row, dan Column pada gambar contoh penulis) adalah kasus pribadi dan tidak disebut di dokumentasi.
 
-
-## Tree (Modul Data)
+# Tree (Modul Data)
  
 - **Definisi:** Tree adalah komponen modul Data untuk menyimpan data secara hierarki atau berbentuk pohon. Cocok untuk data relasional yang bercabang. Satu Tree memiliki banyak Node (`Docs/Tipe Data/Node`). Atribut penting: **Merger Mode** (`Docs/Modul Data/Tree/Konfigurasi Merger Mode`). Penulis menyebut Tree yang memakainya "bersifat Merger".
 - **Path halaman:** `Docs/Modul Data/Tree/Apa itu Tree`. Judul: "Apa itu Tree?". Subhalaman: `Konfigurasi Merger Mode`, `Konfigurasi External Read Only` (usulan, menunggu konfirmasi), `Mengelola Node` (anchor: Menambahkan Node, Mengubah Node, Melihat Detail Node, Menghapus Node, Import Node, Export Node), `Publish`, `Event`.
@@ -147,7 +147,7 @@ Menggantikan usulan sebelumnya. Sumber: halaman "Apa itu Enum?" yang sudah direv
 - **Penamaan pada screenshot** (nama Tree pada judul halaman kerja dan nama pengguna di bilah atas) adalah kasus pribadi dan tidak disebut di dokumentasi. Nama Node pada screenshot menu konteks (Child A, B, C) sudah generik.
 Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Active = terlindungi, Merger Mode tidak dapat diubah, External Read Only berlaku di kedua jenis Tree, context dan mode dapat diklik tetapi sementara). Semuanya perlu tersimpan agar subhalaman Tree dan Flow Block terkait konsisten.
 
-## Table View (Modul Interface)
+# Table View (Modul Interface)
 
 - **Definisi:** Table View (boleh juga ditulis TableView) adalah komponen modul Interface untuk menampilkan data Table menggunakan Query. Satu Table View memiliki lebih dari satu **Data**, dan setiap Data menampung satu Query, satu nama, dan konfigurasi tampilan.
 - **Path:** `Docs/Modul Interface/Table View/Apa itu Table View`.
@@ -175,7 +175,7 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 - **arti (x) setelah nama ** adalah total baris hasil Query.
 - **Efek penghapusan Table View atau Data** tidak mempengaruhi komponen lain.
 
-## Kanban (Modul Interface)
+# Kanban (Modul Interface)
 
 *   **Definisi:** Kanban adalah komponen modul Interface yang menampilkan data dalam bentuk kolom-kolom berdasarkan status atau kategori. Setiap data (Row Table) direpresentasikan sebagai kartu yang dapat dipindahkan antar kolom. **Kanban bersifat generik**: cocok untuk data apa pun yang memiliki tahapan atau kategori, tidak khusus untuk tugas. Penulis menulis "memvisualisasikan data secara segmentatif".
 *   **Path:** `Docs/Modul Interface/Kanban/Apa itu Kanban`. Subhalaman: `Docs/Modul Interface/Kanban/Template Kartu` (langkah rinci Add Column, Class, urutan, Delete; sudah ditandai DONE oleh penulis).
@@ -204,7 +204,7 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Belum terkonfirmasi:** cakupan Search, perbedaan desktop dan mobile, penyebab kolom terakhir tanpa Setting, tempat Add Row bisa dipicu (klik kanan kartu atau juga area kosong kolom), dampak Delete Row (diasumsikan menghapus Row dari Table dan tidak bisa dikembalikan), letak halaman penjelasan Form Table.
 *   **Penamaan pada screenshot** (nama folder di dialog Create, judul Kanban, nama EnumData, dan isi kartu) adalah kasus pribadi dan tidak disebut di dokumentasi.
 
-## Gallery (Modul Interface)
+# Gallery (Modul Interface)
 
 *   **Definisi:** Gallery adalah komponen modul Interface yang menyajikan data dalam bentuk kartu visual yang menonjolkan gambar atau konten dari setiap data. Cocok untuk koleksi visual seperti katalog, portofolio, atau daftar aset, agar data mudah dikenali sekilas. Setiap Row pada Table tampil sebagai satu kartu.
 *   **Path:** `Docs/Modul Interface/Gallery/Apa itu Gallery`. Subhalaman yang diusulkan: `Docs/Modul Interface/Gallery/Template Kartu` (menunggu konfirmasi).
@@ -222,7 +222,7 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Belum terkonfirmasi:** isi Detail, form Add Row, konfirmasi Delete, apakah Add Row dan Delete memerlukan Data Access, cakupan Search, perbedaan desktop dan mobile, jumlah kartu per baris, gestur gulir, dampak menghapus Gallery (diasumsikan Row sumber tidak terhapus), serta label bagian kiri tanda `/` pada Name.
 *   **Penamaan pada screenshot** (nama folder di dialog Create, judul Gallery, dan isi kartu) adalah kasus pribadi dan tidak disebut di dokumentasi.
 
-## Timeline (Modul Interface)
+# Timeline (Modul Interface)
 
 *   **Definisi:** Timeline adalah komponen modul Interface yang menampilkan data dalam urutan waktu untuk memantau jadwal, riwayat aktivitas, dan progres proses. Cocok untuk perencanaan, pelacakan progres, dan melihat hubungan antar peristiwa dalam satu rentang waktu. Isinya ada dua: **Timeline Event** dan **Timeline Data**.
 *   **Path dan struktur:** `Docs/Modul Interface/Timeline/Apa itu Timeline`. **Seluruh isi Timeline Event dan Timeline Data ditulis lengkap di halaman ini, tanpa subhalaman** (permintaan penulis). Tautan ke keduanya memakai anchor (`#Mengelola Timeline Event`, `#Mengelola Timeline Data`, `#Hak Akses Timeline Data`), bukan path subhalaman.
@@ -249,7 +249,7 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Belum terkonfirmasi:** arti End pada Timeline Event (diasumsikan batas akhir pengulangan) dan bentuk blok bila Repeat non-aktif, tempat mode `editable`/`readonly` diatur, tampilan blok bila Start tidak dipakai, cara label Name/Start/End ditentukan pada Show, nama tombol simpan pada form Add Row dan Edit Row, konfirmasi hapus untuk Event/Data/Row, dan fungsi panah ganda pada change time.
 *   **Penamaan pada screenshot** (nama Timeline, Data, Row, serta judul dan tanggal pada popup preview) adalah kasus pribadi dan tidak disebut di dokumentasi.
 
-## Form (Modul Interface)
+# Form (Modul Interface)
 
 *   **Istilah:** objek penyusun isi Form disebut **Elemen** (bukan Node, agar tidak konflik dengan Node sebagai tipe data). Kategori: **Layout** (Card, Full, Split, Accordion), **Display** (Text, Table, Tooltip, Qr, Chrono), **Input** (Basic, Quiz, Table, List). Halaman Elemen: `Docs/Modul Interface/Form/Elemen Form/<Tipe>/<Nama Elemen>` (contoh `Docs/Modul Interface/Form/Elemen Form/Layout/Card`). Halaman pendamping Elemen: `Elemen Form/Pengenalan`, `Elemen Form/Layout/Pengenalan`, `Elemen Form/Menambahkan`, `Elemen Form/Menghapus`, `Elemen Form/Mengonfigurasi#Properties Panel`, `Elemen Form/Mengonfigurasi#Header Toolbar`, `Elemen Form/Binding#Binding Layout`, `Elemen Form/State`.
 *   **Form Flow:** panel "form flow" di bawah halaman kerja = alur Form. Halaman paling kiri tampil pertama, dan Form baru dapat disubmit setelah mencapai halaman terakhir.
@@ -278,7 +278,7 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Submission List:** panah di kiri baris membuka rincian submission (data yang ditambahkan, ID, atau error); pencarian mencakup ID dan Name.
 *   **Belum terkonfirmasi:** pilihan Format Type selain String, nilai awal Label dan Default State pada Accordion, cara men-toggle header Accordion, apakah Elemen di Accordion Collapsed tetap tersimpan saat submit, arti visual tampilan penuh pada Full, urutan atas-bawah Split di mobile, tampilan daftar Children pada Split, fungsi ikon `T` pada toolbar Text, apakah Text ikut dikirim sebagai Submission, tampilan Elemen saat Enable = false, nilai awal Visible pada Elemen layout dan display, apakah Default Value Elemen yang tersembunyi ikut tersimpan, daftar operator dan fungsi expression, apakah bintang muncul saat As Title bernilai Yes, apakah hanya satu Elemen per Form yang boleh As Title Yes, tampilan title di Submission List, letak tampil pesan binding checker, nama resmi ikon saklar dan kolom isian expression, bentuk pesan checker expression, umpan balik saat Required belum terisi, perilaku Required pada Elemen Readonly, dan rencana Validators lain.
 
-## Canvas (Modul Interface)
+# Canvas (Modul Interface)
  
 *   **Definisi:** Canvas adalah komponen modul Interface untuk menyusun, menghubungkan, dan memetakan data atau presentasi secara visual. Memberi fleksibilitas membuat diagram, tabel, maupun proyeksi tanpa dibatasi struktur baris dan kolom.
 *   **Path:** `Docs/Modul Interface/Canvas/Apa itu Canvas` (dikonfirmasi). Seluruh isi ditulis lengkap di halaman yang sama.
@@ -347,6 +347,7 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
 *   **Tampilan:** irisan per data, total di tengah, legenda "label (persen)".
 *   **Belum terkonfirmasi:** definisi kaidah **Series Output** (anchor `Docs/Tipe Data/Query#Series Output`: kolom, contoh, Error), satuan gap dan size, arti nilai persen gradient, daftar theme, apakah `all` memuat percent, arti Limit kosong, ikon tanpa nama pada panel tampilan, cara memilih Data.
 *   **Penamaan pada screenshot** (Table "Pesanan" dan "Barang pesanan", nama barang dan kolom) adalah data pribadi dan tidak disebut di dokumentasi.
+  
 ## Widget Chart Pie
  
 *   **Header Toolbar** (`interface-widget-chart-pie.png`): ikon pie, ikon pegangan, **Data (Query, kaidah Series Output) dengan tombol Q**, **Limit = jumlah maksimal data yang muncul** ("Empty" bila belum diisi), Remove. **Tidak ada toggle 123 dan Search** (tersisa keliru pada revisi penulis).
