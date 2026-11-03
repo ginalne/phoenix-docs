@@ -1,11 +1,11 @@
 ---
-    status: release
-    title: Enum Data Event
-    description: Flow Block Event yang terpicu ketika EnumData pada Enum ditambahkan, diperbarui, atau dihapus.
-    pageDecoration:
-      icon: zap
-      tree:
-        priority: 3
+status: release
+title: Enum Data Event
+description: Flow Block Event yang terpicu ketika EnumData pada Enum ditambahkan, diperbarui, atau dihapus.
+pageDecoration:
+  icon: zap
+  tree:
+    priority: 3
 ---
 # Enum Data Event
 
@@ -16,12 +16,6 @@ Enum Data Event adalah Flow Block Event yang memulai alur setiap kali [[Docs/Tip
 Karena Enum menyimpan data master seperti pilihan, menu, dan kategori, block ini berguna untuk menjaga sistem lain tetap selaras ketika daftar pilihan berubah.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Event/enum-data-event.png|Enum Data Event Block pada Blueprint]]
-
-<!--
-  * [DONE] Letakkan potongan gambar Enum Data Event dari screenshot (file `enum-data-event.png`). Anotasi yang disarankan: nomor 1 pada judul, nomor 2 pada tombol Trigger, nomor 3 pada output EnumData, Event, dan Old.
-  * [TODO] Screenshot yang diberikan hanya menampilkan output EnumData pada block ini. Draf mengikuti informasi penulis bahwa block ini juga memiliki output Event dan Old. Perbarui gambar bila sudah tersedia.
-    Jawaban: Oke
--->
 
 ## Kapan Enum Data Event Terpicu
 
@@ -41,13 +35,16 @@ flowchart LR
     B -->|"&nbsp;**[Object]**&nbsp;<br>Old"| C
 ```
 
+>**note** Hanya perubahan yang memicu Enum Data Event
+> Menyimpan EnumData tanpa ada perubahan tidak memicu Enum Data Event. Aksi create, update, atau delete pada EnumData yang dilakukan oleh Flow juga tidak memicu Flow kembali.
+
 ## Input, Control dan Output
 
-Enum Data Event tidak memiliki input koneksi. Block ini memiliki tiga output di sisi kanan.
+Enum Data Event tidak memiliki input koneksi. Block ini memiliki satu Control berupa tombol dan tiga output di sisi kanan.
 
 | Bagian | Jenis | Tipe Data | Penjelasan |
 | --- | --- | --- | --- |
-| [[^button/empty\|Trigger]] | Control | - | Memicu Enum Data Event secara manual dari Blueprint. |
+| [[^button/empty|Trigger]] | Control | - | Memicu Enum Data Event secara manual dari Blueprint. |
 | [[^output|EnumData]] | Output | [[Docs/Tipe Data/EnumData]] | EnumData yang ditambahkan, diperbarui, atau dihapus. |
 | [[^output|Event]] | Output | [[Docs/Tipe Data/String]] | Jenis peristiwa: [[^value/string|create]], [[^value/string|update]], atau [[^value/string|delete]]. |
 | [[^output|Old]] | Output | [[Docs/Tipe Data/Object]] | Nilai EnumData sebelum perubahan. Isinya bergantung pada nilai [[^output|Event]]. |
@@ -57,15 +54,15 @@ Enum Data Event tidak memiliki input koneksi. Block ini memiliki tiga output di 
 | Nilai [[^output|Event]] | Isi [[^output|EnumData]] | Isi [[^output|Old]] |
 | --- | --- | --- |
 | [[^value/string|create]] | EnumData yang baru ditambahkan. | [[^value/empty]], karena EnumData belum ada sebelumnya. |
-| [[^value/string|update]] | EnumData dengan nilai terbaru. | Hanya field yang diubah (Name, Description, Value, atau Selectable), berisi nilai sebelum perubahan. Jika tidak ada perubahan, [[^value/empty]]. |
+| [[^value/string|update]] | EnumData dengan nilai terbaru. | Hanya field yang diubah (Name, Description, Value, atau Selectable), berisi nilai sebelum perubahan. Jika hanya satu field yang diubah, [[^output|Old]] hanya memuat field itu. |
 | [[^value/string|delete]] | EnumData yang dihapus. | Seluruh field: Name, Description, Value, dan Selectable. |
 
-Aturan [[^output|Event]] dan [[^output|Old]] yang sama juga berlaku pada [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan#Output Event dan Old|Table Row Event dan Tree Node Event]].
+Aturan [[^output|Event]] dan [[^output|Old]] yang sama juga berlaku pada [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event#Isi Output Berdasarkan Event|Table Row Event]] dan [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event#Isi Output Berdasarkan Event|Tree Node Event]].
 
 ## Menggunakan Enum Data Event
 
 1. Klik kanan pada bagian kosong Blueprint ➜ [[^field/add|Add]] ➜ [[^field|Event]] ➜ [[^field|Enum Data Event]].
-2. Buka halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], klik [[^button/event|Event]], lalu hubungkan dengan Enum Data Event. Langkah lengkap ada di [[Docs/Modul Data/Enum/Mengotomasi]] dan [[Docs/Event/Menghubungkan Event|Menghubungkan Event]].
+2. Buka halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], klik [[^button/event|Event]], lalu hubungkan dengan Enum Data Event. Langkah lengkap ada di [[Docs/Modul Data/Enum/Mengotomasi|Mengotomasi Enum]] dan [[Docs/Event/Menghubungkan Event|Menghubungkan Event]].
 3. Hubungkan output [[^output|EnumData]], [[^output|Event]], atau [[^output|Old]] ke input block berikutnya. Langkah lengkap ada di [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|Menghubungkan Koneksi]].
 
 >**note** Memakai Event dan Function Access
@@ -91,9 +88,8 @@ Gunakan ketika perubahan pilihan perlu ditindaklanjuti, misalnya pilihan yang ti
 
 | Peristiwa | Output [[^output|EnumData]] | Output [[^output|Event]] | Output [[^output|Old]] |
 | --- | --- | --- | --- |
-| Hanya Selectable diubah dari [[^value/boolean/true|Yes]] menjadi [[^value/boolean/false|No]] | EnumData dengan Selectable [[^value/boolean/false|No]] | [[^value/string|update]] | Hanya [[^value/object|{ “Selectable”: true }]] |
-| Name dan Description diubah bersamaan | EnumData dengan Name dan Description terbaru | [[^value/string|update]] | Name dan Description dengan nilai sebelumnya |
-| Disimpan tanpa ada perubahan | EnumData yang sama | [[^value/string|update]] | [[^value/empty]] |
+| Hanya Selectable diubah dari [[^value/boolean/true|Yes]] menjadi [[^value/boolean/false|No]] | EnumData dengan Selectable [[^value/boolean/false|No]] | [[^value/string|update]] | [[^value/object|{ "Selectable": true }]] |
+| Name diubah dari [[^value/string|Elektronik]] menjadi [[^value/string|Perangkat Elektronik]] dan Selectable diubah dari [[^value/boolean/true|Yes]] menjadi [[^value/boolean/false|No]] | EnumData dengan Name dan Selectable terbaru | [[^value/string|update]] | [[^value/object|{ "Name": "Elektronik", "Selectable": true }]] |
 
 Kombinasi yang berguna: bandingkan [[^output|Old]] dengan [[^output|EnumData]] untuk mengetahui field mana yang berubah, misalnya hanya meneruskan jika Selectable berubah.
 
@@ -103,20 +99,9 @@ Gunakan ketika pilihan yang dihapus perlu dicatat atau dihapus juga di sistem la
 
 | Peristiwa | Output [[^output|EnumData]] | Output [[^output|Event]] | Output [[^output|Old]] |
 | --- | --- | --- | --- |
-| Pilihan dihapus | EnumData yang dihapus | [[^value/string|delete]] | Seluruh field: Name, Description, Value, dan Selectable |
+| Pilihan dihapus | EnumData yang dihapus, dengan nilai terakhir sebelum dihapus | [[^value/string|delete]] | Seluruh field: Name, Description, Value, dan Selectable |
 
 Kombinasi yang berguna: [[^output|Old]] menyimpan seluruh isi EnumData yang dihapus, sehingga Anda masih dapat mengirim Name dan Value pilihan tersebut.
-
-<!--
-  * [DONE] Nama Enum dan nilai pada contoh (kategori, Elektronik) adalah penamaan generik buatan Claude. Sesuaikan bila perlu.
-  * [TODO] Konfirmasi field EnumData yang dapat muncul di [[^output|Old]] (Name, Description, Value, Selectable) dan apakah perubahan Selectable juga memicu [[^value/string|update]].
-    Jawaban: Sudah benar
-  * [TODO] Konfirmasi apakah [[^output|EnumData]] pada [[^value/string|delete]] berisi EnumData terakhir sebelum dihapus.
-    Jawaban: Iya betul
-  * [TODO] Konfirmasi path `Docs/Modul Data/Enum/Event` dan nama tombol Event pada langkah 2.
-    Jawaban: Sudah saya perbaiki
-    
--->
 
 ## Lihat Juga
 

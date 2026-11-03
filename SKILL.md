@@ -339,10 +339,38 @@ Catatan format:
 * Tanda panel yang akan diganti. Jika penulis menyebut sebuah panel akan berubah (Data Panel Chart Line akan disamakan dengan Chart Bar), tulis sesuai screenshot saat ini dan beri TODO.
 * Widget tanpa informasi sama sekali (Space) ditulis sebagai kerangka minimal mengikuti widget tampilan data, tanpa tabel Tampilan dan Interaksi, dengan TODO yang meminta definisi dan screenshot.
 
-## Pola yang dipakai penulis untuk konteks = Flow Block
+## Pola yang dipakai penulis untuk konteks = Flow Block dan Halaman per Block
+
 - Halaman Pengenalan Flow Block memuat Konsep Utama, Anatomi Flow Block (gambar `anatomi-flow-block.png`, posisi tiap bagian, lalu subbagian Trigger, Input, Control, Output), Aturan Koneksi, Syarat Flow Block Diproses, Variasi Antar Jenis Flow Block, katalog Jenis Flow Block, dan Mengelola Flow Block.
 - Istilah: **Trigger** (huruf kapital) adalah bagian block yang menjadi syarat eksekusi, sedangkan tombol `[[^button/empty|Trigger]]` pada Pulser adalah Control. Untuk kata kerja gunakan "memicu" agar tidak tertukar dengan Trigger. Area kerja Flow ditulis Blueprint.
 - Syarat eksekusi hanya berlaku untuk Flow Block non-Event.
+
+### Pengenalan kategori (`Flow Block/<Kategori>/Pengenalan`)
+
+- Front matter: `status`, `title`, `description`, `pageDecoration.tree.priority`, dan `tags: flowblock-category`. Tidak memakai ikon.
+- Isi dipangkas. Susunan akhir penulis: callout note, definisi kategori, perbandingan dengan kategori lain **dalam satu paragraf** (bukan tabel), gambar semua block, Peran dalam Flow (diagram mermaid), Jenis Flow Block (tabel Block, Terpicu ketika, Output), Memilih Flow Block, Lihat Juga.
+- Penulis **menghapus**: tabel Perbandingan dengan Kategori Lain, Anatomi, Output Event dan Old (aturan bersama), dan Menggunakan. Jangan dibuat lagi. Aturan yang berlaku lintas block ditulis di halaman block, bukan di Pengenalan.
+- Callout perilaku yang berlaku untuk seluruh kategori boleh ada di Pengenalan (contoh: perubahan oleh Flow tidak memicu Flow kembali).
+
+### Halaman per block
+- Front matter: `status`, `title`, `description`, `pageDecoration.icon: zap`, `pageDecoration.tree.priority`. Tulis tanpa indentasi di awal baris.
+- Heading: **Input, Control dan Output** (bukan "Input dan Output"). Kalimat pembuka: "memiliki satu Control berupa tombol dan <n> output di sisi kanan".
+- Nama output ditulis `[[^output|Nama]]`, bukan kode inline. Nilai ditulis dengan `[[^value/string|create]]`, `[[^value/number|150000]]`, `[[^value/boolean/true]]`, `[[^value/boolean/false]]`, `[[^value/empty]]`, `[[^value/object|{ "Status": "Menunggu" }]]`, `[[^value/enumdata|Menunggu]]`. Nilai tanggal belum punya pola, tulis kode inline.
+- Isi Object memakai tanda kutip lurus (sintaks JSON), bukan kutip melengkung.
+- Pipa alias wikilink di dalam sel tabel **tidak di-escape** (`[[^button/empty|Trigger]]`, bukan `\|`).
+- Tautan antarblock yang sejenis memakai anchor ke halaman block yang menjadi acuan (`Table Row Event#Isi Output Berdasarkan Event`). Jangan menautkan ke anchor di halaman yang bagiannya sudah dihapus penulis (kesalahan saya: tautan `Pengenalan#Output Event dan Old` menjadi rusak setelah bagiannya dihapus).
+- Contoh Penggunaan berisi tabel kombinasi (Peristiwa, lalu satu kolom per output). Baris yang bertentangan dengan perilaku produk tidak boleh ada (contoh: baris "ditambahkan lewat Flow" dan "disimpan tanpa perubahan" harus dibuang setelah penulis menjawab bahwa keduanya tidak memicu Event).
+- Nama contoh (Table pesanan, Enum kategori, Tree kategori, Variable `batas_stok_minimum`) boleh dipertahankan setelah penulis menandai DONE.
+
+### Path baru yang dipakai penulis
+- `Docs/Modul Data/<Komponen>/Mengotomasi` untuk cara menghubungkan Event dari komponen (Variable, Table, Enum, Tree), menggantikan tebakan `.../Event`.
+- `Docs/Modul Interface/Timeline/Timeline Event/Pengenalan` (bukan anchor `Apa itu Timeline#Mengelola Timeline Event`).
+- `Docs/Modul Interface/Canvas/Widget/Basic/Button` (tanpa alias, ditulis "Widget Button").
+- `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi` untuk Syarat Flow Block Diproses.
+
+### Proses
+- Sinkronkan semua halaman terkait setiap kali satu halaman berubah. Setelah penulis mengubah jumlah output (Variable Event dari satu menjadi tiga), perbarui juga callout, tabel, diagram, dan Pengenalan yang menyebut output tersebut.
+- TODO yang sudah dijawab (`Jawaban:`) atau ditandai `[DONE]` dihapus dari versi final.
   
 ## Diagram alur saat menjelasakan alur Logic Flow
 

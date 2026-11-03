@@ -60,7 +60,7 @@ Design Panel (ikon palet) mengatur tampilan bar, track, dan needle:
 | [[^field|theme]] | Tema pewarnaan : `monochrome`, `phoenix`, `fun`, `classy`, `futuristic`, `elegant`, `aurora`, `forest`, `royal`, `obsidian`, `celestial`, `volcanic`, `lotus`, `cyberpunk`, `desert`. |
 | Ikon opacity (contoh 100%) | Opacity bar. |
 | Ikon arc gap (contoh 17) | Jarak antar arc. |
-| [[^button/add|+ threshold]] | Menambahkan titik threshold. Setiap titik memiliki input [[^field|at]] (dalam persen) dan warna. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan. |
+| [[^button/add|threshold]] | Menambahkan titik threshold. Setiap titik memiliki input [[^field|at]] (dalam persen) dan warna. Nilai di atas persentase threshold berubah menjadi warna yang ditentukan. |
 | [[^field|track]] | Warna track (contoh abu-abu), dengan ikon opacity track di sebelahnya (contoh 15%). |
 | [[^field|needle]] | Warna needle (contoh hitam), dengan ikon panjang needle di sebelahnya (contoh 120%). Panjang dihitung dari persentase ruang di tengah. Nilai 120% membuat needle mengenai bar. |
 | [[^toggle/legends|Legends]] | Toggle untuk menampilkan atau menyembunyikan legenda. |

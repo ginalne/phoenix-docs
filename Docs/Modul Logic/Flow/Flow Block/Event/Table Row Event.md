@@ -1,11 +1,11 @@
 ---
-    status: release
-    title: Table Row Event
-    description: Flow Block Event yang terpicu ketika Row pada Table ditambahkan, diperbarui, atau dihapus.
-    pageDecoration:
-      icon: zap
-      tree:
-        priority: 0
+      status: release
+      title: Table Row Event
+      description: Flow Block Event yang terpicu ketika Row pada Table ditambahkan, diperbarui, atau dihapus.
+      pageDecoration:
+        icon: zap
+        tree:
+          priority: 0
 ---
 # Table Row Event
 
@@ -16,10 +16,6 @@ Table Row Event adalah Flow Block Event yang memulai alur setiap kali [[Docs/Tip
 Dengan satu block ini, Anda dapat mengintegrasikan Row baru ke sistem lain, mengotomasi tindakan saat Row diperbarui, dan menindaklanjuti Row yang dihapus.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Event/table-row-event.png|Table Row Event Block pada Blueprint]]
-
-<!--
-  * [DONE] Letakkan potongan gambar Table Row Event dari screenshot (file `table-row-event.png`). Anotasi yang disarankan: nomor 1 pada judul, nomor 2 pada tombol Trigger, nomor 3 pada output Row, Event, dan Old.
--->
 
 ## Kapan Table Row Event Terpicu
 
@@ -39,13 +35,16 @@ flowchart LR
     B -->|"&nbsp;**[Object]**&nbsp;<br>Old"| C
 ```
 
-## Input dan Output
+>**note** Hanya perubahan yang memicu Table Row Event
+> Menyimpan Row tanpa ada perubahan tidak memicu Table Row Event. Aksi create, update, atau delete pada Row yang dilakukan oleh Flow juga tidak memicu Flow kembali, sedangkan Import atau Upload tetap memicu [[^value/string|create]].
 
-Table Row Event tidak memiliki input koneksi. Block ini memiliki tiga output di sisi kanan.
+## Input, Control dan Output
+
+Table Row Event tidak memiliki input koneksi. Block ini memiliki satu Control berupa tombol dan tiga output di sisi kanan.
 
 | Bagian | Jenis | Tipe Data | Penjelasan |
 | --- | --- | --- | --- |
-| [[^button/empty\|Trigger]] | Control | - | Memicu Table Row Event secara manual dari Blueprint. |
+| [[^button/empty|Trigger]] | Control | - | Memicu Table Row Event secara manual dari Blueprint. |
 | [[^output|Row]] | Output | [[Docs/Tipe Data/Row]] | Row yang ditambahkan, diperbarui, atau dihapus. |
 | [[^output|Event]] | Output | [[Docs/Tipe Data/String]] | Jenis peristiwa: [[^value/string|create]], [[^value/string|update]], atau [[^value/string|delete]]. |
 | [[^output|Old]] | Output | [[Docs/Tipe Data/Object]] | Nilai Row sebelum perubahan. Isinya bergantung pada nilai [[^output|Event]]. |
@@ -55,10 +54,10 @@ Table Row Event tidak memiliki input koneksi. Block ini memiliki tiga output di 
 | Nilai [[^output|Event]] | Isi [[^output|Row]] | Isi [[^output|Old]] |
 | --- | --- | --- |
 | [[^value/string|create]] | Row yang baru ditambahkan. | [[^value/empty]], karena Row belum ada sebelumnya. |
-| [[^value/string|update]] | Row dengan nilai terbaru. | Hanya [[Docs/Tipe Data/Column]] yang diubah, berisi nilai sebelum perubahan. Jika tidak ada perubahan, [[^value/empty]]. |
+| [[^value/string|update]] | Row dengan nilai terbaru. | Hanya [[Docs/Tipe Data/Column]] yang diubah, berisi nilai sebelum perubahan. Jika hanya satu Column yang diubah, [[^output|Old]] hanya memuat Column itu. |
 | [[^value/string|delete]] | Row yang dihapus. | Seluruh Column dari Row yang dihapus. |
 
-Aturan [[^output|Event]] dan [[^output|Old]] yang sama juga berlaku pada [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan#Output Event dan Old|Enum Data Event dan Tree Node Event]].
+Aturan [[^output|Event]] dan [[^output|Old]] yang sama juga berlaku pada [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event#Isi Output Berdasarkan Event|Enum Data Event]] dan [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event#Isi Output Berdasarkan Event|Tree Node Event]].
 
 ## Menggunakan Table Row Event
 
@@ -80,7 +79,7 @@ Gunakan ketika setiap pesanan baru perlu langsung dikirim ke sistem lain, misaln
 | Peristiwa | Output [[^output|Row]] | Output [[^output|Event]] | Output [[^output|Old]] |
 | --- | --- | --- | --- |
 | Pesanan baru ditambahkan lewat halaman kerja Table | Row dengan Nomor Pesanan [[^value/string|SO-0001]], Status [[^value/enumdata|Menunggu]], Total [[^value/number|150000]] | [[^value/string|create]] | [[^value/empty]] |
-| Pesanan baru ditambahkan lewat Flow Block lain | Row baru yang sama bentuknya | [[^value/string|create]] | [[^value/empty]] |
+| Pesanan baru masuk lewat Import atau Upload | Row baru dengan bentuk yang sama | [[^value/string|create]] | [[^value/empty]] |
 
 Kombinasi yang berguna: [[^output|Row]] untuk mengirim seluruh isi pesanan, [[^output|Event]] untuk memastikan hanya [[^value/string|create]] yang diteruskan.
 
@@ -90,9 +89,8 @@ Gunakan ketika perubahan pada pesanan, misalnya perubahan [[^field/column|Status
 
 | Peristiwa | Output [[^output|Row]] | Output [[^output|Event]] | Output [[^output|Old]] |
 | --- | --- | --- | --- |
-| Hanya [[^field/column\|Status]] diubah dari [[^value/enumdata\|Menunggu]] menjadi [[^value/enumdata\|Diproses]] | Row dengan Status [[^value/enumdata\|Diproses]] | [[^value/string|update]] | Hanya [[^value/object|{ “Status”: “Menunggu”}]] |
-| [[^field/column\|Status]] dan [[^field/column\|Total]] diubah bersamaan | Row dengan Status dan Total terbaru | [[^value/string|update]] | Status dan Total dengan nilai sebelumnya |
-| Row disimpan tanpa ada perubahan | Row yang sama | [[^value/string|update]] | [[^value/empty]] |
+| Hanya [[^field/column|Status]] diubah dari [[^value/enumdata|Menunggu]] menjadi [[^value/enumdata|Diproses]] | Row dengan Status [[^value/enumdata|Diproses]] | [[^value/string|update]] | [[^value/object|{ "Status": "Menunggu" }]] |
+| [[^field/column|Status]] dan [[^field/column|Total]] diubah bersamaan, Total dari [[^value/number|150000]] menjadi [[^value/number|175000]] | Row dengan Status dan Total terbaru | [[^value/string|update]] | [[^value/object|{ "Status": "Menunggu", "Total": 150000 }]] |
 
 Kombinasi yang berguna: bandingkan [[^output|Old]] dengan [[^output|Row]] untuk mengetahui apa yang berubah dan nilai sebelumnya, misalnya hanya meneruskan jika Status berpindah ke nilai tertentu.
 
@@ -102,21 +100,9 @@ Gunakan ketika penghapusan pesanan perlu dicatat atau dibatalkan di sistem lain.
 
 | Peristiwa | Output [[^output|Row]] | Output [[^output|Event]] | Output [[^output|Old]] |
 | --- | --- | --- | --- |
-| Pesanan dihapus lewat kolom Action | Row yang dihapus | [[^value/string|delete]] | Seluruh Column: Nomor Pesanan, Status, dan Total |
+| Pesanan dihapus lewat kolom Action | Row yang dihapus, dengan nilai terakhir sebelum dihapus | [[^value/string|delete]] | [[^value/object|{ "Nomor Pesanan": "SO-0001", "Status": "Diproses", "Total": 175000 }]] |
 
 Kombinasi yang berguna: [[^output|Old]] menyimpan seluruh isi Row yang dihapus, sehingga Anda masih dapat mengirim data pesanan yang sudah tidak ada di Table.
-
-<!--
-  * [DONE] Nama Column dan nilai pada contoh (Nomor Pesanan, Status, Total, SO-0001, Menunggu, Diproses) adalah penamaan generik buatan Claude. Sesuaikan bila perlu.
-  * [TODO] Konfirmasi apakah [[^output|Row]] pada [[^value/string|delete]] berisi Row terakhir sebelum dihapus.
-    Jawaban : Ya
-  * [TODO] Konfirmasi apakah menyimpan Row tanpa perubahan tetap memicu [[^value/string|update]] dengan [[^output|Old]] Empty, atau tidak memicu Table Row Event sama sekali.
-    Jawaban : Tidak memicu sama sekali
-  * [TODO] Konfirmasi apakah Row yang ditambahkan lewat Flow Block lain, import, atau upload juga memicu [[^value/string|create]].
-    Jawaban : Perlu dicatat bahwa aksi create, update atau delete pada data apapun oleh Flow tidak mentrigger Flow kembali. Jadi yang selain itu seperti Import atau Upload tetap memicu create. 
-  * [TODO] Konfirmasi path `Docs/Modul Data/Table/Event` dan nama tombol Event pada langkah 2.
-    Jawaban : Sudah saya perbaiki
--->
 
 ## Lihat Juga
 

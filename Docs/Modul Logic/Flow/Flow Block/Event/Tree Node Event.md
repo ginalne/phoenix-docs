@@ -1,11 +1,11 @@
 ---
-    status: release
-    title: Tree Node Event
-    description: Flow Block Event yang terpicu ketika Node pada Tree ditambahkan, diperbarui, atau dihapus.
-    pageDecoration:
-      icon: zap
-      tree:
-        priority: 0
+status: release
+title: Tree Node Event
+description: Flow Block Event yang terpicu ketika Node pada Tree ditambahkan, diperbarui, atau dihapus.
+pageDecoration:
+  icon: zap
+  tree:
+    priority: 0
 ---
 # Tree Node Event
 
@@ -17,10 +17,6 @@ Karena Tree menyimpan data berbentuk hierarki, block ini berguna untuk menjaga s
 
 ![[Docs/Modul Logic/Flow/Flow Block/Event/tree-node-event.png|Tree Node Event Block pada Blueprint]]
 
-<!--
-  * [DONE] Letakkan potongan gambar Tree Node Event dari screenshot (file `tree-node-event.png`). Anotasi yang disarankan: nomor 1 pada judul, nomor 2 pada tombol Trigger, nomor 3 pada output Node, Event, dan Old.
--->
-
 ## Kapan Tree Node Event Terpicu
 
 Tree Node Event terpicu ketika Node pada Tree yang terhubung mengalami salah satu dari tiga peristiwa berikut.
@@ -28,7 +24,7 @@ Tree Node Event terpicu ketika Node pada Tree yang terhubung mengalami salah sat
 | Peristiwa | Nilai [[^output|Event]] |
 | --- | --- |
 | Node baru ditambahkan | [[^value/string|create]] |
-| Node yang sudah ada diperbarui | [[^value/string|update]] |
+| Node yang sudah ada diperbarui, termasuk dipindahkan ke induk lain | [[^value/string|update]] |
 | Node dihapus | [[^value/string|delete]] |
 
 ```mermaid
@@ -39,13 +35,19 @@ flowchart LR
     B -->|"&nbsp;**[Object]**&nbsp;<br>Old"| C
 ```
 
+>**note** Hanya perubahan yang memicu Tree Node Event
+> Menyimpan Node tanpa ada perubahan tidak memicu Tree Node Event. Aksi create, update, atau delete pada Node yang dilakukan oleh Flow juga tidak memicu Flow kembali.
+
+>**note** Satu perubahan dapat memicu Event di beberapa Tree
+> Jika beberapa Tree Merger mengkloning Node yang saling terhubung dan tidak berstatus read only, perubahan pada satu Node dapat menghasilkan Event pada masing-masing Tree. Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Konfigurasi Merger Mode]].
+
 ## Input, Control dan Output
 
-Tree Node Event tidak memiliki input koneksi. Block ini memiliki satu control dan tiga output.
+Tree Node Event tidak memiliki input koneksi. Block ini memiliki satu Control berupa tombol dan tiga output di sisi kanan.
 
 | Bagian | Jenis | Tipe Data | Penjelasan |
 | --- | --- | --- | --- |
-| [[^button/empty\|Trigger]] | Control | - | Memicu Tree Node Event secara manual dari Blueprint. |
+| [[^button/empty|Trigger]] | Control | - | Memicu Tree Node Event secara manual dari Blueprint. |
 | [[^output|Node]] | Output | [[Docs/Tipe Data/Node]] | Node yang ditambahkan, diperbarui, atau dihapus. |
 | [[^output|Event]] | Output | [[Docs/Tipe Data/String]] | Jenis peristiwa: [[^value/string|create]], [[^value/string|update]], atau [[^value/string|delete]]. |
 | [[^output|Old]] | Output | [[Docs/Tipe Data/Object]] | Nilai Node sebelum perubahan. Isinya bergantung pada nilai [[^output|Event]]. |
@@ -55,10 +57,10 @@ Tree Node Event tidak memiliki input koneksi. Block ini memiliki satu control da
 | Nilai [[^output|Event]] | Isi [[^output|Node]] | Isi [[^output|Old]] |
 | --- | --- | --- |
 | [[^value/string|create]] | Node yang baru ditambahkan. | [[^value/empty]], karena Node belum ada sebelumnya. |
-| [[^value/string|update]] | Node dengan nilai terbaru. | Hanya field yang diubah (Name, Order, atau Children), berisi nilai sebelum perubahan. Jika tidak ada perubahan, [[^value/empty]]. |
-| [[^value/string|delete]] | Node yang dihapus. | Seluruh field Node yang dihapus. |
+| [[^value/string|update]] | Node dengan nilai terbaru. | Hanya field yang diubah (Name, Order, Parent, atau Children), berisi nilai sebelum perubahan. Jika hanya satu field yang diubah, [[^output|Old]] hanya memuat field itu. |
+| [[^value/string|delete]] | Node yang dihapus. | Seluruh field Node: Name, Order, Parent, dan Children. |
 
-Aturan [[^output|Event]] dan [[^output|Old]] yang sama juga berlaku pada [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan#Output Event dan Old|Table Row Event dan Enum Data Event]].
+Aturan [[^output|Event]] dan [[^output|Old]] yang sama juga berlaku pada [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event#Isi Output Berdasarkan Event|Table Row Event]] dan [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event#Isi Output Berdasarkan Event|Enum Data Event]].
 
 ## Menggunakan Tree Node Event
 
@@ -71,7 +73,7 @@ Aturan [[^output|Event]] dan [[^output|Old]] yang sama juga berlaku pada [[Docs/
 
 ## Contoh Penggunaan
 
-Contoh berikut memakai Tree struktur kategori dengan Node yang memiliki field Name, Order, dan Children. Setiap contoh menunjukkan kombinasi output yang diterima block berikutnya.
+Contoh berikut memakai Tree struktur kategori dengan Node yang memiliki field Name, Order, Parent, dan Children. Setiap contoh menunjukkan kombinasi output yang diterima block berikutnya.
 
 ### Integrasi ketika ada Node baru
 
@@ -85,15 +87,18 @@ Kombinasi yang berguna: [[^output|Node]] untuk mengirim data cabang baru, [[^out
 
 ### Otomasi ketika Node diperbarui
 
-Gunakan ketika perubahan pada Node, seperti penggantian nama atau perubahan urutan, perlu ditindaklanjuti.
+Gunakan ketika perubahan pada Node, seperti penggantian nama, perubahan urutan, atau pemindahan ke induk lain, perlu ditindaklanjuti.
 
 | Peristiwa | Output [[^output|Node]] | Output [[^output|Event]] | Output [[^output|Old]] |
 | --- | --- | --- | --- |
-| Hanya Name diubah dari [[^value/string|Perangkat Mobile]] menjadi [[^value/string|Gawai]] | Node dengan Name [[^value/string|Gawai]] | [[^value/string|update]] | Hanya Name: [[^value/string|Perangkat Mobile]] |
-| Name dan Order diubah bersamaan | Node dengan Name dan Order terbaru | [[^string|update]] | Name dan Order dengan nilai sebelumnya |
-| Disimpan tanpa ada perubahan | Node yang sama | [[^string|update]] | [[^value/empty]] |
+| Hanya Name diubah dari [[^value/string|Perangkat Mobile]] menjadi [[^value/string|Gawai]] | Node dengan Name [[^value/string|Gawai]] | [[^value/string|update]] | [[^value/object|{ "Name": "Perangkat Mobile" }]] |
+| Name dan Order diubah bersamaan | Node dengan Name dan Order terbaru | [[^value/string|update]] | [[^value/object|{ "Name": "Perangkat Mobile", "Order": 2 }]] |
+| Node dipindahkan ke induk lain | Node dengan Parent terbaru | [[^value/string|update]] | [[^value/object|{ "Parent": "Elektronik" }]] |
 
 Kombinasi yang berguna: bandingkan [[^output|Old]] dengan [[^output|Node]] untuk mengetahui field mana yang berubah, misalnya hanya meneruskan jika Name berubah.
+
+>**note** Memindahkan Node hanya memicu update pada Node yang dipindahkan
+> Anak dari Node yang dipindahkan tidak menghasilkan Event, karena Parent mereka tidak berubah.
 
 ### Otomasi ketika Node dihapus
 
@@ -101,21 +106,13 @@ Gunakan ketika Node yang dihapus perlu dicatat atau dihapus juga di sistem lain.
 
 | Peristiwa | Output [[^output|Node]] | Output [[^output|Event]] | Output [[^output|Old]] |
 | --- | --- | --- | --- |
-| Node dihapus | Node yang dihapus | [[^value/string|delete]] | Seluruh field: Name, Order, dan Children |
+| Node tanpa anak dihapus | Node yang dihapus | [[^value/string|delete]] | Seluruh field: Name, Order, Parent, dan Children (kosong) |
+| Node yang memiliki anak dihapus | Node yang dihapus | [[^value/string|delete]] | Seluruh field: Name, Order, Parent, dan Children lengkap |
 
 Kombinasi yang berguna: [[^output|Old]] menyimpan seluruh isi Node yang dihapus, sehingga Anda masih dapat mengirim data Node tersebut walaupun sudah tidak ada di Tree.
 
-<!--
-  * [DONE] Nama Tree dan Node pada contoh (Perangkat Mobile, Gawai) adalah penamaan generik buatan Claude. Sesuaikan bila perlu.
-  * [TODO] Konfirmasi field Node yang dapat muncul di [[^output|Old]]. Draf ini mengasumsikan Name, Order, dan Children berdasarkan atribut External Read Only pada Tree.
-    Jawaban: Parent juga.
-  * [TODO] Konfirmasi apakah memindahkan Node ke induk lain dihitung sebagai [[^value/string|update]], dan apakah menghapus Node yang memiliki Children menghasilkan satu atau beberapa peristiwa [[^value/string|delete]].
-    Jawaban: Iya, update hanya pada node yang dipindahkan (bukan anaknya karena tidak ada perubahan parent pada anak). Menghapus Node yang memiliki children menghasilkan satu peristiwa delete padanya, dengan field old children lengkap
-  * [TODO] Konfirmasi apakah Node hasil clone pada Tree Merger juga memicu Tree Node Event.
-    Jawaban : Iya, jadi jika ada banyak tree merge mengkloning dan saling terhubung (non read only) maka melakukan perubahan di satu node bisa menghasilkan event dimasing-masing tree.
-  * [TODO] Konfirmasi path `Docs/Modul Data/Tree/Event` dan nama tombol Event pada langkah 2.
-    Jawaban : Sudah saya perbaiki
--->
+>**note** Menghapus Node yang memiliki anak hanya menghasilkan satu Event delete
+> Event delete hanya untuk Node yang dihapus. Daftar anaknya tersedia lengkap pada field Children di [[^output|Old]].
 
 ## Lihat Juga
 

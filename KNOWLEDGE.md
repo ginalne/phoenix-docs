@@ -86,6 +86,28 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Eksekusi manual:** lewat antarmuka Flow, gunakan tombol pada Flow Block Event (misalnya Trigger pada Pulser).
 - **Event dari komponen:** Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol Event pada masing-masing komponen.
 - **Memantau proses:** klik tombol Activity/Submission, panel Flow Activity terbuka. Panel memiliki tombol Refresh List, kolom Search Activity, kolom ID/Name, Status/Type, Start At, Updated At, dan menampilkan "No Activity" bila kosong.
+- 
+## Flow Block Event
+
+- **Lima block:** Pulser, Variable Event, Enum Data Event, Table Row Event, Tree Node Event. Semua memiliki satu Control (tombol Trigger, tanpa ikon) dan tidak memiliki input koneksi.
+- **Output per block:**
+  - Pulser: `Result` (Boolean, selalu `true`).
+  - Variable Event: `Variable`, `Event`, `Old`.
+  - Enum Data Event: `EnumData`, `Event`, `Old`.
+  - Table Row Event: `Row`, `Event`, `Old`.
+  - Tree Node Event: `Node`, `Event`, `Old`.
+- **Aturan `Event` dan `Old` (Table, Enum, Tree):** `Event` bertipe String (`create`, `update`, `delete`). `Old` bertipe Object. create: Empty. update: hanya field yang diubah (satu field berubah, hanya field itu). delete: seluruh field.
+- **Variable Event berbeda:** hanya `update` dan `delete` (tidak ada `create`). `update` hanya terpicu bila Value berubah. `Old` pada update berisi Value sebelumnya (tipe sesuai Type), pada delete berisi seluruh atribut Variable Data. Dihubungkan per Variable Data lewat tombol Event pada baris Variable, atau klik kanan daftar Variable ➜ Setup Event.
+- **Field per tipe:** EnumData: Name, Description, Value, Selectable. Node: Name, Order, Parent, Children. Variable Data: Name, Type, Value, Description (Type pada Old delete belum terkonfirmasi).
+- **Perilaku pemicu:**
+  - Menyimpan Row tanpa perubahan **tidak** memicu Table Row Event. Hal yang sama diterapkan pada Enum dan Tree (belum terkonfirmasi eksplisit).
+  - Aksi create, update, atau delete pada data apa pun oleh Flow **tidak memicu Flow kembali**. Import dan Upload tetap memicu `create`. Cakupan (semua Flow atau Flow yang sama) belum terkonfirmasi.
+  - `Row` atau `EnumData` pada delete berisi nilai terakhir sebelum dihapus.
+- **Tree Node Event:** memindahkan Node ke induk lain menghasilkan `update` hanya pada Node yang dipindahkan (Old berisi Parent lama), bukan pada anaknya. Menghapus Node yang punya anak menghasilkan satu `delete` pada Node itu, dengan Children lengkap di Old. Node hasil clone pada Tree Merger juga memicu Event, sehingga satu perubahan dapat menghasilkan Event di beberapa Tree jika tidak read only.
+- **Pulser:** Trigger berulang membuat Activity baru, dan Activity pada Flow yang sama dapat berjalan paralel. Dipicu dari Trigger, Timeline Event (field Pulser Event), atau Widget Button Canvas.
+- **Koreksi atas knowledge sebelumnya:** komponen Variable **memiliki** cara menghubungkan Event (tombol Event pada setiap baris Variable, dan Setup Event lewat klik kanan daftar). Halaman cara menghubungkan Event dari komponen bernama `Mengotomasi` (Variable, Table, Enum, Tree).
+- **Path:** Timeline Event `Docs/Modul Interface/Timeline/Timeline Event/Pengenalan`, Widget Button `Docs/Modul Interface/Canvas/Widget/Basic/Button`, Syarat Eksekusi `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
+- **Belum terkonfirmasi:** bentuk nilai Parent pada `Old` Tree, Type pada `Old` delete Variable, perilaku Trigger manual selain Pulser, fungsi segitiga biru di kiri judul block, dan tipe data yang tepat untuk `Old` Variable Event pada diagram.
 
 # Variable (Modul Data)
 

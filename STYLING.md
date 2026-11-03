@@ -253,13 +253,13 @@ test [[button/edit|Edit]] [[button|Create]]
 ```
 
 Run ${widgets.commandButton "System: Reload"} to reload. 
-awdadw awd [[^toggle/123|1531531315]] awdawd
+awdadw awd [[^toggle/123|1531531315]] awdawd [[^toggle/auto|Auto]] 
 ```space-style
 
 #sb-main .cm-editor a[href^="toggle/"] {
   display:inline-block !important;
   position:relative;
-  padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+  padding: 1rem 1rem 1rem 1rem;
   margin: 0.5rem 0.3rem;
   color: #bdbdbd !important;
   border: 1px solid rgb(63 63 70);
@@ -277,7 +277,7 @@ awdadw awd [[^toggle/123|1531531315]] awdawd
   position:absolute;
   left:50%;
   top:50%;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   transform: translate(-50%, -50%);
 }
 ```

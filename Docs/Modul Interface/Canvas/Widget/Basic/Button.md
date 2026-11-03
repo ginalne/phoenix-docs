@@ -27,8 +27,8 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon Button (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field\|Action]] | Mendefinisikan aksi tombol dengan Tipe Data [[Docs/Tipe Data/Action]]. Aksi dapat berupa aksi terhadap Row Table, membuka halaman, atau membuka popup Interface. |
-| [[^button/delete\|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Button]]. |
+| [[^field|Action]] | Mendefinisikan aksi tombol dengan Tipe Data [[Docs/Tipe Data/Action]]. Aksi dapat berupa aksi terhadap Row Table, membuka halaman, atau membuka popup Interface. |
+| [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Button]]. |
 
 ### Layout Panel
 
