@@ -62,3 +62,4 @@ Pada Object, mengubah atribut menjadi [[^value/radio|static]] berlaku untuk selu
 
 >**warning** Perubahan pada Object mengubah data sumber
 > Nilai yang diubah pada Object tersimpan ke data sumber dan terlihat oleh komponen lain yang memakai Row yang sama. Perubahan hanya berhasil bila [[#Hak Akses Space|Data Access]] sumber mengizinkan.
+

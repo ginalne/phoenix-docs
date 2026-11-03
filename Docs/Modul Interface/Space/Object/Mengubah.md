@@ -16,3 +16,4 @@ Untuk mengubah atribut seperti [[^field|Name]], [[^field|Description]], [[^field
 Anda juga dapat memindahkan objek 3D dengan alat bantu pemindah. Jika atributnya di-*bind*, perubahan nilainya memperbarui Row sumber.
 
 Nilai yang diubah pada Object memengaruhi [[Docs/Tipe Data/Row]] sebenarnya pada data sumber, selama [[#Hak Akses Space|hak akses]] mengizinkan.
+

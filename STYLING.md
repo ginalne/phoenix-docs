@@ -254,29 +254,34 @@ test [[button/edit|Edit]] [[button|Create]]
 
 Run ${widgets.commandButton "System: Reload"} to reload. 
 awdadw awd [[^toggle/123|1531531315]] awdawd [[^toggle/auto|Auto]] 
+1. Klik [[^button/nolabel/q]] pada Timeline Data
+ [[^button/nolabel/q]] pada Timeline Data
 ```space-style
 
-#sb-main .cm-editor a[href^="toggle/"] {
+#sb-main .cm-editor a[href^="toggle/"],
+#sb-main .cm-editor a[href^="button/nolabel/"] {
   display:inline-block !important;
   position:relative;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 0.5rem 0.3rem;
+  padding: 1rem 1rem 1rem 1rem !important;
+  margin: 0.5rem 0.5rem 0.3rem 0.3rem !important;
   color: #bdbdbd !important;
   border: 1px solid rgb(63 63 70);
-  font-size: 0rem;
+  font-size: 0rem !important;
   border-radius: 9999px !important;
   background-color: #161616;
   pointer-events: none;
   transform: translate(0, -.3rem) !important;
 }
-#sb-main .cm-editor i a[href^="toggle/"] {
+#sb-main .cm-editor i a[href^="toggle/"],
+#sb-main .cm-editor i a[href^="button/nolabel/"] {
   pointer-events: auto !important;
   font-size: 1rem !important;
 }
-#sb-main .cm-editor a[href^="toggle/"] span {
+#sb-main .cm-editor a[href^="toggle/"] span,
+#sb-main .cm-editor a[href^="button/nolabel/"] span {
   position:absolute;
-  left:50%;
-  top:50%;
+  left:50% !important;
+  top:50% !important;
   font-size: 1.3rem;
   transform: translate(-50%, -50%);
 }

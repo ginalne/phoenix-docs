@@ -12,3 +12,4 @@
 2. Ubah nilai pada [[#Panel Properti]]
 
 Perubahan [[^field|Priority]] atau [[^field|Status]] dapat mengubah Weather mana yang berlaku untuk [[^field|Type]] yang sama.
+

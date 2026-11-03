@@ -13,3 +13,4 @@
 
 >**warning** Benda hilang dari ruang
 > Environment yang dihapus tidak lagi tampil di ruang 3D. File 3D yang di-*upload* ikut terhapus.
+

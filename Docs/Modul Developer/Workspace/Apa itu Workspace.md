@@ -14,9 +14,9 @@
 ---
 # Apa itu Workspace?
 
->**note** _Workspace_ merupakan salah satu komponen dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.
+>**note** Workspace merupakan salah satu komponen dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.
 
-_Workspace_ adalah komponen yang dapat digunakan untuk mengatur ruang kerja pengembangan Anda, termasuk komponen apa saja yang dapat dilihat, dikelola, dan diubah, serta fungsi di dalamnya. Akses Workspace ke setiap anggota dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
+Workspace adalah komponen yang dapat digunakan untuk mengatur ruang kerja pengembangan Anda, termasuk komponen apa saja yang dapat dilihat, dikelola, dan diubah, serta fungsi di dalamnya. Akses Workspace ke setiap anggota dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
 
 Dengan Workspace, Anda tidak perlu mengatur hak akses di banyak tempat. Seluruh folder dan komponen tersaji dalam satu halaman kerja berbentuk pohon, dan setiap hak akses cukup ditentukan dengan memilih [[^value/boolean/allow]] atau [[^value/boolean/disallow]]. Pengaturan ini berlaku sampai ke level data, sehingga Anda dapat menerapkan prinsip *least privilege* tanpa harus membuat komponen baru.
 
@@ -37,7 +37,7 @@ Aturan yang sama berlaku untuk komponen di modul [[Docs/Modul Data/Pengenalan|Da
 | Istilah | Penjelasan |
 | --- | --- |
 | [[#Cara Kerja Workspace|Workspace]] | Komponen untuk mengatur ruang kerja pengembangan, yaitu komponen yang dapat dilihat, dikelola, dan diubah, serta fungsi di dalamnya. |
-| [[#Cara Kerja Workspace|Origin]] | Workspace utama sekaligus folder paling atas yang dimiliki setiap [[Docs/Inisialisasi/Apa itu Pro|Pro]]. |
+| [[#Cara Kerja Workspace|Origin]] | Workspace bawaan utama sekaligus folder paling atas yang dimiliki setiap [[Docs/Inisialisasi/Apa itu Pro|Pro]]. |
 | [[#Cara Kerja Workspace|Root]] | Folder paling atas pada halaman kerja Workspace. Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itulah yang menjadi root. |
 | [[Docs/Modul Developer/Group/Apa itu Group|Group]] | Kumpulan pengguna yang dipetakan ke Workspace. Pada halaman kerja, Group tampil sebagai baris dengan angka jumlah anggotanya. Setiap Pro memiliki Group bawaan bernama [[^field/group|Administrator]]. |
 | [[Docs/Folder/Apa itu Folder?|Folder]] | Wadah yang berisi banyak komponen dan dapat diperluas atau dilipat. |
@@ -342,8 +342,9 @@ Baris pada [[^field/tableview|Daftar Pelanggan]] hanya dapat dikelola jika Data 
 Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya, tanpa menambah komponen atau menduplikasi data.
 
 <!--
-  * [TODO] Nama folder dan komponen pada Contoh Penggunaan adalah nama generik. Mohon sesuaikan dengan gambar bila diperlukan.
+  * [DONE] Nama folder dan komponen pada Contoh Penggunaan adalah nama generik. Mohon sesuaikan dengan gambar bila diperlukan.
   * [TODO] Contoh ketiga dan Ide skenario lain adalah usulan baru. Mohon konfirmasi apakah komponen sumber (Data Pelanggan) harus [[^field|Visible]] [[^value/boolean/allow]] agar Data Access-nya berlaku lewat Table View.
+    Jawaban: Visible ketika mengisi Query untuk table view data. Jika Query sudah terisi, tidak perlu lagi visible allow.
 -->
 
 ## Praktik Terbaik
@@ -360,6 +361,7 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 
 <!--
   * [TODO] Poin "Jaga akses administrator" adalah asumsi. Mohon konfirmasi apakah menonaktifkan akses pada komponen Workspace atau Group benar-benar dapat mengunci pengelolaan akses, atau ada pengaman bawaan.
+    Jawaban: Betul, tidak ada pengamanan bawaan lain
 -->
 
 ## Batasan dan Catatan
@@ -376,6 +378,7 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 
 <!--
   * [TODO] Poin tentang pengisi Form dan pengunjung publik disusun dari informasi Form (akses menambah Row dianggap diizinkan saat pembuat Form memilih Table) dan Canvas (tautan publik hanya View Mode). Mohon konfirmasi bahwa pengunjung publik memang tidak dibatasi Workspace.
+    Jawaban: Betul, tidak dibatasi
 -->
 
 ## TL:DR

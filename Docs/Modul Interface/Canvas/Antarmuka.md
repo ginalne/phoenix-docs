@@ -86,3 +86,4 @@ Pada Edit Mode, klik kiri layout atau widget untuk memfokuskannya dan otomatis m
 
 >**note** Isi toolbar berbeda pada layout dan setiap widget
 > Panel tata letak sama di semua widget. Header toolbar dan panel tampilan widget bersifat unik untuk masing-masing widget. Keunikan setiap widget dijelaskan di halaman widget masing-masing pada [[#Widget Canvas]].
+

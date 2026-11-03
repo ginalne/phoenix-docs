@@ -14,3 +14,4 @@
 
 >**warning** Seluruh isi Space ikut terhapus
 > Seluruh data [[#Mengelola Weather|Weather]], [[#Mengelola Environment|Environment]], dan [[#Mengelola Object|Object]] beserta konfigurasi [[Docs/Tipe Data/Query|Query]] dan [[#Mengatur Model Attribute|Model Attribute]] akan hilang. [[Docs/Tipe Data/Row]] pada data sumber tidak ikut terhapus.
+

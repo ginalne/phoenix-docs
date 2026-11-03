@@ -23,3 +23,4 @@ Berikut adalah pertanyaan yang sering diajukan pada komponenSpace:
 > Penambahan dan penghapusan data mengikuti [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Space di Workspace. Hubungi pengelola Workspace Anda untuk memeriksa pengaturannya.
 > **Bagaimana cara mencari data di Space?**
 > Gunakan [[^field|Search Space Data...]] pada bilah navigasi untuk mencari data di Outliner berdasarkan Name, termasuk data yang jumlahnya banyak pada [[#Mengelola Object|Object]].
+

@@ -14,3 +14,4 @@
 4. Pilih [[^field|Model]]
 5. Isi [[^field|Query]] dengan klik [[^button/nolabel/q]]
 6. Atur [[^field|Model Attribute]] pada kolom [[^field|Static]] dan [[^field|Value]]
+

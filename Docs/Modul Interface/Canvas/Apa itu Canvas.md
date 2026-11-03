@@ -99,3 +99,4 @@ Penjelasan tentang pengelolaan Hak Akses dalam komponen Canvas lihat selengkapny
 - Bangun Canvas dengan menambahkan [[#Layout Canvas|Layout]], [[#Widget Canvas|widget]], atau [[#Template Canvas|Template]], lalu atur melalui [[#Header Toolbar dan Design Toolbar|header toolbar dan design toolbar]] yang muncul saat widget dipilih.
 - Gunakan [[#Binding Canvas|Binding]] agar satu desain dapat menampilkan data yang berbeda, dan [[#Mempublikasikan Canvas|Publish]] untuk membagikan Canvas lewat [[^field|Link]] yang dapat dibuka publik dalam View Mode.
 - Hati-hati: Button pada Canvas publik dapat ditekan siapa saja, dan menghapus Canvas membuat tautan yang sudah dibagikan tidak valid (data sumber aman).
+

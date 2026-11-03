@@ -14,3 +14,4 @@
 
 >**warning** Dampak menghapus Canvas
 > Menghapus Canvas hanya menghapus template dan properti yang sudah dibuat, termasuk [[Docs/Tipe Data/Query]] pada setiap widget. Data sumber tetap aman. Tautan yang sudah dibagikan melalui [[#Mempublikasikan Canvas|Publish]] menjadi tidak valid.
+

@@ -19,3 +19,4 @@ Menghapus widget dapat dilakukan dengan 2 cara, yaitu melalui toolbar dan menu k
 
 >**warning** Dampak penghapusan Widget
 > Menghapus Widget akan menghapus semua konfigurasi yang sudah dibuat.
+

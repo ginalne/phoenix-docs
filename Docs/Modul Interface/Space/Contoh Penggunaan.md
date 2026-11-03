@@ -57,3 +57,4 @@ flowchart LR
 | Tata ruang | Environment menampilkan bangunan atau perabot statis sebagai latar data yang dipantau. |
 
 Dengan menggabungkan Environment, Object, dan Weather, Space mengubah data tabel menjadi ruang yang dapat dijelajahi dan langsung terhubung dengan sumber datanya.
+

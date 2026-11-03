@@ -15,3 +15,4 @@
 
 >**note** Tombol Edit berbeda dengan Edit Mode
 > Tombol [[^button/edit|Edit]] hanya mengubah atribut Canvas (Name dan Description). Untuk mengubah isi Canvas seperti Layout dan widget, pindah ke Edit Mode melalui [[#Mode View dan Edit|toggle mode]].
+

@@ -18,3 +18,4 @@ Bagian di kiri tanda `/` pada [[^field|Name]] menunjukkan folder tempat Space di
 
 >**success** Space berhasil dibuat
 > Space yang baru dibuat belum memiliki data. Tambahkan [[#Mengelola Weather|Weather]], [[#Mengelola Environment|Environment]], atau [[#Mengelola Object|Object]] melalui [[#Antarmuka Space|Outliner]].
+

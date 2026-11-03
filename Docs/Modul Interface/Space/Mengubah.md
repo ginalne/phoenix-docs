@@ -14,3 +14,4 @@
 4. Klik [[^button|Update]]
 
 Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Space. Tombol [[^button/edit|Edit]] hanya mengubah atribut Space; untuk mengubah nilai Weather, Environment, dan Object gunakan [[#Panel Properti]].
+
