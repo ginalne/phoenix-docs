@@ -8,7 +8,7 @@
 ---
 # Mengubah Query Timeline Data
 
-1. Klik [[^button/q]] pada Timeline Data
+1. Klik [[^button/nolabel/q]] pada Timeline Data
 2. Ubah Query
 3. Tutup popup Query dengan klik di luar popup
 

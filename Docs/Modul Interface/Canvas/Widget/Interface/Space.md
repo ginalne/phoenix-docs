@@ -24,7 +24,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon Space (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Space Output]] |
+| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Space Output]] |
 | [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Space]]. |
 
 ### Layout Panel
@@ -47,7 +47,7 @@ Langkah menghapus Widget Space sama dengan menghapus widget lain. Lihat [[Docs/M
 
 > **faq**
 > **Query seperti apa yang dipakai Widget Space?**
-> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Space Output|Space Output]]. Atur melalui [[^button/q]] pada [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]].
+> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Space Output|Space Output]]. Atur melalui [[^button/nolabel/q]] pada [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]].
 > **Bagaimana mengatur ukuran dan jarak widget?**
 > Gunakan [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Layout Panel|Layout Panel]] untuk mengatur [[^field|min.]], [[^field|padding]], dan [[^field|margin]].
 > **Apakah menghapus widget menghapus data sumber?**

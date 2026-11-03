@@ -26,8 +26,8 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon radial (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field|Needle]] | [[Docs/Tipe Data/Query]] untuk nilai arah needle. Klik [[^button/q]] di sebelah kanannya untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Single Output]]. Menampilkan [[^field|Empty]] bila belum diisi. |
-| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
+| [[^field|Needle]] | [[Docs/Tipe Data/Query]] untuk nilai arah needle. Klik [[^button/nolabel/q]] di sebelah kanannya untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Single Output]]. Menampilkan [[^field|Empty]] bila belum diisi. |
+| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
 | [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Radial]]. |
 
 ### Layout Panel

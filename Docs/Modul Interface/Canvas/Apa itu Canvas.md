@@ -82,7 +82,7 @@ Penjelasan tentang pengelolaan Hak Akses dalam komponen Canvas lihat selengkapny
 
 - Canvas dalam [[#Mode View dan Edit|View Mode]] bersifat read only. Berpindah ke [[^value/radio|Edit]] hanya dapat dilakukan jika salah satu Data Access Canvas (Add, Update, atau Delete) bernilai [[^value/boolean/allow]].
 - Tombol [[^button/edit|Edit]] hanya mengubah atribut Canvas (Name dan Description), bukan isi Canvas.
-- Widget yang menyerupai komponen Interface lain bersifat lite. Query diatur melalui [[^button/q]], sedangkan isinya (data hasil [[Docs/Tipe Data/Query|Query]]) tidak dapat dimanipulasi dari Canvas.
+- Widget yang menyerupai komponen Interface lain bersifat lite. Query diatur melalui [[^button/nolabel/q]], sedangkan isinya (data hasil [[Docs/Tipe Data/Query|Query]]) tidak dapat dimanipulasi dari Canvas.
 - Canvas hanya memiliki satu jenis [[#Layout Canvas|Layout]], yang dapat ditumpuk di dalam Layout lain. Tipe horizontal atau vertical dapat diubah dengan toggle pada header toolbar.
 - Panel tata letak pada [[#Header Toolbar dan Design Toolbar|design toolbar]] sama di semua widget, sedangkan header toolbar dan panel tampilan bersifat unik untuk setiap widget.
 - Nama [[#Binding Canvas|Binding]] harus unik dan dipakai dalam Query widget. [[^field|Header]] bernilai N/A bila Canvasat tidak membutuhkannya.

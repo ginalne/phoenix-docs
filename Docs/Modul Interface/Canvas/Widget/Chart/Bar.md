@@ -29,7 +29,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon batang (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
+| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
 | [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Bar]]. |
 
 ### Layout Panel
@@ -97,7 +97,7 @@ Langkah menghapus Widget Chart Bar sama dengan menghapus widget lain. Lihat [[Do
 
 - Widget Chart Bar menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai grafik batang di [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]].
 - Tambahkan melalui [[^field|Type something here to add...]] dengan perintah `/chart bar` pada Edit Mode. Lihat [[#Menambahkan Widget Chart Bar]].
-- Header Toolbar berisi [[^field|Data]] dan [[^button/q]]. Panel di bawah widget: Layout Panel, Data Panel, dan Design Panel. Lihat [[#Antarmuka Widget Chart Bar]].
+- Header Toolbar berisi [[^field|Data]] dan [[^button/nolabel/q]]. Panel di bawah widget: Layout Panel, Data Panel, dan Design Panel. Lihat [[#Antarmuka Widget Chart Bar]].
 - Data Panel mengatur sumbu X, Y, dan Y2 (label, [[^field|min/max]], [[^field|tick]], [[^field|format]]).
 - Design Panel mengatur mode batang, orientasi, [[^field|style]], opacity, radius, [[^field|pattern]], marker, [[^field|legends]], zoom, grid, dan label nilai.
 - Menghapus widget tidak menghapus data sumber.
@@ -106,7 +106,7 @@ Langkah menghapus Widget Chart Bar sama dengan menghapus widget lain. Lihat [[Do
 
 > **faq**
 > **Query seperti apa yang dipakai Widget Chart Bar?**
-> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]]. Atur melalui [[^button/q]] pada Header Toolbar.
+> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]]. Atur melalui [[^button/nolabel/q]] pada Header Toolbar.
 > **Apa saja mode batang?**
 > `Grouped`, `Stacked`, dan `Full`, dipilih lewat radio button pada baris [[^field|mode]]. Toggle diverging, reversed, dan orientasi dapat dikombinasikan.
 > **Bagaimana membuat batang horizontal?**

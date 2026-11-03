@@ -26,7 +26,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon garis (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
+| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
 | [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Line]]. |
 
 ### Layout Panel
@@ -87,7 +87,7 @@ Langkah menghapus Widget Chart Line sama dengan menghapus widget lain. Lihat [[D
 
 - Widget Chart Line menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai grafik garis di [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]].
 - Tambahkan melalui [[^field|Type something here to add...]] dengan perintah `/chart line` pada Edit Mode. Lihat [[#Menambahkan Widget Chart Line]].
-- Header Toolbar berisi [[^field|Data]] dan [[^button/q]]. Panel di bawah widget: Layout Panel, Data Panel, dan Design Panel. Lihat [[#Antarmuka Widget Chart Line]].
+- Header Toolbar berisi [[^field|Data]] dan [[^button/nolabel/q]]. Panel di bawah widget: Layout Panel, Data Panel, dan Design Panel. Lihat [[#Antarmuka Widget Chart Line]].
 - Data Panel mengatur sumbu X, Y, dan Y2 lewat [[^field|min/max]], [[^field|tick]], dan [[^field|format]].
 - Design Panel mengatur garis, titik, zoom, grid, [[^field|theme]], [[^field|area]], dan [[^field|legends]].
 - Menghapus widget tidak menghapus data sumber.
@@ -96,7 +96,7 @@ Langkah menghapus Widget Chart Line sama dengan menghapus widget lain. Lihat [[D
 
 > **faq**
 > **Query seperti apa yang dipakai Widget Chart Line?**
-> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]]. Atur melalui [[^button/q]] pada Header Toolbar.
+> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]]. Atur melalui [[^button/nolabel/q]] pada Header Toolbar.
 > **Apa arti toggle A pada min/max?**
 > Toggle [[^field|A]] mengatur batas bawah dan batas atas sumbu secara otomatis. Jika nonaktif, sumbu mengikuti nilai [[^field|min/max]] sampai [[^field|until]]. Kolom yang dikosongkan berarti auto.
 > **Bagaimana mengatur jumlah label pada sumbu?**

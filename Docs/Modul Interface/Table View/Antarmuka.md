@@ -32,7 +32,7 @@ Area Data pada halaman kerja Table View terdiri dari:
 | ------ | ------ |
 | Judul Data | Menampilkan ikon panah, nama Data, dan angka jumlah [[Docs/Tipe Data/Row]] dalam tanda kurung. |
 | [[^value/radio|full]], [[^value/radio/|half]], [[^value/radio|quarter]] | Menentukan porsi layar yang ditempati Data. Selengkapnya lihat [[#Mengatur Tampilan Data]]. |
-| Tombol [[^button/q]] | Membuka pengaturan [[Docs/Tipe Data/Query]] untuk Data tersebut. |
+| Tombol [[^button/nolabel/q]] | Membuka pengaturan [[Docs/Tipe Data/Query]] untuk Data tersebut. |
 | Kolom Data | Menampilkan kolom hasil [[Docs/Tipe Data/Query]], ditambah [[^field|Action]] di akhir |
 | Baris Data | Menampilkan baris hasil [[Docs/Tipe Data/Query]], ditambah tombol [[^button/save|Save]] dan [[^button/delete|Delete]] |
 | [[^button/add|Add Row]] | Menambahkan baris pada sumber Data. |

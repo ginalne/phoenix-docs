@@ -27,7 +27,7 @@ Halaman kerja Timeline terdiri dari bilah navigasi di bagian atas dan area kerja
 | Header waktu | Baris di atas area kerja, misalnya [[^field|MonthYear]], [[^field|Week]], [[^field|Date]], [[^field|DateDayweek]], dan [[^field|Hour]]. Barisnya menyesuaikan tingkat [[#Menu Konteks Timeline|Zoom]]. |
 | [[^field|now]] | Garis dan penanda yang menunjukkan waktu saat ini. |
 | Grup Event | Judul `Event (n)` memuat Timeline Event, dengan n jumlah Timeline Event. Ikon jam di samping nama menandakan item tersebut Timeline Event. Jika kosong, tampil [[^field|Event is empty]] dan tombol [[^button/add|Add Event]]. |
-| Grup Timeline Data | Judul berisi nama Timeline Data, jumlah Row hasil Query, dan tombol [[^button/q]] untuk mengatur Query. Jika belum ada, tampil [[^field|Data is empty]] dan tombol [[^button/add|Add Data]]. |
+| Grup Timeline Data | Judul berisi nama Timeline Data, jumlah Row hasil Query, dan tombol [[^button/nolabel/q]] untuk mengatur Query. Jika belum ada, tampil [[^field|Data is empty]] dan tombol [[^button/add|Add Data]]. |
 | Blok | Timeline Event dan Row tampil sebagai blok di sumbu waktu, dengan nama di sampingnya. |
 | Panah pada judul grup | Klik panah di judul grup Event atau Timeline Data untuk melipat atau membuka grup tersebut. |
 

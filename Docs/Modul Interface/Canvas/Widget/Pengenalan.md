@@ -26,7 +26,7 @@ Widget adalah elemen penyusun tampilan Canvas. Widget yang tersedia:
 | [[Docs/Modul Interface/Canvas/Widget/Interface/Space|Space]]                                | Interface           |
 | [[Docs/Modul Interface/Canvas/Widget/Basic/Button|Button]]                              | Basic                    |
 
-[[Docs/Tipe Data/Query]] setiap widget diatur melalui tombol [[^button/q]] pada header toolbar. Isi widget, yaitu data hasil Query, tidak dapat dimanipulasi dari Canvas.
+[[Docs/Tipe Data/Query]] setiap widget diatur melalui tombol [[^button/nolabel/q]] pada header toolbar. Isi widget, yaitu data hasil Query, tidak dapat dimanipulasi dari Canvas.
 
 Widget Button dapat berfungsi sebagai pemicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] melalui Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]], atau membuka komponen apa pun.
 

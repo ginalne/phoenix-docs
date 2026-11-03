@@ -24,7 +24,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon Kanban (paling kiri)                  | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Kanban Output]] |
+| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Kanban Output]] |
 | [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Kanban]].                                                               |
 
 ### Layout Panel
@@ -62,7 +62,7 @@ Langkah menghapus Widget Kanban sama dengan menghapus widget lain. Lihat [[Docs/
 
 > **faq**
 > **Query seperti apa yang dipakai Widget Kanban?**
-> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Kanban Output|Kanban Output]]. Atur melalui [[^button/q]] pada [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]].
+> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Kanban Output|Kanban Output]]. Atur melalui [[^button/nolabel/q]] pada [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]].
 > **Mengapa saya tidak dapat memindahkan kartu?**
 > Data hasil [[Docs/Tipe Data/Query|Query]] tidak dapat dimanipulasi dari Canvas. Gunakan [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] untuk memindahkan kartu dan mengelola data.
 > **Bagaimana mengatur ukuran dan jarak widget?**

@@ -20,7 +20,7 @@ Berikut adalah pertanyaan yang sering diajukan pada komponen Canvas:
 > **Apakah menghapus Canvas menghapus data sumber?**
 > Tidak. Menghapus Canvas hanya menghapus template dan propertinya, termasuk [[Docs/Tipe Data/Query]] pada widget. Namun tautan yang sudah dibagikan melalui [[#Mempublikasikan Canvas|Publish]] menjadi tidak valid.
 > **Apakah widget dapat dipakai untuk mengubah data sumber?**
-> Tidak. Widget bersifat lite: Query diatur melalui [[^button/q]] pada Edit Mode, tetapi data hasil [[Docs/Tipe Data/Query|Query]] tidak dapat dimanipulasi dari Canvas. Untuk mengelola data, gunakan [[Docs/Modul Data/Table/Apa itu Table|Table]] atau [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]].
+> Tidak. Widget bersifat lite: Query diatur melalui [[^button/nolabel/q]] pada Edit Mode, tetapi data hasil [[Docs/Tipe Data/Query|Query]] tidak dapat dimanipulasi dari Canvas. Untuk mengelola data, gunakan [[Docs/Modul Data/Table/Apa itu Table|Table]] atau [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]].
 > **Untuk apa Binding pada Canvas?**
 > [[#Binding Canvas|Binding]] adalah parameter yang dapat dipakai dalam Query widget. Dengan Binding, satu desain Canvas dapat menampilkan informasi berbeda, misalnya dari satu pesanan ke pesanan lain, tanpa membuat Canvas baru.
 > **Apa itu Template Canvas?**

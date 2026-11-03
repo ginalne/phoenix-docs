@@ -18,7 +18,7 @@ Object adalah data berlogika yang tampil sebagai objek 3D. Object mengambil data
 | [[^field|Description]] | [[Docs/Tipe Data/String]] | Keterangan Object. |
 | [[^field|Origin]] | [[Docs/Format Data/Complex/3D Vector|3D Vector]] | Titik asal (*anchor*) tempat model setiap Row dirender. Origin tidak memengaruhi Row pada data sumber, dan hanya dapat diubah lewat klik kanan Object pada Outliner ➜ [[^field/edit|Edit]]. |
 | [[^field|Model]] | [[Docs/Tipe Data/Model]] | Model yang menjadi wujud dan logika Object, disiapkan di komponen [[Docs/Modul Developer/Model/Apa itu Model|Model]] pada modul Developer. |
-| [[^field|Query]] | [[Docs/Tipe Data/Query]] | Pengambil data dengan kaidah Table Output. Tombol [[^button/q]] hanya tersedia di modal Object dan tidak tampil langsung di antarmuka seperti pada [[Docs/Modul Interface/Space/Apa itu Space|Space]]. |
+| [[^field|Query]] | [[Docs/Tipe Data/Query]] | Pengambil data dengan kaidah Table Output. Tombol [[^button/nolabel/q]] hanya tersedia di modal Object dan tidak tampil langsung di antarmuka seperti pada [[Docs/Modul Interface/Space/Apa itu Space|Space]]. |
 
 Karena logika Object yang kompleks disiapkan di komponen Model, daftar Key yang dapat diisi mengikuti Model yang dipilih pada [[^field|Model]].
 

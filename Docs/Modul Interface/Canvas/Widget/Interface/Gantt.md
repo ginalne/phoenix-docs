@@ -24,7 +24,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon Gantt (paling kiri)                  | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Gantt Output]] |
+| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Gantt Output]] |
 | [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Gantt]].                                                               |
 
 ### Layout Panel
@@ -62,7 +62,7 @@ Langkah menghapus Widget Gantt sama dengan menghapus widget lain. Lihat [[Docs/M
 
 > **faq**
 > **Query seperti apa yang dipakai Widget Gantt?**
-> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Gantt Output|Gantt Output]]. Atur melalui [[^button/q]] pada [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]].
+> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Gantt Output|Gantt Output]]. Atur melalui [[^button/nolabel/q]] pada [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]].
 > **Mengapa saya tidak dapat menggeser bilah?**
 > Data hasil [[Docs/Tipe Data/Query|Query]] tidak dapat dimanipulasi dari Canvas. Ubah waktu mulai dan selesai pada data sumber, lalu widget menampilkan perubahannya.
 > **Bagaimana mengatur ukuran dan jarak widget?**

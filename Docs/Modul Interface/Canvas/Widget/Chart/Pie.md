@@ -29,7 +29,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
 | [[^toggle|123]]                          | Toggle pagination. Menampilkan atau menyembunyikan bilah pagination di bagian bawah widget.                                    |
 | [[^toggle/search|Search]] (ikon kaca pembesar) | Toggle toolbar search. Memunculkan atau menyembunyikan toolbar search di bagian atas widget.                                   |
-| [[^field|Data]]                      | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah  [[Docs/Tipe Data/Query#Series Output]].  |
+| [[^field|Data]]                      | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah  [[Docs/Tipe Data/Query#Series Output]].  |
 | [[^field|Limit]]                         | Jumlah maksimal data yang muncul pada pie. Menampilkan [[^field|Empty]] bila belum diisi.                                     |
 | [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Table]].                                                               |
 
@@ -74,7 +74,7 @@ Langkah menghapus Widget Table sama dengan menghapus widget lain. Lihat [[Docs/M
 
 - Widget Chart Pie menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai diagram pie di [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]].
 - Tambahkan melalui [[^field|Type something here to add...]] dengan perintah `/chart` pada Edit Mode. Lihat [[#Menambahkan Widget Chart Pie]].
-- Header toolbar berisi [[^field|Data]], [[^button/q]], [[^field|Limit]], dan [[^button/delete|Remove]]. Design toolbar berisi panel tata letak dan panel tampilan. Lihat [[#Antarmuka Widget Chart Pie]].
+- Header toolbar berisi [[^field|Data]], [[^button/nolabel/q]], [[^field|Limit]], dan [[^button/delete|Remove]]. Design toolbar berisi panel tata letak dan panel tampilan. Lihat [[#Antarmuka Widget Chart Pie]].
 - Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]], dan [[^field|Limit]] membatasi jumlah data yang muncul.
 - Atur tampilan lewat [[^field|hole]], [[^field|gap]], [[^field|theme]], [[^field|gradient]], [[^field|offset]], [[^field|label]], [[^field|min]], [[^field|legends]], [[^field|total]], dan [[^field|size]]. Lihat  [[#Design toolbar]].
 - Menghapus widget tidak menghapus data sumber, dan semua perubahan mengikuti Data Access Canvas.
@@ -83,7 +83,7 @@ Langkah menghapus Widget Table sama dengan menghapus widget lain. Lihat [[Docs/M
 
 > **faq**
 > **Query seperti apa yang dipakai Widget Chart Pie?**
-> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]]. Atur melalui [[^button/q]] pada header toolbar.
+> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]]. Atur melalui [[^button/nolabel/q]] pada header toolbar.
 > **Apa fungsi Limit?**
 > [[^field|Limit]] menentukan jumlah maksimal data yang muncul pada pie. Menampilkan [[^field|Empty]] bila belum diisi.
 > **Apa bedanya gradient dan offset?**
