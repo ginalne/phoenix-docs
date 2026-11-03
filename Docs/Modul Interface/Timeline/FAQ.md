@@ -20,7 +20,7 @@ Berikut adalah pertanyaan yang sering diajukan pada komponen Timeline:
 > **Apakah menghapus Timeline Event ikut menghapus Pulser?**
 > Tidak. [[^field|Delete Event]] hanya menghapus Timeline Event, sedangkan Pulser tetap ada di Flow.
 > **Mengapa Timeline Data menampilkan Error?**
-> Query belum memenuhi kaidah Timeline Output, misalnya belum menampilkan paling sedikit dua Column. Klik [[^button/q]], lalu periksa bagian [[Docs/Tipe Data/Query#Show or Hide|Show]].
+> Query belum memenuhi kaidah Timeline Output, misalnya belum menampilkan paling sedikit dua Column. Klik [[^button/nolabel/q]], lalu periksa bagian [[Docs/Tipe Data/Query#Show or Hide|Show]].
 > **Apakah menggeser blok mengubah data sumber?**
 > Ya, bila Timeline Data `editable` dan [[Docs/Modul Developer/Workspace/Data Access]] data sumber mengizinkan. Jika salah satu tidak terpenuhi, blok tidak dapat digeser.
 > **Bagaimana menambah Row dengan rentang waktu tertentu?**

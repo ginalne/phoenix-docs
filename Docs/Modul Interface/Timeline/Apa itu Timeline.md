@@ -82,6 +82,6 @@ Penjelasan antarmuka lihat selengkapnya di [[Docs/Modul Interface/Timeline/Antar
 - **Definisi:** Timeline menampilkan data dalam urutan waktu untuk memantau jadwal, riwayat aktivitas, dan progres.
 - **Isi:** Timeline Event memicu Pulser dengan atau tanpa pengulangan, Timeline Data menampilkan Row dari data sumber lewat Query.
 - **Antarmuka:** bilah navigasi di atas dan area kerja di bawah, dengan menu konteks dan menu [[^field|Zoom]] dari klik kanan.
-- **Membangun:** tambahkan isi dengan [[^button/add|Add Event]] dan [[^button/add|Add Data]], lalu atur Query lewat [[^button/q]] yang tersimpan otomatis.
+- **Membangun:** tambahkan isi dengan [[^button/add|Add Event]] dan [[^button/add|Add Data]], lalu atur Query lewat [[^button/nolabel/q]] yang tersimpan otomatis.
 - **Interaksi:** gulir, *wheel*, pindahkan blok, dan Select. Klik kiri Row membuka preview, dan Select mengisi Start dan End saat [[^field|Add Row]].
 - **Hati-hati:** Row hanya dapat diubah bila `editable` dan Data Access mengizinkan, Query harus valid, dan [[^field|Delete Row]] menghapus data sumber.

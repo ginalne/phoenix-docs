@@ -26,7 +26,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
 | [[^toggle/123]]                          | Toggle pagination. Menampilkan atau menyembunyikan bilah pagination di bagian bawah widget.                                    |
 | [[^toggle/search]] (ikon kaca pembesar) | Toggle toolbar search. Memunculkan atau menyembunyikan toolbar search di bagian atas widget.                                   |
-| [[^field|Data]]                      | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah  [[Docs/Tipe Data/Query#Table Output]]|
+| [[^field|Data]]                      | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah  [[Docs/Tipe Data/Query#Table Output]]|
 | [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Table]].                                                               |
 
 Tombol toggle yang aktif ditandai dengan latar berwarna.
@@ -77,7 +77,7 @@ Langkah menghapus Widget Table sama dengan menghapus widget lain. Lihat [[Docs/M
 > **Mengapa saya tidak dapat mengubah isi tabel?**
 > Data hasil [[Docs/Tipe Data/Query|Query]]tidak dapat dimanipulasi dari Canvas. Gunakan [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] untuk mengelola baris.
 > **Bagaimana mengatur kolom yang tampil?**
-> Kolom dan baris yang tampil ditentukan oleh [[Docs/Tipe Data/Query|Query]]. Klik [[^button/q]] pada header toolbar untuk mengaturnya.
+> Kolom dan baris yang tampil ditentukan oleh [[Docs/Tipe Data/Query|Query]]. Klik [[^button/nolabel/q]] pada header toolbar untuk mengaturnya.
 > **Berapa data yang tampil per halaman?**
 > Batasnya 50 data per halaman, seperti tertulis pada informasi [[^field|Show 50 of 8 items, on page]].
 > **Apakah menghapus widget menghapus data sumber?**

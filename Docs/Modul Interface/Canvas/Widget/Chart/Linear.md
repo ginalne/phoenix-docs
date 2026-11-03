@@ -26,7 +26,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | --- | --- |
 | Ikon linear (paling kiri) | Menandai jenis widget. |
 | Ikon pegangan ⋮⋮ | Memindahkan widget ke posisi atau Layout lain. |
-| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
+| [[^field|Data]] | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Series Output]] |
 | [[^button/delete|Remove]] | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Chart Linear]]. |
 
 ### Layout Panel
@@ -92,7 +92,7 @@ Langkah menghapus Widget Chart Linear sama dengan menghapus widget lain. Lihat [
 
 - Widget Chart Linear menampilkan data [[Docs/Modul Data/Table/Apa itu Table|Table]] sebagai bar linear di [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]].
 - Tambahkan melalui [[^field|Type something here to add...]] dengan perintah `/chart linear` pada Edit Mode. Lihat [[#Menambahkan Widget Chart Linear]].
-- Header Toolbar berisi [[^field|Data]] dan [[^button/q]]. Panel di bawah widget: Layout Panel, Data Panel, dan Design Panel. Lihat [[#Antarmuka Widget Chart Linear]].
+- Header Toolbar berisi [[^field|Data]] dan [[^button/nolabel/q]]. Panel di bawah widget: Layout Panel, Data Panel, dan Design Panel. Lihat [[#Antarmuka Widget Chart Linear]].
 - Data Panel mengatur [[^field|min/max]], [[^field|value]], [[^field|format]], dan [[^field|size]].
 - Design Panel mengatur mode, bentuk bar, orientasi, track, marker, tema, threshold, [[^field|label]], dan animasi count up.
 - Menghapus widget tidak menghapus data sumber.
@@ -101,7 +101,7 @@ Langkah menghapus Widget Chart Linear sama dengan menghapus widget lain. Lihat [
 
 > **faq**
 > **Query seperti apa yang dipakai Widget Chart Linear?**
-> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]]. Atur melalui [[^button/q]] pada Header Toolbar.
+> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Series Output|Series Output]]. Atur melalui [[^button/nolabel/q]] pada Header Toolbar.
 > **Apa saja mode dan bentuk bar?**
 > Mode: `Bars`, `Multi`, dan `Stacked`. Bentuk: `Plain`, `Split`, dan `Stepped`.
 > **Kapan input step ticks dan step gap tampil?**

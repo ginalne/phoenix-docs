@@ -10,7 +10,7 @@
 
 1. Klik [[^button/add|Add Data]], atau klik kanan ➜ [[^field|Add Data]]
 2. Timeline Data baru tampil dengan Query kosong ([[^field|Empty]]) dan nama awal `New Data (n)`
-3. Klik [[^button/q]] pada Timeline Data untuk mengatur [[Docs/Tipe Data/Query|Query]]
+3. Klik [[^button/nolabel/q]] pada Timeline Data untuk mengatur [[Docs/Tipe Data/Query|Query]]
 4. Pada bagian [[Docs/Tipe Data/Query#Show or Hide|Show]], pastikan Column untuk label [[^field|Name]], [[^field|Start]], dan [[^field|End]] sudah sesuai
 5. Tutup popup Query dengan klik di luar popup
 

@@ -8,7 +8,7 @@
 ---
 # Table View Data : Mengatur Query
 
-1. Klik  [[^button/q]] pada Data yang ingin diatur
+1. Klik  [[^button/nolabel/q]] pada Data yang ingin diatur
 2. Isi Query sesuai dengan kaidah [[Docs/Tipe Data/Query#Table Output]]
 3. Klik bagian luar konfigurasi Query agar menutup popup
 4. Perubahan akan tersimpan secara otomatis dan hasil Query dapat dilihat pada Data

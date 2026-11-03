@@ -12,5 +12,5 @@
 2. Klik kanan pada [[#Antarmuka Space|Outliner]] ➜ [[^field/add|Add Object]]
 3. Isi [[^field|Name]], [[^field|Description]], dan [[^field|Origin]]
 4. Pilih [[^field|Model]]
-5. Isi [[^field|Query]] dengan klik [[^button/q]]
+5. Isi [[^field|Query]] dengan klik [[^button/nolabel/q]]
 6. Atur [[^field|Model Attribute]] pada kolom [[^field|Static]] dan [[^field|Value]]

@@ -26,7 +26,7 @@ Pada [[^mode/edit|Edit]], klik kiri widget untuk menampilkan [[Docs/Modul Interf
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Ikon Timeline (paling kiri)                  | Menandai jenis widget.                                                                                                         |
 | Ikon pegangan ⋮⋮                          | Memindahkan widget ke posisi atau Layout lain.                                                                                 |
-| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Timeline Output]] |
+| [[^field|Data]]                          | [[Docs/Tipe Data/Query]] untuk data yang ditampilkan widget. Klik [[^button/nolabel/q]] untuk membuka konfigurasi [[Docs/Tipe Data/Query]] yang mengikuti kaidah [[Docs/Tipe Data/Query#Timeline Output]] |
 | [[^button/delete|Remove]]                | Menghapus widget dari Canvas. Lihat [[#Menghapus Widget Timeline]].                                                               |
 
 ### Layout Panel
@@ -66,7 +66,7 @@ Langkah menghapus Widget Timeline sama dengan menghapus widget lain. Lihat [[Doc
 
 > **faq**
 > **Query seperti apa yang dipakai Widget Timeline?**
-> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Timeline Output|Timeline Output]]. Atur melalui [[^button/q]] pada [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]].
+> Query harus mengikuti kaidah [[Docs/Tipe Data/Query#Timeline Output|Timeline Output]]. Atur melalui [[^button/nolabel/q]] pada [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]].
 > **Mengapa widget hanya menampilkan satu data?**
 > Widget Timeline hanya menyajikan satu data. Untuk banyak Timeline Data dan Timeline Event, gunakan komponen [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]].
 > **Mengapa saya tidak dapat menggeser blok?**
