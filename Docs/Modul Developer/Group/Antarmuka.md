@@ -32,3 +32,4 @@ Halaman kerja Group terdiri dari bilah navigasi di bagian atas dan daftar Group 
 | Menghapus Workspace dari Group | Klik Workspace pada daftar, lalu konfirmasi [[^button|Remove]]. |
 | Memindahkan User | *Drag and drop* User dari Group lama ke Group tujuan. |
 | Membuka menu Group anak | Klik kanan pada Group anak. |
+
