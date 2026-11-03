@@ -5,8 +5,7 @@
     pageDecoration:
       tree:
         priority: 6
-    tags:
-      flowblock-category
+    tags: flowblock-category
 ---
 # Flow Block Event
 
@@ -31,14 +30,17 @@ flowchart LR
 
 Block Event tidak memiliki input koneksi, hanya output di sisi kanan. Karena itu block Event tidak dapat dihubungkan dari block lain dan tidak terkena syarat eksekusi yang berlaku pada block non-Event. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
+>**note** Perubahan data oleh Flow tidak memicu Flow kembali
+> Aksi create, update, atau delete pada data apa pun yang dilakukan oleh Flow tidak memicu Flow kembali. Perubahan dari sumber lain, seperti pengisian manual, Import, atau Upload, tetap memicu Event.
+
 ## Jenis Flow Block Event
 
 Phoenix menyediakan lima Flow Block Event. Empat di antaranya terhubung dengan komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], [[Docs/Modul Data/Table/Apa itu Table|Table]], dan [[Docs/Modul Data/Tree/Apa itu Tree|Tree]], sedangkan Pulser dipicu secara langsung.
 
 | Block | Terpicu ketika | Output |
 | --- | --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser Event Block]] | Tombol [[^button/empty|Trigger]] ditekan, jadwal [[Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event|Timeline Event]] tiba, atau Button pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] ditekan. | [[^output|Result]] |
-| [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event|Variable Event Block]] | Data pada [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] berubah. | [[^output|Variable]] |
+| [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser Event Block]] | Tombol [[^button/empty|Trigger]] ditekan, jadwal [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]] tiba, atau [[Docs/Modul Interface/Canvas/Widget/Basic/Button|Widget Button]] pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] ditekan. | [[^output|Result]] |
+| [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event|Variable Event Block]] | Value pada Variable Data berubah atau Variable Data dihapus. | [[^output|Variable]], [[^output|Event]], [[^output|Old]] |
 | [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event|Enum Data Event Block]] | [[Docs/Tipe Data/EnumData]] pada [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] ditambahkan, diperbarui, atau dihapus. | [[^output|EnumData]], [[^output|Event]], [[^output|Old]] |
 | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event Block]] | [[Docs/Tipe Data/Row]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]] ditambahkan, diperbarui, atau dihapus. | [[^output|Row]], [[^output|Event]], [[^output|Old]] |
 | [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]] | [[Docs/Tipe Data/Node]] pada [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] ditambahkan, diperbarui, atau dihapus. | [[^output|Node]], [[^output|Event]], [[^output|Old]] |
@@ -48,20 +50,13 @@ Phoenix menyediakan lima Flow Block Event. Empat di antaranya terhubung dengan k
 | Kebutuhan Anda | Block yang dipilih |
 | --- | --- |
 | Menjalankan alur secara manual, terjadwal, atau lewat tombol di Canvas. | [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser Event Block]] |
-| Bereaksi ketika nilai [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] berubah. | [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event|Variable Event Block]] |
+| Bereaksi ketika Value [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] berubah atau Variable Data dihapus. | [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event|Variable Event Block]] |
 | Bereaksi ketika pilihan pada [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] berubah. | [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event|Enum Data Event Block]] |
 | Bereaksi ketika [[Docs/Tipe Data/Row]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]] bertambah, berubah, atau terhapus. | [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event Block]] |
 | Bereaksi ketika [[Docs/Tipe Data/Node]] pada [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] bertambah, berubah, atau terhapus. | [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]] |
-
-<!--
-  * [TODO] Variable tidak memiliki tombol Event pada bilah navigasi menurut knowledge. Konfirmasi cara Variable Event dihubungkan ke Variable pada langkah 2.
-    Jawaban : Sudah saya perbaiki
-  * [DONE] Halaman yang diusulkan untuk dibuat: `Docs/Event/Menghubungkan Event` (menghubungkan block Event dari komponen), `Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi`, `Docs/Modul Logic/Flow/Flow Block/Menambahkan`, `Docs/Modul Interface/Canvas/Apa itu Canvas`, dan `Docs/Modul Logic/Flow/Flow Activity`.
--->
 
 ## Lihat Juga
 
 - [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]]
 - [[Docs/Event/Apa itu Event|Event]]
 - [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]
-
