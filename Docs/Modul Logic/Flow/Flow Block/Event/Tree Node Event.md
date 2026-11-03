@@ -16,7 +16,6 @@ Tree Node Event adalah Flow Block Event yang memulai alur setiap kali [[Docs/Tip
 Karena Tree menyimpan data berbentuk hierarki, block ini berguna untuk menjaga struktur di sistem lain, seperti struktur organisasi atau kategori bertingkat, tetap sama dengan di Phoenix.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Event/tree-node-event.png|Tree Node Event Block pada Blueprint]]
-
 ## Kapan Tree Node Event Terpicu
 
 Tree Node Event terpicu ketika Node pada Tree yang terhubung mengalami salah satu dari tiga peristiwa berikut.

@@ -16,7 +16,6 @@ Enum Data Event adalah Flow Block Event yang memulai alur setiap kali [[Docs/Tip
 Karena Enum menyimpan data master seperti pilihan, menu, dan kategori, block ini berguna untuk menjaga sistem lain tetap selaras ketika daftar pilihan berubah.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Event/enum-data-event.png|Enum Data Event Block pada Blueprint]]
-
 ## Kapan Enum Data Event Terpicu
 
 Enum Data Event terpicu ketika EnumData pada Enum yang terhubung mengalami salah satu dari tiga peristiwa berikut.

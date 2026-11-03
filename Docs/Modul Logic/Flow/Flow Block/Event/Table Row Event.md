@@ -16,7 +16,6 @@ Table Row Event adalah Flow Block Event yang memulai alur setiap kali [[Docs/Tip
 Dengan satu block ini, Anda dapat mengintegrasikan Row baru ke sistem lain, mengotomasi tindakan saat Row diperbarui, dan menindaklanjuti Row yang dihapus.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Event/table-row-event.png|Table Row Event Block pada Blueprint]]
-
 ## Kapan Table Row Event Terpicu
 
 Table Row Event terpicu ketika Row pada Table yang terhubung mengalami salah satu dari tiga peristiwa berikut.
