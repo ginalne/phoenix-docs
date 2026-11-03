@@ -28,25 +28,34 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   
 # Workspace (Modul Developer)
 
-- Workspace adalah komponen untuk mengatur ruang kerja pengembangan: komponen yang dapat dilihat, dikelola, dan diubah, serta **fungsi di dalamnya** (bukan "integrasi yang digunakan", sesuai versi akhir penulis).
-- Akses Workspace ke setiap anggota dikelola melalui Group. Setelah Group memetakan pengguna ke Workspace, Workspace dapat digunakan. Saat membuka Phoenix, pengguna masuk ke satu Workspace yang sudah memiliki struktur folder.
-- Setiap Pro memiliki satu rangkaian folder yang berawal dari **Origin**. Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itu menjadi root.
-- **Membuat:** buka folder di Area Manajemen Folder, klik kanan > Add > Developer > Workspace, isi Name dan Description, klik Create.
-- **Mengubah:** tombol Edit pada bilah navigasi mengubah **atribut Workspace** (Name, Description), lalu klik Update. Tombol Edit bukan untuk mengubah sel hak akses.
-- **Menyegarkan:** tombol Refresh memuat ulang tampilan.
-- **Menghapus:** klik kanan Workspace > Delete, lalu konfirmasi dengan Delete. Sebelum menghapus, pastikan setiap Group masih memiliki Workspace lain agar pengguna tetap bisa memakai Phoenix.
-- Bilah navigasi Workspace hanya memiliki tombol Edit dan Refresh.
-- **Halaman kerja:**
-  - Kolom kiri: Folder/ Component. Kolom kanan: Comp. Access, Data Access, Function Access.
-  - Baris Origin = workspace. Baris Group (contoh: Administrator) hanya mengatur akses dari Workspace ke komponen Group tersebut, **bukan** akses per anggota.
-  - Sel kosong berarti akses itu tidak relevan untuk komponen tersebut.
-  - Arti angka dan ikon di samping nama komponen dijelaskan di halaman Folder, bagian Informasi Data.
-- **Hak akses** (nilai: allow / disallow):
-  - Comp. Access (level komponen/header): Visible, Add (menambah folder atau komponen baru), Update (mengubah atribut komponen), Delete.
-  - Data Access (level data): Add, Update, Delete. Jenis data bergantung komponen (Table: Row dan TableData; Table View: Data TableView; Timeline: Timeline Data). Untuk Table View, Data Access hanya mengatur pengelolaan Data (ubah nama, ubah Query, ubah konfigurasi), bukan Row atau cell. Penjelasan lengkap ada di subhalaman Data Access.
-  - Function Access: Merge (penggabungan data), Modify Event, View Publish (hanya melihat konfigurasi publikasi, misalnya menyalin Publish Link), Publish (memperbarui konfigurasi publikasi).
-- **Pewarisan:** jika folder induk Visible = disallow, seluruh isinya tidak dapat diakses meski allow. Disallow juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan Tree.
-- Nama folder pada gambar contoh penulis adalah kasus pribadi dan tidak disebut di dokumentasi.
+*   Workspace adalah komponen untuk mengatur ruang kerja pengembangan: komponen yang dapat dilihat, dikelola, dan diubah, serta **fungsi di dalamnya** (bukan "integrasi yang digunakan", sesuai versi akhir penulis; kata "integrasi" masih tersisa di Konsep Utama dan TL:DR halaman lama dan sudah diperbaiki).
+*   **Path:** `Docs/Modul Developer/Workspace/Apa itu Workspace`. Gambar halaman kerja bernama `antarmuka-workspace.png` (bukan `interface-workspace.png`), di folder `Docs/Modul Developer/Workspace/`. Subhalaman yang sudah ada: `Docs/Modul Developer/Workspace/Data Access`.
+*   Akses Workspace ke setiap anggota dikelola melalui Group. Setelah Group memetakan pengguna ke Workspace, Workspace dapat digunakan. Saat membuka Phoenix, pengguna masuk ke satu Workspace yang sudah memiliki struktur folder.
+*   **Aturan Group yang memengaruhi Workspace:** satu pengguna hanya dapat berada di satu Group. Group anak tidak mewarisi Workspace dari Group induk. Satu Group memiliki daftar Workspace (lebih dari satu). Place to Directory pada Group anak menempatkan Group di root dari Workspace yang aktif saat itu. **\[asumsi\]** Belum jelas Workspace mana yang aktif bila Group memiliki beberapa Workspace.
+*   Setiap Pro memiliki satu rangkaian folder yang berawal dari **Origin**. Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itu menjadi root.
+*   **Relasi (diagram penulis):** Pengguna → Group → Workspace → Folder dan Komponen; Folder berisi Komponen; Folder dan Komponen punya Comp. Access; hanya Komponen yang punya Data Access; Function Access putus-putus karena hanya ada pada komponen yang memiliki fungsi terkait.
+*   **Membuat:** buka folder di Area Manajemen Folder, klik kanan ➜ Add ➜ Developer ➜ Workspace, isi Name dan Description, klik Create. Workspace baru belum dapat dipakai anggota sampai dipetakan ke Group. **\[asumsi\]** Nilai awal hak akses Workspace baru belum diketahui.
+*   **Mengubah:** tombol Edit pada bilah navigasi mengubah **atribut Workspace** (Name, Description), lalu klik Update. Tombol Edit bukan untuk mengubah sel hak akses.
+*   **Menyegarkan:** tombol Refresh memuat ulang tampilan.
+*   **Menghapus:** klik kanan Workspace ➜ Delete, lalu konfirmasi dengan Delete. Sebelum menghapus, pastikan setiap Group masih memiliki Workspace lain agar pengguna tetap bisa memakai Phoenix. **\[asumsi\]** Pengaturan akses ikut hilang, komponen dan data tidak terhapus, dan pemetaan pada Group terputus.
+*   Bilah navigasi Workspace hanya memiliki tombol Edit dan Refresh.
+*   **Halaman kerja:**
+    *   Kolom kiri: Folder/ Component. Kolom kanan: Comp. Access, Data Access, Function Access.
+    *   Baris Origin = workspace. Baris Group (contoh: Administrator, Group bawaan sistem) hanya mengatur akses dari Workspace ke komponen Group tersebut, **bukan** akses per anggota. Nama Group bawaan adalah **Administrator** (bukan "Administration").
+    *   Sel kosong berarti akses itu tidak relevan untuk komponen tersebut.
+    *   Arti angka dan ikon di samping nama komponen dijelaskan di halaman Folder, bagian Informasi Data.
+    *   **\[asumsi\]** Nilai sel diubah dengan klik sel, dan folder diperluas atau dilipat dengan klik folder. Cara persisnya, penyimpanan otomatis, dan kapan perubahan berlaku bagi anggota yang sedang aktif belum diketahui.
+*   **Hak akses** (nilai: allow / disallow):
+    *   Comp. Access (level komponen/header): Visible, Add (menambah folder atau komponen baru), Update (mengubah atribut komponen), Delete.
+    *   Data Access (level data): Add, Update, Delete. Jenis data bergantung komponen: **Table: Row dan TableData; Table View: Table View Data; Timeline: Timeline Data** (halaman lama sempat menulis Row dan TableData untuk Table View, itu salah level dan sudah diperbaiki). Untuk Table View, Data Access hanya mengatur pengelolaan Data (ubah nama, ubah Query, ubah konfigurasi), bukan Row atau cell. Penjelasan lengkap ada di subhalaman Data Access.
+    *   Makna Data Access pada komponen lain (terkonfirmasi): Canvas (Add = tambah widget, Update = ubah Query, atribut, styling widget, Delete = hapus widget; mode Edit dapat dipindahkan bila salah satu allow), Form (setiap perubahan Elemen dan atributnya), Space (satu Data Access mewakili Weather, Environment, Object), Timeline (pengelolaan Timeline Data), Kanban dan Gallery (memindahkan atau mengubah Row mengikuti Data Access Table sumber; template kartu Gallery perlu izin Data Access). **\[asumsi\]** Enum (EnumData), Tree (Node), Variable (Variable Data), Flow (Flow Block).
+    *   **Akses berlapis (aturan umum Interface):** baris dan isi sel hanya dapat dikelola bila konfigurasi komponen Interface `editable` **dan** Data Access data sumber di Workspace mengizinkan.
+    *   Function Access: Merge (penggabungan data), Modify Event, View Publish (hanya melihat konfigurasi publikasi, menyalin atau membuka Publish Link tanpa mengubah Status), Publish (memperbarui konfigurasi publikasi). Komponen yang memilikinya (dari bilah navigasi): Merge = Table, Enum. Event = Table, Enum, Tree, dan Timeline Event (Modify Event). Publish = Table, Tree, Canvas, Form. **\[asumsi\]** Tree tidak memiliki Merge pada screenshot.
+    *   **Keamanan Publish:** tautan Publish dapat dibuka publik. Pada Canvas, widget Button yang memicu Flow dapat dipakai publik.
+*   **Variable dan akses:** anggota yang tidak memiliki akses komponen Variable tidak dapat mengetahui Value, tetapi tetap dapat memakainya untuk otomasi atau integrasi. **\[asumsi\]** Hak akses yang dimaksud adalah Visible, dan belum diketahui apakah komponen lain yang disembunyikan juga tetap dapat dipakai Flow.
+*   **Pewarisan:** jika folder induk Visible = disallow, seluruh isinya tidak dapat diakses meski allow. Disallow juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan Tree. **\[asumsi\]** Belum jelas apakah Add, Update, Delete pada folder juga berjenjang.
+*   Pengisi Form dan pengunjung tautan publikasi tidak membutuhkan pengaturan akses tambahan di Workspace (Form: akses menambah Row dianggap sudah diizinkan saat pembuat memilih Table dan relasinya; Canvas publik hanya View Mode).
+*   Nama folder dan komponen pada gambar contoh penulis adalah kasus pribadi dan tidak disebut di dokumentasi. Nama generik di halaman (Keuangan, Penjualan, Daftar Pelanggan, Role, Employee, Organizational Structures) sudah diterima penulis.
 
 # Flow (Modul Logic)
 
@@ -412,6 +421,22 @@ Alasan: jawaban penulis mengonfirmasi dan mengoreksi beberapa asumsi saya (Activ
  
 *   **Data Panel:** min/max (toggle Auto), value (`Inside`, `End`, `Above`, `Below`, `None`), format (`Value`, `Percent`, `Custom`), size (contoh 13).
 *   **Design Panel:** mode (`Bars`, `Multi`, `Stacked`), shape (`Plain`, `Split`, `Stepped`), toggle diverging, toggle orientasi (aktif = horizontal), toggle show track (menampilkan track opacity contoh 20% dan warna), toggle show marker (menampilkan marker width contoh 2, height contoh 14%, dan warna), theme, bar opacity (contoh 100%), bar border radius (contoh 3), + threshold (setelah ada: toggle legend threshold dan titik at % dan warna), step ticks (contoh 10) dan step gap (contoh 3) **hanya saat Stepped**, label (`start`, `end`, `above`, `below`, `none`), label size (contoh 12), bar gap (contoh 11), toggle **count up** (animasi saat pertama dibuka).
+
+## Widget Text
+
+  * perintah tambah `/text` ("Add text"). Kelompok widget: Teks. **Belum ada informasi** tentang editor, format, Design Panel, atau hubungan dengan Binding dan Query.
+  *   **Header Toolbar:** ikon Text, ikon pegangan, tombol − dan + dengan kolom ukuran font (contoh 22), toggle **Bold**, **Italic**, **Underline**, tiga pilihan rata teks (kiri, tengah, kanan; yang aktif ditandai latar berwarna), dan ikon tempat sampah (Remove).
+  *   **Layout Panel:** min. w dan h (contoh 0%), tombol Expand, padding, margin.
+  *   **Data Panel** (ikon kode `</>`): **daftar binding untuk mengganti teks dengan Query berkaidah Single Output**. Tombol **+ Parse Query** menambah item. **Tombol + Parse Column akan dihapus** (jangan ditulis).
+  *   **Belum terkonfirmasi:** cara binding direferensikan dalam teks, kolom item binding, cakupan Bold dan sebagainya (seluruh teks atau seleksi), satuan ukuran font, ada tidaknya Design Panel, cara mengisi teks.
+    
+## Widget Button
+
+*   Perintah tambah `/button`. Kelompok widget: Aksi. Terkonfirmasi: **memicu Flow lewat Flow Block Pulser**, **membuka komponen apa pun**, dan **dapat ditekan publik** pada Canvas yang dipublikasikan (developer harus berhati-hati). Button juga dapat membuka Canvas dengan parameter Binding (rilis berikutnya).
+*   **Belum terkonfirmasi:** cara mengatur aksi Button, tampilan dan variasi tombol, Header Toolbar dan Design Panel pada Text dan Button, serta apakah keduanya memiliki Query.
+    *   **Header Toolbar memiliki field Action** (Tipe Data **Action**, akan ditambahkan penulis: `Docs/Tipe Data/Action`). Fungsi Tipe Data Action: **mendefinisikan aksi terhadap Row Table, membuka suatu halaman, atau membuka popup Interface**.
+    *   Terkonfirmasi sebelumnya: memicu Flow lewat Flow Block **Pulser**, membuka komponen apa pun, dapat ditekan **publik** pada Canvas yang dipublikasikan. Hubungan Action dengan hal ini belum dijelaskan.
+    *   **Belum terkonfirmasi:** cara mengisi Action, tampilan dan variasi tombol, Data Panel dan Design Panel, screenshot.
 
 # Space (Modul Interface)
 
