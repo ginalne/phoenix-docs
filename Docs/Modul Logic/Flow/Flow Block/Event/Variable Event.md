@@ -3,6 +3,7 @@
     title: Variable Event
     description: Flow Block Event yang terpicu ketika data pada komponen Variable berubah dan menghasilkan Variable sebagai output.
     pageDecoration:
+      icon: zap
       tree:
         priority: 4
 ---
