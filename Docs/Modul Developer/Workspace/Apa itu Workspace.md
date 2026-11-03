@@ -280,8 +280,9 @@ Function Access mengatur fungsi tambahan pada komponen.
 >Tautan hasil [[^field|Publish]] dapat dibuka oleh publik. Pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang dipublikasikan, widget Button yang sudah disetup dapat memicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dan dipakai oleh siapa pun yang membuka tautan. Berikan [[^field|Publish]] hanya kepada [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang tepercaya, dan gunakan [[^field|View Publish]] bagi anggota yang hanya perlu menyalin tautan.
 
 <!--
-  * [TODO] Daftar komponen pada tabel Fungsi pada Setiap Komponen disusun dari komponen yang sudah selesai (Table: Merge, Publish, Event. Enum: Merge, Event. Tree: Publish, Event. Canvas dan Form: Publish. Timeline: Event). Mohon konfirmasi kelengkapannya, termasuk apakah Tree juga memiliki Merge dan apakah Form memiliki View Publish.
+  * [DONE] Daftar komponen pada tabel Fungsi pada Setiap Komponen disusun dari komponen yang sudah selesai (Table: Merge, Publish, Event. Enum: Merge, Event. Tree: Publish, Event. Canvas dan Form: Publish. Timeline: Event). Mohon konfirmasi kelengkapannya, termasuk apakah Tree juga memiliki Merge dan apakah Form memiliki View Publish.
   * [TODO] Mohon konfirmasi apakah Modify Event juga mengatur tombol Event untuk menghubungkan Flow Block Event dari komponen (diasumsikan ya).
+    Jawaban : Iya betul
 -->
 
 ### Aturan Pewarisan Akses
@@ -292,6 +293,7 @@ Pengaturan [[^value/boolean/disallow]] juga dapat diterapkan pada komponen selai
 
 <!--
   * [TODO] Mohon konfirmasi apakah pewarisan berjenjang hanya berlaku untuk Visible, atau juga untuk Add, Update, Delete pada folder terhadap isinya.
+    
 -->
 
 ## Contoh Penggunaan
