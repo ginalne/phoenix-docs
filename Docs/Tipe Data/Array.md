@@ -8,7 +8,13 @@
 ---
 # Array
 
-Array adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang dapat menyimpan data array.
+Array adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang berupa kumpulan beberapa elemen  secara berurutan dalam lokasi memori yang berdampingan dan diakses menggunakan nomor indeks. contoh array : {Budi, Tina, dan Via} 
+
+<!--
+@john29 Bi kasih contoh ya 
+
+@harbimartin
+-->
 
 ## Format
 >**note** Tipe data ini tidak memiliki format khusus.

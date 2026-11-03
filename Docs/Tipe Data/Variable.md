@@ -9,6 +9,9 @@
 # Variable
 Variable adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang hanya bisa dibuat, diperbarui atau dihapus melalui komponan [[Docs/Modul Data/Variable/Apa itu Variable|Variable]].
 
+<!--
+@john29 ini apaan dah? definisi tidak boleh ada kata yang akan didefinisi di dalam kalimat yang mendefinisikan, dan kenapa variable ada 2 folder? @harbimartin
+-->
 ## Atribut
 
 | Nama | Penjelasan |
