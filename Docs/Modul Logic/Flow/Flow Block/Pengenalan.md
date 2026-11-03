@@ -71,3 +71,4 @@ Penjelasan syarat agar Flow Block dapat dieksekusi lihat selengkap nya di [[Docs
 > Data dari seluruh koneksi dibaca sebagai [[Docs/Tipe Data/Array]]. Pengecualian berlaku bila ada koneksi rekursif, lihat [[#Input]].
 > **Mengapa field isian pada Input hilang?**
 > Field isian hanya tampil pada [[#Input]] yang tidak terhubung. Ketika Input terhubung ke Output block lain, nilainya berasal dari koneksi tersebut.
+
