@@ -293,6 +293,7 @@ Pengaturan [[^value/boolean/disallow]] juga dapat diterapkan pada komponen selai
 
 <!--
   * [TODO] Mohon konfirmasi apakah pewarisan berjenjang hanya berlaku untuk Visible, atau juga untuk Add, Update, Delete pada folder terhadap isinya.
+    Jawaban: Add, Update dan Delete pada folder adalah bertujuan untuk mengatur apakah boleh menambahkan komponen di folder tersebut, 2 apakah dapat memindahkan komponen didalam folder tersebut dan a
     
 -->
 
