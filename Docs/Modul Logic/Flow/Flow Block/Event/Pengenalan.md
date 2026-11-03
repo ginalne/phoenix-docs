@@ -15,6 +15,7 @@ Flow Block Event adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|F
 
 Berbeda dengan kategori lain yang bekerja setelah menerima data dari block sebelumnya, block Event menunggu peristiwa dari luar Flow, misalnya perubahan [[Docs/Tipe Data/Row]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]], jadwal dari [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], atau tombol yang ditekan. Ketika peristiwa itu terjadi, block Event menghasilkan output yang menjadi bahan awal bagi seluruh alur di sebelah kanannya.
 
+
 ![[Docs/Modul Logic/Flow/Flow Block/Event/flow-block-event.png|Lima Flow Block Event pada Blueprint: Pulser, Enum Data Event, Table Row Event, Tree Node Event, dan Variable Event]]
 
 ## Peran Event dalam Flow

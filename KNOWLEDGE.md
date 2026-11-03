@@ -86,7 +86,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Eksekusi manual:** lewat antarmuka Flow, gunakan tombol pada Flow Block Event (misalnya Trigger pada Pulser).
 - **Event dari komponen:** Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol Event pada masing-masing komponen.
 - **Memantau proses:** klik tombol Activity/Submission, panel Flow Activity terbuka. Panel memiliki tombol Refresh List, kolom Search Activity, kolom ID/Name, Status/Type, Start At, Updated At, dan menampilkan "No Activity" bila kosong.
-- 
+  
 ## Flow Block Event
 
 - **Lima block:** Pulser, Variable Event, Enum Data Event, Table Row Event, Tree Node Event. Semua memiliki satu Control (tombol Trigger, tanpa ikon) dan tidak memiliki input koneksi.
