@@ -109,6 +109,25 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Path:** Timeline Event `Docs/Modul Interface/Timeline/Timeline Event/Pengenalan`, Widget Button `Docs/Modul Interface/Canvas/Widget/Basic/Button`, Syarat Eksekusi `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
 - **Belum terkonfirmasi:** bentuk nilai Parent pada `Old` Tree, Type pada `Old` delete Variable, perilaku Trigger manual selain Pulser, fungsi segitiga biru di kiri judul block, dan tipe data yang tepat untuk `Old` Variable Event pada diagram.
 
+## Flow Block Data
+ 
+- **Struktur dan path (terkonfirmasi):** kategori Data terdiri atas empat kelompok. Halaman Pengenalan: `Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan`, `Data Enum/Pengenalan`, `Data Table/Pengenalan`, `Data Tree/Pengenalan`. Halaman per block: `Docs/Modul Logic/Flow/Flow Block/Data <Grup>/<Nama Block>`. Pola lama `Data/<Grup>/<Nama>` tidak berlaku. Tidak ada halaman `Data/Pengenalan`.
+- **Daftar block:**
+  - Variable (6): Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value.
+  - Enum (7): Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Value.
+  - Table (7): Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, TableData Setter.
+  - Tree (10): Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, Tree Get Origin.
+- **Sifat:** block Data unik sesuai fungsinya (tidak seragam seperti Event). Block Data adalah block non-Event, sehingga tunduk pada Syarat Flow Block Diproses. Aksi create, update, atau delete oleh Flow tidak memicu Event.
+- **Fungsi block (terkonfirmasi penulis):**
+  - Variable: Add dan Delete menambah atau menghapus Variable Data. Variable Getter mengambil Variable Data dengan mengisi Name. Variable Block mengonversi Variable Data menjadi nilai atributnya. Variable Setter mengubah Value. Variable Value menghasilkan Value.
+  - Enum: Enum Block mengambil atribut Enum (Name, Description). EnumData Block mengambil atribut EnumData (Name, Description, Value, Selectable). EnumData Getter mengambil EnumData dari Enum yang ditunjuk dengan mengisi Name. EnumData Setter dapat mengubah keempat atribut. Jika ada Name EnumData yang sama, tidak terjadi error, melainkan output sesuai ekspektasi (rinci di halaman block). EnumData Value menghasilkan Value.
+  - Table: Table Block mengambil Name dan Description Table. Table Column Block mengambil Name, Description, Header, dan Table dari Column. Table Row Block mengambil Index dan Name dari Row. TableData Getter dan Setter: Row dan Column dapat diisi di block sendiri atau dari output block lain. Setter hanya mengubah satu TableData per eksekusi.
+  - Tree: Node Block mengambil Order, Name, dan Tree. Tree Block mengambil Name, Description, dan Merger Mode. Node Setter mengubah Name dan Order. Node Get Ancestor mengambil leluhur pada tingkat yang ditentukan. Node Get Children hanya mengambil anak langsung dengan Order yang ditentukan. Assign Node menetapkan Node ke posisi tertentu (misalnya di bawah Node induk yang dipilih).
+- **Perilaku Tree (terkonfirmasi):** block Data Tree dapat mengubah atau menghapus Node pada Tree dengan Merger Mode atau External Read Only aktif (termasuk Node clone), sehingga perlu callout warning.
+- **Callout warning dibutuhkan** pada block Delete (Variable, EnumData, Row, Node) dan Add EnumData (Strict On Selected).
+- **Terkonfirmasi dari knowledge lain:** Variable Getter mengambil nilai lewat Name, Alias tidak valid menghasilkan tidak ada nilai atau error (lihat Flow Activity), Tree baru otomatis memiliki Node Origin.
+- **Belum terkonfirmasi:** dampak Strict On Selected pada EnumData yang ditambahkan lewat Flow, dampak penghapusan EnumData yang masih dipakai komponen lain, nasib Node anak saat induknya dihapus lewat Flow, apakah Node Origin dapat dihapus, daftar atribut yang dikonversi Variable Block, serta input dan output rinci tiap block.
+
 # Variable (Modul Data)
 
 - **Komponen Variable** mengelola **Variable Data** (tipe data Variable) di dalam sebuah Pro. Nilai yang disimpan menjadi sumber kebenaran dan dapat dirujuk dari komponen mana pun.
