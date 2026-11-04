@@ -28,12 +28,6 @@ Block Data Tree umumnya berada di tengah atau di ujung alur. Misalnya, alur meng
 >**warning** Menghapus Node yang memiliki anak
 > [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node|Delete Node Block]] menghapus [[Docs/Tipe Data/Node]] dari [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]. Jika Node tersebut memiliki Node anak, hubungan induk dan anaknya ikut terdampak. Pastikan Node yang dihapus memang tidak dipakai lagi.
 
-<!--
-
-  * [TODO] Konfirmasi isi callout warning Delete Node Block. Draf saat ini ditulis umum: apa yang terjadi pada Node anak ketika Node induknya dihapus lewat Flow (ikut terhapus, atau lainnya), dan apakah Node Origin dapat dihapus? Mohon jelaskan agar warning dapat dibuat spesifik.
-
--->
-
 ## Jenis Flow Block Data Tree
 
 Phoenix menyediakan sepuluh Flow Block Data Tree. Selengkapnya tentang komponennya lihat [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].

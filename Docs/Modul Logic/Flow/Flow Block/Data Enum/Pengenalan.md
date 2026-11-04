@@ -25,12 +25,6 @@ Block Data Enum umumnya berada di tengah atau di ujung alur. Alur menerima pemic
 >**warning** Menghapus EnumData lewat Flow
 > [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Delete EnumData|Delete EnumData Block]] menghapus [[Docs/Tipe Data/EnumData]] dari [[Docs/Modul Data/Enum/Apa itu Enum|Enum]]. Pastikan EnumData yang dihapus tidak lagi dipakai komponen lain, karena komponen yang masih memakainya dapat terdampak.
 
-<!--
-
-  * [TODO] Konfirmasi isi callout warning Add EnumData Block dan Delete EnumData Block. Draf saat ini ditulis umum: apa dampak Strict On Selected pada EnumData yang ditambahkan lewat Flow, dan apa yang terjadi pada komponen yang masih memakai EnumData yang dihapus (misalnya field berformat EnumData)? Mohon jelaskan agar warning dapat dibuat spesifik.
-
--->
-
 ## Jenis Flow Block Data Enum
 
 Phoenix menyediakan tujuh Flow Block Data Enum. Selengkapnya tentang komponennya lihat [[Docs/Modul Data/Enum/Apa itu Enum|Enum]].
