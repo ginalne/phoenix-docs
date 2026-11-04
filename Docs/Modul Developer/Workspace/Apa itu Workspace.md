@@ -176,7 +176,9 @@ Sel yang kosong pada kolom hak akses berarti hak akses tersebut tidak relevan un
 
 <!--
   * [TODO] Aturan pemindahan tampak berbeda dengan catatan "Add, Update, dan Delete pada baris Folder". Catatan itu menyebut Update pada folder mengizinkan memindahkan komponen di dalam folder itu, sedangkan aturan drag and drop menyebut Update dibutuhkan pada yang dipindahkan. Mohon konfirmasi mana yang berlaku, atau apakah keduanya berlaku bersamaan (misalnya Update pada baris folder asal dan pada komponen yang dipindahkan).
+    Jawaban: maaf atas kekeliruan penjelasan saya. Folder memiliki hak akses Add, artinya untuk memindahkan komponen, folder tujuan harus hak akses Add. Bagian isi sudah saya perbaiki
   * [TODO] Jawaban Anda menyebut "Data Access add pada folder tujuan". Karena folder tidak memiliki Data Access, saya menulisnya sebagai Add pada Comp. Access folder tujuan. Mohon konfirmasi.
+    Jawaban 
   * [TODO] Mohon konfirmasi apakah pemindahan folder atau komponen mengubah struktur folder Pro untuk semua Workspace (diasumsikan ya, karena setiap Pro memiliki satu rangkaian folder).
 -->
 
