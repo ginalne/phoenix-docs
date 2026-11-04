@@ -16,25 +16,16 @@ Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Ev
 
 <!--
 
-  * [TODO] Letakkan screenshot sepuluh block Data Tree pada Blueprint dengan nama file `data-tree-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Saran anotasi: nomor penanda 1 sampai 10 mengikuti urutan baris pada tabel [[#Jenis Flow Block Data Tree]]. Sesuaikan keterangan gambar bila jumlah atau urutan block pada screenshot berbeda.
+  * [DONE] Letakkan screenshot sepuluh block Data Tree pada Blueprint dengan nama file `data-tree-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Saran anotasi: nomor penanda 1 sampai 10 mengikuti urutan baris pada tabel [[#Jenis Flow Block Data Tree]]. Sesuaikan keterangan gambar bila jumlah atau urutan block pada screenshot berbeda.
 
 -->
 
-## Peran Data Tree dalam Flow
-
-Block Data Tree umumnya berada di tengah atau di ujung alur. Misalnya, alur menunjuk sebuah Tree, mengambil [[Docs/Tipe Data/Node]] Origin, menelusuri anak-anaknya, lalu meneruskan hasilnya ke block lain:
-
-```mermaid
-flowchart LR
-    A@{ shape: rounded, label: "**Pulser**" } -->|"&nbsp;**[Boolean]**&nbsp;"| B@{ shape: rounded, label: "**Tree**" }
-    B -->|"&nbsp;**[Tree]**&nbsp;"| C@{ shape: rounded, label: "**Tree Get Origin**" }
-    C -->|"&nbsp;**[Node]**&nbsp;"| D@{ shape: rounded, label: "**Node Get Children**" }
-    D --> E@{ shape: rounded, label: "**Block lain**<br/>Mengolah data" }
-```
+Block Data Tree umumnya berada di tengah atau di ujung alur. Misalnya, alur menunjuk sebuah Tree, mengambil [[Docs/Tipe Data/Node]] Origin, menelusuri anak-anaknya, lalu meneruskan hasilnya ke block lain.
 
 <!--
 
   * [TODO] Konfirmasi diagram: apakah Tree Block dapat langsung dihubungkan dari Pulser, bagaimana tipe data output Node Get Children (dikosongkan pada diagram, kemungkinan kumpulan Node), dan apakah Tree Get Origin menerima output Tree Block seperti pada diagram.
+    Jawaban : Diagram tidak relevan.
 
 -->
 
@@ -53,21 +44,26 @@ Phoenix menyediakan sepuluh Flow Block Data Tree. Selengkapnya tentang komponenn
 | [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]] | Menambahkan [[Docs/Tipe Data/Node]] baru ke sebuah [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]. |
 | [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]] | Menetapkan [[Docs/Tipe Data/Node]] ke posisi tertentu pada Tree, misalnya di bawah Node induk yang dipilih. |
 | [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node|Delete Node Block]] | Menghapus [[Docs/Tipe Data/Node]] dari sebuah [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]. |
-| [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node|Node Block]] | Menunjuk satu [[Docs/Tipe Data/Node]] agar dapat diteruskan ke block lain. |
+| [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node|Node Block]] | Mengambil nilai atribut [[Docs/Tipe Data/Node]], yaitu [[^field|Order]], [[^field|Name]], dan [[^field|Tree]]. |
 | [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]] | Mengambil [[Docs/Tipe Data/Node]] leluhur dari sebuah Node. |
 | [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]] | Mengambil [[Docs/Tipe Data/Node]] anak dari sebuah Node. |
 | [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]] | Mengambil [[Docs/Tipe Data/Node]] induk dari sebuah Node. |
-| [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]] | Mengubah atribut [[Docs/Tipe Data/Node]], yaitu [[^field|Name]], [[^field|Order]], [[^field|Parent]], dan [[^field|Children]]. |
-| [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree|Tree Block]] | Menunjuk satu [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] agar dapat diteruskan ke block lain. |
+| [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]] | Mengubah atribut [[Docs/Tipe Data/Node]], yaitu [[^field|Name]] dan [[^field|Order]]. |
+| [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree|Tree Block]] | Mengambil nilai atribut [[Docs/Tipe Data/Node]], yaitu [[^field|Name]], [[^field|Description]], dan [[^field|Merger Mode]]. |
 | [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]] | Mengambil [[Docs/Tipe Data/Node]] Origin dari sebuah [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]. |
 
 <!--
 
   * [TODO] Konfirmasi fungsi Assign Node Block. Draf ini menebak dari nama (menetapkan Node ke posisi atau induk tertentu). Mohon jelaskan fungsinya dan perbedaannya dengan Add Node Block dan Node Setter Block (yang dapat mengubah Parent), apakah terkait dengan clone Node pada Tree Merger, serta input dan output-nya.
+    Jawaban : Sudah betul
   * [TODO] Konfirmasi fungsi Node Get Ancestor Block: apakah mengambil seluruh leluhur sampai Origin atau hanya leluhur pada tingkat tertentu, dan apakah Node Get Children Block hanya mengambil anak langsung atau seluruh keturunan.
+    Jawaban : Node get ancestor mengambil leluhur pada tingkat yang ditentukan, dan Node Get Children hanya mengambil anak langsung dengan order yang ditentukan.
   * [TODO] Konfirmasi fungsi Node Block dan Tree Block. Draf ini menebak dari nama: keduanya menunjuk Node atau Tree. Mohon jelaskan bagaimana Node ditentukan (misalnya lewat Name atau ID) dan input serta output masing-masing.
+    Jawaban: Sudah diperbaiki
   * [TODO] Konfirmasi perilaku block Data Tree pada Tree yang memakai Merger Mode atau External Read Only aktif (misalnya apakah Node clone atau Node terlindungi dapat diubah atau dihapus lewat Flow), agar dapat ditulis sebagai callout `>**warning**` di halaman ini atau di halaman block.
+    Jawaban: Ya bisa, jadi perlu callout.
   * [TODO] Konfirmasi apakah Delete Node Block perlu callout `>**warning**` terkait Node yang memiliki anak (pada Tree Node Event, menghapus Node yang punya anak menghasilkan satu delete pada Node itu saja).
+    Jawaban: Ya perlu
 
 -->
 
@@ -85,7 +81,6 @@ Phoenix menyediakan sepuluh Flow Block Data Tree. Selengkapnya tentang komponenn
 
 ## Lihat Juga
 
-- [[Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan|Flow Block Data]]
 - [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]]
 - [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]
 - [[Docs/Modul Data/Tree/Mengotomasi|Mengotomasi Tree]]
@@ -94,5 +89,6 @@ Phoenix menyediakan sepuluh Flow Block Data Tree. Selengkapnya tentang komponenn
 <!--
 
   * [TODO] Halaman baru yang diasumsikan pada draf ini: (1) `Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan` sebagai pengantar kategori Data yang memuat keempat kelompok; (2) halaman per block di `Docs/Modul Logic/Flow/Flow Block/Data Tree/<Nama Block>` (Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, Tree Get Origin), mengikuti pola folder `Data Tree/Pengenalan` yang Anda berikan. Skill sebelumnya memakai pola `Data/<Grup>/<Nama>`, mohon konfirmasi pola yang dipakai. Halaman `Docs/Modul Data/Tree/Mengotomasi` mengikuti pola yang sudah ada.
+    Jawaban: 1. Ganti menjadi Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan sebagai pengantar. 2. halaman per block sudah benar. pola `Data/<Grup>/<Nama>` sudah tidak berlaku, diubah menjadi `Data <Grup>/<Nama>`. Halaman Mengotomasi sudah benar.
 
 -->

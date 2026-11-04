@@ -78,6 +78,6 @@ Phoenix menyediakan tujuh Flow Block Data Enum. Selengkapnya tentang komponennya
 <!--
 
   * [TODO] Halaman baru yang diasumsikan pada draf ini: (1) `Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan` sebagai pengantar kategori Data yang memuat keempat kelompok; (2) halaman per block di `Docs/Modul Logic/Flow/Flow Block/Data Enum/<Nama Block>` (Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Value), mengikuti pola folder `Data Enum/Pengenalan` yang Anda berikan. Skill sebelumnya memakai pola `Data/<Grup>/<Nama>`, mohon konfirmasi pola yang dipakai. Halaman `Docs/Modul Data/Enum/Mengotomasi` mengikuti pola yang sudah ada.
-    Jawaban: 1. Ganti menjadi Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan sebagai pengantar. 2. halaman per block sudah benar. pola `Data/<Grup>/<Nama>` sudah tidak berlaku menjadi `Data <Grup>/<Nama>`. Halaman Mengotomasi sudah benar.
+    Jawaban: 1. Ganti menjadi Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan sebagai pengantar. 2. halaman per block sudah benar. pola `Data/<Grup>/<Nama>` sudah tidak berlaku, diubah menjadi `Data <Grup>/<Nama>`. Halaman Mengotomasi sudah benar.
 
 -->

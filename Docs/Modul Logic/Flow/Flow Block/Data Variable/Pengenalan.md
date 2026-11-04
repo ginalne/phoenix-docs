@@ -71,6 +71,6 @@ Phoenix menyediakan enam Flow Block Data Variable. Selengkapnya tentang komponen
 <!--
 
   * [TODO] Halaman baru yang diasumsikan pada draf ini: (1) `Docs/Modul Logic/Flow/Flow Block/Data/Pengenalan` sebagai pengantar kategori Data yang memuat keempat kelompok; (2) halaman per block di `Docs/Modul Logic/Flow/Flow Block/Data Variable/<Nama Block>` (Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value), mengikuti pola folder `Data Variable/Pengenalan` yang Anda berikan. Skill sebelumnya memakai pola `Data/<Grup>/<Nama>`, mohon konfirmasi pola yang dipakai. Halaman `Docs/Modul Data/Variable/Mengotomasi` dan `Docs/Tipe Data/Variable` mengikuti pola yang sudah ada.
-    Jawaban: 1. Ganti menjadi Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan sebagai pengantar. 2. halaman per block sudah benar. pola `Data/<Grup>/<Nama>` sudah tidak berlaku menjadi `Data <Grup>/<Nama>`. Halaman Mengotomasi dan Variable sudah benar.
+    Jawaban: 1. Ganti menjadi Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan sebagai pengantar. 2. halaman per block sudah benar. pola `Data/<Grup>/<Nama>` sudah tidak berlaku, diubah menjadi `Data <Grup>/<Nama>`. Halaman Mengotomasi dan Variable sudah benar.
 
 -->
