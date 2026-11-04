@@ -12,6 +12,16 @@
     tree:
       priority: 4
 ---
+---
+status: draft
+title: Apa itu Workspace?
+description: Pengenalan Workspace, komponen modul Developer untuk mengatur komponen yang dapat dilihat, dikelola, dan diubah, serta fungsi di dalamnya, termasuk cara kerja hak akses untuk setiap Group.
+pageDecoration:
+  icon: ''
+  tree:
+    priority: 4
+---
+
 # Apa itu Workspace?
 
 >**note** Workspace merupakan salah satu komponen dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.
@@ -26,7 +36,7 @@ Aturan yang sama berlaku untuk komponen di modul [[Docs/Modul Data/Pengenalan|Da
 
 - **Akses terpusat.** Seluruh hak akses folder dan komponen diatur dalam satu halaman kerja.
 - **Kontrol sampai level data.** Anda dapat menentukan siapa yang boleh menambah, mengubah, atau menghapus data, bukan hanya siapa yang boleh melihat komponen.
-- **Mengikuti struktur folder.** Folder yang tidak dapat dilihat otomatis menyembunyikan seluruh isi di dalamnya.
+- **Berlaku seketika.** Setiap perubahan tersimpan langsung dan langsung berlaku bagi anggota yang sedang membuka Phoenix, tanpa perlu memuat ulang.
 - **Aman untuk tim.** Anggota hanya melihat dan mengelola bagian yang memang menjadi tanggung jawabnya.
 - **Terhubung dengan Group.** Cukup petakan pengguna ke [[Docs/Modul Developer/Group/Apa itu Group|Group]], maka akses Workspace mengikuti.
 - **Beberapa ruang kerja untuk satu tim.** Satu Group dapat memiliki beberapa Workspace, dan anggota dapat [[#Berpindah Workspace|berpindah Workspace]] kapan saja dari Area Manajemen Folder.
@@ -51,7 +61,7 @@ Aturan yang sama berlaku untuk komponen di modul [[Docs/Modul Data/Pengenalan|Da
 
 ## Cara Kerja Workspace
 
-Ketika komponen Group berhasil memetakan pengguna dengan Workspace, maka Workspace dapat digunakan. Saat pengguna membuka Phoenix, mereka akan masuk ke dalam satu Workspace yang sudah memiliki struktur folder. Jika Group memiliki lebih dari satu Workspace, pengguna dapat [[#Berpindah Workspace|berpindah Workspace]].
+Ketika komponen Group berhasil memetakan pengguna dengan Workspace, maka Workspace dapat digunakan. Saat pengguna membuka Phoenix, mereka akan masuk ke Workspace yang terakhir dipakai, yang sudah memiliki struktur folder. Jika Group memiliki lebih dari satu Workspace, pengguna dapat [[#Berpindah Workspace|berpindah Workspace]].
 
 ```mermaid
 flowchart TD
@@ -76,7 +86,7 @@ Aturan penting:
 - Setiap Pro memiliki satu rangkaian folder yang berawal dari **Origin**. Origin terhubung otomatis ke Group bawaan [[^field/group|Administrator]] dan seluruh hak aksesnya [[^value/boolean/allow]].
 - Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itu menjadi **root** dari Workspace tersebut.
 - Menu [[^field|Place to Directory]] pada Group anak menempatkan Group tersebut di root dari Workspace yang aktif saat itu.
-- Hak akses bersifat **berjenjang**: jika sebuah folder (induk) diatur [[^value/boolean/disallow]] pada [[^field|Visible]], seluruh isinya tidak dapat diakses meskipun pengaturannya [[^value/boolean/allow]].
+- [[^field|Visible]] pada folder menentukan apakah folder beserta isinya tampil di [[Docs/Antarmuka#Area Manajemen Folder]]. Komponen di dalamnya tetap dapat muncul pada pilihan field atau Query jika [[^field|Visible]] komponen itu sendiri [[^value/boolean/allow]]. Lihat [[#Visible pada Folder dan Komponen]].
 
 ## Berpindah Workspace
 
@@ -86,12 +96,10 @@ Jika [[Docs/Modul Developer/Group/Apa itu Group|Group]] Anda memiliki lebih dari
 2. Klik tombol yang berisi nama Workspace aktif
 3. Pilih Workspace tujuan pada popup yang muncul
 
-Struktur folder dan hak akses yang berlaku mengikuti Workspace yang Anda pilih.
+Popup menampilkan Workspace yang dipetakan ke Group Anda. Struktur folder dan hak akses yang berlaku mengikuti Workspace yang Anda pilih.
 
-<!--
-  * [TODO] Mohon konfirmasi Workspace mana yang aktif saat pengguna pertama kali masuk (terakhir dipakai, atau yang pertama pada daftar Group), dan apakah popup hanya menampilkan Workspace yang dipetakan ke Group pengguna (diasumsikan ya).
-    Jawaban: Terakhir dipakai (jika ada perubahan workspace pada pengguna dan workspace aktif terakhir sudah tidak valid, maka workspace otomatis dipindahkan ke yang valid yaitu yang pertama pada daftar Group). Ya, popup menampilkan workspace yang dipetakan ke Group pengguna.
--->
+>**note** Workspace aktif saat membuka Phoenix
+>Saat Anda membuka Phoenix, Workspace yang aktif adalah Workspace yang terakhir Anda pakai. Jika Workspace tersebut sudah tidak valid, misalnya karena Workspace pada Group Anda berubah, Phoenix otomatis memindahkan Anda ke Workspace pertama pada daftar Workspace di Group.
 
 ## Membuat Workspace
 
@@ -163,22 +171,21 @@ Sel yang kosong pada kolom hak akses berarti hak akses tersebut tidak relevan un
 | Fungsi | Aksi |
 | --- | --- |
 | Memperluas atau melipat folder | Klik folder pada kolom [[^field|Folder/ Component]]. |
-| Memindahkan folder | Drag and drop folder ke lokasi tujuan. |
+| Memindahkan folder atau komponen | Drag and drop ke posisi tujuan, baik untuk mengubah urutan maupun memindahkannya ke folder lain. Memerlukan [[^field|Update]] pada folder atau komponen yang dipindahkan, dan [[^field|Add]] pada folder tujuan. |
 | Mengubah hak akses | Klik tombol toggle pada sel di kolom hak akses. Lihat [[#Mengatur Hak Akses]]. |
 
 <!--
-  * [TODO] Mohon konfirmasi detail drag and drop: apakah hanya folder atau komponen juga dapat dipindahkan, ke mana saja tujuannya, hak akses apa yang dibutuhkan (diasumsikan Update pada folder), dan apakah pemindahan mengubah struktur folder Pro untuk semua Workspace (diasumsikan ya, sehingga berdampak pada Visible yang berjenjang).
-    Jawaban : folder dan komponen yang dipindahkan, tujuannya adalah dimana drop dilepaskan (bisa berubah posisi atau ke folder lain). Hak akses yang dibutuhkan adalah Comp. Access Update pada level komponen atau folder (yang dipindahkan) dan juga Data Access add pada folder tujuan.
+  * [TODO] Aturan pemindahan tampak berbeda dengan catatan "Add, Update, dan Delete pada baris Folder". Catatan itu menyebut Update pada folder mengizinkan memindahkan komponen di dalam folder itu, sedangkan aturan drag and drop menyebut Update dibutuhkan pada yang dipindahkan. Mohon konfirmasi mana yang berlaku, atau apakah keduanya berlaku bersamaan (misalnya Update pada baris folder asal dan pada komponen yang dipindahkan).
+  * [TODO] Jawaban Anda menyebut "Data Access add pada folder tujuan". Karena folder tidak memiliki Data Access, saya menulisnya sebagai Add pada Comp. Access folder tujuan. Mohon konfirmasi.
+  * [TODO] Mohon konfirmasi apakah pemindahan folder atau komponen mengubah struktur folder Pro untuk semua Workspace (diasumsikan ya, karena setiap Pro memiliki satu rangkaian folder).
 -->
 
 ## Mengatur Hak Akses
 
 Hak akses diatur per baris dan per kolom pada halaman kerja. Setiap sel memiliki tombol toggle bernilai [[^value/boolean/allow]] atau [[^value/boolean/disallow]]. Klik tombol pada sel yang ingin diubah untuk berpindah antara kedua nilai tersebut.
 
-<!--
-  * [TODO] Mohon konfirmasi apakah perubahan langsung tersimpan saat tombol diklik (tanpa tombol simpan) dan apakah langsung berlaku bagi anggota yang sedang membuka Phoenix atau baru setelah muat ulang.
-    Jawaban: langsung tersimpan, dan langsung berlaku bagi anggota yang sedang membuka phoenix tanpa perlu muat ulang.
--->
+>**warning** Perubahan langsung berlaku
+>Setiap perubahan tersimpan langsung dan langsung berlaku bagi anggota yang sedang membuka Phoenix, tanpa perlu memuat ulang. Periksa kembali sebelum mengubah akses pada [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang sedang aktif bekerja.
 
 ### Comp. Access
 
@@ -186,18 +193,13 @@ Comp. Access berlaku pada level komponen (header).
 
 | Hak Akses | Penjelasan |
 | --- | --- |
-| [[^field|Visible]] | Jika [[^value/boolean/disallow]], pengguna tidak dapat membuka komponen tersebut pada halaman kerja dan tidak dapat memilihnya, misalnya saat mengisi Query atau membuat komponen Interface. |
+| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, pengguna tidak dapat membuka komponen tersebut pada halaman kerja dan tidak dapat memilihnya, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]]. |
 | [[^field|Add]] | Mengizinkan penambahan folder atau komponen baru. |
 | [[^field|Update]] | Mengizinkan perubahan atribut pada komponen. |
 | [[^field|Delete]] | Mengizinkan penghapusan komponen. |
 
 >**note** Add, Update, dan Delete pada baris Folder
->Pada baris folder, ketiganya mengatur isi folder tersebut: [[^field|Add]] mengizinkan menambahkan komponen (baru atau dari folder lain) di folder itu, [[^field|Update]] mengizinkan memindahkan komponen di dalam folder itu, dan [[^field|Delete]] mengizinkan menghapus komponen di dalam folder itu. Hanya [[^field|Visible]] yang bersifat berjenjang ke seluruh isi folder.
-
-<!--
-  * [TODO] Jawaban Anda terpotong pada bagian Delete. Mohon konfirmasi bahwa Delete pada folder berarti menghapus komponen di dalam folder tersebut, dan bahwa hanya Visible yang berjenjang (Add, Update, Delete tidak otomatis berlaku untuk subfolder).
-    Jawaban: Sebenarnya Visible tidak berjenjang, akan tetapi pengguna tidak bisa melihat isi komponen karena Visible foldernya disallow. Namun, jika visible folder disallow dan visible komponennya allow, artinya pengguna tidak bisa membuka komponen tersebut karena tidak ada dalam kolom manajemen folder namun dapat muncul dalam pilihan field atau Query (semisal memilih data Table dan komponen lain).
--->
+>Pada baris folder, ketiganya mengatur isi folder tersebut: [[^field|Add]] mengizinkan menambahkan komponen (baru atau dari folder lain) di folder itu, [[^field|Update]] mengizinkan memindahkan komponen di dalam folder itu, dan [[^field|Delete]] mengizinkan menghapus komponen di dalam folder itu.
 
 >**note** Variable Data tetap dapat dipilih
 >Jika [[^field|Visible]] pada komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] diatur [[^value/boolean/disallow]], anggota tidak dapat membuka halaman kerja Variable, sehingga tidak dapat mengetahui [[^field|Value]]-nya, dan tidak dapat memilih komponen Variable saat Query. Namun daftar Variable Data tetap muncul pada pilihan, sehingga tetap dapat dipakai untuk otomasi atau integrasi, misalnya lewat [[Docs/Modul Logic/Flow/Flow Block/Data/Variable/Variable Getter|Variable Getter Block]]. Anggota yang memiliki akses melihat [[^field|Value]] secara terbuka di halaman kerja Variable.
@@ -278,11 +280,21 @@ Function Access mengatur fungsi tambahan pada komponen.
 >**warning** Publish membuka akses ke publik
 >Tautan hasil [[^field|Publish]] dapat dibuka oleh publik. Pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang dipublikasikan, widget Button yang sudah disetup dapat memicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dan dipakai oleh siapa pun yang membuka tautan. Berikan [[^field|Publish]] hanya kepada [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang tepercaya, dan gunakan [[^field|View Publish]] bagi anggota yang hanya perlu menyalin tautan.
 
-### Aturan Pewarisan Akses
+### Visible pada Folder dan Komponen
 
-Hak akses folder memengaruhi seluruh isinya. Jika [[^field|Visible]] pada folder diatur [[^value/boolean/disallow]], komponen di dalamnya tidak dapat diakses meskipun komponen tersebut diatur [[^value/boolean/allow]]. Hal ini karena folder induknya tidak dapat dilihat.
+[[^field|Visible]] bekerja pada dua level dan tidak saling menurunkan nilai:
 
-Pengaturan [[^value/boolean/disallow]] juga dapat diterapkan pada komponen selain folder, misalnya komponen Workspace dan komponen Tree.
+| Level | Jika [[^value/boolean/disallow]] |
+| --- | --- |
+| Folder | Folder beserta isinya tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]], sehingga komponen di dalamnya tidak dapat dibuka. |
+| Komponen | Komponen tidak dapat dibuka dan tidak dapat dipilih, misalnya saat mengisi field atau Query. |
+
+Jika [[^field|Visible]] pada folder diatur [[^value/boolean/disallow]] tetapi [[^field|Visible]] pada komponen di dalamnya [[^value/boolean/allow]], pengguna tidak dapat membuka komponen tersebut karena tidak tampil di Area Manajemen Folder. Namun komponen itu tetap dapat muncul pada pilihan field atau Query, misalnya saat memilih data Table.
+
+Pengaturan [[^value/boolean/disallow]] pada komponen dapat diterapkan pada jenis komponen apa pun, misalnya komponen Workspace dan komponen Tree.
+
+>**warning** Menyembunyikan folder tidak menutup akses ke komponennya
+>Untuk menutup komponen sepenuhnya, atur [[^field|Visible]] pada komponen itu sendiri menjadi [[^value/boolean/disallow]], bukan hanya pada folder induknya.
 
 >**warning** Tidak ada pengaman bawaan untuk akses administrator
 >Menonaktifkan [[^field|Visible]] atau [[^field|Update]] pada komponen Workspace dan [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang Anda pakai dapat mengunci pengelolaan akses Anda sendiri. Phoenix hanya mencegah penghapusan Workspace root terakhir yang terhubung ke Group, dan tidak memiliki pengaman bawaan untuk pengaturan hak akses. Periksa pengaturan sebelum menonaktifkan akses.
@@ -293,13 +305,13 @@ Pengaturan [[^value/boolean/disallow]] juga dapat diterapkan pada komponen selai
 
 | Folder/Komponen | Visible | Hasil |
 | --- | --- | --- |
-| [[^field/folder|Keuangan]] | [[^value/boolean/disallow]] | Folder tidak dapat dilihat. |
-| [[^field/tableview|Laporan Bulanan]] | [[^value/boolean/allow]] | Tetap tidak dapat diakses karena folder induknya [[^value/boolean/disallow]]. |
-| [[^field/folder|Penjualan]] | [[^value/boolean/allow]] | Folder dapat dilihat. |
+| [[^field/folder|Keuangan]] | [[^value/boolean/disallow]] | Folder tidak tampil di Area Manajemen Folder. |
+| [[^field/tableview|Laporan Bulanan]] | [[^value/boolean/allow]] | Tidak dapat dibuka karena folder induknya tidak tampil, tetapi masih dapat muncul pada pilihan field atau Query. |
+| [[^field/folder|Penjualan]] | [[^value/boolean/allow]] | Folder tampil dan dapat dibuka. |
 | [[^field/tableview|Daftar Pelanggan]] | [[^value/boolean/allow]] | Komponen dapat dilihat dan dibuka. |
-| [[^field/canvas|Analisis Pelanggan]] | [[^value/boolean/disallow]] | Komponen tidak dapat diakses meskipun folder induknya [[^value/boolean/allow]]. |
+| [[^field/canvas|Analisis Pelanggan]] | [[^value/boolean/disallow]] | Tidak dapat dibuka dan tidak muncul pada pilihan, meskipun folder induknya [[^value/boolean/allow]]. |
 
-Dengan satu pengaturan pada folder, seluruh komponen keuangan otomatis tersembunyi tanpa perlu mengatur satu per satu.
+Dengan satu pengaturan pada folder, seluruh isi folder Keuangan tidak tampil di Area Manajemen Folder tanpa perlu mengatur satu per satu. Untuk menutup komponen sepenuhnya, atur juga [[^field|Visible]] pada komponen itu sendiri menjadi [[^value/boolean/disallow]], seperti pada [[^field/canvas|Analisis Pelanggan]].
 
 **Contoh jika Komponen hanya boleh dilihat**
 
@@ -325,6 +337,7 @@ Tim penjualan perlu menambah dan memperbarui data pelanggan setiap hari, tetapi 
 | Kebutuhan | Pengaturan Workspace |
 | --- | --- |
 | Anggota baru hanya perlu membaca laporan. | [[^field|Visible]] [[^value/boolean/allow]], Data Access dan Function Access [[^value/boolean/disallow]]. |
+| Data keuangan harus benar-benar tertutup bagi Group tertentu. | [[^field|Visible]] [[^value/boolean/disallow]] pada folder dan pada setiap komponen di dalamnya. |
 | Tim operasional menjalankan otomasi tanpa perlu mengetahui nilai rahasia. | Komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] tidak diberi akses, sehingga [[^field|Value]] tersembunyi tetapi Variable Data tetap dapat dipilih. |
 | Tim pemasaran menerbitkan [[Docs/Modul Interface/Form/Apa itu Form|Form]] pendaftaran. | [[^field|Publish]] [[^value/boolean/allow]] hanya pada Form tersebut, sedangkan komponen lain tetap [[^value/boolean/disallow]]. |
 | Tim lain hanya perlu menyalin tautan laporan publik. | [[^field|View Publish]] [[^value/boolean/allow]] dan [[^field|Publish]] [[^value/boolean/disallow]]. |
@@ -334,9 +347,9 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 
 ## Praktik Terbaik
 
-- **Atur akses di level folder terlebih dahulu**, baru sesuaikan komponen tertentu bila diperlukan.
+- **Atur folder terlebih dahulu** untuk merapikan tampilan di Area Manajemen Folder dan mengatur penambahan komponen, lalu sesuaikan [[^field|Visible]], Data Access, dan Function Access pada setiap komponen.
 - **Berikan akses seminimal mungkin** (*least privilege*) sesuai kebutuhan kerja setiap [[Docs/Modul Developer/Group/Apa itu Group|Group]].
-- **Gunakan [[^field|Visible]] = [[^value/boolean/disallow]]** untuk menyembunyikan komponen yang tidak relevan agar tidak muncul saat memilih komponen atau di [[Docs/Antarmuka#Area Manajemen Folder]].
+- **Gunakan [[^field|Visible]] = [[^value/boolean/disallow]] pada komponen** untuk menutupnya sepenuhnya, termasuk dari pilihan field dan Query. Pada folder, [[^field|Visible]] hanya menyembunyikan isinya dari [[Docs/Antarmuka#Area Manajemen Folder]].
 - **Sembunyikan komponen sumber setelah Query terisi**, karena [[^field|Visible]] pada komponen sumber hanya dibutuhkan saat mengisi Query.
 - **Pisahkan Function Access** untuk [[^field|Publish]] dan [[^field|View Publish]], sehingga tidak semua anggota dapat mengubah konfigurasi publikasi.
 - **Berikan [[^field|Publish]] dengan hati-hati** karena tautan publikasi dapat dibuka publik, terutama pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang memiliki widget Button untuk memicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
@@ -344,14 +357,17 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 - **Buat Workspace baru dari Workspace yang tepat**, karena nilai awal hak akses mengikuti Workspace yang sedang aktif. Periksa seluruh sel sebelum memetakannya ke [[Docs/Modul Developer/Group/Apa itu Group|Group]].
 - **Isi ulang Workspace di setiap Group**, karena [[Docs/Modul Developer/Group/Apa itu Group|Group]] anak tidak mewarisi Workspace dari Group induk.
 - **Jaga akses administrator.** Hindari menonaktifkan [[^field|Visible]] atau [[^field|Update]] pada komponen Workspace dan Group yang dipakai administrator, karena tidak ada pengaman bawaan yang mencegah pengelolaan akses terkunci.
+- **Berhati-hati saat mengubah akses Group yang sedang aktif**, karena perubahan langsung berlaku tanpa perlu memuat ulang.
 - **Cek hasilnya dengan [[^button/refresh|Refresh]]** setelah mengubah pengaturan akses.
 
 ## Batasan dan Catatan
 
 - Akses Workspace untuk setiap anggota dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]], bukan langsung pada pengguna.
 - Satu pengguna hanya dapat berada di satu [[Docs/Modul Developer/Group/Apa itu Group|Group]], dan [[Docs/Modul Developer/Group/Apa itu Group|Group]] anak tidak mewarisi Workspace dari Group induk.
-- Folder yang [[^value/boolean/disallow]] pada [[^field|Visible]] membuat seluruh isinya tidak dapat diakses, meskipun isinya [[^value/boolean/allow]]. Hanya [[^field|Visible]] yang berjenjang.
+- [[^field|Visible]] tidak saling menurunkan nilai antara folder dan komponen. Folder yang [[^value/boolean/disallow]] hanya membuat isinya tidak tampil di Area Manajemen Folder, sehingga tidak dapat dibuka. Komponen di dalamnya tetap dapat muncul pada pilihan field atau Query jika [[^field|Visible]] komponen itu [[^value/boolean/allow]].
 - Tombol [[^button/edit|Edit]] hanya mengubah atribut Workspace, bukan hak akses.
+- Perubahan hak akses tersimpan langsung dan langsung berlaku bagi anggota yang sedang membuka Phoenix, tanpa perlu memuat ulang.
+- Saat membuka Phoenix, pengguna masuk ke Workspace yang terakhir dipakai. Jika Workspace itu sudah tidak valid, pengguna dipindahkan ke Workspace pertama pada daftar Group.
 - Nilai awal hak akses Workspace baru mengikuti Workspace yang sedang aktif, sedangkan seluruh hak akses Origin bernilai [[^value/boolean/allow]].
 - Workspace di posisi root yang terakhir terhubung ke [[Docs/Modul Developer/Group/Apa itu Group|Group]] tidak dapat dihapus, termasuk Origin.
 - Tidak ada pengaman bawaan untuk pengaturan hak akses. Menonaktifkan akses pada komponen Workspace atau Group dapat mengunci pengelolaan akses.
@@ -367,17 +383,19 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 - **Workspace** mengatur komponen yang dapat dilihat, dikelola, dan diubah, serta fungsi di dalamnya.
 - Akses anggota dikelola lewat [[Docs/Modul Developer/Group/Apa itu Group|Group]]. Satu pengguna hanya berada di satu Group, Group anak tidak mewarisi Workspace dari Group induk, dan anggota dapat berpindah di antara Workspace milik Group-nya.
 - Hak akses terbagi tiga: [[^field|Comp. Access]], [[^field|Data Access]], dan [[^field|Function Access]], masing-masing bernilai [[^value/boolean/allow]] atau [[^value/boolean/disallow]].
-- Hanya [[^field|Visible]] yang **berjenjang**: folder [[^value/boolean/disallow]] menutup akses ke seluruh isinya.
+- [[^field|Visible]] pada folder hanya menyembunyikan isinya dari Area Manajemen Folder. Untuk menutup komponen sepenuhnya, atur [[^field|Visible]] pada komponen itu sendiri.
 - Komponen Interface mengikuti **dua syarat**: Data berstatus `editable` dan Data Access data sumber bernilai [[^value/boolean/allow]].
 - Berhati-hatilah dengan [[^field|Publish]] dan dengan pengaturan akses komponen Workspace dan Group: tautan publikasi dapat dibuka publik, dan tidak ada pengaman bawaan untuk akses yang terkunci.
-- Halaman kerja Workspace memiliki dua tombol: [[^button/edit|Edit]] dan [[^button/refresh|Refresh]].
+- Perubahan hak akses langsung berlaku. Halaman kerja Workspace memiliki dua tombol: [[^button/edit|Edit]] dan [[^button/refresh|Refresh]].
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 >**faq**
 >**Bagaimana pengguna dapat memakai Workspace?**
->Pengguna harus dipetakan ke Workspace melalui komponen [[Docs/Modul Developer/Group/Apa itu Group|Group]]. Setelah itu, saat membuka Phoenix mereka akan masuk ke Workspace tersebut.
+>Pengguna harus dipetakan ke Workspace melalui komponen [[Docs/Modul Developer/Group/Apa itu Group|Group]]. Setelah itu, saat membuka Phoenix mereka akan masuk ke Workspace yang terakhir dipakai.
 >**Bagaimana cara berpindah Workspace?**
 >Klik tombol yang berisi nama Workspace aktif di [[Docs/Antarmuka#Area Manajemen Folder]], lalu pilih Workspace tujuan pada popup yang muncul. Lihat [[#Berpindah Workspace]].
+>**Workspace mana yang aktif saat saya membuka Phoenix?**
+>Workspace yang terakhir Anda pakai. Jika Workspace itu sudah tidak valid, Anda otomatis dipindahkan ke Workspace pertama pada daftar Workspace di Group.
 >**Apakah satu pengguna dapat berada di lebih dari satu Group?**
 >Tidak. Satu pengguna hanya dapat berada di satu [[Docs/Modul Developer/Group/Apa itu Group|Group]], sehingga akses Workspace-nya mengikuti Group tersebut.
 >**Apakah Group anak otomatis memakai Workspace milik Group induk?**
@@ -386,12 +404,16 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 >Nilai awal mengikuti Workspace yang sedang aktif saat Workspace dibuat. Origin, sebagai Workspace pertama, seluruh hak aksesnya [[^value/boolean/allow]].
 >**Apakah Origin dapat dihapus?**
 >Origin tidak dapat dihapus selama belum ada Workspace lain di posisi root yang terhubung ke [[Docs/Modul Developer/Group/Apa itu Group|Group]]. Ini untuk mencegah hilangnya akses ke root utama.
+>**Apakah perubahan hak akses perlu disimpan atau dimuat ulang oleh anggota?**
+>Tidak. Perubahan tersimpan langsung dan langsung berlaku bagi anggota yang sedang membuka Phoenix.
 >**Apa yang terjadi jika folder diatur disallow tetapi komponen di dalamnya allow?**
->Komponen tetap tidak dapat diakses karena folder induknya tidak dapat dilihat.
+>Komponen tidak dapat dibuka karena folder induknya tidak tampil di Area Manajemen Folder. Namun komponen itu tetap dapat muncul pada pilihan field atau Query.
+>**Bagaimana cara menyembunyikan komponen sepenuhnya?**
+>Atur [[^field|Visible]] pada komponen itu sendiri menjadi [[^value/boolean/disallow]], bukan hanya pada folder induknya.
 >**Apa bedanya Comp. Access dan Data Access?**
 >[[^field|Comp. Access]] mengatur komponen secara keseluruhan (header), sedangkan [[^field|Data Access]] mengatur data di dalam komponen, misalnya [[Docs/Tipe Data/Row]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]].
 >**Apa arti Visible = disallow?**
->Pengguna tidak dapat membuka komponen tersebut pada halaman kerja dan tidak dapat memilihnya, termasuk saat mengisi Query atau membuat komponen Interface.
+>Pada komponen, pengguna tidak dapat membuka komponen tersebut pada halaman kerja dan tidak dapat memilihnya, termasuk saat mengisi Query atau membuat komponen Interface. Pada folder, folder beserta isinya tidak tampil di Area Manajemen Folder.
 >**Apa fungsi Add, Update, dan Delete pada baris folder?**
 >Ketiganya mengatur isi folder: menambahkan komponen di folder, memindahkan komponen di dalam folder, dan menghapus komponen di dalam folder.
 >**Mengapa anggota tidak dapat mengubah baris di Table View padahal Data Access sudah allow?**
