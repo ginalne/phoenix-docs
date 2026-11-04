@@ -193,10 +193,10 @@ Comp. Access berlaku pada level komponen (header).
 
 | Hak Akses | Penjelasan |
 | --- | --- |
-| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, pengguna tidak dapat membuka komponen tersebut pada halaman kerja dan tidak dapat memilihnya, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]]. |
-| [[^field|Add]] | Mengizinkan penambahan folder atau komponen baru. |
-| [[^field|Update]] | Mengizinkan perubahan atribut pada komponen. |
-| [[^field|Delete]] | Mengizinkan penghapusan komponen. |
+| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, komponen tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]] dan juga tidak tampil dalam _field_, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]]. |
+| [[^field|Add]] | Mengizinkan penambahan folder atau komponen baru, termasuk menempatkan folder atau komponen dari folder lain. |
+| [[^field|Update]] | Mengizinkan perubahan atribut pada folder atau komponen. |
+| [[^field|Delete]] | Mengizinkan penghapusan folder atau komponen, termasuk memindahkan folder atau komponen ke folder lain. Pastikan folder Tujuan mengijinkan Comp. access [[^field|Add]].
 
 >**note** Add, Update, dan Delete pada baris Folder
 >Pada baris folder, ketiganya mengatur isi folder tersebut: [[^field|Add]] mengizinkan menambahkan komponen (baru atau dari folder lain) di folder itu, [[^field|Update]] mengizinkan memindahkan komponen di dalam folder itu, dan [[^field|Delete]] mengizinkan menghapus komponen di dalam folder itu.
