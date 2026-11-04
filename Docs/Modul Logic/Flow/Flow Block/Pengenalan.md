@@ -6,6 +6,7 @@ pageDecoration:
   tree:
     priority: 10
 ---
+
 # Apa itu Flow Block?
 
 >**note** Flow Block merupakan bagian dari komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
