@@ -110,7 +110,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Belum terkonfirmasi:** bentuk nilai Parent pada `Old` Tree, Type pada `Old` delete Variable, perilaku Trigger manual selain Pulser, fungsi segitiga biru di kiri judul block, dan tipe data yang tepat untuk `Old` Variable Event pada diagram.
 
 ## Flow Block Data
- 
+
 - **Struktur dan path (terkonfirmasi):** kategori Data terdiri atas empat kelompok. Halaman Pengenalan: `Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan`, `Data Enum/Pengenalan`, `Data Table/Pengenalan`, `Data Tree/Pengenalan`. Halaman per block: `Docs/Modul Logic/Flow/Flow Block/Data <Grup>/<Nama Block>`. Pola lama `Data/<Grup>/<Nama>` tidak berlaku. Tidak ada halaman `Data/Pengenalan`.
 - **Daftar block:**
   - Variable (6): Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value.
