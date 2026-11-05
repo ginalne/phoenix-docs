@@ -3,7 +3,7 @@ status: draft
 title: Add Variable
 description: Flow Block untuk menambahkan Variable Data baru dari dalam Flow.
 pageDecoration:
-  icon: zap
+  icon: plus
   tree:
     priority: 1
 ---
@@ -14,7 +14,6 @@ pageDecoration:
 Add Variable adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk menambahkan [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] baru dari dalam Flow, tanpa membuka halaman kerja [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]. Block ini memiliki tiga input di sisi kiri dan dua output di sisi kanan.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Variable/add-variable-block-flow.png|Flow Block Add Variable dengan tiga input dan dua output]]
-
 ## Input dan Output
 
 Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -81,11 +80,16 @@ Hubungkan [[^output|New Variable]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Va
 - [[Docs/Tipe Data/Variable]]
 
 <!--
-  * [TODO] Letakkan screenshot block Add Variable (potong dari gambar yang Anda berikan) sebagai `add-variable-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 sampai 3 untuk input Name, Value, Description dan nomor 4 sampai 5 untuk output New Variable dan Name Conflict.
+  * [DONE] Letakkan screenshot block Add Variable (potong dari gambar yang Anda berikan) sebagai `add-variable-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 sampai 3 untuk input Name, Value, Description dan nomor 4 sampai 5 untuk output New Variable dan Name Conflict.
   * [TODO] Konfirmasi pola halaman block Data: judul bagian saya tulis "Input dan Output" (bukan "Input, Control dan Output") karena block Data tidak memiliki Control. Bagian TL:DR dan FAQ sengaja tidak dibuat agar halaman block tetap ringkas. Beri tahu saya bila ingin ditambahkan.
+    Jawaban: Oke bagus, pertahankan. Jadi hanya disebutkan judul yang relevan.
   * [TODO] Konfirmasi perilaku Add Variable: (a) [[^output|Name Conflict]] saat berhasil saya tulis [[^value/empty]] mengikuti pola Variable Getter, (b) tipe data yang dipilih pada Value menjadi Type Variable Data, (c) apakah pencocokan Name membedakan huruf besar dan kecil, (d) apa yang terjadi bila Name kosong atau Value masih N/A Type, (e) apakah Description bertipe String atau Text.
+    Jawaban: (a) saat berhasil isi boolean false. (b) betul. (c) ya. (d) Name kosong akan mengakibatkan error. Value N/A Type masih tersimpan. (e) Description bersifat text
   * [TODO] Daftar tipe data yang muncul pada Change Type dan target klik kanan (input Value atau seluruh block) belum terkonfirmasi.
-  * [TODO] Halaman baru yang saya tautkan sebagai usulan: `Flow Block/Data Variable/Pengenalan`, `Flow Block/Menghubungkan Koneksi`, `Flow Block/Syarat Eksekusi`, dan `Flow Block/Event/Variable Event`. Isi yang diharapkan mengikuti pola halaman Flow Block lain.
+    Jawaban: semua tipe data yang tersedia dalam Phoenix.
+  * [DONE] Halaman baru yang saya tautkan sebagai usulan: `Flow Block/Data Variable/Pengenalan`, `Flow Block/Menghubungkan Koneksi`, `Flow Block/Syarat Eksekusi`, dan `Flow Block/Event/Variable Event`. Isi yang diharapkan mengikuti pola halaman Flow Block lain.
   * [TODO] Nama contoh `batas_stok_minimum` saya ambil dari contoh Variable yang sudah ada. Sesuaikan bila perlu.
+    Jawaban: Sudah oke
   * [TODO] Nilai `tree.priority` (1 sampai 6) mengikuti urutan block pada permintaan Anda. Sesuaikan dengan urutan di sidebar.
+    Jawaban: Abaikan atribut pageDecoration di frontmatter.
 -->

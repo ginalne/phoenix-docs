@@ -3,7 +3,7 @@ status: draft
 title: Variable Getter
 description: Flow Block untuk mengambil Variable Data berdasarkan Name.
 pageDecoration:
-  icon: zap
+  icon: search
   tree:
     priority: 4
 ---
@@ -14,7 +14,6 @@ pageDecoration:
 Variable Getter adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk mengambil [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dengan mengisi Name. Block ini menjadi pintu masuk bagi block Variable lain yang membutuhkan Variable Data sebagai input. Block ini memiliki satu input di sisi kiri dan dua output di sisi kanan.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Variable/variable-getter-block-flow.png|Flow Block Variable Getter dengan satu input dan dua output]]
-
 ## Input dan Output
 
 Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -71,8 +70,11 @@ Hubungkan [[^output|Variable]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Variab
 
 
 <!--
-  * [TODO] Letakkan screenshot block Variable Getter sebagai `variable-getter-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 untuk input Name dan nomor 2 sampai 3 untuk output Variable dan Is Empty.
+  * [DONE] Letakkan screenshot block Variable Getter sebagai `variable-getter-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 untuk input Name dan nomor 2 sampai 3 untuk output Variable dan Is Empty.
   * [TODO] Konfirmasi detail *exact match*: apakah membedakan huruf besar dan kecil, dan bagaimana bila Name kosong atau berisi spasi di awal dan akhir.
+    Jawaban : Iya, titlecase sensitive dan bisa masuk karater simbol. spasi,enter (karakter lain yang tidak bisa dilihat) diawal dan diakhir akan ditiadakan (trim) saat menyimpan nama variable. Mungkin bisa dijelaskan dengan konteks yang lebih umum dibanding exact match.
   * [TODO] Konfirmasi bahwa Is Empty dapat dihubungkan ke Branch Block untuk memisahkan alur. Saya tulis sebagai ide kombinasi.
+    Jawaban: Iya bisa, setiap output bisa dihubungkan ke block manapun untuk diolah (alur terpisah). Isinya boolean. Perlu diingat untuk output awal Is- pasti menghasilkan boolean true/false.
   * [TODO] Kalimat "Variable Getter tidak menghasilkan error ketika Name tidak cocok" saya simpulkan dari output Is Empty. Konfirmasi apakah block ini memang tidak pernah menimbulkan error di Flow Activity.
+    Jawaban: secara teknis tidak dapat error.
 -->

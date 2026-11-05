@@ -3,7 +3,7 @@ status: draft
 title: Variable Value
 description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
 pageDecoration:
-  icon: zap
+  icon: grid
   tree:
     priority: 6
 ---
@@ -22,7 +22,7 @@ Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[
 
 | Input | Tipe Data | Fungsi |
 | ----- | --------- | ------ |
-| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang Value-nya akan diambil. Isi dengan Name Variable Data (alias) atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
+| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang Value-nya akan diambil. Isi dengan Variable Data atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
 
 ### Output
 

@@ -3,7 +3,7 @@ status: draft
 title: Variable Setter
 description: Flow Block untuk memperbarui Value pada Variable Data.
 pageDecoration:
-  icon: zap
+  icon: save
   tree:
     priority: 5
 ---
@@ -11,7 +11,7 @@ pageDecoration:
 
 >**note** Variable Setter merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Variable Setter adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk memperbarui Value pada [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dari dalam Flow. Dengan block ini, nilai yang menjadi sumber kebenaran dapat berubah otomatis tanpa Anda membuka halaman kerja [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]. Block ini memiliki dua input di sisi kiri dan satu output di sisi kanan.
+Variable Setter adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk memperbarui [[^field|Value]] pada [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dari dalam [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. Dengan block ini, nilai yang menjadi sumber kebenaran dapat berubah otomatis tanpa Anda membuka halaman kerja [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]. Block ini memiliki dua input di sisi kiri dan satu output di sisi kanan.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Variable/variable-setter-block-flow.png|Flow Block Variable Setter dengan dua input dan satu output]]
 ## Input dan Output
@@ -22,7 +22,7 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 
 | Input | Tipe Data | Fungsi |
 | ----- | --------- | ------ |
-| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang akan diperbarui. Isi dengan Name Variable Data (alias) atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
+| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang akan diperbarui. Isi dengan Variable Data atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
 | [[^field|New Value]] | Sesuai Type Variable Data | Nilai baru yang akan disimpan ke Value Variable Data. |
 
 ### Output
@@ -34,10 +34,10 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 ## Cara Kerja
 
 1. Block menerima Variable Data dari [[^field|Variable]] dan nilai dari [[^field|New Value]].
-2. Block mengganti Value Variable Data dengan [[^field|New Value]].
+2. Block mengganti [[^field|Value]] Variable Data dengan [[^field|New Value]].
 3. Block mengirim [[^output|Pass]] sebagai tanda proses selesai.
 
-Hanya Value yang berubah. Name, Type, dan Description Variable Data tetap sama.
+Hanya Value yang berubah. [[^field|Name]], [[^field|Type]], dan [[^field|Description]] Variable Data tetap sama.
 
 >**note** Perubahan oleh Flow tidak memicu Flow kembali
 > Pembaruan lewat Variable Setter tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event|Variable Event Block]] dengan event [[^value/string|update]], sehingga tidak ada Flow yang berjalan karena pembaruan ini.
@@ -73,7 +73,11 @@ Hubungkan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Varia
 <!--
   * [DONE] Letakkan screenshot block Variable Setter sebagai `variable-setter-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 dan 2 untuk input Variable dan New Value, nomor 3 untuk output Pass.
   * [TODO] Pada screenshot, input New Value tampil "Empty" (abu-abu), tidak seperti Value pada Add Variable yang tampil N/A Type. Konfirmasi apakah tipe New Value otomatis mengikuti Type Variable Data yang dipilih, atau perlu didefinisikan lewat klik kanan, Change Type.
+    Jawaban: maaf ternyata kesalahan saya, harusnya seperti Add Variable yaitu N/A dan perlu Change Type.
   * [TODO] Konfirmasi arti output Pass pada Variable Setter. Saya tulis sebagai Boolean true bila Value berhasil diperbarui.
-  * [TODO] Konfirmasi perilaku bila tipe data New Value tidak sesuai Type Variable Data (ditolak, dikonversi, atau error), serta bila Variable kosong atau tidak valid. Baris tabel Contoh Penggunaan untuk kasus tersebut adalah asumsi saya.
+    Jawaban: bukan, pass disini adalah mengeluarkan data yang diinput, karena konteks nya disini variable, maka isi pass adalah data bertipe variable
+  * [TODO] Konfirmasi perilaku bila tipe data New Value tidak sesuai Type Variable Data (ditolak, dikonversi, atau error), serta bila Variable kosong atau tidak valid. Baris tabel Contoh Penggunaan untuk kasus tersebut adalah asumsi saya/
+    Jawaban: New value juga memberikan new type, jadi tidak mungkin error. Variable kosong memungkinkan (akan menghasilkan error) tapi tidak valid itu tidak mungkin karena field variable adalah select option.
   * [TODO] Kalimat "Hanya Value yang berubah" dan catatan hak akses saya simpulkan dari fungsi block dan pengetahuan komponen Variable. Mohon konfirmasi.
+    Jawaban: Sudah betul
 -->

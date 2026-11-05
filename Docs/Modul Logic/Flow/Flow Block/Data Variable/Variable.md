@@ -3,7 +3,7 @@ status: draft
 title: Variable
 description: Flow Block untuk mengurai Variable Data menjadi nilai atributnya.
 pageDecoration:
-  icon: zap
+  icon: grid
   tree:
     priority: 3
 ---
@@ -11,7 +11,7 @@ pageDecoration:
 
 >**note** Variable merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Variable adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk mengubah satu [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] menjadi nilai atributnya, yaitu Name, Description, dan Value. Block ini memiliki satu input di sisi kiri dan empat output di sisi kanan.
+Variable adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk mengubah satu [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] menjadi nilai atributnya, yaitu [[^field|Name]], [[^field|Description]], dan [[^field|Value]]. Block ini memiliki satu input di sisi kiri dan empat output di sisi kanan.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Variable/variable-block-flow.png|Flow Block Variable dengan satu input dan empat output]]
 
@@ -23,7 +23,7 @@ Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[
 
 | Input | Tipe Data | Fungsi |
 | ----- | --------- | ------ |
-| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang akan diurai. Isi dengan Name Variable Data (alias) atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
+| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang akan diurai. Isi dengan Variable Data atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
 
 ### Output
 
@@ -69,9 +69,12 @@ Hubungkan [[^output|Name]] dan [[^output|Description]] ke block yang menyusun pe
 - [[Docs/Tipe Data/Variable]]
 
 <!--
-  * [TODO] Letakkan screenshot block Variable sebagai `variable-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 untuk input Variable dan nomor 2 sampai 5 untuk output Pass, Name, Description, Value.
+  * [DONE] Letakkan screenshot block Variable sebagai `variable-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 untuk input Variable dan nomor 2 sampai 5 untuk output Pass, Name, Description, Value.
   * [TODO] Konfirmasi arti output Pass. Saya tulis sebagai Boolean true bila Variable Data berhasil diurai, dan empty bila gagal. Mohon konfirmasi nilai dan tipe datanya.
+    Jawaban: Bukan, pass disini adalah mengeluarkan data yang diinput, karena konteks nya disini variable, maka isi pass adalah data bertipe variable
   * [TODO] Konfirmasi tipe data output Name dan Description (saya asumsikan String) dan apakah tipe data Value benar mengikuti Type Variable Data.
-  * [TODO] Baris tabel Contoh Penggunaan untuk Variable kosong atau tidak valid (seluruh output empty) adalah asumsi saya.
-  * [TODO] Tautan `Flow Block/Operator/String/Concatenate` adalah halaman yang sudah ada pada daftar path. Ganti bila Anda lebih memilih contoh block lain.
+    Jawaban: Iya betul.
+  * [TODO] Baris tabel Contoh Penggunaan untuk Variable kosong atau tidak valid (seluruh output empty) adalah asumsi saya
+    Jawaban: Iya betul.
+  * [DONE] Tautan `Flow Block/Operator/String/Concatenate` adalah halaman yang sudah ada pada daftar path. Ganti bila Anda lebih memilih contoh block lain.
 -->

@@ -3,7 +3,7 @@ status: draft
 title: Delete Variable
 description: Flow Block untuk menghapus Variable Data yang ditunjuk, dengan opsi hapus paksa.
 pageDecoration:
-  icon: zap
+  icon: trash
   tree:
     priority: 2
 ---
@@ -14,7 +14,6 @@ pageDecoration:
 Delete Variable adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk menghapus [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dari dalam Flow. Block ini memiliki dua input di sisi kiri dan dua output di sisi kanan yang memberi tahu Anda apakah penghapusan berhasil.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Variable/delete-variable-block-flow.png|Flow Block Delete Variable dengan dua input dan dua output]]
-
 >**danger** Penghapusan tidak dapat dikembalikan
 > Variable Data yang dihapus lewat Delete Variable tidak dapat dikembalikan. Pastikan [[^field|Variable]] menunjuk Variable Data yang benar sebelum Flow dijalankan.
 
@@ -79,9 +78,13 @@ Hubungkan [[^output|Error]] ke block yang menangani kegagalan, misalnya [[Docs/M
 - [[Docs/Tipe Data/Variable]]
 
 <!--
-  * [TODO] Letakkan screenshot block Delete Variable sebagai `delete-variable-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 dan 2 untuk input Variable dan Force, nomor 3 dan 4 untuk output Succeed dan Error.
+  * [DONE] Letakkan screenshot block Delete Variable sebagai `delete-variable-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 dan 2 untuk input Variable dan Force, nomor 3 dan 4 untuk output Succeed dan Error.
   * [TODO] Konfirmasi perilaku Force: (a) Force kosong dianggap false, (b) tanpa Force penghapusan gagal bila Variable Data memiliki relasi atau histori, (c) apa persisnya yang dimaksud "relasi" dan "histori" (misalnya Flow Block yang merujuk, riwayat Variable Event), dan apa yang terjadi pada keduanya saat hapus paksa.
+    Jawaban: relasi adalah variable sedang digunakan pada flow atau data lain, sedangkan history adalah riwayat activity menyimpan bahwa variable itu digunakan. Untuk menghapus variable yang istilahnya “sudah digunakan” perlu force.
   * [TODO] Konfirmasi output Error: saya tulis bertipe Boolean dengan nilai true saat gagal, mengikuti kalimat "begitu sebaliknya". Bila Error ternyata membawa pesan kesalahan, tipe datanya perlu diganti.
+    Jawaban: Bagian succeed atau error hanya mengeluarkan data boolean true atau false.
   * [TODO] Baris tabel Contoh Penggunaan untuk Force kosong pada Variable Data yang memiliki relasi atau histori, serta baris Variable kosong atau tidak valid, adalah asumsi saya.
+    Jawaban: Mungkin perlu kata pengganti yang lebih cocok dengan “relasi atau histori”. Bagian hubungan antara kondisi dan output sudah oke
   * [TODO] Callout danger tentang penghapusan yang tidak dapat dikembalikan saya ambil dari halaman komponen Variable. Konfirmasi bahwa berlaku sama untuk penghapusan lewat Flow.
+    Jawaban: Oke bagus
 -->
