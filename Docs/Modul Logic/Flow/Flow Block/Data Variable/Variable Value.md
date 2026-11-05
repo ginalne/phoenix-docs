@@ -74,5 +74,5 @@ Hubungkan [[^output|Value]] ke block yang membutuhkan nilai tersebut, misalnya [
   * [TODO] Konfirmasi apakah output Value menampilkan tipe data sumber secara otomatis pada block (misalnya label tipe di samping output) atau perlu didefinisikan lewat Change Type.
     Jawaban: Output value tidak menampilkan data di halaman kerja, begitu juga tidak mempengaruhi block yg dikoneksikan, ketidakcocokan akan dilapor ketika ada activity.
   * [TODO] Tautan `Flow Block/Query/Condition` saya pakai sebagai contoh penerima Value. Ganti bila Anda lebih memilih block lain.
-    Jawaban: 
+    Jawaban: Betul
 -->
