@@ -25,9 +25,9 @@ Tolong saya membuat 6 halaman flow block untuk data enum:
 5. EnumData Getter
    Name adalah input bertipedata string, sebagai alias. Output EnumData terisi jika name cocok, dan Is Empty = empty, jika gagal EnumData = empty dan Is Empty = boolean true.
 7. EnumData Setter
-   Variable adalah input bertipedata variable. New Value adalah value yang akan diupdate ke variable.
+   EnumData adalah input bertipedata enumdata. New Value adalah value yang akan diupdate ke variable.
 8. EnumData Value
-   Variable adalah input bertipedata variable. Value adalah output data langsung (tipe data mengikuti sumber value).
+   EnumData adalah input bertipedata enumdata. Value adalah output data langsung (tipe data mengikuti sumber value).
 
 Catatan untuk Calude:
 Infomasi mengenai N/A Type, adalah tipe yang belum didefinisi. cara pendefinisiannya adalah dengan klik kanan -> Change Type -> lalu pilih tipe data. Saya baru kepikiran untuk menambahkan out Value Conflict jika value yang diinput tidak sesuai dengan Enum nya, jadi saya akan perbaiki (dalam dokumentasi anggap saja sudah selesai diperbaiki)
