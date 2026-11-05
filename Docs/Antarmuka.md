@@ -10,7 +10,7 @@
 
 Sebelum memulai tahap ini pastikan anda sudah memenuhi [[Docs/Persyaratan|syaratnya]].
 
-![[Docs/antar+muka1.png|Halaman Antarmuka Phoenix]]
+![[Docs/antar-muka.png|Halaman Antarmuka Phoenix]]
 Setelah anda berhasil masuk ke dalam satu Pro, anda bisa mengakses beberapa fitur dari Phoenix secara langsung. 
 
 Berikut adalah beberapa bagian antarmuka ini:
@@ -34,7 +34,7 @@ Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix deng
 
 ## Area Manajemen Folder
 
-![[Docs/area+manajemen+folder.png|Area Manajemen Folder dan Komponen Phoenix]]
+![[Docs/area-manajemen-folder.png|Area Manajemen Folder dan Komponen Phoenix]]
 Bagian ini merupakan tempat Anda mengatur daftar [[Docs/Folder/Apa itu Folder]] dan [[Docs/Folder/Apa itu Komponen|Komponen]] dalam Phoenix dengan rincian seperti berikut:
 
 1. Pengenal Workspace : informasi Workspace yang sedang dibuka saat ini serta tombol agar dapat mengganti ke Workspace lain.
