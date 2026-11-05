@@ -72,6 +72,7 @@ Hubungkan [[^output|Value]] ke block yang membutuhkan nilai tersebut, misalnya [
   * [TODO] Konfirmasi perilaku bila Variable kosong atau tidak valid (output empty atau error di Flow Activity). Baris tabel Contoh Penggunaan untuk kasus tersebut adalah asumsi saya.
     Jawaban: Variable tidak mungkin tidak valid karena pengguna memilih langsung variable dari field (dropdown). Mungkin bisa menjadi error ketika dibiarkan Empty.
   * [TODO] Konfirmasi apakah output Value menampilkan tipe data sumber secara otomatis pada block (misalnya label tipe di samping output) atau perlu didefinisikan lewat Change Type.
-    Jawaban: 
+    Jawaban: Output value tidak menampilkan data di halaman kerja, begitu juga tidak mempengaruhi block yg dikoneksikan, ketidakcocokan akan dilapor ketika ada activity.
   * [TODO] Tautan `Flow Block/Query/Condition` saya pakai sebagai contoh penerima Value. Ganti bila Anda lebih memilih block lain.
+    Jawaban: 
 -->
