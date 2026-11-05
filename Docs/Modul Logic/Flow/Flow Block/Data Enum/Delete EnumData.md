@@ -13,7 +13,7 @@ Delete EnumData adalah Flow Block yang menghapus [[Docs/Tipe Data/EnumData]] yan
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/delete-enumdata-block-flow.png|Flow Block Delete EnumData dengan dua input dan dua output]]
 
 <!--
-  * [TODO] Letakkan gambar `delete-enumdata-block-flow.png` (potongan block Delete EnumData dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) input Force, (3) output Succeed, (4) output Error.
+  * [DONE] Letakkan gambar `delete-enumdata-block-flow.png` (potongan block Delete EnumData dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) input Force, (3) output Succeed, (4) output Error.
 -->
 
 ## Input dan Output
@@ -54,8 +54,11 @@ EnumData dianggap sudah digunakan bila sedang dipakai pada Flow atau data lain, 
 
 <!--
   * [TODO] Konfirmasi dampak hapus paksa: apa yang terjadi pada relasi (field atau data yang memakai EnumData) dan riwayat activity. Isi callout warning di atas masih draf mengikuti penjelasan penulis.
+    Jawaban: Terhapus, menjadi Empty.
   * [TODO] Konfirmasi dampak penghapusan EnumData yang masih dipakai komponen lain bila Force bernilai false (diasumsikan tidak dihapus).
+    Jawaban: Tampil error
   * [TODO] Konfirmasi apakah callout "tidak memicu Flow kembali" berlaku untuk semua Flow atau hanya Flow yang sama.
+    Jawaban: Semua Flow
 -->
 
 ## Contoh Penggunaan
@@ -72,9 +75,11 @@ Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pe
 | [[^field|EnumData]] dibiarkan kosong | [[^value/boolean/false]] | [[^value/boolean/true]] | Tidak ada yang dihapus. |
 
 <!--
-  * [TODO] Konfirmasi perilaku Force yang dibiarkan kosong (screenshot menampilkan "(Empty)"), diasumsikan sama dengan false.
+  * [DONE] Konfirmasi perilaku Force yang dibiarkan kosong (screenshot menampilkan "(Empty)"), diasumsikan sama dengan false.
   * [TODO] Konfirmasi perilaku EnumData yang dibiarkan kosong: apakah output Succeed false dan Error true, atau terjadi error yang dilaporkan di Flow Activity.
+    Jawaban: Ya tetap ada  tampil error di Flow Activity
   * [TODO] Nama contoh (Enum status pesanan dan EnumData Menunggu) bersifat generik. Sesuaikan bila perlu.
+    Jawaban: 
 -->
 
 ## Praktik Terbaik

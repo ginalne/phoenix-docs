@@ -50,9 +50,9 @@ Teks merah [[^field|N/A Type]] pada input [[^field|Value]] berarti tipe data bel
 
 <!--
   * [TODO] Konfirmasi apakah Value yang masih [[^field|N/A Type]] dapat dieksekusi (pada Add Variable, Value yang masih N/A Type tetap tersimpan), atau langsung menghasilkan Value Conflict.
-    Jawaban: mungkin saja, karena enum bisa menyimpan atribut type data kosong. bagian value akan menjadi N/A Type
+    Jawaban: mungkin saja, karena enum bisa menyimpan atribut type data kosong. bagian value akan menjadi N/A Type.
   * [TODO] Konfirmasi kriteria "sesuai" pada Value Conflict: apakah tipe data Value harus sama dengan [[^field|Format]] Enum, atau cukup dapat dikonversi.
-    Jawaban: 
+    Jawaban: ya betul, tidak dapat dikonversi.
 -->
 
 ## Cara Kerja
@@ -74,9 +74,13 @@ Name EnumData dianggap sama bila sama persis, membedakan huruf besar dan kecil, 
 
 <!--
   * [TODO] Konfirmasi dampak Strict On Selected pada EnumData yang ditambahkan lewat Flow. Isi callout warning di atas masih draf.
+    Jawaban: bagian ini tidak berpengaruh, menambahkan enumdata tidak perlu mengikuti aturan Strict On Selected (karena penambahan bukan dari field form atau komponen data dengan cara memilih).
   * [TODO] Konfirmasi apakah aturan Name EnumData (sama persis, membedakan huruf besar dan kecil, menerima simbol, di-trim) sama dengan aturan Name Variable Data.
+    Jawaban : Ya sama.
   * [TODO] Konfirmasi apakah bila Name dan Value sama-sama bermasalah, kedua output konflik bernilai true.
+    Jawaban : Tidak, pengecekan berurutan dari Name lalu Value.
   * [TODO] Konfirmasi apakah callout "tidak memicu Flow kembali" berlaku untuk semua Flow atau hanya Flow yang sama.
+    Jawaban : semua Flow.
 -->
 
 ## Contoh Penggunaan
@@ -92,8 +96,8 @@ Contoh berikut memakai Enum untuk status pesanan yang memiliki EnumData [[^value
 | [[^field|Enum]] atau [[^field|Name]] dibiarkan kosong | Tidak ada output, terjadi error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity]] | - | - |
 
 <!--
-  * [TODO] Nama contoh (Enum status pesanan, EnumData Menunggu dan Diproses) bersifat generik. Sesuaikan bila perlu.
-  * [TODO] Konfirmasi perilaku Enum atau Name yang dibiarkan kosong (diasumsikan error seperti pada Add Variable).
+  * [DONE] Nama contoh (Enum status pesanan, EnumData Menunggu dan Diproses) bersifat generik. Sesuaikan bila perlu.
+  * [DONE] Konfirmasi perilaku Enum atau Name yang dibiarkan kosong (diasumsikan error seperti pada Add Variable).
 -->
 
 ## Praktik Terbaik
@@ -111,7 +115,8 @@ Contoh berikut memakai Enum untuk status pesanan yang memiliki EnumData [[^value
 
 <!--
   * [TODO] Konfirmasi nilai [[^field|Selectable]] pada EnumData yang ditambahkan lewat Add EnumData (nilai bawaan) dan apakah perlu input tambahan.
-  * [TODO] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan` (pengenalan kelompok), `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event`, `Docs/Modul Data/Enum/Konfigurasi Tegas`, `Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan `Docs/Modul Logic/Flow/Flow Activity`.
+    Jawaban: Iya harusnya ada input selectable (anggap sudah diupdate).
+  * [DONE] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan` (pengenalan kelompok), `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event`, `Docs/Modul Data/Enum/Konfigurasi Tegas`, `Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan `Docs/Modul Logic/Flow/Flow Activity`.
 -->
 
 ## Lihat Juga

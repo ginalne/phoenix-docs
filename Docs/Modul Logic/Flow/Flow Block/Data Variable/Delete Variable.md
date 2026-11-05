@@ -32,8 +32,8 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 
 | Output | Tipe Data | Fungsi |
 | ------ | --------- | ------ |
-| [[^output|Succeed]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila Variable Data berhasil dihapus. Bernilai [[^value/boolean/false]] bila gagal. |
-| [[^output|Error]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila penghapusan gagal. Bernilai [[^value/boolean/false]] bila berhasil. |
+| [[^output|Succeed]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila Variable Data berhasil dihapus.  [[^value/empty]] bila gagal. |
+| [[^output|Error]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila penghapusan gagal.  [[^value/empty]] bila berhasil. |
 
 ## Cara Kerja
 
@@ -54,10 +54,10 @@ Variable Data dianggap sudah digunakan bila sedang dipakai pada Flow atau data l
 
 | Kondisi | [[^field|Force]] | [[^output|Succeed]] | [[^output|Error]] |
 | ------- | ---------------- | ------------------- | ----------------- |
-| Variable Data belum digunakan | [[^value/empty]] | [[^value/boolean/true]] | [[^value/boolean/false]] |
-| Variable Data sudah digunakan | [[^value/empty]] | [[^value/boolean/false]] | [[^value/boolean/true]] |
-| Variable Data sudah digunakan | [[^value/boolean/true]] | [[^value/boolean/true]] | [[^value/boolean/false]] |
-| [[^field|Variable]] dibiarkan kosong | Berapa pun | [[^value/boolean/false]] | [[^value/boolean/true]] |
+| Variable Data belum digunakan | [[^value/empty]] | [[^value/boolean/true]] | - |
+| Variable Data sudah digunakan | [[^value/empty]] | - | [[^value/boolean/true]] |
+| Variable Data sudah digunakan | [[^value/boolean/true]] | [[^value/boolean/true]] | - |
+| [[^field|Variable]] dibiarkan kosong | Berapa pun | - | [[^value/boolean/true]] |
 
 Hubungkan [[^output|Error]] ke block yang menangani kegagalan, misalnya [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch|Branch Block]], agar Flow dapat memberi tahu pengguna bahwa Variable Data gagal dihapus.
 

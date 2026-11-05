@@ -30,8 +30,8 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 
 | Output | Tipe Data | Fungsi |
 | ------ | --------- | ------ |
-| [[^output|New Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang berhasil dibuat. Bernilai [[^value/empty]] bila terjadi Name Conflict. |
-| [[^output|Name Conflict]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila [[^field|Name]] sudah dipakai Variable Data lain. Bernilai [[^value/boolean/false]] bila Variable Data berhasil dibuat. |
+| [[^output|New Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang berhasil dibuat. Tidak meneruskan aliran bila terjadi konflik nama dengan variable yang sudah ada. |
+| [[^output|Name Conflict]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila [[^field|Name]] sudah dipakai Variable Data lain. Tidak meneruskan aliran bila Variable Data berhasil dibuat. |
 
 ### Menentukan Tipe Data Value
 
