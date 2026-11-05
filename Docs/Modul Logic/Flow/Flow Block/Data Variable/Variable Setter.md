@@ -2,10 +2,6 @@
 status: draft
 title: Variable Setter
 description: Flow Block untuk memperbarui Value pada Variable Data.
-pageDecoration:
-  icon: save
-  tree:
-    priority: 5
 ---
 # Variable Setter
 
@@ -23,43 +19,53 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 | Input | Tipe Data | Fungsi |
 | ----- | --------- | ------ |
 | [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang akan diperbarui. Isi dengan Variable Data atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
-| [[^field|New Value]] | Sesuai Type Variable Data | Nilai baru yang akan disimpan ke Value Variable Data. |
+| [[^field|New Value]] | Mengikuti tipe data yang Anda pilih. Awalnya tampil [[^field|N/A Type]]. | Nilai baru yang akan disimpan ke [[^field|Value]] Variable Data. Tipe data yang dipilih menjadi Type baru Variable Data dan ditentukan lewat [[#Menentukan Tipe Data New Value]]. |
 
 ### Output
 
 | Output | Tipe Data | Fungsi |
 | ------ | --------- | ------ |
-| [[^output|Pass]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila Value berhasil diperbarui. |
+| [[^output|Pass]] | [[Docs/Tipe Data/Variable]] | Variable Data yang diinput lewat [[^field|Variable]], diteruskan apa adanya agar dapat dipakai block berikutnya. |
+
+### Menentukan Tipe Data New Value
+
+Input [[^field|New Value]] pada block yang baru ditambahkan menampilkan teks merah [[^field|N/A Type]], sama seperti [[^field|Value]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Add Variable|Add Variable Block]]. Teks ini berarti tipe data input belum didefinisikan. Tentukan tipe datanya dengan langkah berikut:
+
+1. Klik kanan pada input [[^field|New Value]].
+2. Pilih [[^field|Change Type]].
+3. Pilih tipe data yang sesuai dengan nilai baru. Semua tipe data yang tersedia di Phoenix dapat dipilih.
 
 ## Cara Kerja
 
 1. Block menerima Variable Data dari [[^field|Variable]] dan nilai dari [[^field|New Value]].
-2. Block mengganti [[^field|Value]] Variable Data dengan [[^field|New Value]].
-3. Block mengirim [[^output|Pass]] sebagai tanda proses selesai.
+2. Block mengganti [[^field|Value]] Variable Data dengan [[^field|New Value]]. [[^field|Type]] Variable Data ikut mengikuti tipe data [[^field|New Value]].
+3. Block meneruskan Variable Data yang sama lewat [[^output|Pass]].
 
-Hanya Value yang berubah. [[^field|Name]], [[^field|Type]], dan [[^field|Description]] Variable Data tetap sama.
+Hanya [[^field|Value]] dan [[^field|Type]] yang berubah. [[^field|Name]] dan [[^field|Description]] Variable Data tetap sama.
 
 >**note** Perubahan oleh Flow tidak memicu Flow kembali
 > Pembaruan lewat Variable Setter tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event|Variable Event Block]] dengan event [[^value/string|update]], sehingga tidak ada Flow yang berjalan karena pembaruan ini.
 
 ## Contoh Penggunaan
 
-| Kondisi | Value Variable Data | [[^output|Pass]] |
-| ------- | ------------------- | ---------------- |
-| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] dengan nilai [[^value/number|50]], dan [[^field|New Value]] berisi [[^value/number|100]] | Berubah menjadi [[^value/number|100]] | [[^value/boolean/true]] |
-| [[^field|Variable]] kosong atau tidak valid | Tidak berubah | [[^value/empty]] |
+| Kondisi | Value dan Type Variable Data | [[^output|Pass]] |
+| ------- | ---------------------------- | ---------------- |
+| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]], dan [[^field|New Value]] berisi [[^value/number|100]] bertipe [[Docs/Tipe Data/Number]] | Value berubah menjadi [[^value/number|100]], Type tetap [[Docs/Tipe Data/Number]] | Variable Data `batas_stok_minimum` |
+| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]], dan [[^field|New Value]] berisi [[^value/string|aktif]] bertipe [[Docs/Tipe Data/String]] | Value berubah menjadi [[^value/string|aktif]], Type berubah menjadi [[Docs/Tipe Data/String]] | Variable Data `batas_stok_minimum` |
+| [[^field|Variable]] dibiarkan kosong | Tidak berubah. Block menghasilkan error. | [[^value/empty]] |
 
 Hubungkan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]] ke [[^field|Variable]] dan hasil perhitungan, misalnya dari [[Docs/Modul Logic/Flow/Flow Block/Operator/Number/Increment|Increment Operator Block]], ke [[^field|New Value]] untuk membuat penghitung yang bertambah setiap Flow berjalan.
 
 ## Praktik Terbaik
 
-- **Pastikan tipe data [[^field|New Value]] sesuai Type Variable Data** yang menjadi target.
+- **Tentukan tipe data [[^field|New Value]] dengan benar.** Tipe data yang Anda pilih menjadi Type Variable Data setelah diperbarui.
 - **Ambil Variable Data dengan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]** agar Anda dapat menangani Variable Data yang tidak ditemukan sebelum memperbarui nilainya.
-- **Periksa [[^output|Pass]]** sebelum menjalankan block yang bergantung pada nilai terbaru.
+- **Gunakan [[^output|Pass]]** untuk melanjutkan rangkaian block Variable, misalnya ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Value|Variable Value Block]], agar block berikutnya membaca Variable Data yang sama.
 
 ## Batasan dan Catatan
 
-- Variable Setter hanya mengubah Value. Untuk membuat Variable Data baru, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Add Variable|Add Variable Block]].
+- Variable Setter hanya mengubah Variable Data yang sudah ada. Untuk membuat Variable Data baru, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Add Variable|Add Variable Block]].
+- [[^field|Variable]] yang dibiarkan kosong menyebabkan error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
 - Satu eksekusi memperbarui satu Variable Data.
 - Variable Setter adalah block non-Event, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 - Anggota yang tidak memiliki akses ke komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] tetap dapat mengubah Value lewat Flow.
@@ -70,14 +76,3 @@ Hubungkan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Varia
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
 
-<!--
-  * [DONE] Letakkan screenshot block Variable Setter sebagai `variable-setter-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 dan 2 untuk input Variable dan New Value, nomor 3 untuk output Pass.
-  * [TODO] Pada screenshot, input New Value tampil "Empty" (abu-abu), tidak seperti Value pada Add Variable yang tampil N/A Type. Konfirmasi apakah tipe New Value otomatis mengikuti Type Variable Data yang dipilih, atau perlu didefinisikan lewat klik kanan, Change Type.
-    Jawaban: maaf ternyata kesalahan saya, harusnya seperti Add Variable yaitu N/A dan perlu Change Type.
-  * [TODO] Konfirmasi arti output Pass pada Variable Setter. Saya tulis sebagai Boolean true bila Value berhasil diperbarui.
-    Jawaban: bukan, pass disini adalah mengeluarkan data yang diinput, karena konteks nya disini variable, maka isi pass adalah data bertipe variable
-  * [TODO] Konfirmasi perilaku bila tipe data New Value tidak sesuai Type Variable Data (ditolak, dikonversi, atau error), serta bila Variable kosong atau tidak valid. Baris tabel Contoh Penggunaan untuk kasus tersebut adalah asumsi saya/
-    Jawaban: New value juga memberikan new type, jadi tidak mungkin error. Variable kosong memungkinkan (akan menghasilkan error) tapi tidak valid itu tidak mungkin karena field variable adalah select option.
-  * [TODO] Kalimat "Hanya Value yang berubah" dan catatan hak akses saya simpulkan dari fungsi block dan pengetahuan komponen Variable. Mohon konfirmasi.
-    Jawaban: Sudah betul
--->

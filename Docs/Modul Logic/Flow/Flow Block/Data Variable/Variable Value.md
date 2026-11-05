@@ -2,10 +2,6 @@
 status: draft
 title: Variable Value
 description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
-pageDecoration:
-  icon: grid
-  tree:
-    priority: 6
 ---
 # Variable Value
 
@@ -37,6 +33,8 @@ Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[
 
 Jika Variable Data bertipe [[Docs/Tipe Data/Number]], [[^output|Value]] berupa [[Docs/Tipe Data/Number]]. Jika bertipe [[Docs/Tipe Data/String]], [[^output|Value]] berupa [[Docs/Tipe Data/String]].
 
+Tipe data [[^output|Value]] tidak ditampilkan pada block di halaman kerja dan tidak memengaruhi block yang dikoneksikan. Bila tipe data tidak cocok dengan block penerima, ketidakcocokan dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]] saat Flow berjalan.
+
 Gunakan Variable Value bila Anda hanya membutuhkan nilainya. Bila Anda juga membutuhkan Name atau Description, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable|Variable Block]].
 
 ## Contoh Penggunaan
@@ -45,19 +43,20 @@ Gunakan Variable Value bila Anda hanya membutuhkan nilainya. Bila Anda juga memb
 | ------- | ----------------- |
 | [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]] | [[^value/number|50]] |
 | [[^field|Variable]] berisi Variable Data bertipe [[Docs/Tipe Data/String]] dengan nilai [[^value/string|aktif]] | [[^value/string|aktif]] |
-| [[^field|Variable]] kosong atau tidak valid | [[^value/empty]] |
+| [[^field|Variable]] dibiarkan kosong | [[^value/empty]]. Block menghasilkan error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. |
 
 Hubungkan [[^output|Value]] ke block yang membutuhkan nilai tersebut, misalnya [[Docs/Modul Logic/Flow/Flow Block/Query/Condition|Condition Query Block]] untuk menjadikan Variable Data sebagai batas keputusan Flow, tanpa menuliskan angka yang sama di banyak tempat.
 
 ## Praktik Terbaik
 
 - **Pasangkan dengan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]** agar Variable Data yang tidak ditemukan dapat ditangani lewat [[^output|Is Empty]] sebelum nilainya dipakai.
-- **Pastikan block penerima mendukung tipe data [[^output|Value]].** Tipe data output berbeda untuk setiap Variable Data.
+- **Pastikan block penerima mendukung tipe data [[^output|Value]].** Tipe data output berbeda untuk setiap Variable Data dan tidak terlihat di halaman kerja.
 - **Simpan nilai yang dipakai di banyak Flow sebagai Variable Data**, lalu baca dengan Variable Value agar perubahan nilai cukup dilakukan satu kali.
 
 ## Batasan dan Catatan
 
 - Variable Value hanya membaca nilai dan tidak mengubah Variable Data. Untuk mengubahnya, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Setter|Variable Setter Block]].
+- [[^field|Variable]] yang dibiarkan kosong menyebabkan error.
 - Variable Value adalah block non-Event, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 - Anggota yang tidak memiliki akses ke komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] tetap dapat memakai Value lewat Flow, tetapi tidak dapat melihatnya di halaman kerja.
 
@@ -67,12 +66,3 @@ Hubungkan [[^output|Value]] ke block yang membutuhkan nilai tersebut, misalnya [
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
 
-<!--
-  * [DONE] Letakkan screenshot block Variable Value sebagai `variable-value-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 untuk input Variable dan nomor 2 untuk output Value.
-  * [TODO] Konfirmasi perilaku bila Variable kosong atau tidak valid (output empty atau error di Flow Activity). Baris tabel Contoh Penggunaan untuk kasus tersebut adalah asumsi saya.
-    Jawaban: Variable tidak mungkin tidak valid karena pengguna memilih langsung variable dari field (dropdown). Mungkin bisa menjadi error ketika dibiarkan Empty.
-  * [TODO] Konfirmasi apakah output Value menampilkan tipe data sumber secara otomatis pada block (misalnya label tipe di samping output) atau perlu didefinisikan lewat Change Type.
-    Jawaban: Output value tidak menampilkan data di halaman kerja, begitu juga tidak mempengaruhi block yg dikoneksikan, ketidakcocokan akan dilapor ketika ada activity.
-  * [TODO] Tautan `Flow Block/Query/Condition` saya pakai sebagai contoh penerima Value. Ganti bila Anda lebih memilih block lain.
-    Jawaban: Betul
--->

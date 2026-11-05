@@ -2,10 +2,6 @@
 status: draft
 title: Delete Variable
 description: Flow Block untuk menghapus Variable Data yang ditunjuk, dengan opsi hapus paksa.
-pageDecoration:
-  icon: trash
-  tree:
-    priority: 2
 ---
 # Delete Variable
 
@@ -25,25 +21,27 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 
 | Input | Tipe Data | Fungsi |
 | ----- | --------- | ------ |
-| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang akan dihapus. Isi dengan Name Variable Data (alias) atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
-| [[^field|Force]] | [[Docs/Tipe Data/Boolean]] | Isi [[^value/boolean/true]] bila Variable Data harus dihapus secara paksa, termasuk bila sudah memiliki relasi dan histori. Bila tidak diisi, tampil [[^value/empty]] dan penghapusan berjalan tanpa paksaan. |
+| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang akan dihapus. Isi dengan Variable Data atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
+| [[^field|Force]] | [[Docs/Tipe Data/Boolean]] | Isi [[^value/boolean/true]] bila Variable Data yang sudah digunakan tetap harus dihapus (hapus paksa). Bila tidak diisi, tampil [[^value/empty]] dan penghapusan berjalan tanpa paksaan. |
 
 ### Output
 
 | Output | Tipe Data | Fungsi |
 | ------ | --------- | ------ |
-| [[^output|Succeed]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila Variable Data berhasil dihapus. Bernilai [[^value/empty]] bila gagal. |
-| [[^output|Error]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila penghapusan gagal. Bernilai [[^value/empty]] bila berhasil. |
+| [[^output|Succeed]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila Variable Data berhasil dihapus. Bernilai [[^value/boolean/false]] bila gagal. |
+| [[^output|Error]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila penghapusan gagal. Bernilai [[^value/boolean/false]] bila berhasil. |
 
 ## Cara Kerja
 
 1. Block menerima Variable Data dari [[^field|Variable]] dan nilai [[^field|Force]].
-2. Jika [[^field|Force]] tidak aktif, block menghapus Variable Data hanya bila tidak ada relasi dan histori yang terdampak.
-3. Jika [[^field|Force]] bernilai [[^value/boolean/true]], block menghapus Variable Data apa pun kondisi relasi dan historinya.
-4. Block mengirim hasilnya lewat [[^output|Succeed]] dan [[^output|Error]]. Salah satunya bernilai [[^value/boolean/true]], sedangkan yang lain bernilai [[^value/empty]].
+2. Jika [[^field|Force]] tidak aktif, block hanya menghapus Variable Data yang belum digunakan.
+3. Jika [[^field|Force]] bernilai [[^value/boolean/true]], block menghapus Variable Data meskipun sudah digunakan.
+4. Block mengirim hasilnya lewat [[^output|Succeed]] dan [[^output|Error]]. Salah satunya bernilai [[^value/boolean/true]], sedangkan yang lain bernilai [[^value/boolean/false]].
 
->**warning** Hapus paksa berdampak pada relasi dan histori
-> Bila [[^field|Force]] bernilai [[^value/boolean/true]], Variable Data dihapus meskipun sudah dipakai. Relasi dengan komponen lain yang merujuk Variable Data tersebut terputus, dan histori yang sudah ada ikut terdampak. Aktifkan [[^field|Force]] hanya bila Anda memahami dampak ini.
+Variable Data dianggap sudah digunakan bila sedang dipakai pada Flow atau data lain, atau bila riwayat [[Docs/Modul Logic/Flow/Flow Activity|activity]] mencatat bahwa Variable Data tersebut pernah dipakai.
+
+>**warning** Hapus paksa berdampak pada Variable Data yang sudah digunakan
+> Bila [[^field|Force]] bernilai [[^value/boolean/true]], Variable Data dihapus meskipun masih dipakai pada Flow atau data lain. Flow atau data lain yang memakai Variable Data tersebut terdampak, begitu juga riwayat activity yang mencatat penggunaannya. Aktifkan [[^field|Force]] hanya bila Anda memahami dampak ini.
 
 >**note** Perubahan oleh Flow tidak memicu Flow kembali
 > Penghapusan lewat Delete Variable tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Variable Event|Variable Event Block]] dengan event [[^value/string|delete]], sehingga tidak ada Flow yang berjalan karena penghapusan ini.
@@ -52,10 +50,10 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 
 | Kondisi | [[^field|Force]] | [[^output|Succeed]] | [[^output|Error]] |
 | ------- | ---------------- | ------------------- | ----------------- |
-| Variable Data valid dan tidak memiliki relasi maupun histori | [[^value/empty]] | [[^value/boolean/true]] | [[^value/empty]] |
-| Variable Data valid, tetapi memiliki relasi atau histori | [[^value/empty]] | [[^value/empty]] | [[^value/boolean/true]] |
-| Variable Data valid, memiliki relasi atau histori | [[^value/boolean/true]] | [[^value/boolean/true]] | [[^value/empty]] |
-| [[^field|Variable]] kosong atau tidak valid | [[^value/empty]] atau [[^value/boolean/true]] | [[^value/empty]] | [[^value/boolean/true]] |
+| Variable Data belum digunakan | [[^value/empty]] | [[^value/boolean/true]] | [[^value/boolean/false]] |
+| Variable Data sudah digunakan | [[^value/empty]] | [[^value/boolean/false]] | [[^value/boolean/true]] |
+| Variable Data sudah digunakan | [[^value/boolean/true]] | [[^value/boolean/true]] | [[^value/boolean/false]] |
+| [[^field|Variable]] dibiarkan kosong | Berapa pun | [[^value/boolean/false]] | [[^value/boolean/true]] |
 
 Hubungkan [[^output|Error]] ke block yang menangani kegagalan, misalnya [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch|Branch Block]], agar Flow dapat memberi tahu pengguna bahwa Variable Data gagal dihapus.
 
@@ -68,7 +66,7 @@ Hubungkan [[^output|Error]] ke block yang menangani kegagalan, misalnya [[Docs/M
 ## Batasan dan Catatan
 
 - Delete Variable adalah block non-Event, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
-- [[^field|Force]] tidak dapat mengembalikan relasi dan histori yang terputus setelah penghapusan.
+- Hapus paksa tidak dapat dibatalkan, termasuk dampaknya pada Flow, data lain, dan riwayat activity.
 - Satu eksekusi menghapus satu Variable Data.
 
 ## Lihat Juga
@@ -77,14 +75,3 @@ Hubungkan [[^output|Error]] ke block yang menangani kegagalan, misalnya [[Docs/M
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
 
-<!--
-  * [DONE] Letakkan screenshot block Delete Variable sebagai `delete-variable-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 dan 2 untuk input Variable dan Force, nomor 3 dan 4 untuk output Succeed dan Error.
-  * [TODO] Konfirmasi perilaku Force: (a) Force kosong dianggap false, (b) tanpa Force penghapusan gagal bila Variable Data memiliki relasi atau histori, (c) apa persisnya yang dimaksud "relasi" dan "histori" (misalnya Flow Block yang merujuk, riwayat Variable Event), dan apa yang terjadi pada keduanya saat hapus paksa.
-    Jawaban: relasi adalah variable sedang digunakan pada flow atau data lain, sedangkan history adalah riwayat activity menyimpan bahwa variable itu digunakan. Untuk menghapus variable yang istilahnya “sudah digunakan” perlu force.
-  * [TODO] Konfirmasi output Error: saya tulis bertipe Boolean dengan nilai true saat gagal, mengikuti kalimat "begitu sebaliknya". Bila Error ternyata membawa pesan kesalahan, tipe datanya perlu diganti.
-    Jawaban: Bagian succeed atau error hanya mengeluarkan data boolean true atau false.
-  * [TODO] Baris tabel Contoh Penggunaan untuk Force kosong pada Variable Data yang memiliki relasi atau histori, serta baris Variable kosong atau tidak valid, adalah asumsi saya.
-    Jawaban: Mungkin perlu kata pengganti yang lebih cocok dengan “relasi atau histori”. Bagian hubungan antara kondisi dan output sudah oke
-  * [TODO] Callout danger tentang penghapusan yang tidak dapat dikembalikan saya ambil dari halaman komponen Variable. Konfirmasi bahwa berlaku sama untuk penghapusan lewat Flow.
-    Jawaban: Oke bagus
--->
