@@ -12,16 +12,6 @@
     tree:
       priority: 4
 ---
----
-status: draft
-title: Apa itu Workspace?
-description: Pengenalan Workspace, komponen modul Developer untuk mengatur komponen yang dapat dilihat, dikelola, dan diubah, serta fungsi di dalamnya, termasuk cara kerja hak akses untuk setiap Group.
-pageDecoration:
-  icon: ''
-  tree:
-    priority: 4
----
-
 # Apa itu Workspace?
 
 >**note** Workspace merupakan salah satu komponen dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.
@@ -437,4 +427,4 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 >**Apakah ada pengaman jika saya tidak sengaja mengunci akses administrator?**
 >Tidak ada pengaman bawaan untuk pengaturan hak akses. Phoenix hanya mencegah penghapusan Workspace root terakhir yang terhubung ke Group. Karena itu, periksa pengaturan sebelum menonaktifkan akses pada komponen Workspace dan Group.
 >**Tombol apa saja yang tersedia pada bilah navigasi Workspace?**
->Hanya [[^button/edit|Edit]] dan [[^button/refresh|Refresh]].
+>Hanya [[^button/edit|Edit]] dan [[^button/refresh|Refresh]].[[^button/refresh|Refresh]].
