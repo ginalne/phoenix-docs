@@ -123,10 +123,27 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
   - Enum: Enum Block mengambil atribut Enum (Name, Description). EnumData Block mengambil atribut EnumData (Name, Description, Value, Selectable). EnumData Getter mengambil EnumData dari Enum yang ditunjuk dengan mengisi Name. EnumData Setter dapat mengubah keempat atribut. Jika ada Name EnumData yang sama, tidak terjadi error, melainkan output sesuai ekspektasi (rinci di halaman block). EnumData Value menghasilkan Value.
   - Table: Table Block mengambil Name dan Description Table. Table Column Block mengambil Name, Description, Header, dan Table dari Column. Table Row Block mengambil Index dan Name dari Row. TableData Getter dan Setter: Row dan Column dapat diisi di block sendiri atau dari output block lain. Setter hanya mengubah satu TableData per eksekusi.
   - Tree: Node Block mengambil Order, Name, dan Tree. Tree Block mengambil Name, Description, dan Merger Mode. Node Setter mengubah Name dan Order. Node Get Ancestor mengambil leluhur pada tingkat yang ditentukan. Node Get Children hanya mengambil anak langsung dengan Order yang ditentukan. Assign Node menetapkan Node ke posisi tertentu (misalnya di bawah Node induk yang dipilih).
-- **Perilaku Tree (terkonfirmasi):** block Data Tree dapat mengubah atau menghapus Node pada Tree dengan Merger Mode atau External Read Only aktif (termasuk Node clone), sehingga perlu callout warning.
+- **Perilaku Tree:** block Data Tree dapat mengubah atau menghapus Node pada Tree dengan Merger Mode atau External Read Only aktif (termasuk Node clone), sehingga perlu callout warning.
 - **Callout warning dibutuhkan** pada block Delete (Variable, EnumData, Row, Node) dan Add EnumData (Strict On Selected).
 - **Terkonfirmasi dari knowledge lain:** Variable Getter mengambil nilai lewat Name, Alias tidak valid menghasilkan tidak ada nilai atau error (lihat Flow Activity), Tree baru otomatis memiliki Node Origin.
 - **Belum terkonfirmasi:** dampak Strict On Selected pada EnumData yang ditambahkan lewat Flow, dampak penghapusan EnumData yang masih dipakai komponen lain, nasib Node anak saat induknya dihapus lewat Flow, apakah Node Origin dapat dihapus, daftar atribut yang dikonversi Variable Block, serta input dan output rinci tiap block.
+
+### Flow Block Data Variable
+
+*   **Tidak memiliki Control.** Block hanya memiliki input di kiri dan output di kanan.
+*   **Field Variable adalah select option.** Pengguna memilih Variable Data dari daftar (bukan mengetik alias), atau menghubungkannya dari output block lain. Karena itu "Variable tidak valid" tidak mungkin terjadi, tetapi Variable yang dibiarkan kosong menimbulkan error.
+*   **Output berawalan "Is" selalu Boolean true atau false**, tidak pernah empty. Hal yang sama berlaku untuk Succeed, Error, dan Name Conflict.
+*   **Output Pass** pada Variable dan Variable Setter meneruskan data yang diinput. Pada kelompok Variable, tipenya Variable.
+*   **N/A Type:** teks merah pada input yang tipe datanya belum didefinisikan. Cara mendefinisikan: klik kanan ➜ Change Type ➜ pilih tipe data. Semua tipe data yang tersedia di Phoenix dapat dipilih. Berlaku pada Value (Add Variable) dan New Value (Variable Setter).
+*   **Add Variable:** input Name, Value (awalnya N/A Type), Description. Output New Variable dan Name Conflict. Name conflict: New Variable empty dan Name Conflict true. Berhasil: Name Conflict false. Name kosong menimbulkan error. Value yang masih N/A Type tetap tersimpan.
+*   **Name Variable Data:** unik, membedakan huruf besar dan kecil, boleh memuat karakter simbol, dan di-trim (spasi, enter, karakter tak terlihat di awal dan akhir dihapus) saat disimpan.
+*   **Description Variable Data** bertipe Text. Type Variable Data ditentukan oleh tipe data yang dipilih pada Value.
+*   **Delete Variable:** input Variable dan Force (Boolean). Output Succeed dan Error (Boolean true atau false). Variable Data "sudah digunakan" bila sedang dipakai pada Flow atau data lain (relasi), atau riwayat activity mencatat pemakaiannya (histori). Menghapus Variable Data yang sudah digunakan memerlukan Force true.
+*   **Variable:** input Variable. Output Pass, Name (String), Description (Text), Value (mengikuti Type Variable Data). Variable kosong menghasilkan output empty.
+*   **Variable Getter:** input Name (String, alias). Output Variable dan Is Empty. Cocok: Variable terisi dan Is Empty false. Tidak cocok: Variable empty dan Is Empty true. Secara teknis block ini tidak dapat error.
+*   **Variable Setter:** input Variable dan New Value (N/A Type, perlu Change Type; New Value juga memberi Type baru sehingga tidak mungkin terjadi ketidakcocokan tipe). Output Pass. Variable kosong menimbulkan error.
+*   **Variable Value:** input Variable. Output Value berupa data langsung dengan tipe mengikuti sumber. Tipe output tidak ditampilkan di halaman kerja dan tidak memengaruhi block yang dikoneksikan. Ketidakcocokan dilaporkan di activity saat Flow berjalan. Variable kosong menimbulkan error.
+*   **Belum terkonfirmasi:** apakah Type Variable Data ikut berubah saat Variable Setter memperbarui Value (jawaban "New Value juga memberikan new type" dan "hanya Value yang berubah" perlu dipastikan), dan tipe data output Description pada block Variable (Text atau String).
 
 # Variable (Modul Data)
 

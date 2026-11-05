@@ -365,6 +365,21 @@ Catatan format:
 *   Callout warning ditulis untuk block Delete (dan Add bila ada dampak) di setiap kelompok. Khusus Tree: warning bahwa Flow dapat mengubah atau menghapus Node pada Tree dengan Merger Mode atau External Read Only aktif, termasuk Node hasil clone.
 *   Callout khusus komponen yang terkonfirmasi boleh ditambahkan (Variable: dirujuk lewat Name dan akses komponen; Tree: Node Origin).
 *   Front matter mengikuti halaman Event versi penulis: `status`, `title`, `description`, `tags: flowblock-category`, tanpa `pageDecoration.tree.priority` (aturan lama di skill menyebutnya). Mohon konfirmasi apakah aturan lama itu diganti.
+- Heading **Input dan Output** (bukan "Input, Control dan Output") karena block Data tidak memiliki Control. Hanya judul bagian yang relevan yang ditulis. TL:DR dan FAQ tidak dipakai pada halaman block.
+- Urutan bagian: callout note kelompok, paragraf definisi, gambar `<nama-block>-block-flow.png`, Input dan Output (tabel Input dan tabel Output), Cara Kerja, Contoh Penggunaan (tabel kombinasi kondisi dan output), Praktik Terbaik, Batasan dan Catatan, Lihat Juga.
+- **Jangan menulis atribut `pageDecoration` di front matter.** Front matter hanya berisi `status`, `title`, dan `description`.
+- Output berawalan "Is", serta Succeed, Error, dan Name Conflict, selalu ditulis `[[^value/boolean/true]]` atau `[[^value/boolean/false]]`, tidak pernah `[[^value/empty]]`.
+- Field bertipe Variable adalah pilihan (select option). Tulis "Isi dengan Variable Data atau hubungkan dari output block lain", bukan "isi dengan Name atau alias".
+- Hindari istilah teknis seperti *exact match*. Jelaskan dengan konteks umum: sama persis, membedakan huruf besar dan kecil, menerima karakter simbol, dan di-trim saat disimpan.
+- Kondisi yang tidak mungkin terjadi karena input berupa pilihan (misalnya "Variable tidak valid") tidak ditulis di tabel Contoh Penggunaan. Tulis hanya kondisi "dibiarkan kosong".
+- Untuk Variable Data yang berelasi, gunakan istilah "sudah digunakan" (sedang dipakai pada Flow atau data lain, atau tercatat di riwayat activity) alih-alih "relasi atau histori".
+- Block non-Event selalu menautkan `Flow Block/Syarat Eksekusi` pada Batasan dan Catatan.
+- Callout "Perubahan oleh Flow tidak memicu Flow kembali" ditulis pada block yang mengubah atau menghapus data (Delete, Setter). Pada Add Variable tidak ditulis karena Variable Event tidak memiliki event create.
+- Callout `>**danger**` untuk penghapusan yang tidak dapat dikembalikan dan `>**warning**` untuk hapus paksa ditulis pada block Delete.
+
+### N/A Type
+- Teks merah **N/A Type** pada input block berarti tipe data belum didefinisikan. Ditulis dengan `[[^field|N/A Type]]`.
+- Langkah mendefinisikan: klik kanan pada input ➜ `[[^field|Change Type]]` ➜ pilih tipe data (semua tipe data Phoenix tersedia). Tulis sebagai subbagian bernomor "Menentukan Tipe Data <Nama Input>" pada setiap block yang input-nya memiliki N/A Type (Add Variable dan Variable Setter).
 
 ### Halaman per block
 - Front matter: `status`, `title`, `description`, `pageDecoration.icon: zap`, `pageDecoration.tree.priority`. Tulis tanpa indentasi di awal baris.
