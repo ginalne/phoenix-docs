@@ -2,6 +2,10 @@
 status: draft
 title: Add Variable
 description: Flow Block untuk menambahkan Variable Data baru dari dalam Flow.
+pageDecoration:
+  icon: plus
+  tree:
+    priority: 1
 ---
 # Add Variable
 

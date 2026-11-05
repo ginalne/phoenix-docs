@@ -2,6 +2,10 @@
 status: draft
 title: Delete Variable
 description: Flow Block untuk menghapus Variable Data yang ditunjuk, dengan opsi hapus paksa.
+pageDecoration:
+  icon: trash
+  tree:
+    priority: 2
 ---
 # Delete Variable
 

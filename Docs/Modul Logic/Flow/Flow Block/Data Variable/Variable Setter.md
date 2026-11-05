@@ -2,6 +2,10 @@
 status: draft
 title: Variable Setter
 description: Flow Block untuk memperbarui Value pada Variable Data.
+pageDecoration:
+  icon: save
+  tree:
+    priority: 5
 ---
 # Variable Setter
 
