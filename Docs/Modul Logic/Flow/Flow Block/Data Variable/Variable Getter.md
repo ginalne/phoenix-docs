@@ -1,11 +1,11 @@
 ---
-status: draft
-title: Variable Getter
-description: Flow Block untuk mengambil Variable Data berdasarkan Name.
-pageDecoration:
-  icon: search
-  tree:
-    priority: 4
+    status: draft
+    title: Variable Getter
+    description: Flow Block untuk mengambil Variable Data berdasarkan Name.
+    pageDecoration:
+      icon: search
+      tree:
+        priority: 4
 ---
 # Variable Getter
 

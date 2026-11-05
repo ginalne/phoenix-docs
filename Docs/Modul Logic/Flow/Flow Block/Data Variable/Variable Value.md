@@ -1,11 +1,11 @@
 ---
-status: draft
-title: Variable Value
-description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
-pageDecoration:
-  icon: grid
-  tree:
-    priority: 6
+    status: draft
+    title: Variable Value
+    description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
+    pageDecoration:
+      icon: grid
+      tree:
+        priority: 6
 ---
 # Variable Value
 
