@@ -58,3 +58,4 @@ Phoenix menyediakan enam Flow Block Data Variable. Selengkapnya tentang komponen
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Modul Data/Variable/Mengotomasi|Mengotomasi Variable]]
 - [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]
+

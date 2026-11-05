@@ -1,0 +1,77 @@
+---
+status: draft
+title: Variable Value
+description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
+pageDecoration:
+  icon: zap
+  tree:
+    priority: 6
+---
+# Variable Value
+
+>**note** Variable Value merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+
+Variable Value adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk mengambil Value dari [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] secara langsung, sehingga nilainya dapat dipakai oleh block berikutnya. Block ini memiliki satu input di sisi kiri dan satu output di sisi kanan.
+
+![[Docs/Modul Logic/Flow/Flow Block/Data Variable/variable-value-block-flow.png|Flow Block Variable Value dengan satu input dan satu output]]
+## Input dan Output
+
+Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
+
+### Input
+
+| Input | Tipe Data | Fungsi |
+| ----- | --------- | ------ |
+| [[^field|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang Value-nya akan diambil. Isi dengan Name Variable Data (alias) atau hubungkan dari output block lain, misalnya [[^output|Variable]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]. |
+
+### Output
+
+| Output | Tipe Data | Fungsi |
+| ------ | --------- | ------ |
+| [[^output|Value]] | Mengikuti Type Variable Data | Value dari Variable Data. Tipe data output mengikuti sumber nilainya. |
+
+## Cara Kerja
+
+1. Block menerima Variable Data lewat [[^field|Variable]].
+2. Block mengirim Value Variable Data langsung lewat [[^output|Value]], tanpa mengubah tipe datanya.
+
+Jika Variable Data bertipe [[Docs/Tipe Data/Number]], [[^output|Value]] berupa [[Docs/Tipe Data/Number]]. Jika bertipe [[Docs/Tipe Data/String]], [[^output|Value]] berupa [[Docs/Tipe Data/String]].
+
+Gunakan Variable Value bila Anda hanya membutuhkan nilainya. Bila Anda juga membutuhkan Name atau Description, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable|Variable Block]].
+
+## Contoh Penggunaan
+
+| Kondisi | [[^output|Value]] |
+| ------- | ----------------- |
+| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]] | [[^value/number|50]] |
+| [[^field|Variable]] berisi Variable Data bertipe [[Docs/Tipe Data/String]] dengan nilai [[^value/string|aktif]] | [[^value/string|aktif]] |
+| [[^field|Variable]] kosong atau tidak valid | [[^value/empty]] |
+
+Hubungkan [[^output|Value]] ke block yang membutuhkan nilai tersebut, misalnya [[Docs/Modul Logic/Flow/Flow Block/Query/Condition|Condition Query Block]] untuk menjadikan Variable Data sebagai batas keputusan Flow, tanpa menuliskan angka yang sama di banyak tempat.
+
+## Praktik Terbaik
+
+- **Pasangkan dengan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]** agar Variable Data yang tidak ditemukan dapat ditangani lewat [[^output|Is Empty]] sebelum nilainya dipakai.
+- **Pastikan block penerima mendukung tipe data [[^output|Value]].** Tipe data output berbeda untuk setiap Variable Data.
+- **Simpan nilai yang dipakai di banyak Flow sebagai Variable Data**, lalu baca dengan Variable Value agar perubahan nilai cukup dilakukan satu kali.
+
+## Batasan dan Catatan
+
+- Variable Value hanya membaca nilai dan tidak mengubah Variable Data. Untuk mengubahnya, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Setter|Variable Setter Block]].
+- Variable Value adalah block non-Event, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Anggota yang tidak memiliki akses ke komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] tetap dapat memakai Value lewat Flow, tetapi tidak dapat melihatnya di halaman kerja.
+
+## Lihat Juga
+
+- [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]]
+- [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
+- [[Docs/Tipe Data/Variable]]
+
+<!--
+  * [DONE] Letakkan screenshot block Variable Value sebagai `variable-value-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Variable/`. Anotasi yang disarankan: nomor 1 untuk input Variable dan nomor 2 untuk output Value.
+  * [TODO] Konfirmasi perilaku bila Variable kosong atau tidak valid (output empty atau error di Flow Activity). Baris tabel Contoh Penggunaan untuk kasus tersebut adalah asumsi saya.
+    Jawaban: Variable tidak mungkin tidak valid karena pengguna memilih langsung variable dari field (dropdown). Mungkin bisa menjadi error ketika dibiarkan Empty.
+  * [TODO] Konfirmasi apakah output Value menampilkan tipe data sumber secara otomatis pada block (misalnya label tipe di samping output) atau perlu didefinisikan lewat Change Type.
+    Jawaban: 
+  * [TODO] Tautan `Flow Block/Query/Condition` saya pakai sebagai contoh penerima Value. Ganti bila Anda lebih memilih block lain.
+-->
