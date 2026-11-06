@@ -159,24 +159,20 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
     *   **Add EnumData:** input Enum, Name (String), Value (N/A Type), Description (Text), Selectable (Boolean). Output New EnumData, Name Conflict, Value Conflict. Pemeriksaan berurutan Name lalu Value, Value tidak diperiksa bila Name konflik. Value harus bertipe sama dengan Format Enum (tidak ada konversi). Value yang masih N/A Type tetap dapat dieksekusi (EnumData dengan Value N/A Type). Tidak terpengaruh Strict On Selected.
     *   **Delete EnumData:** input EnumData, Force (Boolean). Output Succeed, Error. Force kosong diperlakukan sama dengan false. EnumData kosong: Error true dan error tampil di Flow Activity.
     *   **Enum:** input Enum. Output Pass (Enum), Name (String), Desc (Text). Enum kosong: Fatal Error.
-    *   **EnumData:** input EnumData. Output Pass, Name, Description, Value (mengikuti Format Enum), **Selectable (Boolean, ditambahkan)**. EnumData kosong: Fatal Error (diseragamkan, penulis menulis Error pada draf).
+    *   **EnumData:** input EnumData. Output Pass, Name, Description, Value (mengikuti Format Enum), **Selectable (Boolean, ditambahkan)**. EnumData kosong: Fatal Error.
     *   **EnumData Getter:** input Enum, Name (String, alias, sama persis dan membedakan huruf besar dan kecil). Output EnumData (hanya keluar bila ditemukan) dan Is Empty (true hanya bila tidak ditemukan, berstatus Error). Enum atau Name kosong: Fatal Error.
     *   **EnumData Setter:** mengubah **keempat atribut** sekaligus. Input EnumData, Name, Value (N/A Type), Description, Selectable. Output Pass (EnumData), Name Conflict, Value Conflict. Pemeriksaan Name lalu Value.
-    *   **EnumData Value Setter:** input EnumData, Value (N/A Type). Output Pass, Value Conflict. Value kosong pada tipe yang sesuai berstatus Succeed dan Value menjadi empty. EnumData kosong: Fatal Error.
-    *   **EnumData Header Setter:** input EnumData, Name, Description. Output Name Conflict (Pass diasumsikan ada). "Header" = atribut pengenal Name dan Description (istilah perlu dikonfirmasi).
-    *   **EnumData Selectable Setter:** input EnumData(s) (beberapa EnumData sekaligus, diasumsikan Array) dan Selectable (Boolean). Output Pass diasumsikan Array.
+    *   **EnumData Value Setter:** input EnumData, Value (N/A Type). Output Pass (EnumData), Value Conflict. Value kosong pada tipe yang sesuai berstatus Succeed dan Value menjadi empty. EnumData kosong: Fatal Error.
+    *   **EnumData Header Setter:** input EnumData, Name, Description. Output Pass (EnumData), Name Conflict. "Header" = atribut pengenal Name dan Description.
+    *   **EnumData Selectable Setter:** input EnumData(s) (beberapa EnumData sekaligus yaitu  Array) dan Selectable (Boolean). Output Pass (Array).
     *   **EnumData Value:** input EnumData, output Value (data langsung, tipe mengikuti sumber). EnumData kosong: Fatal Error.
 *   **Name EnumData:** aturan sama dengan Name Variable Data (sama persis, membedakan huruf besar dan kecil, menerima simbol, di-trim).
 *   **Koreksi atas knowledge sebelumnya:** (a) Callout warning Strict On Selected pada Add EnumData tidak diperlukan karena Strict On Selected hanya berlaku saat memilih EnumData pada field atau komponen data. (b) Aksi oleh Flow tidak memicu Flow mana pun (semua Flow, bukan hanya Flow yang sama). (c) EnumData Setter mengubah keempat atribut (screenshot awal hanya menampilkan sebagian input).
-*   **Gaya front matter halaman block Data:** `pageDecoration.icon` (plus, trash, search, save, grid) dan `pageDecoration.tree.priority` dipakai penulis pada setiap halaman block.
 *   **Selectable kosong pada Add EnumData dan Selectable Setter** akan menghasilkan Fatal Error;
 *   **EnumData Setter mengganti keempat atribut sekaligus**, atribut yang tidak ingin diubah harus diisi nilai saat ini.
 *   **Name kosong pada Setter adalah Fatal Error**
 *   **Description kosong menjadi empty**
 *   **Name yang sama dengan Name EnumData itu sendiri bukan konflik**
-*   **tipe input EnumData(s) adalah array dari EnumData** yang bisa menerima input EnumData dari banyak block.
-*   **Output Pass pada Setter**  adalah EnumData yang diisi pada input.
-*   **Arti "Header" pada nama block** adalah field Name dan Description.
 
 # Variable (Modul Data)
 

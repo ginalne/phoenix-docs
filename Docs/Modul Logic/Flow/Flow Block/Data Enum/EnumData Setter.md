@@ -17,11 +17,6 @@ EnumData Setter adalah Flow Block yang memperbarui seluruh atribut pada [[Docs/T
 Gunakan block ini bila Anda ingin mengubah beberapa atribut sekaligus. Bila hanya satu kelompok atribut yang berubah, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Value Setter|EnumData Value Setter Block]], [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Header Setter|EnumData Header Setter Block]], atau [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Selectable Setter|EnumData Selectable Setter Block]].
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-setter-block-flow.png|Flow Block EnumData Setter dengan lima input dan tiga output]]
-
-<!--
-  * [TODO] Perbarui gambar `enumdata-setter-block-flow.png` sesuai input dan output terbaru. Anotasi yang disarankan: (1) input EnumData, (2) input Name, (3) input Value, (4) input Description, (5) input Selectable, (6) output Pass, (7) output Name Conflict, (8) output Value Conflict.
--->
-
 ## Input dan Output
 
 EnumData Setter memiliki lima input di sisi kiri dan tiga output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output.
@@ -58,8 +53,8 @@ Saat dieksekusi, EnumData Setter memeriksa input secara berurutan sebelum mengub
 
 1. Block memeriksa [[^field|Name]]. Bila sudah digunakan EnumData lain di Enum yang sama, perubahan dihentikan dan [[^output|Name Conflict]] bernilai [[^value/boolean/true]]. [[^field|Value]] tidak diperiksa.
 2. Bila [[^field|Name]] lolos, block memeriksa [[^field|Value]]. Bila tipe datanya tidak sama dengan [[^field|Format]] Enum, perubahan dihentikan dan [[^output|Value Conflict]] bernilai [[^value/boolean/true]]. Block ini tidak mengonversi tipe data.
-3. Bila kedua pemeriksaan lolos, seluruh atribut EnumData diganti dengan nilai pada input, lalu output [[^output|Pass]] meneruskan EnumData tersebut.
-4. Bila [[^field|EnumData]] atau [[^field|Name]] dibiarkan kosong, block tidak dapat dijalankan.
+3. Bila [[^field|Enum]], [[^field|Name]], [[^field|Selectable]] dibiarkan kosong, block tidak dapat dijalankan.
+4. Bila ketiga pemeriksaan lolos, seluruh atribut EnumData diganti dengan nilai pada input, lalu output [[^output|Pass]] meneruskan EnumData tersebut.
 
 Aturan [[^field|Name]] sama dengan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Add EnumData|Add EnumData Block]]: dianggap sama bila sama persis, membedakan huruf besar dan kecil, menerima karakter simbol, dan di-*trim* saat disimpan.
 

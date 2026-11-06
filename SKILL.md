@@ -99,21 +99,25 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 | Gambar|`![[Docs/Modul <Nama>/<Komponen>/<nama-gambar>.png|keterangan]]`|Nama file huruf kecil dipisah tanda hubung, ditaruh di folder komponen|`![[Docs/Modul Logic/Flow/blueprint-flow.png|Halaman kerja untuk mengelola flow block dalam komponen flow]]` |
 | Menu atau contextmenu antarmuka|`[[^field/<icon>|<Label>]]`    | icon: add, delete, edit, save, copy, paste, eye, collapse, expand, import, export, [slug komponen]. Kategori dan item menu tanpa icon memakai`[[^field|<Label>]]`     |`[[^field/add|Add]]`, `[[^field|Event]]`, `[[^field|Pulser]]`  |
 | Label isian, kolom isian dan teks informasi antarmuka|`[[^field|<Label>]]`|Berlaku untuk kolom isian, kolom pencarian, dan teks yang tampil di antarmuka (misalnya keterangan kosong atau informasi koordinat)|`[[^field|Name]]`, `[[^field|Search]]`, `[[^field|No Activity]]`         |
-| Tombol besar |`[[^button/<icon>|<Label>]]` atau`[[^button|<Label>]]`     | Create, Update, Delete (konfirmasi)        | `[[^button|Create]]` |
-| Tombol kecil dengan ikon | `[[^button/<icon>|<Label>]]` atau`[[^button|<Label>]]`     | icon: add, edit, delete, merge, publish, refresh, save, submission, event, activity, left (Prev), right (Next), x (Cancel), upload, ok (Ok), setting (Binding). |`[[^button/edit|Edit]]`|
-| Tombol kecil tanpa ikon| `[[^button/empty|<Label>]]` | trigger  | `[[^button/empty|Trigger]]`       |
-| Tombol ikon kecil tanpa label| `[[^button/nolabel/<icon>]]` | gear, q (Query)  |`[[^button/nolabel/gear]]`|
+| Tombol besar |`[[^button|<Label>]]`     | Create, Update, Delete (konfirmasi)        | `[[^button|Create]]` |
+| Tombol kecil dengan ikon | `[[^button/<icon>|<Label>]]` | icon: add, edit, delete, merge, publish, refresh, save, submission, event, activity, left (Prev), right (Next), x (Cancel), upload, ok (Ok), setting (Binding). | `[[^button/edit|Edit]]` |
+| Tombol kecil tanpa ikon| `[[^button/empty|<Label>]]` | trigger  | `[[^button/empty|Trigger]]` |
+| Tombol ikon kecil tanpa label| `[[^button/nolabel/<icon>]]` | gear, q (Query)  | `[[^button/nolabel/gear]]` |
 | Nama komponen/folder/data pada baris tabel|`[[^field/<slug>|<Nama>]]`|slug: folder, variable, enum, table, canvas, form, gallery, kanban, space, tableview, timeline, flow, group, workspace, model|`[[^field/tableview|Daftar Pelanggan]]`|
 | Nilai Boolean|`[[^value/boolean/allow]]`, `[[^value/boolean/disallow]]`, `[[^value/boolean/true]]`, `[[^value/boolean/disallow]]`|Gunakan di dalam tabel dan kalimat, bukan teks tebal|`[[^value/boolean/false]]`  |
-| Pilihan radio atau toggle |`[[^value/radio|<Label>]]`|full, half, quarter pada Table View, static, bind pada Space|`[[^value/radio|full]]`|
-| Nama Column pada baris tabel atau kalimat|`[[^field/column|<Nama>]]`|Dipakai di tabel Komponen yang terlibat|`[[^field/column|Status]]`|
-| Nilai EnumData pada baris tabel atau kalimat|`[[^value/enumdata|<Nama>]]`|Nilai dari Enum, bukan nama Enum|`[[^value/enumdata|Menunggu]]`|
+| Pilihan radio atau toggle | `[[^value/radio|<Label>]]`|full, half, quarter pada Table View, static, bind pada Space|`[[^value/radio|full]]`|
+| Nama Column pada baris tabel atau kalimat| `[[^field/column|<Nama>]]`|Dipakai di tabel Komponen yang terlibat|`[[^field/column|Status]]`|
+| Nilai EnumData pada baris tabel atau kalimat| `[[^value/enumdata|<Nama>]]`|Nilai dari Enum, bukan nama Enum|`[[^value/enumdata|Menunggu]]`|
+| Nilai Contoh bertipedata | `[[^value/<Tipe>|<Nama atau Nilai>]]`|boolean, color, column, complex, date, datetime, datetimezone, enum, enumdata, expression, file, matrices, month, monthyear, node, number, object, query, row, string, table, tabledata, text, thing, time, tree, variable, year |`[[^value/enumdata|Menunggu]]`|
 | Toggle mode pada bilah navigasi | `[[^mode/view|View]]` dan `[[^mode/edit|Edit]]`, satu baris per mode, deskripsi menjelaskan fungsi saklar saat mode itu tampil | - | `[[^mode/view|View]]` |
 | Menu konteks Elemen | `[[^field/copy|Copy Layout Style]]`, `[[^field/paste|Paste Layout Style]]`, `[[^field/up|Move Back]]`, `[[^field/down|Move Next]]` | - | `[[^field/up|Move Back]]` |
 | Kontrol ukuran | `[[^field/resize]]` | Layout Panel | `[[^field/resize]]` |
 | Tombol toggle | `[[^toggle/<icon>]]` | 123, search (kaca pembesar) |`[[^toggle/123]]`| 
 | Nilai pilihan tetap dan perintah ketik ditulis dalam kode inline, bukan wikilink |`` `right` ``, `` `/chart` ``|-|-|
 | Kaidah Query | `[[Docs/Query/Output/<kaidah>|<kaidah> Output]]` | Single, Series, Multi Series, Table | `[[Docs/Query/Output/Series|Series Output]]`|
+| Label input dalam Flow Block | `[[^input|<Label>]]` | Nama label dalam input antarmuka Flow Block | `[[^output|Conflict Name]]`|
+| Label output dalam Flow Block | `[[^output|<Label>]]` | Nama label dalam output antarmuka Flow Block | `[[^output|Conflict Name]]`|
+| Status Activity | `[[^flowstate|<Status>]]` | Succeed, Error, Fatal Error | `[[^flowstate|Succeed]]`|
 
 Catatan label: bila label field berupa placeholder di antarmuka, tulis persis termasuk titik tiga (contoh: `[[^field|Select Data Format...]]`, `[[^field|Search Table Data...]]`). Nama kolom, tombol, atau elemen antarmuka tidak dicetak tebal; selalu pakai `[[^field|...]]` atau `[[^button|...]]`.
 
@@ -386,7 +390,7 @@ Catatan format:
 ### Halaman per block
 - Front matter: `status`, `title`, `description`, `pageDecoration.icon: zap`, `pageDecoration.tree.priority`. Tulis tanpa indentasi di awal baris.
 - Heading: **Input, Control dan Output** (bukan "Input dan Output"). Kalimat pembuka: "memiliki satu Control berupa tombol dan <n> output di sisi kanan".
-- Nama output ditulis `[[^output|Nama]]`, bukan kode inline. Nilai ditulis dengan `[[^value/string|create]]`, `[[^value/number|150000]]`, `[[^value/boolean/true]]`, `[[^value/boolean/false]]`, `[[^value/empty]]`, `[[^value/object|{ "Status": "Menunggu" }]]`, `[[^value/enumdata|Menunggu]]`. Nilai tanggal belum punya pola, tulis kode inline.
+- Nama output ditulis `[[^output|Nama]]`, bukan kode inline. Nilai ditulis dengan `[[^value/string|create]]`, `[[^value/number|150000]]`, `[[^value/boolean/true]]`, `[[^value/boolean/false]]`, `[[^value/empty]]`, `[[^value/object|{ "Status": "Menunggu" }]]`, `[[^value/enumdata|Menunggu]]`. Ikuti sesuai slug tipedata sebagai berikut: 
 - Isi Object memakai tanda kutip lurus (sintaks JSON), bukan kutip melengkung.
 - Pipa alias wikilink di dalam sel tabel **tidak di-escape** (`[[^button/empty|Trigger]]`, bukan `\|`).
 - Tautan antarblock yang sejenis memakai anchor ke halaman block yang menjadi acuan (`Table Row Event#Isi Output Berdasarkan Event`). Jangan menautkan ke anchor di halaman yang bagiannya sudah dihapus penulis (kesalahan saya: tautan `Pengenalan#Output Event dan Old` menjadi rusak setelah bagiannya dihapus).

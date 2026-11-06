@@ -15,11 +15,6 @@ pageDecoration:
 EnumData Value Setter adalah Flow Block yang memperbarui [[^field|Value]] pada [[Docs/Tipe Data/EnumData]] yang Anda tentukan saat Flow berjalan. Atribut lain pada EnumData, yaitu [[^field|Name]], [[^field|Description]], dan [[^field|Selectable]], tidak berubah. Satu eksekusi mengubah satu EnumData.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-value-setter-block-flow.png|Flow Block EnumData Value Setter dengan dua input dan dua output]]
-
-<!--
-  * [TODO] Letakkan gambar `enumdata-value-setter-block-flow.png` (potongan block EnumData Value Setter dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) input Value, (3) output Pass, (4) output Value Conflict.
--->
-
 ## Input dan Output
 
 EnumData Value Setter memiliki dua input di sisi kiri dan dua output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output.

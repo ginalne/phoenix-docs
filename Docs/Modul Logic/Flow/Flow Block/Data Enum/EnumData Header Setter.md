@@ -15,7 +15,6 @@ pageDecoration:
 EnumData Header Setter adalah Flow Block yang memperbarui atribut pengenal pada [[Docs/Tipe Data/EnumData]] yang Anda tentukan saat Flow berjalan, yaitu [[^field|Name]] dan [[^field|Description]]. Atribut [[^field|Value]] dan [[^field|Selectable]] tidak berubah. Satu eksekusi mengubah satu EnumData.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-header-setter-block-flow.png|Flow Block EnumData Header Setter dengan tiga input dan dua output]]
-
 ## Input dan Output
 
 EnumData Header Setter memiliki tiga input di sisi kiri dan dua output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output.
@@ -37,7 +36,11 @@ EnumData Header Setter memiliki tiga input di sisi kiri dan dua output di sisi k
 
 ## Cara Kerja
 
-Saat dieksekusi, EnumData Header Setter memeriksa [[^field|Name]] terlebih dahulu. Bila sudah digunakan EnumData lain di Enum yang sama, perubahan dihentikan dan [[^output|Name Conflict]] bernilai [[^value/boolean/true]]. Bila belum digunakan, [[^field|Name]] dan [[^field|Description]] pada EnumData diganti, lalu output [[^output|Pass]] meneruskan EnumData tersebut. Bila [[^field|EnumData]] atau [[^field|Name]] dibiarkan kosong, block tidak dapat dijalankan.
+Saat dieksekusi, EnumData Header Setter memeriksa input secara berurutan sebelum mengubah EnumData:
+
+1. Block memeriksa [[^field|Name]]. Bila sudah digunakan EnumData lain di Enum yang sama, perubahan dihentikan dan [[^output|Name Conflict]] bernilai [[^value/boolean/true]]. [[^field|Value]] tidak diperiksa.
+2. Bila [[^field|Enum]], [[^field|Name]], [[^field|Selectable]] dibiarkan kosong, block tidak dapat dijalankan.
+4. Bila kedua pemeriksaan lolos, seluruh atribut EnumData diganti dengan nilai pada input, lalu output [[^output|Pass]] meneruskan EnumData tersebut.
 
 Aturan [[^field|Name]] sama dengan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Add EnumData|Add EnumData Block]]: dianggap sama bila sama persis, membedakan huruf besar dan kecil, menerima karakter simbol, dan di-*trim* saat disimpan.
 

@@ -15,11 +15,6 @@ pageDecoration:
 Add EnumData adalah Flow Block yang menambahkan [[Docs/Tipe Data/EnumData]] baru ke sebuah [[Docs/Tipe Data/Enum]] saat Flow berjalan. Anda menentukan Enum tujuan dan atribut EnumData baru, yaitu [[^field|Name]], [[^field|Value]], [[^field|Description]], dan [[^field|Selectable]]. Block ini juga melaporkan apakah penambahan gagal karena Name sudah digunakan atau Value tidak sesuai dengan Enum.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/add-enumdata-block-flow.png|Flow Block Add EnumData dengan lima input dan tiga output]]
-
-<!--
-  * [TODO] Perbarui gambar `add-enumdata-block-flow.png` agar memuat input Selectable. Anotasi yang disarankan: (1) input Enum, (2) input Name, (3) input Value, (4) input Description, (5) input Selectable, (6) output New EnumData, (7) output Name Conflict, (8) output Value Conflict.
--->
-
 ## Input dan Output
 
 Add EnumData memiliki lima input di sisi kiri dan tiga output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output.
@@ -59,8 +54,8 @@ Saat dieksekusi, Add EnumData memeriksa input secara berurutan sebelum menambahk
 
 1. Block memeriksa [[^field|Name]]. Bila sudah digunakan EnumData lain di Enum yang sama, penambahan dihentikan dan [[^output|Name Conflict]] bernilai [[^value/boolean/true]]. [[^field|Value]] tidak diperiksa.
 2. Bila [[^field|Name]] belum digunakan, block memeriksa [[^field|Value]]. Bila tidak sesuai dengan Enum tujuan, penambahan dihentikan dan [[^output|Value Conflict]] bernilai [[^value/boolean/true]].
-3. Bila kedua pemeriksaan lolos, EnumData ditambahkan dan [[^output|New EnumData]] berisi EnumData tersebut.
-4. Bila [[^field|Enum]] atau [[^field|Name]] dibiarkan kosong, block tidak dapat dijalankan.
+3. Bila [[^field|Enum]], [[^field|Name]], [[^field|Selectable]] dibiarkan kosong, block tidak dapat dijalankan.
+4. Bila ketiga pemeriksaan lolos, EnumData ditambahkan dan [[^output|New EnumData]] berisi EnumData tersebut.
 
 Name EnumData dianggap sama bila sama persis, membedakan huruf besar dan kecil, menerima karakter simbol, dan spasi, enter, atau karakter tak terlihat di awal dan akhir dihapus (di-*trim*) saat disimpan.
 
@@ -68,11 +63,6 @@ Name EnumData dianggap sama bila sama persis, membedakan huruf besar dan kecil, 
 
 >**note** Perubahan oleh Flow tidak memicu Flow kembali
 > EnumData yang ditambahkan oleh Add EnumData tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event|Enum Data Event Block]] dengan Event [[^value/string|create]] pada Flow mana pun. Bila Anda membutuhkan proses lanjutan, hubungkan output [[^output|New EnumData]] langsung ke block berikutnya.
-
-<!--
-  * [TODO] Jawaban sebelumnya untuk Value yang masih N/A Type adalah "mungkin saja". Konfirmasi final: EnumData tetap ditambahkan tanpa Value Conflict, dan Value pada EnumData menjadi N/A Type.
-  * [TODO] Konfirmasi perilaku input Selectable yang dibiarkan kosong (nilai bawaan EnumData baru).
--->
 
 ## Contoh Penggunaan
 
@@ -86,6 +76,7 @@ Contoh berikut memakai Enum [[^field/enum|Status Pesanan]] yang sudah memiliki E
 | [[^field|Name]] sudah digunakan dan [[^field|Value]] tidak sesuai | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
 | [[^field|Name]] belum digunakan dan [[^field|Value]] masih [[^field|N/A Type]] | EnumData baru [[^value/enumdata|Diproses]] dengan [[^field|Value]] [[^field|N/A Type]] | - | - | [[^flowstate/Succeed]] |
 | [[^field|Enum]] atau [[^field|Name]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
+| [[^field|Selectable]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
 Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 

@@ -16,11 +16,6 @@ EnumData Selectable Setter adalah Flow Block yang memperbarui [[^field|Selectabl
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-selectable-setter-block-flow.png|Flow Block EnumData Selectable Setter dengan dua input dan satu output]]
 
-<!--
-  * [TODO] Letakkan gambar `enumdata-selectable-setter-block-flow.png` (potongan block EnumData Selectable Setter dari Blueprint). Anotasi yang disarankan: (1) input EnumData(s), (2) input Selectable, (3) output Pass.
-  * [TODO] Konfirmasi label input (ditulis `EnumData(s)` mengikuti penjelasan Anda) dan tipe datanya (diasumsikan Array berisi EnumData), serta tipe dan isi output Pass (diasumsikan Array berisi EnumData yang diubah).
--->
-
 ## Input dan Output
 
 EnumData Selectable Setter memiliki dua input di sisi kiri dan satu output di sisi kanan. Block ini tidak memiliki Control.
