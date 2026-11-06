@@ -17,7 +17,7 @@ EnumData Value adalah Flow Block yang mengambil [[^field|Value]] dari sebuah [[D
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-value-block-flow.png|Flow Block EnumData Value dengan satu input dan satu output]]
 
 <!--
-  * [TODO] Letakkan gambar `enumdata-value-block-flow.png` (potongan block EnumData Value dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) output Value.
+  * [DONE] Letakkan gambar `enumdata-value-block-flow.png` (potongan block EnumData Value dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) output Value.
 -->
 
 ## Input dan Output
@@ -46,17 +46,18 @@ Tipe data output [[^output|Value]] tidak ditampilkan di halaman kerja dan tidak 
 
 ## Contoh Penggunaan
 
-Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pesanan.
+Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum [[^field/enum|status pesanan]].
 
-| Kondisi | [[^output|Value]] |
-| ------- | ----------------- |
-| EnumData berada di Enum berformat angka dengan [[^field|Value]] `1` | [[^value/number|1]] |
-| EnumData berada di Enum berformat teks dengan [[^field|Value]] `MENUNGGU` | [[^value/string|MENUNGGU]] |
-| [[^field|EnumData]] dibiarkan kosong | Tidak ada output, terjadi error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity]] |
+| Kondisi | [[^output|Value]] | Status |
+| ------- | ----------------- | ------ |
+| EnumData berada di Enum berformat angka dengan [[^field|Value]] `1` | [[^value/number|1]] | [[^flowstate/Succeed]] |
+| EnumData berada di Enum berformat teks dengan [[^field|Value]] `MENUNGGU` | [[^value/string|MENUNGGU]] |[[^flowstate/Succeed]] |
+| [[^field|EnumData]] dibiarkan kosong | - |[[^flowstate/Fatal Error]] |
 
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 <!--
-  * [TODO] Konfirmasi perilaku EnumData yang dibiarkan kosong (diasumsikan error seperti Variable Value).
-  * [TODO] Nama dan nilai contoh (EnumData Menunggu, Value 1 dan MENUNGGU) bersifat generik. Sesuaikan bila perlu.
+  * [DONE] Konfirmasi perilaku EnumData yang dibiarkan kosong (diasumsikan error seperti Variable Value).
+  * [DONE] Nama dan nilai contoh (EnumData Menunggu, Value 1 dan MENUNGGU) bersifat generik. Sesuaikan bila perlu.
 -->
 
 ## Praktik Terbaik
@@ -72,7 +73,7 @@ Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pe
 - Block ini hanya membaca data. Untuk mengubah [[^field|Value]], gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter|EnumData Setter Block]].
 
 <!--
-  * [TODO] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan `Docs/Modul Logic/Flow/Flow Activity`.
+  * [DONE] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan `Docs/Modul Logic/Flow/Flow Activity`.
 -->
 
 ## Lihat Juga
@@ -82,3 +83,4 @@ Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pe
 - [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter|EnumData Getter Block]]
 - [[Docs/Modul Data/Enum/Apa itu Enum|Enum]]
 - [[Docs/Tipe Data/EnumData]]
+

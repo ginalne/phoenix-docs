@@ -53,9 +53,10 @@ Contoh berikut memakai Enum bernama [[^value/string|Status Pesanan]] dengan desk
 
 | Kondisi | [[^output|Pass]] | [[^output|Name]] | [[^output|Desc]] |
 | ------- | ---------------- | ---------------- | ---------------- |
-| [[^field|Enum]] terisi | Enum `Status Pesanan` | [[^value/string|Status Pesanan]] | [[^value/text|Daftar status pesanan]] |
-| [[^field|Enum]] dibiarkan kosong | - | - | - |
+| [[^field|Enum]] terisi | Enum `Status Pesanan` | [[^value/string|Status Pesanan]] | [[^value/text|Daftar status pesanan]] | Status |
+| [[^field|Enum]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 <!--
   * [TODO] Konfirmasi perilaku Enum yang dibiarkan kosong: diasumsikan seluruh output bernilai empty (seperti block Variable), bukan error.
     Jawaban: Sudah saya perbaiki

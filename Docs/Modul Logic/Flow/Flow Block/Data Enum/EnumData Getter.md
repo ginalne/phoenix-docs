@@ -62,6 +62,7 @@ Contoh berikut memakai Enum status pesanan yang memiliki EnumData [[^value/enumd
 | [[^field|Name]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 | [[^field|Enum]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 <!--
   * [TODO] Konfirmasi perilaku Enum atau Name yang dibiarkan kosong: diasumsikan tidak error dan menghasilkan EnumData empty dengan Is Empty true (seperti Variable Getter yang secara teknis tidak dapat error).
     Jawaban : Sudah saya perbaiki. mohon analisa dan ikuti menjadi pola penulisan Contoh Penggunaan.
