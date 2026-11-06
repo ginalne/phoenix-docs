@@ -98,7 +98,7 @@ Contoh berikut memakai Enum untuk status pesanan yang memiliki EnumData [[^value
 | [[^field|Name]] sudah digunakan dan [[^field|Value]] tidak sesuai | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
 | [[^field|Enum]] atau [[^field|Name]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]]  |
 
-Error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 <!--
   * [DONE] Nama contoh (Enum status pesanan, EnumData Menunggu dan Diproses) bersifat generik. Sesuaikan bila perlu.

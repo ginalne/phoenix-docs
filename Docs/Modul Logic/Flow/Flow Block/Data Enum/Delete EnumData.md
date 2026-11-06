@@ -75,6 +75,7 @@ Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pe
 | [[^field|Force]] dibiarkan kosong | | | | Mengikuti contoh pada baris [[^field|Force]] bernilai [[^value/boolean/false]] |
 | [[^field|EnumData]] dibiarkan kosong | - | [[^value/boolean/true]] | [[^flowstate/Error]] | Tidak ada yang dihapus. |
 
+Status [[^flowstate/Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 <!--
   * [DONE] Konfirmasi perilaku Force yang dibiarkan kosong (screenshot menampilkan "(Empty)"), diasumsikan sama dengan false.
   * [TODO] Konfirmasi perilaku EnumData yang dibiarkan kosong: apakah output Succeed false dan Error true, atau terjadi error yang dilaporkan di Flow Activity.
