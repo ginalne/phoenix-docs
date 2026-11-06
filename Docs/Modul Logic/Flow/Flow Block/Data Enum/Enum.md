@@ -49,17 +49,17 @@ Output [[^output|Pass]] meneruskan Enum yang sama agar dapat dihubungkan ke bloc
 
 ## Contoh Penggunaan
 
-Contoh berikut memakai Enum bernama `Status Pesanan` dengan deskripsi `Daftar status pesanan`.
+Contoh berikut memakai Enum bernama [[^value/string|Status Pesanan]] dengan deskripsi [[^value/text|Daftar status pesanan]].
 
 | Kondisi | [[^output|Pass]] | [[^output|Name]] | [[^output|Desc]] |
 | ------- | ---------------- | ---------------- | ---------------- |
-| [[^field|Enum]] terisi | Enum `Status Pesanan` | [[^value/string|Status Pesanan]] | [[^value/string|Daftar status pesanan]] |
-| [[^field|Enum]] dibiarkan kosong | [[^value/empty]] | [[^value/empty]] | [[^value/empty]] |
+| [[^field|Enum]] terisi | Enum `Status Pesanan` | [[^value/string|Status Pesanan]] | [[^value/text|Daftar status pesanan]] |
+| [[^field|Enum]] dibiarkan kosong | - | - | - |
 
 <!--
   * [TODO] Konfirmasi perilaku Enum yang dibiarkan kosong: diasumsikan seluruh output bernilai empty (seperti block Variable), bukan error.
-    Jawaban: 
-  * [TODO] Nama contoh (Enum Status Pesanan) bersifat generik. Sesuaikan bila perlu.
+    Jawaban: Sudah saya perbaiki
+  * [DONE] Nama contoh (Enum Status Pesanan) bersifat generik. Sesuaikan bila perlu.
 -->
 
 ## Praktik Terbaik
@@ -74,7 +74,7 @@ Contoh berikut memakai Enum bernama `Status Pesanan` dengan deskripsi `Daftar st
 - Untuk mengambil atribut EnumData, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData|EnumData Block]].
 
 <!--
-  * [TODO] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Operator/String/Concatenate`, dan `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
+  * [DONE] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Operator/String/Concatenate`, dan `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
 -->
 
 ## Lihat Juga

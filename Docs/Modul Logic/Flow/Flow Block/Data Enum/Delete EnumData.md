@@ -35,8 +35,8 @@ Delete EnumData memiliki dua input di sisi kiri dan dua output di sisi kanan. Bl
 
 | Output | Tipe Data | Isi |
 | ------ | --------- | --- |
-| [[^output|Succeed]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila EnumData berhasil dihapus, [[^value/boolean/false]] bila tidak. |
-| [[^output|Error]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila penghapusan gagal, [[^value/boolean/false]] bila berhasil. |
+| [[^output|Succeed]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila EnumData berhasil dihapus, tidak ada output bila gagal dihapus. |
+| [[^output|Error]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila penghapusan gagal, tidak ada output bila berhasil. |
 
 ## Cara Kerja
 
@@ -57,26 +57,23 @@ EnumData dianggap sudah digunakan bila sedang dipakai pada Flow atau data lain, 
 > EnumData yang dihapus oleh Delete EnumData tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event|Enum Data Event Block]] dengan Event [[^value/string|delete]].
 
 <!--
-  * [TODO] Konfirmasi dampak hapus paksa: apa yang terjadi pada relasi (field atau data yang memakai EnumData) dan riwayat activity. Isi callout warning di atas masih draf mengikuti penjelasan penulis.
-    Jawaban: Terhapus, menjadi Empty.
-  * [TODO] Konfirmasi dampak penghapusan EnumData yang masih dipakai komponen lain bila Force bernilai false (diasumsikan tidak dihapus).
-    Jawaban: Tampil error
-  * [TODO] Konfirmasi apakah callout "tidak memicu Flow kembali" berlaku untuk semua Flow atau hanya Flow yang sama.
-    Jawaban: Semua Flow
+  * [DONE] Konfirmasi dampak hapus paksa: apa yang terjadi pada relasi (field atau data yang memakai EnumData) dan riwayat activity. Isi callout warning di atas masih draf mengikuti penjelasan penulis.
+  * [DONE] Konfirmasi dampak penghapusan EnumData yang masih dipakai komponen lain bila Force bernilai false (diasumsikan tidak dihapus).
+  * [DONE] Konfirmasi apakah callout "tidak memicu Flow kembali" berlaku untuk semua Flow atau hanya Flow yang sama.
 -->
 
 ## Contoh Penggunaan
 
 Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pesanan.
 
-| Kondisi | [[^output|Succeed]] | [[^output|Error]] | Hasil |
-| ------- | ------------------- | ----------------- | ----- |
-| EnumData belum digunakan, [[^field|Force]] bernilai [[^value/boolean/false]] | [[^value/boolean/true]] | [[^value/boolean/false]] | EnumData dihapus. |
-| EnumData belum digunakan, [[^field|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | [[^value/boolean/false]] | EnumData dihapus. |
-| EnumData sudah digunakan, [[^field|Force]] bernilai [[^value/boolean/false]] | [[^value/boolean/false]] | [[^value/boolean/true]] | EnumData tidak dihapus. |
-| EnumData sudah digunakan, [[^field|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | [[^value/boolean/false]] | EnumData dihapus paksa. |
-| [[^field|Force]] dibiarkan kosong | Mengikuti baris [[^field|Force]] bernilai [[^value/boolean/false]] | | |
-| [[^field|EnumData]] dibiarkan kosong | [[^value/boolean/false]] | [[^value/boolean/true]] | Tidak ada yang dihapus. |
+| Kondisi | [[^output|Succeed]] | [[^output|Error]] | Status | Hasil |
+| ------- | ------------------- | ----------------- | ----- | ----- |
+| EnumData belum digunakan, [[^field|Force]] bernilai [[^value/boolean/false]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]]  | EnumData dihapus. |
+| EnumData belum digunakan, [[^field|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] | EnumData dihapus. |
+| EnumData sudah digunakan, [[^field|Force]] bernilai [[^value/boolean/false]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] | EnumData tidak dihapus. |
+| EnumData sudah digunakan, [[^field|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] | EnumData dihapus paksa. |
+| [[^field|Force]] dibiarkan kosong | | | | Mengikuti contoh pada baris [[^field|Force]] bernilai [[^value/boolean/false]] |
+| [[^field|EnumData]] dibiarkan kosong | - | [[^value/boolean/true]] | [[^flowstate/Error]] | Tidak ada yang dihapus. |
 
 <!--
   * [DONE] Konfirmasi perilaku Force yang dibiarkan kosong (screenshot menampilkan "(Empty)"), diasumsikan sama dengan false.
