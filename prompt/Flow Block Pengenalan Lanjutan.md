@@ -13,14 +13,19 @@
 Tolong saya membuat 6 halaman pengenalan untuk kategori flow block. Berikut saya buat daftar halaman dengan masing-masing jenis flow block nya dan penjelasan singkatnya. Berbeda dengan kategori Event yang flow block nya memiliki kemiripan control dan output, kategori ini memiliki flow block yang unik-unik sesuai fungsi nya.
 
 1. [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Pengenalan|I/O]] (Branch, Passer)
-    
+    Kategori ini berfungsi untuk membantu pengelolaan aliran data dalam flow.
 2. [[Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan|Query]] (Condition, Execute)
+    Kategori ini berfungsi untuk membangun dan menjalankan Query menggunakan flow.
 3. [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Operator]] (Number : Increment. String : Concatenate, Implode, Pad Left, Pad Right. Table : TableRow Parse. Object : Assign, Merge, Parse, Stringify. Boolean : If. Tree : Node Parse)
+   Kategori ini berfungsi untuk pengolahan data dalam flow, seperti aritmatika, pengolahan teks, konversi maupun translasi data. Masing-masing blok dikelompokan berdasarkan tipe data input utamanya.
 4. [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Modular]] (API: HTTP Request, AI: OpenAI 4)
+    Kategori ini berfungsi untuk mengeksekusi proses yang kompleks, seperti memanggil permintaan HTTP ataupun menghubungi provider jasa tertentu.
 5. [[Docs/Modul Logic/Flow/Flow Block/Chrono/Pengenalan|Chrono]] (Delay)
+   Kategori ini befungsi untuk mengelola aliran berdasarkan waktu, sehingga proses aliran dapat memiliki waktu yang lebih lama.
 6. [[Docs/Modul Logic/Flow/Flow Block/Error/Pengenalan|Error]] (Error Message)
+   Kategori ini berfungsi untuk mengelola atau menangani error, atau sekadar mengatur bagaimana error ditampilkan.
 
-Mungkin bisa buat halaman-halaman ini untuk pengenalan menuju ke masing-masing flow block yang kategori miliki. Mungkin bisa mengikuti struktur pengenalan event (jika relevan) yang juga sudah saya lampirkan.
+Mungkin bisa buat halaman-halaman ini untuk pengenalan menuju ke masing-masing flow block yang kategori miliki. Struktur halaman mungkin bisa mengikuti struktur pengenalan event (jika relevan) yang juga sudah saya lampirkan. Perlu diingat kalau penjelasan singkat permasing-masing kategori ini bukan susunan kata yang absolut, mohon untuk dicerna dengan melihat nama flow block yang sudah ada agar penjelasan dapat lebih holistik dan mewadahi flow block didalamnya.
 
 ---
     status: release
