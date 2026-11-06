@@ -15,9 +15,8 @@
 EnumData Getter adalah Flow Block yang mengambil [[Docs/Tipe Data/EnumData]] dari sebuah [[Docs/Tipe Data/Enum]] dengan mengisi [[^field|Name]] sebagai alias. Block ini juga memberi tahu apakah EnumData ditemukan, sehingga Flow dapat bercabang bila Name tidak cocok.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-getter-block-flow.png|Flow Block EnumData Getter dengan dua input dan dua output]]
-
 <!--
-  * [TODO] Letakkan gambar `enumdata-getter-block-flow.png` (potongan block EnumData Getter dari Blueprint). Anotasi yang disarankan: (1) input Enum, (2) input Name, (3) output EnumData, (4) output Is Empty.
+  * [DONE] Letakkan gambar `enumdata-getter-block-flow.png` (potongan block EnumData Getter dari Blueprint). Anotasi yang disarankan: (1) input Enum, (2) input Name, (3) output EnumData, (4) output Is Empty.
 -->
 
 ## Input dan Output
@@ -48,24 +47,25 @@ Saat dieksekusi, EnumData Getter mencari EnumData pada Enum yang Anda tentukan d
 [[^field|Name]] dianggap cocok bila sama persis dan membedakan huruf besar dan kecil. Block ini hanya mencari EnumData di Enum yang ditentukan pada input [[^field|Enum]], sehingga EnumData dengan nama yang sama di Enum lain tidak ikut terambil.
 
 <!--
-  * [TODO] Konfirmasi aturan pencocokan Name: sama persis, membedakan huruf besar dan kecil, dan apakah Name pada input di-trim sebelum dicocokkan.
+  * [DONE] Konfirmasi aturan pencocokan Name: sama persis, membedakan huruf besar dan kecil, dan apakah Name pada input di-trim sebelum dicocokkan.
 -->
 
 ## Contoh Penggunaan
 
 Contoh berikut memakai Enum status pesanan yang memiliki EnumData [[^value/enumdata|Menunggu]].
 
-| Kondisi | [[^output|EnumData]] | [[^output|Is Empty]] |
-| ------- | -------------------- | -------------------- |
-| [[^field|Name]] berisi `Menunggu` (ada di Enum) | EnumData [[^value/enumdata|Menunggu]] | [[^value/boolean/false]] |
-| [[^field|Name]] berisi `Dibatalkan` (tidak ada di Enum) | [[^value/empty]] | [[^value/boolean/true]] |
-| [[^field|Name]] berisi `menunggu` (huruf kecil semua) | [[^value/empty]] | [[^value/boolean/true]] |
-| [[^field|Name]] dibiarkan kosong | [[^value/empty]] | [[^value/boolean/true]] |
-| [[^field|Enum]] dibiarkan kosong | [[^value/empty]] | [[^value/boolean/true]] |
+| Kondisi | [[^output|EnumData]] | [[^output|Is Empty]] | Status |
+| ------- | -------------------- | -------------------- | ------ |
+| [[^field|Name]] berisi [[^value/string|Menunggu]] (ada di Enum) | EnumData [[^value/enumdata|Menunggu]] | - | [[^flowstate/Succeed]]  |
+| [[^field|Name]] berisi [[^value/string|Dibatalkan]] (tidak ada di Enum) | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^field|Name]] berisi `menunggu` (huruf kecil semua) | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^field|Name]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
+| [[^field|Enum]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
 <!--
   * [TODO] Konfirmasi perilaku Enum atau Name yang dibiarkan kosong: diasumsikan tidak error dan menghasilkan EnumData empty dengan Is Empty true (seperti Variable Getter yang secara teknis tidak dapat error).
-  * [TODO] Nama contoh (Enum status pesanan, EnumData Menunggu dan Dibatalkan) bersifat generik. Sesuaikan bila perlu.
+    Jawaban : Sudah saya perbaiki. mohon analisa dan ikuti menjadi pola penulisan Contoh Penggunaan.
+  * [DONE] Nama contoh (Enum status pesanan, EnumData Menunggu dan Dibatalkan) bersifat generik. Sesuaikan bila perlu.
 -->
 
 ## Praktik Terbaik
@@ -82,7 +82,7 @@ Contoh berikut memakai Enum status pesanan yang memiliki EnumData [[^value/enumd
 - Block ini hanya membaca data, sehingga Enum dan EnumData tidak berubah.
 
 <!--
-  * [TODO] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/Delete EnumData`, `Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If`, dan `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
+  * [DONE] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/Delete EnumData`, `Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If`, dan `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
 -->
 
 ## Lihat Juga

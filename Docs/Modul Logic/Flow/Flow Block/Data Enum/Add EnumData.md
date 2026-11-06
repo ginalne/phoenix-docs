@@ -96,7 +96,7 @@ Contoh berikut memakai Enum untuk status pesanan yang memiliki EnumData [[^value
 | [[^field|Name]] berisi `Menunggu` (sudah digunakan) dan [[^field|Value]] sesuai | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
 | [[^field|Name]] belum digunakan, tetapi [[^field|Value]] tidak sesuai | - | - | [[^value/boolean/true]] |[[^flowstate/Error]] |
 | [[^field|Name]] sudah digunakan dan [[^field|Value]] tidak sesuai | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
-| [[^field|Enum]] atau [[^field|Name]] dibiarkan kosong | - | - | - | [[^flowstate/Error]]  |
+| [[^field|Enum]] atau [[^field|Name]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]]  |
 
 Error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity]].
 

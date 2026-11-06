@@ -17,7 +17,7 @@ EnumData adalah Flow Block yang mengubah sebuah [[Docs/Tipe Data/EnumData]] menj
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-block-flow.png|Flow Block EnumData dengan satu input dan empat output]]
 
 <!--
-  * [TODO] Letakkan gambar `enumdata-block-flow.png` (potongan block EnumData dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) output Pass, (3) output Name, (4) output Description, (5) output Value.
+  * [DONE] Letakkan gambar `enumdata-block-flow.png` (potongan block EnumData dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) output Pass, (3) output Name, (4) output Description, (5) output Value.
 -->
 
 ## Input dan Output
@@ -41,7 +41,9 @@ EnumData memiliki satu input di sisi kiri dan empat output di sisi kanan. Block 
 
 <!--
   * [TODO] Konfirmasi tipe data output Description (Text atau String) dan apakah Pass bertipe EnumData.
+    Jawaban : Sudah ok
   * [TODO] Pengetahuan sebelumnya menyebut block ini juga mengambil atribut Selectable, tetapi screenshot hanya menampilkan Pass, Name, Description, dan Value. Halaman ini mengikuti screenshot. Konfirmasi apakah output Selectable akan ditambahkan.
+    Jawaban: perlu ditambahkan
 -->
 
 ## Cara Kerja
@@ -52,16 +54,17 @@ Output [[^output|Pass]] meneruskan EnumData yang sama agar dapat dihubungkan ke 
 
 ## Contoh Penggunaan
 
-Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] dengan deskripsi `Pesanan belum diproses` dan [[^field|Value]] berisi angka `1` pada Enum berformat angka.
+Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] dengan deskripsi [[^value/text|Pesanan belum diproses]] dan [[^field|Value]] berisi angka `1` pada Enum berformat angka.
 
-| Kondisi | [[^output|Pass]] | [[^output|Name]] | [[^output|Description]] | [[^output|Value]] |
-| ------- | ---------------- | ---------------- | ----------------------- | ----------------- |
-| [[^field|EnumData]] terisi | EnumData [[^value/enumdata|Menunggu]] | [[^value/string|Menunggu]] | [[^value/string|Pesanan belum diproses]] | [[^value/number|1]] |
-| [[^field|EnumData]] dibiarkan kosong | [[^value/empty]] | [[^value/empty]] | [[^value/empty]] | [[^value/empty]] |
+| Kondisi | [[^output|Pass]] | [[^output|Name]] | [[^output|Description]] | [[^output|Value]] | Status |
+| ------- | ---------------- | ---------------- | ----------------------- | ---- | ---- |
+| [[^field|EnumData]] terisi | EnumData [[^value/enumdata|Menunggu]] | [[^value/string|Menunggu]] | [[^value/text|Pesanan belum diproses]] | [[^value/number|1]] | [[^flowstate/Succeed]]  |
+| [[^field|EnumData]] dibiarkan kosong | - | - | - | - | [[^flowstate/Error]] |
 
 <!--
   * [TODO] Konfirmasi perilaku EnumData yang dibiarkan kosong: diasumsikan seluruh output bernilai empty (seperti block Variable), bukan error.
-  * [TODO] Nama dan nilai contoh (EnumData Menunggu, Value 1) bersifat generik. Sesuaikan bila perlu.
+    Jawaban: Sudah saya perbaiki
+  * [DONE] Nama dan nilai contoh (EnumData Menunggu, Value 1) bersifat generik. Sesuaikan bila perlu.
 -->
 
 ## Praktik Terbaik
@@ -77,7 +80,7 @@ Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] dengan deskripsi `P
 - Untuk mengambil atribut Enum, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Enum|Enum Block]].
 
 <!--
-  * [TODO] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Value`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan `Docs/Modul Logic/Flow/Flow Activity`.
+  * [DONE] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Value`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan `Docs/Modul Logic/Flow/Flow Activity`.
 -->
 
 ## Lihat Juga
