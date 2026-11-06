@@ -10,26 +10,25 @@
 
 /phoenix-docs-silverbullet /phoenix-docs-knowledge 
 
-Tolong saya membuat 4 halaman pengenalan untuk kategori flow block. Berikut saya buat daftar halaman dengan masing-masing jenis flow block nya. Berbeda dengan kategori Event yang flow block nya memiliki kemiripan control dan output, kategori ini memiliki flow block yang unik-unik sesuai fungsi nya untuk mengakses komponen modul data melalui logika flow.
+Tolong saya membuat 6 halaman pengenalan untuk kategori flow block. Berikut saya buat daftar halaman dengan masing-masing jenis flow block nya dan penjelasan singkatnya. Berbeda dengan kategori Event yang flow block nya memiliki kemiripan control dan output, kategori ini memiliki flow block yang unik-unik sesuai fungsi nya.
 
-[[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Pengenalan|I/O]] | [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch]], [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Passer]] |
-| [[Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan|Query]] | [[Docs/Modul Logic/Flow/Flow Block/Query/Condition]], [[Docs/Modul Logic/Flow/Flow Block/Query/Execute]] |
-| [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Operator]] | [[Docs/Modul Logic/Flow/Flow Block/Operator/Number/Pengenalan|Number]] ([[Docs/Modul Logic/Flow/Flow Block/Operator/Number/Increment]]); [[Docs/Modul Logic/Flow/Flow Block/Operator/String/Pengenalan|String]] ([[Docs/Modul Logic/Flow/Flow Block/Operator/String/Concatenate]], [[Docs/Modul Logic/Flow/Flow Block/Operator/String/Implode]], [[Docs/Modul Logic/Flow/Flow Block/Operator/String/Pad Left]], [[Docs/Modul Logic/Flow/Flow Block/Operator/String/Pad Right]]); [[Docs/Modul Logic/Flow/Flow Block/Operator/Table/Pengenalan|Table]] ([[Docs/Modul Logic/Flow/Flow Block/Operator/Table/TableRow Parse]]); [[Docs/Modul Logic/Flow/Flow Block/Operator/Object/Pengenalan|Object]] ([[Docs/Modul Logic/Flow/Flow Block/Operator/Object/Assign]], [[Docs/Modul Logic/Flow/Flow Block/Operator/Object/Merge]], [[Docs/Modul Logic/Flow/Flow Block/Operator/Object/Parse]], [[Docs/Modul Logic/Flow/Flow Block/Operator/Object/Stringify]]); [[Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/Pengenalan|Boolean]] ([[Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If]]); [[Docs/Modul Logic/Flow/Flow Block/Operator/Tree/Pengenalan|Tree]] ([[Docs/Modul Logic/Flow/Flow Block/Operator/Tree/Node Parse]]) |
-| [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Modular]] | [[Docs/Modul Logic/Flow/Flow Block/Modular/API/Pengenalan|API]] ([[Docs/Modul Logic/Flow/Flow Block/Modular/API/HTTP Request]]); [[Docs/Modul Logic/Flow/Flow Block/Modular/AI/Pengenalan|AI]] ([[Docs/Modul Logic/Flow/Flow Block/Modular/AI/OpenAI 4]]) |
-| Misc | [[Docs/Modul Logic/Flow/Flow Block/Chrono/Pengenalan|Chrono]] ([[Docs/Modul Logic/Flow/Flow Block/Chrono/Delay]]); [[Docs/Modul Logic/Flow/Flow Block/Error/Pengenalan|Error]] ([[Docs/Modul Logic/Flow/Flow Block/Error/Error Message]]) |
+1. [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Pengenalan|I/O]] (Branch, Passer)
+    
+2. [[Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan|Query]] (Condition, Execute)
+3. [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Operator]] (Number : Increment. String : Concatenate, Implode, Pad Left, Pad Right. Table : TableRow Parse. Object : Assign, Merge, Parse, Stringify. Boolean : If. Tree : Node Parse)
+4. [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Modular]] (API: HTTP Request, AI: OpenAI 4)
+5. [[Docs/Modul Logic/Flow/Flow Block/Chrono/Pengenalan|Chrono]] (Delay)
+6. [[Docs/Modul Logic/Flow/Flow Block/Error/Pengenalan|Error]] (Error Message)
 
-[[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan]] (Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value)
-[[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan]] (Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Value)
-[[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan]] (Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, TableData Setter)
-[[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan]] (Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, Tree Get Origin)
-
-Mungkin bisa buat 4 halaman ini untuk pengenalan menuju ke masing-masing flow block yang kategori miliki. Mungkin bisa mengikuti struktur pengenalan event (jika relevan) yang juga sudah saya lampirkan.
-
+Mungkin bisa buat halaman-halaman ini untuk pengenalan menuju ke masing-masing flow block yang kategori miliki. Mungkin bisa mengikuti struktur pengenalan event (jika relevan) yang juga sudah saya lampirkan.
 
 ---
     status: release
     title: Flow Block Event
     description: Pengenalan kategori Flow Block Event, block yang menjadi titik awal alur di Blueprint Flow.
+    pageDecoration:
+      tree:
+        priority: 6
     tags: flowblock-category
 ---
 # Flow Block Event
@@ -41,17 +40,6 @@ Flow Block Event adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|F
 Berbeda dengan kategori lain yang bekerja setelah menerima data dari block sebelumnya, block Event menunggu peristiwa dari luar Flow, misalnya perubahan [[Docs/Tipe Data/Row]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]], jadwal dari [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], atau tombol yang ditekan. Ketika peristiwa itu terjadi, block Event menghasilkan output yang menjadi bahan awal bagi seluruh alur di sebelah kanannya.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Event/event-block-flow.png|Lima Flow Block Event pada Blueprint: Pulser, Enum Data Event, Table Row Event, Tree Node Event, dan Variable Event]]
-## Peran Event dalam Flow
-
-Setiap Flow Block memiliki peran yang berbeda dalam sebuah alur. Flow Block Event berada di posisi paling awal:
-
-```mermaid
-flowchart LR
-    A@{ shape: database, label: "**Table**<br/>Nama Table" } -.->|&nbsp;Row berubah&nbsp;| B@{ shape: rounded, label: "**Table Row Event**" }
-    B -->|"&nbsp;**[Row]**&nbsp;"| C@{ shape: rounded, label: "**Block lain**<br/>Mengolah data" }
-    C --> D@{ shape: processes, label: "Sistem lain<br/>menerima data" }
-```
-
 Block Event tidak memiliki input koneksi, hanya output di sisi kanan. Karena itu block Event tidak dapat dihubungkan dari block lain dan tidak terkena syarat eksekusi yang berlaku pada block non-Event. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 >**note** Perubahan data oleh Flow tidak memicu Flow kembali
