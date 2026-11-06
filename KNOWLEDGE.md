@@ -114,36 +114,69 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Struktur dan path (terkonfirmasi):** kategori Data terdiri atas empat kelompok. Halaman Pengenalan: `Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan`, `Data Enum/Pengenalan`, `Data Table/Pengenalan`, `Data Tree/Pengenalan`. Halaman per block: `Docs/Modul Logic/Flow/Flow Block/Data <Grup>/<Nama Block>`. Pola lama `Data/<Grup>/<Nama>` tidak berlaku. Tidak ada halaman `Data/Pengenalan`.
 - **Daftar block:**
   - Variable (6): Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value.
-  - Enum (7): Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Value.
+  - Enum (10): Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Header Setter, EnumData Value Setter, EnumData Selectable Setter, EnumData Value.
   - Table (7): Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, TableData Setter.
   - Tree (10): Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, Tree Get Origin.
 - **Sifat:** block Data unik sesuai fungsinya (tidak seragam seperti Event). Block Data adalah block non-Event, sehingga tunduk pada Syarat Flow Block Diproses. Aksi create, update, atau delete oleh Flow tidak memicu Event.
 - **Fungsi block (terkonfirmasi penulis):**
-  - Variable: Add dan Delete menambah atau menghapus Variable Data. Variable Getter mengambil Variable Data dengan mengisi Name. Variable Block mengonversi Variable Data menjadi nilai atributnya. Variable Setter mengubah Value. Variable Value menghasilkan Value.
-  - Enum: Enum Block mengambil atribut Enum (Name, Description). EnumData Block mengambil atribut EnumData (Name, Description, Value, Selectable). EnumData Getter mengambil EnumData dari Enum yang ditunjuk dengan mengisi Name. EnumData Setter dapat mengubah keempat atribut. Jika ada Name EnumData yang sama, tidak terjadi error, melainkan output sesuai ekspektasi (rinci di halaman block). EnumData Value menghasilkan Value.
   - Table: Table Block mengambil Name dan Description Table. Table Column Block mengambil Name, Description, Header, dan Table dari Column. Table Row Block mengambil Index dan Name dari Row. TableData Getter dan Setter: Row dan Column dapat diisi di block sendiri atau dari output block lain. Setter hanya mengubah satu TableData per eksekusi.
   - Tree: Node Block mengambil Order, Name, dan Tree. Tree Block mengambil Name, Description, dan Merger Mode. Node Setter mengubah Name dan Order. Node Get Ancestor mengambil leluhur pada tingkat yang ditentukan. Node Get Children hanya mengambil anak langsung dengan Order yang ditentukan. Assign Node menetapkan Node ke posisi tertentu (misalnya di bawah Node induk yang dipilih).
 - **Perilaku Tree:** block Data Tree dapat mengubah atau menghapus Node pada Tree dengan Merger Mode atau External Read Only aktif (termasuk Node clone), sehingga perlu callout warning.
 - **Callout warning dibutuhkan** pada block Delete (Variable, EnumData, Row, Node) dan Add EnumData (Strict On Selected).
 - **Terkonfirmasi dari knowledge lain:** Variable Getter mengambil nilai lewat Name, Alias tidak valid menghasilkan tidak ada nilai atau error (lihat Flow Activity), Tree baru otomatis memiliki Node Origin.
+- **Flow state pada eksekusi block:**
+    *   **Succeed:** block selesai sesuai tujuan.
+    *   **Error:** block berjalan tetapi hasilnya gagal sebagai kondisi yang dapat ditangani (Name atau Value konflik, EnumData tidak ditemukan, penghapusan ditolak). Pesan error tampil di Flow Activity.
+    *   **Fatal Error:** block tidak dapat dijalankan karena input wajib kosong (Enum, EnumData, atau Name), semua output tidak ada. Pesan error tampil di Flow Activity.
+    *   Pengecualian terkonfirmasi: Delete EnumData dengan input EnumData kosong berstatus Error dengan output Error true.
 - **Belum terkonfirmasi:** dampak Strict On Selected pada EnumData yang ditambahkan lewat Flow, dampak penghapusan EnumData yang masih dipakai komponen lain, nasib Node anak saat induknya dihapus lewat Flow, apakah Node Origin dapat dihapus, daftar atribut yang dikonversi Variable Block, serta input dan output rinci tiap block.
 
-### Flow Block Data Variable
+### Flow Block Data Variable (menggantikan ringkasan Variable pada "Flow Block Data")
 
 *   **Tidak memiliki Control.** Block hanya memiliki input di kiri dan output di kanan.
 *   **Field Variable adalah select option.** Pengguna memilih Variable Data dari daftar (bukan mengetik alias), atau menghubungkannya dari output block lain. Karena itu "Variable tidak valid" tidak mungkin terjadi, tetapi Variable yang dibiarkan kosong menimbulkan error.
-*   **Output berawalan "Is" selalu Boolean true atau false**, tidak pernah empty. Hal yang sama berlaku untuk Succeed, Error, dan Name Conflict.
+*   **Tidak semua output meneruskan aliran Flow** Output yang tidak relevan dengan hasil tidak meneruskan aliran, sehingga block yang terhubung dengannya tidak dieksekusi. Output flag (Is ..., Succeed, Error, Name Conflict) hanya meneruskan aliran dengan nilai Boolean true pada kasusnya, dan tidak meneruskan aliran pada kasus lain.
 *   **Output Pass** pada Variable dan Variable Setter meneruskan data yang diinput. Pada kelompok Variable, tipenya Variable.
 *   **N/A Type:** teks merah pada input yang tipe datanya belum didefinisikan. Cara mendefinisikan: klik kanan ➜ Change Type ➜ pilih tipe data. Semua tipe data yang tersedia di Phoenix dapat dipilih. Berlaku pada Value (Add Variable) dan New Value (Variable Setter).
-*   **Add Variable:** input Name, Value (awalnya N/A Type), Description. Output New Variable dan Name Conflict. Name conflict: New Variable empty dan Name Conflict true. Berhasil: Name Conflict false. Name kosong menimbulkan error. Value yang masih N/A Type tetap tersimpan.
+*   **Input dan output per block:**
+    *   **Add Variable:** input Name, Value (awalnya N/A Type), Description. Output New Variable dan Name Conflict. Name conflict: hanya Name Conflict yang meneruskan aliran (true). Berhasil: hanya New Variable yang meneruskan aliran (Variable Data baru). Name kosong menimbulkan error. Value yang masih N/A Type tetap tersimpan.
+    *   **Delete Variable:** input Variable dan Force (Boolean). Output Succeed dan Error: berhasil, hanya Succeed meneruskan aliran (true). Gagal, hanya Error meneruskan aliran (true). Variable Data "sudah digunakan" bila sedang dipakai pada Flow atau data lain (relasi), atau riwayat activity mencatat pemakaiannya (histori). Menghapus Variable Data yang sudah digunakan memerlukan Force true.
+    *   **Variable:** input Variable. Output Pass, Name (String), Description (Text), Value (mengikuti Type Variable Data). Variable kosong: tidak ada output yang meneruskan aliran.
+    *   **Variable Getter:** input Name (String, alias). Output Variable dan Is Empty. Cocok: hanya Variable yang meneruskan aliran. Tidak cocok: hanya Is Empty yang meneruskan aliran (true). Secara teknis block ini tidak dapat error.
+    *   **Variable Setter:** input Variable dan New Value (N/A Type, perlu Change Type; New Value juga memberi Type baru sehingga tidak mungkin terjadi ketidakcocokan tipe). Output Pass. Variable kosong menimbulkan error dan Pass tidak meneruskan aliran.
+    *   **Variable Value:** input Variable. Output Value berupa data langsung dengan tipe mengikuti sumber. Tipe output tidak ditampilkan di halaman kerja dan tidak memengaruhi block yang dikoneksikan. Ketidakcocokan dilaporkan di activity saat Flow berjalan. Variable kosong menimbulkan error.
 *   **Name Variable Data:** unik, membedakan huruf besar dan kecil, boleh memuat karakter simbol, dan di-trim (spasi, enter, karakter tak terlihat di awal dan akhir dihapus) saat disimpan.
 *   **Description Variable Data** bertipe Text. Type Variable Data ditentukan oleh tipe data yang dipilih pada Value.
-*   **Delete Variable:** input Variable dan Force (Boolean). Output Succeed dan Error (Boolean true atau false). Variable Data "sudah digunakan" bila sedang dipakai pada Flow atau data lain (relasi), atau riwayat activity mencatat pemakaiannya (histori). Menghapus Variable Data yang sudah digunakan memerlukan Force true.
-*   **Variable:** input Variable. Output Pass, Name (String), Description (Text), Value (mengikuti Type Variable Data). Variable kosong menghasilkan output empty.
-*   **Variable Getter:** input Name (String, alias). Output Variable dan Is Empty. Cocok: Variable terisi dan Is Empty false. Tidak cocok: Variable empty dan Is Empty true. Secara teknis block ini tidak dapat error.
-*   **Variable Setter:** input Variable dan New Value (N/A Type, perlu Change Type; New Value juga memberi Type baru sehingga tidak mungkin terjadi ketidakcocokan tipe). Output Pass. Variable kosong menimbulkan error.
-*   **Variable Value:** input Variable. Output Value berupa data langsung dengan tipe mengikuti sumber. Tipe output tidak ditampilkan di halaman kerja dan tidak memengaruhi block yang dikoneksikan. Ketidakcocokan dilaporkan di activity saat Flow berjalan. Variable kosong menimbulkan error.
-*   **Belum terkonfirmasi:** apakah Type Variable Data ikut berubah saat Variable Setter memperbarui Value (jawaban "New Value juga memberikan new type" dan "hanya Value yang berubah" perlu dipastikan), dan tipe data output Description pada block Variable (Text atau String).
+*   **Is Empty dan Name Conflict** benar-benar tidak meneruskan aliran pada kasus keberhasilan (jawaban sebelumnya menyebut output berawalan Is selalu true atau false dan Name Conflict false saat berhasil)
+*   **Output Description atau Value** yang isinya kosong tetap meneruskan aliran
+*   **Type Variable Data ikut berubah** saat Variable Setter memperbarui Value (jawaban "New Value juga memberikan new type" dan "hanya Value yang berubah" perlu dipastikan), dan tipe data output Description pada block Variable (Text).
+
+### Flow Block Data Enum (menggantikan ringkasan Enum pada "Flow Block Data")
+
+*   **10 block, tanpa Control.** Path: `Docs/Modul Logic/Flow/Flow Block/Data Enum/<Nama Block>`, pengenalan kelompok di `Data Enum/Pengenalan`. Blok: Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Value, EnumData Value Setter, EnumData Header Setter, EnumData Selectable Setter. Pengenalan kelompok perlu memuat ketiga Setter baru.
+*   **Konsep output: "tidak ada output".** Output kondisi (Name Conflict, Value Conflict, Succeed, Error, Is Empty) hanya keluar bernilai true saat kondisinya terpenuhi. Pada kondisi lain, tidak ada output (bukan false, bukan empty). Output data (New EnumData, EnumData pada Getter) juga tidak keluar saat gagal.
+*   **Input dan output per block:**
+    *   **Add EnumData:** input Enum, Name (String), Value (N/A Type), Description (Text), Selectable (Boolean). Output New EnumData, Name Conflict, Value Conflict. Pemeriksaan berurutan Name lalu Value, Value tidak diperiksa bila Name konflik. Value harus bertipe sama dengan Format Enum (tidak ada konversi). Value yang masih N/A Type tetap dapat dieksekusi (EnumData dengan Value N/A Type). Tidak terpengaruh Strict On Selected.
+    *   **Delete EnumData:** input EnumData, Force (Boolean). Output Succeed, Error. Force kosong diperlakukan sama dengan false. EnumData kosong: Error true dan error tampil di Flow Activity.
+    *   **Enum:** input Enum. Output Pass (Enum), Name (String), Desc (Text). Enum kosong: Fatal Error.
+    *   **EnumData:** input EnumData. Output Pass, Name, Description, Value (mengikuti Format Enum), **Selectable (Boolean, ditambahkan)**. EnumData kosong: Fatal Error (diseragamkan, penulis menulis Error pada draf).
+    *   **EnumData Getter:** input Enum, Name (String, alias, sama persis dan membedakan huruf besar dan kecil). Output EnumData (hanya keluar bila ditemukan) dan Is Empty (true hanya bila tidak ditemukan, berstatus Error). Enum atau Name kosong: Fatal Error.
+    *   **EnumData Setter:** mengubah **keempat atribut** sekaligus. Input EnumData, Name, Value (N/A Type), Description, Selectable. Output Pass (EnumData), Name Conflict, Value Conflict. Pemeriksaan Name lalu Value.
+    *   **EnumData Value Setter:** input EnumData, Value (N/A Type). Output Pass, Value Conflict. Value kosong pada tipe yang sesuai berstatus Succeed dan Value menjadi empty. EnumData kosong: Fatal Error.
+    *   **EnumData Header Setter:** input EnumData, Name, Description. Output Name Conflict (Pass diasumsikan ada). "Header" = atribut pengenal Name dan Description (istilah perlu dikonfirmasi).
+    *   **EnumData Selectable Setter:** input EnumData(s) (beberapa EnumData sekaligus, diasumsikan Array) dan Selectable (Boolean). Output Pass diasumsikan Array.
+    *   **EnumData Value:** input EnumData, output Value (data langsung, tipe mengikuti sumber). EnumData kosong: Fatal Error.
+*   **Name EnumData:** aturan sama dengan Name Variable Data (sama persis, membedakan huruf besar dan kecil, menerima simbol, di-trim).
+*   **Koreksi atas knowledge sebelumnya:** (a) Callout warning Strict On Selected pada Add EnumData tidak diperlukan karena Strict On Selected hanya berlaku saat memilih EnumData pada field atau komponen data. (b) Aksi oleh Flow tidak memicu Flow mana pun (semua Flow, bukan hanya Flow yang sama). (c) EnumData Setter mengubah keempat atribut (screenshot awal hanya menampilkan sebagian input).
+*   **Gaya front matter halaman block Data:** `pageDecoration.icon` (plus, trash, search, save, grid) dan `pageDecoration.tree.priority` dipakai penulis pada setiap halaman block.
+*   **Selectable kosong pada Add EnumData dan Selectable Setter** akan menghasilkan Fatal Error;
+*   **EnumData Setter mengganti keempat atribut sekaligus**, atribut yang tidak ingin diubah harus diisi nilai saat ini.
+*   **Name kosong pada Setter adalah Fatal Error**
+*   **Description kosong menjadi empty**
+*   **Name yang sama dengan Name EnumData itu sendiri bukan konflik**
+*   **tipe input EnumData(s) adalah array dari EnumData** yang bisa menerima input EnumData dari banyak block.
+*   **Output Pass pada Setter**  adalah EnumData yang diisi pada input.
+*   **Arti "Header" pada nama block** adalah field Name dan Description.
 
 # Variable (Modul Data)
 
