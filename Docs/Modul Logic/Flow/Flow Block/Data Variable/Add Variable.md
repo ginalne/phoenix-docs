@@ -5,7 +5,7 @@
     pageDecoration:
       icon: plus
       tree:
-        priority: 1
+        priority: 6
 ---
 # Add Variable
 

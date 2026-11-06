@@ -1,9 +1,12 @@
 ---
-status: draft
-title: Add EnumData
-description: Flow Block untuk menambahkan EnumData baru ke sebuah Enum dari dalam Flow.
+    status: draft
+    title: Add EnumData
+    description: Flow Block untuk menambahkan EnumData baru ke sebuah Enum dari dalam Flow.
+    pageDecoration:
+      icon: plus
+      tree:
+        priority: 7
 ---
-
 # Add EnumData
 
 >**note** Add EnumData merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan|Flow Block Data Enum]] di Phoenix.
@@ -34,8 +37,8 @@ Add EnumData memiliki empat input di sisi kiri dan tiga output di sisi kanan. Bl
 | Output | Tipe Data | Isi |
 | ------ | --------- | --- |
 | [[^output|New EnumData]] | [[Docs/Tipe Data/EnumData]] | EnumData yang baru ditambahkan. Berisi [[^value/empty]] bila penambahan gagal karena Name atau Value bermasalah. |
-| [[^output|Name Conflict]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Name sudah digunakan EnumData lain di Enum yang sama, [[^value/boolean/false]] bila belum. |
-| [[^output|Value Conflict]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Value tidak sesuai dengan Enum tujuan, [[^value/boolean/false]] bila sesuai. |
+| [[^output|Name Conflict]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Name sudah digunakan EnumData lain di Enum yang sama, tidak ada output bila belum. |
+| [[^output|Value Conflict]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Value tidak sesuai dengan Enum tujuan, tidak ada output jika tidak ada konflik. |
 
 ### Menentukan Tipe Data Value
 
@@ -62,7 +65,7 @@ Saat dieksekusi, Add EnumData memeriksa [[^field|Name]] dan [[^field|Value]] seb
 1. Block memeriksa apakah [[^field|Name]] sudah digunakan EnumData lain di Enum yang sama.
 2. Block memeriksa apakah [[^field|Value]] sesuai dengan Enum tujuan.
 3. Bila kedua pemeriksaan lolos, EnumData ditambahkan dan [[^output|New EnumData]] berisi EnumData tersebut.
-4. Bila salah satunya tidak lolos, EnumData tidak ditambahkan, [[^output|New EnumData]] berisi [[^value/empty]], dan output konflik yang bersangkutan bernilai [[^value/boolean/true]].
+4. Bila salah satunya tidak lolos, EnumData tidak ditambahkan, [[^output|New EnumData]] tidak meneruskan aliran, dan output konflik yang bersangkutan bernilai [[^value/boolean/true]].
 
 Name EnumData dianggap sama bila sama persis, membedakan huruf besar dan kecil, menerima karakter simbol, dan spasi, enter, atau karakter tak terlihat di awal dan akhir dihapus (di-*trim*) saat disimpan.
 
@@ -87,13 +90,15 @@ Name EnumData dianggap sama bila sama persis, membedakan huruf besar dan kecil, 
 
 Contoh berikut memakai Enum untuk status pesanan yang memiliki EnumData [[^value/enumdata|Menunggu]].
 
-| Kondisi | [[^output|New EnumData]] | [[^output|Name Conflict]] | [[^output|Value Conflict]] |
-| ------- | ------------------------ | ------------------------- | -------------------------- |
-| [[^field|Name]] berisi `Diproses` (belum digunakan) dan [[^field|Value]] sesuai | [[^value/enumdata|Diproses]] | [[^value/boolean/false]] | [[^value/boolean/false]] |
-| [[^field|Name]] berisi `Menunggu` (sudah digunakan) dan [[^field|Value]] sesuai | [[^value/empty]] | [[^value/boolean/true]] | [[^value/boolean/false]] |
-| [[^field|Name]] belum digunakan, tetapi [[^field|Value]] tidak sesuai | [[^value/empty]] | [[^value/boolean/false]] | [[^value/boolean/true]] |
-| [[^field|Name]] sudah digunakan dan [[^field|Value]] tidak sesuai | [[^value/empty]] | [[^value/boolean/true]] | [[^value/boolean/true]] |
-| [[^field|Enum]] atau [[^field|Name]] dibiarkan kosong | Tidak ada output, terjadi error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity]] | - | - |
+| Kondisi | [[^output|New EnumData]] | [[^output|Name Conflict]] | [[^output|Value Conflict]] | Status |
+| ------- | ------------------------ | ------------------------- | -------------------------- | ------ |
+| [[^field|Name]] berisi `Diproses` (belum digunakan) dan [[^field|Value]] sesuai | [[Docs/Tipe Data/EnumData]] yang baru dibuat ([[^value/enumdata|Menunggu]]) | - | - | [[^flowstate/Succeed]] |
+| [[^field|Name]] berisi `Menunggu` (sudah digunakan) dan [[^field|Value]] sesuai | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
+| [[^field|Name]] belum digunakan, tetapi [[^field|Value]] tidak sesuai | - | - | [[^value/boolean/true]] |[[^flowstate/Error]] |
+| [[^field|Name]] sudah digunakan dan [[^field|Value]] tidak sesuai | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
+| [[^field|Enum]] atau [[^field|Name]] dibiarkan kosong | - | - | - | [[^flowstate/Error]]  |
+
+Error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 <!--
   * [DONE] Nama contoh (Enum status pesanan, EnumData Menunggu dan Diproses) bersifat generik. Sesuaikan bila perlu.
@@ -126,3 +131,4 @@ Contoh berikut memakai Enum untuk status pesanan yang memiliki EnumData [[^value
 - [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter|EnumData Getter Block]]
 - [[Docs/Modul Data/Enum/Apa itu Enum|Enum]]
 - [[Docs/Tipe Data/EnumData]]
+

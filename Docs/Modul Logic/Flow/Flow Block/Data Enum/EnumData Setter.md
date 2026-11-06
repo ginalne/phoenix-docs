@@ -1,7 +1,11 @@
 ---
-status: draft
-title: EnumData Setter
-description: Flow Block untuk mengubah Value sebuah EnumData dari dalam Flow.
+    status: draft
+    title: EnumData Setter
+    description: Flow Block untuk mengubah Value sebuah EnumData dari dalam Flow.
+    pageDecoration:
+      icon: save
+      tree:
+        priority: 4
 ---
 
 # EnumData Setter

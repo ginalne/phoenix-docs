@@ -36,7 +36,7 @@ flowchart LR
 >**note** Variable Event tidak memiliki Event create
 > Variable Event hanya menghasilkan [[^value/string|update]] dan [[^value/string|delete]]. Event [[^value/string|update]] hanya terpicu ketika Value benar-benar berubah, dan perubahan yang dilakukan oleh Flow tidak memicu Flow kembali.
 
-## Input, Control dan Output
+## Control dan Output
 
 Variable Event tidak memiliki input koneksi. Block ini memiliki satu Control berupa tombol dan tiga output di sisi kanan.
 

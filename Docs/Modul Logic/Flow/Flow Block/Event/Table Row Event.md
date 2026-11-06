@@ -37,7 +37,7 @@ flowchart LR
 >**note** Hanya perubahan yang memicu Table Row Event
 > Menyimpan Row tanpa ada perubahan tidak memicu Table Row Event. Aksi create, update, atau delete pada Row yang dilakukan oleh Flow juga tidak memicu Flow kembali, sedangkan Import atau Upload tetap memicu [[^value/string|create]].
 
-## Input, Control dan Output
+## Control dan Output
 
 Table Row Event tidak memiliki input koneksi. Block ini memiliki satu Control berupa tombol dan tiga output di sisi kanan.
 

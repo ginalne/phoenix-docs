@@ -37,7 +37,7 @@ Tidak semua jenis Flow Block memiliki keempat bagian ini. Variasinya dijelaskan 
 - Input yang tidak terhubung menampilkan field isian sehingga nilainya dapat diisi langsung. Field ini hilang ketika Input terhubung dari [[#Output]] block lain.
 - Bila satu Input menerima banyak koneksi, seluruh data dari koneksi tersebut dibaca sebagai [[Docs/Tipe Data/Array]] dalam proses block.
 - Bila salah satu koneksi bersifat rekursif, yaitu ketika ditelusuri mundur akan kembali ke block yang sama, Input dibaca sebagai satu data dari aliran terakhir dan koneksi lainnya diabaikan.
-- Apakah block tetap dapat berjalan ketika Input kosong bergantung pada block itu sendiri. Jika Input wajib diisi, kondisi kosong menghasilkan error pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
+- Block dapat berjalan walaupun Input-nya dibiarkan kosong bergantung pada aturan block itu sendiri. Jika Input wajib diisi, kondisi kosong menghasilkan error pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
 
 ## Control
 
@@ -53,8 +53,11 @@ Tidak semua jenis Flow Block memiliki keempat bagian ini. Variasinya dijelaskan 
 - Setiap Output hanya dapat terhubung dengan satu Input atau Trigger block lain. Aturan lengkapnya ada di [[#Aturan Koneksi]].
 - Tipe data Output dapat bervariasi, dan kecocokannya dengan Input diperiksa saat Flow berjalan.
 
+Tidak semua Output akan menghasilkan nilai yang meneruskan aliran Flow ke block lain. Contohnya [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Add Variable|Add Variable Block]] yang tidak akan meneruskan aliran ke output [[^output|Name Conflict]] jika [[Docs/Tipe Data/Variable]] berhasil dibuat, artinya apapun Block lain yang menerima/terhubung dengan output ini tidak akan tereksekusi dalam Flow.
+
 ## Variasi Antar Jenis Flow Block
 
 Setiap jenis Flow Block memiliki variasi [[#Trigger]], [[#Input]], [[#Control]], dan [[#Output]] masing-masing. Ada jenis yang tidak memiliki Control, Input, atau Output. Contohnya Flow Block Event yang tidak memiliki Trigger maupun Input.
 
 Pada halaman setiap jenis Flow Block, hanya variasi yang khas bagi block itu yang dijelaskan. Prinsip umum pada halaman ini, yaitu [[#Aturan Koneksi]] dan [[#Syarat Flow Block Diproses]], tidak diulang di sana.
+

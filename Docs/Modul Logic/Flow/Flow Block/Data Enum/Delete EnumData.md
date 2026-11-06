@@ -1,7 +1,11 @@
 ---
-status: draft
-title: Delete EnumData
-description: Flow Block untuk menghapus EnumData dari sebuah Enum, dengan opsi hapus paksa.
+    status: draft
+    title: Delete EnumData
+    description: Flow Block untuk menghapus EnumData dari sebuah Enum, dengan opsi hapus paksa.
+    pageDecoration:
+      icon: trash
+      tree:
+        priority: 6
 ---
 
 # Delete EnumData
@@ -78,8 +82,7 @@ Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pe
   * [DONE] Konfirmasi perilaku Force yang dibiarkan kosong (screenshot menampilkan "(Empty)"), diasumsikan sama dengan false.
   * [TODO] Konfirmasi perilaku EnumData yang dibiarkan kosong: apakah output Succeed false dan Error true, atau terjadi error yang dilaporkan di Flow Activity.
     Jawaban: Ya tetap ada  tampil error di Flow Activity
-  * [TODO] Nama contoh (Enum status pesanan dan EnumData Menunggu) bersifat generik. Sesuaikan bila perlu.
-    Jawaban: 
+  * [DONE] Nama contoh (Enum status pesanan dan EnumData Menunggu) bersifat generik. Sesuaikan bila perlu.
 -->
 
 ## Praktik Terbaik
@@ -96,7 +99,7 @@ Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pe
 - EnumData yang dihapus tidak dapat dikembalikan, baik dengan maupun tanpa [[^field|Force]].
 
 <!--
-  * [TODO] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event`, `Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If`, dan `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
+  * [DONE] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event`, `Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If`, dan `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
 -->
 
 ## Lihat Juga

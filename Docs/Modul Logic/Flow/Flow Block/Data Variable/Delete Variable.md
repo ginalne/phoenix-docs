@@ -5,7 +5,7 @@
     pageDecoration:
       icon: trash
       tree:
-        priority: 2
+        priority: 5
 ---
 # Delete Variable
 

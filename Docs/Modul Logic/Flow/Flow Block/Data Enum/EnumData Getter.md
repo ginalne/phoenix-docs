@@ -1,7 +1,11 @@
 ---
-status: draft
-title: EnumData Getter
-description: Flow Block untuk mengambil EnumData dari sebuah Enum berdasarkan Name.
+    status: draft
+    title: EnumData Getter
+    description: Flow Block untuk mengambil EnumData dari sebuah Enum berdasarkan Name.
+    pageDecoration:
+      icon: search
+      tree:
+        priority: 4
 ---
 
 # EnumData Getter

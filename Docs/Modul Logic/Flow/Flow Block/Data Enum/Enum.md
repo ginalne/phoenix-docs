@@ -1,9 +1,12 @@
 ---
-status: draft
-title: Enum
-description: Flow Block untuk mengambil atribut sebuah Enum, yaitu Name dan Description, agar dapat dipakai block lain.
+    status: draft
+    title: Enum
+    description: Flow Block untuk mengambil atribut sebuah Enum, yaitu Name dan Description, agar dapat dipakai block lain.
+    pageDecoration:
+      icon: grid
+      tree:
+        priority: 5
 ---
-
 # Enum
 
 >**note** Enum merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan|Flow Block Data Enum]] di Phoenix.
@@ -11,9 +14,8 @@ description: Flow Block untuk mengambil atribut sebuah Enum, yaitu Name dan Desc
 Enum adalah Flow Block yang mengubah sebuah [[Docs/Tipe Data/Enum]] menjadi atribut-atributnya, yaitu [[^field|Name]] dan [[^field|Description]]. Dengan block ini, Anda dapat memakai nama dan deskripsi Enum sebagai data biasa pada block lain di Flow.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enum-block-flow.png|Flow Block Enum dengan satu input dan tiga output]]
-
 <!--
-  * [TODO] Letakkan gambar `enum-block-flow.png` (potongan block Enum dari Blueprint). Anotasi yang disarankan: (1) input Enum, (2) output Pass, (3) output Name, (4) output Desc.
+  * [DONE] Letakkan gambar `enum-block-flow.png` (potongan block Enum dari Blueprint). Anotasi yang disarankan: (1) input Enum, (2) output Pass, (3) output Name, (4) output Desc.
 -->
 
 ## Input dan Output
@@ -36,6 +38,7 @@ Enum memiliki satu input di sisi kiri dan tiga output di sisi kanan. Block ini t
 
 <!--
   * [TODO] Konfirmasi tipe data output Desc (Text atau String) dan apakah Pass bertipe Enum.
+    Jawaban: Sudah benar
 -->
 
 ## Cara Kerja
@@ -55,6 +58,7 @@ Contoh berikut memakai Enum bernama `Status Pesanan` dengan deskripsi `Daftar st
 
 <!--
   * [TODO] Konfirmasi perilaku Enum yang dibiarkan kosong: diasumsikan seluruh output bernilai empty (seperti block Variable), bukan error.
+    Jawaban: 
   * [TODO] Nama contoh (Enum Status Pesanan) bersifat generik. Sesuaikan bila perlu.
 -->
 

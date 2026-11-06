@@ -31,7 +31,7 @@ flowchart LR
     P -->|"&nbsp;**[Boolean]**&nbsp;<br>Result"| C@{ shape: processes, label: "Block selanjutnya<br/>menerima Result" }
 ```
 
-## Input, Control dan Output
+## Control dan Output
 
 Pulser tidak memiliki input koneksi. Block ini memiliki satu Control berupa tombol dan satu output di sisi kanan.
 

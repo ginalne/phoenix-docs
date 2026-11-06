@@ -1,7 +1,11 @@
 ---
-status: draft
-title: EnumData
-description: Flow Block untuk mengambil atribut sebuah EnumData, yaitu Name, Description, dan Value, agar dapat dipakai block lain.
+    status: draft
+    title: EnumData
+    description: Flow Block untuk mengambil atribut sebuah EnumData, yaitu Name, Description, dan Value, agar dapat dipakai block lain.
+    pageDecoration:
+      icon: grid
+      tree:
+        priority: 4
 ---
 
 # EnumData

@@ -5,7 +5,7 @@
     pageDecoration:
       icon: grid
       tree:
-        priority: 3
+        priority: 4
 ---
 # Variable
 

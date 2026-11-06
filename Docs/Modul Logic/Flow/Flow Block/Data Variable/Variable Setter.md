@@ -5,7 +5,7 @@
     pageDecoration:
       icon: save
       tree:
-        priority: 5
+        priority: 2
 ---
 # Variable Setter
 

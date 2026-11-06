@@ -5,7 +5,7 @@
     pageDecoration:
       icon: search
       tree:
-        priority: 4
+        priority: 3
 ---
 # Variable Getter
 

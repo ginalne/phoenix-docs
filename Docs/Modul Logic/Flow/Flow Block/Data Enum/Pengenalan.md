@@ -1,8 +1,11 @@
 ---
-status: draft
-title: Flow Block Data Enum
-description: Pengenalan kelompok Flow Block Data Enum, block untuk menambah, membaca, mengubah, dan menghapus EnumData lewat logika Flow.
-tags: flowblock-category
+    status: draft
+    title: Flow Block Data Enum
+    description: Pengenalan kelompok Flow Block Data Enum, block untuk menambah, membaca, mengubah, dan menghapus EnumData lewat logika Flow.
+    pageDecoration:
+      tree:
+        priority: 10
+    tags: flowblock-category
 ---
 # Flow Block Data Enum
 

@@ -37,7 +37,7 @@ flowchart LR
 >**note** Hanya perubahan yang memicu Enum Data Event
 > Menyimpan EnumData tanpa ada perubahan tidak memicu Enum Data Event. Aksi create, update, atau delete pada EnumData yang dilakukan oleh Flow juga tidak memicu Flow kembali.
 
-## Input, Control dan Output
+## Control dan Output
 
 Enum Data Event tidak memiliki input koneksi. Block ini memiliki satu Control berupa tombol dan tiga output di sisi kanan.
 

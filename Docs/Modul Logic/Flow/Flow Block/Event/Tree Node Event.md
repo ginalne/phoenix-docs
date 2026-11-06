@@ -40,7 +40,7 @@ flowchart LR
 >**note** Satu perubahan dapat memicu Event di beberapa Tree
 > Jika beberapa Tree Merger mengkloning Node yang saling terhubung dan tidak berstatus read only, perubahan pada satu Node dapat menghasilkan Event pada masing-masing Tree. Selengkapnya lihat [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Konfigurasi Merger Mode]].
 
-## Input, Control dan Output
+## Control dan Output
 
 Tree Node Event tidak memiliki input koneksi. Block ini memiliki satu Control berupa tombol dan tiga output di sisi kanan.
 
