@@ -160,7 +160,7 @@ Anda membuat satu [[Docs/Modul Developer/Group/Apa itu Group|Group]] untuk setia
 
 1. Klik kanan **Origin**, lalu pilih **Add > Developer > Workspace**.
 2. Isi **Name** dengan `Akademik` dan **Description** dengan `Ruang kerja data akademik`, lalu klik **Create**.
-3. Buka [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] tersebut. Pada halaman kerja, baris **Group** menampilkan setiap Group yang sudah dipetakan, sedangkan kolom kanan berisi **Comp. Access**, **Data Access**, dan **Function Access**.
+3. Buka [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] tersebut. Pada halaman kerja, baris **Group** menampilkan setiap Group yang sudah dipetakan, sedangkan kolom kanan berisi **Component Access**, **Data Access**, dan **Function Access**.
 4. Atur nilai `allow` dan `disallow` untuk setiap Group sesuai matriks berikut. Sel kosong berarti akses itu tidak relevan.
 
 | Komponen | Tata Usaha | Guru Mata Pelajaran | Wali Kelas | Kepala Sekolah |

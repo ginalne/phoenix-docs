@@ -29,5 +29,5 @@ base knowledge:
 11. Tombol [[^button/edit|Edit]] mengubah atribut Canvas (Name dan Description, lalu Update) seperti komponen lain, sedangkan toggle mode yang berpindah antara View dan Edit Mode. tombol [[^button/save|Save]] aktif ketika ada perubahan, bisa ditekan manual atau menunggu sekitar 3 detik (auto save).
 12. mode read only itu ketika bukan dalam edit mode. Toggle ke edit mode bisa dlakukan jika akses workspace edit data = allow.
 13. Efek menghapus canvas hanya menghapus template dan properti termasuk query yang sudah dibuat, data sumber tetap aman. pengaruhnya hanya tautan yang sudah dishare akan invalid.
-14. Canvas mengikuti Comp. Access, Data Access, dan Function Access (View Publish dan Publish) seperti komponen lain. Data Access yang dimaksud adalah setiap perubahan Widget dan atributnya didalam Canvas.
+14. Canvas mengikuti Component Access, Data Access, dan Function Access (View Publish dan Publish) seperti komponen lain. Data Access yang dimaksud adalah setiap perubahan Widget dan atributnya didalam Canvas.
 15. Gambar widget pie dilampirkan sebagai contoh. Harap dicatat bahwa toolbar masing-masing widget adalah unik.

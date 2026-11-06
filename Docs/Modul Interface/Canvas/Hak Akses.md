@@ -8,11 +8,11 @@
 ---
 # Hak Akses Canvas
 
-Canvas mengikuti Comp. Access, Data Access, dan Function Access di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] seperti komponen lain.
+Canvas mengikuti Component Access, Data Access, dan Function Access di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] seperti komponen lain.
 
 | Akses                                                                                                  | Pengaruh pada Canvas                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[Docs/Modul Developer/Workspace/Apa itu Workspace#Comp. Access|Comp. Access]]                        | Mengatur apakah Canvas terlihat, dapat ditambahkan, diubah atributnya (Name dan Description), dan dihapus.                                        |
+| [[Docs/Modul Developer/Workspace/Apa itu Workspace#Component Access|Component Access]]                        | Mengatur apakah Canvas terlihat, dapat ditambahkan, diubah atributnya (Name dan Description), dan dihapus.                                        |
 | [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Add                                        | Menambahkan widget ke dalam Canvas.                                                                                                               |
 | [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Update                                     | Mengubah Query, atribut, atau styling widget.                                                                                                     |
 | [[Docs/Modul Developer/Workspace/Data Access|Data Access]] Delete                                     | Menghapus widget dari Canvas.                                                                                                                     |

@@ -44,4 +44,4 @@ answer:
 3. language dalam publish adalah form publik, single submission yaitu per perangkat. kalau status jadi non-active maka form tidak bisa dikirim (hanya dilihat).
 4. Bagian Template di Start Building belum ada, itu ada untuk mempermudah styling. (sama hal nya menggunakan node yang tersedia dan mengubah konfigurasi stylenya).
 5. Hanya menghapus template dan history submission, data yang sudah tersimpan tidak langsung terhapus. (ada pengaruh juga ketika publik sedang mengisi, akan error ketika mencoba mengirim).
-6. Form mengikuti Comp. Access, Data Access, dan Function Access (View Publish dan Publish) seperti komponen lain. Data Access yang dimaksud adalah setiap perubahan Node dan atributnya didalam Form.
+6. Form mengikuti Component Access, Data Access, dan Function Access (View Publish dan Publish) seperti komponen lain. Data Access yang dimaksud adalah setiap perubahan Node dan atributnya didalam Form.

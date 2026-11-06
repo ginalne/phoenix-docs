@@ -1,11 +1,7 @@
 ---
-    status: draft
-    title: Variable Value
-    description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
-    pageDecoration:
-      icon: grid
-      tree:
-        priority: 1
+status: draft
+title: Variable Value
+description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
 ---
 # Variable Value
 
@@ -30,6 +26,8 @@ Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[
 | ------ | --------- | ------ |
 | [[^output|Value]] | Mengikuti Type Variable Data | Value dari Variable Data. Tipe data output mengikuti sumber nilainya. |
 
+[[^output|Value]] meneruskan aliran bila [[^field|Variable]] terisi. Bila [[^field|Variable]] dibiarkan kosong, block menghasilkan error dan [[^output|Value]] tidak meneruskan aliran, sehingga block yang terhubung tidak dieksekusi. Lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+
 ## Cara Kerja
 
 1. Block menerima Variable Data lewat [[^field|Variable]].
@@ -43,13 +41,15 @@ Gunakan Variable Value bila Anda hanya membutuhkan nilainya. Bila Anda juga memb
 
 ## Contoh Penggunaan
 
-| Kondisi | [[^output|Value]] |
-| ------- | ----------------- |
-| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]] | [[^value/number|50]] |
-| [[^field|Variable]] berisi Variable Data bertipe [[Docs/Tipe Data/String]] dengan nilai [[^value/string|aktif]] | [[^value/string|aktif]] |
-| [[^field|Variable]] dibiarkan kosong | [[^value/empty]]. Block menghasilkan error yang dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. |
+| Kondisi | [[^output|Value]] | Status |
+| ------- | ----------------- | ------ |
+| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]] | [[^value/number|50]] | [[^flowstate/Succeed]] |
+| [[^field|Variable]] berisi Variable Data bertipe [[Docs/Tipe Data/String]] dengan nilai [[^value/string|aktif]] | [[^value/string|aktif]] | [[^flowstate/Succeed]] |
+| [[^field|Variable]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 
 Hubungkan [[^output|Value]] ke block yang membutuhkan nilai tersebut, misalnya [[Docs/Modul Logic/Flow/Flow Block/Query/Condition|Condition Query Block]] untuk menjadikan Variable Data sebagai batas keputusan Flow, tanpa menuliskan angka yang sama di banyak tempat.
+
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -69,4 +69,3 @@ Hubungkan [[^output|Value]] ke block yang membutuhkan nilai tersebut, misalnya [
 - [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]]
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
-

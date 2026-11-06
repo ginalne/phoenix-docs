@@ -1,11 +1,7 @@
 ---
-    status: draft
-    title: Variable Setter
-    description: Flow Block untuk memperbarui Value pada Variable Data.
-    pageDecoration:
-      icon: save
-      tree:
-        priority: 2
+status: draft
+title: Variable Setter
+description: Flow Block untuk memperbarui Value pada Variable Data.
 ---
 # Variable Setter
 
@@ -31,6 +27,8 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 | ------ | --------- | ------ |
 | [[^output|Pass]] | [[Docs/Tipe Data/Variable]] | Variable Data yang diinput lewat [[^field|Variable]], diteruskan apa adanya agar dapat dipakai block berikutnya. |
 
+[[^output|Pass]] meneruskan aliran setelah [[^field|Value]] berhasil diperbarui. Bila [[^field|Variable]] dibiarkan kosong, block menghasilkan error dan [[^output|Pass]] tidak meneruskan aliran, sehingga block yang terhubung tidak dieksekusi. Lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+
 ### Menentukan Tipe Data New Value
 
 Input [[^field|New Value]] pada block yang baru ditambahkan menampilkan teks merah [[^field|N/A Type]], sama seperti [[^field|Value]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Add Variable|Add Variable Block]]. Teks ini berarti tipe data input belum didefinisikan. Tentukan tipe datanya dengan langkah berikut:
@@ -52,13 +50,15 @@ Hanya [[^field|Value]] dan [[^field|Type]] yang berubah. [[^field|Name]] dan [[^
 
 ## Contoh Penggunaan
 
-| Kondisi | Value dan Type Variable Data | [[^output|Pass]] |
-| ------- | ---------------------------- | ---------------- |
-| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]], dan [[^field|New Value]] berisi [[^value/number|100]] bertipe [[Docs/Tipe Data/Number]] | Value berubah menjadi [[^value/number|100]], Type tetap [[Docs/Tipe Data/Number]] | Variable Data `batas_stok_minimum` |
-| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]], dan [[^field|New Value]] berisi [[^value/string|aktif]] bertipe [[Docs/Tipe Data/String]] | Value berubah menjadi [[^value/string|aktif]], Type berubah menjadi [[Docs/Tipe Data/String]] | Variable Data `batas_stok_minimum` |
-| [[^field|Variable]] dibiarkan kosong | Tidak berubah. Block menghasilkan error. | [[^value/empty]] |
+| Kondisi | Value Variable Data | [[^output|Pass]] | Status |
+| ------- | ------------------- | ---------------- | ------ |
+| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]], dan [[^field|New Value]] berisi [[^value/number|100]] bertipe [[Docs/Tipe Data/Number]] | Value berubah menjadi [[^value/number|100]] | Variable Data `batas_stok_minimum` | [[^flowstate/Succeed]] |
+| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]], dan [[^field|New Value]] berisi [[^value/string|aktif]] bertipe [[Docs/Tipe Data/String]] | Value berubah menjadi [[^value/string|aktif]], Type berubah menjadi [[Docs/Tipe Data/String]] | Variable Data `batas_stok_minimum` | [[^flowstate/Succeed]] |
+| [[^field|Variable]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
 Hubungkan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]] ke [[^field|Variable]] dan hasil perhitungan, misalnya dari [[Docs/Modul Logic/Flow/Flow Block/Operator/Number/Increment|Increment Operator Block]], ke [[^field|New Value]] untuk membuat penghitung yang bertambah setiap Flow berjalan.
+
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -80,3 +80,6 @@ Hubungkan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Varia
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
 
+<!--
+  * [TODO] Konfirmasi dampak New Value pada Type: jawaban Anda menyebut "New Value juga memberikan new type", sehingga saya tulis Type Variable Data ikut berubah mengikuti tipe data New Value. Namun kalimat sebelumnya ("hanya Value yang berubah, Name, Type, dan Description tetap sama") Anda tandai sudah betul. Mohon pastikan mana yang berlaku.
+-->

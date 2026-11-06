@@ -1,11 +1,7 @@
 ---
-    status: draft
-    title: Variable Getter
-    description: Flow Block untuk mengambil Variable Data berdasarkan Name.
-    pageDecoration:
-      icon: search
-      tree:
-        priority: 3
+status: draft
+title: Variable Getter
+description: Flow Block untuk mengambil Variable Data berdasarkan Name.
 ---
 # Variable Getter
 
@@ -28,15 +24,17 @@ Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[
 
 | Output | Tipe Data | Fungsi |
 | ------ | --------- | ------ |
-| [[^output|Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang ditemukan. Bernilai [[^value/empty]] bila tidak ada Name yang cocok. |
-| [[^output|Is Empty]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila Variable Data tidak ditemukan. Bernilai [[^value/boolean/false]] bila ditemukan. |
+| [[^output|Variable]] | [[Docs/Tipe Data/Variable]] | Meneruskan aliran dengan Variable Data yang ditemukan. Tidak meneruskan aliran bila tidak ada Name yang cocok. |
+| [[^output|Is Empty]] | [[Docs/Tipe Data/Boolean]] | Meneruskan aliran dengan nilai [[^value/boolean/true]] bila Variable Data tidak ditemukan. Tidak meneruskan aliran bila ditemukan. |
+
+Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang tidak meneruskan aliran tidak akan dieksekusi, sesuai [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
 1. Block menerima [[^field|Name]].
 2. Block mencari Variable Data yang Name-nya sama persis.
-3. Jika cocok, Variable Data dikirim lewat [[^output|Variable]] dan [[^output|Is Empty]] bernilai [[^value/boolean/false]].
-4. Jika tidak cocok, [[^output|Variable]] bernilai [[^value/empty]] dan [[^output|Is Empty]] bernilai [[^value/boolean/true]].
+3. Jika cocok, aliran diteruskan lewat [[^output|Variable]] dengan Variable Data yang ditemukan. [[^output|Is Empty]] tidak meneruskan aliran.
+4. Jika tidak cocok, aliran diteruskan lewat [[^output|Is Empty]] dengan nilai [[^value/boolean/true]]. [[^output|Variable]] tidak meneruskan aliran.
 
 Name Variable Data disimpan tanpa spasi, enter, atau karakter tak terlihat lain di awal dan akhir. Karena itu, tulis [[^field|Name]] tanpa karakter tersebut di awal dan akhir.
 
@@ -44,16 +42,19 @@ Input [[^field|Variable]] pada block lain berupa pilihan tetap. Gunakan Variable
 
 ## Contoh Penggunaan
 
-| Kondisi | [[^output|Variable]] | [[^output|Is Empty]] |
-| ------- | -------------------- | -------------------- |
-| [[^field|Name]] berisi [[^value/string|batas_stok_minimum]] dan ada Variable Data dengan Name yang sama persis | Variable Data `batas_stok_minimum` | [[^value/boolean/false]] |
-| [[^field|Name]] berisi [[^value/string|batas_stok_minimum]] tetapi tidak ada Variable Data dengan Name tersebut | [[^value/empty]] | [[^value/boolean/true]] |
+| Kondisi | [[^output|Variable]] | [[^output|Is Empty]] | Status |
+| ------- | -------------------- | -------------------- | ------ |
+| [[^field|Name]] berisi [[^value/string|batas_stok_minimum]] dan ada Variable Data dengan Name yang sama persis | Variable Data `batas_stok_minimum` | - | [[^flowstate/Succeed]] |
+| [[^field|Name]] berisi [[^value/string|batas_stok_minimum]] tetapi tidak ada Variable Data dengan Name tersebut | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^field|Name]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
-Hubungkan [[^output|Variable]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Value|Variable Value Block]] untuk membaca nilainya, ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Setter|Variable Setter Block]] untuk mengubahnya, atau ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Delete Variable|Delete Variable Block]] untuk menghapusnya. Hubungkan [[^output|Is Empty]] ke [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch|Branch Block]] untuk memisahkan alur saat Variable Data tidak ditemukan.
+Hubungkan [[^output|Variable]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Value|Variable Value Block]] untuk membaca nilainya, ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Setter|Variable Setter Block]] untuk mengubahnya, atau ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Delete Variable|Delete Variable Block]] untuk menghapusnya. Hubungkan [[^output|Is Empty]] ke block yang menangani kasus Variable Data tidak ditemukan. Block tersebut hanya dieksekusi bila Variable Data tidak ditemukan, sedangkan block yang terhubung ke [[^output|Variable]] hanya dieksekusi bila Variable Data ditemukan.
+
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
-- **Periksa [[^output|Is Empty]] sebelum memakai [[^output|Variable]].** Dengan begitu alur tidak berlanjut membawa [[^value/empty]].
+- **Pisahkan alur berdasarkan output.** Hubungkan block lanjutan ke [[^output|Variable]] untuk kasus ditemukan dan block penanganan ke [[^output|Is Empty]] untuk kasus tidak ditemukan. Masing-masing hanya dieksekusi pada kasusnya.
 - **Tulis [[^field|Name]] persis seperti di komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]**, termasuk huruf besar dan kecil serta tanda baca.
 - **Gunakan Variable Getter sebagai awal rangkaian block Variable** agar penanganan Variable Data yang tidak ditemukan cukup ditulis satu kali.
 
@@ -70,3 +71,6 @@ Hubungkan [[^output|Variable]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Variab
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
 
+<!--
+  * [TODO] Konfirmasi Is Empty: jawaban sebelumnya menyebut output berawalan Is selalu Boolean true atau false. Sesuai aturan Output yang baru (Antarmuka), saya tulis Is Empty hanya meneruskan aliran (true) saat Variable Data tidak ditemukan, dan tidak meneruskan aliran saat ditemukan. Mohon pastikan false tidak dipakai lagi.
+-->

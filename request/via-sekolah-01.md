@@ -101,7 +101,7 @@ Semua Group dipetakan ke Workspace **Akademik**.
 | Tindak Lanjut Nilai | disallow | disallow | Visible | Visible, Modify Event |
 | Pengumuman | Visible, Add, Update, Publish | Visible | Visible | Visible, View Publish |
 
-*   Nilai Comp. Access, Data Access, dan Function Access mengikuti knowledge Workspace.
+*   Nilai Component Access, Data Access, dan Function Access mengikuti knowledge Workspace.
 *   Matriks adalah **usulan awal**, bukan aturan baku Phoenix.
 
 #### Data per Komponen

@@ -1,11 +1,7 @@
 ---
-    status: draft
-    title: Add Variable
-    description: Flow Block untuk menambahkan Variable Data baru dari dalam Flow.
-    pageDecoration:
-      icon: plus
-      tree:
-        priority: 6
+status: draft
+title: Add Variable
+description: Flow Block untuk menambahkan Variable Data baru dari dalam Flow.
 ---
 # Add Variable
 
@@ -30,8 +26,10 @@ Setiap input dapat diisi langsung pada block atau diisi dari output block lain l
 
 | Output | Tipe Data | Fungsi |
 | ------ | --------- | ------ |
-| [[^output|New Variable]] | [[Docs/Tipe Data/Variable]] | Variable Data yang berhasil dibuat. Tidak meneruskan aliran bila terjadi konflik nama dengan variable yang sudah ada. |
-| [[^output|Name Conflict]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila [[^field|Name]] sudah dipakai Variable Data lain. Tidak meneruskan aliran bila Variable Data berhasil dibuat. |
+| [[^output|New Variable]] | [[Docs/Tipe Data/Variable]] | Meneruskan aliran dengan Variable Data yang berhasil dibuat. Tidak meneruskan aliran bila terjadi Name Conflict. |
+| [[^output|Name Conflict]] | [[Docs/Tipe Data/Boolean]] | Meneruskan aliran dengan nilai [[^value/boolean/true]] bila [[^field|Name]] sudah dipakai Variable Data lain. Tidak meneruskan aliran bila Variable Data berhasil dibuat. |
+
+Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang tidak meneruskan aliran tidak akan dieksekusi, sesuai [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ### Menentukan Tipe Data Value
 
@@ -48,22 +46,26 @@ Input [[^field|Value]] pada block yang baru ditambahkan menampilkan teks merah [
 
 1. Block menerima [[^field|Name]], [[^field|Value]], dan [[^field|Description]].
 2. Block memeriksa apakah [[^field|Name]] sudah dipakai Variable Data lain.
-3. Jika belum dipakai, Variable Data baru dibuat dan dikirim lewat [[^output|New Variable]], sedangkan [[^output|Name Conflict]] bernilai [[^value/boolean/false]].
-4. Jika sudah dipakai, tidak ada Variable Data yang dibuat. [[^output|New Variable]] bernilai [[^value/empty]] dan [[^output|Name Conflict]] bernilai [[^value/boolean/true]].
+3. Jika belum dipakai, Variable Data baru dibuat dan aliran diteruskan lewat [[^output|New Variable]]. [[^output|Name Conflict]] tidak meneruskan aliran.
+4. Jika sudah dipakai, tidak ada Variable Data yang dibuat. Aliran diteruskan lewat [[^output|Name Conflict]] dengan nilai [[^value/boolean/true]]. [[^output|New Variable]] tidak meneruskan aliran.
 
 ## Contoh Penggunaan
 
-| Kondisi | [[^output|New Variable]] | [[^output|Name Conflict]] |
-| ------- | ------------------------ | ------------------------- |
-| [[^field|Name]] berisi [[^value/string|batas_stok_minimum]] dan belum dipakai Variable Data lain | Variable Data `batas_stok_minimum` yang baru dibuat | [[^value/boolean/false]] |
-| [[^field|Name]] berisi [[^value/string|batas_stok_minimum]] dan sudah dipakai Variable Data lain | [[^value/empty]] | [[^value/boolean/true]] |
+| Kondisi | [[^output|New Variable]] | [[^output|Name Conflict]] | Status |
+| ------- | ------------------------ | ------------------------- | ------ |
+| [[^field|Name]] berisi [[^value/string|batas_stok_minimum]] dan belum dipakai Variable Data lain | Variable Data `batas_stok_minimum` yang baru dibuat | - | [[^flowstate/Succeed ]] |
+| [[^field|Name]] berisi [[^value/string|batas_stok_minimum]] dan sudah dipakai Variable Data lain | - | [[^value/boolean/true]] | [[^flowstate/Error ]] |
+| [[^field|Name]] tidak diisi | - | - | [[^flowstate/Fatal Error ]] |
 
-Hubungkan [[^output|New Variable]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Value|Variable Value Block]] bila Anda ingin langsung memakai nilai awalnya pada block berikutnya. Hubungkan [[^output|Name Conflict]] ke block yang menangani kegagalan, misalnya [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch|Branch Block]].
+
+Hubungkan output [[^output|New Variable]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Value|Variable Value Block]] bila Anda ingin langsung memakai nilai awalnya pada block berikutnya. Block yang terhubung ke [[^output|New Variable]] hanya dieksekusi bila Variable Data berhasil dibuat. Hubungkan [[^output|Name Conflict]] ke block yang menangani kegagalan. Block tersebut hanya dieksekusi bila terjadi Name Conflict.
+
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
 - **Tentukan tipe data [[^field|Value]] lebih dulu.** Bila [[^field|Value]] masih [[^field|N/A Type]], Variable Data tetap dibuat dan tersimpan dengan tipe data yang belum didefinisikan.
-- **Periksa [[^output|Name Conflict]] di alur lanjutan.** Output ini memberi tahu Anda bahwa Variable Data tidak dibuat, sehingga alur tidak berlanjut dengan [[^output|New Variable]] yang [[^value/empty]].
+- **Tangani [[^output|Name Conflict]] di alur terpisah.** Hanya output ini yang meneruskan aliran saat Variable Data tidak dibuat, sehingga penanganan kegagalan tidak bercampur dengan alur keberhasilan.
 - **Cek keberadaan Name dengan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]]** bila Anda ingin memutuskan sendiri apa yang dilakukan ketika Variable Data sudah ada.
 - **Gunakan Name yang konsisten**, karena Name menjadi alias yang dipakai komponen Logic untuk merujuk Variable Data.
 
@@ -81,3 +83,6 @@ Hubungkan [[^output|New Variable]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Va
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
 
+<!--
+  * [TODO] Konfirmasi perubahan: jawaban sebelumnya menyebut Name Conflict bernilai false saat berhasil. Sesuai aturan Output yang baru (Antarmuka), saya tulis Name Conflict tidak meneruskan aliran pada kasus tersebut. Mohon pastikan false tidak dipakai lagi.
+-->

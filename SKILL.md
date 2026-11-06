@@ -368,7 +368,9 @@ Catatan format:
 - Heading **Input dan Output** (bukan "Input, Control dan Output") karena block Data tidak memiliki Control. Hanya judul bagian yang relevan yang ditulis. TL:DR dan FAQ tidak dipakai pada halaman block.
 - Urutan bagian: callout note kelompok, paragraf definisi, gambar `<nama-block>-block-flow.png`, Input dan Output (tabel Input dan tabel Output), Cara Kerja, Contoh Penggunaan (tabel kombinasi kondisi dan output), Praktik Terbaik, Batasan dan Catatan, Lihat Juga.
 - **Jangan menulis atribut `pageDecoration` di front matter.** Front matter hanya berisi `status`, `title`, dan `description`.
-- Output berawalan "Is", serta Succeed, Error, dan Name Conflict, selalu ditulis `[[^value/boolean/true]]` atau `[[^value/boolean/false]]`, tidak pernah `[[^value/empty]]`.
+- Output yang tidak relevan dengan suatu kasus ditulis "tidak meneruskan aliran" (bukan `[[^value/empty]]` dan bukan `[[^value/boolean/false]]`). Output flag (Is ..., Succeed, Error, Name Conflict) ditulis "meneruskan aliran dengan nilai `[[^value/boolean/true]]`" pada kasusnya.
+- Setiap tabel Output dan tabel Contoh Penggunaan menjelaskan kapan output meneruskan aliran dan kapan tidak. Setelah tabel Output, tautkan aturannya dengan `[[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]]`.
+- Karena output tunggal hanya meneruskan aliran pada kasusnya, jangan menyarankan Branch Block untuk memisahkan alur dari output flag. Sarankan menghubungkan block penanganan langsung ke output tersebut.
 - Field bertipe Variable adalah pilihan (select option). Tulis "Isi dengan Variable Data atau hubungkan dari output block lain", bukan "isi dengan Name atau alias".
 - Hindari istilah teknis seperti *exact match*. Jelaskan dengan konteks umum: sama persis, membedakan huruf besar dan kecil, menerima karakter simbol, dan di-trim saat disimpan.
 - Kondisi yang tidak mungkin terjadi karena input berupa pilihan (misalnya "Variable tidak valid") tidak ditulis di tabel Contoh Penggunaan. Tulis hanya kondisi "dibiarkan kosong".

@@ -12,7 +12,7 @@ Tampilan Tree yang bersifat hirarki dapat dibagikan kesiapapun tanpa otorisasi a
 
 ## Syarat
 
-Membagikan Tree memperlukan ijin akses [[^field|Comp. Access : Visible]] dan [[^field|Function Access : View Publish]] untuk mendapatkan link, namun perlu ijin akses [[^field|Function Access : Modify Publish]] agar dapat mengubah konfigurasi (jika belum publikasi belum diijinkan).
+Membagikan Tree memperlukan ijin akses [[^field|Component Access : Visible]] dan [[^field|Function Access : View Publish]] untuk mendapatkan link, namun perlu ijin akses [[^field|Function Access : Modify Publish]] agar dapat mengubah konfigurasi (jika belum publikasi belum diijinkan).
 
 ## Mengubah Konfigurasi Publish
 

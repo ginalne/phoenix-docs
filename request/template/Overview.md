@@ -75,7 +75,7 @@ Setiap peran dibuat sebagai [[Docs/Modul Developer/Group/Apa itu Group|Group]], 
 | Kepala Sekolah | Membaca seluruh data dan memantau Flow |
 
 ### Matriks Akses
-Matriks berikut adalah titik awal. Nilai `allow` dan `disallow` diatur pada halaman kerja Workspace, di kolom **Comp. Access**, **Data Access**, dan **Function Access**.
+Matriks berikut adalah titik awal. Nilai `allow` dan `disallow` diatur pada halaman kerja Workspace, di kolom **Component Access**, **Data Access**, dan **Function Access**.
 
 | Komponen | Tata Usaha | Guru Mata Pelajaran | Wali Kelas | Kepala Sekolah |
 |---|---|---|---|---|
