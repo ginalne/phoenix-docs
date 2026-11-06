@@ -82,7 +82,3 @@ Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]]
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
-
-<!--
-  * [TODO] Konfirmasi perubahan: jawaban sebelumnya menyebut Name Conflict bernilai false saat berhasil. Sesuai aturan Output yang baru (Antarmuka), saya tulis Name Conflict tidak meneruskan aliran pada kasus tersebut. Mohon pastikan false tidak dipakai lagi.
--->

@@ -15,7 +15,7 @@ Group dapat dibuat dari dua tempat yaitu [[#Dari Area Manajemen Folder]] atau [[
 Cara ini menambahkan Group sebagai komponen di dalam folder.
 
 ![[Docs/Modul Developer/Group/add-group.png]]
-1. Buka folder tempat Group akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder tempat Group akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Developer]] ➜ [[^field/group|Group]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Pilih Group induk pada [[^field|Parent]]

@@ -10,7 +10,7 @@
 
 ![[Docs/Modul Interface/Kanban/add-kanban.png]]
 
-1. Buka folder tempat Kanban akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder tempat Kanban akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/kanban|Kanban]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Pilih [[^field|Table - Column]]

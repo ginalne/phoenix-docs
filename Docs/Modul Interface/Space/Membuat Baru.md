@@ -9,7 +9,7 @@
 # Membuat Space Baru
 
 ![[Docs/Modul Interface/Space/add-space.png]]
-1. Buka folder tempat Space akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder tempat Space akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/space|Space]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Klik [[^button|Create]]

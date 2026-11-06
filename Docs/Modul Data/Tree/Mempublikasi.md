@@ -17,7 +17,7 @@ Membagikan Tree memperlukan ijin akses [[^field|Component Access : Visible]] dan
 ## Mengubah Konfigurasi Publish
 
 ![[Docs/Modul Data/Tree/publish-tree.png]]
-1. Buka halaman kerja Tree di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka halaman kerja Tree di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik [[^button/edit|Publish]]
 2. Ubah status menjadi [[^value/boolean/Active]] untuk dipublikasi.
 3. Klik [[^button/copy|Copy]] untuk menyalin tautan.

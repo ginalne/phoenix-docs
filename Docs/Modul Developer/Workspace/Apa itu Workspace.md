@@ -76,13 +76,13 @@ Aturan penting:
 - Setiap Pro memiliki satu rangkaian folder yang berawal dari **Origin**. Origin terhubung otomatis ke Group bawaan [[^field/group|Administrator]] dan seluruh hak aksesnya [[^value/boolean/allow]].
 - Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itu menjadi **root** dari Workspace tersebut.
 - Menu [[^field|Place to Directory]] pada Group anak menempatkan Group tersebut di root dari Workspace yang aktif saat itu.
-- [[^field|Visible]] pada folder menentukan apakah folder beserta isinya tampil di [[Docs/Antarmuka#Area Manajemen Folder]]. Komponen di dalamnya tetap dapat muncul pada pilihan *field* atau Query jika [[^field|Visible]] komponen itu sendiri [[^value/boolean/allow]]. Lihat [[Docs/Modul Developer/Workspace/Component Access#Visible pada Folder dan Komponen|Visible pada Folder dan Komponen]].
+- [[^field|Visible]] pada folder menentukan apakah folder beserta isinya tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]. Komponen di dalamnya tetap dapat muncul pada pilihan *field* atau Query jika [[^field|Visible]] komponen itu sendiri [[^value/boolean/allow]]. Lihat [[Docs/Modul Developer/Workspace/Component Access#Visible pada Folder dan Komponen|Visible pada Folder dan Komponen]].
 
 ## Berpindah Workspace
 
 Jika [[Docs/Modul Developer/Group/Apa itu Group|Group]] Anda memiliki lebih dari satu Workspace, Anda dapat mengganti Workspace yang aktif.
 
-1. Buka [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik tombol yang berisi nama Workspace aktif
 3. Pilih Workspace tujuan pada popup yang muncul
 
@@ -93,7 +93,7 @@ Popup menampilkan Workspace yang dipetakan ke Group Anda. Struktur folder dan ha
 
 ## Membuat Workspace
 
-1. Buka folder tempat Workspace akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder tempat Workspace akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Developer]] ➜ [[^field/workspace|Workspace]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Klik [[^button|Create]]
@@ -119,7 +119,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan.
 
 ## Menghapus Workspace
 
-1. Buka folder yang berisi Workspace di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder yang berisi Workspace di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan Workspace
 3. Pilih [[^button/delete|Delete]]
 4. Konfirmasi dengan [[^button|Delete]]
@@ -183,7 +183,7 @@ Component Access berlaku pada level komponen (header). Hak akses ini mengatur ap
 
 | Hak Akses | Penjelasan |
 | --- | --- |
-| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, komponen tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]] dan juga tidak tampil dalam *field*, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]]. |
+| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, komponen tidak tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]] dan juga tidak tampil dalam *field*, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]. |
 | [[^field|Add]] | Mengizinkan penambahan folder atau komponen baru, termasuk menempatkan folder atau komponen dari folder lain. |
 | [[^field|Update]] | Mengizinkan perubahan atribut pada folder atau komponen. |
 | [[^field|Delete]] | Mengizinkan penghapusan folder atau komponen, termasuk memindahkan folder atau komponen ke folder lain. Pastikan folder tujuan mengizinkan [[^field|Component Access]] [[^field|Add]]. |
@@ -273,7 +273,7 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 
 - **Atur folder terlebih dahulu** untuk merapikan tampilan di Area Manajemen Folder dan mengatur penambahan komponen, lalu sesuaikan [[^field|Visible]], Data Access, dan Function Access pada setiap komponen.
 - **Berikan akses seminimal mungkin** (*least privilege*) sesuai kebutuhan kerja setiap [[Docs/Modul Developer/Group/Apa itu Group|Group]].
-- **Gunakan [[^field|Visible]] = [[^value/boolean/disallow]] pada komponen** untuk menutupnya sepenuhnya, termasuk dari pilihan *field* dan Query. Pada folder, [[^field|Visible]] hanya menyembunyikan isinya dari [[Docs/Antarmuka#Area Manajemen Folder]].
+- **Gunakan [[^field|Visible]] = [[^value/boolean/disallow]] pada komponen** untuk menutupnya sepenuhnya, termasuk dari pilihan *field* dan Query. Pada folder, [[^field|Visible]] hanya menyembunyikan isinya dari [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]].
 - **Sembunyikan komponen sumber setelah Query terisi**, karena [[^field|Visible]] pada komponen sumber hanya dibutuhkan saat mengisi Query.
 - **Pisahkan Function Access** untuk [[^field|Publish]] dan [[^field|View Publish]], sehingga tidak semua anggota dapat mengubah konfigurasi publikasi.
 - **Berikan [[^field|Publish]] dengan hati-hati** karena tautan publikasi dapat dibuka publik, terutama pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang memiliki widget Button untuk memicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
@@ -319,7 +319,7 @@ Dengan satu halaman kerja, setiap tim memperoleh akses yang pas dengan perannya,
 >**Bagaimana pengguna dapat memakai Workspace?**
 >Pengguna harus dipetakan ke Workspace melalui komponen [[Docs/Modul Developer/Group/Apa itu Group|Group]]. Setelah itu, saat membuka Phoenix mereka akan masuk ke Workspace yang terakhir dipakai.
 >**Bagaimana cara berpindah Workspace?**
->Klik tombol yang berisi nama Workspace aktif di [[Docs/Antarmuka#Area Manajemen Folder]], lalu pilih Workspace tujuan pada popup yang muncul. Lihat [[#Berpindah Workspace]].
+>Klik tombol yang berisi nama Workspace aktif di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]], lalu pilih Workspace tujuan pada popup yang muncul. Lihat [[#Berpindah Workspace]].
 >**Workspace mana yang aktif saat saya membuka Phoenix?**
 >Workspace yang terakhir Anda pakai. Jika Workspace itu sudah tidak valid, Anda otomatis dipindahkan ke Workspace pertama pada daftar Workspace di Group.
 >**Apakah satu pengguna dapat berada di lebih dari satu Group?**

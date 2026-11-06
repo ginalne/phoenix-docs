@@ -8,7 +8,7 @@
 ---
 # Menghapus Form
 
-1. Buka folder yang berisi Form di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder yang berisi Form di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan Form ➜ [[^button/delete|Delete]]
 3. Konfirmasi dengan klik [[^button|Delete]]
 

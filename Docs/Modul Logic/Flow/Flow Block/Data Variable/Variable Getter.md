@@ -70,7 +70,3 @@ Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]]
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
-
-<!--
-  * [TODO] Konfirmasi Is Empty: jawaban sebelumnya menyebut output berawalan Is selalu Boolean true atau false. Sesuai aturan Output yang baru (Antarmuka), saya tulis Is Empty hanya meneruskan aliran (true) saat Variable Data tidak ditemukan, dan tidak meneruskan aliran saat ditemukan. Mohon pastikan false tidak dipakai lagi.
--->

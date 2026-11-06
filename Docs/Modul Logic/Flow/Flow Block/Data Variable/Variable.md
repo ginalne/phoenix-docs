@@ -44,10 +44,10 @@ Gunakan Variable bila Anda membutuhkan lebih dari satu atribut. Bila hanya membu
 
 ## Contoh Penggunaan
 
-| Kondisi | [[^output|Pass]] | [[^output|Name]] | [[^output|Description]] | [[^output|Value]] |
-| ------- | ---------------- | ---------------- | ----------------------- | ----------------- |
-| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]] | Variable Data `batas_stok_minimum` | [[^value/string|batas_stok_minimum]] | Description Variable Data | [[^value/number|50]] |
-| [[^field|Variable]] dibiarkan kosong | [[^value/empty]] | [[^value/empty]] | [[^value/empty]] | [[^value/empty]] |
+| Kondisi | [[^output|Pass]] | [[^output|Name]] | [[^output|Description]] | [[^output|Value]] | Status |
+| ------- | ---------------- | ---------------- | ----------------------- | ----------------- | ---- |
+| [[^field|Variable]] berisi Variable Data [[^value/string|batas_stok_minimum]] bertipe [[Docs/Tipe Data/Number]] dengan nilai [[^value/number|50]] | Variable Data `batas_stok_minimum` | [[^value/string|batas_stok_minimum]] | Description Variable Data | [[^value/number|50]] | [[^flowstate/Succeed ]] |
+| [[^field|Variable]] dibiarkan kosong | - | - | - | - | [[^flowstate/Fatal Error]] |
 
 Hubungkan [[^output|Name]] dan [[^output|Description]] ke block yang menyusun pesan, misalnya [[Docs/Modul Logic/Flow/Flow Block/Operator/String/Concatenate|Concatenate Operator Block]], dan hubungkan [[^output|Value]] ke block yang membandingkan atau menghitung.
 

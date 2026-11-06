@@ -29,7 +29,7 @@ Ketika sebuah hak akses diatur [[^value/boolean/disallow]], fungsi yang terkait 
 | [[#Hak Akses Component Access|Add, Update, dan Delete]] | Hak akses yang mengatur penambahan, perubahan, dan penghapusan folder atau komponen. |
 | [[#Memindahkan Folder atau Komponen|Memindahkan]] | Mengubah posisi folder atau komponen dengan *drag and drop*, baik di dalam folder yang sama maupun ke folder lain. |
 | [[#Mengenali Ikon Kunci|Ikon kunci]] | Ikon di samping nama komponen yang menampilkan hak akses yang diizinkan oleh Workspace. |
-| [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]] | Area tempat folder dan komponen ditampilkan. |
+| [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder|Area Manajemen Folder]] | Area tempat folder dan komponen ditampilkan. |
 | [[^value/boolean/allow]] / [[^value/boolean/disallow]] | Nilai pengaturan akses. [[^value/boolean/allow]] berarti diizinkan, [[^value/boolean/disallow]] berarti tidak diizinkan. |
 
 ## Cara Kerja Component Access
@@ -60,7 +60,7 @@ Aturan penting:
 
 | Hak Akses | Penjelasan |
 | --- | --- |
-| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, komponen tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]] dan juga tidak tampil dalam *field*, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]]. |
+| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, komponen tidak tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]] dan juga tidak tampil dalam *field*, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]. |
 | [[^field|Add]] | Mengizinkan penambahan folder atau komponen baru, termasuk menempatkan folder atau komponen dari folder lain. |
 | [[^field|Update]] | Mengizinkan perubahan atribut pada folder atau komponen. |
 | [[^field|Delete]] | Mengizinkan penghapusan folder atau komponen, termasuk memindahkan folder atau komponen ke folder lain. Pastikan folder tujuan mengizinkan [[^field|Component Access]] [[^field|Add]]. |
@@ -85,8 +85,8 @@ Aturan penting:
 
 | Level | Jika [[^value/boolean/disallow]] |
 | --- | --- |
-| Folder | Folder beserta isinya tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]], sehingga komponen di dalamnya tidak dapat dibuka. |
-| Komponen | Komponen tidak tampil di [[Docs/Antarmuka#Area Manajemen Folder]] dan tidak tampil dalam *field*, misalnya saat mengisi Query atau memilih data. |
+| Folder | Folder beserta isinya tidak tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]], sehingga komponen di dalamnya tidak dapat dibuka. |
+| Komponen | Komponen tidak tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]] dan tidak tampil dalam *field*, misalnya saat mengisi Query atau memilih data. |
 
 Jika [[^field|Visible]] pada folder diatur [[^value/boolean/disallow]] tetapi [[^field|Visible]] pada komponen di dalamnya [[^value/boolean/allow]], pengguna tidak dapat membuka komponen tersebut karena tidak tampil di Area Manajemen Folder. Namun komponen itu tetap dapat muncul pada pilihan *field* atau Query, misalnya saat memilih data Table.
 
