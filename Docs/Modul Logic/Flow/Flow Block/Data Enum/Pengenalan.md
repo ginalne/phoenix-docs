@@ -51,7 +51,10 @@ Phoenix menyediakan tujuh Flow Block Data Enum. Selengkapnya tentang komponennya
 | Membaca [[^field|Name]] dan [[^field|Description]] sebuah [[Docs/Modul Data/Enum/Apa itu Enum|Enum]]. | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Enum|Enum Block]] |
 | Membaca atribut [[Docs/Tipe Data/EnumData]] seperti [[^field|Name]], [[^field|Description]], [[^field|Value]], dan [[^field|Selectable]]. | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData|EnumData Block]] |
 | Mengambil [[Docs/Tipe Data/EnumData]] dari sebuah Enum berdasarkan [[^field|Name]]. | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter|EnumData Getter Block]] |
-| Mengubah atribut [[Docs/Tipe Data/EnumData]]. | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter|EnumData Setter Block]] |
+| Mengubah seluruh atribut [[Docs/Tipe Data/EnumData]]. | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter|EnumData Setter Block]] |
+| Mengubah atribut [[^field|Value]] di [[Docs/Tipe Data/EnumData]]. | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Value Setter|EnumData Value Setter Block]] |
+| Mengubah atribut header [[Docs/Tipe Data/EnumData]] yaitu [[^field|Name]] dan [[^field|Description]] . | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Header Setter|EnumData Header Setter Block]] |
+| Mengubah atribut [[^field|Selectable]] di [[^field|Selectable]] | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Selectable Setter|EnumData Selectable Setter Block]] |
 | Memakai [[^field|Value]] [[Docs/Tipe Data/EnumData]] sebagai nilai pada block lain. | [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Value|EnumData Value Block]] |
 
 ## Lihat Juga

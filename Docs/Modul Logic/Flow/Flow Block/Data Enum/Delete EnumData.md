@@ -1,11 +1,11 @@
 ---
-    status: draft
-    title: Delete EnumData
-    description: Flow Block untuk menghapus EnumData dari sebuah Enum, dengan opsi hapus paksa.
-    pageDecoration:
-      icon: trash
-      tree:
-        priority: 6
+status: draft
+title: Delete EnumData
+description: Flow Block untuk menghapus EnumData dari sebuah Enum, dengan opsi hapus paksa.
+pageDecoration:
+  icon: trash
+  tree:
+    priority: 6
 ---
 
 # Delete EnumData
@@ -16,13 +16,9 @@ Delete EnumData adalah Flow Block yang menghapus [[Docs/Tipe Data/EnumData]] yan
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/delete-enumdata-block-flow.png|Flow Block Delete EnumData dengan dua input dan dua output]]
 
-<!--
-  * [DONE] Letakkan gambar `delete-enumdata-block-flow.png` (potongan block Delete EnumData dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) input Force, (3) output Succeed, (4) output Error.
--->
-
 ## Input dan Output
 
-Delete EnumData memiliki dua input di sisi kiri dan dua output di sisi kanan. Block ini tidak memiliki Control.
+Delete EnumData memiliki dua input di sisi kiri dan dua output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output.
 
 ### Input
 
@@ -45,7 +41,7 @@ EnumData dianggap sudah digunakan bila sedang dipakai pada Flow atau data lain, 
 1. Bila EnumData belum digunakan, EnumData langsung dihapus, apa pun nilai [[^field|Force]].
 2. Bila EnumData sudah digunakan dan [[^field|Force]] bernilai [[^value/boolean/false]], EnumData tidak dihapus.
 3. Bila EnumData sudah digunakan dan [[^field|Force]] bernilai [[^value/boolean/true]], EnumData dihapus paksa.
-4. Setelah penghapusan berhasil, [[^output|Succeed]] bernilai [[^value/boolean/true]] dan [[^output|Error]] bernilai [[^value/boolean/false]]. Bila gagal, nilainya sebaliknya.
+4. Bila penghapusan berhasil, output [[^output|Succeed]] keluar bernilai [[^value/boolean/true]]. Bila gagal, output [[^output|Error]] yang keluar bernilai [[^value/boolean/true]].
 
 >**danger** Penghapusan tidak dapat dikembalikan
 > EnumData yang sudah dihapus tidak dapat dipulihkan. Pastikan target pada input [[^field|EnumData]] sudah benar sebelum menjalankan Flow.
@@ -54,51 +50,35 @@ EnumData dianggap sudah digunakan bila sedang dipakai pada Flow atau data lain, 
 > Saat [[^field|Force]] bernilai [[^value/boolean/true]], EnumData tetap dihapus walaupun sudah digunakan. Relasi dan riwayat yang sudah ada akan terdampak. Gunakan hanya bila Anda memahami data yang memakai EnumData tersebut.
 
 >**note** Perubahan oleh Flow tidak memicu Flow kembali
-> EnumData yang dihapus oleh Delete EnumData tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event|Enum Data Event Block]] dengan Event [[^value/string|delete]].
-
-<!--
-  * [DONE] Konfirmasi dampak hapus paksa: apa yang terjadi pada relasi (field atau data yang memakai EnumData) dan riwayat activity. Isi callout warning di atas masih draf mengikuti penjelasan penulis.
-  * [DONE] Konfirmasi dampak penghapusan EnumData yang masih dipakai komponen lain bila Force bernilai false (diasumsikan tidak dihapus).
-  * [DONE] Konfirmasi apakah callout "tidak memicu Flow kembali" berlaku untuk semua Flow atau hanya Flow yang sama.
--->
+> EnumData yang dihapus oleh Delete EnumData tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event|Enum Data Event Block]] dengan Event [[^value/string|delete]] pada Flow mana pun.
 
 ## Contoh Penggunaan
 
-Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum status pesanan.
+Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum [[^field/enum|Status Pesanan]].
 
 | Kondisi | [[^output|Succeed]] | [[^output|Error]] | Status | Hasil |
-| ------- | ------------------- | ----------------- | ----- | ----- |
-| EnumData belum digunakan, [[^field|Force]] bernilai [[^value/boolean/false]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]]  | EnumData dihapus. |
+| ------- | ------------------- | ----------------- | ------ | ----- |
+| EnumData belum digunakan, [[^field|Force]] bernilai [[^value/boolean/false]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] | EnumData dihapus. |
 | EnumData belum digunakan, [[^field|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] | EnumData dihapus. |
 | EnumData sudah digunakan, [[^field|Force]] bernilai [[^value/boolean/false]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] | EnumData tidak dihapus. |
 | EnumData sudah digunakan, [[^field|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] | EnumData dihapus paksa. |
-| [[^field|Force]] dibiarkan kosong | | | | Mengikuti contoh pada baris [[^field|Force]] bernilai [[^value/boolean/false]] |
+| [[^field|Force]] dibiarkan kosong | | | | Mengikuti baris [[^field|Force]] bernilai [[^value/boolean/false]]. |
 | [[^field|EnumData]] dibiarkan kosong | - | [[^value/boolean/true]] | [[^flowstate/Error]] | Tidak ada yang dihapus. |
 
 Status [[^flowstate/Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
-<!--
-  * [DONE] Konfirmasi perilaku Force yang dibiarkan kosong (screenshot menampilkan "(Empty)"), diasumsikan sama dengan false.
-  * [TODO] Konfirmasi perilaku EnumData yang dibiarkan kosong: apakah output Succeed false dan Error true, atau terjadi error yang dilaporkan di Flow Activity.
-    Jawaban: Ya tetap ada  tampil error di Flow Activity
-  * [DONE] Nama contoh (Enum status pesanan dan EnumData Menunggu) bersifat generik. Sesuaikan bila perlu.
--->
 
 ## Praktik Terbaik
 
 - **Biarkan [[^field|Force]] bernilai [[^value/boolean/false]] sebagai pilihan awal.** Aktifkan [[^value/boolean/true]] hanya untuk EnumData yang memang sudah Anda pastikan aman dihapus.
-- **Periksa [[^output|Succeed]] dan [[^output|Error]] setelah penghapusan.** Hubungkan keduanya ke [[Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If|If Operator Block]] agar Flow dapat bercabang saat penghapusan gagal.
+- **Siapkan alur untuk output [[^output|Error]].** Output ini hanya keluar saat penghapusan gagal, jadi hubungkan ke block yang menangani kegagalan, terpisah dari alur [[^output|Succeed]].
 - **Ambil target lewat [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter|EnumData Getter Block]].** Cara ini menghindari salah memilih EnumData saat nama diketahui tetapi EnumData-nya belum.
 
 ## Batasan dan Catatan
 
 - Delete EnumData adalah Flow Block non-Event, sehingga baru diproses setelah memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi]].
 - Satu eksekusi hanya menghapus satu EnumData.
-- Output [[^output|Succeed]] dan [[^output|Error]] selalu bernilai [[^value/boolean/true]] atau [[^value/boolean/false]], tidak pernah [[^value/empty]].
+- Output [[^output|Succeed]] dan [[^output|Error]] hanya keluar bernilai [[^value/boolean/true]] pada kondisinya masing-masing. Pada kondisi lain, tidak ada output.
 - EnumData yang dihapus tidak dapat dikembalikan, baik dengan maupun tanpa [[^field|Force]].
-
-<!--
-  * [DONE] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Event/Enum Data Event`, `Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/If`, dan `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`.
--->
 
 ## Lihat Juga
 

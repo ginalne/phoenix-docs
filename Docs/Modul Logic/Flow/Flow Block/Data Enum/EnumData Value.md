@@ -1,11 +1,11 @@
 ---
-    status: draft
-    title: EnumData Value
-    description: Flow Block untuk mengambil Value sebuah EnumData sebagai data langsung.
-    pageDecoration:
-      icon: grid
-      tree:
-        priority: 3
+status: draft
+title: EnumData Value
+description: Flow Block untuk mengambil Value sebuah EnumData sebagai data langsung.
+pageDecoration:
+  icon: grid
+  tree:
+    priority: 3
 ---
 
 # EnumData Value
@@ -16,13 +16,9 @@ EnumData Value adalah Flow Block yang mengambil [[^field|Value]] dari sebuah [[D
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-value-block-flow.png|Flow Block EnumData Value dengan satu input dan satu output]]
 
-<!--
-  * [DONE] Letakkan gambar `enumdata-value-block-flow.png` (potongan block EnumData Value dari Blueprint). Anotasi yang disarankan: (1) input EnumData, (2) output Value.
--->
-
 ## Input dan Output
 
-EnumData Value memiliki satu input di sisi kiri dan satu output di sisi kanan. Block ini tidak memiliki Control.
+EnumData Value memiliki satu input di sisi kiri dan satu output di sisi kanan. Block ini tidak memiliki Control. Tanda `-` pada tabel Contoh Penggunaan berarti tidak ada output.
 
 ### Input
 
@@ -38,7 +34,7 @@ EnumData Value memiliki satu input di sisi kiri dan satu output di sisi kanan. B
 
 ## Cara Kerja
 
-Saat dieksekusi, EnumData Value membaca [[^field|Value]] pada EnumData di input [[^field|EnumData]] lalu mengeluarkannya apa adanya pada output [[^output|Value]]. Block ini hanya membaca data, sehingga EnumData tidak berubah.
+Saat dieksekusi, EnumData Value membaca [[^field|Value]] pada EnumData di input [[^field|EnumData]] lalu mengeluarkannya apa adanya pada output [[^output|Value]]. Block ini hanya membaca data, sehingga EnumData tidak berubah. Bila input [[^field|EnumData]] dibiarkan kosong, block tidak dapat dijalankan dan tidak ada output.
 
 Perbedaannya dengan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData|EnumData Block]]: EnumData Block mengeluarkan beberapa atribut sekaligus, sedangkan EnumData Value hanya mengeluarkan [[^field|Value]].
 
@@ -46,35 +42,27 @@ Tipe data output [[^output|Value]] tidak ditampilkan di halaman kerja dan tidak 
 
 ## Contoh Penggunaan
 
-Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum [[^field/enum|status pesanan]].
+Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum [[^field/enum|Status Pesanan]].
 
 | Kondisi | [[^output|Value]] | Status |
 | ------- | ----------------- | ------ |
-| EnumData berada di Enum berformat angka dengan [[^field|Value]] `1` | [[^value/number|1]] | [[^flowstate/Succeed]] |
-| EnumData berada di Enum berformat teks dengan [[^field|Value]] `MENUNGGU` | [[^value/string|MENUNGGU]] |[[^flowstate/Succeed]] |
-| [[^field|EnumData]] dibiarkan kosong | - |[[^flowstate/Fatal Error]] |
+| EnumData berada di Enum bertipe [[Docs/Tipe Data/Number]] dengan [[^field|Value]] `1` | [[^value/number|1]] | [[^flowstate/Succeed]] |
+| EnumData berada di Enum bertipe [[Docs/Tipe Data/String]] dengan [[^field|Value]] `MENUNGGU` | [[^value/string|MENUNGGU]] | [[^flowstate/Succeed]] |
+| [[^field|EnumData]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 
 Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
-<!--
-  * [DONE] Konfirmasi perilaku EnumData yang dibiarkan kosong (diasumsikan error seperti Variable Value).
-  * [DONE] Nama dan nilai contoh (EnumData Menunggu, Value 1 dan MENUNGGU) bersifat generik. Sesuaikan bila perlu.
--->
 
 ## Praktik Terbaik
 
 - **Gunakan EnumData Value bila hanya butuh nilainya.** Block ini lebih ringkas dibanding [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData|EnumData Block]] yang mengeluarkan banyak atribut.
-- **Periksa [[^output|Is Empty]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter|EnumData Getter Block]] terlebih dahulu.** Dengan begitu EnumData yang dibiarkan kosong tidak sampai menimbulkan error.
+- **Pastikan input [[^field|EnumData]] terisi.** Bila EnumData diambil lewat [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter|EnumData Getter Block]], tangani output [[^output|Is Empty]] pada alur terpisah agar block ini tidak dijalankan dengan input kosong.
 - **Pastikan block berikutnya menerima tipe data yang sesuai.** Samakan dengan [[^field|Format]] Enum asal EnumData.
 
 ## Batasan dan Catatan
 
 - EnumData Value adalah Flow Block non-Event, sehingga baru diproses setelah memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi]].
 - Block ini hanya mengambil [[^field|Value]]. Untuk atribut lain, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData|EnumData Block]].
-- Block ini hanya membaca data. Untuk mengubah [[^field|Value]], gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter|EnumData Setter Block]].
-
-<!--
-  * [DONE] Halaman baru yang ditautkan dan perlu dibuat: `Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter`, `Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Setter`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan `Docs/Modul Logic/Flow/Flow Activity`.
--->
+- Block ini hanya membaca data. Untuk mengubah [[^field|Value]], gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Value Setter|EnumData Value Setter Block]].
 
 ## Lihat Juga
 
@@ -83,4 +71,3 @@ Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil d
 - [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Getter|EnumData Getter Block]]
 - [[Docs/Modul Data/Enum/Apa itu Enum|Enum]]
 - [[Docs/Tipe Data/EnumData]]
-

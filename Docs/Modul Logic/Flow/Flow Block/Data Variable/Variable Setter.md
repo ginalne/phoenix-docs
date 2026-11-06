@@ -12,7 +12,7 @@ Variable Setter adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]
 ![[Docs/Modul Logic/Flow/Flow Block/Data Variable/variable-setter-block-flow.png|Flow Block Variable Setter dengan dua input dan satu output]]
 ## Input dan Output
 
-Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
+Add Variable memiliki dua input di sisi kiri dan satu output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
