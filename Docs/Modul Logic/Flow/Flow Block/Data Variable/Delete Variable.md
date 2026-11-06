@@ -53,8 +53,8 @@ Variable Data dianggap sudah digunakan bila sedang dipakai pada Flow atau data l
 | Kondisi | [[^output|Succeed]] | [[^output|Error]] | Status |
 | ------- | ------------------- | ----------------- | ------ |
 | Variable Data belum digunakan, [[^input|Force]] berisi apapun |[[^value/boolean/true]] | - | [[^flowstate/Succeed ]] |
-| Variable Data sudah digunakan, [[^input|Force]] berisi [[^value/true]] | - | - | [[^flowstate/Succeed ]] |
-| Variable Data sudah digunakan, [[^input|Force]] berisi [[^value/false]] | - | [[^value/boolean/true]] | - | [[^flowstate/Error ]] |
+| Variable Data sudah digunakan, [[^input|Force]] berisi [[^value/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed ]] |
+| Variable Data sudah digunakan, [[^input|Force]] berisi [[^value/false]] | - | [[^value/boolean/true]] | [[^flowstate/Error ]] |
 | [[^field|Variable]] dibiarkan kosong, [[^input|Force]] berisi apapun | - | - | [[^flowstate/Fatal Error]] |
 
 Hubungkan [[^output|Error]] ke block yang menangani kegagalan agar Flow dapat memberi tahu pengguna bahwa Variable Data gagal dihapus. Block tersebut hanya dieksekusi bila penghapusan gagal.
