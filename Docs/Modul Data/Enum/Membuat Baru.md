@@ -9,7 +9,7 @@
 # Membuat Table Baru
 
 ![[Docs/Modul Data/Enum/add-enum.png]]
-1. Buka folder tempat Enum akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder tempat Enum akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Data]] ➜ [[^field/enum|Enum]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Pilih [[^field|Format]] dan atur [[^field|Strict On Selected]] sesuai kebutuhan

@@ -8,7 +8,7 @@
 ---
 # Menghapus Timeline
 
-1. Buka folder yang berisi Timeline di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder yang berisi Timeline di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan Timeline ➜ [[^button/delete|Delete]]
 3. Konfirmasi dengan klik [[^button|Delete]]
 

@@ -9,7 +9,7 @@
 # Menghapus Group
 
 1. Pindahkan seluruh User di Group tersebut dan di Group anaknya ke Group lain. Lihat [[#Memindahkan User]]
-2. Buka folder yang berisi Group di [[Docs/Antarmuka#Area Manajemen Folder]]
+2. Buka folder yang berisi Group di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 3. Klik kanan Group ➜ [[^button/delete|Delete]]
 4. Konfirmasi dengan klik [[^button|Delete]]
 

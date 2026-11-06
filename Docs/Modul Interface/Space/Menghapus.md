@@ -8,7 +8,7 @@
 ---
 # Menghapus Space
 
-1. Buka folder yang berisi Space di [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Buka folder yang berisi Space di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
 2. Klik kanan Space ➜ [[^button/delete|Delete]]
 3. Konfirmasi dengan klik [[^button|Delete]]
 
