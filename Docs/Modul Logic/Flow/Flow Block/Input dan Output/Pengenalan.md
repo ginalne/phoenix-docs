@@ -40,7 +40,7 @@ Phoenix menyediakan dua Flow Block Input dan Output. Setiap block memiliki fungs
   * [TODO] Konfirmasi kalimat pembeda dengan Flow Block Operator ("berfokus pada jalur aliran data, bukan pada isi data") dan kalimat penutup peran di bawah gambar.
     Jawaban: Sudah oke untuk pembeda, tapi kurang oke untuk menjelaskan kenapa kategori ini harus ada dan penting dalam Flow.
   * [TODO] Halaman block yang diusulkan: `Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch` dan `Docs/Modul Logic/Flow/Flow Block/Input dan Output/Passer`. Masing-masing berisi Input dan Output, Cara Kerja, Contoh Penggunaan, Praktik Terbaik, serta Batasan dan Catatan.
-    Jawaban: akan dilanjutkan nanti, jangan sekarang.
+    Jawaban: Ya, tapi akan dilanjutkan nanti, jangan sekarang.
 -->
 
 ## Memilih Flow Block Input dan Output

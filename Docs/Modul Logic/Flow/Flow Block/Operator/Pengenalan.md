@@ -7,13 +7,9 @@ pageDecoration:
     priority: 13
 tags: flowblock-category
 ---
-# Flow Block Operator
+,’;;;/;# Flow Block Operator
 
 >**note** Flow Block Operator merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
-
-<!--
-  * [TODO] Nilai `pageDecoration.tree.priority` (13) adalah usulan berdasarkan urutan kategori pada menu Add setelah Event (6) dan empat kelompok Flow Block Data. Mohon sesuaikan urutan tampil pada pohon dokumentasi.
--->
 
 Flow Block Operator adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang digunakan untuk **mengolah data** di dalam Flow, seperti aritmatika, pengolahan teks, konversi, maupun translasi data. Setiap block dikelompokkan berdasarkan tipe data input utamanya, sehingga Anda dapat menemukan block yang tepat dari tipe data yang sedang diolah.
 
@@ -48,11 +44,14 @@ Phoenix menyediakan dua belas Flow Block Operator yang dikelompokkan berdasarkan
 
 <!--
   * [TODO] Konfirmasi fungsi Increment Operator Block. Draf menyebut "menambah nilai Number". Apakah penambahnya dapat ditentukan (langkah tertentu), atau selalu bertambah satu?
+    Jawaban: Ada langkah yang ditentukan, akan dijelaskan lebih detail dalam halamannya sendiri
   * [TODO] Konfirmasi input utama Implode Operator Block. Draf menyebut "sekumpulan nilai" karena input utamanya mungkin [[Docs/Tipe Data/Array]], padahal block ini dikelompokkan pada String.
+    Jawaban: 
   * [TODO] Konfirmasi fungsi TableRow Parse dan Node Parse Operator Block, termasuk bentuk hasil urainya (apakah menghasilkan [[Docs/Tipe Data/Object]] atau output per atribut).
   * [TODO] Konfirmasi fungsi Assign Operator Block. Draf menyebut "menetapkan nilai pada Object". Apakah yang ditetapkan adalah satu atribut (key) atau seluruh isi Object?
   * [TODO] Konfirmasi fungsi If Operator Block. Draf menyebut "menentukan hasil berdasarkan kondisi". Apakah block ini memilih nilai (seperti *ternary*) atau menentukan jalur aliran? Perlu dibedakan dengan [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch|Branch Block]].
   * [TODO] Halaman block yang diusulkan mengikuti pola `Docs/Modul Logic/Flow/Flow Block/Operator/<Tipe Data>/<Nama Block>` seperti pada tabel di atas. Apakah setiap kelompok tipe data (Number, String, Table, Object, Boolean, Tree) perlu halaman `Pengenalan` sendiri?
+    Jawaban: Tidak perlu pengenalan per masing-masing kelompok. Langsung ke halaman Flow block masing. Tapi akan dilanjutkan nanti, jangan sekarang.
 -->
 
 ## Memilih Flow Block Operator
