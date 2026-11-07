@@ -27,7 +27,9 @@ Tolong saya membuat 10 halaman flow block untuk data tree:
 5. Delete Node
    Node adalah input bertipedata Node sebagai target Node yang akan dihapus. Force adalah input bernilai boolean, bernilai true jika ingin menghapus Node yang sudah digunakan. Dapat menghasilkan Output succeed atau error bernilai boolean, akan Fatal Error jika Node atau Force dibiarkan empty.
 6. Tree Get Origin
-   Tree adalah input bertipedata Tree. Output The Origin (Node) adalah bertipedata Node yaitu Node Origin dalam tree. Fatal Error jika Tree dibiarkan kosong
+   Tree adalah input bertipedata Tree. Output The Origin (Node) adalah bertipedata Node yaitu Node Origin dalam tree. Fatal Error jika Tree dibiarkan kosong.
+7. Node Get Parent
+   Node adalah 
    ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/data-tree-block-flow.png|Sepuluh Flow Block Data Tree pada Blueprint: Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, dan Tree Get Origin]]
 
 2. Delete Node
