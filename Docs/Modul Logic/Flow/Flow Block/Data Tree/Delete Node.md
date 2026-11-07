@@ -3,7 +3,6 @@ status: draft
 title: Delete Node Block
 description: Flow Block Data Tree yang menghapus sebuah Node, dengan pilihan hapus paksa untuk Node yang sudah digunakan.
 ---
-
 # Delete Node Block
 
 >**note** Delete Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,11 +10,6 @@ description: Flow Block Data Tree yang menghapus sebuah Node, dengan pilihan hap
 Delete Node Block adalah Flow Block yang menghapus sebuah [[Docs/Tipe Data/Node]] dari [[Docs/Tipe Data/Tree]]. Block ini menghasilkan dua output Boolean, yaitu [[^output|Succeed]] saat berhasil dan [[^output|Error]] saat penghapusan ditolak, sehingga Flow dapat bercabang sesuai hasilnya.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/delete-node-block-flow.png|Delete Node Block pada Blueprint Flow]]
-
-<!--
-  * [TODO] Tambahkan screenshot Delete Node Block pada Blueprint Flow dengan nama file `delete-node-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Anotasi yang disarankan: ① input Node dan Force di sisi kiri, ② output Succeed dan Error di sisi kanan.
--->
-
 ## Input dan Output
 
 Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.

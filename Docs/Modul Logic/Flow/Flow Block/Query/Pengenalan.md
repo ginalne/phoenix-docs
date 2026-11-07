@@ -34,6 +34,7 @@ Phoenix menyediakan dua Flow Block Query. Setiap block memiliki fungsi yang unik
 
 <!--
   * [TODO] Konfirmasi fungsi Condition Query Block. Draf menyebut "membangun kondisi Query". Apakah block ini menghasilkan Query utuh, atau hanya bagian kondisi yang kemudian dirangkai?
+    Jawaban: Hanya bagian kondisi yang kemudian dirangkai
   * [TODO] Konfirmasi fungsi Execute Query Block, termasuk bentuk hasilnya. Apakah hasilnya mengikuti [[Docs/Query/Output/Table|Table Output]] atau kaidah Output lain (Single, Series, Multi Series)? Bila ya, tambahkan penjelasan singkat di tabel.
   * [TODO] Halaman block yang diusulkan: `Docs/Modul Logic/Flow/Flow Block/Query/Condition` dan `Docs/Modul Logic/Flow/Flow Block/Query/Execute`. Masing-masing berisi Input dan Output, Cara Kerja, Contoh Penggunaan, Praktik Terbaik, serta Batasan dan Catatan.
 -->

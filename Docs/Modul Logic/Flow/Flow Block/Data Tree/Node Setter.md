@@ -1,9 +1,8 @@
 ---
-status: draft
-title: Node Setter Block
-description: Flow Block Data Tree yang mengubah Name dan Order dari sebuah Node.
+    status: draft
+    title: Node Setter Block
+    description: Flow Block Data Tree yang mengubah Name dan Order dari sebuah Node.
 ---
-
 # Node Setter Block
 
 >**note** Node Setter Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,11 +10,6 @@ description: Flow Block Data Tree yang mengubah Name dan Order dari sebuah Node.
 Node Setter Block adalah Flow Block yang mengubah Name dan Order dari sebuah [[Docs/Tipe Data/Node]]. Setelah perubahan tersimpan, block meneruskan Node tersebut lewat [[^output|Pass]].
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-setter-block-flow.png|Node Setter Block pada Blueprint Flow]]
-
-<!--
-  * [TODO] Tambahkan screenshot Node Setter Block pada Blueprint Flow dengan nama file `node-setter-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Anotasi yang disarankan: ① input Node, Order, dan Name di sisi kiri, ② output Pass di sisi kanan.
--->
-
 ## Input dan Output
 
 Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.

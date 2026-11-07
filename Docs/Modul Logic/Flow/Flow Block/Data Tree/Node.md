@@ -1,9 +1,8 @@
 ---
-status: draft
-title: Node Block
-description: Flow Block Data Tree yang mengambil atribut dari sebuah Node, yaitu Order, Name, dan Tree.
+    status: draft
+    title: Node Block
+    description: Flow Block Data Tree yang mengambil atribut dari sebuah Node, yaitu Order, Name, dan Tree.
 ---
-
 # Node Block
 
 >**note** Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,11 +10,6 @@ description: Flow Block Data Tree yang mengambil atribut dari sebuah Node, yaitu
 Node Block adalah Flow Block yang mengambil atribut dari sebuah [[Docs/Tipe Data/Node]]. Gunakan block ini ketika alur Flow Anda membutuhkan Order, Name, atau Tree dari Node tertentu. Block ini hanya membaca dan tidak mengubah Node. Untuk mengubah Node, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]].
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-block-flow.png|Node Block pada Blueprint Flow]]
-
-<!--
-  * [TODO] Tambahkan screenshot Node Block pada Blueprint Flow dengan nama file `node-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Anotasi yang disarankan: ① input Node di sisi kiri, ② output Pass, Order, Name, dan Tree di sisi kanan.
--->
-
 ## Input dan Output
 
 Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.

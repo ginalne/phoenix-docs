@@ -1,9 +1,8 @@
 ---
-status: draft
-title: Node Get Children Block
-description: Flow Block Data Tree yang mengambil anak langsung dari sebuah Node berdasarkan Order.
+    status: draft
+    title: Node Get Children Block
+    description: Flow Block Data Tree yang mengambil anak langsung dari sebuah Node berdasarkan Order.
 ---
-
 # Node Get Children Block
 
 >**note** Node Get Children Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,11 +10,6 @@ description: Flow Block Data Tree yang mengambil anak langsung dari sebuah Node 
 Node Get Children Block adalah Flow Block yang mengambil anak langsung dari sebuah [[Docs/Tipe Data/Node]] berdasarkan Order. Block ini hanya mengambil satu tingkat ke bawah, bukan seluruh keturunan.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-children-block-flow.png|Node Get Children Block pada Blueprint Flow]]
-
-<!--
-  * [TODO] Tambahkan screenshot Node Get Children Block pada Blueprint Flow dengan nama file `node-get-children-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Anotasi yang disarankan: ① input Node dan Child Order di sisi kiri, ② output The Children dan Not Found di sisi kanan.
--->
-
 ## Input dan Output
 
 Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.

@@ -1,9 +1,8 @@
 ---
-status: draft
-title: Assign Node Block
-description: Flow Block Data Tree yang menempatkan sebuah Node sebagai anak dari Node lain dengan Order tertentu.
+    status: draft
+    title: Assign Node Block
+    description: Flow Block Data Tree yang menempatkan sebuah Node sebagai anak dari Node lain dengan Order tertentu.
 ---
-
 # Assign Node Block
 
 >**note** Assign Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,11 +10,6 @@ description: Flow Block Data Tree yang menempatkan sebuah Node sebagai anak dari
 Assign Node Block adalah Flow Block yang menempatkan [[Docs/Tipe Data/Node]] yang sudah ada sebagai anak dari Node lain. Gunakan block ini ketika struktur [[Docs/Tipe Data/Tree]] perlu disusun ulang tanpa membuat Node baru.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/assign-node-block-flow.png|Assign Node Block pada Blueprint Flow]]
-
-<!--
-  * [TODO] Tambahkan screenshot Assign Node Block pada Blueprint Flow dengan nama file `assign-node-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Anotasi yang disarankan: ① input Parent, Order, dan Node children di sisi kiri, ② output Pass children di sisi kanan.
--->
-
 ## Input dan Output
 
 Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.

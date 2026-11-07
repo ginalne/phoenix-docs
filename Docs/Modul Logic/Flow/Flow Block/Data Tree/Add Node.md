@@ -1,9 +1,8 @@
 ---
-status: draft
-title: Add Node Block
-description: Flow Block Data Tree yang menambahkan Node baru sebagai anak dari sebuah Node.
+    status: draft
+    title: Add Node Block
+    description: Flow Block Data Tree yang menambahkan Node baru sebagai anak dari sebuah Node.
 ---
-
 # Add Node Block
 
 >**note** Add Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,11 +10,6 @@ description: Flow Block Data Tree yang menambahkan Node baru sebagai anak dari s
 Add Node Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Node]] baru ke sebuah [[Docs/Tipe Data/Tree]]. Node baru ditempatkan sebagai anak dari Parent yang Anda pilih, sehingga Anda dapat membangun struktur Tree langsung dari Flow.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/add-node-block-flow.png|Add Node Block pada Blueprint Flow]]
-
-<!--
-  * [TODO] Tambahkan screenshot Add Node Block pada Blueprint Flow dengan nama file `add-node-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Anotasi yang disarankan: ① input Parent, Order, dan Name di sisi kiri, ② output New Node di sisi kanan.
--->
-
 ## Input dan Output
 
 Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.
@@ -90,5 +84,5 @@ Tabel berikut menunjukkan hasil block pada setiap kondisi input.
 -->
 
 <!--
-  * [TODO] Halaman yang ditautkan dan mungkin belum ada: `Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event`, `Docs/Modul Data/Tree/Konfigurasi External Read Only` (usulan), `Docs/Modul Data/Tree/Konfigurasi Merger Mode`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan anchor `Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output`.
+  * [DONE] Halaman yang ditautkan dan mungkin belum ada: `Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event`, `Docs/Modul Data/Tree/Konfigurasi External Read Only` (usulan), `Docs/Modul Data/Tree/Konfigurasi Merger Mode`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan anchor `Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output`.
 -->

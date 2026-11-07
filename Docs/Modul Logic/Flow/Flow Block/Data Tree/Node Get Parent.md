@@ -1,9 +1,8 @@
 ---
-status: draft
-title: Node Get Parent Block
-description: Flow Block Data Tree yang menelusuri Parent dari sebuah Node ke atas sesuai Depth.
+    status: draft
+    title: Node Get Parent Block
+    description: Flow Block Data Tree yang menelusuri Parent dari sebuah Node ke atas sesuai Depth.
 ---
-
 # Node Get Parent Block
 
 >**note** Node Get Parent Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,11 +10,6 @@ description: Flow Block Data Tree yang menelusuri Parent dari sebuah Node ke ata
 Node Get Parent Block adalah Flow Block yang menelusuri Parent dari sebuah [[Docs/Tipe Data/Node]] ke arah Origin. Anda menentukan seberapa jauh penelusuran lewat [[^input|Depth]]: Depth 1 menghasilkan Parent langsung, Depth 2 menghasilkan Parent dari Parent tersebut, dan seterusnya.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-parent-block-flow.png|Node Get Parent Block pada Blueprint Flow]]
-
-<!--
-  * [TODO] Tambahkan screenshot Node Get Parent Block pada Blueprint Flow dengan nama file `node-get-parent-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Anotasi yang disarankan: ① input Node dan Depth di sisi kiri, ② output The Parent dan Not Found di sisi kanan.
--->
-
 ## Input dan Output
 
 Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.

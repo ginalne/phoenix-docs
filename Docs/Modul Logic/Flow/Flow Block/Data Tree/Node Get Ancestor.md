@@ -1,9 +1,8 @@
 ---
-status: draft
-title: Node Get Ancestor Block
-description: Flow Block Data Tree yang mengambil leluhur dari sebuah Node dengan menelusuri dari Origin sesuai Anc. Level.
+    status: draft
+    title: Node Get Ancestor Block
+    description: Flow Block Data Tree yang mengambil leluhur dari sebuah Node dengan menelusuri dari Origin sesuai Anc. Level.
 ---
-
 # Node Get Ancestor Block
 
 >**note** Node Get Ancestor Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,11 +10,6 @@ description: Flow Block Data Tree yang mengambil leluhur dari sebuah Node dengan
 Node Get Ancestor Block adalah Flow Block yang mengambil leluhur dari sebuah [[Docs/Tipe Data/Node]] dengan menelusuri jalur dari Origin menuju Node tersebut. [[^input|Anc. Level]] menentukan leluhur yang diambil: nilai 1 menghasilkan leluhur pertama pada jalur dari Origin, dan nilai berikutnya menghasilkan leluhur selanjutnya.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-ancestor-block-flow.png|Node Get Ancestor Block pada Blueprint Flow]]
-
-<!--
-  * [TODO] Tambahkan screenshot Node Get Ancestor Block pada Blueprint Flow dengan nama file `node-get-ancestor-block-flow.png` di folder `Docs/Modul Logic/Flow/Flow Block/Data Tree/`. Anotasi yang disarankan: ① input Node dan Anc. Level di sisi kiri, ② output The Ancestor dan Not Found di sisi kanan.
--->
-
 ## Input dan Output
 
 Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.
