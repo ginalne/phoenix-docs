@@ -1,8 +1,11 @@
 ---
-status: draft
-title: Flow Block Data Table
-description: Pengenalan kelompok Flow Block Data Table, block untuk menambah, membaca, mengubah, dan menghapus Row serta TableData lewat logika Flow.
-tags: flowblock-category
+    status: draft
+    title: Flow Block Data Table
+    description: Pengenalan kelompok Flow Block Data Table, block untuk menambah, membaca, mengubah, dan menghapus Row serta TableData lewat logika Flow.
+    pageDecoration:
+      tree:
+        priority: 10
+    tags: flowblock-category
 ---
 # Flow Block Data Table
 

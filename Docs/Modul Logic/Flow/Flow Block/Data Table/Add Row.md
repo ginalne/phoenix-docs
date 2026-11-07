@@ -13,7 +13,7 @@ Add Row Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Row]] baru ke 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Table/add-row-block-flow.png|Add Row Block pada Blueprint]]
 ## Input dan Output
 
-Add Row Block tidak memiliki Control. Block ini memiliki satu input di sisi kiri dan satu output di sisi kanan.
+Add Row Block memiliki satu input di sisi kiri, satu output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
@@ -25,7 +25,7 @@ Add Row Block tidak memiliki Control. Block ini memiliki satu input di sisi kiri
 
 | Output | Tipe Data | Keterangan |
 | - | - | - |
-| [[^output|New Row]] | [[Docs/Tipe Data/Row]] | Row baru yang kosong, tanpa [[Docs/Tipe Data/TableData]]. Meneruskan aliran hanya bila Row berhasil ditambahkan. Tidak meneruskan aliran (`-`) bila terjadi [[^flowstate|Fatal Error]]. |
+| [[^output|New Row]] | [[Docs/Tipe Data/Row]] | Row baru yang kosong, tanpa [[Docs/Tipe Data/TableData]]. Meneruskan aliran hanya bila Row berhasil ditambahkan. Tidak meneruskan aliran bila terjadi [[^flowstate|Fatal Error]]. |
 
 Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
@@ -47,6 +47,8 @@ Menambahkan Row ke [[^field/table|Pesanan]] saat sebuah proses dimulai.
 | [[^input|Table]] berisi Table pesanan | Row baru dengan Index otomatis dan [[Docs/Tipe Data/TableData]] kosong | [[^flowstate|Succeed]] |
 | [[^input|Table]] dibiarkan kosong | - | [[^flowstate|Fatal Error]] |
 
+Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+
 ## Praktik Terbaik
 
 - **Isi Row baru segera.** Hubungkan [[^output|New Row]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Table/TableData Setter|TableData Setter Block]] agar [[Docs/Tipe Data/TableData]] pada Row tidak dibiarkan kosong.
@@ -67,7 +69,3 @@ Menambahkan Row ke [[^field/table|Pesanan]] saat sebuah proses dimulai.
 - [[Docs/Modul Logic/Flow/Flow Block/Data Table/TableData Setter|TableData Setter Block]]
 - [[Docs/Modul Data/Table/Apa itu Table#Mengelola Data Table|Mengelola Data Table]]
 
-<!--
-  * [DONE] Konfirmasi: [[^input|Table]] kosong diasumsikan [[^flowstate|Fatal Error]] mengikuti pola block Table lain.
-  * [DONE] Halaman yang ditautkan dan diasumsikan ada: `Data Table/Pengenalan`, `Flow Block/Syarat Eksekusi`, `Flow Block/Antarmuka#Output`, `Flow Block/Event/Table Row Event`, dan `Flow Activity`.
--->

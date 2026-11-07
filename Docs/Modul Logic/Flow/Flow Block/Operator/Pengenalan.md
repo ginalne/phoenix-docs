@@ -18,7 +18,7 @@ Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Ev
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/operator-block-flow.png|Flow Block Operator pada Blueprint: Increment, Concatenate, Implode, Pad Left, Pad Right, TableRow Parse, Assign, Merge, Parse, Stringify, If, dan Node Parse]]
 
 <!--
-  * [TODO] Tambahkan screenshot Blueprint yang memuat seluruh Flow Block Operator dengan nama file `operator-block-flow.png`. Anotasi yang disarankan: penanda nomor pada setiap block dan pengelompokan warna atau garis per tipe data input (Number, String, Table, Object, Boolean, Tree).
+  * [DONE] Tambahkan screenshot Blueprint yang memuat seluruh Flow Block Operator dengan nama file `operator-block-flow.png`. Anotasi yang disarankan: penanda nomor pada setiap block dan pengelompokan warna atau garis per tipe data input (Number, String, Table, Object, Boolean, Tree).
 -->
 
 Block Operator umumnya ditempatkan di tengah alur, di antara block yang menghasilkan data dan block yang memakainya. Hasil olahan dapat diteruskan ke block lain untuk disimpan, dikirim ke sistem lain, atau diolah lebih lanjut.
@@ -51,7 +51,7 @@ Phoenix menyediakan dua belas Flow Block Operator yang dikelompokkan berdasarkan
   * [TODO] Konfirmasi fungsi Assign Operator Block. Draf menyebut "menetapkan nilai pada Object". Apakah yang ditetapkan adalah satu atribut (key) atau seluruh isi Object?
   * [TODO] Konfirmasi fungsi If Operator Block. Draf menyebut "menentukan hasil berdasarkan kondisi". Apakah block ini memilih nilai (seperti *ternary*) atau menentukan jalur aliran? Perlu dibedakan dengan [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch|Branch Block]].
   * [TODO] Halaman block yang diusulkan mengikuti pola `Docs/Modul Logic/Flow/Flow Block/Operator/<Tipe Data>/<Nama Block>` seperti pada tabel di atas. Apakah setiap kelompok tipe data (Number, String, Table, Object, Boolean, Tree) perlu halaman `Pengenalan` sendiri?
-    Jawaban: Tidak perlu pengenalan per masing-masing kelompok. Langsung ke halaman Flow block masing. Tapi akan dilanjutkan nanti, jangan sekarang.
+    Jawaban: Tidak perlu pengenalan per masing-masing kelompok tipe data. Langsung ke halaman Flow block masing. Tapi usulan akan dilanjutkan nanti, jangan sekarang.
 -->
 
 ## Memilih Flow Block Operator
