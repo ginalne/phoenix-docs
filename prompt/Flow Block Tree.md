@@ -19,9 +19,17 @@ Tolong saya membuat 10 halaman flow block untuk data tree:
 2. Node
     Node adalah input bertipe data Node. Output adalah atribut dari node yang diinput.
 3. Node Setter
-    Node adalah input 
-1. Add Node
-   Parent adalah input yang diisi Node (akan tampil semua node dalam semua tree di pilihan). Order adalah input bertipe number untuk Node baru. Name adalah input bertipe string. Order atau Name akan menghasilkan Fatal Error jika dibiarkan kosong
+    Node adalah input bertipe data Node, Order bertipe data number, Name bertipe data string. Pass adalah output dari Node yang sudah diinput. Jika node, order atau name empty maka Fatal Error.
+3. Add Node
+   Parent adalah input yang diisi Node (akan tampil semua node dalam semua tree di pilihan). Order adalah input bertipe number untuk Node baru. Name adalah input bertipe string. Parent, Order atau Name akan menghasilkan Fatal Error jika dibiarkan kosong
+4. Assign Node
+   Parent adalah input bertipe data Node sebagai bakal parent. Order adalah input bertipe data number bakal menjadi value order dari Node children yang diinput. Node children adalah input bertipedata Node yang ditempatkan pada parent yang diinput. Output pass children adalah Node children yang diinput. Error dapat terjadi jika Node parent dan children bukan dalam tree yang sama. Fata Error jika Parent, Order atau Node dibiarkan empty.
+5. Delete Node
+   Node adalah input bertipedata Node sebagai target Node yang akan dihapus. Force adalah input bernilai boolean, bernilai true jika ingin menghapus Node yang sudah digunakan. Dapat menghasilkan Output succeed atau error bernilai boolean, akan Fatal Error jika Node atau Force dibiarkan empty.
+6. Tree Get Origin
+   Tree adalah input bertipedata Tree. Output The Origin (Node) adalah bertipedata Node yaitu Node Origin dalam tree. Fatal Error jika Tree dibiarkan kosong
+   ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/data-tree-block-flow.png|Sepuluh Flow Block Data Tree pada Blueprint: Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, dan Tree Get Origin]]
+
 2. Delete Node
    Row adalah input bertipe data row untuk target row yang akan dihapus. Force adalah input bertipedata boolean (true jika ingin dihapus secara paksa - berakibat dengan relasi dan histori yang sudah ada). Succeed = boolean true dan Error “-” jika berhasil, begitu sebaliknya. Fatal Error ketika Row atau Force bernilai empty.
 3. Table
