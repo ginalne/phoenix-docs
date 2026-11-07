@@ -126,7 +126,6 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Sifat:** block Data unik sesuai fungsinya (tidak seragam seperti Event). Block Data adalah block non-Event, sehingga tunduk pada Syarat Flow Block Diproses. Aksi create, update, atau delete oleh Flow tidak memicu Event.
 - **Fungsi block (terkonfirmasi penulis):**
   - Table: Table Block mengambil Name dan Description Table. Table Column Block mengambil Name, Description, Header, dan Table dari Column. Table Row Block mengambil Index dan Name dari Row. TableData Getter dan Setter: Row dan Column dapat diisi di block sendiri atau dari output block lain. Setter hanya mengubah satu TableData per eksekusi.
-  - Tree: Node Block mengambil Order, Name, dan Tree. Tree Block mengambil Name, Description, dan Merger Mode. Node Setter mengubah Name dan Order. Node Get Ancestor mengambil leluhur pada tingkat yang ditentukan. Node Get Children hanya mengambil anak langsung dengan Order yang ditentukan. Assign Node menetapkan Node ke posisi tertentu (misalnya di bawah Node induk yang dipilih).
 - **Perilaku Tree:** block Data Tree dapat mengubah atau menghapus Node pada Tree dengan Merger Mode atau External Read Only aktif (termasuk Node clone), sehingga perlu callout warning.
 - **Callout warning dibutuhkan** pada block Delete (Variable, EnumData, Row, Node) dan Add EnumData (Strict On Selected).
 - **Terkonfirmasi dari knowledge lain:** Variable Getter mengambil nilai lewat Name, Alias tidak valid menghasilkan tidak ada nilai atau error (lihat Flow Activity), Tree baru otomatis memiliki Node Origin.
@@ -179,6 +178,25 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 *   **Name kosong pada Setter adalah Fatal Error**
 *   **Description kosong menjadi empty**
 *   **Name yang sama dengan Name EnumData itu sendiri bukan konflik**
+
+### Flow Block Data Tree (menggantikan ringkasan Tree pada "Flow Block Data")
+
+*   **10 block, tanpa Control.** Path: `Docs/Modul Logic/Flow/Flow Block/Data Tree/<Nama Block>`, pengenalan kelompok di `Data Tree/Pengenalan`. Gambar: `<nama-block>-block-flow.png` di folder `Data Tree/`.
+*   **Input dan output per block (versi penulis):**
+    *   **Tree:** input Tree. Output adalah atribut Tree (Pass, Name, Description, Merger Mode; label Pass dan tipe data Description belum terkonfirmasi).
+    *   **Node:** input Node. Output adalah atribut Node (Pass, Order, Name, Tree; label Pass belum terkonfirmasi).
+    *   **Node Setter:** input Node, Order (Number), Name (String). Output Pass (Node yang sudah diinput). **Node, Order, atau Name kosong: Fatal Error.** Mengubah Name dan Order sekaligus.
+    *   **Add Node:** input Parent (Node, pilihan menampilkan **semua Node dari semua Tree**), Order (Number) untuk Node baru, Name (String). **Parent, Order, atau Name kosong: Fatal Error.** Output belum diberikan penulis (diasumsikan New Node).
+    *   **Assign Node:** input Parent (Node, calon parent), Order (Number, menjadi Order dari Node children), Node children (Node, ditempatkan di bawah Parent). Output **Pass children** (Node children yang diinput). **Error** bila Parent dan Node children **bukan dalam Tree yang sama**. **Fatal Error** bila Parent, Order, atau Node children kosong.
+    *   **Delete Node:** input Node (target) dan Force (Boolean; true untuk menghapus Node yang sudah digunakan). Output **Succeed** dan **Error** (Boolean). **Fatal Error bila Node atau Force kosong** (berbeda dengan Delete EnumData, tempat Force kosong dianggap false).
+    *   **Tree Get Origin:** input Tree. Output **The Origin** (Node Origin). Fatal Error bila Tree kosong. Tidak ada Not Found karena setiap Tree memiliki Origin.
+    *   **Node Get Parent:** input Node dan **Depth** (Number). Output **The Parent** (Node) dan **Not Found** (Boolean). Depth 1 = Parent langsung, 2 = Parent dari Parent, dan seterusnya (dihitung **dari Node ke atas**).
+    *   **Node Get Children:** input Node dan **Child Order** (Number). Output **The Children** (Node, anak langsung dengan Order tersebut) dan **Not Found** (Boolean, bila anak dengan Order itu tidak ada).
+    *   **Node Get Ancestor:** input Node dan **Anc. Level** (Number). Output **The Ancestor** (Node) dan **Not Found** (Boolean). Penelusuran **dari Origin ke Node**: Anc. Level 1 = leluhur pertama dan seterusnya. Not Found bila Anc. Level < 1 atau > jumlah silsilah dari Origin ke Node.
+*   **Perbedaan arah penelusuran:** Node Get Parent dihitung dari Node ke atas (Depth), Node Get Ancestor dihitung dari Origin ke bawah (Anc. Level).
+*   **Label input dan output** ditulis seperti tulisan penulis: `Node children`, `Pass children`, `The Origin`, `The Parent`, `The Children`, `The Ancestor`, `Child Order`, `Anc. Level`, `Depth`, `Not Found`. Perlu diverifikasi dengan screenshot.
+*   **Analogi keluarga dari penulis** ("jika node adalah saya, depth 1 adalah ayah saya") hanya untuk pemahaman Claude, tidak ditulis di dokumentasi.
+*   **Belum terkonfirmasi:** output Add Node, ada tidaknya output Error pada Assign Node, pemeriksaan konflik Name atau Order pada Node Setter dan Add Node, dampak Order terhadap Node saudara, perilaku Assign Node (berpindah dari Parent lama, Parent keturunan sendiri, Node Origin), nasib Node anak dan perilaku Node Origin pada Delete Node, definisi Node "sudah digunakan", apakah Origin dihitung sebagai Anc. Level 1, kondisi Not Found pada Depth < 1, status block pada Not Found (Succeed atau Error), status Fatal Error pada input kosong untuk Tree, Node, Node Get Parent, Node Get Children, dan Node Get Ancestor, serta perilaku bila beberapa anak memiliki Order yang sama.
 
 # Variable (Modul Data)
 

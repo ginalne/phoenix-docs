@@ -383,6 +383,8 @@ Catatan format:
 - Callout "Perubahan oleh Flow tidak memicu Flow kembali" ditulis pada block yang mengubah atau menghapus data (Delete, Setter). Pada Add Variable tidak ditulis karena Variable Event tidak memiliki event create.
 - Callout `>**danger**` untuk penghapusan yang tidak dapat dikembalikan dan `>**warning**` untuk hapus paksa ditulis pada block Delete.
 
+
+
 ### N/A Type
 - Teks merah **N/A Type** pada input block berarti tipe data belum didefinisikan. Ditulis dengan `[[^field|N/A Type]]`.
 - Langkah mendefinisikan: klik kanan pada input ➜ `[[^field|Change Type]]` ➜ pilih tipe data (semua tipe data Phoenix tersedia). Tulis sebagai subbagian bernomor "Menentukan Tipe Data <Nama Input>" pada setiap block yang input-nya memiliki N/A Type (Add Variable dan Variable Setter).
