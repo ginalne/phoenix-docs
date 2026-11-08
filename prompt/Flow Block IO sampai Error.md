@@ -7,9 +7,8 @@
     prompt
 ---
 /phoenix-docs-silverbullet /phoenix-docs-knowledge
-![[prompt/2026-11-09_02-45-23.png]]
 
-![[prompt/2026-11-09_02-29-03.png]]
+![[prompt/2026-11-09_02-57-36.png]]
 Tolong buatkan **8 halaman Flow Block** untuk dokumentasi Phoenix, yaitu halaman per block yang menjadi tujuan tautan pada enam halaman Pengenalan kategori Flow Block yang saya lampirkan (Input dan Output, Query, Modular, Chrono, Error). Enam halaman kategori itu sudah final dan menjadi sumber kebenaran untuk fungsi tiap block, istilah, path, dan alias tautan.
 
 ## Daftar halaman
@@ -21,7 +20,7 @@ Seluruh path berada di bawah `Docs/Modul Logic/Flow/Flow Block/`. Alias tautan m
 | 1 | Input dan Output | `Input dan Output/Branch` | Branch Block |
 | 2 | Input dan Output | `Input dan Output/Passer` | Passer Block |
 | 3 | Query | `Query/Condition/Equal Condition` | Condition Query Block |
-| 4 | Query | `Query/Execute/Table Get Id` | Execute Query Block |
+| 4 | Query | `Query/Execute/Table Output` | Execute Query Block |
 | 5 | Modular (API) | `Modular/API/HTTP Request` | HTTP Request API Block |
 | 6 | Modular (AI) | `Modular/AI/OpenAI 4` | OpenAI 4 AI Block |
 | 7 | Chrono | `Chrono/Delay` | Delay Chrono Block |
