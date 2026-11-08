@@ -7,6 +7,7 @@
     prompt
 ---
 /phoenix-docs-silverbullet /phoenix-docs-knowledge
+![[prompt/2026-11-09_02-45-23.png]]
 
 ![[prompt/2026-11-09_02-29-03.png]]
 Tolong buatkan **8 halaman Flow Block** untuk dokumentasi Phoenix, yaitu halaman per block yang menjadi tujuan tautan pada enam halaman Pengenalan kategori Flow Block yang saya lampirkan (Input dan Output, Query, Modular, Chrono, Error). Enam halaman kategori itu sudah final dan menjadi sumber kebenaran untuk fungsi tiap block, istilah, path, dan alias tautan.
