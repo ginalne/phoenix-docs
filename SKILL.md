@@ -372,7 +372,7 @@ Catatan format:
 - Heading **Input dan Output** (bukan "Input, Control dan Output") karena block Data tidak memiliki Control. Hanya judul bagian yang relevan yang ditulis. TL:DR dan FAQ tidak dipakai pada halaman block.
 - Urutan bagian: callout note kelompok, paragraf definisi, gambar `<nama-block>-block-flow.png`, Input dan Output (tabel Input dan tabel Output), Cara Kerja, Contoh Penggunaan (tabel kombinasi kondisi dan output), Praktik Terbaik, Batasan dan Catatan, Lihat Juga.
 - **Jangan menulis atribut `pageDecoration` di front matter.** Front matter hanya berisi `status`, `title`, dan `description`. Tetap ikuti format frontmatter dari hasil revisi, bukan untuk dipelajari.
-- Output yang tidak relevan dengan suatu kasus tidak meneruskan aliran dengan ditulis "-" pada tabel (bukan `[[^value/empty]]` dan bukan `[[^value/boolean/false]]`). Output flag (Is ..., Succeed, Error, Name Conflict) ditulis "`[[^value/boolean/true]]`" pada kasusnya.
+- Output yang tidak relevan dengan suatu kasus tidak meneruskan aliran dengan ditulis "-" pada tabel (bukan `[[^value/empty]]` dan bukan `[[^value/boolean/false]]`). Output flag (Is ..., Succeed, Error, Name Conflict) ditulis "`[[^value/boolean/true]]`" pada kasusnya. Output yang tetap meneruskan aliran tetapi bernilai kosong (contoh: Header pada Table Column untuk Column tanpa Header, Pass pada TableData Setter dengan Value kosong) ditulis `[[^value/empty]]`, bukan "-".
 - Setiap tabel Output dan tabel Contoh Penggunaan menjelaskan kapan output meneruskan aliran dan kapan tidak. Setelah tabel Output, tautkan aturannya dengan `[[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]]`.
 - Karena output tunggal hanya meneruskan aliran pada kasusnya, jangan menyarankan Branch Block untuk memisahkan alur dari output flag. Sarankan menghubungkan block penanganan langsung ke output tersebut.
 - Field bertipe Variable adalah pilihan (select option). Tulis "Isi dengan Variable Data atau hubungkan dari output block lain", bukan "isi dengan Name atau alias".
@@ -380,14 +380,30 @@ Catatan format:
 - Kondisi yang tidak mungkin terjadi karena input berupa pilihan (misalnya "Variable tidak valid") tidak ditulis di tabel Contoh Penggunaan. Tulis hanya kondisi "dibiarkan kosong".
 - Untuk Variable Data yang berelasi, gunakan istilah "sudah digunakan" (sedang dipakai pada Flow atau data lain, atau tercatat di riwayat activity) alih-alih "relasi atau histori".
 - Block non-Event selalu menautkan `Flow Block/Syarat Eksekusi` pada Batasan dan Catatan.
-- Callout "Perubahan oleh Flow tidak memicu Flow kembali" ditulis pada block yang mengubah atau menghapus data (Delete, Setter). Pada Add Variable tidak ditulis karena Variable Event tidak memiliki event create.
+- Callout "Perubahan oleh Flow tidak memicu Flow kembali" ditulis pada block yang mengubah atau menghapus data (Delete, Setter). Pada Add Variable tidak ditulis karena Variable Event tidak memiliki event create. Pada Add Row ditulis karena Table Row Event memiliki event create.
 - Callout `>**danger**` untuk penghapusan yang tidak dapat dikembalikan dan `>**warning**` untuk hapus paksa ditulis pada block Delete.
 
+### Deskripsi Input dan Output serta Contoh Penggunaan (block Data)
+Koreksi penulis pada halaman Data Table: draf pertama kekurangan deskripsi pada dua bagian ini. Wajib ada pada setiap halaman block Data, termasuk Setter.
+- **Paragraf pembuka Input dan Output** (tepat setelah heading, sebelum subbagian Input), satu paragraf: "<Nama> Block memiliki <n> input di sisi kiri, <m> output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]]." Jangan memecahnya menjadi "tidak memiliki Control" dan "Block ini memiliki ..." sebagai dua kalimat. Nama block selalu ditulis "<Nama> Block".
+- **Tabel Output:** sel Keterangan menjelaskan dengan kalimat kapan output meneruskan aliran (contoh: "[[^value/boolean/true]] bila Row berhasil dihapus dan aliran diteruskan"). Jangan menulis "(`-`)" atau ", selain itu `-`" di dalam sel karena arti "-" sudah dijelaskan di paragraf pembuka.
+- **Setelah tabel Output** pada block yang memiliki output kondisi (Succeed, Error, Is Empty, Value Conflict): "Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang tidak meneruskan aliran tidak akan dieksekusi, sesuai [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]]." Block tanpa output kondisi cukup memakai "Selengkapnya lihat [[...|aturan Output Flow Block]]".
+- **Callout `>**note** Mengelola Error`** setelah penjelasan output pada block yang memiliki output Error (Delete Row): hubungkan output Error ke block penanganan agar Flow dapat memberi tahu pengguna, dan block itu hanya dieksekusi bila kegagalan terjadi. Penulis belum menentukan callout serupa untuk Value Conflict (Setter) dan Is Empty (Getter); tanyakan sebelum menambahkan.
+- **Contoh Penggunaan:** setelah tabel kombinasi, tulis satu kalimat: "Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]]." Sebut hanya status yang ada pada tabel. Tulis `[[^flowstate|<Status>]]` dengan pipa (bukan `[[^flowstate/<Status>]]`) dan dengan satu spasi setelah kata "Status".
+- **Format:** setelah TODO dihapus, tetap beri baris kosong antara gambar dan heading atau callout berikutnya.
+- **Terkonfirmasi penulis:** semua asumsi yang ditandai TODO pada tujuh halaman Data Table tepat dan boleh dihapus dari versi final.
 
-
+### Halaman block Data Table
+- Path: `Docs/Modul Logic/Flow/Flow Block/Data Table/<Nama Block>`. Gambar: `<nama-block>-block-flow.png` di folder yang sama (contoh `add-row-block-flow.png`, `tabledata-getter-block-flow.png`).
+- Block: Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, TableData Setter. Tanpa Control.
+- Tabel Contoh Penggunaan block Data memakai kolom tambahan **Status** dengan `[[^flowstate|Succeed]]`, `[[^flowstate|Error]]`, atau `[[^flowstate|Fatal Error]]`.
+- Delete Row: Force yang dibiarkan kosong adalah Fatal Error (berbeda dengan Delete EnumData yang memperlakukan Force kosong sebagai false). Row "sudah digunakan" memakai definisi yang sama seperti Variable Data.
+- Table Column: output Header mengikuti tipe data Column dan tetap meneruskan aliran bernilai `[[^value/empty]]` bila Column tidak memiliki Header. Table Row: output Pass, Index (Number, ID Row pada tampilan Table), Table.
+- TableData Getter dan Setter: Column dan Row harus berasal dari Table yang sama. Getter mengeluarkan Is Empty true bila TableData kosong atau tidak ditemukan. Setter berstatus Error bila Row atau Column tidak ditemukan, Value Conflict true bila Value berisi tetapi tipenya tidak sesuai Column, dan Value kosong selalu valid tanpa memeriksa tipe.
 ### N/A Type
 - Teks merah **N/A Type** pada input block berarti tipe data belum didefinisikan. Ditulis dengan `[[^field|N/A Type]]`.
 - Langkah mendefinisikan: klik kanan pada input ➜ `[[^field|Change Type]]` ➜ pilih tipe data (semua tipe data Phoenix tersedia). Tulis sebagai subbagian bernomor "Menentukan Tipe Data <Nama Input>" pada setiap block yang input-nya memiliki N/A Type (Add Variable dan Variable Setter).
+- Input yang tipenya dapat diganti tetapi bukan N/A Type memakai langkah yang sama. Contoh: input `[[^input|Row]]` pada TableData Getter dan TableData Setter (tampil "Empty", tipe dapat diganti ke Number atau String berisi Index Row; subbagian "Menentukan Tipe Data Row"). Pada TableData Setter, input `[[^input|Value]]` yang masih N/A Type menghasilkan Fatal Error.
 
 ### Halaman per block
 - Front matter: `status`, `title`, `description`, `pageDecoration.icon: zap`, `pageDecoration.tree.priority`. Tulis tanpa indentasi di awal baris.
