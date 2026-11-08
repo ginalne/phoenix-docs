@@ -1,8 +1,10 @@
 ---
   pageDecoration:
     tree:
-      priority: 
+      priority: -16
   tags:
     meta
     prompt
 ---
+
+![[prompt/Screenshot_20261108_192341.jpg]]
