@@ -16,7 +16,6 @@ Flow Block Input dan Output adalah kategori [[Docs/Modul Logic/Flow/Flow Block/P
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur, block Input dan Output bekerja setelah menerima data dari block sebelumnya, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Berbeda pula dengan [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] yang mengolah isi data, block Input dan Output berfokus pada jalur aliran data, bukan pada isi data itu sendiri.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Input dan Output/io-block-flow.png|Dua Flow Block Input dan Output pada Blueprint: Branch dan Passer]]
-
 <!--
   * [DONE] Tambahkan screenshot Blueprint yang memuat Branch dan Passer dengan nama file `io-block-flow.png`. Anotasi yang disarankan: nomor 1 pada Branch dan nomor 2 pada Passer, termasuk input di sisi kiri dan output di sisi kanan masing-masing.
 -->

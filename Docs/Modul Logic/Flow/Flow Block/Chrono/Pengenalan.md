@@ -16,7 +16,6 @@ Flow Block Chrono adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur, block Chrono bekerja setelah menerima data dari block sebelumnya, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Block Chrono juga berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser Event Block]] yang memulai alur pada waktu tertentu lewat [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]]: Pulser menentukan kapan alur dimulai, sedangkan block Chrono mengatur jeda di tengah alur yang sedang berjalan.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Chrono/chrono-block-flow.png|Satu Flow Block Chrono pada Blueprint: Delay]]
-
 <!--
   * [DONE] Tambahkan screenshot Blueprint yang memuat Delay dengan nama file `chrono-block-flow.png`. Anotasi yang disarankan: nomor 1 pada Delay, termasuk input di sisi kiri dan output di sisi kanan.
 -->
