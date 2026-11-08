@@ -44,9 +44,9 @@ Phoenix menyediakan dua belas Flow Block Operator yang dikelompokkan berdasarkan
 
 <!--
   * [TODO] Konfirmasi fungsi Increment Operator Block. Draf menyebut "menambah nilai Number". Apakah penambahnya dapat ditentukan (langkah tertentu), atau selalu bertambah satu?
-    Jawaban: Ada langkah yang ditentukan, akan dijelaskan lebih detail dalam halamannya sendiri
+    Jawaban: Ada langkah yang ditentukan, akan dijelaskan lebih detail dalam halamannya sendiri.
   * [TODO] Konfirmasi input utama Implode Operator Block. Draf menyebut "sekumpulan nilai" karena input utamanya mungkin [[Docs/Tipe Data/Array]], padahal block ini dikelompokkan pada String.
-    Jawaban: 
+    Jawaban: Iya dikelompokkan dalam string, karena Array yang dimaksud juga bertipe string
   * [TODO] Konfirmasi fungsi TableRow Parse dan Node Parse Operator Block, termasuk bentuk hasil urainya (apakah menghasilkan [[Docs/Tipe Data/Object]] atau output per atribut).
   * [TODO] Konfirmasi fungsi Assign Operator Block. Draf menyebut "menetapkan nilai pada Object". Apakah yang ditetapkan adalah satu atribut (key) atau seluruh isi Object?
   * [TODO] Konfirmasi fungsi If Operator Block. Draf menyebut "menentukan hasil berdasarkan kondisi". Apakah block ini memilih nilai (seperti *ternary*) atau menentukan jalur aliran? Perlu dibedakan dengan [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Branch|Branch Block]].
