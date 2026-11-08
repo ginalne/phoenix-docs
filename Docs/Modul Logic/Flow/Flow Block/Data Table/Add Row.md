@@ -13,7 +13,7 @@ Add Row Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Row]] baru ke 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Table/add-row-block-flow.png|Add Row Block pada Blueprint]]
 ## Input dan Output
 
-Add Row Block memiliki satu input di sisi kiri, satu output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
+Add Row Block memiliki satu input di sisi kiri, satu output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada aliran keluar. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
@@ -59,7 +59,6 @@ Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil 
 
 - Row baru tidak memiliki [[Docs/Tipe Data/TableData]], sehingga semua kolomnya kosong sampai diisi.
 - [[^output|Index]] dibuat otomatis oleh sistem dan tidak dapat ditentukan lewat block ini.
-- Bila [[^input|Table]] kosong, [[^output|New Row]] tidak meneruskan aliran dan pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 - Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

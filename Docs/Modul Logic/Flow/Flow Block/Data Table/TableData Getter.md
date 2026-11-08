@@ -13,7 +13,7 @@ TableData Getter Block adalah Flow Block yang mengambil nilai [[Docs/Tipe Data/T
 ![[Docs/Modul Logic/Flow/Flow Block/Data Table/tabledata-getter-block-flow.png|TableData Getter Block pada Blueprint]]
 ## Input dan Output
 
-TableData Getter Block memiliki dua input di sisi kiri, dua output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
+TableData Getter Block memiliki dua input di sisi kiri, dua output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada aliran keluar. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
@@ -72,7 +72,6 @@ Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan err
 
 - Block ini hanya membaca [[Docs/Tipe Data/TableData]] dan tidak mengubahnya. Untuk mengubah nilainya gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Table/TableData Setter|TableData Setter Block]].
 - [[Docs/Tipe Data/TableData]] yang tidak berisi dan [[Docs/Tipe Data/TableData]] yang tidak ditemukan sama-sama menghasilkan [[^output|Is Empty]] [[^value/boolean/true]].
-- [[^input|Column]] atau [[^input|Row]] yang dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. Pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 - Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

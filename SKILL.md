@@ -117,7 +117,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 | Kaidah Query | `[[Docs/Query/Output/<kaidah>|<kaidah> Output]]` | Single, Series, Multi Series, Table | `[[Docs/Query/Output/Series|Series Output]]`|
 | Label input dalam Flow Block | `[[^input|<Label>]]` | Nama label dalam input antarmuka Flow Block | `[[^output|Conflict Name]]`|
 | Label output dalam Flow Block | `[[^output|<Label>]]` | Nama label dalam output antarmuka Flow Block | `[[^output|Conflict Name]]`|
-| Status Activity | `[[^flowstate|<Status>]]` | Succeed, Error, Fatal Error | `[[^flowstate|Succeed]]`|
+| Status Activity | `[[^flowstate/<Status>]]` | Succeed, Error, Fatal Error | `[[^flowstate/Succeed]]`|
 
 Catatan label: bila label field berupa placeholder di antarmuka, tulis persis termasuk titik tiga (contoh: `[[^field|Select Data Format...]]`, `[[^field|Search Table Data...]]`). Nama kolom, tombol, atau elemen antarmuka tidak dicetak tebal; selalu pakai `[[^field|...]]` atau `[[^button|...]]`.
 
