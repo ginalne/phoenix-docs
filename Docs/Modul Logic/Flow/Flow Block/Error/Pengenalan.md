@@ -34,7 +34,7 @@ Phoenix menyediakan satu Flow Block Error.
   * [TODO] Konfirmasi fungsi Error Message Block. Draf menyebut "mengatur pesan error yang ditampilkan". Apakah block ini menimbulkan error baru dengan pesan buatan sendiri, atau mengganti pesan dari error yang sudah terjadi? Apakah pesannya tampil di Flow Activity saja?
     Jawaban: Ya, membuat error baru dengan pesan yang di modifikasi. Saat tereksekusi, pesannya akan mengakibatkan semua aliran dihentikan dan menghasilkan output pesan errror di activity.
   * [TODO] Konfirmasi kalimat tentang status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] pada paragraf pembuka, terutama apakah Error Message Block memengaruhi status tersebut.
-    Jawaban: 
+    Jawaban: Ya betul
   * [TODO] Halaman block yang diusulkan: `Docs/Modul Logic/Flow/Flow Block/Error/Error Message`, berisi Input dan Output, Cara Kerja, Contoh Penggunaan, Praktik Terbaik, serta Batasan dan Catatan.
     Jawaban: Ya, tapi akan dilanjutkan nanti, jangan sekarang.
 -->
@@ -43,7 +43,7 @@ Phoenix menyediakan satu Flow Block Error.
 
 | Kebutuhan Anda | Block yang dipilih |
 | --- | --- |
-| Mengatur pesan error agar lebih jelas bagi pembaca [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. | [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message|Error Message Block]] |
+| Mengatur pesan error agar lebih jelas bagi pembaca [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]] atau Anda yang melakukan trigger event ke Flow. | [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message|Error Message Block]] |
 
 ## Lihat Juga
 
