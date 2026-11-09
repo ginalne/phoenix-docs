@@ -3,10 +3,6 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 0
+        priority: 9
 ---
-# Apa itu Pro?
-
-<!--
-@john29 ini apa??
--->
+# Membuat Pro
