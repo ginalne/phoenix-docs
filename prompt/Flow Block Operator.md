@@ -38,12 +38,26 @@ Catatan: kelompok tipe data pada Operator tidak memiliki halaman Pengenalan send
 
 
 ## Concatenate
+Menghubungkan dua string input menjadi satu string. Tidak dapat error karena jika salah satu dibiarkan empty maka hasilnya adalah salah satu yang diinput.
+
 ## Implode
+Menggabungkan input bertipe data string atau array dengan isi string, dengan separator.
+
 ## Pad Left
+Menambahkan data String dengan Pad String disebelah kiri sampai dengan panjang string sesuai dengan Length. Fatal Error jika String atau Pad String dibiarkan kosong.
+
 ## Pad Right
+Menambahkan data String dengan Pad String disebelah kanan sampai dengan panjang string sesuai dengan Length.Fatal Error jika String atau Pad String dibiarkan kosong.
+
 ## TableRow Parse
+Mengubah input Row menjadi data object dan text (jika output nya terelasi), dengan Input Rel. Depth untuk relasi keadalamannya. Relasi kedalaman yang dimaksud adalah jika kolom pada Row memiliki relasi ke data lain, maka hasil dari kolom tersebut akan ditelusuri sehingga data menjadi semakin rinci. Fatal Error jika Row dibiarkan error. Rel. Depth yang kosong dianggap bernilai 0.
+
 ## Assign
+Menambahkan atribut pada object dengan input Key sebagai key, dan Value adalah bertipe data object atau string (dapat di change type, namun bawaannya adalah object). Key ditulis dengan simbol “.” untuk mengisi object di kedalaman, semisal ditulis “job.status.level” artinya akan mengisi di atribut job -> status -> level. Fatal Erro jika Key atau Value dibiarkan kosong. Assign bersifat override, jadi jika ada data sebelumnya pada key, maka akan ditimpa. Output Object adalah hasilnya.
+
 ## Merge
+Menggabungkan Objects yaitu input bertipe array dengan tipe object. Merge akan menimpa data pertama dengan data selanjutnya pada atribut yang spesifik sama. Jadi jika data saling mengisi pada kedalaman tertentu maka tidak ada yang ditimpa. Fatal Error jika Objects dibiarkan kosong. Result adalah output bertipe data object.
+
 ## Parse
 ## Stringify
 ## If
