@@ -40,10 +40,6 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 3. Bila anak ditemukan, hanya [[^output|The Children (Node)]] yang meneruskan aliran.
 4. Bila tidak ditemukan, hanya [[^output|Not Found]] yang meneruskan aliran.
 
-<!--
-  * [TODO] Konfirmasi: status block pada kasus Not Found diasumsikan Error (seperti Is Empty pada TableData Getter), tanpa output lain yang meneruskan aliran.
--->
-
 ## Contoh Penggunaan
 
 Tabel berikut memakai Node [[^value/node|Elektronik]] yang memiliki anak [[^value/node|Komputer]] (Order [[^value/number|0]]) dan [[^value/node|Ponsel]] (Order [[^value/number|1]]). Node [[^value/node|Laptop]] adalah anak dari [[^value/node|Komputer]].

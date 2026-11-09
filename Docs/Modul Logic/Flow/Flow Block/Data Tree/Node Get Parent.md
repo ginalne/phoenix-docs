@@ -40,10 +40,6 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 3. Bila parent ditemukan, hanya [[^output|The Parent (Node)]] yang meneruskan aliran.
 4. Bila tidak ditemukan, hanya [[^output|Not Found]] yang meneruskan aliran.
 
-<!--
-  * [TODO] Konfirmasi: status block pada kasus Not Found diasumsikan Error (seperti Is Empty pada TableData Getter), tanpa output lain yang meneruskan aliran.
--->
-
 ## Contoh Penggunaan
 
 Tabel berikut memakai Node [[^value/node|Laptop]] pada silsilah Origin ➜ Elektronik ➜ Komputer ➜ Laptop.

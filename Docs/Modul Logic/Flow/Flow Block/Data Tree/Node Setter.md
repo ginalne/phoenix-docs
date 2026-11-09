@@ -79,7 +79,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 - [[^input|Order]] bernilai minimal [[^value/number|0]].
 - [[^input|Name]] dan [[^input|Order]] hanya diperiksa terhadap saudara kandung, yaitu Node lain dengan parent yang sama.
-- Karena bukan Flow Block Event, Node Setter Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Node Setter Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
