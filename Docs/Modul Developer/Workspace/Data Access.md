@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Data Access
-description: Penjelasan Data Access, hak akses pada Workspace yang mengatur siapa yang boleh menambah, mengubah, dan menghapus data di dalam komponen, termasuk data yang diatur pada setiap komponen.
+    status: release
+    title: "Data Access"
+    description: Penjelasan Data Access, hak akses pada Workspace yang mengatur siapa yang boleh menambah, mengubah, dan menghapus data di dalam komponen, termasuk data yang diatur pada setiap komponen.
+    pageDecoration:
+      tree:
+        priority: 2
 ---
-
 # Data Access
 
 >**note** Data Access merupakan salah satu hak akses pada komponen [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.

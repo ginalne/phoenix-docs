@@ -1,7 +1,7 @@
 ---
     status: release
     title: "Antarmuka Group"
-    description: Penjelasan antarmuka di halaman kerja komponen Canvas
+    description: Penjelasan antarmuka di halaman kerja komponen Group
     pageDecoration:
       tree:
         priority: 0

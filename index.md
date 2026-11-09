@@ -6,6 +6,7 @@
         priority: -3
 ---
 # Welcome to Phoenix Docs
+
 Sebagai pembaca saya harap anda dapat mengabaikan halaman ini, berikut adalah tips dan aturan yang berlaku saat menulis dokumentasi ini:
 
 >**warning** Wajib dibaca oleh penulis!

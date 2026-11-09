@@ -1,5 +1,15 @@
+---
+    status: release
+    title: "FAQ : Workspace"
+    description: Pertanyaan yang sering diajukan pada komponen Workspace
+    pageDecoration:
+      tree:
+        priority: -10
+---
+# FAQ : Workspace
 
-## FAQ : Pertanyaan yang Sering Diajukan
+Berikut adalah pertanyaan yang sering diajukan pada komponen Workspace:
+
 >**faq**
 >**Bagaimana pengguna dapat memakai Workspace?**
 >Pengguna harus dipetakan ke Workspace melalui komponen [[Docs/Modul Developer/Group/Apa itu Group|Group]]. Setelah itu, saat membuka Phoenix mereka akan masuk ke Workspace yang terakhir dipakai.

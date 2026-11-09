@@ -1,7 +1,7 @@
 ---
     status: release
-    title: "Cara Kerja Flow"
-    description: Penjelasan cara kerja komponen Flow
+    title: "Cara Kerja Group"
+    description: Penjelasan cara kerja komponen Group
     pageDecoration:
       tree:
         priority: 3

@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Function Access
-description: Penjelasan Function Access, hak akses pada Workspace yang mengatur fungsi tambahan komponen seperti Merge, Modify Event, View Publish, dan Publish.
+    status: release
+    title: Function Access
+    description: Penjelasan Function Access, hak akses pada Workspace yang mengatur fungsi tambahan komponen seperti Merge, Modify Event, View Publish, dan Publish.
+    pageDecoration:
+      tree:
+        priority: 1
 ---
-
 # Function Access
 
 >**note** Function Access merupakan salah satu hak akses pada komponen [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.

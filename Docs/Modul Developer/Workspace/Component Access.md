@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Component Access
-description: Penjelasan Component Access, hak akses level komponen pada Workspace yang mengatur apakah folder dan komponen tampil, dapat ditambah, diubah, dihapus, dan dipindahkan.
+    status: release
+    title: Component Access
+    description: Penjelasan Component Access, hak akses level komponen pada Workspace yang mengatur apakah folder dan komponen tampil, dapat ditambah, diubah, dihapus, dan dipindahkan.
+    pageDecoration:
+      tree:
+        priority: 3
 ---
-
 # Component Access
 
 >**note** Component Access merupakan salah satu hak akses pada komponen [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.

@@ -1,7 +1,7 @@
 ---
     status: release
-    title: "Mengubah Canvas"
-    description: Penjelasan cara mengubah komponen Canvas
+    title: "Mengubah Group"
+    description: Penjelasan cara mengubah komponen Group
     pageDecoration: 
       tree: 
           priority: 1

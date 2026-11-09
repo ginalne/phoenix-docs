@@ -27,7 +27,7 @@ Sebuah organisasi memiliki beberapa tim dengan kebutuhan Workspace yang berbeda.
 | ------- | ---- | ----- |
 | 1 | Buat Group induk dan Group anak. Lihat [[#Membuat Group]] dan [[#Mengelola Group Anak]]. | Struktur tim tersusun. |
 | 2 | Tambahkan Workspace ke setiap Group, termasuk Group anak. Lihat [[#Mengelola Workspace dalam Group]]. | Setiap Group memiliki akses yang tepat. |
-| 3 | User baru terdaftar di [[Inisialisasi/Apa itu Pro|Pro]]. | Sistem menempatkan User ke Group berstatus default. |
+| 3 | User baru terdaftar di [[Docs/Dasar/Apa itu Pro|Pro]]. | Sistem menempatkan User ke Group berstatus default. |
 | 4 | Pindahkan User ke Group tim dengan *drag and drop*. Lihat [[#Mengelola User dalam Group]]. | Akses User langsung mengikuti Workspace Group tujuan. |
 
 ## Hasil yang dirasakan

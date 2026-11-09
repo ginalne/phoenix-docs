@@ -9,8 +9,8 @@
   />
 </svg>
 '
-    tree:
-      priority: 4
+      tree:
+        priority: 10
 ---
 # Apa itu Workspace?
 
@@ -38,51 +38,31 @@ Aturan yang sama berlaku untuk komponen di modul [[Docs/Modul Data/Pengenalan|Da
 | Istilah | Penjelasan |
 | --- | --- |
 | [[#Cara Kerja Workspace|Workspace]] | Komponen untuk mengatur ruang kerja pengembangan, yaitu komponen yang dapat dilihat, dikelola, dan diubah, serta fungsi di dalamnya. |
-| [[#Cara Kerja Workspace|Origin]] | Workspace bawaan utama sekaligus folder paling atas yang dimiliki setiap [[Docs/Inisialisasi/Apa itu Pro|Pro]]. Seluruh hak akses Origin bernilai [[^value/boolean/allow]], dan Origin otomatis terhubung ke Group bawaan [[^field/group|Administrator]]. |
+| [[#Cara Kerja Workspace|Origin]] | Workspace bawaan utama sekaligus folder paling atas yang dimiliki setiap [[Docs/Dasar/Apa itu Pro|Pro]]. Seluruh hak akses Origin bernilai [[^value/boolean/allow]], dan Origin otomatis terhubung ke Group bawaan [[^field/group|Administrator]]. |
 | [[#Cara Kerja Workspace|Root]] | Folder paling atas pada halaman kerja Workspace. Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itulah yang menjadi root. |
 | [[#Berpindah Workspace|Workspace aktif]] | Workspace yang sedang dipakai pengguna. Workspace aktif menentukan struktur folder dan hak akses yang berlaku, serta ditampilkan pada Area Manajemen Folder. |
 | [[Docs/Modul Developer/Group/Apa itu Group|Group]] | Kumpulan pengguna yang dipetakan ke Workspace. Pada halaman kerja, Group tampil sebagai baris dengan angka jumlah anggotanya. Setiap Pro memiliki Group bawaan bernama [[^field/group|Administrator]]. |
 | [[Docs/Folder/Apa itu Folder?|Folder]] | Wadah yang berisi banyak komponen dan dapat diperluas atau dilipat. |
-| [[Docs/Dasar/Apa itu Komponen?|Komponen]] | Isi folder yang hak aksesnya diatur oleh Workspace. Selengkapnya lihat [[Docs/Dasar/Apa itu Komponen?]]. |
+| [[Docs/Dasar/Apa itu Komponen|Komponen]] | Isi folder yang hak aksesnya diatur oleh Workspace. Selengkapnya lihat [[Docs/Dasar/Apa itu Komponen]]. |
 | [[Docs/Modul Developer/Workspace/Component Access]] | Hak akses pada level komponen (header): [[^field|Visible]], [[^field|Add]], [[^field|Update]], [[^field|Delete]]. |
 | [[Docs/Modul Developer/Workspace/Data Access|Data Access]] | Hak akses pada level data: [[^field|Add]], [[^field|Update]], [[^field|Delete]]. |
 | [[Docs/Modul Developer/Workspace/Function Access]] | Hak akses pada fungsi komponen: [[^field|Merge]], [[^field|Modify Event]], [[^field|View Publish]], [[^field|Publish]]. |
 | [[^value/boolean/allow]] / [[^value/boolean/disallow]] | Nilai pengaturan akses. [[^value/boolean/allow]] berarti diizinkan, [[^value/boolean/disallow]] berarti tidak diizinkan. |
 
+## Cara Kerja
 
-## Halaman Kerja Workspace
+Penjelasan cara kerja Workspace lihat selengkap nya di [[Docs/Modul Developer/Workspace/Cara Kerja|Cara Kerja Workspace]].
 
-![[Docs/Modul Developer/Workspace/antarmuka-workspace.png]]
-Halaman kerja Workspace menampilkan seluruh struktur ruang kerja dalam satu tabel. Kolom paling kiri berisi daftar [[^field|Folder/ Component]], sedangkan kolom di sebelah kanannya berisi hak akses yang dikelompokkan menjadi [[^field|Component Access]], [[^field|Data Access]], dan [[^field|Function Access]].
+## Mengelola Workspace
 
-Bilah navigasi Workspace hanya memiliki dua tombol:
+Berikut adalah halaman yang menjelaskan cara untuk mengelolanya:
+1. [[Docs/Modul Developer/Workspace/Membuat Baru|Membuat Workspace baru]]
+2. [[Docs/Modul Developer/Workspace/Mengubah]] Atribut Workspace seperti [[^field|Name]], [[^field|Parent]], atau [[^field|Description]].
+3. [[Docs/Modul Developer/Workspace/Menghapus]] Workspace.
 
-| Tombol | Fungsi |
-| --- | --- |
-| [[^button/edit|Edit]] | Mengubah atribut Workspace seperti [[^field|Name]] dan [[^field|Description]]. |
-| [[^button/refresh|Refresh]] | Memuat ulang halaman kerja. |
+## Antarmuka
 
-### Membaca Baris
-
-| Baris | Penjelasan |
-| --- | --- |
-| [[^field/workspace|Origin]] | Workspace. Biasanya baris paling atas. |
-| [[^field/group|Administrator]] | [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang terhubung ke Workspace. Baris Group hanya mengatur akses dari Workspace ke komponen Group tersebut, bukan akses per anggota. |
-| [[^field/folder|Folder]] | Contoh [[Docs/Folder/Apa itu Folder?|Folder]], klik untuk melihat komponen di dalamnya. |
-| [[^field/variable|Variable]], [[^field/enum|Role]], [[^field/table|Employee]], [[^field/tree|Organizational Structures]] | Contoh [[Docs/Dasar/Apa itu Komponen?|Komponen]], setiap komponen memiliki ikon sesuai jenisnya dan informasi datanya di samping nama. Lihat [[Docs/Folder/Apa itu Folder?#Informasi Data]]. |
-
-Sel yang kosong pada kolom hak akses berarti hak akses tersebut tidak relevan untuk komponen itu.
-
-### Interaksi Antarmuka Workspace
-
-| Fungsi | Aksi |
-| --- | --- |
-| Memperluas atau melipat folder | Klik folder pada kolom [[^field|Folder/ Component]]. |
-| Memindahkan folder atau komponen | *Drag and drop* ke posisi tujuan, baik untuk mengubah urutan maupun memindahkannya ke folder lain. Mengubah urutan di dalam folder yang sama tidak memerlukan [[^field|Add]] maupun [[^field|Delete]]. Memindahkan ke folder lain memerlukan [[^field|Delete]] pada folder atau komponen yang dipindahkan, dan [[^field|Add]] pada folder tujuan. Lihat [[Docs/Modul Developer/Workspace/Component Access#Memindahkan Folder atau Komponen|Memindahkan Folder atau Komponen]]. |
-| Mengubah hak akses | Klik tombol toggle pada sel di kolom hak akses. Lihat [[#Mengatur Hak Akses]]. |
-
->**warning** Memindahkan mengubah struktur folder Pro
->Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder atau komponen di halaman kerja Workspace juga mengubah struktur folder Pro.
+Penjelasan antarmuka Workspace lihat selengkap nya di [[Docs/Modul Developer/Workspace/Antarmuka|Antarmuka Workspace]].
 
 ## Mengatur Hak Akses
 
@@ -152,22 +132,6 @@ Function Access mengatur fungsi tambahan pada komponen. Hak akses ini hanya ters
 
 Komponen yang memiliki setiap fungsi, perbedaan View Publish dan Publish, serta peringatan tentang tautan publik dijelaskan lengkap di [[Docs/Modul Developer/Workspace/Function Access]].
 
-## Praktik Terbaik
-
-- **Atur folder terlebih dahulu** untuk merapikan tampilan di Area Manajemen Folder dan mengatur penambahan komponen, lalu sesuaikan [[^field|Visible]], Data Access, dan Function Access pada setiap komponen.
-- **Berikan akses seminimal mungkin** (*least privilege*) sesuai kebutuhan kerja setiap [[Docs/Modul Developer/Group/Apa itu Group|Group]].
-- **Gunakan [[^field|Visible]] = [[^value/boolean/disallow]] pada komponen** untuk menutupnya sepenuhnya, termasuk dari pilihan *field* dan Query. Pada folder, [[^field|Visible]] hanya menyembunyikan isinya dari [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]].
-- **Sembunyikan komponen sumber setelah Query terisi**, karena [[^field|Visible]] pada komponen sumber hanya dibutuhkan saat mengisi Query.
-- **Pisahkan Function Access** untuk [[^field|Publish]] dan [[^field|View Publish]], sehingga tidak semua anggota dapat mengubah konfigurasi publikasi.
-- **Berikan [[^field|Publish]] dengan hati-hati** karena tautan publikasi dapat dibuka publik, terutama pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang memiliki widget Button untuk memicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
-- **Periksa dua syarat sekaligus** saat anggota tidak dapat mengubah baris di komponen Interface: Data berstatus `editable` dan [[Docs/Modul Developer/Workspace/Data Access]] komponen sumber bernilai [[^value/boolean/allow]].
-- **Pastikan folder tujuan mengizinkan [[^field|Add]]** sebelum memindahkan folder atau komponen ke folder lain, dan ingat bahwa setiap pemindahan mengubah struktur folder Pro.
-- **Buat Workspace baru dari Workspace yang tepat**, karena nilai awal hak akses mengikuti Workspace yang sedang aktif. Periksa seluruh sel sebelum memetakannya ke [[Docs/Modul Developer/Group/Apa itu Group|Group]].
-- **Isi ulang Workspace di setiap Group**, karena [[Docs/Modul Developer/Group/Apa itu Group|Group]] anak tidak mewarisi Workspace dari Group induk.
-- **Jaga akses administrator.** Hindari menonaktifkan [[^field|Visible]] atau [[^field|Update]] pada komponen Workspace dan Group yang dipakai administrator, karena tidak ada pengaman bawaan yang mencegah pengelolaan akses terkunci.
-- **Berhati-hati saat mengubah akses Group yang sedang aktif**, karena perubahan langsung berlaku tanpa perlu memuat ulang.
-- **Cek hasilnya dengan [[^button/refresh|Refresh]]** setelah mengubah pengaturan akses.
-
 ## Batasan dan Catatan
 
 - Akses Workspace untuk setiap anggota dikelola melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]], bukan langsung pada pengguna.
@@ -196,4 +160,3 @@ Komponen yang memiliki setiap fungsi, perbedaan View Publish dan Publish, serta 
 - Komponen Interface mengikuti **dua syarat**: Data berstatus `editable` dan Data Access data sumber bernilai [[^value/boolean/allow]].
 - Berhati-hatilah dengan [[^field|Publish]] dan dengan pengaturan akses komponen Workspace dan Group: tautan publikasi dapat dibuka publik, dan tidak ada pengaman bawaan untuk akses yang terkunci.
 - Perubahan hak akses langsung berlaku, dan memindahkan folder atau komponen mengubah struktur folder Pro. Halaman kerja Workspace memiliki dua tombol: [[^button/edit|Edit]] dan [[^button/refresh|Refresh]].
-.

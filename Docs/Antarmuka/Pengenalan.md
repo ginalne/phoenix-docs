@@ -35,7 +35,7 @@ Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix deng
 ## Area Manajemen Folder
 
 ![[Docs/Antarmuka/area-manajemen-folder.png|Area Manajemen Folder dan Komponen Phoenix]]
-Bagian ini merupakan tempat Anda mengatur daftar [[Docs/Folder/Apa itu Folder]] dan [[Docs/Folder/Apa itu Komponen|Komponen]] dalam Phoenix dengan rincian seperti berikut:
+Bagian ini merupakan tempat Anda mengatur daftar [[Docs/Dasar/Apa itu Folder|Folder]] dan [[Docs/Dasar/Apa itu Komponen|Komponen]] dalam Phoenix dengan rincian seperti berikut:
 
 | Elemen | Nama | Penjelasan |
 | ---------- | --------- | ---------------- |

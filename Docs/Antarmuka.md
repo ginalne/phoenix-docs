@@ -3,5 +3,5 @@
     pageDecoration:
       icon: folder
       tree:
-        priority: 39
+        priority: 38
 ---

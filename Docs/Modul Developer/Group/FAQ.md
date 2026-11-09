@@ -8,7 +8,7 @@
 ---
 # FAQ : Group
 
-Berikut adalah pertanyaan yang sering diajukan pada komponen Canvas:
+Berikut adalah pertanyaan yang sering diajukan pada komponen Group:
 
 > **faq**
 > **Apa bedanya menambahkan Group dari Area Manajemen Folder dan dari halaman kerja Group?**

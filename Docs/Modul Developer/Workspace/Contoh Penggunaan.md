@@ -1,7 +1,14 @@
+---
+    status: release
+    title: "Contoh Penggunaan Workspace"
+    description: "Penjelasan contoh penggunaan Workspace : Contoh jika Komponen hanya boleh dilihat"
+    pageDecoration:
+      tree:
+        priority: -3
+---
+# Contoh Penggunaan Workspace
 
-## Contoh Penggunaan
-
-**Contoh jika Komponen hanya boleh dilihat**
+## Studi Kasus : Contoh jika Komponen hanya boleh dilihat
 
 | Komponen | Visible | Update | Delete | Data Access | Function Access |
 | --- | --- | --- | --- | --- | --- |
@@ -9,7 +16,7 @@
 
 Anggota Group tetap dapat membuka komponen untuk dibaca, tetapi tidak dapat mengubah struktur, data, maupun konfigurasi publikasinya.
 
-**Mengizinkan tim memperbarui data pelanggan tanpa mengubah pengaturan tampilannya**
+## Mengizinkan tim memperbarui data pelanggan tanpa mengubah pengaturan tampilannya
 
 Tim penjualan perlu menambah dan memperbarui data pelanggan setiap hari, tetapi tidak boleh mengubah Query maupun konfigurasi tampilan, dan tidak boleh menghapus data. Dengan Workspace, kebutuhan ini cukup dipenuhi tanpa membuat komponen baru.
 
@@ -20,7 +27,7 @@ Tim penjualan perlu menambah dan memperbarui data pelanggan setiap hari, tetapi 
 
 [[^field|Visible]] pada [[^field/table|Data Pelanggan]] cukup [[^value/boolean/disallow]] karena Query pada [[^field/tableview|Daftar Pelanggan]] sudah terisi. Baris pada [[^field/tableview|Daftar Pelanggan]] hanya dapat dikelola jika Data berstatus `editable` dan Data Access [[^field/table|Data Pelanggan]] mengizinkan. Jika Data berstatus `readonly`, anggota tetap hanya dapat membaca.
 
-**Ide skenario lain**
+## Ide skenario lain
 
 | Kebutuhan | Pengaturan Workspace |
 | --- | --- |

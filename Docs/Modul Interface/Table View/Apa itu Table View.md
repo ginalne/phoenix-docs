@@ -58,7 +58,7 @@ Penjelasan antarmuka lihat selengkapnya di [[Docs/Modul Interface/Table View/Ant
 - **Tampilkan hanya kolom yang dibutuhkan** dengan [[Docs/Tipe Data/Query#Show or Hide|Show/Hide]] agar tabel mudah dibaca.
 - **Selalu gunakan kaidah [[Docs/Tipe Data/Query#Table Output]]** pada [[Docs/Tipe Data/Query|Query]] agar Data tidak menampilkan [[^field|Query table output is not valid!]].
 - **Pilih porsi layar sesuai kepentingan Data**: [[^value/radio|full]] untuk Data utama, [[^value/radio|half]] atau [[^value/radio|quarter]] untuk Data pendukung.
-- **Atur hak akses di dua tempat.** Pastikan [[Docs/Modul Developer/Workspace/Data Access]] Table dan konfigurasi [[Docs/Modul Interface/Table View/TableViewData|Data]] sesuai dengan siapa yang boleh mengubah baris data.
+- **Atur hak akses di dua tempat.** Pastikan [[Docs/Modul Developer/Workspace/Data Access]] Table dan konfigurasi [[Docs/Modul Interface/Table View/Table View Data/Pengenalan|Data]] sesuai dengan siapa yang boleh mengubah baris data.
 
 ## Batasan dan Catatan
 

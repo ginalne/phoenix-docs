@@ -1,5 +1,12 @@
-
-## Cara Kerja Workspace
+---
+    status: release
+    title: "Cara Kerja Workspace"
+    description: Penjelasan cara kerja komponen Workspace
+    pageDecoration:
+      tree:
+        priority: 9
+---
+# Cara Kerja Workspace
 
 Ketika komponen Group berhasil memetakan pengguna dengan Workspace, maka Workspace dapat digunakan. Saat pengguna membuka Phoenix, mereka akan masuk ke Workspace yang terakhir dipakai, yang sudah memiliki struktur folder. Jika Group memiliki lebih dari satu Workspace, pengguna dapat [[#Berpindah Workspace|berpindah Workspace]].
 
@@ -18,7 +25,8 @@ flowchart TD
 
 Garis putus-putus menandakan bahwa [[Docs/Modul Developer/Workspace/Function Access|Function Access]] hanya tersedia pada komponen yang memiliki fungsi terkait.
 
-Aturan penting:
+## Aturan penting
+
 - Pengguna hanya dapat memakai Workspace setelah dipetakan melalui [[Docs/Modul Developer/Group/Apa itu Group|Group]].
 - Satu pengguna hanya dapat berada di satu [[Docs/Modul Developer/Group/Apa itu Group|Group]], sehingga akses seorang pengguna selalu mengikuti Group tempat ia berada.
 - Satu [[Docs/Modul Developer/Group/Apa itu Group|Group]] dapat dipetakan ke lebih dari satu Workspace.

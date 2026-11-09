@@ -41,7 +41,7 @@ Group anak juga merupakan komponen. Gunakan [[^field|Place to Directory]] untuk 
 2. Untuk konfirmasi penempatan pada dialog yang muncul dengan Klik [[^button|Place]]
 
 >**note** Posisi penempatan
-> Group yang dipilih akan ditempatkan di posisi *root* folder dari [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang sedang aktif. Selengkapnya tentang folder lihat [[Docs/Folder/Apa itu Folder?]].
+> Group yang dipilih akan ditempatkan di posisi *root* folder dari [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang sedang aktif. Selengkapnya tentang folder lihat [[Docs/Dasar/Apa itu Folder]].
 
 ## Menghapus Group Anak
 
