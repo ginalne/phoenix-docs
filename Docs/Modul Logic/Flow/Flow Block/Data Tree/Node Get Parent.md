@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Node Get Parent Block
-description: Flow Block Data Tree yang menelusuri parent sebuah Node ke atas berdasarkan Depth.
+    status: draft
+    title: Node Get Parent Block
+    description: Flow Block Data Tree yang menelusuri parent sebuah Node ke atas berdasarkan Depth.
+    pageDecoration:
+      tree:
+        priority: 12
 ---
-
 # Node Get Parent Block
 
 >**note** Node Get Parent Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -75,3 +77,4 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]]
+

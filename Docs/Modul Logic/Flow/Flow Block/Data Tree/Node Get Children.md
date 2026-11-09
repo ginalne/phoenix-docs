@@ -4,9 +4,8 @@
     description: Flow Block Data Tree yang mengambil anak langsung sebuah Node berdasarkan Order.
     pageDecoration:
       tree:
-        priority: 12
+        priority: 11
 ---
-
 # Node Get Children Block
 
 >**note** Node Get Children Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -77,3 +76,4 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]]
+

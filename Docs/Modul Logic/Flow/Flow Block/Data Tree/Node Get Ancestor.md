@@ -4,7 +4,7 @@
     description: Flow Block Data Tree yang mengambil leluhur sebuah Node berdasarkan Anc. Level, dihitung dari Origin.
     pageDecoration:
       tree:
-        priority: 13
+        priority: 10
 ---
 
 # Node Get Ancestor Block
@@ -78,3 +78,4 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]]
+

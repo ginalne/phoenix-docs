@@ -71,3 +71,4 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]]
+

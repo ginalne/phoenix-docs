@@ -70,3 +70,4 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node|Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]]
 - [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]
+

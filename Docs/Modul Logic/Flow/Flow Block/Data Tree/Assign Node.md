@@ -90,3 +90,4 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node|Delete Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]]
+
