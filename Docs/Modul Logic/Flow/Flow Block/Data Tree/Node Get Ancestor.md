@@ -1,10 +1,10 @@
 ---
-    status: draft
-    title: Node Get Ancestor Block
-    description: Flow Block Data Tree yang mengambil leluhur sebuah Node berdasarkan Anc. Level, dihitung dari Origin.
-    pageDecoration:
-      tree:
-        priority: 10
+status: draft
+title: Node Get Ancestor Block
+description: Flow Block Data Tree yang mengambil leluhur sebuah Node berdasarkan Anc. Level, dihitung dari Origin.
+pageDecoration:
+  tree:
+    priority: 10
 ---
 
 # Node Get Ancestor Block
@@ -14,6 +14,7 @@
 Node Get Ancestor Block adalah Flow Block yang mengambil leluhur sebuah [[Docs/Tipe Data/Node]] pada silsilah dari Origin menuju Node tersebut. Gunakan block ini untuk mengetahui Node yang berada pada tingkat tertentu dalam silsilah, misalnya kategori utama dari sebuah kategori.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-ancestor-block-flow.png|Node Get Ancestor Block pada Blueprint Flow]]
+
 ## Input dan Output
 
 Node Get Ancestor Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -65,7 +66,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 - Penelusuran dihitung dari Origin menuju Node yang diinput, dan [[^value/number|1]] adalah Origin.
 - Node yang diinput bukan leluhurnya sendiri, sehingga tingkat yang menunjuk Node itu menghasilkan [[^output|Not Found]].
-- Karena bukan Flow Block Event, Node Get Ancestor Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Node Get Ancestor Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 

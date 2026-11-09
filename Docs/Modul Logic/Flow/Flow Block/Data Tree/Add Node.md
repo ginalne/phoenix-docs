@@ -13,6 +13,7 @@
 Add Node Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Node]] baru sebagai anak dari Node lain. Gunakan block ini untuk membangun hierarki [[Docs/Tipe Data/Tree]] secara otomatis dari Flow, misalnya menambahkan kategori baru ketika data baru masuk.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/add-node-block-flow.png|Add Node Block pada Blueprint Flow]]
+
 ## Input dan Output
 
 Add Node Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -22,7 +23,7 @@ Add Node Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak m
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
 | [[^input|Parent]] | [[Docs/Tipe Data/Node]] | Node yang akan menjadi parent Node baru. Pilihan memuat semua Node dari semua Tree, atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order Node baru. Minimal [[^value/number|0]], tidak boleh negatif, dan tidak boleh sama dengan Order anak lain milik Parent. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order Node baru. Minimal [[^value/number|0]] dan tidak boleh sama dengan Order anak lain milik Parent. Bila bernilai negatif atau dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 | [[^input|Name]] | [[Docs/Tipe Data/String]] | Name Node baru. Tidak boleh sama dengan Name anak lain milik Parent. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 
 ### Output
@@ -45,11 +46,6 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 3. Bila tidak ada konflik, Node baru dibuat sebagai anak Parent pada Tree yang sama dengan Parent, dan [[^output|New Node]] meneruskan Node tersebut.
 4. Bila ada konflik, Node baru tidak dibuat dan hanya [[^output|Name Conflict]] atau [[^output|Order Conflict]] yang meneruskan aliran.
 
-<!--
-  * [TODO] Konfirmasi: pemeriksaan diasumsikan berurutan Name lalu Order, dan hanya satu output konflik yang keluar pada satu eksekusi.
-  * [TODO] Konfirmasi: status block bila Order bernilai negatif (diasumsikan Error tanpa output).
--->
-
 ## Contoh Penggunaan
 
 Tabel berikut memakai Parent [[^value/node|Elektronik]] yang sudah memiliki anak [[^value/node|Komputer]] (Order [[^value/number|0]]) dan [[^value/node|Ponsel]] (Order [[^value/number|1]]).
@@ -59,6 +55,7 @@ Tabel berikut memakai Parent [[^value/node|Elektronik]] yang sudah memiliki anak
 | Name [[^value/string|Kamera]] dan Order [[^value/number|2]] belum dipakai anak lain | [[^value/node|Kamera]] | - | - | [[^flowstate|Succeed]] |
 | Name [[^value/string|Ponsel]] sudah dipakai anak lain | - | [[^value/boolean/true]] | - | [[^flowstate|Error]] |
 | Order [[^value/number|1]] sudah dipakai anak lain | - | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
+| [[^input|Order]] bernilai negatif | - | - | - | [[^flowstate|Fatal Error]] |
 | [[^input|Parent]], [[^input|Order]], atau [[^input|Name]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
 
 Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
@@ -70,9 +67,9 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 ## Batasan dan Catatan
 
-- [[^input|Order]] bernilai minimal [[^value/number|0]].
+- [[^input|Order]] bernilai minimal [[^value/number|0]]. Order negatif membuat block berstatus [[^flowstate|Fatal Error]].
 - Node baru berada pada Tree yang sama dengan Parent dan belum memiliki anak. Untuk memindahkan Node yang sudah ada, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]].
-- Karena bukan Flow Block Event, Add Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Add Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
@@ -81,4 +78,3 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node|Delete Node Block]]
-

@@ -13,6 +13,7 @@
 Node Block adalah Flow Block yang menerima sebuah [[Docs/Tipe Data/Node]] lalu mengeluarkan atribut Node tersebut, yaitu Order, Name, dan Tree tempat Node berada. Gunakan block ini bila Flow membutuhkan informasi sebuah Node sebelum memprosesnya lebih lanjut.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-block-flow.png|Node Block pada Blueprint Flow]]
+
 ## Input dan Output
 
 Node Block memiliki 1 input di sisi kiri, 4 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -61,7 +62,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 
 - Node Block tidak mengeluarkan parent maupun anak Node. Untuk menelusuri hubungan Node, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]], [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]], atau [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]].
 - [[^input|Node]] yang kosong membuat block berstatus [[^flowstate|Fatal Error]] dan semua output tidak ada.
-- Karena bukan Flow Block Event, Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 

@@ -405,6 +405,24 @@ Koreksi penulis pada halaman Data Table: draf pertama kekurangan deskripsi pada 
 - Langkah mendefinisikan: klik kanan pada input ➜ `[[^field|Change Type]]` ➜ pilih tipe data (semua tipe data Phoenix tersedia). Tulis sebagai subbagian bernomor "Menentukan Tipe Data <Nama Input>" pada setiap block yang input-nya memiliki N/A Type (Add Variable dan Variable Setter).
 - Input yang tipenya dapat diganti tetapi bukan N/A Type memakai langkah yang sama. Contoh: input `[[^input|Row]]` pada TableData Getter dan TableData Setter (tampil "Empty", tipe dapat diganti ke Number atau String berisi Index Row; subbagian "Menentukan Tipe Data Row"). Pada TableData Setter, input `[[^input|Value]]` yang masih N/A Type menghasilkan Fatal Error.
 
+
+### Halaman block Data Tree
+- Path: `Docs/Modul Logic/Flow/Flow Block/Data Tree/<Nama Block>`. Gambar: `<nama-block>-block-flow.png` di folder yang sama (contoh `add-node-block-flow.png`, `tree-get-origin-block-flow.png`). Screenshot penulis memuat banyak block dalam satu gambar, jadi beri TODO agar penulis memotong gambar per block.
+- Block: Tree, Node, Node Setter, Add Node, Assign Node, Delete Node, Tree Get Origin, Node Get Parent, Node Get Children, Node Get Ancestor. Tanpa Control. Struktur sama dengan halaman Data Table (callout note kelompok, definisi, gambar, Input dan Output, Cara Kerja, Contoh Penggunaan, Praktik Terbaik, Batasan dan Catatan, Lihat Juga).
+- Istilah: gunakan **saudara kandung** (Node lain dengan parent yang sama) dan **keturunan**. Jangan memakai analogi keluarga seperti "ayah" atau "kakek" untuk menjelaskan Depth. Tulis "parent langsung" dan "parent dari parent".
+- Tulis label antarmuka persis, termasuk "(Node)" pada output: `[[^output|The Parent (Node)]]`, `[[^output|The Origin (Node)]]`, `[[^output|The Children (Node)]]`, `[[^output|The Ancestor (Node)]]`. Input ketiga Assign Node berlabel `[[^input|Children]]` (bukan "Node children").
+- Output flag Tree: `Name Conflict`, `Order Conflict` (Add Node, Node Setter, Assign Node) dan `Relation Conflict` (Assign Node), semuanya `[[^value/boolean/true]]` pada kasusnya dan `-` pada kasus lain, berstatus Error. Output Not Found pada Node Get Parent, Node Get Children, dan Node Get Ancestor juga memakai pola ini.
+- Input Order pada Add Node, Node Setter, dan Assign Node bertipe Number (bukan N/A Type), jadi tidak ada subbagian "Menentukan Tipe Data". Order minimal `[[^value/number|0]]`.
+- Contoh Penggunaan memakai Tree Kategori Produk dengan silsilah Origin ➜ Elektronik ➜ Komputer ➜ Laptop, Elektronik juga memiliki anak Ponsel (Order 1), dan Aksesori berada di bawah Origin. Pertahankan nama ini di seluruh halaman Data Tree.
+- Anc. Level: Level 1 = Origin, dihitung dari Origin ke Node. Node Get Parent dihitung dari Node ke atas. Jelaskan perbedaan keduanya di Praktik Terbaik kedua halaman.
+- Callout: Delete Node memakai `>**danger**` (tidak dapat dikembalikan, anak ikut terhapus), `>**warning**` hapus paksa, `>**warning**` Tree dengan Merger Mode atau External Read Only, `>**note** Mengelola Error`, dan `>**note**` perubahan oleh Flow tidak memicu Flow kembali. Node Setter dan Assign Node memakai dua callout terakhir selain Error. Add Node hanya memakai callout Flow tidak memicu Flow kembali, dengan menyebut Tree Node Event memiliki event create. Block Get, Tree, Node, dan Tree Get Origin tidak memakai callout.
+- Callout Mengelola Error pada Delete Node tidak diperluas ke Conflict dan Not Found sebelum penulis menentukan.
+- Order negatif ditulis sebagai Fatal Error (bukan Error) pada input Order Add Node, Node Setter, dan Assign Node, dan bila perlu ditambah baris pada tabel Contoh Penggunaan. Prinsipnya: block berstatus Error hanya bila ada output yang menandai kegagalan itu, kasus tanpa output menjadi Fatal Error.
+- Delete Node: menghapus Origin = Fatal Error, tulis di Batasan dan Catatan serta baris Contoh Penggunaan. Assign Node: Children = Origin menghasilkan Relation Conflict.
+- Batasan dan Catatan: frasa "Flow Block Event" ditautkan ke `Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event` (terlihat pada Node Setter, jadikan pola di halaman block non-Event lain).
+- Komentar TODO yang sudah dijawab penulis (baris `Jawaban:`) dihapus setelah jawabannya dimasukkan ke halaman, kecuali penulis meminta dipertahankan.
+
+
 ### Halaman per block
 - Front matter: `status`, `title`, `description`, `pageDecoration.icon: zap`, `pageDecoration.tree.priority`. Tulis tanpa indentasi di awal baris.
 - Heading: **Input, Control dan Output** (bukan "Input dan Output"). Kalimat pembuka: "memiliki satu Control berupa tombol dan <n> output di sisi kanan".

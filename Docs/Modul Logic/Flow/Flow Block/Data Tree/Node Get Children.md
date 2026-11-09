@@ -13,6 +13,7 @@
 Node Get Children Block adalah Flow Block yang mengambil anak langsung sebuah [[Docs/Tipe Data/Node]] berdasarkan Order yang ditentukan. Gunakan block ini untuk membaca isi satu tingkat di bawah Node, misalnya mengambil subkategori pertama dari sebuah kategori.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-children-block-flow.png|Node Get Children Block pada Blueprint Flow]]
+
 ## Input dan Output
 
 Node Get Children Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -63,7 +64,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 - Block ini hanya mengambil anak langsung. Node pada tingkat yang lebih dalam tidak ikut diambil.
 - Satu eksekusi hanya mengeluarkan satu anak, yaitu anak dengan Order yang diinput.
-- Karena bukan Flow Block Event, Node Get Children Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Node Get Children Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
@@ -72,4 +73,3 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]]
-

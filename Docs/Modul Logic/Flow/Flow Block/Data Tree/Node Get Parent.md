@@ -6,6 +6,7 @@
       tree:
         priority: 12
 ---
+
 # Node Get Parent Block
 
 >**note** Node Get Parent Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -13,6 +14,7 @@
 Node Get Parent Block adalah Flow Block yang menelusuri parent sebuah [[Docs/Tipe Data/Node]] ke arah Origin sejauh Depth yang ditentukan. Gunakan block ini untuk mengetahui induk sebuah Node, misalnya mencari kategori induk dari sebuah kategori.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-parent-block-flow.png|Node Get Parent Block pada Blueprint Flow]]
+
 ## Input dan Output
 
 Node Get Parent Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -64,7 +66,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 - Penelusuran dihitung dari Node yang diinput ke arah Origin, dan [[^value/number|1]] adalah parent langsung.
 - Node Origin tidak memiliki parent sehingga selalu menghasilkan [[^output|Not Found]].
-- Karena bukan Flow Block Event, Node Get Parent Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Node Get Parent Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 

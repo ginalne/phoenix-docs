@@ -1,11 +1,12 @@
 ---
-    status: draft
-    title: Node Setter Block
-    description: Flow Block Data Tree yang mengubah Name dan Order sebuah Node.
-    pageDecoration:
-      tree:
-        priority: 17
+status: draft
+title: Node Setter Block
+description: Flow Block Data Tree yang mengubah Name dan Order sebuah Node.
+pageDecoration:
+  tree:
+    priority: 17
 ---
+
 # Node Setter Block
 
 >**note** Node Setter Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -13,6 +14,7 @@
 Node Setter Block adalah Flow Block yang mengubah Name dan Order sebuah [[Docs/Tipe Data/Node]]. Gunakan block ini untuk mengganti nama atau menggeser urutan Node secara otomatis dari Flow.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-setter-block-flow.png|Node Setter Block pada Blueprint Flow]]
+
 ## Input dan Output
 
 Node Setter Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -22,7 +24,7 @@ Node Setter Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tida
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
 | [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang akan diubah. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order baru Node. Minimal [[^value/number|0]], tidak boleh negatif, dan tidak boleh sama dengan Order saudara kandung Node. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order baru Node. Minimal [[^value/number|0]] dan tidak boleh sama dengan Order saudara kandung Node. Bila bernilai negatif atau dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 | [[^input|Name]] | [[Docs/Tipe Data/String]] | Name baru Node. Tidak boleh sama dengan Name saudara kandung Node. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 
 ### Output
@@ -50,13 +52,6 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 Node Setter Block mengubah **Name dan Order sekaligus**. Bila Anda hanya ingin mengubah salah satunya, isi atribut lainnya dengan nilai Node saat ini, misalnya dari [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node|Node Block]].
 
-<!--
-  * [TODO] Konfirmasi: pemeriksaan diasumsikan berurutan Name lalu Order, dan hanya satu output konflik yang keluar pada satu eksekusi. Mohon konfirmasi urutan dan perilaku bila keduanya konflik.
-  * [TODO] Konfirmasi: Name dan Order milik Node itu sendiri diasumsikan bukan konflik (seperti Name pada EnumData Setter).
-  * [TODO] Konfirmasi: status block bila Order bernilai negatif (diasumsikan Error tanpa output).
-  * [TODO] Konfirmasi: apakah Name dan Order Node Origin dapat diubah lewat block ini.
--->
-
 ## Contoh Penggunaan
 
 Tabel berikut memakai Node [[^value/node|Ponsel]] (Order [[^value/number|1]]) yang berada di bawah Node [[^value/node|Elektronik]] bersama saudara kandungnya, Node [[^value/node|Komputer]] (Order [[^value/number|0]]).
@@ -66,6 +61,7 @@ Tabel berikut memakai Node [[^value/node|Ponsel]] (Order [[^value/number|1]]) ya
 | Node [[^value/node|Ponsel]] diubah dengan Name [[^value/string|Telepon Pintar]] dan Order [[^value/number|2]] | [[^value/node|Telepon Pintar]] | - | - | [[^flowstate|Succeed]] |
 | Name [[^value/string|Komputer]] sudah dipakai saudara kandung | - | [[^value/boolean/true]] | - | [[^flowstate|Error]] |
 | Order [[^value/number|0]] sudah dipakai saudara kandung | - | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
+| [[^input|Order]] bernilai negatif | - | - | - | [[^flowstate|Fatal Error]] |
 | [[^input|Node]], [[^input|Order]], atau [[^input|Name]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
 
 Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
@@ -77,8 +73,9 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 ## Batasan dan Catatan
 
-- [[^input|Order]] bernilai minimal [[^value/number|0]].
+- [[^input|Order]] bernilai minimal [[^value/number|0]]. Order negatif membuat block berstatus [[^flowstate|Fatal Error]].
 - [[^input|Name]] dan [[^input|Order]] hanya diperiksa terhadap saudara kandung, yaitu Node lain dengan parent yang sama.
+- Name dan Order Node Origin dapat diubah, tetapi mengubah Order Origin tidak berpengaruh.
 - Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Node Setter Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
@@ -88,4 +85,3 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]]
-
