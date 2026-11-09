@@ -1,78 +1,73 @@
 ---
     status: draft
     title: Node Block
-    description: Flow Block Data Tree yang mengambil atribut dari sebuah Node, yaitu Order, Name, dan Tree.
+    description: Flow Block Data Tree yang mengambil atribut Node, yaitu Order, Name, dan Tree.
+    pageDecoration:
+      tree:
+        priority: 18
 ---
 # Node Block
 
->**note** Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Node Block adalah Flow Block yang mengambil atribut dari sebuah [[Docs/Tipe Data/Node]]. Gunakan block ini ketika alur Flow Anda membutuhkan Order, Name, atau Tree dari Node tertentu. Block ini hanya membaca dan tidak mengubah Node. Untuk mengubah Node, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]].
+Node Block adalah Flow Block yang menerima sebuah [[Docs/Tipe Data/Node]] lalu mengeluarkan atribut Node tersebut, yaitu Order, Name, dan Tree tempat Node berada. Gunakan block ini bila Flow membutuhkan informasi sebuah Node sebelum memprosesnya lebih lanjut.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-block-flow.png|Node Block pada Blueprint Flow]]
 ## Input dan Output
 
-Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.
+Node Block memiliki 1 input di sisi kiri, 4 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
 | Input | Tipe Data | Keterangan |
-| - | - | - |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang atributnya akan diambil. Pilih Node atau hubungkan dari output block lain. Jika dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| ----- | --------- | ---------- |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Pilih Node atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 
 ### Output
 
 | Output | Tipe Data | Keterangan |
-| - | - | - |
-| [[^output|Pass]] | [[Docs/Tipe Data/Node]] | Meneruskan Node yang diinput agar dapat dipakai block berikutnya. |
-| [[^output|Order]] | [[Docs/Tipe Data/Number]] | Order dari Node. |
-| [[^output|Name]] | [[Docs/Tipe Data/String]] | Name dari Node. |
+| ------ | --------- | ---------- |
+| [[^output|Pass]] | [[Docs/Tipe Data/Node]] | Meneruskan Node yang diinput. |
 | [[^output|Tree]] | [[Docs/Tipe Data/Tree]] | Tree tempat Node berada. |
+| [[^output|Order]] | [[Docs/Tipe Data/Number]] | Order Node di antara saudara kandungnya. |
+| [[^output|Name]] | [[Docs/Tipe Data/String]] | Name Node. |
 
-Saat berhasil, output meneruskan aliran ke block yang terhubung. Saat [[^flowstate|Fatal Error]], tidak ada output yang meneruskan aliran. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
-1. Block menerima [[Docs/Tipe Data/Node]] dari [[^input|Node]].
-2. Block membaca Order, Name, dan Tree dari Node tersebut.
-3. Block mengirim ketiganya ke [[^output|Order]], [[^output|Name]], dan [[^output|Tree]], serta meneruskan Node yang sama lewat [[^output|Pass]].
-4. Jika [[^input|Node]] dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]], pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]], dan tidak ada output yang meneruskan aliran.
+1. Isi [[^input|Node]] dengan [[Docs/Tipe Data/Node]] atau hubungkan dari output block lain.
+2. Saat dieksekusi, [[^output|Pass]] meneruskan Node yang diinput, sedangkan [[^output|Tree]], [[^output|Order]], dan [[^output|Name]] mengeluarkan atribut Node tersebut.
+3. Hubungkan output yang Anda butuhkan ke block berikutnya.
 
 ## Contoh Penggunaan
 
-Tabel berikut menunjukkan hasil block pada setiap kondisi input.
+Tabel berikut menunjukkan hasil Node Block pada Tree Kategori Produk.
 
-| Peristiwa | Status | [[^output|Pass]] | [[^output|Order]] | [[^output|Name]] | [[^output|Tree]] |
-| - | - | - | - | - | - |
-| [[^input|Node]] terisi | [[^flowstate|Succeed]] | Node yang diinput | Order Node | Name Node | Tree tempat Node berada |
-| [[^input|Node]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - | - | - | - |
+| Kondisi | Pass | Tree | Order | Name | Status |
+| ------- | ---- | ---- | ----- | ---- | ------ |
+| Node yang berada di bawah Node lain | [[^value/node|Ponsel]] | [[^value/tree|Kategori Produk]] | [[^value/number|1]] | [[^value/string|Ponsel]] | [[^flowstate|Succeed]] |
+| Node yang menjadi anak pertama | [[^value/node|Komputer]] | [[^value/tree|Kategori Produk]] | [[^value/number|0]] | [[^value/string|Komputer]] | [[^flowstate|Succeed]] |
+| [[^input|Node]] dibiarkan kosong | - | - | - | - | [[^flowstate|Fatal Error]] |
+
+Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
-- **Ambil nilai saat ini sebelum mengubah Node.** Hubungkan [[^output|Order]] dan [[^output|Name]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]] agar atribut yang tidak ingin diubah tetap memakai nilai saat ini.
-- **Teruskan [[^output|Tree]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree|Tree Block]]** untuk mengambil Name atau Merger Mode dari Tree tempat Node berada.
-- **Gunakan block penelusuran untuk relasi.** Block ini tidak mengambil Parent dan Children. Gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]] atau [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]].
+- Gunakan **[[^output|Tree]]** untuk menghubungkan Node ke [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree|Tree Block]] bila Flow membutuhkan informasi Tree tempat Node berada.
+- Hubungkan **[[^output|Pass]]** ke block berikutnya bila Flow masih membutuhkan Node yang sama.
 
 ## Batasan dan Catatan
 
-- Block hanya membaca atribut [[Docs/Tipe Data/Node]] dan tidak mengubahnya.
-- Block tidak mengambil Parent dan Children dari Node.
-- Saat [[^input|Node]] kosong, block berstatus [[^flowstate|Fatal Error]] dan seluruh output tidak ada.
-- Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Node Block tidak mengeluarkan parent maupun anak Node. Untuk menelusuri hubungan Node, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]], [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]], atau [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]].
+- [[^input|Node]] yang kosong membuat block berstatus [[^flowstate|Fatal Error]] dan semua output tidak ada.
+- Karena bukan Flow Block Event, Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]]
-- [[Docs/Modul Data/Tree/Node/Pengenalan|Tree Node]]
+- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree|Tree Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]]
-
-<!--
-  * [TODO] Konfirmasi label output yang tampil di aplikasi (Pass, Order, Name, Tree) dan urutannya.
-  * [TODO] Konfirmasi status block saat [[^input|Node]] kosong. Saya menulis [[^flowstate|Fatal Error]] mengikuti Enum Block dan Node Setter.
--->
-
-<!--
-  * [TODO] Halaman yang ditautkan dan mungkin belum ada: `Docs/Modul Data/Tree/Node/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan anchor `Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output`.
--->
+- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]]

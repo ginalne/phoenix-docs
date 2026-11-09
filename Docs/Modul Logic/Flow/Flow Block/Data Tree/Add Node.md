@@ -2,87 +2,82 @@
     status: draft
     title: Add Node Block
     description: Flow Block Data Tree yang menambahkan Node baru sebagai anak dari sebuah Node.
+    pageDecoration:
+      tree:
+        priority: 16
 ---
 # Add Node Block
 
->**note** Add Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Add Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Add Node Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Node]] baru ke sebuah [[Docs/Tipe Data/Tree]]. Node baru ditempatkan sebagai anak dari Parent yang Anda pilih, sehingga Anda dapat membangun struktur Tree langsung dari Flow.
+Add Node Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Node]] baru sebagai anak dari Node lain. Gunakan block ini untuk membangun hierarki [[Docs/Tipe Data/Tree]] secara otomatis dari Flow, misalnya menambahkan kategori baru ketika data baru masuk.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/add-node-block-flow.png|Add Node Block pada Blueprint Flow]]
 ## Input dan Output
 
-Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.
+Add Node Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
 | Input | Tipe Data | Keterangan |
-| - | - | - |
-| [[^input|Parent]] | [[Docs/Tipe Data/Node]] | Node yang menjadi Parent dari Node baru. Pilihan menampilkan seluruh Node dari semua Tree. Wajib diisi. |
-| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order untuk Node baru. Wajib diisi. |
-| [[^input|Name]] | [[Docs/Tipe Data/String]] | Name untuk Node baru. Wajib diisi. |
+| ----- | --------- | ---------- |
+| [[^input|Parent]] | [[Docs/Tipe Data/Node]] | Node yang akan menjadi parent Node baru. Pilihan memuat semua Node dari semua Tree, atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order Node baru. Minimal [[^value/number|0]], tidak boleh negatif, dan tidak boleh sama dengan Order anak lain milik Parent. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Name]] | [[Docs/Tipe Data/String]] | Name Node baru. Tidak boleh sama dengan Name anak lain milik Parent. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 
 ### Output
 
 | Output | Tipe Data | Keterangan |
-| - | - | - |
-| [[^output|New Node]] | [[Docs/Tipe Data/Node]] | Node baru yang berhasil ditambahkan. Meneruskan aliran hanya bila berhasil. |
+| ------ | --------- | ---------- |
+| [[^output|New Node]] | [[Docs/Tipe Data/Node]] | Node baru yang ditambahkan sebagai anak Parent. Keluar bila Node berhasil ditambahkan. |
+| [[^output|Name Conflict]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Name sudah dipakai anak lain milik Parent. Node baru tidak dibuat. |
+| [[^output|Order Conflict]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Order sudah dipakai anak lain milik Parent. Node baru tidak dibuat. |
 
-Saat berhasil, [[^output|New Node]] meneruskan aliran. Bila salah satu input kosong, block berstatus [[^flowstate|Fatal Error]] dan [[^output|New Node]] tidak meneruskan aliran. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
-
->**warning** Tree dengan Merger Mode atau External Read Only
-> Flow dapat mengubah atau menghapus [[Docs/Tipe Data/Node]] pada [[Docs/Tipe Data/Tree]] yang memakai [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] atau [[Docs/Modul Data/Tree/Konfigurasi External Read Only|External Read Only]], termasuk Node hasil *clone*. Pastikan perubahan tersebut memang Anda inginkan sebelum menjalankan Flow.
+Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang tidak meneruskan aliran tidak akan dieksekusi, sesuai [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 >**note** Perubahan oleh Flow tidak memicu Flow kembali
-> Perubahan [[Docs/Tipe Data/Node]] yang dilakukan block ini tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]] maupun Flow Block Event lainnya.
+>Node yang ditambahkan oleh Add Node Block tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]] meskipun block tersebut memiliki event [[^value/string|create]], sehingga Flow tidak berjalan kembali karena perubahan dari Flow.
 
 ## Cara Kerja
 
-1. Block menerima [[Docs/Tipe Data/Node]] dari [[^input|Parent]], serta [[^input|Order]] dan [[^input|Name]] untuk Node baru.
-2. Block membuat Node baru sebagai anak dari [[^input|Parent]]. Node baru berada di [[Docs/Tipe Data/Tree]] yang sama dengan Parent.
-3. Block meneruskan Node baru lewat [[^output|New Node]].
-4. Jika salah satu input wajib dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]], pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]], dan tidak ada output yang meneruskan aliran.
-5. Untuk menambahkan Node pada level pertama Tree, hubungkan [[^output|The Origin]] dari [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]] ke [[^input|Parent]].
+1. Pilih [[^input|Parent]], lalu isi [[^input|Order]] dan [[^input|Name]], langsung pada block atau dari output block lain.
+2. Block memeriksa [[^input|Name]] lalu [[^input|Order]] terhadap anak Parent yang sudah ada.
+3. Bila tidak ada konflik, Node baru dibuat sebagai anak Parent pada Tree yang sama dengan Parent, dan [[^output|New Node]] meneruskan Node tersebut.
+4. Bila ada konflik, Node baru tidak dibuat dan hanya [[^output|Name Conflict]] atau [[^output|Order Conflict]] yang meneruskan aliran.
+
+<!--
+  * [TODO] Konfirmasi: pemeriksaan diasumsikan berurutan Name lalu Order, dan hanya satu output konflik yang keluar pada satu eksekusi.
+  * [TODO] Konfirmasi: status block bila Order bernilai negatif (diasumsikan Error tanpa output).
+-->
 
 ## Contoh Penggunaan
 
-Tabel berikut menunjukkan hasil block pada setiap kondisi input.
+Tabel berikut memakai Parent [[^value/node|Elektronik]] yang sudah memiliki anak [[^value/node|Komputer]] (Order [[^value/number|0]]) dan [[^value/node|Ponsel]] (Order [[^value/number|1]]).
 
-| Peristiwa | Status | [[^output|New Node]] |
-| - | - | - |
-| [[^input|Parent]], [[^input|Order]], dan [[^input|Name]] terisi | [[^flowstate|Succeed]] | Node baru |
-| [[^input|Parent]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - |
-| [[^input|Order]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - |
-| [[^input|Name]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - |
+| Kondisi | New Node | Name Conflict | Order Conflict | Status |
+| ------- | -------- | ------------- | -------------- | ------ |
+| Name [[^value/string|Kamera]] dan Order [[^value/number|2]] belum dipakai anak lain | [[^value/node|Kamera]] | - | - | [[^flowstate|Succeed]] |
+| Name [[^value/string|Ponsel]] sudah dipakai anak lain | - | [[^value/boolean/true]] | - | [[^flowstate|Error]] |
+| Order [[^value/number|1]] sudah dipakai anak lain | - | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
+| [[^input|Parent]], [[^input|Order]], atau [[^input|Name]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
+
+Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
-- **Tentukan Parent dari alur, bukan dari pilihan manual.** Hubungkan [[^output|The Origin]] dari [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]] atau [[^output|The Children]] dari [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]] agar Flow tetap bekerja walau Tree berubah.
-- **Pilih [[^input|Order]] yang konsisten.** Tentukan aturan Order untuk Node saudara agar urutan Node mudah dibaca dan ditelusuri dengan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]].
-- **Gunakan [[^output|New Node]] untuk langkah lanjutan.** Hubungkan ke [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]] atau block lain yang bekerja pada Node baru tersebut.
+- Untuk menambahkan Node langsung di bawah Origin, hubungkan output **[[^output|The Origin (Node)]]** dari [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]] ke [[^input|Parent]].
+- Periksa Order anak Parent dengan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]] bila Flow perlu menentukan Order yang masih tersedia.
 
 ## Batasan dan Catatan
 
-- Block hanya menambahkan Node baru. Untuk menempatkan Node yang sudah ada ke Parent lain, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]].
-- Pilihan [[^input|Parent]] menampilkan Node dari semua Tree, sehingga [[Docs/Tipe Data/Tree]] tujuan ditentukan oleh Parent yang dipilih.
-- Bila [[^input|Parent]], [[^input|Order]], atau [[^input|Name]] kosong, block berstatus [[^flowstate|Fatal Error]] dan seluruh output tidak ada.
-- Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- [[^input|Order]] bernilai minimal [[^value/number|0]].
+- Node baru berada pada Tree yang sama dengan Parent dan belum memiliki anak. Untuk memindahkan Node yang sudah ada, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]].
+- Karena bukan Flow Block Event, Add Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]]
-- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]]
+- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node|Delete Node Block]]
-- [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]]
-
-<!--
-  * [TODO] Konfirmasi output [[^output|New Node]]. Halaman ini belum mendapat daftar output dari penulis, saya mengikuti pola Add Variable (New Variable) dan Add EnumData (New EnumData).
-  * [TODO] Konfirmasi apakah ada pemeriksaan konflik (Name atau Order yang sama dengan Node saudara) dan outputnya. Belum ditulis di halaman ini.
-  * [TODO] Konfirmasi bahwa Node baru berada di Tree yang sama dengan [[^input|Parent]] (disimpulkan dari pilihan Parent yang menampilkan Node semua Tree).
--->
-
-<!--
-  * [DONE] Halaman yang ditautkan dan mungkin belum ada: `Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event`, `Docs/Modul Data/Tree/Konfigurasi External Read Only` (usulan), `Docs/Modul Data/Tree/Konfigurasi Merger Mode`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan anchor `Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output`.
--->
