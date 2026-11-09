@@ -84,7 +84,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Kategori menu Add** (screenshot): Event, Data, I/O, Query, Operator, Modular, Misc. JSON penulis memuat Chrono (Delay) dan Error (Error Message) yang diasumsikan berada di Misc.
   - **Event:** Pulser, Variable Event, Enum Data Event, Table Row Event, Tree Node Event. Pulser punya tombol Trigger tanpa ikon untuk eksekusi manual.
   - **Data:** Variable (Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value), Enum (Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Value), Table (Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, TableData Setter), Tree (Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, Tree Get Origin).
-  - **I/O:** Branch, Passer. **Query:** Condition, Execute.
+  - **I/O:** Branch, Passer. **Query:** Condition (Add Table Filter), Execute (Table Output).
   - **Operator:** Number (Increment), String (Concatenate, Implode, Pad Left, Pad Right), Table (TableRow Parse), Object (Assign, Merge, Parse, Stringify), Boolean (If), Tree (Node Parse).
   - **Modular:** API (HTTP Request), AI (OpenAI 4).
   - **Misc.:** Chrono (Delay), Error (Error Message).
@@ -92,6 +92,11 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 - **Eksekusi manual:** lewat antarmuka Flow, gunakan tombol pada Flow Block Event (misalnya Trigger pada Pulser).
 - **Event dari komponen:** Flow Block Event yang sudah dibuat dapat langsung dihubungkan melalui tombol Event pada masing-masing komponen.
 - **Memantau proses:** klik tombol Activity/Submission, panel Flow Activity terbuka. Panel memiliki tombol Refresh List, kolom Search Activity, kolom ID/Name, Status/Type, Start At, Updated At, dan menampilkan "No Activity" bila kosong.
+
+## Aturan dasar koneksi dan eksekusi Flow Block
+ 
+* **Satu output hanya dapat terhubung ke satu input.** Batasan ini diatasi dengan Branch Block.
+* Urutan eksekusi aliran yang bercabang **tidak dapat diprediksi**. Sebuah block diproses setelah setiap block yang terhubung ke inputnya selesai tereksekusi (`Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`). Passer Block memanfaatkan aturan ini untuk memastikan beberapa aliran selesai atau berurutan.
   
 ## Flow Block Event
 
@@ -192,6 +197,27 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
     *   **TableData Setter:** input Column, Row (sama seperti Getter), Value (N/A Type sampai tipe ditentukan). Output Pass (Value yang diinput) dan Value Conflict (true bila Value berisi tetapi tipenya tidak sesuai Column, berstatus Error). Value kosong selalu valid tanpa memeriksa tipe. Column atau Row kosong, atau Value masih N/A Type: Fatal Error. Row atau Column tidak ditemukan: Error. Hanya mengubah satu TableData per eksekusi. Perubahan lewat Setter tidak memicu Table Row Event.
 *   **Column dan Row harus berasal dari Table yang sama.** Field Row pada screenshot tampil "NULL" dan akan diganti menjadi "Empty".
 *   **Add Row dan Delete Row tidak memicu Table Row Event** (aksi Flow tidak memicu Flow kembali).
+
+## Flow Block kategori lain (halaman Pengenalan sudah final)
+ 
+* **Halaman:** `Docs/Modul Logic/Flow/Flow Block/<Kategori>/Pengenalan` untuk `Input dan Output`, `Query`, `Operator`, `Modular`, `Chrono`, `Error`. Front matter `status: draft`, `priority` 11 sampai 16 (urut sesuai daftar itu), `tags: flowblock-category`.
+* **I/O:** membantu pengelolaan aliran data.
+  * **Branch:** satu input, beberapa output. Bukan block bersyarat. Input berupa *field* dapat mendefinisikan data yang dipakai banyak block (seperti *local variable*).
+  * **Passer:** meneruskan data tanpa mengubahnya dan memastikan seluruh aliran terhubung selesai atau berurutan (contoh: kode seri dengan Concatenate). Input berupa *field* dapat mendefinisikan daftar data dalam satu block.
+* **Query:** membangun dan menjalankan Query.
+  * Condition: **Add Table Filter** menambahkan kondisi untuk Table.
+  * Execute: **Table Output** menjalankan Query kaidah output table.
+* **Operator:** pengolahan data (aritmatika, teks, konversi, translasi), dikelompokkan berdasarkan tipe data input utama, tanpa Pengenalan per kelompok.
+  * Number: **Increment** (ada langkah yang ditentukan).
+  * String: **Concatenate**, **Implode** (array yang digabung bertipe String), **Pad Left**, **Pad Right**.
+  * Table: **TableRow Parse** (hasil Object). Tree: **Node Parse** (hasil Object).
+  * Object: **Assign** (hanya satu atribut), **Merge**, **Parse**, **Stringify**.
+  * Boolean: **If** (fungsi rinci dan bedanya dengan Branch belum terkonfirmasi).
+* **Modular:** proses kompleks (HTTP, provider jasa). Path memakai grup: `Modular/API/HTTP Request`, `Modular/AI/OpenAI 4`.
+  * **HTTP Request:** semua metode HTTP. Respons Object atau teks sesuai Response Type (`application/json` menjadi Object).
+  * **OpenAI 4:** detail permintaan dan kredensial akan dijelaskan di halamannya (termasuk callout).
+* **Chrono:** **Delay** menunda aliran dengan waktu yang dapat ditentukan, state block menjadi Waiting.
+* **Error:** **Error Message** membuat error baru dengan pesan yang dimodifikasi. Saat tereksekusi, seluruh aliran dihentikan dan pesan error menjadi output di Flow Activity. Memengaruhi status Error/Fatal Error.
 
 # Variable (Modul Data)
 
