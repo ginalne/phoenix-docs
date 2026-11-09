@@ -8,9 +8,10 @@
 ---
 # Apa itu Tipe Data
 
-Tipe Data adalah berbagai ketegori data yang dapat  disimpan didalam sistem basis data Phoenix.
+Tipe Data adalah klasifikasi atau pengelompokan nilai dalam basis data yang memberi tahu sistem bagaimana cara membaca, mengolah, dan menyimpan data tersebut.
 
 Berikut adalah daftar Tipe Data yang tersedia dalam Phoenix:
+
 1. [[Docs/Tipe Data/Variable]]
 2. [[Docs/Tipe Data/Enum]]
 3. [[Docs/Tipe Data/EnumData]]

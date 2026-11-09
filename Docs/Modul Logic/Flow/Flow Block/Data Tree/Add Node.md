@@ -13,7 +13,6 @@
 Add Node Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Node]] baru sebagai anak dari Node lain. Gunakan block ini untuk membangun hierarki [[Docs/Tipe Data/Tree]] secara otomatis dari Flow, misalnya menambahkan kategori baru ketika data baru masuk.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/add-node-block-flow.png|Add Node Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Add Node Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -78,3 +77,4 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Delete Node|Delete Node Block]]
+

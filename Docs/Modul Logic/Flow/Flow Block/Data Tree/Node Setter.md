@@ -14,7 +14,6 @@ pageDecoration:
 Node Setter Block adalah Flow Block yang mengubah Name dan Order sebuah [[Docs/Tipe Data/Node]]. Gunakan block ini untuk mengganti nama atau menggeser urutan Node secara otomatis dari Flow.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-setter-block-flow.png|Node Setter Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Node Setter Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

@@ -14,7 +14,6 @@
 Node Get Parent Block adalah Flow Block yang menelusuri parent sebuah [[Docs/Tipe Data/Node]] ke arah Origin sejauh Depth yang ditentukan. Gunakan block ini untuk mengetahui induk sebuah Node, misalnya mencari kategori induk dari sebuah kategori.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-parent-block-flow.png|Node Get Parent Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Node Get Parent Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

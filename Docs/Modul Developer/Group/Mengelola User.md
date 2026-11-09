@@ -8,7 +8,7 @@
 ---
 # Mengelola User dalam Group
 
-Saat User baru terdaftar di [[Inisialisasi/Apa itu Pro?|Pro]], sistem otomatis menempatkannya ke Group berstatus default. Pada Pro baru, Group tersebut adalah Group [[^field/group|Administrator]]. Untuk menempatkan User ke Group yang sebenarnya, pindahkan User dari Group lama ke Group tujuan.
+Saat User baru terdaftar di [[Inisialisasi/Apa itu Pro|Pro]], sistem otomatis menempatkannya ke Group berstatus default. Pada Pro baru, Group tersebut adalah Group [[^field/group|Administrator]]. Untuk menempatkan User ke Group yang sebenarnya, pindahkan User dari Group lama ke Group tujuan.
 
 ### Memindahkan User
 

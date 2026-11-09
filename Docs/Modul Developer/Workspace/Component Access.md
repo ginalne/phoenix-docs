@@ -74,11 +74,6 @@ Aturan penting:
 | [[^field|Update]] | Tombol [[^button/edit|Edit]] untuk mengubah atribut folder atau komponen. |
 | [[^field|Delete]] | Menu [[^button/delete|Delete]] pada konteks menu, serta pemindahan ke folder lain. |
 
-<!--
-  * [TODO] Tabel "Fungsi yang Hilang Jika Disallow" disusun dari asumsi: Add = menu Add pada konteks menu folder, Update = tombol Edit, Delete = menu Delete. Mohon konfirmasi tombol atau menu apa saja yang benar-benar hilang untuk setiap hak akses.
-  * [TODO] Diagram Cara Kerja mengasumsikan Add hanya tersedia pada folder, sedangkan komponen hanya memiliki Visible, Update, dan Delete. Mohon konfirmasi, dan sesuaikan garis pada diagram bila berbeda.
--->
-
 ## Visible pada Folder dan Komponen
 
 [[^field|Visible]] bekerja pada dua level dan tidak saling menurunkan nilai:
@@ -126,19 +121,11 @@ flowchart TD
 >**warning** Memindahkan mengubah struktur folder Pro
 >Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder atau komponen di halaman kerja Workspace juga mengubah struktur folder Pro.
 
-<!--
-  * [TODO] Langkah drag and drop pada daftar di atas (tekan dan tahan, seret, lepaskan) adalah asumsi. Mohon konfirmasi, dan apakah mengubah urutan di dalam folder yang sama juga memerlukan [[^field|Update]].
--->
-
 ## Mengenali Ikon Kunci
 
 Ketika Workspace membatasi sebagian hak akses sebuah komponen, halaman komponen menampilkan ikon kunci di samping nama komponen. Arahkan kursor ke ikon tersebut untuk melihat popup *tooltip* yang berisi hak akses apa saja yang diizinkan oleh Workspace.
 
 Gunakan ikon kunci untuk memeriksa mengapa sebuah tombol atau menu tidak tersedia pada komponen tersebut.
-
-<!--
-  * [TODO] Mohon konfirmasi kapan ikon kunci muncul (diasumsikan hanya jika setidaknya satu hak akses diatur disallow), apakah tooltip memuat Component Access, Data Access, dan Function Access sekaligus, dan bentuk daftarnya. Jika memungkinkan, sertakan gambar ikon dan tooltip.
--->
 
 ## Mengatur Component Access
 
@@ -185,10 +172,6 @@ Tim dokumentasi perlu mengatur urutan komponen di folder Panduan, tetapi tidak b
 | Data keuangan harus benar-benar tertutup bagi Group tertentu. | [[^field|Visible]] [[^value/boolean/disallow]] pada folder dan pada setiap komponen di dalamnya. |
 
 Dengan Component Access, setiap tim hanya melihat dan mengubah komponen yang menjadi tanggung jawabnya.
-
-<!--
-  * [TODO] Nama folder dan komponen pada Contoh Penggunaan (Panduan dan lainnya) adalah nama generik. Mohon sesuaikan atau tambahkan gambar bila diperlukan.
--->
 
 ## Praktik Terbaik
 

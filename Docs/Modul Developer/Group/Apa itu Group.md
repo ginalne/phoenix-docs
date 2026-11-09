@@ -32,7 +32,7 @@ Alih-alih mengatur akses satu per satu untuk setiap orang, Anda cukup mengelompo
 | [[#Mengelola Group Anak|Group Anak]] | Group yang berada di bawah Group lain dan memiliki daftar Workspace dan User sendiri. |
 | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] | Ruang kerja yang aksesnya diberikan melalui Group. Selengkapnya lihat [[Docs/Modul Developer/Workspace/Apa itu Workspace|Apa itu Workspace]]. |
 | [[#Mengelola User dalam Group|User]] | Anggota yang ditempatkan ke dalam Group. Satu User hanya dapat berada dalam satu Group. |
-| [[#Mengelola User dalam Group|Group Berstatus Default]] | Group tempat sistem menempatkan User yang baru terdaftar di [[Inisialisasi/Apa itu Pro?|Pro]]. Pro baru otomatis memiliki Group [[^field/group|Administrator]] sebagai Group berstatus default. |
+| [[#Mengelola User dalam Group|Group Berstatus Default]] | Group tempat sistem menempatkan User yang baru terdaftar di [[Inisialisasi/Apa itu Pro|Pro]]. Pro baru otomatis memiliki Group [[^field/group|Administrator]] sebagai Group berstatus default. |
 | [[#Menempatkan Group ke Direktori|Place to Directory]] | Menu untuk menempatkan Group anak sebagai komponen di Area Manajemen Folder. |
 
 ## Cara Kerja

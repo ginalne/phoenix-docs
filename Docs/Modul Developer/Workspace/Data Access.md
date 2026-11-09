@@ -91,10 +91,6 @@ flowchart LR
 
 Pada [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] dan [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], Data Access mengatur pengelolaan Data, bukan [[Docs/Tipe Data/Row]] atau isi sel. Pada [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] dan [[Docs/Modul Interface/Gallery/Apa itu Gallery|Gallery]], kartu mengikuti Data Access data sumber, sedangkan template kartu mengikuti Data Access komponen itu sendiri.
 
-<!--
-  * [TODO] Diagram disusun dari penjelasan per komponen, dengan asumsi bahwa Add dan Delete pada Table View dan Timeline berarti menambah dan menghapus Data, dan bahwa template kartu pada Kanban dan Gallery hanya terkait Update. Mohon konfirmasi, dan sesuaikan garis pada diagram bila berbeda.
--->
-
 ## Mengatur Data Access
 
 1. Buka halaman kerja [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]]
@@ -171,10 +167,6 @@ Tim lapangan perlu memindahkan kartu pesanan antar status setiap hari, tetapi ti
 | Tim administrasi hanya boleh menambah data baru. | [[^field|Add]] [[^value/boolean/allow]], [[^field|Update]] dan [[^field|Delete]] [[^value/boolean/disallow]] pada Table sumber. |
 
 Dengan Data Access, setiap tim mengelola data sesuai perannya tanpa perlu mengubah komponen atau menduplikasi data.
-
-<!--
-  * [TODO] Nama komponen pada Contoh Penggunaan (Papan Pesanan, Data Pesanan) adalah nama generik. Mohon sesuaikan atau tambahkan gambar bila diperlukan.
--->
 
 ## Praktik Terbaik
 

@@ -8,7 +8,7 @@
 ---
 # Apa itu Format Data
 
-Format Data adalah jenis bagaimana data ditampilkan dalam antarmuka Phoenix. 
+Format Data adalah klasifikasi atau pengelompokan format yang memberi tahu sistem bagaimana cara menampilkan data tersebut.
 
 ## Daftar Format Data
 
@@ -18,7 +18,7 @@ Format Data adalah jenis bagaimana data ditampilkan dalam antarmuka Phoenix.
 |[[Docs/Tipe Data/Number]]|[[Docs/Format Data/Number/Number]], [[Docs/Format Data/Number/Integer]], [[Docs/Format Data/Number/Decimal]], [[Docs/Format Data/Number/Percentage]],[[Docs/Format Data/Number/Rating]]
 | [[Docs/Tipe Data/Text]] | [[Docs/Format Data/Text/Long Text]], [[Docs/Format Data/Text/Rich Text]], [[Docs/Format Data/Text/Markdown]], [[Docs/Format Data/Text/Note]], [[Docs/Format Data/Text/Chat]] |
 | [[Docs/Tipe Data/Complex]] | [[Docs/Format Data/Complex/Numeration Unit]], [[Docs/Format Data/Complex/Length Unit]], [[Docs/Format Data/Complex/Area Unit]], [[Docs/Format Data/Complex/Volume Unit]], [[Docs/Format Data/Complex/Quaternion Unit]], [[Docs/Format Data/Complex/1D Vector]], [[Docs/Format Data/Complex/2D Vector]], [[Docs/Format Data/Complex/3D Vector]], [[Docs/Format Data/Complex/4D Vector]], [[Docs/Format Data/Complex/Geo]], [[Docs/Format Data/Complex/Currency]]|
-|[[Docs/Tipe Data/File]]| [[Docs/Format Data/File/Attachment]], [[Docs/Format Data/File/Document]], [[Docs/Format Data/File/Icon]], [[Docs/Format Data/File/Image]], [[Docs/Format Data/File/Media]], [[Docs/Format Data/File/Music]], [[Docs/Format Data/File/Photo]], [[Docs/Format Data/File/Video]]||
+|[[Docs/Tipe Data/File]]| [[Docs/Format Data/File/Attachment]], [[Docs/Format Data/File/Document]], [[Docs/Format Data/File/Icon]], [[Docs/Format Data/File/Image]], [[Docs/Format Data/File/Media]], [[Docs/Format Data/File/Music]], [[Docs/Format Data/File/Photo]], [[Docs/Format Data/File/Video]]|
 | [[Docs/Tipe Data/EnumData]] | [[Docs/Format Data/EnumData/Dropdown]], [[Docs/Format Data/EnumData/Multiple Choices]] |
 
 ## Daftar Tipe Data yang tidak memiliki format

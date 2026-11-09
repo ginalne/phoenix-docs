@@ -1,10 +1,10 @@
 ---
-status: draft
-title: Delete Node Block
-description: Flow Block Data Tree yang menghapus sebuah Node beserta seluruh anaknya.
-pageDecoration:
-  tree:
-    priority: 14
+    status: draft
+    title: Delete Node Block
+    description: Flow Block Data Tree yang menghapus sebuah Node beserta seluruh anaknya.
+    pageDecoration:
+      tree:
+        priority: 14
 ---
 
 # Delete Node Block
@@ -14,7 +14,6 @@ pageDecoration:
 Delete Node Block adalah Flow Block yang menghapus sebuah [[Docs/Tipe Data/Node]] beserta seluruh anaknya. Gunakan block ini untuk membersihkan hierarki [[Docs/Tipe Data/Tree]] secara otomatis dari Flow, misalnya menghapus kategori yang sudah tidak dipakai.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/delete-node-block-flow.png|Delete Node Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Delete Node Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

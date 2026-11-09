@@ -13,7 +13,6 @@
 Node Get Children Block adalah Flow Block yang mengambil anak langsung sebuah [[Docs/Tipe Data/Node]] berdasarkan Order yang ditentukan. Gunakan block ini untuk membaca isi satu tingkat di bawah Node, misalnya mengambil subkategori pertama dari sebuah kategori.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-children-block-flow.png|Node Get Children Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Node Get Children Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

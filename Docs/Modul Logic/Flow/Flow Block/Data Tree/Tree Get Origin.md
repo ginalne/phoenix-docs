@@ -1,10 +1,10 @@
 ---
-status: draft
-title: Tree Get Origin Block
-description: Flow Block Data Tree yang mengambil Node Origin dari sebuah Tree.
-pageDecoration:
-  tree:
-    priority: 13
+    status: draft
+    title: Tree Get Origin Block
+    description: Flow Block Data Tree yang mengambil Node Origin dari sebuah Tree.
+    pageDecoration:
+      tree:
+        priority: 13
 ---
 
 # Tree Get Origin Block
@@ -14,7 +14,6 @@ pageDecoration:
 Tree Get Origin Block adalah Flow Block yang mengambil [[Docs/Tipe Data/Node]] Origin dari sebuah [[Docs/Tipe Data/Tree]]. Setiap Tree yang baru dibuat otomatis memiliki Node Origin sebagai Node awal, dan block ini menjadikannya titik awal bagi Flow, misalnya untuk menambahkan Node langsung di bawah Origin.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/tree-get-origin-block-flow.png|Tree Get Origin Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Tree Get Origin Block memiliki 1 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

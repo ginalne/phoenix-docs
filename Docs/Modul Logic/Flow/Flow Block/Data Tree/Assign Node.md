@@ -13,7 +13,6 @@
 Assign Node Block adalah Flow Block yang menempatkan sebuah [[Docs/Tipe Data/Node]] (Children) di bawah Node lain (Parent). Gunakan block ini untuk memindahkan Node beserta seluruh keturunannya ke posisi baru dalam [[Docs/Tipe Data/Tree]], misalnya memindahkan sebuah kategori ke kategori induk yang lain.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/assign-node-block-flow.png|Assign Node Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Assign Node Block memiliki 3 input di sisi kiri, 4 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

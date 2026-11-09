@@ -73,11 +73,6 @@ Aturan penting:
 | [[^field|Modify Event]] | [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], [[Docs/Modul Data/Tree/Apa itu Tree|Tree]], [[Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event|Timeline Event]] | Mengubah Event yang terhubung ke [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], termasuk tombol Event untuk menghubungkan Flow Block Event dari komponen. Lihat [[Docs/Event/Menghubungkan Event]]. |
 | [[^field|View Publish]] dan [[^field|Publish]] | [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Data/Tree/Apa itu Tree|Tree]], [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas|Canvas]], [[Docs/Modul Interface/Form/Apa itu Form|Form]] | Mengatur tautan publikasi komponen. |
 
-<!--
-  * [TODO] Daftar komponen pada tabel ini disusun dari komponen yang sudah selesai (Table: Merge, Publish, Event. Enum: Merge, Event. Tree: Publish, Event. Canvas dan Form: Publish. Timeline: Event). Mohon konfirmasi kelengkapannya, termasuk komponen lain yang memiliki Merge, Publish, atau Event.
-  * [TODO] Penjelasan Merge hanya berbunyi "penggabungan data". Mohon jelaskan secara singkat apa yang digabungkan pada Table dan Enum, agar pembaca memahami fungsi yang dibatasi.
--->
-
 ## Publish dan View Publish
 
 [[^field|Publish]] dan [[^field|View Publish]] mengatur tautan publikasi komponen. Keduanya sengaja dipisah agar tidak semua anggota dapat mengubah konfigurasi publikasi.
@@ -102,11 +97,6 @@ Aturan penting:
 
 >**warning** Perubahan langsung berlaku
 >Setiap perubahan tersimpan langsung dan langsung berlaku bagi anggota yang sedang membuka Phoenix, tanpa perlu memuat ulang.
-
-<!--
-  * [TODO] Tabel perbandingan View Publish dan Publish disusun dari definisi pada halaman Workspace. Mohon konfirmasi bahwa View Publish tidak dapat mengubah status publikasi dan bahwa Publish mencakup semua yang dapat dilakukan View Publish.
-  * [TODO] Mohon konfirmasi tombol yang hilang untuk setiap fungsi saat disallow (diasumsikan tombol Merge, tombol Publish, dan tombol Event), serta apakah Form memiliki View Publish.
--->
 
 ## Contoh Penggunaan
 
@@ -134,10 +124,6 @@ Tim pemasaran perlu menerbitkan formulir pendaftaran, tetapi tidak boleh menguba
 | Anggota baru hanya boleh membaca. | Seluruh Function Access [[^value/boolean/disallow]]. |
 
 Dengan Function Access, fungsi yang berdampak luas hanya dapat dijalankan oleh pihak yang bertanggung jawab.
-
-<!--
-  * [TODO] Nama komponen pada Contoh Penggunaan (Form Pendaftaran, Data Pendaftar, Laporan Mingguan) adalah nama generik. Mohon sesuaikan atau tambahkan gambar bila diperlukan.
--->
 
 ## Praktik Terbaik
 
