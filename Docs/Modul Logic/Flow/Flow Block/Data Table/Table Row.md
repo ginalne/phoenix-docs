@@ -13,7 +13,7 @@ Table Row Block adalah Flow Block yang menerima [[Docs/Tipe Data/Row]] dan menge
 ![[Docs/Modul Logic/Flow/Flow Block/Data Table/table-row-block-flow.png|Table Row Block pada Blueprint]]
 ## Input dan Output
 
-Table Row memiliki satu input di sisi kiri, tiga output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
+Table Row Block memiliki satu input di sisi kiri, tiga output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada aliran keluar. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
@@ -57,7 +57,6 @@ Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil 
 
 - Block ini hanya membaca atribut [[Docs/Tipe Data/Row]] dan tidak mengubah Row.
 - [[^output|Index]] dibuat otomatis oleh sistem saat Row ditambahkan.
-- [[^input|Row]] yang dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. Pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 - Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

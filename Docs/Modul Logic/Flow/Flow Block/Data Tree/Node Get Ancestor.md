@@ -1,70 +1,71 @@
 ---
     status: draft
     title: Node Get Ancestor Block
-    description: Flow Block Data Tree yang mengambil leluhur dari sebuah Node dengan menelusuri dari Origin sesuai Anc. Level.
+    description: Flow Block Data Tree yang mengambil leluhur sebuah Node berdasarkan Anc. Level, dihitung dari Origin.
+    pageDecoration:
+      tree:
+        priority: 10
 ---
+
 # Node Get Ancestor Block
 
->**note** Node Get Ancestor Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Node Get Ancestor Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Node Get Ancestor Block adalah Flow Block yang mengambil leluhur dari sebuah [[Docs/Tipe Data/Node]] dengan menelusuri jalur dari Origin menuju Node tersebut. [[^input|Anc. Level]] menentukan leluhur yang diambil: nilai 1 menghasilkan leluhur pertama pada jalur dari Origin, dan nilai berikutnya menghasilkan leluhur selanjutnya.
+Node Get Ancestor Block adalah Flow Block yang mengambil leluhur sebuah [[Docs/Tipe Data/Node]] pada silsilah dari Origin menuju Node tersebut. Gunakan block ini untuk mengetahui Node yang berada pada tingkat tertentu dalam silsilah, misalnya kategori utama dari sebuah kategori.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-ancestor-block-flow.png|Node Get Ancestor Block pada Blueprint Flow]]
 ## Input dan Output
 
-Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.
+Node Get Ancestor Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
 | Input | Tipe Data | Keterangan |
-| - | - | - |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang leluhurnya akan diambil. Pilih Node atau hubungkan dari output block lain. Wajib diisi. |
-| [[^input|Anc. Level]] | [[Docs/Tipe Data/Number]] | Urutan leluhur pada jalur dari Origin ke Node. Wajib diisi. |
+| ----- | --------- | ---------- |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang leluhurnya diambil. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Anc. Level]] | [[Docs/Tipe Data/Number]] | Tingkat leluhur yang diambil, dihitung dari Origin. [[^value/number|1]] menghasilkan Origin, [[^value/number|2]] menghasilkan Node berikutnya pada silsilah, dan seterusnya. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 
 ### Output
 
 | Output | Tipe Data | Keterangan |
-| - | - | - |
-| [[^output|The Ancestor]] | [[Docs/Tipe Data/Node]] | Leluhur pada Anc. Level yang diinput. Hanya meneruskan aliran bila ditemukan. |
-| [[^output|Not Found]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila leluhur tidak ditemukan. Hanya meneruskan aliran bila tidak ditemukan. |
+| ------ | --------- | ---------- |
+| [[^output|The Ancestor (Node)]] | [[Docs/Tipe Data/Node]] | Leluhur pada tingkat Anc. Level. Keluar bila leluhur ditemukan. |
+| [[^output|Not Found]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Anc. Level kurang dari [[^value/number|1]] atau melebihi jumlah leluhur Node. Node yang diinput bukan leluhurnya sendiri sehingga tidak dapat ditemukan. |
 
-Bila leluhur ditemukan, hanya [[^output|The Ancestor]] yang meneruskan aliran. Bila tidak ditemukan, hanya [[^output|Not Found]] yang meneruskan aliran. Saat [[^flowstate|Fatal Error]], tidak ada output yang meneruskan aliran. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang tidak meneruskan aliran tidak akan dieksekusi, sesuai [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
-1. Block menerima [[Docs/Tipe Data/Node]] dari [[^input|Node]] dan [[Docs/Tipe Data/Number]] dari [[^input|Anc. Level]].
-2. Block menelusuri jalur dari Origin menuju Node. [[^input|Anc. Level]] bernilai 1 menghasilkan leluhur pertama pada jalur tersebut, dan seterusnya sampai leluhur terakhir sebelum Node.
-3. Bila leluhur pada level tersebut ada, block meneruskannya lewat [[^output|The Ancestor]].
-4. Bila [[^input|Anc. Level]] kurang dari 1 atau melebihi jumlah leluhur pada jalur dari Origin ke Node, [[^output|Not Found]] bernilai [[^value/boolean/true]].
-5. Bila [[^input|Node]] atau [[^input|Anc. Level]] dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]] dan tidak ada output yang meneruskan aliran.
-6. Penelusuran ini dihitung dari Origin ke bawah. Untuk penelusuran yang dihitung dari Node ke atas, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]].
+1. Isi [[^input|Node]] dan [[^input|Anc. Level]], langsung pada block atau dari output block lain.
+2. Block menelusuri silsilah dari Origin menuju Node dan mengambil leluhur pada tingkat [[^input|Anc. Level]].
+3. Bila leluhur ditemukan, hanya [[^output|The Ancestor (Node)]] yang meneruskan aliran.
+4. Bila tidak ditemukan, hanya [[^output|Not Found]] yang meneruskan aliran.
 
 ## Contoh Penggunaan
 
-Contoh berikut memakai [[Docs/Tipe Data/Tree]] dengan jalur [[^value/node|Origin]] ➜ [[^value/node|Kategori]] ➜ [[^value/node|Subkategori]] ➜ [[^value/node|Produk]], dan [[^input|Node]] berisi [[^value/node|Produk]].
+Tabel berikut memakai Node [[^value/node|Laptop]] pada silsilah Origin ➜ Elektronik ➜ Komputer ➜ Laptop.
 
-| Peristiwa | Status | [[^output|The Ancestor]] | [[^output|Not Found]] |
-| - | - | - | - |
-| [[^input|Anc. Level]] bernilai [[^value/number|1]] | [[^flowstate|Succeed]] | [[^value/node|Origin]] | - |
-| [[^input|Anc. Level]] bernilai [[^value/number|2]] | [[^flowstate|Succeed]] | [[^value/node|Kategori]] | - |
-| [[^input|Anc. Level]] bernilai [[^value/number|3]] | [[^flowstate|Succeed]] | [[^value/node|Subkategori]] | - |
-| [[^input|Anc. Level]] bernilai [[^value/number|4]] (melebihi jumlah leluhur) | [[^flowstate|Succeed]] | - | [[^value/boolean/true]] |
-| [[^input|Anc. Level]] kurang dari [[^value/number|1]] | [[^flowstate|Succeed]] | - | [[^value/boolean/true]] |
-| [[^input|Node]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - | - |
-| [[^input|Anc. Level]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - | - |
+| Kondisi | The Ancestor (Node) | Not Found | Status |
+| ------- | ------------------- | --------- | ------ |
+| Anc. Level [[^value/number|1]] | [[^value/node|Origin]] | - | [[^flowstate|Succeed]] |
+| Anc. Level [[^value/number|2]] | [[^value/node|Elektronik]] | - | [[^flowstate|Succeed]] |
+| Anc. Level [[^value/number|3]] | [[^value/node|Komputer]] | - | [[^flowstate|Succeed]] |
+| Anc. Level [[^value/number|4]], menunjuk Node itu sendiri | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
+| Anc. Level [[^value/number|0]], kurang dari [[^value/number|1]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
+| [[^input|Node]] atau [[^input|Anc. Level]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+
+Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
-- **Gunakan Anc. Level untuk posisi tetap dari Origin.** Misalnya Anc. Level 2 selalu mengambil Node level kedua pada jalur, berapa pun kedalaman Node yang diinput.
-- **Hubungkan block penanganan langsung ke [[^output|Not Found]].** Misalnya [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message|Error Message Block]] untuk Node yang berada di level lebih dangkal dari yang Anda harapkan.
-- **Pilih [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]] bila posisi dihitung dari Node.** Gunakan Node Get Ancestor bila posisi dihitung dari Origin.
+- Gunakan Node Get Ancestor Block bila Anda menghitung dari Origin ke bawah, dan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]] bila Anda menghitung dari Node ke atas.
+- Gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]] bila Anda hanya membutuhkan Origin, tanpa perlu menentukan Node.
 
 ## Batasan dan Catatan
 
-- [[^input|Anc. Level]] dihitung dari Origin ke bawah, berbeda dengan [[^input|Depth]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]] yang dihitung dari Node ke atas.
-- Node yang diinput tidak dihitung sebagai leluhurnya sendiri.
-- [[^output|Not Found]] bukan error. Block berstatus [[^flowstate|Succeed]] dan Flow tetap berjalan pada jalur [[^output|Not Found]].
-- Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Penelusuran dihitung dari Origin menuju Node yang diinput, dan [[^value/number|1]] adalah Origin.
+- Node yang diinput bukan leluhurnya sendiri, sehingga tingkat yang menunjuk Node itu menghasilkan [[^output|Not Found]].
+- Karena bukan Flow Block Event, Node Get Ancestor Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
@@ -74,14 +75,3 @@ Contoh berikut memakai [[Docs/Tipe Data/Tree]] dengan jalur [[^value/node|Origin
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]]
 
-<!--
-  * [TODO] Konfirmasi bahwa Node Origin dihitung sebagai [[^input|Anc. Level]] 1 (leluhur pertama dari Origin) dan bahwa Node yang diinput tidak dihitung sebagai leluhur. Contoh dan tabel mengikuti asumsi ini.
-  * [TODO] Konfirmasi kondisi [[^output|Not Found]] untuk Node Origin (tidak memiliki leluhur): saya menulis [[^output|Not Found]] bernilai [[^value/boolean/true]] pada semua [[^input|Anc. Level]].
-  * [TODO] Konfirmasi status block saat [[^input|Node]] atau [[^input|Anc. Level]] kosong. Saya menulis [[^flowstate|Fatal Error]] mengikuti block Data Tree lainnya.
-  * [TODO] Konfirmasi status block saat [[^output|Not Found]]: saya menulis [[^flowstate|Succeed]].
-  * [TODO] Nama Node pada contoh (Origin, Kategori, Subkategori, Produk) bersifat generik. Sesuaikan dengan gambar bila perlu.
--->
-
-<!--
-  * [TODO] Halaman yang ditautkan dan mungkin belum ada: `Docs/Modul Logic/Flow/Flow Block/Error/Error Message`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan anchor `Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output`.
--->

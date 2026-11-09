@@ -15,7 +15,7 @@ Delete Row Block adalah Flow Block yang menghapus [[Docs/Tipe Data/Row]] dari [[
 
 ## Input dan Output
 
-Delete Row memiliki dua input di sisi kiri, dua output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
+Delete Row Block memiliki dua input di sisi kiri, dua output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada aliran keluar. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
@@ -73,7 +73,6 @@ Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan err
 ## Batasan dan Catatan
 
 - Penghapusan [[Docs/Tipe Data/Row]] tidak dapat dikembalikan, termasuk [[Docs/Tipe Data/TableData]] di dalamnya.
-- [[^input|Row]] atau [[^input|Force]] yang dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]], sehingga [[^output|Succeed]] dan [[^output|Error]] tidak meneruskan aliran. Pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 - Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
@@ -83,8 +82,3 @@ Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan err
 - [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event Block]]
 - [[Docs/Modul Data/Table/Apa itu Table#Mengelola Data Table|Mengelola Data Table]]
 
-<!--
-  * [TODO] Konfirmasi: definisi Row "sudah digunakan" diasumsikan sama dengan Variable Data (dipakai pada Flow atau data lain, atau tercatat di riwayat activity), dan Force [[^value/boolean/false]] pada Row yang sudah digunakan menghasilkan [[^output|Error]].
-  * [TODO] Konfirmasi: [[Docs/Tipe Data/TableData]] pada Row ikut terhapus bersama Row.
-  * [TODO] Halaman yang ditautkan dan diasumsikan ada: `Data Table/Pengenalan`, `Flow Block/Syarat Eksekusi`, `Flow Block/Antarmuka#Output`, `Flow Block/Event/Table Row Event`, dan `Flow Activity`.
--->

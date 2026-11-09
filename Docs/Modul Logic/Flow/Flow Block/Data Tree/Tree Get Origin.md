@@ -2,75 +2,67 @@
     status: draft
     title: Tree Get Origin Block
     description: Flow Block Data Tree yang mengambil Node Origin dari sebuah Tree.
+    pageDecoration:
+      tree:
+        priority: 13
 ---
 # Tree Get Origin Block
 
->**note** Tree Get Origin Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Tree Get Origin Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Tree Get Origin Block adalah Flow Block yang mengambil [[Docs/Modul Data/Tree/Apa itu Tree|Node Origin]] dari sebuah [[Docs/Tipe Data/Tree]]. Origin adalah titik awal setiap Tree, sehingga block ini menjadi pintu masuk untuk menelusuri atau menambah [[Docs/Tipe Data/Node]] dari akar Tree.
+Tree Get Origin Block adalah Flow Block yang mengambil [[Docs/Tipe Data/Node]] Origin dari sebuah [[Docs/Tipe Data/Tree]]. Setiap Tree yang baru dibuat otomatis memiliki Node Origin sebagai Node awal, dan block ini menjadikannya titik awal bagi Flow, misalnya untuk menambahkan Node langsung di bawah Origin.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/tree-get-origin-block-flow.png|Tree Get Origin Block pada Blueprint Flow]]
 ## Input dan Output
 
-Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.
+Tree Get Origin Block memiliki 1 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
 | Input | Tipe Data | Keterangan |
-| - | - | - |
-| [[^input|Tree]] | [[Docs/Tipe Data/Tree]] | Tree yang Origin-nya akan diambil. Isi dengan Tree atau hubungkan dari output block lain. Wajib diisi. |
+| ----- | --------- | ---------- |
+| [[^input|Tree]] | [[Docs/Tipe Data/Tree]] | Pilih Tree atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 
 ### Output
 
 | Output | Tipe Data | Keterangan |
-| - | - | - |
-| [[^output|The Origin]] | [[Docs/Tipe Data/Node]] | Node Origin dari Tree yang diinput. |
+| ------ | --------- | ---------- |
+| [[^output|The Origin (Node)]] | [[Docs/Tipe Data/Node]] | Node Origin dari Tree yang diinput. |
 
-Saat berhasil, [[^output|The Origin]] meneruskan aliran. Saat [[^flowstate|Fatal Error]], [[^output|The Origin]] tidak meneruskan aliran. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
-1. Block menerima [[Docs/Tipe Data/Tree]] dari [[^input|Tree]].
-2. Block mengambil Node Origin dari Tree tersebut. Setiap Tree yang baru dibuat otomatis memiliki satu Node bernama Origin.
-3. Block meneruskan Node Origin lewat [[^output|The Origin]].
-4. Bila [[^input|Tree]] dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]], pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]], dan tidak ada output yang meneruskan aliran.
+1. Isi [[^input|Tree]] dengan [[Docs/Tipe Data/Tree]] atau hubungkan dari output block lain.
+2. Saat dieksekusi, [[^output|The Origin (Node)]] mengeluarkan Node Origin Tree tersebut.
+3. Hubungkan output ke block berikutnya, misalnya ke input [[^input|Parent]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]].
 
 ## Contoh Penggunaan
 
-Tabel berikut menunjukkan hasil block pada setiap kondisi input.
+Tabel berikut menunjukkan hasil Tree Get Origin Block pada Tree Kategori Produk.
 
-| Peristiwa | Status | [[^output|The Origin]] |
-| - | - | - |
-| [[^input|Tree]] terisi | [[^flowstate|Succeed]] | Node Origin dari Tree |
-| [[^input|Tree]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - |
+| Kondisi | The Origin (Node) | Status |
+| ------- | ----------------- | ------ |
+| Tree terisi | [[^value/node|Origin]] | [[^flowstate|Succeed]] |
+| [[^input|Tree]] dibiarkan kosong | - | [[^flowstate|Fatal Error]] |
+
+Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
-- **Mulai penelusuran dari [[^output|The Origin]].** Hubungkan ke [[^input|Node]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]] untuk turun ke level pertama Tree.
-- **Tambahkan Node level pertama dengan Origin sebagai Parent.** Hubungkan [[^output|The Origin]] ke [[^input|Parent]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]].
-- **Ambil [[Docs/Tipe Data/Tree]] dari block lain.** Hubungkan [[^output|Tree]] dari [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node|Node Block]] ke [[^input|Tree]] agar block ini bekerja pada Tree tempat Node berada.
+- Hubungkan **[[^output|The Origin (Node)]]** ke [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]] untuk menambahkan Node langsung di bawah Origin, atau ke [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]] untuk membaca anak pertama Tree.
 
 ## Batasan dan Catatan
 
-- Block ini tidak memiliki output [[^output|Not Found]] karena setiap Tree memiliki Node Origin.
-- Bila [[^input|Tree]] kosong, block berstatus [[^flowstate|Fatal Error]] dan seluruh output tidak ada.
-- Block hanya membaca dan tidak mengubah [[Docs/Tipe Data/Tree]].
-- Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Setiap Tree memiliki Node Origin sehingga block ini tidak memiliki output Not Found.
+- [[^input|Tree]] yang kosong membuat block berstatus [[^flowstate|Fatal Error]] dan output tidak ada.
+- Karena bukan Flow Block Event, Tree Get Origin Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]]
-- [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree|Tree Block]]
+- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]]
-- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]]
 
-<!--
-  * [TODO] Konfirmasi label output persis: `The Origin` (huruf besar pada kata The mengikuti tulisan penulis).
-  * [TODO] Konfirmasi perilaku pada Tree Merger: apakah Node Origin yang diambil adalah Origin milik Tree Merger itu sendiri.
--->
-
-<!--
-  * [TODO] Halaman yang ditautkan dan mungkin belum ada: `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan anchor `Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output`.
--->

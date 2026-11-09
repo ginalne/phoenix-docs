@@ -1,97 +1,96 @@
 ---
-status: draft
-title: Delete Node Block
-description: Flow Block Data Tree yang menghapus sebuah Node, dengan pilihan hapus paksa untuk Node yang sudah digunakan.
+    status: draft
+    title: Delete Node Block
+    description: Flow Block Data Tree yang menghapus sebuah Node beserta seluruh anaknya.
+    pageDecoration:
+      tree:
+        priority: 14
 ---
 # Delete Node Block
 
->**note** Delete Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Delete Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Delete Node Block adalah Flow Block yang menghapus sebuah [[Docs/Tipe Data/Node]] dari [[Docs/Tipe Data/Tree]]. Block ini menghasilkan dua output Boolean, yaitu [[^output|Succeed]] saat berhasil dan [[^output|Error]] saat penghapusan ditolak, sehingga Flow dapat bercabang sesuai hasilnya.
+Delete Node Block adalah Flow Block yang menghapus sebuah [[Docs/Tipe Data/Node]] beserta seluruh anaknya. Gunakan block ini untuk membersihkan hierarki [[Docs/Tipe Data/Tree]] secara otomatis dari Flow, misalnya menghapus kategori yang sudah tidak dipakai.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/delete-node-block-flow.png|Delete Node Block pada Blueprint Flow]]
 ## Input dan Output
 
-Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.
+Delete Node Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
 | Input | Tipe Data | Keterangan |
-| - | - | - |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang akan dihapus. Pilih Node atau hubungkan dari output block lain. Wajib diisi. |
-| [[^input|Force]] | [[Docs/Tipe Data/Boolean]] | Isi [[^value/boolean/true]] untuk menghapus Node yang sudah digunakan. Isi [[^value/boolean/false]] untuk menolak penghapusan Node yang sudah digunakan. Wajib diisi. |
+| ----- | --------- | ---------- |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang akan dihapus. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Force]] | [[Docs/Tipe Data/Boolean]] | Isi [[^value/boolean/true]] untuk memaksa penghapusan Node yang sudah digunakan oleh komponen lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 
 ### Output
 
 | Output | Tipe Data | Keterangan |
-| - | - | - |
-| [[^output|Succeed]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila Node berhasil dihapus. Hanya meneruskan aliran pada kasus berhasil. |
-| [[^output|Error]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila penghapusan ditolak. Hanya meneruskan aliran pada kasus gagal. |
+| ------ | --------- | ---------- |
+| [[^output|Succeed]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Node beserta seluruh anaknya berhasil dihapus dan aliran diteruskan. |
+| [[^output|Error]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila penghapusan ditolak dan aliran diteruskan. |
 
-Pada kasus berhasil, hanya [[^output|Succeed]] yang meneruskan aliran. Pada kasus gagal, hanya [[^output|Error]] yang meneruskan aliran. Saat [[^flowstate|Fatal Error]], tidak ada output yang meneruskan aliran. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang tidak meneruskan aliran tidak akan dieksekusi, sesuai [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 >**danger** Penghapusan tidak dapat dikembalikan
-> [[Docs/Tipe Data/Node]] yang sudah dihapus tidak dapat dikembalikan. Periksa kembali [[^input|Node]] sebelum menjalankan Flow.
+>Node yang dihapus tidak dapat dikembalikan, dan seluruh anak serta keturunannya ikut terhapus.
 
->**warning** Hapus paksa pada Node yang sudah digunakan
-> Bila [[^input|Force]] bernilai [[^value/boolean/true]], Node yang sudah digunakan tetap dihapus. Flow, data lain, atau riwayat yang merujuk Node tersebut dapat terputus.
+>**warning** Hapus paksa
+>Bila [[^input|Force]] bernilai [[^value/boolean/true]], Node tetap dihapus walaupun sudah digunakan oleh komponen lain, sehingga relasi dari komponen tersebut dapat terputus.
 
 >**warning** Tree dengan Merger Mode atau External Read Only
-> Flow dapat mengubah atau menghapus [[Docs/Tipe Data/Node]] pada [[Docs/Tipe Data/Tree]] yang memakai [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] atau [[Docs/Modul Data/Tree/Konfigurasi External Read Only|External Read Only]], termasuk Node hasil *clone*. Pastikan perubahan tersebut memang Anda inginkan sebelum menjalankan Flow.
+>Delete Node Block dapat menghapus Node pada [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] yang [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] atau [[Docs/Modul Data/Tree/Konfigurasi External Read Only|External Read Only]]-nya aktif, termasuk Node hasil *clone*. Periksa Tree tujuan sebelum menjalankan Flow.
 
 >**note** Perubahan oleh Flow tidak memicu Flow kembali
-> Perubahan [[Docs/Tipe Data/Node]] yang dilakukan block ini tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]] maupun Flow Block Event lainnya.
+>Node yang diubah oleh Delete Node Block tidak memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]], sehingga Flow tidak berjalan kembali karena perubahan dari Flow.
 
 ## Cara Kerja
 
-1. Block menerima [[Docs/Tipe Data/Node]] dari [[^input|Node]] dan nilai [[Docs/Tipe Data/Boolean]] dari [[^input|Force]].
-2. Block memeriksa apakah Node sudah digunakan, yaitu sedang dipakai pada Flow atau data lain, atau riwayat activity mencatat pemakaiannya.
-3. Bila Node belum digunakan, Node dihapus dan [[^output|Succeed]] bernilai [[^value/boolean/true]].
-4. Bila Node sudah digunakan dan [[^input|Force]] bernilai [[^value/boolean/false]], penghapusan ditolak. Block berstatus [[^flowstate|Error]], pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]], dan [[^output|Error]] bernilai [[^value/boolean/true]].
-5. Bila Node sudah digunakan dan [[^input|Force]] bernilai [[^value/boolean/true]], Node tetap dihapus dan [[^output|Succeed]] bernilai [[^value/boolean/true]].
-6. Bila [[^input|Node]] atau [[^input|Force]] dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]] dan tidak ada output yang meneruskan aliran.
+1. Isi [[^input|Node]] dan [[^input|Force]], langsung pada block atau dari output block lain.
+2. Block memeriksa apakah Node atau salah satu anaknya sudah digunakan oleh komponen lain.
+3. Bila belum digunakan, Node beserta seluruh anaknya dihapus dan hanya [[^output|Succeed]] yang meneruskan aliran.
+4. Bila sudah digunakan dan [[^input|Force]] bernilai [[^value/boolean/false]], penghapusan ditolak, tidak ada Node yang terhapus, dan hanya [[^output|Error]] yang meneruskan aliran.
+5. Bila sudah digunakan dan [[^input|Force]] bernilai [[^value/boolean/true]], Node beserta seluruh anaknya dihapus paksa dan hanya [[^output|Succeed]] yang meneruskan aliran.
+
+>**note** Mengelola Error
+>Hubungkan output [[^output|Error]] ke block penanganan, misalnya [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message|Error Message Block]], agar Flow dapat memberi tahu pengguna. Block tersebut hanya dieksekusi bila penghapusan ditolak.
+
+<!--
+  * [TODO] Konfirmasi: Node dianggap sudah digunakan bila Node itu atau salah satu anaknya dipakai oleh komponen lain. Apakah definisinya sama dengan Delete Row (dipakai pada Flow atau data lain, atau tercatat di riwayat activity)?
+    Jawaban: 
+  * [TODO] Konfirmasi: Node Origin diasumsikan tidak dapat dihapus sehingga penghapusannya berstatus Error, apa pun nilai Force.
+  * [TODO] Konfirmasi: dampak hapus paksa pada komponen yang memakai Node (diasumsikan relasinya terputus).
+-->
 
 ## Contoh Penggunaan
 
-Tabel berikut menunjukkan hasil block pada setiap kombinasi kondisi.
+Tabel berikut menunjukkan hasil Delete Node Block untuk beberapa kondisi. Pada setiap kondisi yang berhasil, anak Node ikut terhapus.
 
-| Peristiwa | Status | [[^output|Succeed]] | [[^output|Error]] |
-| - | - | - | - |
-| Node belum digunakan, [[^input|Force]] bernilai [[^value/boolean/false]] | [[^flowstate|Succeed]] | [[^value/boolean/true]] | - |
-| Node belum digunakan, [[^input|Force]] bernilai [[^value/boolean/true]] | [[^flowstate|Succeed]] | [[^value/boolean/true]] | - |
-| Node sudah digunakan, [[^input|Force]] bernilai [[^value/boolean/false]] | [[^flowstate|Error]] | - | [[^value/boolean/true]] |
-| Node sudah digunakan, [[^input|Force]] bernilai [[^value/boolean/true]] | [[^flowstate|Succeed]] | [[^value/boolean/true]] | - |
-| [[^input|Node]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - | - |
-| [[^input|Force]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - | - |
+| Kondisi | Force | Succeed | Error | Status |
+| ------- | ----- | ------- | ----- | ------ |
+| Node dan anaknya belum digunakan komponen lain | [[^value/boolean/false]] | [[^value/boolean/true]] | - | [[^flowstate|Succeed]] |
+| Node atau salah satu anaknya sudah digunakan komponen lain | [[^value/boolean/false]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
+| Node atau salah satu anaknya sudah digunakan komponen lain | [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate|Succeed]] |
+| [[^input|Node]] atau [[^input|Force]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
+
+Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
-- **Mulai dengan [[^input|Force]] bernilai [[^value/boolean/false]].** Gunakan hapus paksa hanya setelah Anda memastikan Node yang sudah digunakan memang boleh dihapus.
-- **Isi [[^input|Force]] pada setiap eksekusi.** Berbeda dengan sebagian block Data lain, [[^input|Force]] yang kosong tidak dianggap [[^value/boolean/false]] dan menghasilkan [[^flowstate|Fatal Error]].
-- **Hubungkan block penanganan langsung ke [[^output|Error]].** Misalnya [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message|Error Message Block]] agar kegagalan penghapusan tercatat dengan jelas. [[^output|Succeed]] dan [[^output|Error]] tidak meneruskan aliran bersamaan, sehingga tiap kasus dapat memiliki jalurnya sendiri.
+- Periksa anak Node dengan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]] sebelum menghapus, karena seluruh anaknya ikut terhapus.
+- Biarkan [[^input|Force]] bernilai [[^value/boolean/false]] kecuali Anda yakin Node yang sudah digunakan memang harus dihapus, lalu andalkan output [[^output|Error]] untuk mengetahui bahwa Node masih digunakan.
 
 ## Batasan dan Catatan
 
-- Bila [[^input|Node]] atau [[^input|Force]] kosong, block berstatus [[^flowstate|Fatal Error]] dan seluruh output tidak ada.
-- Penolakan penghapusan karena Node sudah digunakan berstatus [[^flowstate|Error]], bukan [[^flowstate|Fatal Error]].
-- Block menghapus satu [[Docs/Tipe Data/Node]] setiap eksekusi.
-- Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- [[^input|Force]] yang dibiarkan kosong menghasilkan [[^flowstate|Fatal Error]], tidak diperlakukan sebagai [[^value/boolean/false]].
+- Node Origin tidak dapat dihapus.
+- Karena bukan Flow Block Event, Delete Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]]
-- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node|Node Block]]
-- [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]]
+- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]]
 
-<!--
-  * [TODO] Konfirmasi perilaku Node anak saat Node induk dihapus lewat Flow (ikut terhapus, naik ke Parent, atau penghapusan ditolak). Belum ditulis di halaman ini.
-  * [TODO] Konfirmasi apakah Node Origin dapat dihapus dan hasilnya (Error atau Fatal Error). Belum ditulis di halaman ini.
-  * [TODO] Konfirmasi definisi Node yang "sudah digunakan" (saya mengikuti definisi Variable Data: dipakai pada Flow atau data lain, atau tercatat di riwayat activity).
-  * [TODO] Konfirmasi penyebab lain penghapusan ditolak selain Node sudah digunakan.
--->
-
-<!--
-  * [TODO] Halaman yang ditautkan dan mungkin belum ada: `Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event`, `Docs/Modul Logic/Flow/Flow Block/Error/Error Message`, `Docs/Modul Data/Tree/Konfigurasi External Read Only` (usulan), `Docs/Modul Data/Tree/Konfigurasi Merger Mode`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan anchor `Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output`.
--->

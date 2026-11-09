@@ -12,7 +12,7 @@ Table Block adalah Flow Block yang menerima [[Docs/Tipe Data/Table]] dan mengelu
 ![[Docs/Modul Logic/Flow/Flow Block/Data Table/table-block-flow.png|Table Block pada Blueprint]]
 ## Input dan Output
 
-Table Block memiliki satu input di sisi kiri, tiga output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
+Table Block memiliki satu input di sisi kiri, tiga output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada aliran keluar. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
@@ -56,7 +56,6 @@ Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil 
 ## Batasan dan Catatan
 
 - Block ini hanya membaca atribut [[Docs/Tipe Data/Table]] dan tidak mengubah Table.
-- [[^input|Table]] yang dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. Pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 - Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

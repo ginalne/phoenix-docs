@@ -6,10 +6,12 @@
     meta
     prompt
 ---
+2026-11-09 02:00
+
 /phoenix-docs-silverbullet /phoenix-docs-knowledge
 
-![[prompt/2026-11-09_02-57-36.png]]
-Tolong buatkan **8 halaman Flow Block** untuk dokumentasi Phoenix, yaitu halaman per block yang menjadi tujuan tautan pada enam halaman Pengenalan kategori Flow Block yang saya lampirkan (Input dan Output, Query, Modular, Chrono, Error). Enam halaman kategori itu sudah final dan menjadi sumber kebenaran untuk fungsi tiap block, istilah, path, dan alias tautan.
+![[prompt/2026-11-09_03-07-35.png]]
+Tolong buatkan **8 halaman Flow Block** untuk dokumentasi Phoenix, yaitu halaman per block yang menjadi tujuan tautan pada lima halaman Pengenalan kategori Flow Block (Input dan Output, Query, Modular, Chrono, Error).
 
 ## Daftar halaman
 
@@ -19,8 +21,8 @@ Seluruh path berada di bawah `Docs/Modul Logic/Flow/Flow Block/`. Alias tautan m
 | --- | --- | --- | --- |
 | 1 | Input dan Output | `Input dan Output/Branch` | Branch Block |
 | 2 | Input dan Output | `Input dan Output/Passer` | Passer Block |
-| 3 | Query | `Query/Condition/Equal Condition` | Condition Query Block |
-| 4 | Query | `Query/Execute/Table Output` | Execute Query Block |
+| 3 | Query | `Query/Condition/Add Table Filter` | Query Add Table Filter Block |
+| 4 | Query | `Query/Execute/Table Output` | Query Table Output Block |
 | 5 | Modular (API) | `Modular/API/HTTP Request` | HTTP Request API Block |
 | 6 | Modular (AI) | `Modular/AI/OpenAI 4` | OpenAI 4 AI Block |
 | 7 | Chrono | `Chrono/Delay` | Delay Chrono Block |
@@ -38,27 +40,26 @@ Memiliki output n yang sesuai dengan data input n, aturan output mengalirkan dat
 
 ## Query
 
-**Equal Condition** 
+**Add Table Filter** 
+Memiliki input Query untuk ditambahkan filter table. AND adalah input bertipe boolean, true artinya kondisi AND, dan false untuk OR. Column adalah input bertipe column. Operator adalah input string dengan simbol operator yang valid (arahkan ke [[Docs/Query/Filter/Operator]]). Operand adalah data pembanding dari nilai column yang diinput dengan tipedata yang harus valid (arahkan ke [[Docs/Query/Filter/Operand]]). Fatal Error dapat terjadi jika ada nilai yang dibiarkan kosong (Operand dibiarkan N/A Type dan operator mewajibkannya, karena ada beberapa operator yang tidak perlu operand, namun operand bernilai empty dengan bertipe data dianggap valid). Error dapat terjadi jika aturan mengisi operator atau operand tidak sesuai, atau Query yang diinput memiliki base yang bukan data Table. Output dari blok ini hanya Query dengan bertipe data Query, yaitu hasil penambahan filter dari query input.
 
+**Table Output**
+Memiliki input Query, yang harus menggunakan kaidah [[Docs/Query/Output/Table]]. Fatal Error jika dibiarkan kosong. Output hasilnya adalah Rows yaitu array dengan bertipe Row (berisi setidaknya 1 row), sedangkan Is Empty adalah output boolean jika hasilnya kosong.
 
-**Execute**
-menjalankan Query. Tidak ada kaidah Output tertentu, bentuk hasil mengikuti cara Query dirangkai.
+## Modular
 
+**HTTP Request**
+Input method adalah bertipe string dengan metode http yang valid. Endpoint adalah input bertipedata string. Header adalah input dengan tipedata object yaitu bakal header dari request. Payload adalah input bertipedata object. Fatal Error jika method atau endpoint dibiarkan kosong. Success adalah output bertipedata object jika hasilnya json dan text jika hasilnya html. Error adalah ketika ada respon error dari hasil request, bertipe data object. 
 
-**Operator**
-- **Increment:** ada langkah (*step*) yang ditentukan. Penjelasan rinci ada di halamannya sendiri.
-- **Implode:** dikelompokkan pada String karena array yang digabungkan juga harus bertipe String.
-- **TableRow Parse** dan **Node Parse:** hasilnya berupa Object.
-- **Assign:** hanya menetapkan satu atribut Object.
-- **Concatenate, Pad Left, Pad Right, Merge, Parse, Stringify:** fungsi umum sesuai tabel pada halaman Operator (belum ada detail input/output).
-- **If:** **belum terkonfirmasi.** Apakah memilih nilai (seperti *ternary*) atau menentukan jalur aliran, dan apa bedanya dengan Branch. Tanyakan kepada saya. Pada diagram Flow di skill, If dipakai sebagai blok kondisi dengan keterangan `If <Kondisi>?`.
+**OpenAI 4**
+Input API Key bertipe string, Model bertipe string, Input bertipe text, Messages bertipe object, Tools bertipe object, Tool Choice bertipe object, Max Output bertipe number, dan Temperatur bertipe number. Output dapat Text (bertipe text) atau Function (bertipe json dan jika tools), atau Error jika ada respon error dari OpenAI. Fatal Error hanya terjadi jika API Key, Model, Max Output dan Temperature dibiarkan kosong. 
 
-**Modular**
-- **HTTP Request:** mendukung semua metode (GET, POST, PUT, dan lain-lain). Respons berupa Object atau teks sesuai `Response Type`, dan `application/json` menjadi Object.
-- **OpenAI 4:** jenis permintaan dan hal spesifik lain (misalnya kebutuhan kunci atau kredensial) akan dijelaskan di halamannya sendiri, termasuk dalam bentuk callout. Tanyakan kepada saya.
+## Chrono
 
-**Chrono**
-- **Delay:** menunda aliran dengan waktu yang dapat ditentukan. Selama penundaan, state block menjadi Waiting. Satuan, rentang, dan batas durasi belum diketahui.
+**Delay**
+Input duration bertipe number (dalam satuan detik). dan Output Finish bernilai boolean true jika delay sudah selesai. Selama delay menunggu, status dalam Activity terlihat Waiting. Fatal Error jika duration dibiarkan kosong.
 
-**Error**
-- **Error Message:** membuat error baru dengan pesan yang dimodifikasi. Saat tereksekusi, seluruh aliran dihentikan dan pesan error muncul sebagai output di Flow Activity. Block ini memengaruhi status Error/Fatal Error, tetapi status mana yang dihasilkan belum diketahui.
+## Error
+
+**Error Message**
+Input message bertipe text.

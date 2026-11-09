@@ -16,7 +16,7 @@ TableData Setter Block adalah Flow Block yang mengisi atau mengubah satu nilai [
 
 ## Input dan Output
 
-TableData Setter Block tidak memiliki Control. Block ini memiliki tiga input di sisi kiri dan dua output di sisi kanan.
+TableData Setter Block memiliki tiga input di sisi kiri, dua output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada aliran keluar. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
@@ -90,7 +90,6 @@ Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan err
 - Satu eksekusi hanya mengubah satu [[Docs/Tipe Data/TableData]].
 - [[^input|Value]] kosong selalu valid dan mengosongkan [[Docs/Tipe Data/TableData]], tetapi [[^field|N/A Type]] tetap menimbulkan [[^flowstate|Fatal Error]] walaupun kosong.
 - [[^output|Value Conflict]] tidak mengubah [[Docs/Tipe Data/TableData]].
-- [[^input|Column]] dan [[^input|Row]] yang tidak ditemukan pada [[Docs/Modul Data/Table/Apa itu Table|Table]] yang sama menghasilkan status [[^flowstate|Error]]. Pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 - Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

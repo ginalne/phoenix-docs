@@ -1,69 +1,69 @@
 ---
     status: draft
     title: Node Get Children Block
-    description: Flow Block Data Tree yang mengambil anak langsung dari sebuah Node berdasarkan Order.
+    description: Flow Block Data Tree yang mengambil anak langsung sebuah Node berdasarkan Order.
+    pageDecoration:
+      tree:
+        priority: 11
 ---
 # Node Get Children Block
 
->**note** Node Get Children Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam kategori Data di komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Node Get Children Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Node Get Children Block adalah Flow Block yang mengambil anak langsung dari sebuah [[Docs/Tipe Data/Node]] berdasarkan Order. Block ini hanya mengambil satu tingkat ke bawah, bukan seluruh keturunan.
+Node Get Children Block adalah Flow Block yang mengambil anak langsung sebuah [[Docs/Tipe Data/Node]] berdasarkan Order yang ditentukan. Gunakan block ini untuk membaca isi satu tingkat di bawah Node, misalnya mengambil subkategori pertama dari sebuah kategori.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Data Tree/node-get-children-block-flow.png|Node Get Children Block pada Blueprint Flow]]
 ## Input dan Output
 
-Block ini tidak memiliki Control. Block hanya memiliki input di sisi kiri dan output di sisi kanan.
+Node Get Children Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
 | Input | Tipe Data | Keterangan |
-| - | - | - |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang anaknya akan diambil. Pilih Node atau hubungkan dari output block lain. Wajib diisi. |
-| [[^input|Child Order]] | [[Docs/Tipe Data/Number]] | Order dari anak yang ingin diambil. Wajib diisi. |
+| ----- | --------- | ---------- |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang anaknya diambil. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Child Order]] | [[Docs/Tipe Data/Number]] | Order anak yang dicari. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
 
 ### Output
 
 | Output | Tipe Data | Keterangan |
-| - | - | - |
-| [[^output|The Children]] | [[Docs/Tipe Data/Node]] | Anak langsung dari Node dengan Order yang diinput. Hanya meneruskan aliran bila ditemukan. |
-| [[^output|Not Found]] | [[Docs/Tipe Data/Boolean]] | Bernilai [[^value/boolean/true]] bila tidak ada anak dengan Order yang diinput. Hanya meneruskan aliran bila tidak ditemukan. |
+| ------ | --------- | ---------- |
+| [[^output|The Children (Node)]] | [[Docs/Tipe Data/Node]] | Anak langsung Node yang memiliki Order sesuai Child Order. Keluar bila anak ditemukan. |
+| [[^output|Not Found]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila Node tidak memiliki anak dengan Order sesuai Child Order. |
 
-Bila anak ditemukan, hanya [[^output|The Children]] yang meneruskan aliran. Bila tidak ditemukan, hanya [[^output|Not Found]] yang meneruskan aliran. Saat [[^flowstate|Fatal Error]], tidak ada output yang meneruskan aliran. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang tidak meneruskan aliran tidak akan dieksekusi, sesuai [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
-1. Block menerima [[Docs/Tipe Data/Node]] dari [[^input|Node]] dan [[Docs/Tipe Data/Number]] dari [[^input|Child Order]].
-2. Block mencari anak langsung dari Node yang memiliki Order sama dengan [[^input|Child Order]].
-3. Bila ditemukan, block meneruskan anak tersebut lewat [[^output|The Children]].
-4. Bila tidak ada anak dengan Order tersebut, termasuk bila Node tidak memiliki anak, [[^output|Not Found]] bernilai [[^value/boolean/true]].
-5. Bila [[^input|Node]] atau [[^input|Child Order]] dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]] dan tidak ada output yang meneruskan aliran.
-6. Untuk mengambil cucu atau keturunan lebih dalam, hubungkan [[^output|The Children]] ke [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]] berikutnya.
+1. Isi [[^input|Node]] dan [[^input|Child Order]], langsung pada block atau dari output block lain.
+2. Block mencari anak langsung Node yang memiliki Order sesuai [[^input|Child Order]].
+3. Bila anak ditemukan, hanya [[^output|The Children (Node)]] yang meneruskan aliran.
+4. Bila tidak ditemukan, hanya [[^output|Not Found]] yang meneruskan aliran.
 
 ## Contoh Penggunaan
 
-Contoh berikut memakai [[^input|Node]] berisi [[^value/node|Kategori]] yang memiliki dua anak langsung, yaitu [[^value/node|Subkategori Pertama]] dengan Order [[^value/number|1]] dan [[^value/node|Subkategori Kedua]] dengan Order [[^value/number|2]].
+Tabel berikut memakai Node [[^value/node|Elektronik]] yang memiliki anak [[^value/node|Komputer]] (Order [[^value/number|0]]) dan [[^value/node|Ponsel]] (Order [[^value/number|1]]). Node [[^value/node|Laptop]] adalah anak dari [[^value/node|Komputer]].
 
-| Peristiwa | Status | [[^output|The Children]] | [[^output|Not Found]] |
-| - | - | - | - |
-| [[^input|Child Order]] bernilai [[^value/number|1]] | [[^flowstate|Succeed]] | [[^value/node|Subkategori Pertama]] | - |
-| [[^input|Child Order]] bernilai [[^value/number|2]] | [[^flowstate|Succeed]] | [[^value/node|Subkategori Kedua]] | - |
-| [[^input|Child Order]] bernilai [[^value/number|3]] (tidak ada anak dengan Order tersebut) | [[^flowstate|Succeed]] | - | [[^value/boolean/true]] |
-| [[^input|Node]] tidak memiliki anak | [[^flowstate|Succeed]] | - | [[^value/boolean/true]] |
-| [[^input|Node]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - | - |
-| [[^input|Child Order]] dibiarkan kosong | [[^flowstate|Fatal Error]] | - | - |
+| Kondisi | The Children (Node) | Not Found | Status |
+| ------- | ------------------- | --------- | ------ |
+| Child Order [[^value/number|0]] | [[^value/node|Komputer]] | - | [[^flowstate|Succeed]] |
+| Child Order [[^value/number|1]] | [[^value/node|Ponsel]] | - | [[^flowstate|Succeed]] |
+| Child Order [[^value/number|2]], tidak ada anak dengan Order tersebut | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
+| Node [[^value/node|Laptop]] tidak memiliki anak, Child Order [[^value/number|0]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
+| [[^input|Node]] atau [[^input|Child Order]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+
+Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
-- **Mulai dari Origin.** Hubungkan [[^output|The Origin]] dari [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]] ke [[^input|Node]] untuk mengambil Node level pertama.
-- **Hubungkan block penanganan langsung ke [[^output|Not Found]].** Misalnya [[Docs/Modul Logic/Flow/Flow Block/Error/Error Message|Error Message Block]] atau [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]] untuk membuat anak dengan Order tersebut bila belum ada.
-- **Telusuri berantai untuk level yang lebih dalam.** Hubungkan [[^output|The Children]] ke [[^input|Node]] pada [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]] berikutnya.
+- Untuk menelusuri lebih dalam, hubungkan **[[^output|The Children (Node)]]** ke Node Get Children Block berikutnya, satu tingkat untuk setiap block.
+- Gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]] bila Anda ingin mengambil Node pada silsilah dari Origin menuju sebuah Node.
 
 ## Batasan dan Catatan
 
-- Block hanya mengambil anak langsung, bukan keturunan yang lebih dalam.
-- Block mengambil satu anak setiap eksekusi, yaitu anak dengan Order yang diinput.
-- [[^output|Not Found]] bukan error. Block berstatus [[^flowstate|Succeed]] dan Flow tetap berjalan pada jalur [[^output|Not Found]].
-- Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
+- Block ini hanya mengambil anak langsung. Node pada tingkat yang lebih dalam tidak ikut diambil.
+- Satu eksekusi hanya mengeluarkan satu anak, yaitu anak dengan Order yang diinput.
+- Karena bukan Flow Block Event, Node Get Children Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
 
@@ -73,13 +73,3 @@ Contoh berikut memakai [[^input|Node]] berisi [[^value/node|Kategori]] yang memi
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin|Tree Get Origin Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node|Add Node Block]]
 
-<!--
-  * [TODO] Konfirmasi status block saat [[^input|Node]] atau [[^input|Child Order]] kosong. Saya menulis [[^flowstate|Fatal Error]] mengikuti block Data Tree lainnya.
-  * [TODO] Konfirmasi status block saat [[^output|Not Found]]: saya menulis [[^flowstate|Succeed]].
-  * [TODO] Konfirmasi perilaku bila beberapa anak memiliki Order yang sama (anak mana yang diambil). Belum ditulis di halaman ini.
-  * [TODO] Nama Node pada contoh (Kategori, Subkategori Pertama, Subkategori Kedua) bersifat generik. Sesuaikan dengan gambar bila perlu.
--->
-
-<!--
-  * [TODO] Halaman yang ditautkan dan mungkin belum ada: `Docs/Modul Logic/Flow/Flow Block/Error/Error Message`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Tree Get Origin`, `Docs/Modul Logic/Flow/Flow Block/Data Tree/Add Node`, `Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi`, dan anchor `Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output`.
--->

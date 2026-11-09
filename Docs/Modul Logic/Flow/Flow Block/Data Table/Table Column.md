@@ -13,7 +13,7 @@ Table Column Block adalah Flow Block yang menerima [[Docs/Tipe Data/Column]] dan
 ![[Docs/Modul Logic/Flow/Flow Block/Data Table/table-column-block-flow.png|Table Column Block pada Blueprint]]
 ## Input dan Output
 
-Table Column Block memiliki satu input di sisi kiri, lima output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
+Table Column Block memiliki satu input di sisi kiri, lima output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada aliran keluar. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
 
 ### Input
 
@@ -68,7 +68,6 @@ Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil 
 
 - Block ini hanya membaca atribut [[Docs/Tipe Data/Column]] dan tidak mengubah Column.
 - [[^output|Header]] selalu meneruskan aliran, baik berisi maupun [[^value/empty]].
-- [[^input|Column]] yang dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. Pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 - Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga
