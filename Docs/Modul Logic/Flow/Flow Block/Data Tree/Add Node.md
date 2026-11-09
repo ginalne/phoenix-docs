@@ -47,7 +47,9 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 <!--
   * [TODO] Konfirmasi: pemeriksaan diasumsikan berurutan Name lalu Order, dan hanya satu output konflik yang keluar pada satu eksekusi.
+    Jawaban: Ya betul
   * [TODO] Konfirmasi: status block bila Order bernilai negatif (diasumsikan Error tanpa output).
+    Jawaban: Masuknya Fatal Error (karena tidak ada output jika error)
 -->
 
 ## Contoh Penggunaan

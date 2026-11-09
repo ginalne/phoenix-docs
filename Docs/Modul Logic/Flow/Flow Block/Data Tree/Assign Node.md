@@ -52,8 +52,11 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 <!--
   * [TODO] Konfirmasi: output Name Conflict diasumsikan ada pada block ini karena Name harus unik di antara saudara kandung pada parent yang baru. Mohon konfirmasi.
+    Jawaban: Iya betul
   * [TODO] Konfirmasi: apakah Node Origin dapat dipakai sebagai Children, dan apakah Parent yang sama dengan Children juga menghasilkan Relation Conflict.
+    Jawaban: dalam tree yang sama jelas tidak, Node Origin sudah pasti dititik pertama, dan mengisi children dari Node Origin akan menghasilkan Relation Conflict. kalau menempatkan Parent yang sama dengan children (tidak ada perubahan), tidak akan menghasilkan Relation Conflict, hanya saja tidak ada pengaruhnya.
   * [TODO] Konfirmasi: status block bila Order bernilai negatif (diasumsikan Error tanpa output).
+    Jawaban: Fatal Error.
 -->
 
 ## Contoh Penggunaan

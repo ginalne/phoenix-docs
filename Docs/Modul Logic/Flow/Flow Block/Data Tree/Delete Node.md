@@ -58,9 +58,11 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 <!--
   * [TODO] Konfirmasi: Node dianggap sudah digunakan bila Node itu atau salah satu anaknya dipakai oleh komponen lain. Apakah definisinya sama dengan Delete Row (dipakai pada Flow atau data lain, atau tercatat di riwayat activity)?
-    Jawaban: 
+    Jawaban: Ya.
   * [TODO] Konfirmasi: Node Origin diasumsikan tidak dapat dihapus sehingga penghapusannya berstatus Error, apa pun nilai Force.
+    Jawaban: Iya beul menghasilkan Fatal Error karena Node yang akan dihapus adalah Origin.
   * [TODO] Konfirmasi: dampak hapus paksa pada komponen yang memakai Node (diasumsikan relasinya terputus).
+    Jawaban: Ya relasinya putus.
 -->
 
 ## Contoh Penggunaan

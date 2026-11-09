@@ -51,10 +51,14 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 Node Setter Block mengubah **Name dan Order sekaligus**. Bila Anda hanya ingin mengubah salah satunya, isi atribut lainnya dengan nilai Node saat ini, misalnya dari [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node|Node Block]].
 
 <!--
-  * [TODO] Konfirmasi: pemeriksaan diasumsikan berurutan Name lalu Order, dan hanya satu output konflik yang keluar pada satu eksekusi. Mohon konfirmasi urutan dan perilaku bila keduanya konflik.
+  * [TODO] Konfirmasi: pemeriksaan diasumsikan berurutan Name lalu Order, dan hanya satu output konflik yang keluar pada satu eksekusi. Mohon konfirmasi urutan dan perilaku bila keduanya konflik
+    Jawaban: Iya output keluar satu per satu dimulai dari Name.
   * [TODO] Konfirmasi: Name dan Order milik Node itu sendiri diasumsikan bukan konflik (seperti Name pada EnumData Setter).
+    Jawaban: Ya, bukan konflik.
   * [TODO] Konfirmasi: status block bila Order bernilai negatif (diasumsikan Error tanpa output).
+    Jawaban: Masuknya Fatal Error (karena tidak ada output jika error)
   * [TODO] Konfirmasi: apakah Name dan Order Node Origin dapat diubah lewat block ini.
+    Jawaban: Ya, Name dan Order Node Origin bisa diubah, namun mengubah order pada origin tidak ada pengaruhnya.
 -->
 
 ## Contoh Penggunaan

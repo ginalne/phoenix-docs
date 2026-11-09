@@ -23,10 +23,10 @@ Block Query umumnya ditempatkan di tengah alur. Hasil dari Execute diteruskan ke
 
 Phoenix menyediakan dua Flow Block Query. Setiap block memiliki fungsi yang unik, sehingga input dan output-nya berbeda-beda.
 
-| Block | Fungsi |
-| --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Query/Condition|Condition Query Block]] | Membangun bagian kondisi dari [[Docs/Tipe Data/Query|Query]] yang kemudian dirangkai menjadi [[Docs/Tipe Data/Query|Query]] utuh. |
-| [[Docs/Modul Logic/Flow/Flow Block/Query/Execute|Execute Query Block]] | Menjalankan [[Docs/Tipe Data/Query|Query]] yang telah dirangkai. Bentuk hasilnya mengikuti cara [[Docs/Tipe Data/Query|Query]] dirangkai. |
+| Kelompok | Block | Fungsi |
+| --- | --- | --- |
+| Condition | [[Docs/Modul Logic/Flow/Flow Block/Query/Condition/Add Table Filter|Query Add Table Filter Block]] | Membangun bagian kondisi dari [[Docs/Tipe Data/Query|Query]] yang kemudian dirangkai menjadi [[Docs/Tipe Data/Query|Query]] utuh. |
+| Execute | [[Docs/Modul Logic/Flow/Flow Block/Query/Execute/Table Output|Query Table Output Block]] | Menjalankan [[Docs/Tipe Data/Query|Query]] yang telah dirangkai. Bentuk hasilnya mengikuti cara [[Docs/Tipe Data/Query|Query]] dirangkai. |
 
 ## Memilih Flow Block Query
 
