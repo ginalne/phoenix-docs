@@ -59,6 +59,13 @@ Menambahkan atribut pada object dengan input Key sebagai key, dan Value adalah b
 Menggabungkan Objects yaitu input bertipe array dengan tipe object. Merge akan menimpa data pertama dengan data selanjutnya pada atribut yang spesifik sama. Jadi jika data saling mengisi pada kedalaman tertentu maka tidak ada yang ditimpa. Fatal Error jika Objects dibiarkan kosong. Result adalah output bertipe data object.
 
 ## Parse
+Parse adalah mengubah input Text bertipe Text menjadi data bertipe object dengan output Object. Output Error menghasilkan error jika data text tidak sesuai kaidah object (JSON). Fatal Error jika Text dibiarkan kosong.
+
 ## Stringify
+Mengubah Object menjadi text. Fatal Error jika dibiarkan kosong. Tidak akan menghasilkan error dalam format Object karena pasti sudah sesuai kaidah Object (JSON).
+
 ## If
+Input A dan B bertipe apapun, dan Operator adalah simbol operator yang valid (arahkan ke [[Docs/Expression/Operator]]). Boolean adalah output bertipe boolean (keluar jika ada koneksi). Output True (boolean true) dan False (boolean false) melanjutkan aliran sesuai dengan hasil perbandingannya. Fatal Error jika Operator dibiarkan kosong atau A atau B dibiarkan N/A Type.
+
 ## Node Parse
+Node adalah input bertipe Node. dan Anc. Depth dan Child Depth bertipe data Number. Output menghasilkan Object dan Text (tergantung koneksi). Hasilnya adalah JSON dengan atribut Node sebagai base, dan atribut “parent” dan “children” sesuai Anc.Depth dan Child Depth yang diinput. Fatal Error jika Node dibiarkan kosong, jika Anc.Depth dan Child Depth dibiarkan kosong maka dianggap bernilai 0 (tidak ada key parent atau children dihasilnya).
