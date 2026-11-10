@@ -19,13 +19,6 @@ Passer Block tersedia dalam lima varian, yaitu Passer 1 sampai Passer 5. Angka p
 
 ![[Docs/Modul Logic/Flow/Flow Block/Input dan Output/passer-block-flow.png|Passer Block varian Passer 1 sampai Passer 5]]
 
-<!--
-  * [DONE] Penempatan gambar: potong screenshot menjadi satu gambar `passer-block-flow.png` yang memuat lima varian (Passer 1 sampai Passer 5), simpan di folder `Docs/Modul Logic/Flow/Flow Block/Input dan Output/`.
-  * [TODO] Judul block pada screenshot tertulis "Data Passer" dan "Data Passer 2" dan seterusnya, sedangkan halaman memakai "Passer Block" sesuai alias tautan pada halaman kategori. Mohon konfirmasi istilah yang dipakai.
-    Jawaban: Karena Passer Block memiliki variasi hanya untuk meluaskan jumlah input dan output, maka diharapkan halaman ini bisa digunakan untuk menjelaskan variasi tersebut karena secara fungsi sama.
-  * [DONE] Tautan asumsi: `Docs/Tipe Data/Pengenalan` (daftar seluruh Tipe Data, dipakai pada langkah Change Type).
--->
-
 ## Input dan Output
 
 Passer Block memiliki satu sampai lima input di sisi kiri, satu sampai lima output di sisi kanan sesuai varian dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -72,11 +65,6 @@ Bila [[^output|Pass]] pasangannya terhubung ke block lain, [[^input|Data]] tidak
 1. Isi setiap [[^input|Data]] langsung pada block atau hubungkan dari output block lain.
 2. Passer Block diproses setelah setiap [[^input|Data]] yang terhubung dari output block lain berisi data, sesuai [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat eksekusi]]. Dengan begitu block menunggu seluruh aliran yang terhubung ke [[^input|Data]] selesai.
 3. Data pada [[^input|Data]] diteruskan tanpa diubah ke [[^output|Pass]] dengan nomor yang sama, hanya bila [[^output|Pass]] tersebut memiliki koneksi.
-
-<!--
-  * [TODO] Diasumsikan [[^input|Data]] yang terhubung dari block lain tetap menjadi syarat eksekusi walau [[^output|Pass]] pasangannya tidak terhubung (mengikuti Syarat Eksekusi). Mohon konfirmasi.
-    Jawaban: Ya, betul.
--->
 
 ## Contoh Penggunaan
 

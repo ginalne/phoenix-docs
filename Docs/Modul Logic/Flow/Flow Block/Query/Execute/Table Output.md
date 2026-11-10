@@ -17,11 +17,6 @@ Query yang dijalankan biasanya dibangun lebih dulu dengan [[Docs/Modul Logic/Flo
 
 ![[Docs/Modul Logic/Flow/Flow Block/Query/Execute/table-output-block-flow.png|Table Output Block]]
 
-<!--
-  * [DONE] Penempatan gambar: potong screenshot menjadi `table-output-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Query/Execute/`.
-  * [DONE] Tautan asumsi: `Docs/Query/Output/Table` (dari penulis), `Docs/Tipe Data/Array`, dan `Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan`.
--->
-
 ## Input dan Output
 
 Table Output Block memiliki satu input di sisi kiri, dua output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -30,7 +25,7 @@ Table Output Block memiliki satu input di sisi kiri, dua output di sisi kanan da
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Query]] | [[Docs/Tipe Data/Query]] | Query yang dijalankan. Harus menggunakan kaidah [[Docs/Query/Output/Table|Table Output]]. |
+| [[^input|Query]] | [[Docs/Tipe Data/Query]] | Query yang dijalankan. Harus menggunakan kaidah [[Docs/Query/Output/Table|Table Output]]. Tombol [[^button/nolabel/q]] pada field menampilkan konfigurasi Query. |
 
 ### Output
 
@@ -40,15 +35,6 @@ Table Output Block memiliki satu input di sisi kiri, dua output di sisi kanan da
 | [[^output|Is Empty]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] bila hasil Query kosong dan aliran diteruskan. |
 
 Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang tidak meneruskan aliran tidak akan dieksekusi, sesuai [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
-
-<!--
-  * [TODO] Tombol [[^button/nolabel/q]] pada input Query (tampil pada screenshot) belum dijelaskan penulis, sehingga belum ditulis di halaman. Mohon jelaskan fungsinya.
-    Jawaban: Tombol Q adalah untuk menampilkan konfigurasi Query. Field Query memang memiliki tombol itu.
-  * [TODO] Diasumsikan [[^output|Is Empty]] hanya keluar bernilai true saat hasil kosong dan "-" saat hasil berisi, mengikuti pola output flag block lain. Mohon konfirmasi.
-    Jawaban: Sudah betul
-  * [TODO] Perilaku bila [[^input|Query]] tidak berkaidah Table Output belum dijelaskan penulis sehingga belum ditulis di tabel Contoh Penggunaan. Mohon konfirmasi statusnya.
-    Jawaban: Akan menjadi Fatal Error.
--->
 
 ## Cara Kerja
 
@@ -67,6 +53,7 @@ Contoh berikut menjalankan Query berkaidah [[Docs/Query/Output/Table|Table Outpu
 | Query menghasilkan satu [[Docs/Tipe Data/Row]] | [[Docs/Tipe Data/Array]] berisi satu [[Docs/Tipe Data/Row]] | - | [[^flowstate|Succeed]] |
 | Query tidak menghasilkan [[Docs/Tipe Data/Row]] | - | [[^value/boolean/true]] | [[^flowstate|Succeed]] |
 | [[^input|Query]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+| [[^input|Query]] tidak berkaidah [[Docs/Query/Output/Table|Table Output]] | - | - | [[^flowstate|Fatal Error]] |
 
 Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
@@ -80,7 +67,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 
 - [[^output|Rows]] hanya mengeluarkan data bila hasil Query berisi setidaknya satu [[Docs/Tipe Data/Row]].
 - [[^output|Is Empty]] hanya mengeluarkan [[^value/boolean/true]] ketika hasil Query kosong.
-- [[^input|Query]] yang dibiarkan kosong menghasilkan [[^flowstate|Fatal Error]].
+- [[^input|Query]] yang dibiarkan kosong atau tidak berkaidah [[Docs/Query/Output/Table|Table Output]] menghasilkan [[^flowstate|Fatal Error]].
 - Table Output Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].
 
 ## Lihat Juga

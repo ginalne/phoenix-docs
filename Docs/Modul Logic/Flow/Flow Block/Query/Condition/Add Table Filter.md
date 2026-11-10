@@ -16,11 +16,6 @@ Block ini hanya membangun Query. Untuk menjalankan Query dan mengambil [[Docs/Ti
 
 ![[Docs/Modul Logic/Flow/Flow Block/Query/Condition/add-table-filter-block-flow.png|Add Table Filter Block]]
 
-<!--
-  * [DONE] Penempatan gambar: potong screenshot menjadi `add-table-filter-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Query/Condition/`.
-  * [DONE] Tautan asumsi: `Docs/Query/Filter/Operator`, `Docs/Query/Filter/Operand` (dari penulis), `Docs/Tipe Data/Pengenalan` (daftar seluruh Tipe Data), dan `Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan`.
--->
-
 ## Input dan Output
 
 Add Table Filter Block memiliki lima input di sisi kiri, satu output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -29,7 +24,7 @@ Add Table Filter Block memiliki lima input di sisi kiri, satu output di sisi kan
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Query]] | [[Docs/Tipe Data/Query]] | Query berbasis [[Docs/Tipe Data/Table]] yang akan ditambahkan filter. |
+| [[^input|Query]] | [[Docs/Tipe Data/Query]] | Query berbasis [[Docs/Tipe Data/Table]] yang akan ditambahkan filter. Tombol [[^button/nolabel/q]] pada field menampilkan konfigurasi Query. |
 | [[^input|AND]] | [[Docs/Tipe Data/Boolean]] | Menentukan cara filter ini digabungkan: [[^value/boolean/true]] untuk kondisi AND dan [[^value/boolean/false]] untuk OR. |
 | [[^input|Column]] | [[Docs/Tipe Data/Column]] | [[Docs/Tipe Data/Column]] yang nilainya dibandingkan. |
 | [[^input|Operator]] | [[Docs/Tipe Data/String]] | Simbol operator yang valid. Selengkapnya lihat [[Docs/Query/Filter/Operator]]. |
@@ -42,13 +37,6 @@ Add Table Filter Block memiliki lima input di sisi kiri, satu output di sisi kan
 | [[^output|Query]] | [[Docs/Tipe Data/Query]] | Query hasil penambahan filter pada [[^input|Query]] input. Keluar bila filter berhasil ditambahkan. |
 
 Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
-
-<!--
-  * [TODO] Tombol [[^button/nolabel/q]] pada input Query (tampil pada screenshot) belum dijelaskan penulis, sehingga belum ditulis di halaman. Mohon jelaskan fungsinya.
-    Jawaban: Tombol Q adalah untuk menampilkan konfigurasi Query. Field Query memang memiliki tombol itu.
-  * [TODO] Cara [[^input|AND]] menggabungkan filter dengan filter sebelumnya pada Query (termasuk bila filter ini adalah yang pertama) ditulis sebatas arti true sebagai AND dan false sebagai OR sesuai penjelasan penulis. Mohon konfirmasi.
-    Jawaban: Sudah betul
--->
 
 ### Menentukan Tipe Data Operand
 
@@ -83,31 +71,25 @@ Contoh berikut menambahkan filter pada Query berbasis Table pesanan dengan [[^in
 | [[^input|Operand]] bertipe [[Docs/Tipe Data/Number]] dan dibiarkan kosong | Query dengan tambahan filter | [[^flowstate|Succeed]] |
 | Operator memerlukan Operand dan [[^input|Operand]] dibiarkan [[^field|N/A Type]] | - | [[^flowstate|Fatal Error]] |
 | [[^input|Query]], [[^input|AND]], [[^input|Column]], atau [[^input|Operator]] dibiarkan kosong | - | [[^flowstate|Fatal Error]] |
-| Aturan pengisian [[^input|Operator]] atau [[^input|Operand]] tidak sesuai | - | [[^flowstate|Error]] |
-| [[^input|Query]] berbasis data selain [[Docs/Tipe Data/Table]] | - | [[^flowstate|Error]] |
+| Aturan pengisian [[^input|Operator]] atau [[^input|Operand]] tidak sesuai | - | [[^flowstate|Fatal Error]] |
+| [[^input|Query]] berbasis data selain [[Docs/Tipe Data/Table]] | - | [[^flowstate|Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
-
-<!--
-  * [TODO] Simbol operator pada contoh ([[^value/string|>]]) dan Column Total adalah contoh generik. Mohon sesuaikan dengan simbol operator yang valid di Phoenix.
-    Jawaban: Sudah betul
-  * [TODO] Status Error pada block ini ditulis sesuai penjelasan penulis walau block tidak memiliki output Error. Mohon konfirmasi bahwa ini memang Error dan bukan Fatal Error.
-    Jawaban: Masuknya Fatal Error
--->
+Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
 - **Rangkai beberapa Add Table Filter Block** untuk kondisi bertingkat. Hubungkan [[^output|Query]] ke [[^input|Query]] block berikutnya agar setiap block menambahkan satu filter.
-- **Sesuaikan tipe data [[^input|Operand]] dengan [[^input|Column]]** dan [[^input|Operator]] yang dipilih, karena aturan yang tidak sesuai menghasilkan [[^flowstate|Error]].
+- **Sesuaikan tipe data [[^input|Operand]] dengan [[^input|Column]]** dan [[^input|Operator]] yang dipilih, karena aturan yang tidak sesuai menghasilkan [[^flowstate|Fatal Error]].
 - **Pastikan [[^input|Query]] berbasis [[Docs/Tipe Data/Table]]** sebelum menambahkan filter.
 - **Hubungkan [[^output|Query]] ke [[Docs/Modul Logic/Flow/Flow Block/Query/Execute/Table Output|Table Output Block]]** bila Anda membutuhkan [[Docs/Tipe Data/Row]] hasil filter.
 
 ## Batasan dan Catatan
 
 - Satu Add Table Filter Block menambahkan satu filter. Block ini tidak menjalankan Query dan tidak mengeluarkan [[Docs/Tipe Data/Row]].
-- [[^input|Query]] harus berbasis [[Docs/Tipe Data/Table]]. Bila tidak, block berstatus [[^flowstate|Error]].
+- [[^input|Query]] harus berbasis [[Docs/Tipe Data/Table]]. Bila tidak, block berstatus [[^flowstate|Fatal Error]].
 - [[^input|Operand]] boleh dibiarkan [[^field|N/A Type]] hanya bila operator tidak memerlukannya. Bila operator memerlukannya, block berstatus [[^flowstate|Fatal Error]].
 - [[^input|Query]], [[^input|AND]], [[^input|Column]], atau [[^input|Operator]] yang dibiarkan kosong menghasilkan [[^flowstate|Fatal Error]].
+- Aturan pengisian [[^input|Operator]] atau [[^input|Operand]] yang tidak sesuai menghasilkan [[^flowstate|Fatal Error]].
 - Add Table Filter Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].
 
 ## Lihat Juga
