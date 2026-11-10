@@ -1,12 +1,11 @@
 ---
-    status: draft
+    status: release
     title: Error Message Block
     description: Flow Block untuk membuat error baru dengan pesan yang ditentukan dan menghentikan aliran pada komponen Flow.
     pageDecoration:
       tree:
         priority: 1
 ---
-
 # Error Message Block
 
 >**note** Error Message Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Error/Pengenalan|Flow Block Error]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.

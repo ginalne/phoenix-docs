@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Concatenate Operator Block
-description: Menghubungkan dua string input menjadi satu string pada Flow Block Operator Concatenate.
+    status: release
+    title: Concatenate Operator Block
+    description: Menghubungkan dua string input menjadi satu string pada Flow Block Operator Concatenate.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Concatenate Operator Block
 
 >**note** Concatenate Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Menghubungkan dua string input menjadi satu string pada Flow Block 
 Concatenate Block adalah Flow Block Operator yang menghubungkan dua [[Docs/Tipe Data/String]] input menjadi satu String. Block ini tidak dapat menghasilkan error: bila salah satu input dibiarkan kosong, hasilnya adalah input yang lain.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/String/concatenate-block-flow.png|Concatenate Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Concatenate Block memiliki 2 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

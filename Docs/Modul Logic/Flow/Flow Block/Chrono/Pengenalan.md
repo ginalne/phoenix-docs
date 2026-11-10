@@ -1,11 +1,11 @@
 ---
-status: draft
-title: Flow Block Chrono
-description: Pengenalan kategori Flow Block Chrono, block yang mengelola aliran berdasarkan waktu di Blueprint Flow.
-pageDecoration:
-  tree:
-    priority: 15
-tags: flowblock-category
+    status: release
+    title: Flow Block Chrono
+    description: Pengenalan kategori Flow Block Chrono, block yang mengelola aliran berdasarkan waktu di Blueprint Flow.
+    pageDecoration:
+      tree:
+        priority: 15
+    tags: flowblock-category
 ---
 # Flow Block Chrono
 

@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Stringify Operator Block
-description: Mengubah Object menjadi Text pada Flow Block Operator Stringify.
+    status: release
+    title: Stringify Operator Block
+    description: Mengubah Object menjadi Text pada Flow Block Operator Stringify.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Stringify Operator Block
 
 >**note** Stringify Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Mengubah Object menjadi Text pada Flow Block Operator Stringify.
 Stringify Block adalah Flow Block Operator yang mengubah [[^input|Object]] bertipe [[Docs/Tipe Data/Object]] menjadi [[Docs/Tipe Data/Text]] lewat [[^output|Text]]. Block ini tidak menghasilkan error pada format Object karena Object yang valid pasti sesuai kaidah Object (JSON).
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Object/stringify-block-flow.png|Stringify Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Stringify Block memiliki 1 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

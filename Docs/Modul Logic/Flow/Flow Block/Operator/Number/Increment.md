@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Increment Operator Block
-description: Menambahkan nilai Number dengan langkah yang ditentukan dan mengeluarkan hasilnya.
+    status: release
+    title: Increment Operator Block
+    description: Menambahkan nilai Number dengan langkah yang ditentukan dan mengeluarkan hasilnya.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Increment Operator Block
 
 >**note** Increment Block merupakan salah satu Flow Block kelompok Number pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Menambahkan nilai Number dengan langkah yang ditentukan dan mengelu
 Increment Block adalah Flow Block Operator yang menambahkan [[^input|Data]] dengan langkah yang ditentukan pada [[^input|Adders]], lalu mengeluarkan hasilnya lewat [[^output|Result]]. Block ini berguna untuk menghitung nomor urut, penghitung, atau nilai yang bertambah pada setiap eksekusi Flow.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Number/increment-block-flow.png|Increment Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Increment Block memiliki 2 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

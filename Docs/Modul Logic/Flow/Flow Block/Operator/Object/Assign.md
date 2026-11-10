@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Assign Operator Block
-description: Menambahkan satu atribut pada Object dengan Key dan Value pada Flow Block Operator Assign.
+    status: release
+    title: Assign Operator Block
+    description: Menambahkan satu atribut pada Object dengan Key dan Value pada Flow Block Operator Assign.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Assign Operator Block
 
 >**note** Assign Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Menambahkan satu atribut pada Object dengan Key dan Value pada Flow
 Assign Block adalah Flow Block Operator yang menambahkan atribut pada [[Docs/Tipe Data/Object]]. [[^input|Key]] menjadi nama atribut dan [[^input|Value]] menjadi isinya. Block ini hanya mengisi satu atribut pada setiap eksekusi, dan hasilnya dikeluarkan lewat [[^output|Object]].
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Object/assign-block-flow.png|Assign Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Assign Block memiliki 2 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

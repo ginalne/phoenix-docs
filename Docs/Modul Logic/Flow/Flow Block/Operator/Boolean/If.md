@@ -1,9 +1,11 @@
 ---
-status: draft
-title: If Operator Block
-description: Membandingkan dua nilai dengan operator dan melanjutkan aliran sesuai hasilnya pada Flow Block Operator If.
+    status: release
+    title: If Operator Block
+    description: Membandingkan dua nilai dengan operator dan melanjutkan aliran sesuai hasilnya pada Flow Block Operator If.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # If Operator Block
 
 >**note** If Block merupakan salah satu Flow Block kelompok Boolean pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Membandingkan dua nilai dengan operator dan melanjutkan aliran sesu
 If Block adalah Flow Block Operator yang membandingkan [[^input|A]] dan [[^input|B]] dengan [[^input|Operator]], lalu melanjutkan aliran lewat [[^output|True]] atau [[^output|False]] sesuai hasil perbandingannya. Hasil tersebut juga dapat dikeluarkan sebagai nilai [[Docs/Tipe Data/Boolean]] lewat [[^output|Boolean]].
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/if-block-flow.png|If Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 If Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

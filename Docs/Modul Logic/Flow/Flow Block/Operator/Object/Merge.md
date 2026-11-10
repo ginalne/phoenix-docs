@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Merge Operator Block
-description: Menggabungkan beberapa Object menjadi satu Object pada Flow Block Operator Merge.
+    status: release
+    title: Merge Operator Block
+    description: Menggabungkan beberapa Object menjadi satu Object pada Flow Block Operator Merge.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Merge Operator Block
 
 >**note** Merge Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Menggabungkan beberapa Object menjadi satu Object pada Flow Block O
 Merge Block adalah Flow Block Operator yang menggabungkan [[^input|Objects]], yaitu input bertipe [[Docs/Tipe Data/Array]] dengan isi [[Docs/Tipe Data/Object]], menjadi satu Object lewat [[^output|Result]]. Data yang berada lebih akhir menimpa data sebelumnya hanya pada atribut yang sama persis, sehingga data yang saling melengkapi tidak saling menghapus.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Object/merge-block-flow.png|Merge Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Merge Block memiliki 1 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

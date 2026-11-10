@@ -1,9 +1,11 @@
 ---
-status: draft
-title: TableRow Parse Operator Block
-description: Mengubah Row menjadi Object dan Text dengan penelusuran relasi sesuai Rel. Depth pada Flow Block Operator TableRow Parse.
+    status: release
+    title: TableRow Parse Operator Block
+    description: Mengubah Row menjadi Object dan Text dengan penelusuran relasi sesuai Rel. Depth pada Flow Block Operator TableRow Parse.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # TableRow Parse Operator Block
 
 >**note** TableRow Parse Block merupakan salah satu Flow Block kelompok Table pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Mengubah Row menjadi Object dan Text dengan penelusuran relasi sesu
 TableRow Parse Block adalah Flow Block Operator yang mengubah [[^input|Row]] ([[Docs/Tipe Data/Row]]) menjadi data [[Docs/Tipe Data/Object]] dan [[Docs/Tipe Data/Text]]. [[^input|Rel. Depth]] menentukan kedalaman relasi: bila kolom pada Row memiliki relasi ke data lain, hasil kolom tersebut ditelusuri sehingga data menjadi semakin rinci.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Table/tablerow-parse-block-flow.png|TableRow Parse Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 TableRow Parse Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila terhubung ke block lain. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

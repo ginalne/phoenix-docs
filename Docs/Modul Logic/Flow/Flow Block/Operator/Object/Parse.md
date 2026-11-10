@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Parse Operator Block
-description: Mengubah Text menjadi Object pada Flow Block Operator Parse.
+    status: release
+    title: Parse Operator Block
+    description: Mengubah Text menjadi Object pada Flow Block Operator Parse.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Parse Operator Block
 
 >**note** Parse Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Mengubah Text menjadi Object pada Flow Block Operator Parse.
 Parse Block adalah Flow Block Operator yang mengubah [[^input|Text]] bertipe [[Docs/Tipe Data/Text]] menjadi data bertipe [[Docs/Tipe Data/Object]] lewat [[^output|Object]]. Bila Text tidak sesuai kaidah Object (JSON), block mengeluarkan [[^output|Error]] sehingga Anda dapat menanganinya di Flow.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Object/parse-block-flow.png|Parse Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Parse Block memiliki 1 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

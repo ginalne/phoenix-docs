@@ -1,11 +1,11 @@
 ---
-status: draft
-title: Flow Block Error
-description: Pengenalan kategori Flow Block Error, block yang mengelola dan mengatur tampilan error di Blueprint Flow.
-pageDecoration:
-  tree:
-    priority: 16
-tags: flowblock-category
+    status: release
+    title: Flow Block Error
+    description: Pengenalan kategori Flow Block Error, block yang mengelola dan mengatur tampilan error di Blueprint Flow.
+    pageDecoration:
+      tree:
+        priority: 16
+    tags: flowblock-category
 ---
 # Flow Block Error
 

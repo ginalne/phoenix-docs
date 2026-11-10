@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Pad Right Operator Block
-description: Menambahkan Pad String di sebelah kanan String sampai mencapai panjang tertentu pada Flow Block Operator Pad Right.
+    status: release
+    title: Pad Right Operator Block
+    description: Menambahkan Pad String di sebelah kanan String sampai mencapai panjang tertentu pada Flow Block Operator Pad Right.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Pad Right Operator Block
 
 >**note** Pad Right Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Menambahkan Pad String di sebelah kanan String sampai mencapai panj
 Pad Right Block adalah Flow Block Operator yang menambahkan [[^input|Pad String]] di sebelah kanan [[^input|String]] sampai panjang String sesuai dengan [[^input|Length]]. Block ini berguna untuk menyusun teks dengan panjang tetap, misalnya kode yang diakhiri tanda pengisi.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/String/pad-right-block-flow.png|Pad Right Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Pad Right Block memiliki 3 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

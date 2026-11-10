@@ -1,12 +1,11 @@
 ---
-    status: draft
+    status: release
     title: OpenAI 4 Block
     description: Flow Block untuk mengirim permintaan ke OpenAI dan menerima hasilnya berupa teks atau fungsi pada komponen Flow.
     pageDecoration:
       tree:
         priority: 1
 ---
-
 # OpenAI 4 Block
 
 >**note** OpenAI 4 Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Flow Block Modular]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.

@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Implode Operator Block
-description: Menggabungkan String atau Array berisi String menjadi satu String dengan pemisah pada Flow Block Operator Implode.
+    status: release
+    title: Implode Operator Block
+    description: Menggabungkan String atau Array berisi String menjadi satu String dengan pemisah pada Flow Block Operator Implode.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Implode Operator Block
 
 >**note** Implode Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Menggabungkan String atau Array berisi String menjadi satu String d
 Implode Block adalah Flow Block Operator yang menggabungkan input bertipe [[Docs/Tipe Data/String]] atau [[Docs/Tipe Data/Array]] dengan isi String menjadi satu String, dengan [[^input|Separator]] sebagai pemisah di antara setiap isinya.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/String/implode-block-flow.png|Implode Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Implode Block memiliki 2 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

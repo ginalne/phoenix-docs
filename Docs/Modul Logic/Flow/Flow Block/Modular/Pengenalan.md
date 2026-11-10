@@ -1,11 +1,11 @@
 ---
-status: draft
-title: Flow Block Modular
-description: Pengenalan kategori Flow Block Modular, block yang menjalankan proses kompleks seperti permintaan HTTP dan layanan AI di Blueprint Flow.
-pageDecoration:
-  tree:
-    priority: 14
-tags: flowblock-category
+    status: release
+    title: Flow Block Modular
+    description: Pengenalan kategori Flow Block Modular, block yang menjalankan proses kompleks seperti permintaan HTTP dan layanan AI di Blueprint Flow.
+    pageDecoration:
+      tree:
+        priority: 14
+    tags: flowblock-category
 ---
 # Flow Block Modular
 

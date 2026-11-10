@@ -1,9 +1,11 @@
 ---
-status: draft
-title: Pad Left Operator Block
-description: Menambahkan Pad String di sebelah kiri String sampai mencapai panjang tertentu pada Flow Block Operator Pad Left.
+    status: release
+    title: Pad Left Operator Block
+    description: Menambahkan Pad String di sebelah kiri String sampai mencapai panjang tertentu pada Flow Block Operator Pad Left.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
-
 # Pad Left Operator Block
 
 >**note** Pad Left Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -11,7 +13,6 @@ description: Menambahkan Pad String di sebelah kiri String sampai mencapai panja
 Pad Left Block adalah Flow Block Operator yang menambahkan [[^input|Pad String]] di sebelah kiri [[^input|String]] sampai panjang String sesuai dengan [[^input|Length]]. Block ini berguna untuk menyusun nomor atau kode dengan panjang tetap, misalnya nomor urut yang diawali angka nol.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/String/pad-left-block-flow.png|Pad Left Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Pad Left Block memiliki 3 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

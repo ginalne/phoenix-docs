@@ -1,7 +1,10 @@
 ---
-status: draft
-title: Node Parse Operator Block
-description: Mengubah Node menjadi Object dan Text dengan atribut parent dan children sesuai kedalaman pada Flow Block Operator Node Parse.
+    status: release
+    title: Node Parse Operator Block
+    description: Mengubah Node menjadi Object dan Text dengan atribut parent dan children sesuai kedalaman pada Flow Block Operator Node Parse.
+    pageDecoration:
+      tree:
+        priority: 0
 ---
 
 # Node Parse Operator Block
@@ -11,7 +14,6 @@ description: Mengubah Node menjadi Object dan Text dengan atribut parent dan chi
 Node Parse Block adalah Flow Block Operator yang mengubah [[^input|Node]] ([[Docs/Tipe Data/Node]]) menjadi [[Docs/Tipe Data/Object]] dan [[Docs/Tipe Data/Text]] berformat JSON. Atribut Node menjadi dasar hasilnya, lalu atribut `parent` dan `children` ditambahkan sesuai [[^input|Anc. Depth]] dan [[^input|Child Depth]] yang Anda isi.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Tree/node-parse-block-flow.png|Node Parse Block pada Blueprint Flow]]
-
 ## Input dan Output
 
 Node Parse Block memiliki 3 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila terhubung ke block lain. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
