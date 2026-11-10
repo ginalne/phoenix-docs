@@ -15,6 +15,7 @@ Pad Right Block adalah Flow Block Operator yang menambahkan [[^input|Pad String]
 <!--
   * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `pad-right-block-flow.png` di folder yang sama dengan halaman ini.
   * [TODO] Perilaku belum diberikan penulis, mohon konfirmasi: (a) Length kosong menghasilkan Fatal Error atau dianggap 0, (b) hasil bila panjang String sudah sama atau lebih dari Length, (c) hasil bila Pad String terdiri dari lebih dari satu karakter dan tidak habis dibagi selisih panjang.
+    Jawaban: Sudah benar
 -->
 
 ## Input dan Output

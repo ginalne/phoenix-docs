@@ -14,6 +14,7 @@ Stringify Block adalah Flow Block Operator yang mengubah [[^input|Object]] berti
 
 <!--
   * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `stringify-block-flow.png` di folder yang sama dengan halaman ini.
+    Jawaban: Sudah benar
 -->
 
 ## Input dan Output

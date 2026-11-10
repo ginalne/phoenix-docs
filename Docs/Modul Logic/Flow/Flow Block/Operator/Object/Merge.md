@@ -15,6 +15,7 @@ Merge Block adalah Flow Block Operator yang menggabungkan [[^input|Objects]], ya
 <!--
   * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `merge-block-flow.png` di folder yang sama dengan halaman ini.
   * [TODO] Konfirmasi: hasil bila Objects berisi satu Object, dan bila Array kosong (selain input kosong).
+    Jawaban: Sudah benar
 -->
 
 ## Input dan Output

@@ -20,9 +20,10 @@ Passer Block tersedia dalam lima varian, yaitu Passer 1 sampai Passer 5. Angka p
 ![[Docs/Modul Logic/Flow/Flow Block/Input dan Output/passer-block-flow.png|Passer Block varian Passer 1 sampai Passer 5]]
 
 <!--
-  * [TODO] Penempatan gambar: potong screenshot menjadi satu gambar `passer-block-flow.png` yang memuat lima varian (Passer 1 sampai Passer 5), simpan di folder `Docs/Modul Logic/Flow/Flow Block/Input dan Output/`.
+  * [DONE] Penempatan gambar: potong screenshot menjadi satu gambar `passer-block-flow.png` yang memuat lima varian (Passer 1 sampai Passer 5), simpan di folder `Docs/Modul Logic/Flow/Flow Block/Input dan Output/`.
   * [TODO] Judul block pada screenshot tertulis "Data Passer" dan "Data Passer 2" dan seterusnya, sedangkan halaman memakai "Passer Block" sesuai alias tautan pada halaman kategori. Mohon konfirmasi istilah yang dipakai.
-  * [TODO] Tautan asumsi: `Docs/Tipe Data/Pengenalan` (daftar seluruh Tipe Data, dipakai pada langkah Change Type).
+    Jawaban: Karena Passer Block memiliki variasi hanya untuk meluaskan jumlah input dan output, maka diharapkan halaman ini bisa digunakan untuk menjelaskan variasi tersebut karena secara fungsi sama.
+  * [DONE] Tautan asumsi: `Docs/Tipe Data/Pengenalan` (daftar seluruh Tipe Data, dipakai pada langkah Change Type).
 -->
 
 ## Input dan Output
@@ -74,6 +75,7 @@ Bila [[^output|Pass]] pasangannya terhubung ke block lain, [[^input|Data]] tidak
 
 <!--
   * [TODO] Diasumsikan [[^input|Data]] yang terhubung dari block lain tetap menjadi syarat eksekusi walau [[^output|Pass]] pasangannya tidak terhubung (mengikuti Syarat Eksekusi). Mohon konfirmasi.
+    Jawaban: Ya, betul.
 -->
 
 ## Contoh Penggunaan

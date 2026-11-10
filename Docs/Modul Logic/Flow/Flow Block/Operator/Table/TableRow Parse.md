@@ -16,6 +16,7 @@ TableRow Parse Block adalah Flow Block Operator yang mengubah [[^input|Row]] ([[
   * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `tablerow-parse-block-flow.png` di folder yang sama dengan halaman ini.
   * [TODO] Teks penulis berbunyi "Fatal Error jika Row dibiarkan error". Ditulis sebagai "dibiarkan kosong" (diduga salah ketik). Mohon konfirmasi.
   * [TODO] Konfirmasi: (a) bentuk Text hasil (diasumsikan teks JSON dari Object), (b) Rel. Depth 1 berarti menelusuri satu tingkat relasi, (c) kolom berelasi yang tidak ditelusuri tampil sebagai nilai aslinya (diasumsikan ID/Index Row terkait).
+    Jawaban: Sudah benar, namun pada Contoh Penggunaan tambahkan isi dari Row Pesanan. semisal pada depth = 0 adalah { “penerima”: “1 : Anna”, Total: 1200 }, namun pada depth = 1 adalah { “penerima” : {“id”: 1,  “nama”: “Anna”, “kelamin”:“Perempuan”, “no telp”: “123456”}, “Total”: 1200 }
 -->
 
 ## Input dan Output

@@ -15,6 +15,7 @@ Node Parse Block adalah Flow Block Operator yang mengubah [[^input|Node]] ([[Doc
 <!--
   * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `node-parse-block-flow.png` di folder yang sama dengan halaman ini.
   * [TODO] Konfirmasi: (a) Anc. Depth dan Child Depth 1 berarti satu tingkat leluhur atau satu tingkat anak, (b) Anc. Depth lebih dari 1 menghasilkan `parent` bersarang, (c) bentuk isi `parent` dan `children` (diasumsikan berisi atribut Node yang sama dengan hasil dasar).
+    Jawaban: Sudah benar, namun pada Contoh Penggunaan tambahkan permisalan isi dari Node yang dipilih. fyi, struktur hasil node adalah { “order”: number, “name”: string, “parent”: Node | null, “children”: Node[]}, jadi berikan contoh yang intuitif agar pembaca tau perbedaan Anc. Depth dan Children Depth berdasarkan hasil.
 -->
 
 ## Input dan Output

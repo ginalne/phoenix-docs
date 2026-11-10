@@ -16,6 +16,7 @@ Assign Block adalah Flow Block Operator yang menambahkan atribut pada [[Docs/Tip
   * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `assign-block-flow.png` di folder yang sama dengan halaman ini.
   * [DONE] Teks penulis "Fatal Erro" ditulis sebagai "Fatal Error".
   * [TODO] Konfirmasi: block ini tidak memiliki input Object. Draf mengasumsikan Object hasil dibentuk baru dari Key dan Value. Mohon jelaskan data sebelumnya apa yang ditimpa (sifat override) bila tidak ada Object masukan, misalnya apakah override terjadi pada eksekusi berikutnya atau bila Key menunjuk atribut yang sama pada Value bertipe Object.
+    Jawaban: Sudah benar
 -->
 
 ## Input dan Output

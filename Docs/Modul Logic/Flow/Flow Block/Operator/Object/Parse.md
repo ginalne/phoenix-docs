@@ -15,6 +15,7 @@ Parse Block adalah Flow Block Operator yang mengubah [[^input|Text]] bertipe [[D
 <!--
   * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `parse-block-flow.png` di folder yang sama dengan halaman ini.
   * [TODO] Konfirmasi: tipe data dan isi output Error (diasumsikan Boolean [[^value/boolean/true]] pada kasusnya, mengikuti pola output flag di block Data) dan apakah Activity berstatus Error saat output Error keluar.
+    Jawaban: Sudah benar
 -->
 
 ## Input dan Output

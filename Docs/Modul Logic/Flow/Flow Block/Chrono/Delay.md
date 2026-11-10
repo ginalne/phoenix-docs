@@ -39,6 +39,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 <!--
   * [TODO] Batas waktu maksimum, penggunaan angka pecahan (misalnya 0.5), serta perilaku bila [[^input|Duration]] bernilai 0 atau negatif belum dijelaskan penulis, sehingga belum ditulis.
+    Jawaban: Iya, isi harus lebih dari 0.
 -->
 
 ## Cara Kerja

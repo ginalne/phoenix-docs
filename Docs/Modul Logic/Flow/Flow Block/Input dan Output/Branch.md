@@ -20,9 +20,11 @@ Branch Block tersedia dalam empat varian, yaitu Branch 2 sampai Branch 5. Angka 
 ![[Docs/Modul Logic/Flow/Flow Block/Input dan Output/branch-block-flow.png|Branch Block varian Branch 2 sampai Branch 5]]
 
 <!--
-  * [TODO] Penempatan gambar: potong screenshot menjadi satu gambar `branch-block-flow.png` yang memuat empat varian (Branch 2 sampai Branch 5), simpan di folder `Docs/Modul Logic/Flow/Flow Block/Input dan Output/`.
+  * [DONE] Penempatan gambar: potong screenshot menjadi satu gambar `branch-block-flow.png` yang memuat empat varian (Branch 2 sampai Branch 5), simpan di folder `Docs/Modul Logic/Flow/Flow Block/Input dan Output/`.
   * [TODO] Judul block pada screenshot tertulis "Data Branch 2" dan seterusnya, sedangkan halaman memakai "Branch Block" sesuai alias tautan pada halaman kategori. Mohon konfirmasi istilah yang dipakai.
+    Jawaban: Karena Branch Block memiliki variasi hanya untuk meluaskan jumlah output, maka diharapkan halaman ini bisa digunakan untuk menjelaskan variasi tersebut karena secara fungsi sama.
   * [TODO] Tautan asumsi: `Docs/Tipe Data/Pengenalan` (daftar seluruh Tipe Data, dipakai pada langkah Change Type).
+    Jawaban: Iya benar.
 -->
 
 ## Input dan Output
@@ -49,6 +51,7 @@ Output yang tidak memiliki koneksi tidak mengeluarkan data, termasuk bila Output
 
 <!--
   * [TODO] Teks penulis menyebut "urutan aliran mulai dari Output 2, Output 3 dan seterusnya". Diasumsikan maksudnya penomoran Output (dimulai dari Output 1 sesuai screenshot), bukan urutan eksekusi, karena urutan eksekusi cabang tidak dapat diprediksi. Mohon konfirmasi.
+    Jawaban: Terkait dengan block ini, urutan eksekusi adalah sesuai penomoran. Maksud dari urutan eksekusi yang tidak diprediksi adalah ketika banyak koneksi antar blok yang dimana pengguna akan kesulitan menghubungkan block terakhir (semisal ada 5) tersebut mana yang akan terlebih dahulu di eksekusi, seperti ketika ingin menyusun array dengan menghubungkan banyak output ke satu input, urutannya menjadi sulit terprediksi.
 -->
 
 ### Menentukan Tipe Data Input
@@ -80,6 +83,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 
 <!--
   * [TODO] Diasumsikan Fatal Error pada [[^input|Input]] yang dibiarkan [[^field|N/A Type]] berlaku selalu (berbeda dengan Passer Block yang bergantung pada koneksi Output). Mohon konfirmasi apakah Fatal Error tetap terjadi bila tidak ada Output yang terhubung.
+    Jawaban: Ya sudah betul.
 -->
 
 ## Praktik Terbaik

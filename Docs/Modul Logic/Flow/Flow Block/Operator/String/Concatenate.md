@@ -15,6 +15,7 @@ Concatenate Block adalah Flow Block Operator yang menghubungkan dua [[Docs/Tipe 
 <!--
   * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `concatenate-block-flow.png` di folder yang sama dengan halaman ini.
   * [TODO] Konfirmasi: bila kedua input kosong, Result diasumsikan kosong ([[^value/empty]]). Mohon konfirmasi.
+    Jawaban: Ya benar
 -->
 
 ## Input dan Output

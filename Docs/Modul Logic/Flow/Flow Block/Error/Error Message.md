@@ -18,7 +18,7 @@ Block ini berguna untuk memberi pesan yang jelas kepada pengguna, misalnya mengg
 ![[Docs/Modul Logic/Flow/Flow Block/Error/error-message-block-flow.png|Error Message Block]]
 
 <!--
-  * [TODO] Penempatan gambar: potong screenshot menjadi `error-message-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Error/`.
+  * [DONE] Penempatan gambar: potong screenshot menjadi `error-message-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Error/`.
 -->
 
 ## Input dan Output
@@ -38,8 +38,11 @@ Block ini tidak memiliki output, sehingga tidak meneruskan aliran ke block lain.
 
 <!--
   * [TODO] Status Activity akibat block ini ditulis [[^flowstate|Fatal Error]] karena block tidak memiliki output (prinsip: kasus tanpa output menjadi Fatal Error). Penjelasan penulis hanya menyebut "memengaruhi status Error atau Fatal Error". Mohon konfirmasi.
+    Jawaban: Sepertinya kita perlu Status baru yaitu “Abort” bukan “Fatal Error”
   * [TODO] Cakupan "seluruh aliran" (hanya Activity yang sedang berjalan atau juga Activity lain pada Flow yang sama) dan dampak pada perubahan data yang sudah dilakukan block sebelumnya belum dijelaskan penulis. Mohon jelaskan untuk melengkapi callout warning.
+    Jawaban: Hanya di activity yang sedang berjalan. Dampak perubahan data yang sudah dilakukan block sebelumnya adalah Rollback.
   * [TODO] Perilaku bila [[^input|Message]] dibiarkan kosong belum dijelaskan penulis, sehingga belum ditulis.
+    Jawaban: Jadikan Fatal Error bila kosong.
 -->
 
 ## Cara Kerja

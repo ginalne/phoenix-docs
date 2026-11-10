@@ -6,7 +6,6 @@
       tree:
         priority: 2
 ---
-
 # Add Table Filter Block
 
 >**note** Add Table Filter Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan|Flow Block Query]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -91,7 +90,9 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 <!--
   * [TODO] Simbol operator pada contoh ([[^value/string|>]]) dan Column Total adalah contoh generik. Mohon sesuaikan dengan simbol operator yang valid di Phoenix.
+    Jawaban: Sudah betul
   * [TODO] Status Error pada block ini ditulis sesuai penjelasan penulis walau block tidak memiliki output Error. Mohon konfirmasi bahwa ini memang Error dan bukan Fatal Error.
+    Jawaban: Masuknya Fatal Error
 -->
 
 ## Praktik Terbaik
