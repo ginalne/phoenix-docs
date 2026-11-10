@@ -12,12 +12,6 @@ Merge Block adalah Flow Block Operator yang menggabungkan [[^input|Objects]], ya
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Object/merge-block-flow.png|Merge Block pada Blueprint Flow]]
 
-<!--
-  * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `merge-block-flow.png` di folder yang sama dengan halaman ini.
-  * [TODO] Konfirmasi: hasil bila Objects berisi satu Object, dan bila Array kosong (selain input kosong).
-    Jawaban: Sudah benar
--->
-
 ## Input dan Output
 
 Merge Block memiliki 1 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

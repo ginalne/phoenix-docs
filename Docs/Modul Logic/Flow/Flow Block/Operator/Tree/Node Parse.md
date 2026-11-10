@@ -12,12 +12,6 @@ Node Parse Block adalah Flow Block Operator yang mengubah [[^input|Node]] ([[Doc
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Tree/node-parse-block-flow.png|Node Parse Block pada Blueprint Flow]]
 
-<!--
-  * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `node-parse-block-flow.png` di folder yang sama dengan halaman ini.
-  * [TODO] Konfirmasi: (a) Anc. Depth dan Child Depth 1 berarti satu tingkat leluhur atau satu tingkat anak, (b) Anc. Depth lebih dari 1 menghasilkan `parent` bersarang, (c) bentuk isi `parent` dan `children` (diasumsikan berisi atribut Node yang sama dengan hasil dasar).
-    Jawaban: Sudah benar, namun pada Contoh Penggunaan tambahkan permisalan isi dari Node yang dipilih. fyi, struktur hasil node adalah { “order”: number, “name”: string, “parent”: Node | null, “children”: Node[]}, jadi berikan contoh yang intuitif agar pembaca tau perbedaan Anc. Depth dan Children Depth berdasarkan hasil.
--->
-
 ## Input dan Output
 
 Node Parse Block memiliki 3 input di sisi kiri, 2 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila terhubung ke block lain. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -48,13 +42,28 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 ## Contoh Penggunaan
 
-| Node | Anc. Depth | Child Depth | Hasil | Status |
-| ---- | ---------- | ----------- | ----- | ------ |
-| [[^value/node|Node yang dipilih]] | [[^value/empty]] | [[^value/empty]] | Atribut Node saja, tanpa `parent` dan `children`. | [[^flowstate|Succeed]] |
-| [[^value/node|Node yang dipilih]] | [[^value/number|1]] | [[^value/empty]] | Atribut Node dengan tambahan `parent`. | [[^flowstate|Succeed]] |
-| [[^value/node|Node yang dipilih]] | [[^value/empty]] | [[^value/number|1]] | Atribut Node dengan tambahan `children`. | [[^flowstate|Succeed]] |
-| [[^value/node|Node yang dipilih]] | [[^value/number|1]] | [[^value/number|1]] | Atribut Node dengan tambahan `parent` dan `children`. | [[^flowstate|Succeed]] |
+Contoh berikut memakai Tree kategori produk. Angka di dalam kurung adalah `order` Node, dan Node yang dipilih adalah **Laptop**.
+
+```
+Elektronik (1)
+└─ Komputer (1)
+   └─ Laptop (1)            <- Node yang dipilih
+      ├─ Laptop Gaming (1)
+      └─ Laptop Kantor (2)
+```
+
+Tanpa kedalaman, hasilnya hanya atribut Node itu sendiri. Anc. Depth menambahkan `parent` (naik ke leluhur) dan Child Depth menambahkan `children` (turun ke anak).
+
+| Node | Anc. Depth | Child Depth | Hasil (Object) | Status |
+| ---- | ---------- | ----------- | -------------- | ------ |
+| [[^value/node|Laptop]] | [[^value/empty]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop" }]] | [[^flowstate|Succeed]] |
+| [[^value/node|Laptop]] | [[^value/number|1]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer" } }]] | [[^flowstate|Succeed]] |
+| [[^value/node|Laptop]] | [[^value/number|2]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer", "parent": { "order": 1, "name": "Elektronik" } } }]] | [[^flowstate|Succeed]] |
+| [[^value/node|Laptop]] | [[^value/empty]] | [[^value/number|1]] | [[^value/object|{ "order": 1, "name": "Laptop", "children": [{ "order": 1, "name": "Laptop Gaming" }, { "order": 2, "name": "Laptop Kantor" }] }]] | [[^flowstate|Succeed]] |
+| [[^value/node|Laptop]] | [[^value/number|1]] | [[^value/number|1]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer" }, "children": [{ "order": 1, "name": "Laptop Gaming" }, { "order": 2, "name": "Laptop Kantor" }] }]] | [[^flowstate|Succeed]] |
 | [[^value/empty]] | [[^value/number|1]] | [[^value/number|1]] | - | [[^flowstate|Fatal Error]] |
+
+Perhatikan perbedaannya: Anc. Depth bergerak **ke atas** dan menghasilkan `parent` bersarang (Komputer, lalu Elektronik), sedangkan Child Depth bergerak **ke bawah** dan menghasilkan `children` berupa daftar Node (Laptop Gaming dan Laptop Kantor).
 
 Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 

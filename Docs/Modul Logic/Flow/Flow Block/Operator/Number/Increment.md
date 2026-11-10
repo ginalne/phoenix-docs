@@ -12,12 +12,6 @@ Increment Block adalah Flow Block Operator yang menambahkan [[^input|Data]] deng
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Number/increment-block-flow.png|Increment Block pada Blueprint Flow]]
 
-<!--
-  * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `increment-block-flow.png` di folder yang sama dengan halaman ini.
-  * [TODO] Deskripsi Increment belum diberikan penulis. Draf ditulis berdasarkan label Data, Adders, dan Result pada screenshot serta knowledge "Increment: ada langkah yang ditentukan". Mohon konfirmasi: (a) Result = Data + Adders, (b) tipe Data dan Adders adalah Number, (c) Data atau Adders kosong menghasilkan Fatal Error, (d) Adders boleh bernilai negatif atau desimal, (e) mengapa label Adders berbentuk jamak.
-    Jawaban: sudah benar
--->
-
 ## Input dan Output
 
 Increment Block memiliki 2 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

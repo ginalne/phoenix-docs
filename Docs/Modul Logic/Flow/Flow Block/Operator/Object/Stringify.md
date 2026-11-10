@@ -12,11 +12,6 @@ Stringify Block adalah Flow Block Operator yang mengubah [[^input|Object]] berti
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Object/stringify-block-flow.png|Stringify Block pada Blueprint Flow]]
 
-<!--
-  * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `stringify-block-flow.png` di folder yang sama dengan halaman ini.
-    Jawaban: Sudah benar
--->
-
 ## Input dan Output
 
 Stringify Block memiliki 1 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

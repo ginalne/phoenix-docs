@@ -12,14 +12,6 @@ If Block adalah Flow Block Operator yang membandingkan [[^input|A]] dan [[^input
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Boolean/if-block-flow.png|If Block pada Blueprint Flow]]
 
-<!--
-  * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `if-block-flow.png` di folder yang sama dengan halaman ini.
-  * [TODO] Konfirmasi: tipe data input Operator (diasumsikan String) dan simbol operator pada contoh (memakai `>`). Daftar simbol lengkap mengikuti [[Docs/Expression/Operator]].
-    Jawaban: Sudah benar
-  * [TODO] Perbedaan If dengan Branch Block belum terkonfirmasi (knowledge), jadi tidak dibahas di halaman ini.
-    Jawaban: If menjalankan proses evaluasi pada input untuk menghasilkan nilai boolean dan juga meneruskan aliran sesuai inputnya. Kategori input dan output hanya untuk flow block yang bertujuan untuk memanipulasi aliran tanpa melakukan komputasi mengkonversi data yang diinput menjadi data baru seperti If (A, operator, B menjadi boolean). 
--->
-
 ## Input dan Output
 
 If Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

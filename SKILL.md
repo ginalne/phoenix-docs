@@ -422,6 +422,27 @@ Koreksi penulis pada halaman Data Table: draf pertama kekurangan deskripsi pada 
 - Batasan dan Catatan: frasa "Flow Block Event" ditautkan ke `Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event` (terlihat pada Node Setter, jadikan pola di halaman block non-Event lain).
 - Komentar TODO yang sudah dijawab penulis (baris `Jawaban:`) dihapus setelah jawabannya dimasukkan ke halaman, kecuali penulis meminta dipertahankan.
 
+## Halaman block Operator (tambahkan di bagian "Pola yang dipakai penulis untuk konteks = Flow Block dan Halaman per Block")
+
+### Halaman block Operator
+- Path: `Docs/Modul Logic/Flow/Flow Block/Operator/<Tipe Data>/<Nama Block>` (Number, String, Table, Object, Boolean, Tree). Tidak ada Pengenalan per kelompok tipe data. Gambar: `<nama-block>-block-flow.png` di folder yang sama (contoh `tablerow-parse-block-flow.png`, `node-parse-block-flow.png`).
+- Block Operator tidak memiliki Control. Heading **Input dan Output**, paragraf pembuka mengikuti pola block Data. Kalimat "tanda `-` berarti tidak ada output" hanya ditulis bila block punya output yang tidak selalu meneruskan aliran (If, Parse).
+- Callout pembuka: "salah satu Flow Block kelompok <Tipe Data> pada kategori [[.../Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix."
+- Output yang bergantung koneksi (TableRow Parse: Object dan Text; Node Parse: Object dan Text; If: Boolean) ditulis "Aliran diteruskan bila output terhubung."
+- Input yang tipenya dapat diganti (Assign: Value berawal Object dan dapat diganti ke String; If: A dan B berawal N/A Type) memakai subbagian "Menentukan Tipe Data <Input>" dengan langkah klik kanan ➜ Change Type.
+- Input Number berupa kedalaman (Rel. Depth, Anc. Depth, Child Depth) yang dibiarkan kosong dianggap bernilai 0 dan **bukan** Fatal Error. Ditulis di tabel Input, Contoh Penggunaan, dan Batasan dan Catatan.
+- Output Error pada Parse (Text tidak sesuai kaidah Object) diperlakukan seperti output flag: callout "Mengelola Error" dan nilai `[[^value/boolean/true]]` pada kasusnya (asumsi, menunggu konfirmasi penulis).
+- Nama input yang kembar pada satu block (Concatenate: dua input String) dibedakan dengan "(pertama)" dan "(kedua)" pada tabel.
+- Contoh nilai Array dan Object dalam tabel ditulis dengan kode inline atau `[[^value/object|...]]` dengan kutip lurus. Jangan menaruh kurung siku Array di dalam wikilink `^value` (slug `array` tidak ada pada daftar).
+- Praktik Terbaik boleh menautkan block pendamping yang saling melengkapi: Increment dengan Variable Getter dan Setter, Pad Left dengan Concatenate, Parse dengan Stringify, Assign dengan Merge.
+
+## Tambahan dari hasil review (Contoh Penggunaan dan siklus TODO)
+
+- **Contoh Penggunaan untuk block yang memproses isi data (TableRow Parse, Node Parse, dan sejenisnya)** harus memperlihatkan isi data masukan dan hasil JSON-nya, bukan hanya deskripsi kata. Awali dengan satu paragraf setelan contoh (tabel Pesanan dan Penerima, Tree kategori produk), lalu tabel kombinasi dengan kolom hasil berisi Object.
+- Untuk menunjukkan perbedaan dua input kedalaman (Anc. Depth dan Child Depth), sertakan ilustrasi struktur Tree dalam blok kode dan satu paragraf penutup yang menyebut arah masing-masing (ke atas menghasilkan `parent`, ke bawah menghasilkan `children`). Contoh dipilih agar intuitif, dengan nama yang mudah dipahami (Elektronik, Komputer, Laptop).
+- **Siklus komentar TODO yang dipakai penulis:** penulis menandai `[DONE]` pada item yang beres dan menulis `Jawaban: ...` di baris bawah item pertanyaan. Item yang dijawab dan sudah diproses penulis ke halaman diubah menjadi `[DONE]`. Jawaban "Sudah benar" pada pertanyaan terbuka (misalnya "apakah A atau B") tidak menjelaskan perilaku sebenarnya, jadi tanyakan ulang bila perilaku itu perlu ditulis.
+- Pada penjelasan perbedaan If dengan Branch, kategori Operator ditentukan oleh komputasi yang mengubah input menjadi data baru, bukan oleh adanya Control atau output flag.
+
 
 ### Halaman per block
 - Front matter: `status`, `title`, `description`, `pageDecoration.icon: zap`, `pageDecoration.tree.priority`. Tulis tanpa indentasi di awal baris.

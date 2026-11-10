@@ -122,26 +122,9 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 
 ## Flow Block Data
 
-- **Struktur dan path (terkonfirmasi):** kategori Data terdiri atas empat kelompok. Halaman Pengenalan: `Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan`, `Data Enum/Pengenalan`, `Data Table/Pengenalan`, `Data Tree/Pengenalan`. Halaman per block: `Docs/Modul Logic/Flow/Flow Block/Data <Grup>/<Nama Block>`. Pola lama `Data/<Grup>/<Nama>` tidak berlaku. Tidak ada halaman `Data/Pengenalan`.
-- **Daftar block:**
-  - Variable (6): Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, Variable Value.
-  - Enum (10): Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Header Setter, EnumData Value Setter, EnumData Selectable Setter, EnumData Value.
-  - Table (7): Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, TableData Setter.
-  - Tree (10): Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, Tree Get Origin.
-- **Sifat:** block Data unik sesuai fungsinya (tidak seragam seperti Event). Block Data adalah block non-Event, sehingga tunduk pada Syarat Flow Block Diproses. Aksi create, update, atau delete oleh Flow tidak memicu Event.
-- **Fungsi block (terkonfirmasi penulis):**
-  - Tree: Node Block mengambil Order, Name, dan Tree. Tree Block mengambil Name, Description, dan Merger Mode. Node Setter mengubah Name dan Order. Node Get Ancestor mengambil leluhur pada tingkat yang ditentukan. Node Get Children hanya mengambil anak langsung dengan Order yang ditentukan. Assign Node menetapkan Node ke posisi tertentu (misalnya di bawah Node induk yang dipilih).
-- **Perilaku Tree:** block Data Tree dapat mengubah atau menghapus Node pada Tree dengan Merger Mode atau External Read Only aktif (termasuk Node clone), sehingga perlu callout warning.
-- **Callout warning dibutuhkan** pada block Delete (Variable, EnumData, Row, Node) dan Add EnumData (Strict On Selected).
-- **Terkonfirmasi dari knowledge lain:** Variable Getter mengambil nilai lewat Name, Alias tidak valid menghasilkan tidak ada nilai atau error (lihat Flow Activity), Tree baru otomatis memiliki Node Origin.
-- **Flow state pada eksekusi block:**
-    *   **Succeed:** block selesai sesuai tujuan.
-    *   **Error:** block berjalan tetapi hasilnya gagal sebagai kondisi yang dapat ditangani (Name atau Value konflik, EnumData tidak ditemukan, penghapusan ditolak). Pesan error tampil di Flow Activity.
-    *   **Fatal Error:** block tidak dapat dijalankan karena input wajib kosong (Enum, EnumData, atau Name), semua output tidak ada. Pesan error tampil di Flow Activity.
-    *   Pengecualian terkonfirmasi: Delete EnumData dengan input EnumData kosong berstatus Error dengan output Error true.
-- **Belum terkonfirmasi:** dampak Strict On Selected pada EnumData yang ditambahkan lewat Flow, dampak penghapusan EnumData yang masih dipakai komponen lain, nasib Node anak saat induknya dihapus lewat Flow, apakah Node Origin dapat dihapus, daftar atribut yang dikonversi Variable Block, serta input dan output rinci tiap block.
+- **Struktur dan path:** kategori Data terdiri atas empat kelompok. Halaman Pengenalan: `Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan`, `Data Enum/Pengenalan`, `Data Table/Pengenalan`, `Data Tree/Pengenalan`. Halaman per block: `Docs/Modul Logic/Flow/Flow Block/Data <Grup>/<Nama Block>`. Pola lama `Data/<Grup>/<Nama>` tidak berlaku. Tidak ada halaman `Data/Pengenalan`.
 
-### Flow Block Data Variable (menggantikan ringkasan Variable pada "Flow Block Data")
+### Flow Block Data Variable
 
 *   **Tidak memiliki Control.** Block hanya memiliki input di kiri dan output di kanan.
 *   **Field Variable adalah select option.** Pengguna memilih Variable Data dari daftar (bukan mengetik alias), atau menghubungkannya dari output block lain. Karena itu "Variable tidak valid" tidak mungkin terjadi, tetapi Variable yang dibiarkan kosong menimbulkan error.
@@ -161,7 +144,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 *   **Output Description atau Value** yang isinya kosong tetap meneruskan aliran
 *   **Type Variable Data ikut berubah** saat Variable Setter memperbarui Value (jawaban "New Value juga memberikan new type" dan "hanya Value yang berubah" perlu dipastikan), dan tipe data output Description pada block Variable (Text).
 
-### Flow Block Data Enum (menggantikan ringkasan Enum pada "Flow Block Data")
+### Flow Block Data Enum
 
 *   **10 block, tanpa Control.** Path: `Docs/Modul Logic/Flow/Flow Block/Data Enum/<Nama Block>`, pengenalan kelompok di `Data Enum/Pengenalan`. Blok: Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, EnumData Value, EnumData Value Setter, EnumData Header Setter, EnumData Selectable Setter. Pengenalan kelompok perlu memuat ketiga Setter baru.
 *   **Konsep output: "tidak ada output".** Output kondisi (Name Conflict, Value Conflict, Succeed, Error, Is Empty) hanya keluar bernilai true saat kondisinya terpenuhi. Pada kondisi lain, tidak ada output (bukan false, bukan empty). Output data (New EnumData, EnumData pada Getter) juga tidak keluar saat gagal.
@@ -184,7 +167,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 *   **Description kosong menjadi empty**
 *   **Name yang sama dengan Name EnumData itu sendiri bukan konflik**
 
-### Flow Block Data Table (menggantikan ringkasan Table pada "Flow Block Data")
+### Flow Block Data Table
 
 *   **7 block, tanpa Control.** Path: `Docs/Modul Logic/Flow/Flow Block/Data Table/<Nama Block>`, pengenalan kelompok di `Data Table/Pengenalan`. Block: Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, TableData Setter. Semua asumsi pada versi draf sudah **dikonfirmasi benar oleh penulis**.
 *   **Input dan output per block:**
@@ -198,7 +181,7 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 *   **Column dan Row harus berasal dari Table yang sama.** Field Row pada screenshot tampil "NULL" dan akan diganti menjadi "Empty".
 *   **Add Row dan Delete Row tidak memicu Table Row Event** (aksi Flow tidak memicu Flow kembali).
 
-### Flow Block Data Tree (menggantikan ringkasan Tree pada "Flow Block Data")
+### Flow Block Data Tree
 
 *   **10 block, tanpa Control.** Path: `Docs/Modul Logic/Flow/Flow Block/Data Tree/<Nama Block>`, pengenalan kelompok di `Data Tree/Pengenalan`. Block: Tree, Node, Node Setter, Add Node, Assign Node, Delete Node, Tree Get Origin, Node Get Parent, Node Get Children, Node Get Ancestor.
 *   **Aturan Tree:** **Order** Node minimal 0 (tidak boleh negatif) dan **harus unik di antara saudara kandung** (Node lain dengan parent yang sama). **Name** Node juga **harus unik di antara saudara kandung**. Konflik ditandai output flag **Order Conflict** dan **Name Conflict** (hanya keluar bernilai true pada kasusnya, status Error). Pemeriksaan pada Add Node, Node Setter, dan Assign Node berurutan Name lalu Order, dan output konflik keluar satu per satu dimulai dari Name. Name dan Order milik Node itu sendiri bukan konflik. **Order negatif = Fatal Error** (prinsip penulis: Error hanya dipakai bila ada output yang menandainya, kasus tanpa output menjadi Fatal Error). Status Not Found pada block Get = Error.
@@ -217,7 +200,31 @@ description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi ph
 *   **Warning Tree:** Add Node tidak memerlukan warning Merger Mode atau External Read Only. Node Setter, Assign Node, dan Delete Node memerlukannya.
 *   **Belum terkonfirmasi:** apakah Assign Node pada Tree yang berbeda berstatus Error (draf) atau Fatal Error mengikuti prinsip "tanpa output = Fatal Error" di atas, dan apakah Parent yang sama dengan Children itu sendiri (bukan parent-nya) termasuk Relation Conflict.
 
-## Flow Block kategori lain (halaman Pengenalan sudah final)
+## Flow Block Operator
+
+Seluruh halaman block Operator berada di `Docs/Modul Logic/Flow/Flow Block/Operator/<Tipe Data>/<Nama Block>` (Number, String, Table, Object, Boolean, Tree), alias tautan `<Nama> Operator Block`, dan tidak ada yang memiliki Control. Fatal Error pada semua block di bawah menampilkan pesannya di Flow Activity.
+- **Prinsip kategori:** Flow Block Operator melakukan komputasi yang mengubah data input menjadi data baru. Kategori Input dan Output hanya untuk block yang memanipulasi aliran tanpa mengkonversi data menjadi data baru. If tetap termasuk Operator karena mengevaluasi A, Operator, dan B menjadi Boolean sekaligus meneruskan aliran sesuai hasilnya.
+- **Increment (Number):** input Data dan Adders (Number), output Result = Data + Adders. Terkonfirmasi benar. Data atau Adders kosong dicatat sebagai Fatal Error pada draf.
+- **Concatenate (String):** dua input String, output Result. **Tidak dapat error.** Satu input kosong menghasilkan input yang lain, kedua input kosong menghasilkan kosong.
+- **Implode (String):** Strings (String atau Array berisi String) dan Separator, output Result.
+- **Pad Left dan Pad Right (String):** input String, Length (Number), Pad String, output Result. Fatal Error jika String atau Pad String kosong.
+- **TableRow Parse (Table):** input Row dan Rel. Depth (Number), output Object dan Text (keluar sesuai koneksi). Fatal Error jika Row kosong (teks asli "dibiarkan error" ternyata salah ketik, ditulis "kosong"). Rel. Depth kosong dianggap 0. Contoh baku: Row Pesanan `{ "penerima": "1 : Anna", "Total": 1200 }` pada depth 0 menjadi `{ "penerima": { "id": 1, "nama": "Anna", "kelamin": "Perempuan", "no telp": "123456" }, "Total": 1200 }` pada depth 1. Kolom relasi pada depth 0 tampil sebagai ringkasan `"<id> : <label>"`.
+- **Assign (Object):** input Key (String) dan Value (Object atau String, bawaan Object, dapat Change Type), output Object. Key memakai simbol `.` untuk kedalaman (contoh `job.status.level`). Fatal Error jika Key atau Value kosong. Bersifat override.
+- **Merge (Object):** input Objects (Array berisi Object), output Result (Object). Object yang lebih akhir menimpa atribut yang sama persis, atribut yang saling mengisi pada kedalaman tertentu digabung. Fatal Error jika Objects kosong.
+- **Parse (Object):** input Text, output Object dan Error. Error keluar bila Text tidak sesuai kaidah Object (JSON), bertipe Boolean `true` pada kasusnya. Fatal Error jika Text kosong.
+- **Stringify (Object):** input Object, output Text. Fatal Error jika Object kosong. Tidak memiliki output Error.
+- **If (Boolean):** input A dan B (tipe apa pun, awalnya N/A Type), Operator (String, simbol operator valid, rujuk `Docs/Expression/Operator`), output Boolean (keluar bila terhubung), True, dan False (meneruskan aliran sesuai hasil). Fatal Error jika Operator kosong atau A atau B masih N/A Type.
+- **Node Parse (Tree):** input Node, Anc. Depth, Child Depth (Number), output Object dan Text (sesuai koneksi). Struktur Node: `{ "order": number, "name": string, "parent": Node | null, "children": Node[] }`. Anc. Depth menghasilkan `parent` bersarang ke atas, Child Depth menghasilkan `children` ke bawah. Fatal Error jika Node kosong. Anc. Depth dan Child Depth kosong dianggap 0 (tanpa `parent` dan `children`).
+
+**Masih belum jelas** (jawaban review "Sudah benar" tidak menentukan perilakunya, jadi jangan dianggap fakta):
+- Implode: hasil bila Strings atau Separator kosong, bila Strings bertipe String tunggal, dan bila Array hanya berisi satu String.
+- Pad Left dan Pad Right: hasil bila Length kosong, bila String sudah sama atau lebih panjang dari Length, dan bila Pad String lebih dari satu karakter.
+- Assign: data apa yang ditimpa oleh sifat override, karena block tidak punya input Object.
+- Merge: hasil bila Objects berisi satu Object atau Array kosong.
+- Increment: apakah Adders boleh negatif atau desimal, dan alasan label berbentuk jamak.
+- Node Parse: isi Node pada kedalaman terjauh, serta `"parent": null` dan `"children": []` pada Node tanpa leluhur atau anak.
+
+## Flow Block kategori lain
  
 * **Halaman:** `Docs/Modul Logic/Flow/Flow Block/<Kategori>/Pengenalan` untuk `Input dan Output`, `Query`, `Operator`, `Modular`, `Chrono`, `Error`. Front matter `status: draft`, `priority` 11 sampai 16 (urut sesuai daftar itu), `tags: flowblock-category`.
 * **I/O:** membantu pengelolaan aliran data.

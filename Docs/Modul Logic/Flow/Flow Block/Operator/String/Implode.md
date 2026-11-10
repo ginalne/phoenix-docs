@@ -12,12 +12,6 @@ Implode Block adalah Flow Block Operator yang menggabungkan input bertipe [[Docs
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/String/implode-block-flow.png|Implode Block pada Blueprint Flow]]
 
-<!--
-  * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `implode-block-flow.png` di folder yang sama dengan halaman ini.
-  * [TODO] Perilaku belum diberikan penulis, mohon konfirmasi: (a) Strings atau Separator kosong menghasilkan Fatal Error atau tidak, (b) hasil bila Strings bertipe String tunggal, (c) hasil bila Array hanya berisi satu String.
-    Jawaban: Sudah benar
--->
-
 ## Input dan Output
 
 Implode Block memiliki 2 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

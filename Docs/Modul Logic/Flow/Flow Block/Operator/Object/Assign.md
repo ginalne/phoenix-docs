@@ -12,13 +12,6 @@ Assign Block adalah Flow Block Operator yang menambahkan atribut pada [[Docs/Tip
 
 ![[Docs/Modul Logic/Flow/Flow Block/Operator/Object/assign-block-flow.png|Assign Block pada Blueprint Flow]]
 
-<!--
-  * [DONE] Penempatan gambar: potong dari screenshot Operator, simpan sebagai `assign-block-flow.png` di folder yang sama dengan halaman ini.
-  * [DONE] Teks penulis "Fatal Erro" ditulis sebagai "Fatal Error".
-  * [TODO] Konfirmasi: block ini tidak memiliki input Object. Draf mengasumsikan Object hasil dibentuk baru dari Key dan Value. Mohon jelaskan data sebelumnya apa yang ditimpa (sifat override) bila tidak ada Object masukan, misalnya apakah override terjadi pada eksekusi berikutnya atau bila Key menunjuk atribut yang sama pada Value bertipe Object.
-    Jawaban: Sudah benar
--->
-
 ## Input dan Output
 
 Assign Block memiliki 2 input di sisi kiri, 1 output di sisi kanan dan tidak memiliki Control. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
