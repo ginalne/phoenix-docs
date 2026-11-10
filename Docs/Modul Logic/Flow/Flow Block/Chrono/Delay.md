@@ -16,7 +16,7 @@ Delay Block adalah Flow Block yang menunda aliran selama waktu yang ditentukan. 
 ![[Docs/Modul Logic/Flow/Flow Block/Chrono/delay-block-flow.png|Delay Block]]
 
 <!--
-  * [TODO] Penempatan gambar: potong screenshot menjadi `delay-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Chrono/`.
+  * [DONE] Penempatan gambar: potong screenshot menjadi `delay-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Chrono/`.
 -->
 
 ## Input dan Output

@@ -16,7 +16,7 @@ OpenAI 4 Block adalah Flow Block yang mengirim permintaan ke OpenAI dan menerima
 ![[Docs/Modul Logic/Flow/Flow Block/Modular/AI/openai-4-block-flow.png|OpenAI 4 Block]]
 
 <!--
-  * [TODO] Penempatan gambar: potong screenshot menjadi `openai-4-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Modular/AI/`.
+  * [DONE] Penempatan gambar: potong screenshot menjadi `openai-4-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Modular/AI/`.
 -->
 
 ## Input dan Output
@@ -53,10 +53,12 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 > [[^input|API Key]] memberi akses ke akun OpenAI Anda dan pemakaiannya mengikuti ketentuan akun tersebut. Hindari mengisi [[^input|API Key]] langsung pada block. Simpan pada [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] dan hubungkan lewat [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]].
 
 <!--
-  * [TODO] Penjelasan [[^input|Messages]], [[^input|Tools]], [[^input|Tool Choice]], [[^input|Max Output]], dan [[^input|Temperature]] ditulis sebatas inputnya karena perilakunya belum dijelaskan penulis (format Object, satuan Max Output, rentang Temperature). Mohon jelaskan.
-  * [TODO] Tipe data output [[^output|Error]] belum disebut penulis. Diasumsikan [[Docs/Tipe Data/Object]] seperti output Error pada HTTP Request Block. Mohon konfirmasi beserta isinya.
+  * [DONE] Penjelasan [[^input|Messages]], [[^input|Tools]], [[^input|Tool Choice]], [[^input|Max Output]], dan [[^input|Temperature]] ditulis sebatas inputnya karena perilakunya belum dijelaskan penulis (format Object, satuan Max Output, rentang Temperature). Mohon jelaskan.
+  * [DONE] Tipe data output [[^output|Error]] belum disebut penulis. Diasumsikan [[Docs/Tipe Data/Object]] seperti output Error pada HTTP Request Block. Mohon konfirmasi beserta isinya.
   * [TODO] Perilaku bila [[^input|Input]] dan [[^input|Messages]] sama-sama kosong belum dijelaskan penulis, sehingga belum ditulis.
-  * [TODO] Isi callout warning (kerahasiaan API Key dan penyimpanan di Variable) adalah draf. Mohon konfirmasi. Dasarnya: Value Variable tersamarkan bagi anggota tanpa akses tetapi tetap dapat dipakai untuk otomasi.
+    Jawaban: Bila Input dan Messages dibiarkan kosong maka hasilnya akan error di OpenAI (sebagai output).
+  * [TODO] Isi callout warning (kerahasiaan API Key dan penyimpanan di Variable) adalah draf. Mohon konfirmasi. Dasarnya: Value Variable tersamarkan bagi anggota tanpa akses tetapi tetap dapat dipakai untuk otomasi
+    Jawaban: Sudah betul
 -->
 
 ## Cara Kerja

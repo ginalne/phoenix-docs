@@ -18,8 +18,8 @@ Query yang dijalankan biasanya dibangun lebih dulu dengan [[Docs/Modul Logic/Flo
 ![[Docs/Modul Logic/Flow/Flow Block/Query/Execute/table-output-block-flow.png|Table Output Block]]
 
 <!--
-  * [TODO] Penempatan gambar: potong screenshot menjadi `table-output-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Query/Execute/`.
-  * [TODO] Tautan asumsi: `Docs/Query/Output/Table` (dari penulis), `Docs/Tipe Data/Array`, dan `Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan`.
+  * [DONE] Penempatan gambar: potong screenshot menjadi `table-output-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Query/Execute/`.
+  * [DONE] Tautan asumsi: `Docs/Query/Output/Table` (dari penulis), `Docs/Tipe Data/Array`, dan `Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan`.
 -->
 
 ## Input dan Output
@@ -43,8 +43,11 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 <!--
   * [TODO] Tombol [[^button/nolabel/q]] pada input Query (tampil pada screenshot) belum dijelaskan penulis, sehingga belum ditulis di halaman. Mohon jelaskan fungsinya.
+    Jawaban: Tombol Q adalah untuk menampilkan konfigurasi Query. Field Query memang memiliki tombol itu.
   * [TODO] Diasumsikan [[^output|Is Empty]] hanya keluar bernilai true saat hasil kosong dan "-" saat hasil berisi, mengikuti pola output flag block lain. Mohon konfirmasi.
+    Jawaban: Sudah betul
   * [TODO] Perilaku bila [[^input|Query]] tidak berkaidah Table Output belum dijelaskan penulis sehingga belum ditulis di tabel Contoh Penggunaan. Mohon konfirmasi statusnya.
+    Jawaban: Akan menjadi Fatal Error.
 -->
 
 ## Cara Kerja

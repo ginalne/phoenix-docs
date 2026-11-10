@@ -18,8 +18,8 @@ Block ini hanya membangun Query. Untuk menjalankan Query dan mengambil [[Docs/Ti
 ![[Docs/Modul Logic/Flow/Flow Block/Query/Condition/add-table-filter-block-flow.png|Add Table Filter Block]]
 
 <!--
-  * [TODO] Penempatan gambar: potong screenshot menjadi `add-table-filter-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Query/Condition/`.
-  * [TODO] Tautan asumsi: `Docs/Query/Filter/Operator`, `Docs/Query/Filter/Operand` (dari penulis), `Docs/Tipe Data/Pengenalan` (daftar seluruh Tipe Data), dan `Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan`.
+  * [DONE] Penempatan gambar: potong screenshot menjadi `add-table-filter-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Query/Condition/`.
+  * [DONE] Tautan asumsi: `Docs/Query/Filter/Operator`, `Docs/Query/Filter/Operand` (dari penulis), `Docs/Tipe Data/Pengenalan` (daftar seluruh Tipe Data), dan `Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan`.
 -->
 
 ## Input dan Output
@@ -46,7 +46,9 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 <!--
   * [TODO] Tombol [[^button/nolabel/q]] pada input Query (tampil pada screenshot) belum dijelaskan penulis, sehingga belum ditulis di halaman. Mohon jelaskan fungsinya.
+    Jawaban: Tombol Q adalah untuk menampilkan konfigurasi Query. Field Query memang memiliki tombol itu.
   * [TODO] Cara [[^input|AND]] menggabungkan filter dengan filter sebelumnya pada Query (termasuk bila filter ini adalah yang pertama) ditulis sebatas arti true sebagai AND dan false sebagai OR sesuai penjelasan penulis. Mohon konfirmasi.
+    Jawaban: Sudah betul
 -->
 
 ### Menentukan Tipe Data Operand

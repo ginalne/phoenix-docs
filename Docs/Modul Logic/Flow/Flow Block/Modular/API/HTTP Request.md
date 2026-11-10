@@ -16,7 +16,7 @@ HTTP Request Block adalah Flow Block yang mengirim permintaan HTTP ke sistem lai
 ![[Docs/Modul Logic/Flow/Flow Block/Modular/API/http-request-block-flow.png|HTTP Request Block]]
 
 <!--
-  * [TODO] Penempatan gambar: potong screenshot menjadi `http-request-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Modular/API/`.
+  * [DONE] Penempatan gambar: potong screenshot menjadi `http-request-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Modular/API/`.
 -->
 
 ## Input dan Output
@@ -49,10 +49,15 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 <!--
   * [TODO] Isi Object pada output [[^output|Error]] belum dijelaskan penulis (misalnya kode status atau pesan). Mohon jelaskan.
+    Jawaban: Isi Error object pada HTTP Request adalah: status dan body (apakah ini cukup? atau menurut ada tambahan agar sistem saya perbaiki)
   * [TODO] Apa yang dihitung sebagai "respons error" (kode status tertentu, kegagalan koneksi, atau keduanya) belum dijelaskan penulis.
+    Jawaban: sesuai dengan hasil status code pada request. jika kegagalan koneksi sudah termasuk. (dalam kodingan saya pakai try catch, jadi segala error direspon ke output ini)
   * [TODO] Perilaku bila respons bukan JSON atau HTML belum dijelaskan penulis, sehingga belum ditulis.
+    Jawaban: Itu hanya contoh, jika ada bentuk lain mohon lengkapi apakah itu object JSON atau bukan.
   * [TODO] Diasumsikan [[^input|Header]] dan [[^input|Payload]] boleh dibiarkan kosong karena Fatal Error hanya disebut untuk [[^input|Method]] dan [[^input|Endpoint]]. Mohon konfirmasi.
+    Jawaban: Iya boleh dibiarkan kosong, tapi akan Error jika request gagal.
   * [TODO] Isi callout warning (kerahasiaan nilai di Header atau Payload dan permintaan yang tidak dapat dibatalkan) adalah draf. Mohon konfirmasi, terutama apakah isi Header terlihat oleh pengguna yang dapat membuka Flow.
+    Jawaban: Sudah oke
 -->
 
 ## Cara Kerja
