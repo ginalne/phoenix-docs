@@ -3,6 +3,6 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 0
+        priority: 1
 ---
 # Apa itu Komponen

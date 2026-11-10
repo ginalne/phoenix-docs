@@ -3,6 +3,6 @@
     pageDecoration:
       icon: x
       tree:
-        priority: 1
+        priority: 2
 ---
 # Apa itu Folder
