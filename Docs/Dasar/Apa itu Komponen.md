@@ -28,7 +28,7 @@ Anda membangun sistem dengan menggabungkan komponen. Data disimpan di satu kompo
 | [[Docs/Antarmuka#Halaman Kerja|Halaman Kerja]] | Antarmuka kerja sebuah komponen. |
 | [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]] | Tempat Anda membuat dan membuka komponen. |
 | [[Docs/Tipe Data/Query|Query]] | Cara komponen Interface mengambil dan menampilkan data dari komponen lain. |
-| [[Docs/Event/Apa itu Event|Event]] | Cara data yang berubah memicu Flow. |
+| [[Docs/Dasar/Apa itu Event|Event]] | Cara data yang berubah memicu Flow. |
 | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] | Komponen yang mengatur akses ke komponen lain. |
 
 ## Modul dan Komponen di Phoenix
@@ -258,7 +258,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
 | Menata komponen dalam struktur | [[Docs/Dasar/Apa itu Folder|Folder]] |
 | Mengenali bagian layar Phoenix | [[Docs/Antarmuka|Antarmuka]] |
 | Memahami jenis data yang dipakai komponen | [[Docs/Tipe Data/Pengenalan|Tipe Data]] dan [[Docs/Format Data/Pengenalan|Format Data]] |
-| Menghubungkan data dengan otomasi | [[Docs/Event/Apa itu Event|Event]] dan [[Docs/Event/Menghubungkan Event|Menghubungkan Event]] |
+| Menghubungkan data dengan otomasi | [[Docs/Dasar/Apa itu Event|Event]] dan [[Docs/Event/Menghubungkan Event|Menghubungkan Event]] |
 | Mengatur tampilan komponen | [[Docs/Styling/Styling Class|Styling Class]] |
 | Mengatur akses ke komponen | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dan [[Docs/Modul Developer/Group/Apa itu Group|Group]] |
 

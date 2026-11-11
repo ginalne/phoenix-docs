@@ -12,7 +12,7 @@ Berikut adalah pertanyaan yang Sering Diajukan pada komponen Flow:
 
 >**faq**
 >**Apa bedanya Flow dengan Event?**
->[[Docs/Event/Apa itu Event|Event]] adalah pemicu proses. Flow adalah tempat Anda menyusun dan menghubungkan Flow Block, agar pemicu tersebut menghasilkan keluaran dan otomasi.
+>[[Docs/Dasar/Apa itu Event|Event]] adalah pemicu proses. Flow adalah tempat Anda menyusun dan menghubungkan Flow Block, agar pemicu tersebut menghasilkan keluaran dan otomasi.
 >**Bagaimana menjalankan Flow tanpa menunggu Event?**
 >Klik tombol pada Flow Block Event di antarmuka Flow, misalnya [[^button/empty|Trigger]] pada block.
 >**Mengapa Activity List kosong?**

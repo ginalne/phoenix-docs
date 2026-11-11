@@ -23,7 +23,7 @@ Dengan Enum, Anda mengelola daftar pilihan di satu tempat saja. Field di kompone
 - **Pilihan yang seragam.** [[^field|Name]] tidak boleh sama di dalam satu Enum, sehingga tidak ada pilihan ganda yang membingungkan.
 - **Kontrol per baris.** Anda menentukan [[Docs/Tipe Data/EnumData]] mana yang tampil sebagai pilihan dengan kolom [[^field|Selectable]].
 - **Value fleksibel.** Kolom [[^field|Value]] mengikuti [[^field|Format]] yang Anda pilih pada konfigurasi Enum.
-- **Siap terhubung.** Enum dapat dihubungkan dengan [[Docs/Event/Apa itu Event|Event]] dan logika di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] sehingga perubahan pilihan dapat memicu otomasi.
+- **Siap terhubung.** Enum dapat dihubungkan dengan [[Docs/Dasar/Apa itu Event|Event]] dan logika di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] sehingga perubahan pilihan dapat memicu otomasi.
 
 ## Konsep Utama
 
@@ -50,7 +50,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Table:
 2. [[Docs/Modul Data/Enum/Mengubah]] Atribut Enum seperti [[^field|Name]], [[^field|Description]].
 3. [[Docs/Modul Data/Enum/Menghapus]] Enum.
 4. [[Docs/Modul Data/Enum/Enum Data/Pengenalan|Mengelola Data]] seperti menambahkan, mengubah, menghapus atau menggabungkan [[Docs/Tipe Data/EnumData]]
-5. [[Docs/Modul Data/Enum/Mengotomasi]]: menghubungkan [[Docs/Tipe Data/Enum]] dengan [[Docs/Event/Apa itu Event|Event]].
+5. [[Docs/Modul Data/Enum/Mengotomasi]]: menghubungkan [[Docs/Tipe Data/Enum]] dengan [[Docs/Dasar/Apa itu Event|Event]].
 
 Anda juga dapat memperdalam tentang Tipe Data yang berhubungan dengan data yaitu: [[Docs/Tipe Data/EnumData]].
 
