@@ -6,6 +6,7 @@
       tree:
         priority: 1
 ---
+
 # OpenAI 4 Block
 
 >**note** OpenAI 4 Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Flow Block Modular]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
@@ -13,10 +14,6 @@
 OpenAI 4 Block adalah Flow Block yang mengirim permintaan ke OpenAI dan menerima hasilnya sebagai [[Docs/Tipe Data/Text]] atau sebagai Function yang dapat diproses block berikutnya. Block ini memungkinkan Flow memanfaatkan AI di tengah alur, misalnya untuk menjawab atau mengolah teks dari data yang sedang diproses.
 
 ![[Docs/Modul Logic/Flow/Flow Block/Modular/AI/openai-4-block-flow.png|OpenAI 4 Block]]
-
-<!--
-  * [DONE] Penempatan gambar: potong screenshot menjadi `openai-4-block-flow.png`, simpan di folder `Docs/Modul Logic/Flow/Flow Block/Modular/AI/`.
--->
 
 ## Input dan Output
 
@@ -28,12 +25,14 @@ OpenAI 4 Block memiliki delapan input di sisi kiri, tiga output di sisi kanan da
 | - | - | - |
 | [[^input|API Key]] | [[Docs/Tipe Data/String]] | Kunci akses ke OpenAI. Wajib diisi. |
 | [[^input|Model]] | [[Docs/Tipe Data/String]] | Model OpenAI yang dipakai. Wajib diisi. |
-| [[^input|Input]] | [[Docs/Tipe Data/Text]] | Teks yang dikirim ke OpenAI. Boleh dibiarkan kosong. |
-| [[^input|Messages]] | [[Docs/Tipe Data/Object]] | Messages untuk permintaan ke OpenAI. Boleh dibiarkan kosong. |
+| [[^input|Input]] | [[Docs/Tipe Data/Text]] | Teks yang dikirim ke OpenAI. Boleh dibiarkan kosong bila [[^input|Messages]] diisi. |
+| [[^input|Messages]] | [[Docs/Tipe Data/Object]] | Messages untuk permintaan ke OpenAI. Boleh dibiarkan kosong bila [[^input|Input]] diisi. |
 | [[^input|Tools]] | [[Docs/Tipe Data/Object]] | Tools yang tersedia bagi OpenAI. Diperlukan agar output [[^output|Function]] dapat keluar. Boleh dibiarkan kosong. |
 | [[^input|Tool Choice]] | [[Docs/Tipe Data/Object]] | Pengaturan pemilihan Tools. Boleh dibiarkan kosong. |
 | [[^input|Max Output]] | [[Docs/Tipe Data/Number]] | Batas keluaran dari OpenAI. Wajib diisi. |
 | [[^input|Temperature]] | [[Docs/Tipe Data/Number]] | Pengaturan Temperature untuk permintaan. Wajib diisi. |
+
+Bila [[^input|Input]] dan [[^input|Messages]] sama-sama kosong, OpenAI mengembalikan error dan hasilnya keluar lewat [[^output|Error]].
 
 ### Output
 
@@ -51,15 +50,6 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 >**warning** Kerahasiaan API Key
 > [[^input|API Key]] memberi akses ke akun OpenAI Anda dan pemakaiannya mengikuti ketentuan akun tersebut. Hindari mengisi [[^input|API Key]] langsung pada block. Simpan pada [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] dan hubungkan lewat [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]].
 
-<!--
-  * [DONE] Penjelasan [[^input|Messages]], [[^input|Tools]], [[^input|Tool Choice]], [[^input|Max Output]], dan [[^input|Temperature]] ditulis sebatas inputnya karena perilakunya belum dijelaskan penulis (format Object, satuan Max Output, rentang Temperature). Mohon jelaskan.
-  * [DONE] Tipe data output [[^output|Error]] belum disebut penulis. Diasumsikan [[Docs/Tipe Data/Object]] seperti output Error pada HTTP Request Block. Mohon konfirmasi beserta isinya.
-  * [TODO] Perilaku bila [[^input|Input]] dan [[^input|Messages]] sama-sama kosong belum dijelaskan penulis, sehingga belum ditulis.
-    Jawaban: Bila Input dan Messages dibiarkan kosong maka hasilnya akan error di OpenAI (sebagai output).
-  * [TODO] Isi callout warning (kerahasiaan API Key dan penyimpanan di Variable) adalah draf. Mohon konfirmasi. Dasarnya: Value Variable tersamarkan bagi anggota tanpa akses tetapi tetap dapat dipakai untuk otomasi
-    Jawaban: Sudah betul
--->
-
 ## Cara Kerja
 
 1. Isi [[^input|API Key]], [[^input|Model]], [[^input|Max Output]], dan [[^input|Temperature]]. Isi juga [[^input|Input]], [[^input|Messages]], [[^input|Tools]], dan [[^input|Tool Choice]] sesuai kebutuhan. Setiap input dapat diisi langsung atau dihubungkan dari output block lain.
@@ -75,6 +65,7 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 | Seluruh input wajib terisi dan hasilnya berupa teks | [[Docs/Tipe Data/Text]] berisi jawaban | - | - | [[^flowstate|Succeed]] |
 | [[^input|Tools]] diisi dan hasilnya berupa Function | - | [[Docs/Tipe Data/Object]] (JSON) berisi Function | - | [[^flowstate|Succeed]] |
 | OpenAI mengembalikan respons error | - | - | [[Docs/Tipe Data/Object]] berisi respons error | [[^flowstate|Error]] |
+| [[^input|Input]] dan [[^input|Messages]] sama-sama kosong | - | - | [[Docs/Tipe Data/Object]] berisi respons error | [[^flowstate|Error]] |
 | [[^input|API Key]] atau [[^input|Model]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
 | [[^input|Max Output]] atau [[^input|Temperature]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
 
@@ -83,6 +74,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 ## Praktik Terbaik
 
 - **Simpan [[^input|API Key]] pada [[Docs/Modul Data/Variable/Apa itu Variable|Variable]].** Ambil nilainya dengan [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Variable Getter|Variable Getter Block]] agar nilainya tidak terlihat oleh anggota tanpa akses.
+- **Isi [[^input|Input]] atau [[^input|Messages]].** Bila keduanya kosong, OpenAI mengembalikan error lewat [[^output|Error]].
 - **Tangani output [[^output|Error]].** Hubungkan block penanganan agar kegagalan dari OpenAI tidak berlalu tanpa pemberitahuan.
 - **Isi [[^input|Tools]] hanya bila Anda membutuhkan output [[^output|Function]].** Tanpa [[^input|Tools]], hasil berupa Function tidak akan keluar.
 - **Pastikan [[^input|API Key]], [[^input|Model]], [[^input|Max Output]], dan [[^input|Temperature]] selalu terisi** agar block tidak berstatus [[^flowstate|Fatal Error]].
@@ -92,7 +84,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - [[^flowstate|Fatal Error]] hanya terjadi bila [[^input|API Key]], [[^input|Model]], [[^input|Max Output]], atau [[^input|Temperature]] dibiarkan kosong.
 - [[^output|Text]], [[^output|Function]], dan [[^output|Error]] tidak keluar bersamaan. Hanya satu yang meneruskan aliran sesuai hasil permintaan.
 - [[^output|Function]] hanya dapat keluar bila [[^input|Tools]] diisi.
-- [[^output|Error]] hanya keluar bila OpenAI mengembalikan respons error.
+- [[^output|Error]] hanya keluar bila OpenAI mengembalikan respons error, termasuk ketika [[^input|Input]] dan [[^input|Messages]] sama-sama kosong.
 - OpenAI 4 Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].
 
 ## Lihat Juga

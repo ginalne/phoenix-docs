@@ -19,14 +19,6 @@ Branch Block tersedia dalam empat varian, yaitu Branch 2 sampai Branch 5. Angka 
 
 ![[Docs/Modul Logic/Flow/Flow Block/Input dan Output/branch-block-flow.png|Branch Block varian Branch 2 sampai Branch 5]]
 
-<!--
-  * [DONE] Penempatan gambar: potong screenshot menjadi satu gambar `branch-block-flow.png` yang memuat empat varian (Branch 2 sampai Branch 5), simpan di folder `Docs/Modul Logic/Flow/Flow Block/Input dan Output/`.
-  * [TODO] Judul block pada screenshot tertulis "Data Branch 2" dan seterusnya, sedangkan halaman memakai "Branch Block" sesuai alias tautan pada halaman kategori. Mohon konfirmasi istilah yang dipakai.
-    Jawaban: Karena Branch Block memiliki variasi hanya untuk meluaskan jumlah output, maka diharapkan halaman ini bisa digunakan untuk menjelaskan variasi tersebut karena secara fungsi sama.
-  * [TODO] Tautan asumsi: `Docs/Tipe Data/Pengenalan` (daftar seluruh Tipe Data, dipakai pada langkah Change Type).
-    Jawaban: Iya benar.
--->
-
 ## Input dan Output
 
 Branch Block memiliki satu input di sisi kiri, dua sampai lima output di sisi kanan sesuai varian dan tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].
@@ -49,11 +41,6 @@ Branch Block memiliki satu input di sisi kiri, dua sampai lima output di sisi ka
 
 Output yang tidak memiliki koneksi tidak mengeluarkan data, termasuk bila Output tersebut berada di tengah. Output lain yang terhubung tetap mengeluarkan data. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
-<!--
-  * [TODO] Teks penulis menyebut "urutan aliran mulai dari Output 2, Output 3 dan seterusnya". Diasumsikan maksudnya penomoran Output (dimulai dari Output 1 sesuai screenshot), bukan urutan eksekusi, karena urutan eksekusi cabang tidak dapat diprediksi. Mohon konfirmasi.
-    Jawaban: Terkait dengan block ini, urutan eksekusi adalah sesuai penomoran. Maksud dari urutan eksekusi yang tidak diprediksi adalah ketika banyak koneksi antar blok yang dimana pengguna akan kesulitan menghubungkan block terakhir (semisal ada 5) tersebut mana yang akan terlebih dahulu di eksekusi, seperti ketika ingin menyusun array dengan menghubungkan banyak output ke satu input, urutannya menjadi sulit terprediksi.
--->
-
 ### Menentukan Tipe Data Input
 
 Teks merah [[^field|N/A Type]] pada [[^input|Input]] berarti tipe data belum ditentukan. Tentukan tipe data dengan langkah berikut:
@@ -65,7 +52,7 @@ Teks merah [[^field|N/A Type]] pada [[^input|Input]] berarti tipe data belum dit
 ## Cara Kerja
 
 1. Isi [[^input|Input]] langsung pada block atau hubungkan dari output block lain. [[^input|Input]] yang diisi langsung pada block mendefinisikan data yang dapat dipakai oleh banyak block sekaligus.
-2. Setelah Branch Block memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat eksekusi]], data [[^input|Input]] diteruskan ke setiap Output yang memiliki koneksi.
+2. Setelah Branch Block memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat eksekusi]], data [[^input|Input]] diteruskan ke setiap Output yang memiliki koneksi. Aliran dari Output tersebut dieksekusi berurutan sesuai penomoran Output.
 3. Output yang tidak memiliki koneksi tidak mengeluarkan data, sedangkan Output lain tetap berjalan seperti biasa.
 
 ## Contoh Penggunaan
@@ -81,24 +68,20 @@ Contoh berikut memakai Branch 3 dengan [[^input|Input]] bertipe [[Docs/Tipe Data
 
 Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
-<!--
-  * [TODO] Diasumsikan Fatal Error pada [[^input|Input]] yang dibiarkan [[^field|N/A Type]] berlaku selalu (berbeda dengan Passer Block yang bergantung pada koneksi Output). Mohon konfirmasi apakah Fatal Error tetap terjadi bila tidak ada Output yang terhubung.
-    Jawaban: Ya sudah betul.
--->
-
 ## Praktik Terbaik
 
 - **Pilih varian sesuai jumlah tujuan.** Gunakan Branch Block dengan jumlah [[^output|Output]] yang sama dengan jumlah block tujuan agar tidak ada Output yang tidak terpakai.
 - **Tentukan tipe data [[^input|Input]] sebelum menghubungkan Output.** [[^field|N/A Type]] pada [[^input|Input]] menghasilkan [[^flowstate|Fatal Error]].
 - **Isi [[^input|Input]] langsung** bila data yang sama dipakai oleh banyak block, sehingga data tidak perlu diisi berulang pada setiap block.
-- **Jangan mengandalkan urutan Output.** Urutan eksekusi aliran yang bercabang tidak dapat diprediksi. Bila sebuah block harus menunggu beberapa aliran selesai, gunakan [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Passer|Passer Block]].
+- **Atur urutan lewat penomoran Output.** Aliran dieksekusi sesuai penomoran, sehingga hubungkan block yang harus berjalan lebih dulu ke [[^output|Output]] bernomor lebih kecil.
 
 ## Batasan dan Catatan
 
 - Branch Block tidak memeriksa kondisi dan tidak mengubah data. Setiap [[^output|Output]] yang terhubung membawa data [[^input|Input]] yang sama.
 - [[^output|Output]] yang tidak memiliki koneksi tidak mengeluarkan data, termasuk bila berada di tengah. [[^output|Output]] lain tidak terpengaruh.
 - Branch Block tidak berstatus [[^flowstate|Error]]. Block hanya dapat berstatus [[^flowstate|Fatal Error]] bila [[^input|Input]] dibiarkan [[^field|N/A Type]].
-- Urutan eksekusi aliran yang bercabang dari beberapa [[^output|Output]] tidak dapat diprediksi.
+- Aliran dari [[^output|Output]] dieksekusi sesuai penomoran Output.
+- Urutan eksekusi sulit diprediksi bila banyak koneksi dari beberapa block bertemu pada satu input, misalnya saat menyusun [[Docs/Tipe Data/Array]] dari banyak output.
 - Branch Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].
 
 ## Lihat Juga

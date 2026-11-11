@@ -80,6 +80,3 @@ Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil d
 - [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]
 - [[Docs/Tipe Data/Variable]]
 
-<!--
-  * [TODO] Konfirmasi dampak New Value pada Type: jawaban Anda menyebut "New Value juga memberikan new type", sehingga saya tulis Type Variable Data ikut berubah mengikuti tipe data New Value. Namun kalimat sebelumnya ("hanya Value yang berubah, Name, Type, dan Description tetap sama") Anda tandai sudah betul. Mohon pastikan mana yang berlaku.
--->
