@@ -7,7 +7,6 @@
       tree:
         priority: 4
 ---
-
 # Mengekspor Node
 
 Mengekspor menyimpan [[Docs/Tipe Data/Node|Node]] beserta seluruh keturunannya ke dalam file. Gunakan ekspor untuk membuat cadangan atau memindahkan struktur ke [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] lain lewat [[Docs/Modul Data/Tree/Node/Mengimpor|Mengimpor]].
@@ -27,7 +26,9 @@ Format isi file dijelaskan di [[Docs/Modul Data/Tree/Node/Format Import dan Expo
 
 <!--
   * [TODO] Langkah di atas tebakan: Export langsung mengunduh file tanpa dialog. Mohon konfirmasi apakah ada dialog (misalnya pilihan format atau nama file) dan apakah yang diekspor selalu Node terpilih beserta keturunannya.
+    Jawaban: Export saat ini hanya mengunduh file, karena hanya format json yang disediakan (tidak ada dalam pilihan).
   * [TODO] Halaman baru yang diusulkan: Docs/Modul Data/Tree/Node/Format Import dan Export. Isi yang diharapkan: format file, atribut yang disertakan (Name, Order, Children), dan contoh isi file. Satu halaman ini dipakai bersama oleh Mengekspor dan Mengimpor.
+    Jawaban: akan dibuat nanti ketika ada.
 -->
 
 >**note** Hak akses
@@ -35,6 +36,7 @@ Format isi file dijelaskan di [[Docs/Modul Data/Tree/Node/Format Import dan Expo
 
 <!--
   * [TODO] Mohon konfirmasi apakah Export dibatasi hak akses tertentu pada Workspace.
+    Jawaban: Tidak
 -->
 
 ## Lihat Juga

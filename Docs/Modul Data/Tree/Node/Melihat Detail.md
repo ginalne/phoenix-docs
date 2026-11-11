@@ -30,7 +30,8 @@ Detail menampilkan atribut [[Docs/Tipe Data/Node|Node]] tanpa mengubahnya. Gunak
 
 <!--
   * [TODO] Informasi pada Detail saya ambil dari atribut Node (Name, Order, Parent, Children). Mohon konfirmasi isi sebenarnya, termasuk apakah ada informasi lain (misalnya Tree pemilik atau asal Node hasil clone).
-  * [TODO] Letakkan gambar detail-node.png dengan penanda angka pada setiap informasi di tabel.
+    Jawaban: Informasi Name, Children (semisal 1.Grandchildren A, 2. Granchildren B, 3. Grandchildren C), dan Ancestor (semisal Origin). Bagian ancestor ada label anchor yang dapat diganti dengan klik, akan mengubah urutan dari 1 (anchor) dan selanjutnya hingga ancestor terdekat, fungsinya agar memudahkan menghitung jarak kedalaman ancestor, interaksi ini tidak disimpan jadi akan hilang ketika diclose.
+  * [DONE] Letakkan gambar detail-node.png dengan penanda angka pada setiap informasi di tabel.
 -->
 
 ## Membuka Detail Langsung
@@ -45,6 +46,7 @@ Anda dapat membuat klik kanan langsung membuka Detail tanpa menampilkan menu kon
 
 <!--
   * [TODO] Mohon konfirmasi apakah satu klik pada Context berpindah ke nilai berikutnya (Menu, Edit, Detail) atau membuka pilihan.
+    Jawaban: berpindah ke nilai berikutnya.
 -->
 
 ## Lihat Juga

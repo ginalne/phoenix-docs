@@ -7,7 +7,6 @@
       tree:
         priority: 3
 ---
-
 # Mengimpor Node
 
 Mengimpor menambahkan banyak [[Docs/Tipe Data/Node|Node]] sekaligus dari file, misalnya file hasil [[Docs/Modul Data/Tree/Node/Mengekspor|Mengekspor]]. Node dari file ditambahkan sebagai anak dari Node yang Anda pilih.
@@ -26,7 +25,9 @@ Pastikan isi file sesuai [[Docs/Modul Data/Tree/Node/Format Import dan Export|Fo
 
 <!--
   * [TODO] Langkah di atas tebakan karena belum ada screenshot dialog Import. Mohon konfirmasi alur sebenarnya (dialog, tombol upload, nama tombol konfirmasi) dan format file yang diterima.
+    Jawaban: Iya sudah betul.
   * [TODO] Saya mengasumsikan Node hasil impor selalu menjadi Node baru (bukan clone), termasuk pada Tree merger. Mohon konfirmasi.
+    Jawaban: Iya Node baru.
 -->
 
 >**warning** Name dan Order yang bentrok
@@ -34,6 +35,7 @@ Pastikan isi file sesuai [[Docs/Modul Data/Tree/Node/Format Import dan Export|Fo
 
 <!--
   * [TODO] Perilaku saat bentrok saya asumsikan ditolak seluruhnya. Mohon konfirmasi apakah impor berhasil sebagian, Order otomatis bergeser, atau Name diberi akhiran.
+    Jawaban: Ditolak seluruhnya.
 -->
 
 >**note** Hak akses dan Event

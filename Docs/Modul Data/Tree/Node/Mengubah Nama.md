@@ -26,8 +26,8 @@ Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Node.
 Contoh: mengganti [[^field|Name]] [[^value/node|Aksesori]] menjadi [[^value/string|Aksesori Komputer]].
 
 <!--
-  * [TODO] Langkah mengikuti asumsi di halaman Menambahkan (Edit pada Node ➜ ubah Name ➜ Update). Mohon konfirmasi label field dan tombol.
-  * [TODO] Nama contoh (Aksesori) adalah nama generik. Sesuaikan dengan gambar Anda.
+  * [DONE] Langkah mengikuti asumsi di halaman Menambahkan (Edit pada Node ➜ ubah Name ➜ Update). Mohon konfirmasi label field dan tombol.
+  * [DONE] Nama contoh (Aksesori) adalah nama generik. Sesuaikan dengan gambar Anda.
 -->
 
 ## Aturan Name
@@ -44,6 +44,7 @@ Bila [[^field|Name]] bentrok dengan saudara kandung, perubahan tidak tersimpan d
 
 <!--
   * [TODO] Pesan kesalahan saat Name bentrok belum diketahui. Mohon konfirmasi teks pesannya.
+    Jawaban: Asumsikan pesan errornya agar sistem mengikuti.
 -->
 
 ## Lihat Juga
