@@ -1,12 +1,13 @@
 ---
-    status: draft
-    title: Apa itu Pro?
-    description: Pro adalah wadah utama di Phoenix yang menampung seluruh folder, komponen, data, pengguna, Group, dan Workspace Anda.
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 3
+status: draft
+title: Apa itu Pro?
+description: Pro adalah wadah utama di Phoenix yang menampung seluruh folder, komponen, data, pengguna, Group, dan Workspace Anda.
+pageDecoration:
+  icon: x
+  tree:
+    priority: 3
 ---
+
 # Apa itu Pro?
 
 >**note** Pro merupakan salah satu konsep dasar di Phoenix, bersama [[Docs/Dasar/Apa itu Folder|Folder]] dan [[Docs/Dasar/Apa itu Komponen|Komponen]]. Pro adalah wadahnya, Folder menatanya, dan Komponen menjadi isinya.
@@ -14,13 +15,6 @@
 Pro adalah wadah utama di Phoenix. Seluruh [[Docs/Dasar/Apa itu Folder|Folder]], [[Docs/Dasar/Apa itu Komponen|Komponen]], data, pengguna, [[Docs/Modul Developer/Group/Apa itu Group|Group]], dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang Anda kelola berada di dalam satu Pro.
 
 Di dalam satu Pro, data, tampilan, logika, dan hak akses saling terhubung. Anda dapat menyimpan data di [[Docs/Modul Data/Table/Apa itu Table|Table]], menampilkannya lewat komponen modul [[Docs/Modul Interface/Pengenalan|Interface]], menjalankan otomasi dengan [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], lalu mengatur siapa yang boleh melihat dan mengubahnya lewat modul [[Docs/Modul Developer/Pengenalan|Developer]].
-
-<!--
-
-  * [TODO] Definisi "wadah utama" saya simpulkan dari knowledge: Variable dikelola "di dalam sebuah Pro", struktur folder dimiliki Pro, dan Group, Workspace, serta Variable otomatis dibuat saat Pro dimulai. Mohon konfirmasi: (1) makna atau kepanjangan "Pro" bila perlu ditulis, (2) apakah satu akun atau organisasi dapat memiliki lebih dari satu Pro, (3) apakah Pro memiliki atribut seperti nama, dan (4) bagaimana pengguna bergabung ke sebuah Pro.
-    Jawaban: Secara definisi sudah benar.
-
--->
 
 ## Konsep Utama
 
@@ -46,13 +40,6 @@ Saat sebuah Pro dimulai, Phoenix menyiapkan tiga hal berikut secara otomatis. La
 >**warning** Pengguna baru memperoleh akses penuh
 > Pengguna baru ditempatkan ke Group Administrator, sedangkan Group tersebut terhubung ke Workspace Origin yang seluruh hak aksesnya [[^value/boolean/allow]]. Pindahkan pengguna ke Group lain yang Workspace-nya lebih terbatas bila ia tidak perlu mengelola seluruh isi Pro.
 
-<!--
-
-  * [TODO] Peringatan "Pengguna baru memperoleh akses penuh" adalah turunan logis dari tiga fakta di knowledge (pengguna baru masuk ke Administrator, Administrator terhubung ke Origin, Origin seluruhnya allow). Mohon konfirmasi bahwa kesimpulan ini benar dan layak dijadikan peringatan.
-    Jawaban: Ya betul
-
--->
-
 ## Cara Kerja
 
 ### Pro Menyimpan Struktur dan Isi
@@ -74,6 +61,8 @@ flowchart LR
     end
 ```
 
+Workspace mengatur tiga jenis akses: [[Docs/Modul Developer/Workspace/Component Access|Component Access]] untuk folder dan komponen, [[Docs/Modul Developer/Workspace/Data Access|Data Access]] untuk data di dalam komponen, dan [[Docs/Modul Developer/Workspace/Function Access|Function Access]] untuk fungsi seperti Merge, Event, dan Publish.
+
 Satu pengguna hanya dapat berada dalam satu Group, satu Group dapat memiliki beberapa Workspace. Selengkapnya lihat [[Docs/Modul Developer/Group/Apa itu Group|Group]] dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].
 
 ### Workspace Aktif
@@ -82,17 +71,10 @@ Saat Anda membuka Phoenix, Anda masuk ke Workspace yang terakhir Anda pakai. Jik
 
 ### Struktur Folder Pro dan Workspace
 
-Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder atau komponen di halaman kerja Workspace mengubah struktur folder Pro, bukan hanya tampilan halaman tersebut. Langkahnya ada di [[Docs/Dasar/Apa itu Folder#Memindahkan Folder dan Komponen|Memindahkan Folder dan Komponen]].
+Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder atau komponen, baik di [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]] maupun di halaman kerja Workspace, mengubah struktur folder Pro, bukan hanya tampilan halaman tersebut. Langkahnya ada di [[Docs/Dasar/Apa itu Folder#Memindahkan Folder dan Komponen|Memindahkan Folder dan Komponen]].
 
 >**warning** Tidak ada pengaman bawaan pada hak akses
 > Menonaktifkan [[Docs/Modul Developer/Workspace/Component Access#Visible pada Folder dan Komponen|Visible]] atau [[^field|Update]] pada komponen Workspace dan Group yang dipakai administrator dapat mengunci pengelolaan akses Anda sendiri. Satu-satunya pengaman adalah larangan menghapus Workspace *root* terakhir yang terhubung ke Group.
-
-<!--
-
-  * [TODO] Kalimat "Letak komponen Workspace menentukan folder root" belum saya tulis karena belum jelas dampaknya pada apa yang dilihat anggota. Knowledge hanya menyebut: bila komponen Workspace ditempatkan di folder yang lebih dalam, folder itu menjadi root. Mohon jelaskan bila ingin ditulis di bagian ini.
-    Jawaban: Ya sepertinya bagian ini sudah dijelaskan di komponen workspace.
-
--->
 
 ## Jelajahi Lebih Lanjut
 
@@ -107,25 +89,14 @@ Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder at
 | Mengenali bagian layar Phoenix | [[Docs/Antarmuka|Antarmuka]] |
 | Memahami jenis data yang dipakai komponen | [[Docs/Tipe Data/Pengenalan|Tipe Data]] |
 
-<!--
-
-  * [DONE] Halaman berikut belum ada dan diusulkan sebagai ide struktur. Mohon dibuat atau disesuaikan path-nya:
-    - `Docs/Dasar/Apa itu Folder` dan `Docs/Dasar/Apa itu Komponen` (dibuat bersama halaman ini).
-    - `Inisialisasi/Pengenalan`: cara memulai Pro dan apa yang disiapkan otomatis.
-    - `Docs/Modul Data/Pengenalan`, `Docs/Modul Interface/Pengenalan`, `Docs/Modul Logic/Pengenalan`, `Docs/Modul Developer/Pengenalan`: pintu masuk setiap modul.
-    - `Docs/Tipe Data/Pengenalan`: pintu masuk daftar Tipe Data.
-    - `Docs/Antarmuka`: penjelasan Bilah Navigasi, Area Manajemen Folder, dan Halaman Kerja.
-
--->
-
 ## TL:DR
 
 - Pro adalah wadah utama yang menampung [[Docs/Dasar/Apa itu Folder|Folder]], [[Docs/Dasar/Apa itu Komponen|Komponen]], data, pengguna, Group, dan Workspace.
-- Saat dimulai, Pro otomatis memiliki Group [[^field/group|Administrator]], Workspace [[*field/workspace|Origin]], dan komponen [[^field/variable|Variable]].
+- Saat dimulai, Pro otomatis memiliki Group [[^field/group|Administrator]], Workspace [[^field/workspace|Origin]], dan komponen [[^field/variable|Variable]].
 - Akses mengalir dari pengguna ke Group, Workspace, lalu ke folder dan komponen lewat [[Docs/Modul Developer/Workspace/Component Access|Component Access]], [[Docs/Modul Developer/Workspace/Data Access|Data Access]], dan [[Docs/Modul Developer/Workspace/Function Access|Function Access]].
 - Anda masuk ke Workspace yang terakhir dipakai dan dapat berpindah lewat tombol nama Workspace di [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]].
 - Pengguna baru masuk ke Group Administrator yang berakses penuh, jadi atur Group dan Workspace sejak awal.
-- Tidak ada pengaman bawaan pada hak akses, dan tautan Publish dapat dibuka publik.
+- Tidak ada pengaman bawaan pada hak akses, jadi jangan menonaktifkan akses komponen Workspace dan Group yang dipakai administrator.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
@@ -133,6 +104,6 @@ Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder at
 > **Apa perbedaan Pro dan Workspace?**
 > Pro menampung seluruh isi sistem Anda. [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] adalah komponen di dalam Pro yang menentukan folder, komponen, data, dan fungsi yang dapat diakses anggota Group.
 > **Apa saja yang otomatis ada saat Pro dimulai?**
-> Group Group [[^field/group|Administrator]], Workspace [[*field/workspace|Origin]], dan komponen [[^field/variable|Variable]]di folder *root*. Selengkapnya lihat [[#Isi Pro Saat Dimulai]].
+> Group [[^field/group|Administrator]], Workspace [[^field/workspace|Origin]], dan komponen [[^field/variable|Variable]] di folder *root*. Selengkapnya lihat [[#Isi Pro Saat Dimulai]].
 > **Dapatkah saya menghapus komponen Variable?**
 > Tidak. Komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] bersifat unik per Pro, tetapi boleh dipindahkan ke folder lain.
