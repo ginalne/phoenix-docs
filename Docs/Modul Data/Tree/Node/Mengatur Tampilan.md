@@ -11,7 +11,7 @@
 
 Tree dengan banyak [[Docs/Tipe Data/Node|Node]] mudah dibaca bila Anda hanya menampilkan bagian yang dibutuhkan. Pengaturan pada halaman ini hanya mengubah tampilan, bukan data Node.
 
-![[Docs/Modul Data/Tree/node-menu.png|Menu konteks Node]]
+![[Docs/Modul Data/Tree/Node/tree-context.png|Menu konteks Node]]
 
 ## Melipat dan Memperluas Node
 
@@ -40,7 +40,9 @@ Semua menu di atas berada pada submenu [[^field|View]].
 
 <!--
   * [TODO] Penjelasan Collapse Below Level masih mengikuti kalimat awal Anda ("melipat keturunan pada level Node ini, semua Node") dan terasa ambigu. Mohon beri contoh perilakunya agar kalimat bisa diperjelas.
+    Jawaban: melipat keturunan pada level Node yang dipilih, jadi generasi yang dipilih akan tampil sebagai yang keturunan terakhir dalam tampilan karena semua node dibawah generasi tersebut masuk dalam lipatan.
   * [TODO] Mohon konfirmasi apakah "Node yang dilipat" pada Hide Collapsed berarti anak dari Node yang dilipat, dan apakah status lipat tersimpan atau kembali semula setelah Refresh.
+    Jawaban: Ya, menyembunyikan node yang dilipat. Status lipat tidak tersimpan dan akan kembali semua setelah Refresh.
 -->
 
 ## Mengganti Arah Tampilan
@@ -63,6 +65,7 @@ Ketik [[^field|Name]] Node pada kolom [[^field|Search Tree Data...]] di bilah na
 
 <!--
   * [TODO] Mohon jelaskan hasil pencarian di area kerja (Node disorot, tampilan berpindah ke Node, atau Node induk terbuka otomatis).
+    Jawaban: Node disorot dan tampilan berpindah ke Node.
 -->
 
 Cara menggeser tampilan, *zoom*, dan memusatkan koordinat dijelaskan di [[Docs/Modul Data/Tree/Apa itu Tree#Interaksi Antarmuka Tree|Interaksi Antarmuka Tree]].

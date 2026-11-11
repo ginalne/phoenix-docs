@@ -7,7 +7,6 @@
       tree:
         priority: 8
 ---
-
 # Mengubah Urutan Node
 
 [[^field|Order]] menentukan posisi [[Docs/Tipe Data/Node|Node]] di antara saudara kandungnya, yaitu Node lain dengan parent yang sama. Node dengan [[^field|Order]] lebih kecil tampil lebih dulu.
@@ -25,8 +24,8 @@ Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Node.
 > Node tampil pada posisi baru di antara saudara kandungnya.
 
 <!--
-  * [TODO] Langkah mengikuti asumsi di halaman Menambahkan (Edit pada Node ➜ ubah Order ➜ Update). Mohon konfirmasi label field dan tombol.
-  * [TODO] Saya mengasumsikan Order lebih kecil tampil lebih dulu (kiri pada mode horizontal, atas pada mode vertikal, sesuai arah tampilan). Mohon konfirmasi.
+  * [DONE] Langkah mengikuti asumsi di halaman Menambahkan (Edit pada Node ➜ ubah Order ➜ Update). Mohon konfirmasi label field dan tombol.
+  * [DONE] Saya mengasumsikan Order lebih kecil tampil lebih dulu (kiri pada mode horizontal, atas pada mode vertikal, sesuai arah tampilan). Mohon konfirmasi.
 -->
 
 ## Aturan Order
@@ -50,7 +49,8 @@ Ulangi langkah [[#Langkah Mengubah Urutan|mengubah urutan]] untuk setiap baris t
 
 <!--
   * [TODO] Cara menukar posisi lewat Order perantara adalah konsekuensi aturan unik Order di antara saudara kandung. Bila Phoenix menyediakan cara lain (misalnya *drag and drop* atau Order otomatis bergeser), mohon beri tahu agar bagian ini diganti.
-  * [TODO] Nama contoh (Elektronik, Komputer, Ponsel) adalah nama generik. Sesuaikan dengan gambar Anda.
+    Jawaban : Ya bisa juga dengan drag and drop pada ikon :: disebelah kiri node.
+  * [DONE] Nama contoh (Elektronik, Komputer, Ponsel) adalah nama generik. Sesuaikan dengan gambar Anda.
 -->
 
 >**note** Hak akses dan Event

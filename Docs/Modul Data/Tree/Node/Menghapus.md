@@ -28,9 +28,10 @@ Menghapus [[Docs/Tipe Data/Node|Node]] berarti membuangnya dari [[Docs/Modul Dat
 > Menghapus Node pada Tree non-merger dapat memengaruhi Node hasil *clone* di Tree merger.
 
 <!--
-  * [TODO] Menu konteks Node (node-menu.png) tidak memiliki Delete. Saya mengasumsikan penghapusan lewat Edit pada Node induk ➜ bagian Children ➜ Delete ➜ konfirmasi Delete. Mohon konfirmasi langkah sebenarnya, termasuk apakah perlu menekan Update setelahnya.
-  * [TODO] Perilaku "ditolak bila sedang digunakan" saya ambil dari Delete Node Block (ada opsi Force di Flow). Mohon konfirmasi apakah antarmuka menyediakan hapus paksa dan bagaimana pesan penolakannya.
+  * [DONE] Menu konteks Node (node-menu.png) tidak memiliki Delete. Saya mengasumsikan penghapusan lewat Edit pada Node induk ➜ bagian Children ➜ Delete ➜ konfirmasi Delete. Mohon konfirmasi langkah sebenarnya, termasuk apakah perlu menekan Update setelahnya.
+  * [DONE] Perilaku "ditolak bila sedang digunakan" saya ambil dari Delete Node Block (ada opsi Force di Flow). Mohon konfirmasi apakah antarmuka menyediakan hapus paksa dan bagaimana pesan penolakannya.
   * [TODO] Mohon konfirmasi dampak pada Node hasil clone di Tree merger (ikut terhapus, terputus, atau tetap ada).
+    Jawaban: Penambahan atau Penghapusan pada node clone di Tree merger tidak dapat mempengaruhi Tree sumber.
 -->
 
 >**note** Hak akses dan Event

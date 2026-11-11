@@ -23,7 +23,7 @@ Berikut adalah aksi yang bisa dilakukan untuk mengelolanya dalam halaman kerja T
 
 ## Menu Konteks Node
 
-![[Docs/Modul Data/Tree/node-menu.png]]
+![[Docs/Modul Data/Tree/Node/tree-context.png]]
 Klik kanan pada Node untuk membuka menu konteks berikut.
 
 | Menu | Fungsi |
