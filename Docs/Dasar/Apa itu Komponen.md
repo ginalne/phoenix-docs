@@ -28,7 +28,7 @@ Anda membangun sistem dengan menggabungkan komponen. Data disimpan di satu kompo
 | [[Docs/Antarmuka#Halaman Kerja|Halaman Kerja]] | Antarmuka kerja sebuah komponen. |
 | [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]] | Tempat Anda membuat dan membuka komponen. |
 | [[Docs/Tipe Data/Query|Query]] | Cara komponen Interface mengambil dan menampilkan data dari komponen lain. |
-| [[Docs/Dasar/Apa itu Event|Event]] | Cara data yang berubah memicu Flow. |
+| [[Docs/Event/Apa itu Event|Event]] | Cara data yang berubah memicu Flow. |
 | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] | Komponen yang mengatur akses ke komponen lain. |
 
 ## Modul dan Komponen di Phoenix
@@ -238,17 +238,11 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
 | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] | Flow Block dan riwayat Activity. | Flow Block Action yang sudah digunakan komponen lain terputus. |
 | [[Docs/Modul Developer/Group/Apa itu Group|Group]] | Daftar Workspace pada Group. | Group anak ikut terhapus dan Group tidak boleh masih memiliki pengguna. |
 | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] | Pengaturan akses Workspace. | Pemetaan pada Group terputus, tetapi komponen dan data tidak terhapus. Workspace *root* terakhir yang terhubung ke Group tidak dapat dihapus. |
-| [[Docs/Modul Developer/Model/Apa itu Model|Model]] | Seluruh data yang tersimpan di Model, yaitu konfigurasi aset 3D beserta animasi dan logikanya. | - |
+| [[Docs/Modul Developer/Model/Apa itu Model|Model]] | Seluruh data yang tersimpan di Model, yaitu konfigurasi aset 3D beserta animasi dan logikanya. | Space Object yang memakai Model ini ikut terdampak. |
 | [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] | Tidak dapat dihapus. | Komponen unik per Pro. |
 
 >**danger** Penghapusan komponen tidak dapat dikembalikan
 > Saat ini komponen yang sudah dihapus tidak dapat dipulihkan. Pastikan komponen dan isinya memang sudah tidak dibutuhkan sebelum menghapus.
-
-<!--
-
-  * [TODO] Mohon konfirmasi apakah Space Object yang memakai sebuah Model ikut terdampak saat Model dihapus, agar kolom Catatan pada baris Model dapat diisi.
-
--->
 
 ## Jelajahi Lebih Lanjut
 
@@ -258,7 +252,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
 | Menata komponen dalam struktur | [[Docs/Dasar/Apa itu Folder|Folder]] |
 | Mengenali bagian layar Phoenix | [[Docs/Antarmuka|Antarmuka]] |
 | Memahami jenis data yang dipakai komponen | [[Docs/Tipe Data/Pengenalan|Tipe Data]] dan [[Docs/Format Data/Pengenalan|Format Data]] |
-| Menghubungkan data dengan otomasi | [[Docs/Dasar/Apa itu Event|Event]] dan [[Docs/Event/Menghubungkan Event|Menghubungkan Event]] |
+| Menghubungkan data dengan otomasi | [[Docs/Event/Apa itu Event|Event]] dan [[Docs/Event/Menghubungkan Event|Menghubungkan Event]] |
 | Mengatur tampilan komponen | [[Docs/Styling/Styling Class|Styling Class]] |
 | Mengatur akses ke komponen | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dan [[Docs/Modul Developer/Group/Apa itu Group|Group]] |
 

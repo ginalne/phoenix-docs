@@ -84,7 +84,7 @@ Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder at
 | Memahami unit penyusun sistem | [[Docs/Dasar/Apa itu Komponen|Komponen]] |
 | Menyimpan data | Modul [[Docs/Modul Data/Pengenalan|Data]] |
 | Menampilkan dan mengelola data | Modul [[Docs/Modul Interface/Pengenalan|Interface]] |
-| Mengotomasi proses | Modul [[Docs/Modul Logic/Pengenalan|Logic]] dan [[Docs/Dasar/Apa itu Event|Event]] |
+| Mengotomasi proses | Modul [[Docs/Modul Logic/Pengenalan|Logic]] dan [[Docs/Event/Apa itu Event|Event]] |
 | Mengatur tim dan hak akses | Modul [[Docs/Modul Developer/Pengenalan|Developer]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] |
 | Mengenali bagian layar Phoenix | [[Docs/Antarmuka|Antarmuka]] |
 | Memahami jenis data yang dipakai komponen | [[Docs/Tipe Data/Pengenalan|Tipe Data]] |

@@ -86,7 +86,7 @@ Penjelasan lengkap area ini ada di [[Docs/Antarmuka#Area Manajemen Folder|Antarm
 | Membuat folder | Klik kanan ➜ [[^field/add|New Folder]]. |
 | Mengubah nama folder | Klik kanan folder ➜ [[^field/rename|Rename]]. |
 | Menghapus folder atau komponen | Klik kanan folder atau komponen ➜ [[^button/delete|Delete]]. |
-| Memindahkan folder atau komponen | Nyalakan toggle [[^field|Move]] di bagian atas Area Manajemen Folder, lalu *drag and drop*. |
+| Memindahkan folder atau komponen | Nyalakan toggle [[^field/move]] di bagian atas Area Manajemen Folder, lalu *drag and drop*. |
 | Berpindah Workspace | Klik tombol berisi nama Workspace aktif, lalu pilih Workspace pada popup. |
 
 ## Membuat Folder
@@ -114,9 +114,11 @@ Anda dapat memindahkan folder atau komponen ke folder lain, atau hanya mengubah 
 
 ### Memindahkan di Area Manajemen Folder
 
-1. Nyalakan toggle [[^field|Move]] di bagian atas [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Nyalakan toggle [[^field/move]] di bagian atas [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Tekan dan tahan folder atau komponen yang ingin dipindahkan
 3. Seret ke folder tujuan atau ke posisi baru, lalu lepaskan
+
+Untuk memindahkan ke folder *root*, seret komponen atau folder ke barisan di level *root* (menyisipkan di antara komponen atau folder yang sudah ada), atau ke bagian kosong, biasanya di bagian bawah Area Manajemen Folder.
 
 ### Memindahkan di Halaman Kerja Workspace
 
@@ -138,12 +140,6 @@ Anda dapat memindahkan folder atau komponen ke folder lain, atau hanya mengubah 
 >**warning** Izin memindahkan sama dengan izin menghapus
 > Anggota yang boleh memindahkan komponen ke folder lain juga boleh menghapus komponen itu karena pemindahan memerlukan [[^field|Delete]]. Berikan hak akses ini dengan hati-hati. Selengkapnya lihat [[Docs/Modul Developer/Workspace/Component Access#Memindahkan Folder atau Komponen|Memindahkan Folder atau Komponen]].
 
-<!--
-
-  * [TODO] Mohon konfirmasi cara memindahkan folder atau komponen ke folder *root* (apakah menyeret ke area kosong atau cara lain), serta apakah toggle Move perlu dimatikan kembali setelah memindahkan.
-  * [TODO] Toggle Move ditulis sementara dengan `[[^field|Move]]` karena konvensi `[[^toggle/<icon>]]` belum memiliki ikon move. Mohon tentukan penulisan yang benar.
-
--->
 
 ## Menghapus Folder
 
@@ -154,11 +150,8 @@ Anda dapat memindahkan folder atau komponen ke folder lain, atau hanya mengubah 
 >**warning** Periksa isi folder sebelum menghapus
 > Menghapus folder dapat memengaruhi seluruh isinya, yaitu komponen dan folder di dalamnya. Komponen yang hilang membawa datanya dan dapat memutus relasi dari komponen lain. Pindahkan komponen yang masih dibutuhkan ke folder lain terlebih dahulu. Dampak penghapusan tiap komponen ada di [[Docs/Dasar/Apa itu Komponen#Menghapus Komponen|Menghapus Komponen]].
 
-<!--
-
-  * [TODO] Penghapusan komponen saat ini tidak dapat dikembalikan. Mohon konfirmasi apakah penghapusan folder beserta isinya juga tidak dapat dikembalikan, agar callout dapat ditingkatkan menjadi danger.
-
--->
+>**danger** Penghapusan folder tidak dapat dikembalikan
+> Folder yang sudah dihapus beserta isinya tidak dapat dipulihkan. Pastikan folder dan seluruh isinya memang sudah tidak dibutuhkan sebelum menghapus.
 
 ## Merancang Struktur Folder
 
@@ -202,12 +195,6 @@ Pro
 
 Folder bersama menampung komponen yang dipakai banyak area, seperti [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] dan [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] untuk kategori. Komponen Variable otomatis berada di *root* saat Pro dimulai dan boleh dipindahkan ke folder bersama.
 
-<!--
-
-  * [TODO] Pola Penataan dan Kerangka yang Direkomendasikan adalah saran saya, bukan fakta produk. Mohon tinjau pola, nama folder "Bersama", dan apakah ada rekomendasi struktur yang lebih tepat menurut Anda.
-
--->
-
 ## Praktik Terbaik
 
 - Beri nama yang jelas karena [[^field|Name]] komponen tidak boleh sama dengan komponen sejenis di folder yang sama.
@@ -225,15 +212,16 @@ Folder bersama menampung komponen yang dipakai banyak area, seperti [[Docs/Modul
 - Memindahkan ke folder lain memerlukan [[^field|Delete]] pada yang dipindahkan dan [[^field|Add]] pada folder tujuan, sedangkan mengubah urutan di folder yang sama tidak memerlukan keduanya.
 - Pemindahan mengubah struktur folder [[Docs/Dasar/Apa itu Pro|Pro]], bukan hanya tampilan halaman kerja, tetapi tidak memutus relasi komponen dengan komponen lain.
 - Komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] boleh dipindahkan ke folder lain, tetapi tidak dapat ditambah, diduplikasi, atau dihapus.
+- Penghapusan folder beserta isinya tidak dapat dikembalikan.
 
 ## TL:DR
 
 - Folder adalah penata di dalam [[Docs/Dasar/Apa itu Pro|Pro]] yang berisi [[Docs/Dasar/Apa itu Komponen|Komponen]] dan folder lain secara bertingkat, dan tidak menyimpan data.
 - Folder dikelola di [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]]: dibuat dengan [[^field/add|New Folder]] dan diubah namanya dengan [[^field/rename|Rename]].
 - Komponen tanpa folder tujuan berada di folder *root*.
-- Folder dan komponen dipindahkan dengan *drag and drop* setelah toggle [[^field|Move]] dinyalakan, atau di halaman kerja Workspace, dan relasinya tetap terhubung.
+- Folder dan komponen dipindahkan dengan *drag and drop* setelah toggle [[^field/move]] dinyalakan, atau di halaman kerja Workspace, dan relasinya tetap terhubung.
 - [[Docs/Modul Developer/Workspace/Component Access|Component Access]] mengatur Visible, Add, Update, dan Delete pada folder, dan Visible tidak berjenjang.
-- Izin memindahkan ke folder lain sama dengan izin menghapus, jadi berikan dengan hati-hati.
+- Izin memindahkan ke folder lain sama dengan izin menghapus, dan penghapusan folder beserta isinya tidak dapat dikembalikan.
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
@@ -245,8 +233,10 @@ Folder bersama menampung komponen yang dipakai banyak area, seperti [[Docs/Modul
 > **Dapatkah komponen ditempatkan di luar folder?**
 > Komponen tanpa folder tujuan, yaitu [[Docs/Dasar/Apa itu Komponen#Membuat Komponen|Directory]] yang dikosongkan, berada di folder *root*.
 > **Mengapa saya tidak dapat memindahkan komponen ke folder lain?**
-> Pastikan toggle [[^field|Move]] di Area Manajemen Folder sudah menyala. Pemindahan juga memerlukan [[^field|Delete]] pada komponen yang dipindahkan dan [[^field|Add]] pada folder tujuan. Periksa [[Docs/Modul Developer/Workspace/Component Access|Component Access]] pada Workspace Anda.
+> Pastikan toggle [[^field/move]] di Area Manajemen Folder sudah menyala. Pemindahan juga memerlukan [[^field|Delete]] pada komponen yang dipindahkan dan [[^field|Add]] pada folder tujuan. Periksa [[Docs/Modul Developer/Workspace/Component Access|Component Access]] pada Workspace Anda.
 > **Apakah memindahkan komponen memutus relasinya dengan komponen lain?**
 > Tidak. Komponen tetap terhubung, misalnya lewat Query atau Flow Block. Selengkapnya lihat [[#Memindahkan Folder dan Komponen]].
+> **Apakah folder yang sudah dihapus dapat dikembalikan?**
+> Tidak. Folder beserta isinya tidak dapat dipulihkan. Pindahkan komponen yang masih dibutuhkan ke folder lain sebelum menghapus. Langkahnya ada di [[#Menghapus Folder]].
 > **Bolehkah dua komponen sejenis memiliki nama yang sama?**
 > Tidak dalam folder yang sama. Aturan ini berlaku untuk komponen sejenis.
