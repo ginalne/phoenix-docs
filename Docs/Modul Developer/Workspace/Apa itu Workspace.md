@@ -126,7 +126,7 @@ Function Access mengatur fungsi tambahan pada komponen. Hak akses ini hanya ters
 | Hak Akses | Penjelasan |
 | --- | --- |
 | [[^field|Merge]] | Mengizinkan penggabungan data. |
-| [[^field|Modify Event]] | Mengizinkan perubahan [[Docs/Event/Apa itu Event|Event]] pada komponen. |
+| [[^field|Modify Event]] | Mengizinkan perubahan [[Docs/Dasar/Apa itu Event|Event]] pada komponen. |
 | [[^field|View Publish]] | Hanya dapat melihat konfigurasi publikasi, misalnya menyalin atau membuka [[^field|Publish Link]], tanpa mengubah status publikasi. |
 | [[^field|Publish]] | Dapat memperbarui konfigurasi publikasi. |
 

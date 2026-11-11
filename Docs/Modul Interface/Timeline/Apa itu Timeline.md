@@ -32,7 +32,7 @@ Timeline memiliki dua jenis isi, yaitu [[#Mengelola Timeline Event|Timeline Even
 
 | Istilah | Penjelasan |
 | ------- | ---------- |
-| [[#Mengelola Timeline Event|Timeline Event]] | Pemicu [[Docs/Event/Apa itu Event|Event]] ke Flow Block Pulser pada waktu tertentu, dengan atau tanpa pengulangan. |
+| [[#Mengelola Timeline Event|Timeline Event]] | Pemicu [[Docs/Dasar/Apa itu Event|Event]] ke Flow Block Pulser pada waktu tertentu, dengan atau tanpa pengulangan. |
 | [[#Mengelola Timeline Data|Timeline Data]] | Pembuka data sumber di sumbu waktu dengan bantuan Query. |
 | [[#Query Timeline Data|Query]] | Aturan pengambilan data sumber. Bagian Show menandai kolom yang dipakai sebagai Name, Start, dan End. |
 | [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] | Flow Block Event yang menerima pemicu dari Timeline Event. |

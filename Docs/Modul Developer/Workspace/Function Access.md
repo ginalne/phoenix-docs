@@ -10,7 +10,7 @@
 
 >**note** Function Access merupakan salah satu hak akses pada komponen [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dalam modul [[Docs/Modul Developer/Pengenalan|Developer]] di Phoenix.
 
-Function Access adalah hak akses pada Workspace yang mengatur fungsi tambahan pada komponen, yaitu menggabungkan data ([[^field|Merge]]), mengubah [[Docs/Event/Apa itu Event|Event]] ([[^field|Modify Event]]), serta melihat dan memperbarui konfigurasi publikasi ([[^field|View Publish]] dan [[^field|Publish]]).
+Function Access adalah hak akses pada Workspace yang mengatur fungsi tambahan pada komponen, yaitu menggabungkan data ([[^field|Merge]]), mengubah [[Docs/Dasar/Apa itu Event|Event]] ([[^field|Modify Event]]), serta melihat dan memperbarui konfigurasi publikasi ([[^field|View Publish]] dan [[^field|Publish]]).
 
 Berbeda dengan [[Docs/Modul Developer/Workspace/Component Access]] dan [[Docs/Modul Developer/Workspace/Data Access]], Function Access hanya tersedia pada komponen yang memiliki fungsi terkait. Ketika sebuah fungsi diatur [[^value/boolean/disallow]], tombol atau menu untuk fungsi tersebut hilang dari antarmuka komponen.
 
@@ -18,7 +18,7 @@ Berbeda dengan [[Docs/Modul Developer/Workspace/Component Access]] dan [[Docs/Mo
 
 - **Membatasi fungsi yang sensitif.** Fungsi seperti publikasi dan perubahan Event dapat dibatasi hanya untuk [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang bertanggung jawab.
 - **Memisahkan melihat dan mengubah.** [[^field|View Publish]] hanya mengizinkan menyalin atau membuka tautan, sedangkan [[^field|Publish]] mengizinkan perubahan konfigurasi.
-- **Menjaga alur otomasi.** Anggota tetap dapat bekerja dengan data tanpa dapat mengubah [[Docs/Event/Apa itu Event|Event]] yang terhubung ke [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
+- **Menjaga alur otomasi.** Anggota tetap dapat bekerja dengan data tanpa dapat mengubah [[Docs/Dasar/Apa itu Event|Event]] yang terhubung ke [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
 - **Antarmuka yang bersih.** Fungsi yang tidak diizinkan hilang dari antarmuka, sehingga anggota tidak mencoba aksi yang tidak dapat mereka lakukan.
 - **Mudah diperiksa.** Ikon kunci di samping nama komponen memperlihatkan hak akses yang diizinkan oleh Workspace.
 
@@ -28,7 +28,7 @@ Berbeda dengan [[Docs/Modul Developer/Workspace/Component Access]] dan [[Docs/Mo
 | --- | --- |
 | Function Access | Hak akses pada fungsi komponen: [[^field|Merge]], [[^field|Modify Event]], [[^field|View Publish]], [[^field|Publish]]. |
 | [[#Hak Akses Function Access|Merge]] | Hak akses untuk menggabungkan data pada komponen. |
-| [[#Hak Akses Function Access|Modify Event]] | Hak akses untuk mengubah [[Docs/Event/Apa itu Event|Event]] pada komponen. |
+| [[#Hak Akses Function Access|Modify Event]] | Hak akses untuk mengubah [[Docs/Dasar/Apa itu Event|Event]] pada komponen. |
 | [[#Publish dan View Publish|Publish]] | Hak akses untuk memperbarui konfigurasi publikasi komponen. |
 | [[#Publish dan View Publish|View Publish]] | Hak akses untuk hanya melihat konfigurasi publikasi, misalnya menyalin atau membuka [[^field|Publish Link]]. |
 | [[Docs/Modul Developer/Workspace/Component Access#Mengenali Ikon Kunci|Ikon kunci]] | Ikon di samping nama komponen yang menampilkan hak akses yang diizinkan oleh Workspace. |
@@ -63,7 +63,7 @@ Aturan penting:
 | Hak Akses | Penjelasan |
 | --- | --- |
 | [[^field|Merge]] | Mengizinkan penggabungan data. |
-| [[^field|Modify Event]] | Mengizinkan perubahan [[Docs/Event/Apa itu Event|Event]] pada komponen. |
+| [[^field|Modify Event]] | Mengizinkan perubahan [[Docs/Dasar/Apa itu Event|Event]] pada komponen. |
 | [[^field|View Publish]] | Hanya dapat melihat konfigurasi publikasi, misalnya menyalin atau membuka [[^field|Publish Link]], tanpa mengubah status publikasi. |
 | [[^field|Publish]] | Dapat memperbarui konfigurasi publikasi. |
 

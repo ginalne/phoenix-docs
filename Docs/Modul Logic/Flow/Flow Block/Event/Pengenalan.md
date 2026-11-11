@@ -46,5 +46,5 @@ Phoenix menyediakan lima Flow Block Event. Empat di antaranya terhubung dengan k
 ## Lihat Juga
 
 - [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]]
-- [[Docs/Event/Apa itu Event|Event]]
+- [[Docs/Dasar/Apa itu Event|Event]]
 - [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]

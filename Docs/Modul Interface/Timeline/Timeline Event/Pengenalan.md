@@ -8,7 +8,7 @@
 ---
 # Mengelola Timeline Event
 
-Timeline Event berfungsi untuk membuat *trigger* [[Docs/Event/Apa itu Event|Event]] ke Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]], dengan atau tanpa pengulangan. Timeline Event hanya memicu Pulser, sedangkan proses setelahnya diatur di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
+Timeline Event berfungsi untuk membuat *trigger* [[Docs/Dasar/Apa itu Event|Event]] ke Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]], dengan atau tanpa pengulangan. Timeline Event hanya memicu Pulser, sedangkan proses setelahnya diatur di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
 
 ## Atribut Timeline Event
 
