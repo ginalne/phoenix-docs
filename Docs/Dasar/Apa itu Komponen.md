@@ -1,12 +1,13 @@
 ---
-    status: draft
-    title: Apa itu Komponen?
-    description: Komponen adalah unit fungsional penyusun sistem di Phoenix yang dikelompokkan dalam empat modul dan ditempatkan di dalam folder.
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 1
+status: draft
+title: Apa itu Komponen?
+description: Komponen adalah unit fungsional penyusun sistem di Phoenix yang dikelompokkan dalam empat modul dan ditempatkan di dalam folder.
+pageDecoration:
+  icon: x
+  tree:
+    priority: 1
 ---
+
 # Apa itu Komponen?
 
 >**note** Komponen merupakan salah satu konsep dasar di Phoenix, bersama [[Docs/Dasar/Apa itu Pro|Pro]] dan [[Docs/Dasar/Apa itu Folder|Folder]]. Pro adalah wadahnya, Folder menatanya, dan Komponen menjadi isinya.
@@ -41,9 +42,9 @@ Modul [[Docs/Modul Data/Pengenalan|Data]] berisi komponen untuk menyimpan data.
 | Komponen | Fungsi | Data di dalamnya |
 | --- | --- | --- |
 | [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] | Menyimpan nilai bernama yang menjadi sumber kebenaran dan dapat dirujuk dari komponen mana pun. | [[Docs/Tipe Data/Variable|Variable Data]] |
-| [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] | Menyimpan deret data atau *Master Data* seperti pilihan, menu, opsi, dan kategori. | [[Docs/Tipe Data/EnumData|EnumData]] |
-| [[Docs/Modul Data/Table/Apa itu Table|Table]] | Menyimpan data kompleks, baik transaksional maupun generik. | [[Docs/Tipe Data/Column|Column]], [[Docs/Tipe Data/Row|Row]], dan [[Docs/Tipe Data/TableData|TableData]] |
-| [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] | Menyimpan data hierarki atau berbentuk pohon, cocok untuk data bercabang. | [[Docs/Tipe Data/Node|Node]] |
+| [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] | Menyimpan deret data atau *Master Data* seperti pilihan, menu, opsi, dan kategori. | [[Docs/Modul Data/Enum/Enum Data/Pengenalan|Enum Data]] |
+| [[Docs/Modul Data/Table/Apa itu Table|Table]] | Menyimpan data kompleks, baik transaksional maupun generik. | [[Docs/Tipe Data/Column|Column]] dan [[Docs/Modul Data/Table/Table Row/Pengenalan|Table Row]] |
+| [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] | Menyimpan data hierarki atau berbentuk pohon, cocok untuk data bercabang. | [[Docs/Modul Data/Tree/Node/Pengenalan|Tree Node]] |
 
 ### Modul Interface
 
@@ -75,20 +76,7 @@ Modul [[Docs/Modul Developer/Pengenalan|Developer]] berisi komponen untuk mengat
 | --- | --- | --- |
 | [[Docs/Modul Developer/Group/Apa itu Group|Group]] | Mengatur komposisi tim dan Workspace yang dapat diakses setiap anggota. | Group anak, pengguna, dan Workspace |
 | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] | Mengatur komponen yang dapat dilihat, dikelola, dan diubah, serta fungsi di dalamnya. | [[Docs/Modul Developer/Workspace/Component Access|Component Access]], [[Docs/Modul Developer/Workspace/Data Access|Data Access]], dan [[Docs/Modul Developer/Workspace/Function Access|Function Access]] |
-| [[Docs/Modul Developer/Model/Apa itu Model|Model]] | Menyiapkan model beserta atribut yang dipakai Object pada Space. | Atribut Model |
-
-<!--
-
-  * [TODO] Definisi Model pada tabel Modul Developer adalah kesimpulan saya dari knowledge Space (Object memakai komponen Model, daftar Key disiapkan di komponen Model) dan konvensi subhalaman Model (Binding, Animation, SFX). Belum ada definisi dari penulis. Mohon tulis definisi dan isi Model yang benar.
-    Jawaban: Gunakan asumsi anda saat ini (seadanya), definisi dan bagaimana halaman komponen Model yang lebih komperhensif ini akan saya buat dahulu.
-  * [TODO] Definisi Form pada tabel Modul Interface saya simpulkan dari knowledge (binding ke Table dan Column, setiap pengisian menambah Row baru, dapat dipublikasikan). Mohon sesuaikan dengan definisi resmi Form.
-    Jawaban: sudah betul
-  * [TODO] Kolom "Data di dalamnya" untuk Interface dan Logic mengikuti rumus tautan `Docs/Modul <Modul>/<Komponen>/<Nama>/Pengenalan` pada konvensi. Knowledge Space dan Timeline sempat menyebut isi ditulis lengkap di halaman komponen dengan anchor, sehingga mohon sesuaikan path-nya bila diperlukan.
-    Jawaban: Pakai konvensi sebagai data terakhir yang benar, komponen anchor dan lain-lain perlu diragukan. (jika tidak ada konfirmasi dari konvesi tautan tolong hapus)
-  * [TODO] Daftar komponen Interface saya ambil dari knowledge: Table View, Gallery, Kanban, Timeline, Canvas, Space, dan Form. Gantt hanya saya temukan sebagai widget Canvas sehingga tidak saya masukkan. Mohon konfirmasi bahwa daftar ini lengkap.
-    Jawaban: oke, interface Gantt memang belum ada. sudah oke.
-
--->
+| [[Docs/Modul Developer/Model/Apa itu Model|Model]] | Menyimpan konfigurasi aset 3D beserta animasi dan logikanya yang dipakai Object pada Space. | Konfigurasi aset 3D, animasi, dan logika |
 
 ## Cara Kerja
 
@@ -126,7 +114,7 @@ flowchart TB
 
 ### Data dalam Komponen
 
-Setiap komponen mengelola isinya sendiri. Isi tersebut disebut data dalam komponen, misalnya Row pada Table, EnumData pada Enum, Node pada Tree, Flow Block pada Flow, dan Elemen pada Form. Data dikelola di halaman kerja komponen dan diatur aksesnya lewat [[Docs/Modul Developer/Workspace/Data Access|Data Access]]. Jenis data yang dipakai komponen dijelaskan di [[Docs/Tipe Data/Pengenalan|Tipe Data]].
+Setiap komponen mengelola isinya sendiri. Isi tersebut disebut data dalam komponen, misalnya [[Docs/Tipe Data/Row|Row]] pada Table, [[Docs/Tipe Data/EnumData|EnumData]] pada Enum, [[Docs/Tipe Data/Node|Node]] pada Tree, [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada Flow, dan [[Docs/Modul Interface/Form/Elemen/Pengenalan|Elemen Form]] pada Form. Data dikelola di halaman kerja komponen dan diatur aksesnya lewat [[Docs/Modul Developer/Workspace/Data Access|Data Access]]. Jenis data yang dipakai komponen dijelaskan di [[Docs/Tipe Data/Pengenalan|Tipe Data]].
 
 ### Komponen Unik
 
@@ -138,7 +126,7 @@ Akses ke komponen diatur oleh Workspace dalam tiga lapis.
 
 | Akses | Yang diatur | Contoh |
 | --- | --- | --- |
-| [[Docs/Modul Developer/Workspace/Component Access|Component Access]] | Komponen tampil, ditambah, diubah, dan dihapus. | Komponen yang [[^field|Visible]]-nya [[^value/boolean/disallow]] tidak tampil di Area Manajemen Folder dan tidak dapat dipilih pada *field* Query. |
+| [[Docs/Modul Developer/Workspace/Component Access|Component Access]] | Komponen tampil, diubah, dan dihapus, serta penambahan komponen ke dalam folder. | Komponen yang [[^field|Visible]]-nya [[^value/boolean/disallow]] tidak tampil di Area Manajemen Folder dan tidak dapat dipilih pada *field* Query. |
 | [[Docs/Modul Developer/Workspace/Data Access|Data Access]] | Penambahan, perubahan, dan penghapusan data di dalam komponen. | Row Table hanya dapat diubah bila Data Access Table mengizinkan. |
 | [[Docs/Modul Developer/Workspace/Function Access|Function Access]] | Fungsi khusus komponen. | Merge pada Table dan Enum, Event pada Table, Enum, Tree, dan Timeline Event, serta Publish pada Table, Tree, Canvas, dan Form. |
 
@@ -151,12 +139,6 @@ Komponen yang sebagian aksesnya dinonaktifkan menampilkan [[Docs/Modul Developer
 
 ![[Docs/Dasar/anatomi-komponen.png|Halaman kerja komponen berisi bilah navigasi di bagian atas dan area kerja di bagian bawah]]
 
-<!--
-
-  * [DONE] Sisipkan screenshot halaman kerja komponen dengan nama file `anatomi-komponen.png` di folder `Docs/Dasar/`. Gunakan satu komponen yang bilah navigasinya lengkap (misalnya Table). Anotasi yang disarankan: (1) ikon komponen dan Header Name, (2) tombol Edit, (3) tombol Merge, Publish, dan Event, (4) tombol Refresh, (5) kolom pencarian, (6) area kerja.
-
--->
-
 Setiap komponen memiliki [[Docs/Antarmuka#Halaman Kerja|halaman kerja]] dengan pola serupa: [[Docs/Antarmuka#Bilah Navigasi|bilah navigasi]] di bagian atas dan area kerja di bagian bawah.
 
 ### Bilah navigasi komponen terdiri dari:
@@ -166,23 +148,16 @@ Setiap komponen memiliki [[Docs/Antarmuka#Halaman Kerja|halaman kerja]] dengan p
 | Ikon komponen dan [[^field|Header Name]] | Menampilkan jenis dan nama komponen yang sedang dibuka. | Semua komponen |
 | [[^button/edit|Edit]] | Mengubah atribut komponen, seperti [[^field|Name]] dan [[^field|Description]]. | Semua komponen kecuali [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan halaman kerja. | Semua komponen |
-| [[^field|Search ... Data...]] | Mencari data di dalam komponen. Label dan cakupannya menyesuaikan komponen. | Sebagian besar komponen |
+| [[^field|Search ... Data...]] | Mencari data di dalam komponen. Label mengikuti pola `Search <Nama Komponen> Data...` dan cakupan pencarian menyesuaikan komponen. | Sebagian besar komponen |
 | [[^button/merge|Merge]] | Menggabungkan data. | [[Docs/Modul Data/Table/Merge|Table]] dan [[Docs/Modul Data/Enum/Merge|Enum]] |
 | [[^button/publish|Publish]] | Mempublikasikan komponen lewat tautan. | [[Docs/Modul Data/Table/Publish|Table]], [[Docs/Modul Data/Tree/Publish|Tree]], [[Docs/Modul Interface/Canvas/Mempublikasi|Canvas]], dan [[Docs/Modul Interface/Form/Mempublikasi|Form]] |
-| [[^button/event|Event]] | Menghubungkan perubahan data ke Flow Block Event. | [[Docs/Modul Data/Table/Event|Table]], [[Docs/Modul Data/Enum/Event|Enum]], [[Docs/Modul Data/Tree/Event|Tree]], dan [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]] |
-| [[^button/submission|Submission]] | Membuka bilik submission untuk memantau proses. | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] |
+| [[^button/event|Event]] | Menghubungkan perubahan data ke Flow Block Event. | [[Docs/Modul Data/Table/Mengotomasi|Table]], [[Docs/Modul Data/Enum/Mengotomasi|Enum]], [[Docs/Modul Data/Tree/Mengotomasi|Tree]], dan [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]] |
+| [[^button/submission|Submission]] | Membuka bilik submission untuk memantau proses pada Flow, atau daftar pengisian pada Form. | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dan [[Docs/Modul Interface/Form/Submission|Form]] |
 
 >**note** Perbedaan tombol antarkomponen
 > Tombol pada bilah navigasi bergantung pada komponennya dan pada [[Docs/Modul Developer/Workspace/Function Access|Function Access]] Workspace Anda. Tombol yang aksesnya dinonaktifkan tidak tampil. Pada Canvas dan Form, bilah navigasi juga memiliki tombol [[^button/save|Save]] dan pengalih mode [[^mode/view|View]] atau [[^mode/edit|Edit]], dan Edit Mode berbeda dengan tombol [[^button/edit|Edit]] untuk mengubah atribut.
 
 Sebagian besar komponen tidak memiliki perbedaan tampilan yang signifikan antara desktop dan mobile. Perbedaan yang ada dijelaskan di halaman komponennya.
-
-<!--
-
-  * [TODO] Tabel bilah navigasi saya susun dari knowledge setiap komponen. Mohon konfirmasi: (1) apakah label kolom pencarian selalu mengikuti pola "Search <Nama> Data...", (2) apakah tombol Submission juga ada pada komponen Form, dan (3) apakah ada tombol lain yang berlaku lintas komponen.
-    Jawaban: (1) Ya. (2) Ya (3) Saat ini tidak ada.
-
--->
 
 ## Membuat Komponen
 
@@ -212,14 +187,8 @@ Beberapa komponen memiliki isian tambahan saat dibuat.
 >**note** Komponen unik tidak dapat ditambahkan
 > Komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] dibuat otomatis saat Pro dimulai sehingga tidak tersedia pada menu [[^field/add|Add]].
 
-<!--
-
-  * [TODO] Label modul pada menu Add saya tulis `Data`. Mohon konfirmasi label persis pada aplikasi (Data, Interface, Logic, Developer).
-    Jawaban: Ya betul
-  * [TODO] Tabel isian tambahan hanya memuat komponen yang isiannya sudah terkonfirmasi di knowledge. Mohon lengkapi untuk komponen lain bila diperlukan.
-    Jawaban: oke
-
--->
+>**note** Group memiliki jalur pembuatan lain
+> Group anak juga dapat dibuat dari halaman kerja [[Docs/Modul Developer/Group/Apa itu Group|Group]] lewat tombol Add Group. Group anak tersebut tidak otomatis menjadi komponen di folder. Gunakan [[^field|Place to Directory]] untuk menempatkannya ke Area Manajemen Folder.
 
 ## Mengubah Komponen
 
@@ -260,24 +229,24 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
 | [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] | Seluruh EnumData. | Relasi dari komponen lain harus dihapus terlebih dahulu. |
 | [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] | Seluruh Node. | Relasi dari komponen lain, seperti Column Table yang memakai Node dan Flow Block Tree Node Event, terputus. Node *clone* pada Tree merger dapat terdampak. |
 | [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] | Query dan konfigurasi Data. | Row pada data sumber tidak terhapus dan komponen lain tidak terpengaruh. |
-| [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] | Kanban dan template kartunya. | Row pada Table sumber tidak terhapus. |
 | [[Docs/Modul Interface/Gallery/Apa itu Gallery|Gallery]] | Gallery dan template kartunya. | Row pada Table sumber tidak terhapus. |
+| [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] | Kanban dan template kartunya. | Row pada Table sumber tidak terhapus. |
+| [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] | Konfigurasi Timeline. | Data sumber tetap aman. |
 | [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] | Template dan properti, termasuk Query. | Data sumber aman, tetapi tautan yang sudah dibagikan menjadi tidak valid. |
 | [[Docs/Modul Interface/Space/Apa itu Space|Space]] | Seluruh data dan konfigurasi Space, termasuk file 3D Environment. | Row sumber tidak terhapus. |
 | [[Docs/Modul Interface/Form/Apa itu Form|Form]] | Templat Form dan riwayat Submission. | Data yang sudah tersimpan tidak langsung terhapus, tautan publish menjadi tidak valid, dan pengisi yang sedang mengisi akan mengalami error saat mengirim. |
 | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] | Flow Block dan riwayat Activity. | Flow Block Action yang sudah digunakan komponen lain terputus. |
 | [[Docs/Modul Developer/Group/Apa itu Group|Group]] | Daftar Workspace pada Group. | Group anak ikut terhapus dan Group tidak boleh masih memiliki pengguna. |
 | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] | Pengaturan akses Workspace. | Pemetaan pada Group terputus, tetapi komponen dan data tidak terhapus. Workspace *root* terakhir yang terhubung ke Group tidak dapat dihapus. |
+| [[Docs/Modul Developer/Model/Apa itu Model|Model]] | Seluruh data yang tersimpan di Model, yaitu konfigurasi aset 3D beserta animasi dan logikanya. | - |
 | [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] | Tidak dapat dihapus. | Komponen unik per Pro. |
+
+>**danger** Penghapusan komponen tidak dapat dikembalikan
+> Saat ini komponen yang sudah dihapus tidak dapat dipulihkan. Pastikan komponen dan isinya memang sudah tidak dibutuhkan sebelum menghapus.
 
 <!--
 
-  * [TODO] Dampak penghapusan Timeline dan Model belum ada di knowledge sehingga tidak masuk tabel. Mohon lengkapi.
-    Jawaban: Menghapus Timeline sama saja seperti interface lain, hanya konfigurasi yang hilang. data sumber tetap aman. Sedangkan Model adalah komponen kompleks yang menyimpan konfigurasi aset 3D berserta animasi dan logika nya, menghapus komponen ini artinya berdampak pada menghapus semua data yang sudah disimpan.
-  * [TODO] Dampak Kanban dan Gallery (Row sumber tidak terhapus) masih asumsi yang tidak dikoreksi penulis. Mohon konfirmasi.
-    Jawaban: Ya row sumber tidak terhapus
-  * [TODO] Mohon konfirmasi apakah penghapusan komponen dapat dikembalikan. Saat ini tidak saya tulis sebagai callout danger.
-    Jawaban: Saat ini tidak.
+  * [TODO] Mohon konfirmasi apakah Space Object yang memakai sebuah Model ikut terdampak saat Model dihapus, agar kolom Catatan pada baris Model dapat diisi.
 
 -->
 
@@ -293,32 +262,11 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
 | Mengatur tampilan komponen | [[Docs/Styling/Styling Class|Styling Class]] |
 | Mengatur akses ke komponen | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dan [[Docs/Modul Developer/Group/Apa itu Group|Group]] |
 
-<!--
-
-  * [TODO] Halaman yang diusulkan belum ada dan perlu dibuat atau disesuaikan path-nya:
-    - `Docs/Modul Data/Pengenalan`, `Docs/Modul Interface/Pengenalan`, `Docs/Modul Logic/Pengenalan`, `Docs/Modul Developer/Pengenalan`: pintu masuk setiap modul.
-    - `Docs/Modul Developer/Model/Apa itu Model`: halaman komponen Model.
-    - `Docs/Tipe Data/Pengenalan` dan `Docs/Format Data/Pengenalan`: pintu masuk daftar Tipe Data dan Format Data.
-    - `Docs/Modul Interface/Timeline/Timeline Data/Pengenalan`, `Docs/Modul Interface/Space/Weather/Pengenalan`, `Docs/Modul Interface/Space/Environment/Pengenalan`, `Docs/Modul Interface/Space/Object/Pengenalan`, `Docs/Modul Interface/Canvas/Template/Pengenalan`, `Docs/Modul Interface/Canvas/Widget/Pengenalan`, `Docs/Modul Interface/Form/Elemen/Pengenalan`, `Docs/Modul Interface/Table View/Table View Data/Pengenalan`: halaman data dalam komponen.
-    - `Docs/Modul Interface/Canvas/Mempublikasi` dan `Docs/Modul Interface/Form/Mempublikasi`: halaman Publish untuk Canvas dan Form.
-      Jawaban: halaman yang anda usulkan sudah ada dan sesuai dengan tautan konvensi.
-
--->
-
-<!--
-
-  * [DONE] Nama komponen pada Contoh Penggunaan adalah nama generik buatan saya (Formulir Permintaan, Permintaan Layanan, Status Permintaan, Pantau Permintaan, Notifikasi Permintaan Baru). Mohon sesuaikan bila ada contoh yang lebih mewakili.
-  * [DONE] Skenario mengasumsikan pengiriman Form yang menambah Row memicu Table Row Event dengan event create, dan pelanggan dapat mengisi Form lewat tautan publish tanpa akun. Mohon konfirmasi kedua hal tersebut.
-  * [DONE] Path HTTP Request memakai `Modular/HTTP Request` sesuai aturan Contoh Penggunaan, sedangkan konvensi tautan menulis `Modular/API/HTTP Request` dengan alias "HTTP Request API Block". Mohon konfirmasi path dan alias yang benar.
-    Jawaban: Tidak perlu ada Contoh Penggunaan, biarkan contoh berada pada penjelasan rinci masing-masing komponen
-
--->
-
 ## Praktik Terbaik
 
 - Pilih komponen **sesuai peran**: simpan data di modul [[Docs/Modul Data/Pengenalan|Data]], tampilkan lewat modul [[Docs/Modul Interface/Pengenalan|Interface]], dan otomasi lewat modul [[Docs/Modul Logic/Pengenalan|Logic]].
 - Beri [[^field|Name]] dan [[^field|Description]] yang jelas karena nama komponen tidak boleh sama dengan komponen sejenis di folder yang sama.
-- Tinjau **dampak penghapusan** pada [[#Menghapus Komponen]] dan hapus relasi dari komponen lain terlebih dahulu bila diperlukan, misalnya pada Enum.
+- Tinjau **dampak penghapusan** pada [[#Menghapus Komponen]] sebelum menghapus, karena penghapusan tidak dapat dikembalikan. Hapus relasi dari komponen lain terlebih dahulu bila diperlukan, misalnya pada Enum.
 - Atur [[Docs/Modul Developer/Workspace/Component Access|Component Access]], [[Docs/Modul Developer/Workspace/Data Access|Data Access]], dan [[Docs/Modul Developer/Workspace/Function Access|Function Access]] bersamaan agar anggota hanya mendapat akses yang dibutuhkan.
 - Perlakukan komponen yang dapat dipublikasikan, yaitu Table, Tree, Canvas, dan Form, sebagai **terbuka untuk publik** setelah [[^button/publish|Publish]] diaktifkan.
 
@@ -327,7 +275,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
 - Komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] bersifat unik per Pro: tidak dapat ditambah, diduplikasi, atau dihapus, tetapi boleh dipindahkan ke folder lain.
 - Tombol [[^button/merge|Merge]], [[^button/publish|Publish]], dan [[^button/event|Event]] hanya ada pada komponen tertentu dan diatur oleh [[Docs/Modul Developer/Workspace/Function Access|Function Access]].
 - Baris dan isi sel pada komponen Interface hanya dapat dikelola bila Data `editable` dan [[Docs/Modul Developer/Workspace/Data Access|Data Access]] data sumber mengizinkan.
-- Dampak [[#Menghapus Komponen|penghapusan]] berbeda pada setiap komponen dan dapat memutus relasi dari komponen lain.
+- Dampak [[#Menghapus Komponen|penghapusan]] berbeda pada setiap komponen dan dapat memutus relasi dari komponen lain. Komponen yang dihapus tidak dapat dikembalikan.
 - Pada Canvas dan Form, [[^button/refresh|Refresh]] dapat membuang perubahan yang belum tersimpan dan tidak dapat dilakukan saat penyimpanan berjalan.
 - Tautan [[^button/publish|Publish]] dapat dibuka publik, dan pengisi Form serta pengunjung tautan publik tidak dibatasi Workspace.
 
@@ -338,7 +286,7 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
 - Komponen saling terhubung: Interface membaca Data lewat Query, Data memicu Logic lewat Event, dan Logic mengubah Data lewat Flow Block ([[#Komponen Saling Terhubung]]).
 - Halaman kerja komponen memiliki pola serupa, yaitu bilah navigasi dan area kerja ([[#Antarmuka Komponen]]).
 - Komponen dibuat dengan [[^button|Create]], diubah dengan [[^button/edit|Edit]] lalu [[^button|Update]], dan dihapus dengan [[^button/delete|Delete]] ([[#Membuat Komponen]]).
-- Dampak penghapusan berbeda pada setiap komponen, dan Variable tidak dapat dihapus ([[#Menghapus Komponen]]).
+- Dampak penghapusan berbeda pada setiap komponen, penghapusan tidak dapat dikembalikan, dan Variable tidak dapat dihapus ([[#Menghapus Komponen]]).
 
 ## FAQ : Pertanyaan yang Sering Diajukan
 
@@ -353,5 +301,9 @@ Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
 > Tombol tersebut hanya ada pada komponen tertentu, dan akan hilang bila [[Docs/Modul Developer/Workspace/Function Access|Function Access]] Workspace Anda dinonaktifkan.
 > **Mengapa ada ikon kunci di samping judul komponen?**
 > Ikon itu menandakan sebagian hak akses komponen dinonaktifkan oleh Workspace Anda. Arahkan kursor ke ikon untuk melihat hak akses yang diizinkan. Selengkapnya lihat [[Docs/Modul Developer/Workspace/Component Access#Mengenali Ikon Kunci|Mengenali Ikon Kunci]].
+> **Apakah komponen yang sudah dihapus dapat dikembalikan?**
+> Tidak. Saat ini penghapusan komponen tidak dapat dikembalikan. Periksa [[#Menghapus Komponen|dampak penghapusannya]] sebelum menghapus.
+> **Apakah memindahkan komponen ke folder lain memutus relasinya?**
+> Tidak. Komponen tetap terhubung dengan komponen lain. Selengkapnya lihat [[Docs/Dasar/Apa itu Folder#Memindahkan Folder dan Komponen|Memindahkan Folder dan Komponen]].
 > **Dapatkah saya menambah komponen Variable lagi?**
 > Tidak. [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] adalah [[#Komponen Unik|komponen unik]] yang hanya ada satu per Pro.
