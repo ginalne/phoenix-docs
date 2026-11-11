@@ -4,7 +4,7 @@
     description: 
     pageDecoration:
       tree:
-        priority: 4
+        priority: 10
 ---
 # Tree Node
 
