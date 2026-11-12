@@ -1,11 +1,10 @@
 ---
-status: draft
-title: Mengubah Nama Node
-description: Cara mengubah Name Node pada Tree tanpa memindahkan posisinya.
-pageDecoration:
-  icon: x
-  tree:
-    priority: 8
+    status: release
+    title: Mengubah Nama Node
+    description: Cara mengubah Name Node pada Tree tanpa memindahkan posisinya.
+    pageDecoration:
+      tree:
+        priority: 8
 ---
 # Mengubah Nama Node
 
