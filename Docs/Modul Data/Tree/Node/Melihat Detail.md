@@ -1,13 +1,10 @@
 ---
     status: release
-    title: "Melihat Detail Node"
-    description: 
-status: draft
-title: Melihat Detail Node
-description: Cara membuka detail Node untuk melihat atributnya tanpa mengubah data.
-pageDecoration:
-  tree:
-    priority: 6
+    title: Melihat Detail Node
+    description: Cara membuka detail Node untuk melihat atributnya tanpa mengubah data.
+    pageDecoration:
+      tree:
+        priority: 6
 ---
 # Melihat Detail Node
 
