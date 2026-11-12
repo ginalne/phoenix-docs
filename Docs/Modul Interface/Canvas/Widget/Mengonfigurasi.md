@@ -22,7 +22,7 @@ Panel untuk mengatur ukuran, *padding*, *margin*, dan beberapa *styling* Elemen.
 | Bagian | Fungsi |
 | --- | --- |
 | [[^field|min.]] layout | Ukuran persentase minimum Elemen terhadap layar. |
-| [[^field/resize]] | Kontrol tambahan terkait ukuran atau tampilan pengaturan dimensi. |
+| [[^toggle/resize]] | Kontrol tambahan terkait ukuran atau tampilan pengaturan dimensi. |
 | [[^field|padding]] | Mengatur jarak di bagian dalam Elemen, yaitu antara batas Elemen dan kontennya. |
 | [[^field|margin]] | Mengatur jarak di luar Elemen, yaitu ruang antara Elemen tersebut dan Elemen lain di sekitarnya. |
 

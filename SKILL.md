@@ -112,8 +112,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 | Nilai Contoh bertipedata | `[[^value/<Tipe>|<Nama atau Nilai>]]`|boolean, color, column, complex, date, datetime, datetimezone, enum, enumdata, expression, file, matrices, month, monthyear, node, number, object, query, row, string, table, tabledata, text, thing, time, tree, variable, year |`[[^value/enumdata|Menunggu]]`|
 | Toggle mode pada bilah navigasi | `[[^mode/view|View]]` dan `[[^mode/edit|Edit]]`, satu baris per mode, deskripsi menjelaskan fungsi saklar saat mode itu tampil | - | `[[^mode/view|View]]` |
 | Menu konteks Elemen | `[[^field/copy|Copy Layout Style]]`, `[[^field/paste|Paste Layout Style]]`, `[[^field/up|Move Back]]`, `[[^field/down|Move Next]]` | - | `[[^field/up|Move Back]]` |
-| Kontrol ukuran | `[[^field/resize]]` | Layout Panel | `[[^field/resize]]` |
-| Tombol toggle | `[[^toggle/<icon>]]` | 123, search (kaca pembesar) |`[[^toggle/123]]`| 
+| Tombol toggle | `[[^toggle/<icon>]]` | 123, search (kaca pembesar), resize |`[[^toggle/123]]`| 
 | Nilai pilihan tetap dan perintah ketik ditulis dalam kode inline, bukan wikilink |`` `right` ``, `` `/chart` ``|-|-|
 | Kaidah Query | `[[Docs/Query/Output/<kaidah>|<kaidah> Output]]` | Single, Series, Multi Series, Table | `[[Docs/Query/Output/Series|Series Output]]`|
 | Label input dalam Flow Block | `[[^input|<Label>]]` | Nama label dalam input antarmuka Flow Block | `[[^output|Conflict Name]]`|
