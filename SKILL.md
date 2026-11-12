@@ -62,7 +62,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 | Pengelolaan Enum Data | `[[Docs/Modul Data/Enum/Enum Data/<Halaman>}]]` | Menambahkan, Mengubah, Menggabungkan, Menghapus | `[[Docs/Modul Data/Enum/Enum Data/Pengenalan]]` |
 | Subhalaman Komponen Table | `[[Docs/Modul Data/Table/<Sub Halaman>]]` | Cara Kerja, Membuat Baru, Mengubah, Menghapus, Antarmuka, Mengimpor, Mengotomasi, Row Form, Contoh Penggunaan, FAQ | `[[Docs/Modul Data/Table/Cara Kerja]]` |
 | Pengelolaan Table Row | `[[Docs/Modul Data/Table/Table Row/<Halaman>}]]` | Menambahkan, Mengubah, Menggabungkan, Menghapus | `[[Docs/Modul Data/Table/Table Row/Pengenalan]]` |
-| Halaman Pengelolaan Node | `[[Docs/Modul Data/Tree/Node/<Halaman>]]` | Menambahkan, Mengubah Nama, Mengubah Urutan, Menghapus, Melihat Detail, Mengatur Tampilan, Mengekspor, Mengimpor | `[[Docs/Modul Data/Tree/Node/Menambahkan]]` |
+| Halaman Pengelolaan Node | `[[Docs/Modul Data/Tree/Node/<Halaman>]]` | Menambahkan, Mengubah Nama, Mengubah Urutan, Menghapus, Melihat Detail, Mengatur Tampilan, Mengekspor, Mengimpor, Format Import dan Export | `[[Docs/Modul Data/Tree/Node/Menambahkan]]` |
 | Subhalaman Komponen Canvas | `[[Docs/Modul Interface/Canvas/<Sub Halaman>]]` | Cara Kerja, Membuat Baru, Mengubah, Menghapus, Antarmuka, Binding, Layout, Mempublikasi, Hak Akses, Contoh Penggunaan, FAQ | `[[Docs/Modul Interface/Canvas/Cara Kerja]]` |
 | Halaman Umum Canvas Widget | `[[Docs/Modul Interface/Canvas/Widget/<Halaman>}]]` | Menambahkan, Menghapus, Mengonfigurasi | `[[Docs/Modul Data/Canvas/Template/Pengenalan]]` |
 | Widget Canvas | `[[Docs/Modul Interface/Canvas/Widget/<Grup>/<Nama>|Widget <Alias>` | Basic : Button (Button), Text (Text). Chart : Bar (Chart Bar), Line (Chart Line), Linear (Chart Linear), Pie (Chart Pie), Radial (Chart Radial). Interface : Gallery (Gallery), Gantt (Gantt), Kanban (Kanban), Space (Space), Table (Table), Timeline (Timeline) | `[[Docs/Modul Interface/Form/Widget/Chart/Pie|Widget Chart Pie]]` |
@@ -355,6 +355,7 @@ Sumber: delapan halaman `Docs/Modul Data/Tree/Node/<Halaman>`. Penulis meminta h
 - **Aksi yang tidak ada di menu konteks.** Bila menu konteks tidak memuat aksi (misalnya Add dan Delete pada Node), asumsikan aksi lewat Edit pada Node induk dan tandai TODO. Penulis mengonfirmasi asumsi ini benar.
 - **Label tombol mengikuti antarmuka.** Penulis mengganti `Add` menjadi `Add Children` pada langkah menambahkan Node dari Tree lain.
 - **Pesan Error.** Bila penulis meminta pesan kesalahan diasumsikan, tulis teksnya sebagai `[[^field|<teks pesan>]]` tanpa TODO karena sistem akan mengikuti.
+- **Tipe JSON bukan tipe data Phoenix.** Pada halaman yang menjelaskan atribut file JSON (contoh: Format Import dan Export), kolom Tipe ditulis polos (Number, String, Array) tanpa tautan ke `Docs/Tipe Data`. Nama atribut tetap ditautkan dengan `[[^field|...]]`.
 - **TODO yang sudah dijawab dihapus.** Bagian yang belum terjawab atau jawabannya hanya menjawab sebagian dibiarkan sebagai TODO baru yang menyebut bagian yang belum terjawab.
 
 
