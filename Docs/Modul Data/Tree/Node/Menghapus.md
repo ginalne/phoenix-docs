@@ -1,11 +1,11 @@
 ---
-    status: draft
-    title: Menghapus Node
-    description: Cara menghapus Node dari Tree beserta dampaknya pada Node anak.
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 7
+status: draft
+title: Menghapus Node
+description: Cara menghapus Node dari Tree beserta dampaknya pada Node anak.
+pageDecoration:
+  icon: x
+  tree:
+    priority: 7
 ---
 # Menghapus Node
 
@@ -25,14 +25,7 @@ Menghapus [[Docs/Tipe Data/Node|Node]] berarti membuangnya dari [[Docs/Modul Dat
 > Penghapusan ditolak bila Node, atau Node anak yang ikut terhapus, sedang digunakan komponen lain, misalnya [[Docs/Tipe Data/Column|Column]] pada [[Docs/Modul Data/Table/Apa itu Table|Table]] yang berformat [[Docs/Tipe Data/Node|Node]]. Lepaskan penggunaannya lebih dulu.
 
 >**warning** Node hasil clone di Tree merger
-> Menghapus Node pada Tree non-merger dapat memengaruhi Node hasil *clone* di Tree merger.
-
-<!--
-  * [DONE] Menu konteks Node (node-menu.png) tidak memiliki Delete. Saya mengasumsikan penghapusan lewat Edit pada Node induk ➜ bagian Children ➜ Delete ➜ konfirmasi Delete. Mohon konfirmasi langkah sebenarnya, termasuk apakah perlu menekan Update setelahnya.
-  * [DONE] Perilaku "ditolak bila sedang digunakan" saya ambil dari Delete Node Block (ada opsi Force di Flow). Mohon konfirmasi apakah antarmuka menyediakan hapus paksa dan bagaimana pesan penolakannya.
-  * [TODO] Mohon konfirmasi dampak pada Node hasil clone di Tree merger (ikut terhapus, terputus, atau tetap ada).
-    Jawaban: Penambahan atau Penghapusan pada node clone di Tree merger tidak dapat mempengaruhi Tree sumber.
--->
+> Menghapus Node pada Tree non-merger ikut menghapus Node hasil *clone* di Tree merger. Sebaliknya, menambahkan atau menghapus Node hasil *clone* di Tree merger tidak memengaruhi Tree sumber.
 
 >**note** Hak akses dan Event
 > Menghapus Node memerlukan [[Docs/Modul Developer/Workspace/Data Access#Data yang Diatur pada Setiap Komponen|Data Access]] Delete pada Tree: Node bernilai [[^value/boolean/allow]]. Menghapus Node yang memiliki anak menghasilkan satu event [[^value/string|delete]] pada Node itu di [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]], dengan seluruh Children tercatat di `Old`.

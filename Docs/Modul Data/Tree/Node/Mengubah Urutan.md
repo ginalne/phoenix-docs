@@ -1,63 +1,43 @@
 ---
-    status: draft
-    title: Mengubah Urutan Node
-    description: Cara mengubah Order Node untuk menentukan posisinya di antara saudara kandung.
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 8
+status: draft
+title: Mengubah Nama Node
+description: Cara mengubah Name Node pada Tree tanpa memindahkan posisinya.
+pageDecoration:
+  icon: x
+  tree:
+    priority: 8
 ---
-# Mengubah Urutan Node
+# Mengubah Nama Node
 
-[[^field|Order]] menentukan posisi [[Docs/Tipe Data/Node|Node]] di antara saudara kandungnya, yaitu Node lain dengan parent yang sama. Node dengan [[^field|Order]] lebih kecil tampil lebih dulu.
+Mengubah nama berarti mengganti [[^field|Name]] pada [[Docs/Tipe Data/Node|Node]] yang sudah ada tanpa memindahkan posisinya di [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]. Node Origin juga dapat diganti namanya.
 
-## Langkah Mengubah Urutan
+## Langkah Mengubah Nama
 
 1. Buka halaman kerja [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].
-2. Klik kanan [[Docs/Tipe Data/Node|Node]] yang akan diubah urutannya ➜ [[^field/edit|Edit]].
-3. Ubah [[^field|Order]].
+2. Klik kanan [[Docs/Tipe Data/Node|Node]] yang akan diganti namanya ➜ [[^field/edit|Edit]].
+3. Ubah [[^field|Name]].
 4. Klik [[^button|Update]].
 
 Anda dapat klik [[^button/x|Cancel]] untuk membatalkan perubahan Node.
 
->**success** Urutan Node berhasil diubah
-> Node tampil pada posisi baru di antara saudara kandungnya.
+>**success** Nama Node berhasil diubah
+> [[^field|Name]] baru langsung tampil pada Node di area kerja.
 
-<!--
-  * [DONE] Langkah mengikuti asumsi di halaman Menambahkan (Edit pada Node ➜ ubah Order ➜ Update). Mohon konfirmasi label field dan tombol.
-  * [DONE] Saya mengasumsikan Order lebih kecil tampil lebih dulu (kiri pada mode horizontal, atas pada mode vertikal, sesuai arah tampilan). Mohon konfirmasi.
--->
+Contoh: mengganti [[^field|Name]] [[^value/node|Aksesori]] menjadi [[^value/string|Aksesori Komputer]].
 
-## Aturan Order
+## Aturan Name
 
-- [[^field|Order]] berupa angka minimal [[^value/number|0]]. Nilai negatif tidak diterima.
-- [[^field|Order]] harus unik di antara saudara kandung. Karena itu, dua Node tidak dapat langsung bertukar posisi.
-- Mengubah [[^field|Order]] pada Origin tidak berpengaruh karena Origin selalu berada di titik pertama.
-- Mengubah [[^field|Order]] tidak memindahkan Node ke parent lain.
+[[^field|Name]] harus unik di antara saudara kandung, yaitu [[Docs/Tipe Data/Node|Node]] lain dengan parent yang sama. Node pada parent yang berbeda boleh memiliki Name yang sama. Menyimpan Node tanpa mengubah [[^field|Name]] bukan konflik.
 
-## Menukar Posisi Dua Node
+Bila [[^field|Name]] bentrok dengan saudara kandung, perubahan tidak tersimpan dan sistem menampilkan pesan Error [[^field|Name sudah digunakan oleh Node lain pada parent yang sama]].
 
-Gunakan [[^field|Order]] yang masih kosong sebagai perantara. Contoh: [[^value/node|Komputer]] ([[^field|Order]] [[^value/number|0]]) dan [[^value/node|Ponsel]] ([[^field|Order]] [[^value/number|1]]) berada di bawah [[^value/node|Elektronik]], dan Anda ingin [[^value/node|Ponsel]] berada di depan.
-
-| Langkah | Node | Order Sebelum | Order Sesudah |
-| ------- | ---- | ------------- | ------------- |
-| 1 | [[^value/node|Komputer]] | [[^value/number|0]] | [[^value/number|2]] |
-| 2 | [[^value/node|Ponsel]] | [[^value/number|1]] | [[^value/number|0]] |
-| 3 | [[^value/node|Komputer]] | [[^value/number|2]] | [[^value/number|1]] |
-
-Ulangi langkah [[#Langkah Mengubah Urutan|mengubah urutan]] untuk setiap baris tabel.
-
-<!--
-  * [TODO] Cara menukar posisi lewat Order perantara adalah konsekuensi aturan unik Order di antara saudara kandung. Bila Phoenix menyediakan cara lain (misalnya *drag and drop* atau Order otomatis bergeser), mohon beri tahu agar bagian ini diganti.
-    Jawaban : Ya bisa juga dengan drag and drop pada ikon :: disebelah kiri node.
-  * [DONE] Nama contoh (Elektronik, Komputer, Ponsel) adalah nama generik. Sesuaikan dengan gambar Anda.
--->
+>**warning** Node hasil clone di Tree merger
+> Bila Node berada di Tree non-merger dan sudah di-*clone* oleh Tree merger, perubahan [[^field|Name]] ikut diterapkan pada Node hasil *clone* yang mengikuti perubahan Node asal. Perubahan tidak ikut diterapkan bila [[^field|Name]] pada [[Docs/Modul Data/Tree/Konfigurasi External Read Only|External Read Only]] di Tree merger bernilai [[^value/radio|Active]].
 
 >**note** Hak akses dan Event
-> Mengubah [[^field|Order]] memerlukan [[Docs/Modul Developer/Workspace/Data Access#Data yang Diatur pada Setiap Komponen|Data Access]] Update pada Tree: Node bernilai [[^value/boolean/allow]]. Perubahan memicu event [[^value/string|update]] pada [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]], dan `Old` hanya berisi [[^field|Order]] sebelumnya.
+> Mengubah [[^field|Name]] memerlukan [[Docs/Modul Developer/Workspace/Data Access#Data yang Diatur pada Setiap Komponen|Data Access]] Update pada Tree: Node bernilai [[^value/boolean/allow]]. Perubahan memicu event [[^value/string|update]] pada [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]], dan `Old` hanya berisi [[^field|Name]] sebelumnya.
 
 ## Lihat Juga
 
-- [[Docs/Modul Data/Tree/Node/Mengubah Nama|Mengubah Nama Node]]
-- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]] untuk mengubah Order lewat Flow.
-- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]] untuk memindahkan Node ke parent lain lewat Flow.
+- [[Docs/Modul Data/Tree/Node/Mengubah Urutan|Mengubah Urutan Node]]
+- [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Setter|Node Setter Block]] untuk mengubah Name lewat Flow.

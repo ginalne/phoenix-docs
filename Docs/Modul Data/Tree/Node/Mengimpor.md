@@ -1,11 +1,11 @@
 ---
-    status: draft
-    title: Mengimpor Node
-    description: Cara mengimpor Node dari file ke Tree sebagai anak dari Node terpilih.
-    pageDecoration:
-      icon: x
-      tree:
-        priority: 3
+status: draft
+title: Mengimpor Node
+description: Cara mengimpor Node dari file ke Tree sebagai anak dari Node terpilih.
+pageDecoration:
+  icon: x
+  tree:
+    priority: 3
 ---
 # Mengimpor Node
 
@@ -21,22 +21,10 @@ Mengimpor menambahkan banyak [[Docs/Tipe Data/Node|Node]] sekaligus dari file, m
 >**success** Node berhasil diimpor
 > Node dari file tampil sebagai anak dari Node yang Anda pilih, lengkap dengan keturunannya.
 
-Pastikan isi file sesuai [[Docs/Modul Data/Tree/Node/Format Import dan Export|Format Import dan Export]].
-
-<!--
-  * [TODO] Langkah di atas tebakan karena belum ada screenshot dialog Import. Mohon konfirmasi alur sebenarnya (dialog, tombol upload, nama tombol konfirmasi) dan format file yang diterima.
-    Jawaban: Iya sudah betul.
-  * [TODO] Saya mengasumsikan Node hasil impor selalu menjadi Node baru (bukan clone), termasuk pada Tree merger. Mohon konfirmasi.
-    Jawaban: Iya Node baru.
--->
+Pastikan isi file sesuai [[Docs/Modul Data/Tree/Node/Format Import dan Export|Format Import dan Export]]. Node hasil impor selalu menjadi Node baru, bukan hasil *clone*.
 
 >**warning** Name dan Order yang bentrok
-> [[^field|Name]] dan [[^field|Order]] harus unik di antara saudara kandung. Bila Node dalam file bentrok dengan Node yang sudah ada di bawah induk yang sama, impor ditolak dan tidak ada Node yang ditambahkan.
-
-<!--
-  * [TODO] Perilaku saat bentrok saya asumsikan ditolak seluruhnya. Mohon konfirmasi apakah impor berhasil sebagian, Order otomatis bergeser, atau Name diberi akhiran.
-    Jawaban: Ditolak seluruhnya.
--->
+> [[^field|Name]] dan [[^field|Order]] harus unik di antara saudara kandung. Bila Node dalam file bentrok dengan Node yang sudah ada di bawah induk yang sama, impor ditolak seluruhnya dan tidak ada Node yang ditambahkan.
 
 >**note** Hak akses dan Event
 > Mengimpor memerlukan [[Docs/Modul Developer/Workspace/Data Access#Data yang Diatur pada Setiap Komponen|Data Access]] Add pada Tree: Node bernilai [[^value/boolean/allow]]. Setiap Node yang diimpor memicu event [[^value/string|create]] pada [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]].

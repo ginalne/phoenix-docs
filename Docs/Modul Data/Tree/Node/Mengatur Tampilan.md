@@ -1,11 +1,11 @@
 ---
-    status: draft
-    title: Mengatur Tampilan Node
-    description: Cara melipat, memperluas, menyembunyikan Node, dan mengganti arah tampilan Tree.
-    pageDecoration: 
-      icon: x
-      tree: 
-        priority: 5
+status: draft
+title: Mengatur Tampilan Node
+description: Cara melipat, memperluas, menyembunyikan Node, dan mengganti arah tampilan Tree.
+pageDecoration:
+  icon: x
+  tree:
+    priority: 5
 ---
 # Mengatur Tampilan Node
 
@@ -21,7 +21,7 @@ Untuk mengatur banyak Node sekaligus, klik kanan Node ➜ [[^field|View]], lalu 
 
 | Menu | Fungsi |
 | ---- | ------ |
-| [[^field|Collapse Below Level]] | Melipat keturunan pada level Node ini, berlaku untuk semua Node. |
+| [[^field|Collapse Below Level]] | Melipat keturunan pada level Node ini, berlaku untuk semua Node. Level Node ini menjadi tingkat terakhir yang tampil karena semua Node di bawahnya masuk dalam lipatan. |
 | [[^field|Expand Children Only]] | Memperluas hanya satu tingkat keturunan di bawah Node ini. |
 | [[^field|Collapse Descendant]] | Melipat seluruh keturunan Node ini secara rekursif. |
 | [[^field|Expand Descendant]] | Memperluas seluruh keturunan Node ini secara rekursif. |
@@ -38,12 +38,8 @@ Node yang dilipat dapat tetap terlihat sebagai penanda atau disembunyikan sepenu
 
 Semua menu di atas berada pada submenu [[^field|View]].
 
-<!--
-  * [TODO] Penjelasan Collapse Below Level masih mengikuti kalimat awal Anda ("melipat keturunan pada level Node ini, semua Node") dan terasa ambigu. Mohon beri contoh perilakunya agar kalimat bisa diperjelas.
-    Jawaban: melipat keturunan pada level Node yang dipilih, jadi generasi yang dipilih akan tampil sebagai yang keturunan terakhir dalam tampilan karena semua node dibawah generasi tersebut masuk dalam lipatan.
-  * [TODO] Mohon konfirmasi apakah "Node yang dilipat" pada Hide Collapsed berarti anak dari Node yang dilipat, dan apakah status lipat tersimpan atau kembali semula setelah Refresh.
-    Jawaban: Ya, menyembunyikan node yang dilipat. Status lipat tidak tersimpan dan akan kembali semua setelah Refresh.
--->
+>**note** Status lipat tidak disimpan
+> Status lipat dan sembunyi hanya berlaku selama halaman kerja terbuka. Klik [[^button/refresh|Refresh]] akan mengembalikan seluruh Node ke tampilan semula.
 
 ## Mengganti Arah Tampilan
 
@@ -61,12 +57,7 @@ Untuk mengganti arah saat itu juga, klik informasi mode di bagian bawah area ker
 
 ## Mencari Node
 
-Ketik [[^field|Name]] Node pada kolom [[^field|Search Tree Data...]] di bilah navigasi. Pencarian hanya mencocokkan [[^field|Name]] Node.
-
-<!--
-  * [TODO] Mohon jelaskan hasil pencarian di area kerja (Node disorot, tampilan berpindah ke Node, atau Node induk terbuka otomatis).
-    Jawaban: Node disorot dan tampilan berpindah ke Node.
--->
+Ketik [[^field|Name]] Node pada kolom [[^field|Search Tree Data...]] di bilah navigasi. Pencarian hanya mencocokkan [[^field|Name]] Node. Node yang cocok disorot dan tampilan berpindah ke Node tersebut.
 
 Cara menggeser tampilan, *zoom*, dan memusatkan koordinat dijelaskan di [[Docs/Modul Data/Tree/Apa itu Tree#Interaksi Antarmuka Tree|Interaksi Antarmuka Tree]].
 
