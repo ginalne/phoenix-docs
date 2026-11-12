@@ -1,13 +1,10 @@
 ---
     status: release
-    title: "Mengatur Tampilan Node"
-    description: 
-status: draft
-title: Mengatur Tampilan Node
-description: Cara melipat, memperluas, menyembunyikan Node, dan mengganti arah tampilan Tree.
-pageDecoration:
-  tree:
-    priority: 5
+    title: Mengatur Tampilan Node
+    description: Cara melipat, memperluas, menyembunyikan Node, dan mengganti arah tampilan Tree.
+    pageDecoration:
+      tree:
+        priority: 5
 ---
 # Mengatur Tampilan Node
 
