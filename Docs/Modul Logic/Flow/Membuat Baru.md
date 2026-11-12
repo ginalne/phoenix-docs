@@ -8,7 +8,7 @@
 ---
 # Membuat Flow
 
-1. Buka folder tempat Flow akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
+1. Buka folder tempat Flow akan ditempatkan di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Logic]] ➜ [[^field/flow|Flow]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Klik [[^button|Create]]

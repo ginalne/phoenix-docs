@@ -9,7 +9,7 @@
 # Membuat Table Baru
 
 ![[Docs/Modul Data/Table/add-table.png]]
-1. Buka folder tempat Table akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
+1. Buka folder tempat Table akan ditempatkan di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Data]] ➜ [[^field/table|Table]]
 3. Periksa [[^field|Directory]] yang terisi otomatis sesuai folder yang Anda klik kanan, atau pilih folder lain. Biarkan kosong untuk letak _root_.
 4. Isi [[^field|Name]] dan [[^field|Description]]

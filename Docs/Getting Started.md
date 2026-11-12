@@ -41,7 +41,7 @@ Jika anda malas mendengarkan saya menyombongkan diri tentang Phoenix, anda tingg
 
 [[Docs/Persyaratan]] : Pelajari persyaratan apa yang diperlukan untuk menggunakan Phoenix.
 
-[[Docs/Antarmuka/Pengenalan]] : Pelajari antar muka saat anda telah memasuki halaman Phoenix.
+[[Docs/Dasar/Antarmuka]] : Pelajari antar muka saat anda telah memasuki halaman Phoenix.
 
 ## Jelajahi Dokumentasi
 

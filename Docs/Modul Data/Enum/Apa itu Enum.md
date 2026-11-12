@@ -76,5 +76,5 @@ Anda juga dapat memperdalam tentang Tipe Data yang berhubungan dengan data yaitu
 - Setiap Enum berisi banyak [[Docs/Tipe Data/EnumData|EnumData]] dengan [[^field|Name]] unik.
 - Field berformat [[Docs/Tipe Data/EnumData]] hanya menampilkan baris dengan [[^field|Selectable]] bernilai [[^value/boolean/true]].
 - [[^field|Value]] mengikuti [[^field|Format]] Enum, dan [[^field|Header]] dipakai untuk [[^field|Format]] tertentu.
-- Kelola Enum lewat [[^button/edit|Edit]], [[^button/refresh|Refresh]], dan hapus dari [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]], serta kelola baris dengan [[^button/add|Add Row]].
+- Kelola Enum lewat [[^button/edit|Edit]], [[^button/refresh|Refresh]], dan hapus dari [[Docs/Dasar/Antarmuka#Area Manajemen Folder]], serta kelola baris dengan [[^button/add|Add Row]].
 - Hati-hati saat mengubah [[^field|Format]] dan menghapus Enum karena dapat menghilangkan data.

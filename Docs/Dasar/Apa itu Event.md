@@ -3,7 +3,7 @@
     pageDecoration:
       icon: zap
       tree:
-        priority: 1
+        priority: 17
 ---
 # Event
 

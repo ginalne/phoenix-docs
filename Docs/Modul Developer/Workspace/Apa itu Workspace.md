@@ -42,7 +42,7 @@ Aturan yang sama berlaku untuk komponen di modul [[Docs/Modul Data/Pengenalan|Da
 | [[#Cara Kerja Workspace|Root]] | Folder paling atas pada halaman kerja Workspace. Jika komponen Workspace ditempatkan di folder yang lebih dalam, folder itulah yang menjadi root. |
 | [[#Berpindah Workspace|Workspace aktif]] | Workspace yang sedang dipakai pengguna. Workspace aktif menentukan struktur folder dan hak akses yang berlaku, serta ditampilkan pada Area Manajemen Folder. |
 | [[Docs/Modul Developer/Group/Apa itu Group|Group]] | Kumpulan pengguna yang dipetakan ke Workspace. Pada halaman kerja, Group tampil sebagai baris dengan angka jumlah anggotanya. Setiap Pro memiliki Group bawaan bernama [[^field/group|Administrator]]. |
-| [[Docs/Folder/Apa itu Folder?|Folder]] | Wadah yang berisi banyak komponen dan dapat diperluas atau dilipat. |
+| [[Docs/Dasar/Apa itu Folder|Folder]] | Wadah yang berisi banyak komponen dan dapat diperluas atau dilipat. |
 | [[Docs/Dasar/Apa itu Komponen|Komponen]] | Isi folder yang hak aksesnya diatur oleh Workspace. Selengkapnya lihat [[Docs/Dasar/Apa itu Komponen]]. |
 | [[Docs/Modul Developer/Workspace/Component Access]] | Hak akses pada level komponen (header): [[^field|Visible]], [[^field|Add]], [[^field|Update]], [[^field|Delete]]. |
 | [[Docs/Modul Developer/Workspace/Data Access|Data Access]] | Hak akses pada level data: [[^field|Add]], [[^field|Update]], [[^field|Delete]]. |
@@ -80,7 +80,7 @@ Component Access berlaku pada level komponen (header). Hak akses ini mengatur ap
 
 | Hak Akses | Penjelasan |
 | --- | --- |
-| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, komponen tidak tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]] dan juga tidak tampil dalam *field*, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]. |
+| [[^field|Visible]] | Jika [[^value/boolean/disallow]] pada komponen, komponen tidak tampil di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]] dan juga tidak tampil dalam *field*, misalnya saat mengisi Query atau membuat komponen Interface. Jika [[^value/boolean/disallow]] pada folder, folder beserta isinya tidak tampil di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]. |
 | [[^field|Add]] | Mengizinkan penambahan folder atau komponen baru, termasuk menempatkan folder atau komponen dari folder lain. |
 | [[^field|Update]] | Mengizinkan perubahan atribut pada folder atau komponen. |
 | [[^field|Delete]] | Mengizinkan penghapusan folder atau komponen, termasuk memindahkan folder atau komponen ke folder lain. Pastikan folder tujuan mengizinkan [[^field|Component Access]] [[^field|Add]]. |

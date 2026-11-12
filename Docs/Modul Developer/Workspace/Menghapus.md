@@ -8,7 +8,7 @@
 ---
 # Menghapus Workspace
 
-1. Buka folder yang berisi Workspace di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
+1. Buka folder yang berisi Workspace di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan Workspace
 3. Pilih [[^button/delete|Delete]]
 4. Konfirmasi dengan [[^button|Delete]]

@@ -5,9 +5,8 @@ description: Folder adalah penata di dalam Pro yang mengelompokkan komponen dan 
 pageDecoration:
   icon: x
   tree:
-    priority: 2
+    priority: 19
 ---
-
 # Apa itu Folder?
 
 >**note** Folder merupakan salah satu konsep dasar di Phoenix, bersama [[Docs/Dasar/Apa itu Pro|Pro]] dan [[Docs/Dasar/Apa itu Komponen|Komponen]]. Folder menata komponen di dalam Pro dan dikelola di [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]].
@@ -83,117 +82,11 @@ Penjelasan lengkap area ini ada di [[Docs/Antarmuka#Area Manajemen Folder|Antarm
 | Memperluas atau melipat isi folder | Klik folder. |
 | Membuka halaman kerja komponen | Klik komponen. |
 | Menambahkan komponen | Klik kanan folder ➜ [[^field/add|Add]]. |
-| Membuat folder | Klik kanan ➜ [[^field/add|New Folder]]. |
-| Mengubah nama folder | Klik kanan folder ➜ [[^field/rename|Rename]]. |
-| Menghapus folder atau komponen | Klik kanan folder atau komponen ➜ [[^button/delete|Delete]]. |
-| Memindahkan folder atau komponen | Nyalakan toggle [[^field/move]] di bagian atas Area Manajemen Folder, lalu *drag and drop*. |
+| Membuat folder | Klik kanan ➜ [[^field/add|New Folder]], selengkapnya lihat [[Docs/Dasar/Membuat Folder]].
+| Mengubah nama folder | Klik kanan folder ➜ [[^field/rename|Rename]], selengkapnya lihat [[Docs/Dasar/Mengubah Nama Folder]] |
+| Menghapus folder atau komponen | Klik kanan folder atau komponen ➜ [[^button/delete|Delete]], selengkapnya lihat [[Docs/Dasar/Menghapus Folder]]. |
+| Memindahkan folder atau komponen | Nyalakan toggle [[^field/move]] di bagian atas Area Manajemen Folder, lalu *drag and drop*. Selengkapnya lihat [[Docs/Dasar/Memindahkan Komponen dan Folder]] |
 | Berpindah Workspace | Klik tombol berisi nama Workspace aktif, lalu pilih Workspace pada popup. |
-
-## Membuat Folder
-
-1. Buka folder tempat folder baru akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan ➜ [[^field/add|New Folder]]
-3. Isi [[^field|Name]]
-4. Klik [[^button|Create]]
-
->**success** Folder berhasil dibuat
-> Folder yang baru dibuat masih kosong. Tambahkan [[Docs/Dasar/Apa itu Komponen#Membuat Komponen|komponen]] atau folder lain di dalamnya.
-
-## Mengubah Nama Folder
-
-1. Buka folder yang berisi folder tersebut di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan folder ➜ [[^field/rename|Rename]]
-3. Ubah [[^field|Name]]
-4. Klik [[^button|Update]]
-
-Mengubah nama folder memerlukan hak akses [[^field|Update]] pada folder tersebut di [[Docs/Modul Developer/Workspace/Component Access|Component Access]].
-
-## Memindahkan Folder dan Komponen
-
-Anda dapat memindahkan folder atau komponen ke folder lain, atau hanya mengubah urutannya di folder yang sama, dengan *drag and drop*. Pemindahan dapat dilakukan di Area Manajemen Folder atau di halaman kerja [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].
-
-### Memindahkan di Area Manajemen Folder
-
-1. Nyalakan toggle [[^field/move]] di bagian atas [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Tekan dan tahan folder atau komponen yang ingin dipindahkan
-3. Seret ke folder tujuan atau ke posisi baru, lalu lepaskan
-
-Untuk memindahkan ke folder *root*, seret komponen atau folder ke barisan di level *root* (menyisipkan di antara komponen atau folder yang sudah ada), atau ke bagian kosong, biasanya di bagian bawah Area Manajemen Folder.
-
-### Memindahkan di Halaman Kerja Workspace
-
-1. Buka halaman kerja Workspace
-2. Tekan dan tahan folder atau komponen yang ingin dipindahkan di kolom kiri
-3. Seret ke folder tujuan atau ke posisi baru, lalu lepaskan
-
-| Tujuan | Hak akses yang dibutuhkan |
-| --- | --- |
-| Memindahkan ke folder lain | [[^field|Delete]] pada folder atau komponen yang dipindahkan dan [[^field|Add]] pada folder tujuan. |
-| Mengubah urutan di folder yang sama | Tidak memerlukan [[^field|Add]] maupun [[^field|Delete]]. |
-
->**note** Pemindahan mengubah struktur Pro
-> Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder atau komponen mengubah struktur folder [[Docs/Dasar/Apa itu Pro|Pro]], bukan hanya tampilan halaman kerja Workspace.
-
->**success** Relasi komponen tetap terhubung
-> Setelah dipindahkan, komponen tetap terhubung dengan komponen lain, misalnya lewat [[Docs/Tipe Data/Query|Query]] atau Flow Block. Anda dapat menata ulang struktur kapan saja tanpa memutus relasi.
-
->**warning** Izin memindahkan sama dengan izin menghapus
-> Anggota yang boleh memindahkan komponen ke folder lain juga boleh menghapus komponen itu karena pemindahan memerlukan [[^field|Delete]]. Berikan hak akses ini dengan hati-hati. Selengkapnya lihat [[Docs/Modul Developer/Workspace/Component Access#Memindahkan Folder atau Komponen|Memindahkan Folder atau Komponen]].
-
-
-## Menghapus Folder
-
-1. Buka folder yang berisi folder tersebut di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan folder ➜ [[^button/delete|Delete]]
-3. Konfirmasi dengan klik [[^button|Delete]]
-
->**warning** Periksa isi folder sebelum menghapus
-> Menghapus folder dapat memengaruhi seluruh isinya, yaitu komponen dan folder di dalamnya. Komponen yang hilang membawa datanya dan dapat memutus relasi dari komponen lain. Pindahkan komponen yang masih dibutuhkan ke folder lain terlebih dahulu. Dampak penghapusan tiap komponen ada di [[Docs/Dasar/Apa itu Komponen#Menghapus Komponen|Menghapus Komponen]].
-
->**danger** Penghapusan folder tidak dapat dikembalikan
-> Folder yang sudah dihapus beserta isinya tidak dapat dipulihkan. Pastikan folder dan seluruh isinya memang sudah tidak dibutuhkan sebelum menghapus.
-
-## Merancang Struktur Folder
-
-Tidak ada satu struktur yang paling benar, tetapi pola berikut membantu Anda memulai. Karena komponen yang dipindahkan tetap terhubung dengan komponen lain, Anda dapat menata ulang struktur kapan saja tanpa memutus relasi.
-
-### Langkah Merancang
-
-1. Petakan area kerja yang memakai [[Docs/Dasar/Apa itu Pro|Pro]], misalnya tim atau fungsi bisnis.
-2. Pilih satu pola penataan utama dari tabel di bawah.
-3. Tentukan batas akses: folder dan komponen mana yang harus tertutup bagi Workspace tertentu, lalu atur [[Docs/Modul Developer/Workspace/Component Access|Component Access]] sesuai struktur.
-4. Tetapkan penamaan yang konsisten untuk folder dan komponen.
-5. Tinjau struktur secara berkala dan tata ulang saat satu folder terasa terlalu ramai.
-
-### Pola Penataan
-
-| Pola | Cocok bila | Kerangka | Hal yang perlu diperhatikan |
-| --- | --- | --- | --- |
-| Per area bisnis | Beberapa fungsi, seperti penjualan dan keuangan, memakai Pro yang sama. | Satu folder per area berisi Table, Enum, Table View, Form, dan Flow area tersebut. | Komponen yang dipakai banyak area lebih mudah dikelola di folder bersama. |
-| Per tim | Setiap tim memiliki Workspace sendiri. | Satu folder per tim. | [[^field|Visible]] mudah diatur per folder, tetapi komponen yang harus tertutup perlu Visible [[^value/boolean/disallow]] tersendiri. |
-| Per sistem | Beberapa sistem terpisah dibangun dalam satu Pro. | Satu folder per sistem. | Nama komponen yang jelas membantu saat memilih komponen pada *field* dan [[Docs/Tipe Data/Query|Query]]. |
-| Per jenis komponen | Pro kecil dengan sedikit area. | Folder terpisah untuk data, tampilan, dan otomasi. | Saat Pro bertumbuh, komponen satu area tersebar di beberapa folder, sehingga pertimbangkan pola per area. |
-| Arsip | Ada komponen yang tidak dipakai lagi tetapi datanya masih disimpan. | Folder arsip. | Sembunyikan dari Workspace yang tidak membutuhkannya lewat Visible. |
-
-### Kerangka yang Direkomendasikan
-
-Nama dalam tanda `< >` hanya pengganti. Sesuaikan dengan area dan komponen di [[Docs/Dasar/Apa itu Pro|Pro]] Anda.
-
-```
-Pro
-├── Bersama
-│   ├── Variables (Variable)
-│   └── <Kategori> (Enum)
-├── <Area atau Tim A>
-│   ├── <Data> (Table)
-│   ├── <Tampilan> (Table View)
-│   ├── <Formulir> (Form)
-│   └── <Alur> (Flow)
-└── <Area atau Tim B>
-    └── ...
-```
-
-Folder bersama menampung komponen yang dipakai banyak area, seperti [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] dan [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] untuk kategori. Komponen Variable otomatis berada di *root* saat Pro dimulai dan boleh dipindahkan ke folder bersama.
 
 ## Praktik Terbaik
 
@@ -201,9 +94,6 @@ Folder bersama menampung komponen yang dipakai banyak area, seperti [[Docs/Modul
 - Jangan menjadikan [[^field|Visible]] pada folder sebagai satu-satunya pengaman. Atur juga Visible pada komponen yang harus tertutup, karena komponen dengan Visible [[^value/boolean/allow]] tetap muncul pada pilihan *field* dan [[Docs/Tipe Data/Query|Query]].
 - Berikan hak akses [[^field|Delete]] dan [[^field|Add]] dengan hati-hati karena keduanya memungkinkan pemindahan komponen, dan pemindahan sama dengan izin menghapus.
 - Rencanakan penataan sebelum memindahkan komponen [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] ke folder yang lebih dalam karena folder itu menjadi *root* bagi Workspace tersebut.
-
->**success** Mulai dari yang sederhana
-> Struktur dua tingkat, yaitu folder area bisnis lalu komponen di dalamnya, sudah cukup untuk sebagian besar [[Docs/Dasar/Apa itu Pro|Pro]]. Tambahkan tingkat berikutnya hanya ketika satu folder terasa terlalu ramai.
 
 ## Batasan dan Catatan
 

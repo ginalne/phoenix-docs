@@ -4,13 +4,13 @@
     description: 
     pageDecoration:
       tree:
-        priority: 47
+        priority: 10
 ---
 # Antarmuka
 
 Sebelum memulai tahap ini pastikan anda sudah memenuhi [[Docs/Persyaratan|syaratnya]].
 
-![[Docs/Antarmuka/antar-muka.png|Halaman Antarmuka Phoenix]]
+![[Docs/Dasar/antar-muka.png|Halaman Antarmuka Phoenix]]
 Setelah anda berhasil masuk ke dalam satu Pro, anda bisa mengakses beberapa fitur dari Phoenix secara langsung. 
 
 Berikut adalah beberapa bagian antarmuka ini:
@@ -21,7 +21,7 @@ Berikut adalah beberapa bagian antarmuka ini:
 
 ## Bilah Navigasi
 
-![[Docs/Antarmuka/bilah-navigasi.png|Bilah Navigasi Halaman Kerja Phoenix]]
+![[Docs/Dasar/bilah-navigasi.png|Bilah Navigasi Halaman Kerja Phoenix]]
 Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix dengan rincian seperti berikut:
 
 1. Logo Phoenix : informasi bentuk logo phoenix dan versi yang sedang berjalan
@@ -34,12 +34,12 @@ Bagian ini adalah berisi informasi dan kontrol utama untuk mengatur phoenix deng
 
 ## Area Manajemen Folder
 
-![[Docs/Antarmuka/area-manajemen-folder.png|Area Manajemen Folder dan Komponen Phoenix]]
+![[Docs/Dasar/area-manajemen-folder.png|Area Manajemen Folder dan Komponen Phoenix]]
 Bagian ini merupakan tempat Anda mengatur daftar [[Docs/Dasar/Apa itu Folder|Folder]] dan [[Docs/Dasar/Apa itu Komponen|Komponen]] dalam Phoenix dengan rincian seperti berikut:
 
 | Elemen | Nama | Penjelasan |
 | ---------- | --------- | ---------------- |
-| [[^field/workspace|Documentation]] | Pengenal Workspace | informasi [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang sedang dibuka saat ini serta tombol agar dapat mengganti ke Workspace lain. Selengkapnya lihat [[Docs/Antarmuka/Berpindah Workspace]]. |
+| [[^field/workspace|Documentation]] | Pengenal Workspace | informasi [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang sedang dibuka saat ini serta tombol agar dapat mengganti ke Workspace lain. Selengkapnya lihat [[Docs/Dasar/Berpindah Workspace]]. |
 | [[^button/nolabel/refresh]] | Tombol Penyegaran | tombol untuk menyegarkan (*refresh*) kembali daftar folder dan komponen. |
 | [[^toggle/move]] | Saklar Pemindahan | tombol saklar untuk mengubah mode pemindahan komponen secara drag & drop. |
 | [[^toggle/search]] | Saklar Pencarian | tombol saklar untuk menampilkan isian pencarian folder dan komponen |
@@ -47,7 +47,7 @@ Bagian ini merupakan tempat Anda mengatur daftar [[Docs/Dasar/Apa itu Folder|Fol
    
 ## Halaman Kerja
 
-![[Docs/Antarmuka/kolom-tab.png|Halaman Kerja Utama Phoenix]]
+![[Docs/Dasar/kolom-tab.png|Halaman Kerja Utama Phoenix]]
 Bagian ini merupakan tempat Anda mengerjakan dan mengelola data Anda melalui komponen yang sedang aktif rincian seperti berikut:
 
 1. Kolom Tab : bagian di bagian atas jendela yang menampilkan halaman kerja. Masing-masing tab dapat dipindahkan atau dihapus dengan konteks menu seperti berikut:

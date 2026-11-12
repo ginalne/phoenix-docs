@@ -5,7 +5,7 @@ description: Komponen adalah unit fungsional penyusun sistem di Phoenix yang dik
 pageDecoration:
   icon: x
   tree:
-    priority: 1
+    priority: 18
 ---
 
 # Apa itu Komponen?
@@ -135,98 +135,34 @@ Akses ke komponen diatur oleh Workspace dalam tiga lapis.
 
 Komponen yang sebagian aksesnya dinonaktifkan menampilkan [[Docs/Modul Developer/Workspace/Component Access#Mengenali Ikon Kunci|ikon kunci]] di samping judulnya.
 
-## Antarmuka Komponen
-
-![[Docs/Dasar/anatomi-komponen.png|Halaman kerja komponen berisi bilah navigasi di bagian atas dan area kerja di bagian bawah]]
-
-Setiap komponen memiliki [[Docs/Antarmuka#Halaman Kerja|halaman kerja]] dengan pola serupa: [[Docs/Antarmuka#Bilah Navigasi|bilah navigasi]] di bagian atas dan area kerja di bagian bawah.
-
-### Bilah navigasi komponen terdiri dari:
-
-| Tombol | Fungsi | Tersedia pada |
-| --- | --- | --- |
-| Ikon komponen dan [[^field|Header Name]] | Menampilkan jenis dan nama komponen yang sedang dibuka. | Semua komponen |
-| [[^button/edit|Edit]] | Mengubah atribut komponen, seperti [[^field|Name]] dan [[^field|Description]]. | Semua komponen kecuali [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] |
-| [[^button/refresh|Refresh]] | Memuat ulang tampilan halaman kerja. | Semua komponen |
-| [[^field|Search ... Data...]] | Mencari data di dalam komponen. Label mengikuti pola `Search <Nama Komponen> Data...` dan cakupan pencarian menyesuaikan komponen. | Sebagian besar komponen |
-| [[^button/merge|Merge]] | Menggabungkan data. | [[Docs/Modul Data/Table/Merge|Table]] dan [[Docs/Modul Data/Enum/Merge|Enum]] |
-| [[^button/publish|Publish]] | Mempublikasikan komponen lewat tautan. | [[Docs/Modul Data/Table/Publish|Table]], [[Docs/Modul Data/Tree/Publish|Tree]], [[Docs/Modul Interface/Canvas/Mempublikasi|Canvas]], dan [[Docs/Modul Interface/Form/Mempublikasi|Form]] |
-| [[^button/event|Event]] | Menghubungkan perubahan data ke Flow Block Event. | [[Docs/Modul Data/Table/Mengotomasi|Table]], [[Docs/Modul Data/Enum/Mengotomasi|Enum]], [[Docs/Modul Data/Tree/Mengotomasi|Tree]], dan [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]] |
-| [[^button/submission|Submission]] | Membuka bilik submission untuk memantau proses pada Flow, atau daftar pengisian pada Form. | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dan [[Docs/Modul Interface/Form/Submission|Form]] |
-
->**note** Perbedaan tombol antarkomponen
-> Tombol pada bilah navigasi bergantung pada komponennya dan pada [[Docs/Modul Developer/Workspace/Function Access|Function Access]] Workspace Anda. Tombol yang aksesnya dinonaktifkan tidak tampil. Pada Canvas dan Form, bilah navigasi juga memiliki tombol [[^button/save|Save]] dan pengalih mode [[^mode/view|View]] atau [[^mode/edit|Edit]], dan Edit Mode berbeda dengan tombol [[^button/edit|Edit]] untuk mengubah atribut.
-
-Sebagian besar komponen tidak memiliki perbedaan tampilan yang signifikan antara desktop dan mobile. Perbedaan yang ada dijelaskan di halaman komponennya.
-
 ## Membuat Komponen
 
-Semua komponen dibuat dengan cara yang sama dari Area Manajemen Folder. Contoh berikut membuat Table. Ganti pilihan modul dan komponen sesuai kebutuhan Anda.
+Berikut adalah tautan penjelasan cara membuat komponen:
 
-1. Buka folder tempat komponen akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Data]] ➜ [[^field/table|Table]]
-3. Isi [[^field|Name]] dan [[^field|Description]]
-4. Klik [[^button|Create]]
+*  [[Docs/Modul Data/Enum/Membuat Baru|Membuat Enum]]
+*  [[Docs/Modul Data/Table/Membuat Baru|Membuat Table]]
+*  [[Docs/Modul Data/Tree/Membuat Baru|Membuat Tree]]
+*  [[Docs/Modul Interface/Table View/Membuat Baru|Membuat Table View]]
+*  [[Docs/Modul Interface/Gallery/Membuat Baru|Membuat Gallery]]
+*  [[Docs/Modul Interface/Kanban/Membuat Baru|Membuat Kanban]]
+*  [[Docs/Modul Interface/Timeline/Membuat Baru|Membuat Timeline]]
+*  [[Docs/Modul Interface/Canvas/Membuat Baru|Membuat Canvas]]
+*  [[Docs/Modul Interface/Space/Membuat Baru|Membuat Space]]
+*  [[Docs/Modul Interface/Form/Membuat Baru|Membuat Form]]
+*  [[Docs/Modul Developer/Group/Membuat Baru|Membuat Group]]
+*  [[Docs/Modul Developer/Workspace/Membuat Baru|Membuat Workspace]]
+*  [[Docs/Modul Developer/Model/Membuat Baru|Membuat Model]]
 
->**success** Komponen berhasil dibuat
-> Komponen yang baru dibuat berada di folder tujuan dan belum memiliki data. Buka komponennya dari Area Manajemen Folder, lalu tambahkan data sesuai jenis komponen.
+>**note** Komponen Variable tidak dapat dibuat baru, diduplikasi ataupun dihapus.
 
-Pada dialog pembuatan, [[^field|Directory]] menentukan folder tujuan. Isinya terisi otomatis sesuai folder yang Anda klik kanan, dapat diganti, dan bila dikosongkan komponen berada di folder *root*.
+## Dampak Penghapusan Komponen
 
-Beberapa komponen memiliki isian tambahan saat dibuat.
-
-| Komponen | Isian tambahan |
-| --- | --- |
-| [[Docs/Modul Data/Table/Apa itu Table|Table]] | [[^field|Column]] (minimal satu), termasuk Alias, atau tombol [[^button/upload|Upload]] untuk membuat Table dari file. |
-| [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] | [[^field|Format]], [[^field|Header]], dan [[^field|Strict On Selected]]. |
-| [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] | [[^field|Merger Mode]], [[^field|External Read Only]], dan Default Configuration. |
-| [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] | [[^field|Table - Column]] (wajib, berformat [[Docs/Tipe Data/EnumData|EnumData]]). |
-| [[Docs/Modul Interface/Gallery/Apa itu Gallery|Gallery]] | [[^field|Table]] (wajib dan tidak dapat diubah) serta Filter bila dibutuhkan. |
-| [[Docs/Modul Developer/Group/Apa itu Group|Group]] | [[^field|Parent]] (wajib bila dibuat dari Area Manajemen Folder). |
-
->**note** Komponen unik tidak dapat ditambahkan
-> Komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] dibuat otomatis saat Pro dimulai sehingga tidak tersedia pada menu [[^field/add|Add]].
-
->**note** Group memiliki jalur pembuatan lain
-> Group anak juga dapat dibuat dari halaman kerja [[Docs/Modul Developer/Group/Apa itu Group|Group]] lewat tombol Add Group. Group anak tersebut tidak otomatis menjadi komponen di folder. Gunakan [[^field|Place to Directory]] untuk menempatkannya ke Area Manajemen Folder.
-
-## Mengubah Komponen
-
-1. Buka halaman kerja komponen
-2. Klik [[^button/edit|Edit]]
-3. Ubah [[^field|Name]] atau [[^field|Description]], serta atribut lain sesuai komponen
-4. Klik [[^button|Update]]
-
->**warning** Perubahan atribut dapat memengaruhi isi komponen
-> Pada komponen tertentu, perubahan atribut berdampak pada data atau konfigurasi turunan:
-> - [[Docs/Modul Data/Table/Apa itu Table|Table]]: mengubah Column atau Format yang berisiko menghilangkan data menampilkan peringatan dan dapat dilanjutkan dengan *force update*.
-> - [[Docs/Modul Data/Enum/Apa itu Enum|Enum]]: mengubah Format memerlukan [[^field|Force Update]] dengan mode *loss safe* atau *force*.
-> - [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]]: mengganti Table pada [[^field|Table - Column]] menghapus template kartu.
-> - [[Docs/Modul Data/Tree/Apa itu Tree|Tree]]: [[^field|Merger Mode]] tidak dapat diubah setelah Tree dibuat.
-> - [[Docs/Modul Interface/Gallery/Apa itu Gallery|Gallery]]: [[^field|Table]] tidak dapat diubah setelah Gallery dibuat.
-
-Komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] tidak memiliki tombol Edit karena header-nya tidak dapat diganti.
-
-## Menyegarkan Komponen
-
-Klik [[^button/refresh|Refresh]] untuk memuat ulang tampilan halaman kerja.
-
->**warning** Refresh dapat membuang perubahan yang belum tersimpan
-> Pada komponen yang memiliki tombol [[^button/save|Save]], seperti Canvas dan Form, tombol Save yang masih aktif berarti ada perubahan yang belum tersimpan. Klik Save sebelum Refresh. Refresh tidak dapat dilakukan saat penyimpanan sedang berjalan.
-
-## Menghapus Komponen
-
-1. Buka folder yang berisi komponen di [[Docs/Antarmuka#Area Manajemen Folder]]
-2. Klik kanan komponen ➜ [[^button/delete|Delete]]
-3. Konfirmasi dengan klik [[^button|Delete]]
-
->**warning** Dampak penghapusan berbeda pada setiap komponen
-> Menghapus komponen dapat menghilangkan isinya dan memutus relasi dari komponen lain. Periksa tabel berikut sebelum menghapus.
+Menghapus komponen dapat menghilangkan isinya dan memutus relasi dari komponen lain. Periksa tabel berikut sebelum menghapus.
 
 | Komponen | Yang ikut hilang | Catatan |
 | --- | --- | --- |
-| [[Docs/Modul Data/Table/Apa itu Table|Table]] | Seluruh Column, Row, dan TableData. | - |
 | [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] | Seluruh EnumData. | Relasi dari komponen lain harus dihapus terlebih dahulu. |
+| [[Docs/Modul Data/Table/Apa itu Table|Table]] | Seluruh Column, Row, dan TableData. | - |
 | [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] | Seluruh Node. | Relasi dari komponen lain, seperti Column Table yang memakai Node dan Flow Block Tree Node Event, terputus. Node *clone* pada Tree merger dapat terdampak. |
 | [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]] | Query dan konfigurasi Data. | Row pada data sumber tidak terhapus dan komponen lain tidak terpengaruh. |
 | [[Docs/Modul Interface/Gallery/Apa itu Gallery|Gallery]] | Gallery dan template kartunya. | Row pada Table sumber tidak terhapus. |

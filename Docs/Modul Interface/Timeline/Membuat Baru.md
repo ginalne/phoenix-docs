@@ -9,7 +9,7 @@
 # Membuat Table View Baru
 
 ![[Docs/Modul Interface/Timeline/add-timeline.png]]
-1. Buka folder tempat Timeline akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
+1. Buka folder tempat Timeline akan ditempatkan di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/timeline|Timeline]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Klik [[^button|Create]]

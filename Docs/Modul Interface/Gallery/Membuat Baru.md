@@ -9,7 +9,7 @@
 # Membuat Gallery Baru
 
 ![[Docs/Modul Interface/Gallery/add-gallery2.png]]
-1. Buka folder tempat Gallery akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
+1. Buka folder tempat Gallery akan ditempatkan di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Interface]] ➜ [[^field/gallery|Gallery]]
 3. Isi [[^field|Name]] dan [[^field|Description]]
 4. Pilih [[Docs/Tipe Data/Table]] pada [[^field|Table]]

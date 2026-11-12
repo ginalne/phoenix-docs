@@ -14,7 +14,7 @@ Berikut adalah pertanyaan yang sering diajukan pada komponen Workspace:
 >**Bagaimana pengguna dapat memakai Workspace?**
 >Pengguna harus dipetakan ke Workspace melalui komponen [[Docs/Modul Developer/Group/Apa itu Group|Group]]. Setelah itu, saat membuka Phoenix mereka akan masuk ke Workspace yang terakhir dipakai.
 >**Bagaimana cara berpindah Workspace?**
->Klik tombol yang berisi nama Workspace aktif di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]], lalu pilih Workspace tujuan pada popup yang muncul. Lihat [[#Berpindah Workspace]].
+>Klik tombol yang berisi nama Workspace aktif di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]], lalu pilih Workspace tujuan pada popup yang muncul. Lihat [[#Berpindah Workspace]].
 >**Workspace mana yang aktif saat saya membuka Phoenix?**
 >Workspace yang terakhir Anda pakai. Jika Workspace itu sudah tidak valid, Anda otomatis dipindahkan ke Workspace pertama pada daftar Workspace di Group.
 >**Apakah satu pengguna dapat berada di lebih dari satu Group?**

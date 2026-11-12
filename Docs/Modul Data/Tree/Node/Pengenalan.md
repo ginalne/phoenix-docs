@@ -28,10 +28,10 @@ Klik kanan pada Node untuk membuka menu konteks berikut.
 
 | Menu | Fungsi |
 | --- | --- |
-| [[^field/edit|Edit]] | Mengubah Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Mengubah Node]]. |
-| [[^field/eye|Detail]] | Melihat detail Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Melihat Detail Node]]. |
+| [[^field/edit|Edit]] | Mengubah Node. Lihat [[Docs/Modul Data/Tree/Node/Mengubah Urutan]] atau [[Docs/Modul Data/Tree/Node/Mengubah Nama]]. |
+| [[^field/eye|Detail]] | Melihat detail Node. Lihat [[Docs/Modul Data/Tree/Node/Melihat Detail]]. |
 | [[^field/collapse|Collapse]] atau [[^field/expand|Expand]] | Melipat atau memperluas keturunan selanjutnya dari Node. |
 | [[^field|View]] | Membuka submenu pengaturan tampilan keturunan Node (lihat tabel di bawah). |
-| [[^field/import|Import]] | Memasukkan data ke Node. Lihat [[Docs/Modul Data/Tree/Import Node]]. |
-| [[^field/export|Export]] | Mengeluarkan data dari Node. Lihat [[Docs/Modul Data/Tree/Mengelola Node#Export Node]]. |
+| [[^field/import|Import]] | Memasukkan data ke Node. Lihat [[Docs/Modul Data/Tree/Node/Mengimpor]]. |
+| [[^field/export|Export]] | Mengeluarkan data dari Node. Lihat [[Docs/Modul Data/Tree/Node/Mengekspor]]. |
 

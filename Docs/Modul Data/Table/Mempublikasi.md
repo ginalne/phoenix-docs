@@ -17,7 +17,7 @@ Membagikan Table memperlukan ijin akses [[^field|Component Access : Visible]] da
 ## Mengubah Konfigurasi Publish
 
 ![[Docs/Modul Data/Table/publish-table.png]]
-1. Buka halaman kerja Table di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
+1. Buka halaman kerja Table di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]
 2. Klik [[^button/edit|Publish]]
 2. Ubah status menjadi [[^value/boolean/Active]] untuk dipublikasi.
 3. Ubah status pada tabel menjadi [[^value/boolean/Active]] untuk mengijikan kolom dapat diisi.

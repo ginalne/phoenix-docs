@@ -9,7 +9,7 @@
 # Membuat Tree Baru
 
 ![[Docs/Modul Data/Tree/add-tree.png]]
-1. Buka folder tempat Tree akan ditempatkan di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
+1. Buka folder tempat Tree akan ditempatkan di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan ➜ [[^field/add|Add]] ➜ [[^field|Data]] ➜ [[^field/tree|Tree]]
 3. Isi [[^field|Name]], [[^field|Description]], dan atribut lainnya sesuai kebutuhan (lihat [[#Atribut Tree]])
 4. Klik [[^button|Create]]

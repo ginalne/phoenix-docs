@@ -8,7 +8,7 @@
 ---
 # Menghapus Gallery
 
-1. Buka folder yang berisi Gallery di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]
+1. Buka folder yang berisi Gallery di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]
 2. Klik kanan Gallery ➜ [[^button/delete|Delete]]
 3. Konfirmasi dengan klik [[^button|Delete]]
 

@@ -64,7 +64,7 @@ Penjelasan tentang pengelolaan Hak Akses dalam komponen Canvas lihat selengkapny
 - **Tambahkan Workspace pada setiap Group, termasuk Group anak**, karena Workspace tidak diwarisi dari Group induk.
 - **Pastikan setiap Group memiliki minimal satu Workspace** agar anggotanya tetap dapat memakai Phoenix.
 - **Pindahkan User ke Group tujuan segera** setelah terdaftar, agar tidak terlalu lama berada di Group berstatus default.
-- **Gunakan [[^field|Place to Directory]]** hanya untuk Group anak yang perlu dikelola sebagai komponen di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]].
+- **Gunakan [[^field|Place to Directory]]** hanya untuk Group anak yang perlu dikelola sebagai komponen di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]].
 
 ## Batasan dan Catatan
 

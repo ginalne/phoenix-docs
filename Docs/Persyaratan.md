@@ -25,5 +25,5 @@ Daftar browser yang memberikan performa optimal (Chrome, Edge, Safari), kompatib
 4. Buka [halaman utama phoenix](https://phoenix.ginalne.com)
 5. Pilih Pro yang tersedia
 
-Setelah persiapan setelah itu anda akan masuk ke [[Docs/Antarmuka/Pengenalan]]
+Setelah persiapan setelah itu anda akan masuk ke [[Docs/Dasar/Antarmuka]]
 

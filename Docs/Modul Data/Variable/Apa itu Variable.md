@@ -48,11 +48,11 @@ Anda juga dapat memperdalam tentang Tipe Data yang relevan yaitu: [[Docs/Tipe Da
 >**note** Tombol Edit tidak tersedia
 >Karena nama header tidak dapat diganti, komponen Variable tidak memiliki langkah mengubah atribut komponen. Yang dapat Anda ubah adalah isi data di dalam halaman kerjanya (lihat [[#Mengelola Variable Data]]).
 
->**danger** Komponen Variable dalam [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]]tidak dapat dibuat baru, diduplikasi ataupun dihapus.
+>**danger** Komponen Variable dalam [[Docs/Dasar/Antarmuka#Area Manajemen Folder]]tidak dapat dibuat baru, diduplikasi ataupun dihapus.
 
 ## Membuka Halaman Kerja Variable
 
-Klik [[^field/variable|Variables]] di [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]] untuk membuka halaman kerja Variable.
+Klik [[^field/variable|Variables]] di [[Docs/Dasar/Antarmuka#Area Manajemen Folder]] untuk membuka halaman kerja Variable.
 
 ## Antarmuka
 
@@ -69,7 +69,7 @@ Harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]]
 
 ## Batasan dan Catatan
 
-- Hanya ada satu komponen Variable di dalam Pro, dan tidak dapat ditambah lewat [[Docs/Antarmuka/Pengenalan#Area Manajemen Folder]].
+- Hanya ada satu komponen Variable di dalam Pro, dan tidak dapat ditambah lewat [[Docs/Dasar/Antarmuka#Area Manajemen Folder]].
 - Komponen Variable tidak dapat dihapus, tetapi dapat dipindahkan ke folder lain.
 - Header [[^field|Name]] "Variables" tidak dapat diganti.
 - Atribut [[^field|Name]] dari Variable Data harus unik.
