@@ -6,7 +6,6 @@
       tree:
         priority: 0
 ---
-
 # Membuat Folder
 
 1. Buka folder tempat folder baru akan ditempatkan di [[Docs/Antarmuka#Area Manajemen Folder]]

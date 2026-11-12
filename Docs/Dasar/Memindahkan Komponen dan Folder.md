@@ -10,7 +10,7 @@
 
 Anda dapat memindahkan folder atau komponen ke folder lain, atau hanya mengubah urutannya di folder yang sama, dengan *drag and drop*. Pemindahan dapat dilakukan di Area Manajemen Folder atau di halaman kerja [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].
 
-### Memindahkan di Area Manajemen Folder
+## Memindahkan di Area Manajemen Folder
 
 1. Nyalakan toggle [[^field/move]] di bagian atas [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Tekan dan tahan folder atau komponen yang ingin dipindahkan
@@ -18,7 +18,7 @@ Anda dapat memindahkan folder atau komponen ke folder lain, atau hanya mengubah 
 
 Untuk memindahkan ke folder *root*, seret komponen atau folder ke barisan di level *root* (menyisipkan di antara komponen atau folder yang sudah ada), atau ke bagian kosong, biasanya di bagian bawah Area Manajemen Folder.
 
-### Memindahkan di Halaman Kerja Workspace
+## Memindahkan di Halaman Kerja Workspace
 
 1. Buka halaman kerja Workspace
 2. Tekan dan tahan folder atau komponen yang ingin dipindahkan di kolom kiri
