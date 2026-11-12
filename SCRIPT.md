@@ -581,7 +581,9 @@ else
       "    pageDecoration:\n" ..
       "      icon: x\n" ..
       "      tree:\n" ..
-      "        priority: 0",
+      "        priority: 0" ..
+      "    tags:\n" ..
+      "      draft",
       1
     )
   elseif (string.match(frontmatter, "(title[ \t]*:[ \t]*[^\r\n]*)")) then
@@ -591,7 +593,9 @@ else
       "%1\n    pageDecoration:\n" ..
       "      icon: x\n" ..
       "      tree:\n" ..
-      "        priority: 0",
+      "        priority: 0" ..
+      "      tags:\n" ..
+      "        draft",
       1
     )
   else
@@ -601,7 +605,9 @@ else
       "%1\n    pageDecoration:\n" ..
       "      icon: x\n" ..
       "      tree:\n" ..
-      "        priority: 0",
+      "        priority: 0" ..
+      "      tags:\n" ..
+      "        draft",
       1
     )
   end
