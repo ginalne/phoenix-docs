@@ -49,13 +49,13 @@ Contoh berikut menjalankan Query berkaidah [[Docs/Query/Output/Table|Table Outpu
 
 | Kondisi | Rows | Is Empty | Status |
 | - | - | - | - |
-| Query menghasilkan tiga [[Docs/Tipe Data/Row]] | [[Docs/Tipe Data/Array]] berisi tiga [[Docs/Tipe Data/Row]] | - | [[^flowstate|Succeed]] |
-| Query menghasilkan satu [[Docs/Tipe Data/Row]] | [[Docs/Tipe Data/Array]] berisi satu [[Docs/Tipe Data/Row]] | - | [[^flowstate|Succeed]] |
-| Query tidak menghasilkan [[Docs/Tipe Data/Row]] | - | [[^value/boolean/true]] | [[^flowstate|Succeed]] |
-| [[^input|Query]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Query]] tidak berkaidah [[Docs/Query/Output/Table|Table Output]] | - | - | [[^flowstate|Fatal Error]] |
+| Query menghasilkan tiga [[Docs/Tipe Data/Row]] | [[Docs/Tipe Data/Array]] berisi tiga [[Docs/Tipe Data/Row]] | - | [[^flowstate/Succeed]] |
+| Query menghasilkan satu [[Docs/Tipe Data/Row]] | [[Docs/Tipe Data/Array]] berisi satu [[Docs/Tipe Data/Row]] | - | [[^flowstate/Succeed]] |
+| Query tidak menghasilkan [[Docs/Tipe Data/Row]] | - | [[^value/boolean/true]] | [[^flowstate/Succeed]] |
+| [[^input|Query]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Query]] tidak berkaidah [[Docs/Query/Output/Table|Table Output]] | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -67,7 +67,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 
 - [[^output|Rows]] hanya mengeluarkan data bila hasil Query berisi setidaknya satu [[Docs/Tipe Data/Row]].
 - [[^output|Is Empty]] hanya mengeluarkan [[^value/boolean/true]] ketika hasil Query kosong.
-- [[^input|Query]] yang dibiarkan kosong atau tidak berkaidah [[Docs/Query/Output/Table|Table Output]] menghasilkan [[^flowstate|Fatal Error]].
+- [[^input|Query]] yang dibiarkan kosong atau tidak berkaidah [[Docs/Query/Output/Table|Table Output]] menghasilkan [[^flowstate/Fatal Error]].
 - Table Output Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].
 
 ## Lihat Juga

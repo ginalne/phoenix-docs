@@ -22,8 +22,8 @@ Node Get Parent Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan 
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang parent-nya ditelusuri. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Depth]] | [[Docs/Tipe Data/Number]] | Jumlah tingkat penelusuran ke atas. [[^value/number|1]] menghasilkan parent langsung Node, [[^value/number|2]] menghasilkan parent dari parent, dan seterusnya. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang parent-nya ditelusuri. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Depth]] | [[Docs/Tipe Data/Number]] | Jumlah tingkat penelusuran ke atas. [[^value/number|1]] menghasilkan parent langsung Node, [[^value/number|2]] menghasilkan parent dari parent, dan seterusnya. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -47,15 +47,15 @@ Tabel berikut memakai Node [[^value/node|Laptop]] pada silsilah Origin ➜ Elekt
 
 | Kondisi | The Parent (Node) | Not Found | Status |
 | ------- | ----------------- | --------- | ------ |
-| Depth [[^value/number|1]] | [[^value/node|Komputer]] | - | [[^flowstate|Succeed]] |
-| Depth [[^value/number|2]] | [[^value/node|Elektronik]] | - | [[^flowstate|Succeed]] |
-| Depth [[^value/number|3]] | [[^value/node|Origin]] | - | [[^flowstate|Succeed]] |
-| Depth [[^value/number|4]], melebihi kedalaman Node | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Depth [[^value/number|0]], kurang dari [[^value/number|1]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Node yang diinput adalah Origin, Depth [[^value/number|1]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| [[^input|Node]] atau [[^input|Depth]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+| Depth [[^value/number|1]] | [[^value/node|Komputer]] | - | [[^flowstate/Succeed]] |
+| Depth [[^value/number|2]] | [[^value/node|Elektronik]] | - | [[^flowstate/Succeed]] |
+| Depth [[^value/number|3]] | [[^value/node|Origin]] | - | [[^flowstate/Succeed]] |
+| Depth [[^value/number|4]], melebihi kedalaman Node | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Depth [[^value/number|0]], kurang dari [[^value/number|1]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Node yang diinput adalah Origin, Depth [[^value/number|1]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^input|Node]] atau [[^input|Depth]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

@@ -21,8 +21,8 @@ Node Get Children Block memiliki 2 input di sisi kiri, 2 output di sisi kanan da
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang anaknya diambil. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Child Order]] | [[Docs/Tipe Data/Number]] | Order anak yang dicari. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang anaknya diambil. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Child Order]] | [[Docs/Tipe Data/Number]] | Order anak yang dicari. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -46,13 +46,13 @@ Tabel berikut memakai Node [[^value/node|Elektronik]] yang memiliki anak [[^valu
 
 | Kondisi | The Children (Node) | Not Found | Status |
 | ------- | ------------------- | --------- | ------ |
-| Child Order [[^value/number|0]] | [[^value/node|Komputer]] | - | [[^flowstate|Succeed]] |
-| Child Order [[^value/number|1]] | [[^value/node|Ponsel]] | - | [[^flowstate|Succeed]] |
-| Child Order [[^value/number|2]], tidak ada anak dengan Order tersebut | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Node [[^value/node|Laptop]] tidak memiliki anak, Child Order [[^value/number|0]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| [[^input|Node]] atau [[^input|Child Order]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+| Child Order [[^value/number|0]] | [[^value/node|Komputer]] | - | [[^flowstate/Succeed]] |
+| Child Order [[^value/number|1]] | [[^value/node|Ponsel]] | - | [[^flowstate/Succeed]] |
+| Child Order [[^value/number|2]], tidak ada anak dengan Order tersebut | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Node [[^value/node|Laptop]] tidak memiliki anak, Child Order [[^value/number|0]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^input|Node]] atau [[^input|Child Order]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

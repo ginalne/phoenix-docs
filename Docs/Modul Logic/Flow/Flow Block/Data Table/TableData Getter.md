@@ -19,8 +19,8 @@ TableData Getter Block memiliki dua input di sisi kiri, dua output di sisi kanan
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Column]] | [[Docs/Tipe Data/Column]] | Column tempat [[Docs/Tipe Data/TableData]] berada. Isi dengan Column atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
-| [[^input|Row]] | [[Docs/Tipe Data/Row]], [[Docs/Tipe Data/Number]], atau [[Docs/Tipe Data/String]] | Row tempat [[Docs/Tipe Data/TableData]] berada. Dapat diganti dengan [[Docs/Tipe Data/Number]] atau [[Docs/Tipe Data/String]] yang berisi Index Row (lihat [[#Menentukan Tipe Data Row]]). Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
+| [[^input|Column]] | [[Docs/Tipe Data/Column]] | Column tempat [[Docs/Tipe Data/TableData]] berada. Isi dengan Column atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
+| [[^input|Row]] | [[Docs/Tipe Data/Row]], [[Docs/Tipe Data/Number]], atau [[Docs/Tipe Data/String]] | Row tempat [[Docs/Tipe Data/TableData]] berada. Dapat diganti dengan [[Docs/Tipe Data/Number]] atau [[Docs/Tipe Data/String]] yang berisi Index Row (lihat [[#Menentukan Tipe Data Row]]). Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
 
 [[^input|Column]] dan [[^input|Row]] harus berasal dari [[Docs/Modul Data/Table/Apa itu Table|Table]] yang sama.
 
@@ -43,7 +43,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 ## Cara Kerja
 
-1. Block memeriksa [[^input|Column]] dan [[^input|Row]]. Bila salah satunya kosong, block berhenti dengan [[^flowstate|Fatal Error]].
+1. Block memeriksa [[^input|Column]] dan [[^input|Row]]. Bila salah satunya kosong, block berhenti dengan [[^flowstate/Fatal Error]].
 2. Block mencari [[Docs/Tipe Data/TableData]] pada [[Docs/Tipe Data/Column]] dan [[Docs/Tipe Data/Row]] yang ditentukan. Bila [[^input|Row]] berupa [[Docs/Tipe Data/Number]] atau [[Docs/Tipe Data/String]], nilainya dicocokkan dengan Index Row.
 3. Bila [[Docs/Tipe Data/TableData]] ditemukan dan berisi, [[^output|TableData]] meneruskan nilainya.
 4. Bila [[Docs/Tipe Data/TableData]] tidak berisi atau tidak ditemukan, [[^output|Is Empty]] meneruskan [[^value/boolean/true]]. Row yang Index-nya tidak ada, atau [[Docs/Tipe Data/Column]] dan [[Docs/Tipe Data/Row]] dari [[Docs/Modul Data/Table/Apa itu Table|Table]] berbeda, termasuk kasus tidak ditemukan.
@@ -54,11 +54,11 @@ Membaca status dari Row pesanan yang nomornya diterima dari block sebelumnya.
 
 | Kondisi | [[^output|TableData]] | [[^output|Is Empty]] | Status |
 | - | - | - | - |
-| [[Docs/Tipe Data/TableData]] berisi nilai | Nilai [[Docs/Tipe Data/TableData]] | - | [[^flowstate|Succeed]] |
-| [[Docs/Tipe Data/TableData]] tidak berisi | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Row dengan Index yang diisi tidak ditemukan | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| [[^input|Column]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Row]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+| [[Docs/Tipe Data/TableData]] berisi nilai | Nilai [[Docs/Tipe Data/TableData]] | - | [[^flowstate/Succeed]] |
+| [[Docs/Tipe Data/TableData]] tidak berisi | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Row dengan Index yang diisi tidak ditemukan | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^input|Column]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Row]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
 Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 

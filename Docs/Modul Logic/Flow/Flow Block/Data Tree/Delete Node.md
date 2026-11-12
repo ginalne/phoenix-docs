@@ -22,8 +22,8 @@ Delete Node Block memiliki 2 input di sisi kiri, 2 output di sisi kanan dan tida
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang akan dihapus. Node Origin tidak dapat dihapus dan membuat block berstatus [[^flowstate|Fatal Error]]. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Force]] | [[Docs/Tipe Data/Boolean]] | Isi [[^value/boolean/true]] untuk memaksa penghapusan Node yang sudah digunakan oleh komponen lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang akan dihapus. Node Origin tidak dapat dihapus dan membuat block berstatus [[^flowstate/Fatal Error]]. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Force]] | [[Docs/Tipe Data/Boolean]] | Isi [[^value/boolean/true]] untuk memaksa penghapusan Node yang sudah digunakan oleh komponen lain. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -49,7 +49,7 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 ## Cara Kerja
 
 1. Isi [[^input|Node]] dan [[^input|Force]], langsung pada block atau dari output block lain.
-2. Bila Node adalah Origin, block berstatus [[^flowstate|Fatal Error]] dan tidak ada Node yang terhapus, apa pun nilai [[^input|Force]].
+2. Bila Node adalah Origin, block berstatus [[^flowstate/Fatal Error]] dan tidak ada Node yang terhapus, apa pun nilai [[^input|Force]].
 3. Block memeriksa apakah Node atau salah satu anaknya sudah digunakan oleh komponen lain.
 4. Bila belum digunakan, Node beserta seluruh anaknya dihapus dan hanya [[^output|Succeed]] yang meneruskan aliran.
 5. Bila sudah digunakan dan [[^input|Force]] bernilai [[^value/boolean/false]], penghapusan ditolak, tidak ada Node yang terhapus, dan hanya [[^output|Error]] yang meneruskan aliran.
@@ -64,13 +64,13 @@ Tabel berikut menunjukkan hasil Delete Node Block untuk beberapa kondisi. Pada s
 
 | Kondisi | Force | Succeed | Error | Status |
 | ------- | ----- | ------- | ----- | ------ |
-| Node dan anaknya belum digunakan komponen lain | [[^value/boolean/false]] | [[^value/boolean/true]] | - | [[^flowstate|Succeed]] |
-| Node atau salah satu anaknya sudah digunakan komponen lain | [[^value/boolean/false]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Node atau salah satu anaknya sudah digunakan komponen lain | [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate|Succeed]] |
-| Node yang diinput adalah Origin | [[^value/boolean/true]] atau [[^value/boolean/false]] | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Node]] atau [[^input|Force]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
+| Node dan anaknya belum digunakan komponen lain | [[^value/boolean/false]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] |
+| Node atau salah satu anaknya sudah digunakan komponen lain | [[^value/boolean/false]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Node atau salah satu anaknya sudah digunakan komponen lain | [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] |
+| Node yang diinput adalah Origin | [[^value/boolean/true]] atau [[^value/boolean/false]] | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Node]] atau [[^input|Force]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -79,8 +79,8 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 ## Batasan dan Catatan
 
-- [[^input|Force]] yang dibiarkan kosong menghasilkan [[^flowstate|Fatal Error]], tidak diperlakukan sebagai [[^value/boolean/false]].
-- Node Origin tidak dapat dihapus. Menghapus Origin membuat block berstatus [[^flowstate|Fatal Error]], apa pun nilai [[^input|Force]].
+- [[^input|Force]] yang dibiarkan kosong menghasilkan [[^flowstate/Fatal Error]], tidak diperlakukan sebagai [[^value/boolean/false]].
+- Node Origin tidak dapat dihapus. Menghapus Origin membuat block berstatus [[^flowstate/Fatal Error]], apa pun nilai [[^input|Force]].
 - Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Delete Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

@@ -61,17 +61,17 @@ Contoh berikut memakai Branch 3 dengan [[^input|Input]] bertipe [[Docs/Tipe Data
 
 | Kondisi | Output 1 | Output 2 | Output 3 | Status |
 | - | - | - | - | - |
-| Ketiga Output terhubung | [[^value/string|PSN-001]] | [[^value/string|PSN-001]] | [[^value/string|PSN-001]] | [[^flowstate|Succeed]] |
-| Output 2 tidak terhubung (berada di tengah) | [[^value/string|PSN-001]] | - | [[^value/string|PSN-001]] | [[^flowstate|Succeed]] |
-| Hanya Output 1 yang terhubung | [[^value/string|PSN-001]] | - | - | [[^flowstate|Succeed]] |
-| [[^input|Input]] dibiarkan [[^field|N/A Type]] | - | - | - | [[^flowstate|Fatal Error]] |
+| Ketiga Output terhubung | [[^value/string|PSN-001]] | [[^value/string|PSN-001]] | [[^value/string|PSN-001]] | [[^flowstate/Succeed]] |
+| Output 2 tidak terhubung (berada di tengah) | [[^value/string|PSN-001]] | - | [[^value/string|PSN-001]] | [[^flowstate/Succeed]] |
+| Hanya Output 1 yang terhubung | [[^value/string|PSN-001]] | - | - | [[^flowstate/Succeed]] |
+| [[^input|Input]] dibiarkan [[^field|N/A Type]] | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
 - **Pilih varian sesuai jumlah tujuan.** Gunakan Branch Block dengan jumlah [[^output|Output]] yang sama dengan jumlah block tujuan agar tidak ada Output yang tidak terpakai.
-- **Tentukan tipe data [[^input|Input]] sebelum menghubungkan Output.** [[^field|N/A Type]] pada [[^input|Input]] menghasilkan [[^flowstate|Fatal Error]].
+- **Tentukan tipe data [[^input|Input]] sebelum menghubungkan Output.** [[^field|N/A Type]] pada [[^input|Input]] menghasilkan [[^flowstate/Fatal Error]].
 - **Isi [[^input|Input]] langsung** bila data yang sama dipakai oleh banyak block, sehingga data tidak perlu diisi berulang pada setiap block.
 - **Atur urutan lewat penomoran Output.** Aliran dieksekusi sesuai penomoran, sehingga hubungkan block yang harus berjalan lebih dulu ke [[^output|Output]] bernomor lebih kecil.
 
@@ -79,7 +79,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 
 - Branch Block tidak memeriksa kondisi dan tidak mengubah data. Setiap [[^output|Output]] yang terhubung membawa data [[^input|Input]] yang sama.
 - [[^output|Output]] yang tidak memiliki koneksi tidak mengeluarkan data, termasuk bila berada di tengah. [[^output|Output]] lain tidak terpengaruh.
-- Branch Block tidak berstatus [[^flowstate|Error]]. Block hanya dapat berstatus [[^flowstate|Fatal Error]] bila [[^input|Input]] dibiarkan [[^field|N/A Type]].
+- Branch Block tidak berstatus [[^flowstate/Error]]. Block hanya dapat berstatus [[^flowstate/Fatal Error]] bila [[^input|Input]] dibiarkan [[^field|N/A Type]].
 - Aliran dari [[^output|Output]] dieksekusi sesuai penomoran Output.
 - Urutan eksekusi sulit diprediksi bila banyak koneksi dari beberapa block bertemu pada satu input, misalnya saat menyusun [[Docs/Tipe Data/Array]] dari banyak output.
 - Branch Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].

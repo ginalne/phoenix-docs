@@ -19,7 +19,7 @@ Table Column Block memiliki satu input di sisi kiri, lima output di sisi kanan d
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Column]] | [[Docs/Tipe Data/Column]] | Column yang atributnya akan diambil. Isi dengan Column atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
+| [[^input|Column]] | [[Docs/Tipe Data/Column]] | Column yang atributnya akan diambil. Isi dengan Column atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -31,11 +31,11 @@ Table Column Block memiliki satu input di sisi kiri, lima output di sisi kanan d
 | [[^output|Header]] | Mengikuti tipe data Column | Header Column. Tetap meneruskan aliran dengan nilai [[^value/empty]] bila tipe data Column tidak memiliki Header. |
 | [[^output|Table]] | [[Docs/Tipe Data/Table]] | Table tempat Column berada. |
 
-Kelima output meneruskan aliran bila [[^input|Column]] terisi, dan tidak meneruskan aliran bila terjadi [[^flowstate|Fatal Error]]. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+Kelima output meneruskan aliran bila [[^input|Column]] terisi, dan tidak meneruskan aliran bila terjadi [[^flowstate/Fatal Error]]. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
-1. Block memeriksa [[^input|Column]]. Bila kosong, block berhenti dengan [[^flowstate|Fatal Error]].
+1. Block memeriksa [[^input|Column]]. Bila kosong, block berhenti dengan [[^flowstate/Fatal Error]].
 2. Block membaca atribut [[Docs/Tipe Data/Column]] yang diinput.
 3. Tipe data [[^output|Header]] mengikuti tipe data Column, seperti pada tabel berikut. Column dengan tipe data lain tidak memiliki Header, sehingga [[^output|Header]] bernilai [[^value/empty]].
 
@@ -53,9 +53,9 @@ Mengenali Column yang menjadi tujuan pengisian [[Docs/Tipe Data/TableData]] pada
 
 | Kondisi | [[^output|Pass]] | [[^output|Name]] | [[^output|Desc]] | [[^output|Header]] | [[^output|Table]] | Status |
 | - | - | - | - | - | - | - |
-| [[^input|Column]] bertipe data yang memiliki Header | [[Docs/Tipe Data/Column]] | Nama Column | Deskripsi Column | Header sesuai tipe data | [[Docs/Tipe Data/Table]] | [[^flowstate|Succeed]] |
-| [[^input|Column]] bertipe data tanpa Header | [[Docs/Tipe Data/Column]] | Nama Column | Deskripsi Column | [[^value/empty]] | [[Docs/Tipe Data/Table]] | [[^flowstate|Succeed]] |
-| [[^input|Column]] dibiarkan kosong | - | - | - | - | - | [[^flowstate|Fatal Error]] |
+| [[^input|Column]] bertipe data yang memiliki Header | [[Docs/Tipe Data/Column]] | Nama Column | Deskripsi Column | Header sesuai tipe data | [[Docs/Tipe Data/Table]] | [[^flowstate/Succeed]] |
+| [[^input|Column]] bertipe data tanpa Header | [[Docs/Tipe Data/Column]] | Nama Column | Deskripsi Column | [[^value/empty]] | [[Docs/Tipe Data/Table]] | [[^flowstate/Succeed]] |
+| [[^input|Column]] dibiarkan kosong | - | - | - | - | - | [[^flowstate/Fatal Error]] |
 
 Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 

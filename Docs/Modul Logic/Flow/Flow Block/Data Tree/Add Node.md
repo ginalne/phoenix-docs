@@ -21,9 +21,9 @@ Add Node Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tidak m
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Parent]] | [[Docs/Tipe Data/Node]] | Node yang akan menjadi parent Node baru. Pilihan memuat semua Node dari semua Tree, atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order Node baru. Minimal [[^value/number|0]] dan tidak boleh sama dengan Order anak lain milik Parent. Bila bernilai negatif atau dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Name]] | [[Docs/Tipe Data/String]] | Name Node baru. Tidak boleh sama dengan Name anak lain milik Parent. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Parent]] | [[Docs/Tipe Data/Node]] | Node yang akan menjadi parent Node baru. Pilihan memuat semua Node dari semua Tree, atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order Node baru. Minimal [[^value/number|0]] dan tidak boleh sama dengan Order anak lain milik Parent. Bila bernilai negatif atau dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Name]] | [[Docs/Tipe Data/String]] | Name Node baru. Tidak boleh sama dengan Name anak lain milik Parent. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -51,13 +51,13 @@ Tabel berikut memakai Parent [[^value/node|Elektronik]] yang sudah memiliki anak
 
 | Kondisi | New Node | Name Conflict | Order Conflict | Status |
 | ------- | -------- | ------------- | -------------- | ------ |
-| Name [[^value/string|Kamera]] dan Order [[^value/number|2]] belum dipakai anak lain | [[^value/node|Kamera]] | - | - | [[^flowstate|Succeed]] |
-| Name [[^value/string|Ponsel]] sudah dipakai anak lain | - | [[^value/boolean/true]] | - | [[^flowstate|Error]] |
-| Order [[^value/number|1]] sudah dipakai anak lain | - | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| [[^input|Order]] bernilai negatif | - | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Parent]], [[^input|Order]], atau [[^input|Name]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
+| Name [[^value/string|Kamera]] dan Order [[^value/number|2]] belum dipakai anak lain | [[^value/node|Kamera]] | - | - | [[^flowstate/Succeed]] |
+| Name [[^value/string|Ponsel]] sudah dipakai anak lain | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
+| Order [[^value/number|1]] sudah dipakai anak lain | - | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^input|Order]] bernilai negatif | - | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Parent]], [[^input|Order]], atau [[^input|Name]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -66,7 +66,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 ## Batasan dan Catatan
 
-- [[^input|Order]] bernilai minimal [[^value/number|0]]. Order negatif membuat block berstatus [[^flowstate|Fatal Error]].
+- [[^input|Order]] bernilai minimal [[^value/number|0]]. Order negatif membuat block berstatus [[^flowstate/Fatal Error]].
 - Node baru berada pada Tree yang sama dengan Parent dan belum memiliki anak. Untuk memindahkan Node yang sudah ada, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Assign Node|Assign Node Block]].
 - Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Add Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 

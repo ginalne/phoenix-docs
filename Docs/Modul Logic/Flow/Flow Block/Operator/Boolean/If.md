@@ -52,13 +52,13 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 | A | Operator | B | Boolean | True | False | Status |
 | - | -------- | - | ------- | ---- | ----- | ------ |
-| [[^value/number|10]] | `>` | [[^value/number|5]] | [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate|Succeed]] |
-| [[^value/number|3]] | `>` | [[^value/number|5]] | [[^value/boolean/false]] | - | [[^value/boolean/false]] | [[^flowstate|Succeed]] |
-| [[^value/number|10]] | [[^value/empty]] | [[^value/number|5]] | - | - | - | [[^flowstate|Fatal Error]] |
-| [[^field|N/A Type]] | `>` | [[^value/number|5]] | - | - | - | [[^flowstate|Fatal Error]] |
-| [[^value/number|10]] | `>` | [[^field|N/A Type]] | - | - | - | [[^flowstate|Fatal Error]] |
+| [[^value/number|10]] | `>` | [[^value/number|5]] | [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] |
+| [[^value/number|3]] | `>` | [[^value/number|5]] | [[^value/boolean/false]] | - | [[^value/boolean/false]] | [[^flowstate/Succeed]] |
+| [[^value/number|10]] | [[^value/empty]] | [[^value/number|5]] | - | - | - | [[^flowstate/Fatal Error]] |
+| [[^field|N/A Type]] | `>` | [[^value/number|5]] | - | - | - | [[^flowstate/Fatal Error]] |
+| [[^value/number|10]] | `>` | [[^field|N/A Type]] | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -69,7 +69,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - If Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
-- [[^input|Operator]] yang dibiarkan kosong, atau [[^input|A]] atau [[^input|B]] yang masih [[^field|N/A Type]], menghasilkan status [[^flowstate|Fatal Error]].
+- [[^input|Operator]] yang dibiarkan kosong, atau [[^input|A]] atau [[^input|B]] yang masih [[^field|N/A Type]], menghasilkan status [[^flowstate/Fatal Error]].
 - Hanya salah satu dari output [[^output|True]] atau [[^output|False]] yang meneruskan aliran pada setiap eksekusi.
 
 ## Lihat Juga

@@ -58,16 +58,16 @@ Contoh berikut mengirim permintaan ke [[^input|Endpoint]] [[^value/string|https:
 
 | Kondisi | Success | Error | Status |
 | - | - | - | - |
-| [[^input|Method]] [[^value/string|GET]] dan respons berupa JSON | [[Docs/Tipe Data/Object]] berisi respons | - | [[^flowstate|Succeed]] |
-| [[^input|Method]] [[^value/string|POST]] dengan [[^input|Payload]] [[^value/object|{ "nomor": "PSN-001" }]] dan respons berupa JSON | [[Docs/Tipe Data/Object]] berisi respons | - | [[^flowstate|Succeed]] |
-| Respons berupa HTML | [[Docs/Tipe Data/Text]] berisi HTML | - | [[^flowstate|Succeed]] |
-| Respons berupa file | [[Docs/Tipe Data/File]] | - | [[^flowstate|Succeed]] |
-| Status code selain 2xx | - | [[Docs/Tipe Data/Object]] berisi `status` dan `body` | [[^flowstate|Error]] |
-| Koneksi ke [[^input|Endpoint]] gagal | - | [[Docs/Tipe Data/Object]] berisi `status` [[^value/number|0]] dan `body` pesan default | [[^flowstate|Error]] |
-| [[^input|Method]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Endpoint]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+| [[^input|Method]] [[^value/string|GET]] dan respons berupa JSON | [[Docs/Tipe Data/Object]] berisi respons | - | [[^flowstate/Succeed]] |
+| [[^input|Method]] [[^value/string|POST]] dengan [[^input|Payload]] [[^value/object|{ "nomor": "PSN-001" }]] dan respons berupa JSON | [[Docs/Tipe Data/Object]] berisi respons | - | [[^flowstate/Succeed]] |
+| Respons berupa HTML | [[Docs/Tipe Data/Text]] berisi HTML | - | [[^flowstate/Succeed]] |
+| Respons berupa file | [[Docs/Tipe Data/File]] | - | [[^flowstate/Succeed]] |
+| Status code selain 2xx | - | [[Docs/Tipe Data/Object]] berisi `status` dan `body` | [[^flowstate/Error]] |
+| Koneksi ke [[^input|Endpoint]] gagal | - | [[Docs/Tipe Data/Object]] berisi `status` [[^value/number|0]] dan `body` pesan default | [[^flowstate/Error]] |
+| [[^input|Method]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Endpoint]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -78,7 +78,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 ## Batasan dan Catatan
 
-- [[^input|Method]] atau [[^input|Endpoint]] yang dibiarkan kosong menghasilkan [[^flowstate|Fatal Error]]. [[^input|Header]] dan [[^input|Payload]] boleh kosong.
+- [[^input|Method]] atau [[^input|Endpoint]] yang dibiarkan kosong menghasilkan [[^flowstate/Fatal Error]]. [[^input|Header]] dan [[^input|Payload]] boleh kosong.
 - [[^output|Success]] dan [[^output|Error]] tidak keluar bersamaan. Hanya satu yang meneruskan aliran sesuai hasil permintaan.
 - Tipe data [[^output|Success]] mengikuti hasil permintaan: [[Docs/Tipe Data/Object]] bila JSON, [[Docs/Tipe Data/File]] bila berupa file, dan [[Docs/Tipe Data/Text]] untuk bentuk lain seperti HTML.
 - Seluruh kegagalan permintaan keluar lewat [[^output|Error]]: status code selain 2xx dan kegagalan koneksi.

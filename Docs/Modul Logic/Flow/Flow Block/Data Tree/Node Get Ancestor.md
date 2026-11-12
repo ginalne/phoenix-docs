@@ -21,8 +21,8 @@ Node Get Ancestor Block memiliki 2 input di sisi kiri, 2 output di sisi kanan da
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang leluhurnya diambil. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Anc. Level]] | [[Docs/Tipe Data/Number]] | Tingkat leluhur yang diambil, dihitung dari Origin. [[^value/number|1]] menghasilkan Origin, [[^value/number|2]] menghasilkan Node berikutnya pada silsilah, dan seterusnya. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang leluhurnya diambil. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Anc. Level]] | [[Docs/Tipe Data/Number]] | Tingkat leluhur yang diambil, dihitung dari Origin. [[^value/number|1]] menghasilkan Origin, [[^value/number|2]] menghasilkan Node berikutnya pada silsilah, dan seterusnya. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -46,14 +46,14 @@ Tabel berikut memakai Node [[^value/node|Laptop]] pada silsilah Origin ➜ Elekt
 
 | Kondisi | The Ancestor (Node) | Not Found | Status |
 | ------- | ------------------- | --------- | ------ |
-| Anc. Level [[^value/number|1]] | [[^value/node|Origin]] | - | [[^flowstate|Succeed]] |
-| Anc. Level [[^value/number|2]] | [[^value/node|Elektronik]] | - | [[^flowstate|Succeed]] |
-| Anc. Level [[^value/number|3]] | [[^value/node|Komputer]] | - | [[^flowstate|Succeed]] |
-| Anc. Level [[^value/number|4]], menunjuk Node itu sendiri | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Anc. Level [[^value/number|0]], kurang dari [[^value/number|1]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| [[^input|Node]] atau [[^input|Anc. Level]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+| Anc. Level [[^value/number|1]] | [[^value/node|Origin]] | - | [[^flowstate/Succeed]] |
+| Anc. Level [[^value/number|2]] | [[^value/node|Elektronik]] | - | [[^flowstate/Succeed]] |
+| Anc. Level [[^value/number|3]] | [[^value/node|Komputer]] | - | [[^flowstate/Succeed]] |
+| Anc. Level [[^value/number|4]], menunjuk Node itu sendiri | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Anc. Level [[^value/number|0]], kurang dari [[^value/number|1]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^input|Node]] atau [[^input|Anc. Level]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

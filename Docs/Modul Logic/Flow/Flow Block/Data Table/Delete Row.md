@@ -21,8 +21,8 @@ Delete Row Block memiliki dua input di sisi kiri, dua output di sisi kanan dan t
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Row]] | [[Docs/Tipe Data/Row]] | Row target yang akan dihapus. Isi dengan Row atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
-| [[^input|Force]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] untuk menghapus Row secara paksa walaupun Row sudah digunakan. [[^value/boolean/false]] menolak penghapusan Row yang sudah digunakan. Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
+| [[^input|Row]] | [[Docs/Tipe Data/Row]] | Row target yang akan dihapus. Isi dengan Row atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
+| [[^input|Force]] | [[Docs/Tipe Data/Boolean]] | [[^value/boolean/true]] untuk menghapus Row secara paksa walaupun Row sudah digunakan. [[^value/boolean/false]] menolak penghapusan Row yang sudah digunakan. Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -38,7 +38,7 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 ## Cara Kerja
 
-1. Block memeriksa [[^input|Row]] dan [[^input|Force]]. Bila salah satunya kosong, block berhenti dengan [[^flowstate|Fatal Error]].
+1. Block memeriksa [[^input|Row]] dan [[^input|Force]]. Bila salah satunya kosong, block berhenti dengan [[^flowstate/Fatal Error]].
 2. [[Docs/Tipe Data/Row]] dianggap **sudah digunakan** bila sedang dipakai pada Flow atau data lain, atau tercatat di riwayat activity.
 3. Row yang belum digunakan dihapus, baik [[^input|Force]] bernilai [[^value/boolean/true]] maupun [[^value/boolean/false]]. [[^output|Succeed]] meneruskan aliran.
 4. Row yang sudah digunakan hanya dihapus bila [[^input|Force]] bernilai [[^value/boolean/true]]. Bila [[^value/boolean/false]], penghapusan ditolak dan [[^output|Error]] meneruskan aliran.
@@ -55,12 +55,12 @@ Menghapus Row dari [[^field/table|Pesanan]] saat sebuah pesanan dibatalkan.
 
 | Kondisi | [[^output|Succeed]] | [[^output|Error]] | Status |
 | - | - | - | - |
-| Row belum digunakan, [[^input|Force]] bernilai [[^value/boolean/false]] | [[^value/boolean/true]] | - | [[^flowstate|Succeed]] |
-| Row belum digunakan, [[^input|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate|Succeed]] |
-| Row sudah digunakan, [[^input|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate|Succeed]] |
-| Row sudah digunakan, [[^input|Force]] bernilai [[^value/boolean/false]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| [[^input|Row]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Force]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
+| Row belum digunakan, [[^input|Force]] bernilai [[^value/boolean/false]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] |
+| Row belum digunakan, [[^input|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] |
+| Row sudah digunakan, [[^input|Force]] bernilai [[^value/boolean/true]] | [[^value/boolean/true]] | - | [[^flowstate/Succeed]] |
+| Row sudah digunakan, [[^input|Force]] bernilai [[^value/boolean/false]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^input|Row]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Force]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
 
 Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 

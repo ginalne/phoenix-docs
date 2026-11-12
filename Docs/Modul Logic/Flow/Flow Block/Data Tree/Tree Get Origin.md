@@ -22,7 +22,7 @@ Tree Get Origin Block memiliki 1 input di sisi kiri, 1 output di sisi kanan dan 
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Tree]] | [[Docs/Tipe Data/Tree]] | Pilih Tree atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Tree]] | [[Docs/Tipe Data/Tree]] | Pilih Tree atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -44,10 +44,10 @@ Tabel berikut menunjukkan hasil Tree Get Origin Block pada Tree Kategori Produk.
 
 | Kondisi | The Origin (Node) | Status |
 | ------- | ----------------- | ------ |
-| Tree terisi | [[^value/node|Origin]] | [[^flowstate|Succeed]] |
-| [[^input|Tree]] dibiarkan kosong | - | [[^flowstate|Fatal Error]] |
+| Tree terisi | [[^value/node|Origin]] | [[^flowstate/Succeed]] |
+| [[^input|Tree]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -56,7 +56,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - Setiap Tree memiliki Node Origin sehingga block ini tidak memiliki output Not Found.
-- [[^input|Tree]] yang kosong membuat block berstatus [[^flowstate|Fatal Error]] dan output tidak ada.
+- [[^input|Tree]] yang kosong membuat block berstatus [[^flowstate/Fatal Error]] dan output tidak ada.
 - Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Tree Get Origin Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

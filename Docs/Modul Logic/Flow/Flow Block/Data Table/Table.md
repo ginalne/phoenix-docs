@@ -18,7 +18,7 @@ Table Block memiliki satu input di sisi kiri, tiga output di sisi kanan dan tida
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Table]] | [[Docs/Tipe Data/Table]] | Table yang atributnya akan diambil. Isi dengan Table atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
+| [[^input|Table]] | [[Docs/Tipe Data/Table]] | Table yang atributnya akan diambil. Isi dengan Table atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -28,11 +28,11 @@ Table Block memiliki satu input di sisi kiri, tiga output di sisi kanan dan tida
 | [[^output|Name]] | [[Docs/Tipe Data/String]] | Nama Table. |
 | [[^output|Desc]] | [[Docs/Tipe Data/Text]] | Deskripsi Table. Tetap meneruskan aliran dengan nilai [[^value/empty]] bila Description Table kosong. |
 
-Ketiga output meneruskan aliran bila [[^input|Table]] terisi, dan tidak meneruskan aliran bila terjadi [[^flowstate|Fatal Error]]. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+Ketiga output meneruskan aliran bila [[^input|Table]] terisi, dan tidak meneruskan aliran bila terjadi [[^flowstate/Fatal Error]]. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
-1. Block memeriksa [[^input|Table]]. Bila kosong, block berhenti dengan [[^flowstate|Fatal Error]].
+1. Block memeriksa [[^input|Table]]. Bila kosong, block berhenti dengan [[^flowstate/Fatal Error]].
 2. Block membaca atribut [[Docs/Tipe Data/Table]] yang diinput.
 3. [[^output|Pass]], [[^output|Name]], dan [[^output|Desc]] diteruskan bersamaan ke block yang terhubung.
 
@@ -42,9 +42,9 @@ Mengambil nama dan deskripsi [[^field/table|Pesanan]] untuk dicantumkan pada cat
 
 | Kondisi | [[^output|Pass]] | [[^output|Name]] | [[^output|Desc]] | Status |
 | - | - | - | - | - |
-| [[^input|Table]] berisi Table pesanan yang memiliki deskripsi | [[Docs/Tipe Data/Table]] | Nama Table | Deskripsi Table | [[^flowstate|Succeed]] |
-| [[^input|Table]] berisi Table pesanan tanpa deskripsi | [[Docs/Tipe Data/Table]] | Nama Table | [[^value/empty]] | [[^flowstate|Succeed]] |
-| [[^input|Table]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
+| [[^input|Table]] berisi Table pesanan yang memiliki deskripsi | [[Docs/Tipe Data/Table]] | Nama Table | Deskripsi Table | [[^flowstate/Succeed]] |
+| [[^input|Table]] berisi Table pesanan tanpa deskripsi | [[Docs/Tipe Data/Table]] | Nama Table | [[^value/empty]] | [[^flowstate/Succeed]] |
+| [[^input|Table]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
 Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 

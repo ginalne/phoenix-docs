@@ -19,19 +19,19 @@ Add Row Block memiliki satu input di sisi kiri, satu output di sisi kanan dan ti
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Table]] | [[Docs/Tipe Data/Table]] | Table tujuan penambahan Row. Isi dengan Table atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
+| [[^input|Table]] | [[Docs/Tipe Data/Table]] | Table tujuan penambahan Row. Isi dengan Table atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
 
 ### Output
 
 | Output | Tipe Data | Keterangan |
 | - | - | - |
-| [[^output|New Row]] | [[Docs/Tipe Data/Row]] | Row baru yang kosong, tanpa [[Docs/Tipe Data/TableData]]. Meneruskan aliran hanya bila Row berhasil ditambahkan. Tidak meneruskan aliran bila terjadi [[^flowstate|Fatal Error]]. |
+| [[^output|New Row]] | [[Docs/Tipe Data/Row]] | Row baru yang kosong, tanpa [[Docs/Tipe Data/TableData]]. Meneruskan aliran hanya bila Row berhasil ditambahkan. Tidak meneruskan aliran bila terjadi [[^flowstate/Fatal Error]]. |
 
 Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
-1. Block memeriksa [[^input|Table]]. Bila kosong, block berhenti dengan [[^flowstate|Fatal Error]].
+1. Block memeriksa [[^input|Table]]. Bila kosong, block berhenti dengan [[^flowstate/Fatal Error]].
 2. Sistem menambahkan satu [[Docs/Tipe Data/Row]] baru ke [[Docs/Tipe Data/Table]] tersebut. [[^output|Index]] Row dibuat otomatis oleh sistem sebagai ID Row pada tampilan [[Docs/Modul Data/Table/Apa itu Table|Table]].
 3. Row baru tidak memiliki [[Docs/Tipe Data/TableData]]. Row diteruskan melalui output [[^output|New Row]] agar dapat diisi atau diproses oleh block berikutnya.
 
@@ -44,8 +44,8 @@ Menambahkan Row ke [[^field/table|Pesanan]] saat sebuah proses dimulai.
 
 | Kondisi | [[^output|New Row]] | Status |
 | - | - | - |
-| [[^input|Table]] berisi Table pesanan | Row baru dengan Index otomatis dan [[Docs/Tipe Data/TableData]] kosong | [[^flowstate|Succeed]] |
-| [[^input|Table]] dibiarkan kosong | - | [[^flowstate|Fatal Error]] |
+| [[^input|Table]] berisi Table pesanan | Row baru dengan Index otomatis dan [[Docs/Tipe Data/TableData]] kosong | [[^flowstate/Succeed]] |
+| [[^input|Table]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 
 Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 

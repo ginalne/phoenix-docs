@@ -41,10 +41,10 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 | Object | Text | Status |
 | ------ | ---- | ------ |
-| [[^value/object|{ "nama": "Kopi", "harga": 15000 }]] | [[^value/text|{ "nama": "Kopi", "harga": 15000 }]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | - | [[^flowstate|Fatal Error]] |
+| [[^value/object|{ "nama": "Kopi", "harga": 15000 }]] | [[^value/text|{ "nama": "Kopi", "harga": 15000 }]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -54,7 +54,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - Stringify Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
-- [[^input|Object]] yang dibiarkan kosong menghasilkan status [[^flowstate|Fatal Error]].
+- [[^input|Object]] yang dibiarkan kosong menghasilkan status [[^flowstate/Fatal Error]].
 - Block ini tidak memiliki output Error karena Object selalu sesuai kaidah Object (JSON).
 
 ## Lihat Juga

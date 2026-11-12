@@ -43,12 +43,12 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 | String | Length | Pad String | Result | Status |
 | ------ | ------ | ---------- | ------ | ------ |
-| [[^value/string|42]] | [[^value/number|5]] | [[^value/string|0]] | [[^value/string|00042]] | [[^flowstate|Succeed]] |
-| [[^value/string|AB]] | [[^value/number|5]] | [[^value/string|-]] | [[^value/string|---AB]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | [[^value/number|5]] | [[^value/string|0]] | - | [[^flowstate|Fatal Error]] |
-| [[^value/string|42]] | [[^value/number|5]] | [[^value/empty]] | - | [[^flowstate|Fatal Error]] |
+| [[^value/string|42]] | [[^value/number|5]] | [[^value/string|0]] | [[^value/string|00042]] | [[^flowstate/Succeed]] |
+| [[^value/string|AB]] | [[^value/number|5]] | [[^value/string|-]] | [[^value/string|---AB]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | [[^value/number|5]] | [[^value/string|0]] | - | [[^flowstate/Fatal Error]] |
+| [[^value/string|42]] | [[^value/number|5]] | [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -59,7 +59,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - Pad Left Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
-- [[^input|String]] atau [[^input|Pad String]] yang dibiarkan kosong menghasilkan status [[^flowstate|Fatal Error]].
+- [[^input|String]] atau [[^input|Pad String]] yang dibiarkan kosong menghasilkan status [[^flowstate/Fatal Error]].
 
 ## Lihat Juga
 

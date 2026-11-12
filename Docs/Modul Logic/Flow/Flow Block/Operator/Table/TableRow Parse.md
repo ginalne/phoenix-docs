@@ -46,14 +46,14 @@ Contoh berikut memakai Row pada tabel Pesanan. Kolom `penerima` berelasi ke tabe
 
 | Row | Rel. Depth | Hasil (Object) | Status |
 | --- | ---------- | -------------- | ------ |
-| [[^value/row|Row pesanan]] | [[^value/empty]] | [[^value/object|{ "penerima": "1 : Anna", "Total": 1200 }]] (sama seperti Rel. Depth [[^value/number|0]]) | [[^flowstate|Succeed]] |
-| [[^value/row|Row pesanan]] | [[^value/number|0]] | [[^value/object|{ "penerima": "1 : Anna", "Total": 1200 }]] | [[^flowstate|Succeed]] |
-| [[^value/row|Row pesanan]] | [[^value/number|1]] | [[^value/object|{ "penerima": { "id": 1, "nama": "Anna", "kelamin": "Perempuan", "no telp": "123456" }, "Total": 1200 }]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | [[^value/number|1]] | - | [[^flowstate|Fatal Error]] |
+| [[^value/row|Row pesanan]] | [[^value/empty]] | [[^value/object|{ "penerima": "1 : Anna", "Total": 1200 }]] (sama seperti Rel. Depth [[^value/number|0]]) | [[^flowstate/Succeed]] |
+| [[^value/row|Row pesanan]] | [[^value/number|0]] | [[^value/object|{ "penerima": "1 : Anna", "Total": 1200 }]] | [[^flowstate/Succeed]] |
+| [[^value/row|Row pesanan]] | [[^value/number|1]] | [[^value/object|{ "penerima": { "id": 1, "nama": "Anna", "kelamin": "Perempuan", "no telp": "123456" }, "Total": 1200 }]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | [[^value/number|1]] | - | [[^flowstate/Fatal Error]] |
 
 Pada Rel. Depth [[^value/number|0]], kolom `penerima` hanya tampil sebagai ringkasan relasinya (`"1 : Anna"`). Pada Rel. Depth [[^value/number|1]], kolom tersebut ditelusuri sehingga seluruh isi Row Penerima ikut tersaji.
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -63,7 +63,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - TableRow Parse Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
-- [[^input|Row]] yang dibiarkan kosong menghasilkan status [[^flowstate|Fatal Error]].
+- [[^input|Row]] yang dibiarkan kosong menghasilkan status [[^flowstate/Fatal Error]].
 - [[^input|Rel. Depth]] yang dibiarkan kosong dianggap bernilai [[^value/number|0]].
 
 ## Lihat Juga

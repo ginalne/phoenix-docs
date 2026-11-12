@@ -62,14 +62,14 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 | Kondisi | Text | Function | Error | Status |
 | - | - | - | - | - |
-| Seluruh input wajib terisi dan hasilnya berupa teks | [[Docs/Tipe Data/Text]] berisi jawaban | - | - | [[^flowstate|Succeed]] |
-| [[^input|Tools]] diisi dan hasilnya berupa Function | - | [[Docs/Tipe Data/Object]] (JSON) berisi Function | - | [[^flowstate|Succeed]] |
-| OpenAI mengembalikan respons error | - | - | [[Docs/Tipe Data/Object]] berisi respons error | [[^flowstate|Error]] |
-| [[^input|Input]] dan [[^input|Messages]] sama-sama kosong | - | - | [[Docs/Tipe Data/Object]] berisi respons error | [[^flowstate|Error]] |
-| [[^input|API Key]] atau [[^input|Model]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Max Output]] atau [[^input|Temperature]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
+| Seluruh input wajib terisi dan hasilnya berupa teks | [[Docs/Tipe Data/Text]] berisi jawaban | - | - | [[^flowstate/Succeed]] |
+| [[^input|Tools]] diisi dan hasilnya berupa Function | - | [[Docs/Tipe Data/Object]] (JSON) berisi Function | - | [[^flowstate/Succeed]] |
+| OpenAI mengembalikan respons error | - | - | [[Docs/Tipe Data/Object]] berisi respons error | [[^flowstate/Error]] |
+| [[^input|Input]] dan [[^input|Messages]] sama-sama kosong | - | - | [[Docs/Tipe Data/Object]] berisi respons error | [[^flowstate/Error]] |
+| [[^input|API Key]] atau [[^input|Model]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Max Output]] atau [[^input|Temperature]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -77,11 +77,11 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 - **Isi [[^input|Input]] atau [[^input|Messages]].** Bila keduanya kosong, OpenAI mengembalikan error lewat [[^output|Error]].
 - **Tangani output [[^output|Error]].** Hubungkan block penanganan agar kegagalan dari OpenAI tidak berlalu tanpa pemberitahuan.
 - **Isi [[^input|Tools]] hanya bila Anda membutuhkan output [[^output|Function]].** Tanpa [[^input|Tools]], hasil berupa Function tidak akan keluar.
-- **Pastikan [[^input|API Key]], [[^input|Model]], [[^input|Max Output]], dan [[^input|Temperature]] selalu terisi** agar block tidak berstatus [[^flowstate|Fatal Error]].
+- **Pastikan [[^input|API Key]], [[^input|Model]], [[^input|Max Output]], dan [[^input|Temperature]] selalu terisi** agar block tidak berstatus [[^flowstate/Fatal Error]].
 
 ## Batasan dan Catatan
 
-- [[^flowstate|Fatal Error]] hanya terjadi bila [[^input|API Key]], [[^input|Model]], [[^input|Max Output]], atau [[^input|Temperature]] dibiarkan kosong.
+- [[^flowstate/Fatal Error]] hanya terjadi bila [[^input|API Key]], [[^input|Model]], [[^input|Max Output]], atau [[^input|Temperature]] dibiarkan kosong.
 - [[^output|Text]], [[^output|Function]], dan [[^output|Error]] tidak keluar bersamaan. Hanya satu yang meneruskan aliran sesuai hasil permintaan.
 - [[^output|Function]] hanya dapat keluar bila [[^input|Tools]] diisi.
 - [[^output|Error]] hanya keluar bila OpenAI mengembalikan respons error, termasuk ketika [[^input|Input]] dan [[^input|Messages]] sama-sama kosong.

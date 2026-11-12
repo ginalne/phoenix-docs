@@ -22,9 +22,9 @@ Node Setter Block memiliki 3 input di sisi kiri, 3 output di sisi kanan dan tida
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang akan diubah. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order baru Node. Minimal [[^value/number|0]] dan tidak boleh sama dengan Order saudara kandung Node. Bila bernilai negatif atau dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Name]] | [[Docs/Tipe Data/String]] | Name baru Node. Tidak boleh sama dengan Name saudara kandung Node. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Node yang akan diubah. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order baru Node. Minimal [[^value/number|0]] dan tidak boleh sama dengan Order saudara kandung Node. Bila bernilai negatif atau dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Name]] | [[Docs/Tipe Data/String]] | Name baru Node. Tidak boleh sama dengan Name saudara kandung Node. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -57,13 +57,13 @@ Tabel berikut memakai Node [[^value/node|Ponsel]] (Order [[^value/number|1]]) ya
 
 | Kondisi | Pass | Name Conflict | Order Conflict | Status |
 | ------- | ---- | ------------- | -------------- | ------ |
-| Node [[^value/node|Ponsel]] diubah dengan Name [[^value/string|Telepon Pintar]] dan Order [[^value/number|2]] | [[^value/node|Telepon Pintar]] | - | - | [[^flowstate|Succeed]] |
-| Name [[^value/string|Komputer]] sudah dipakai saudara kandung | - | [[^value/boolean/true]] | - | [[^flowstate|Error]] |
-| Order [[^value/number|0]] sudah dipakai saudara kandung | - | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| [[^input|Order]] bernilai negatif | - | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Node]], [[^input|Order]], atau [[^input|Name]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
+| Node [[^value/node|Ponsel]] diubah dengan Name [[^value/string|Telepon Pintar]] dan Order [[^value/number|2]] | [[^value/node|Telepon Pintar]] | - | - | [[^flowstate/Succeed]] |
+| Name [[^value/string|Komputer]] sudah dipakai saudara kandung | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
+| Order [[^value/number|0]] sudah dipakai saudara kandung | - | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^input|Order]] bernilai negatif | - | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Node]], [[^input|Order]], atau [[^input|Name]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -72,7 +72,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 ## Batasan dan Catatan
 
-- [[^input|Order]] bernilai minimal [[^value/number|0]]. Order negatif membuat block berstatus [[^flowstate|Fatal Error]].
+- [[^input|Order]] bernilai minimal [[^value/number|0]]. Order negatif membuat block berstatus [[^flowstate/Fatal Error]].
 - [[^input|Name]] dan [[^input|Order]] hanya diperiksa terhadap saudara kandung, yaitu Node lain dengan parent yang sama.
 - Name dan Order Node Origin dapat diubah, tetapi mengubah Order Origin tidak berpengaruh.
 - Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Node Setter Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].

@@ -42,8 +42,8 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 | Strings | Separator | Result | Status |
 | ------- | --------- | ------ | ------ |
-| `["merah", "hijau", "biru"]` | [[^value/string|/]] | [[^value/string|merah/hijau/biru]] | [[^flowstate|Succeed]] |
-| `["merah", "hijau", "biru"]` | [[^value/string|-]] | [[^value/string|merah-hijau-biru]] | [[^flowstate|Succeed]] |
+| `["merah", "hijau", "biru"]` | [[^value/string|/]] | [[^value/string|merah/hijau/biru]] | [[^flowstate/Succeed]] |
+| `["merah", "hijau", "biru"]` | [[^value/string|-]] | [[^value/string|merah-hijau-biru]] | [[^flowstate/Succeed]] |
 
 ## Praktik Terbaik
 

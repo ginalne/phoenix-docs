@@ -51,13 +51,13 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 | Key | Value | Object | Status |
 | --- | ----- | ------ | ------ |
-| [[^value/string|nama]] | [[^value/string|Kopi]] | [[^value/object|{ "nama": "Kopi" }]] | [[^flowstate|Succeed]] |
-| [[^value/string|job.status.level]] | [[^value/string|senior]] | [[^value/object|{ "job": { "status": { "level": "senior" } } }]] | [[^flowstate|Succeed]] |
-| [[^value/string|status]] | [[^value/object|{ "aktif": true }]] | [[^value/object|{ "status": { "aktif": true } }]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | [[^value/string|Kopi]] | - | [[^flowstate|Fatal Error]] |
-| [[^value/string|nama]] | [[^value/empty]] | - | [[^flowstate|Fatal Error]] |
+| [[^value/string|nama]] | [[^value/string|Kopi]] | [[^value/object|{ "nama": "Kopi" }]] | [[^flowstate/Succeed]] |
+| [[^value/string|job.status.level]] | [[^value/string|senior]] | [[^value/object|{ "job": { "status": { "level": "senior" } } }]] | [[^flowstate/Succeed]] |
+| [[^value/string|status]] | [[^value/object|{ "aktif": true }]] | [[^value/object|{ "status": { "aktif": true } }]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | [[^value/string|Kopi]] | - | [[^flowstate/Fatal Error]] |
+| [[^value/string|nama]] | [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -68,7 +68,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 
 - Assign Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 - Assign Block hanya mengisi satu atribut pada setiap eksekusi.
-- [[^input|Key]] atau [[^input|Value]] yang dibiarkan kosong menghasilkan status [[^flowstate|Fatal Error]].
+- [[^input|Key]] atau [[^input|Value]] yang dibiarkan kosong menghasilkan status [[^flowstate/Fatal Error]].
 - Assign bersifat *override*, sehingga data sebelumnya pada Key yang sama akan ditimpa.
 
 ## Lihat Juga

@@ -55,7 +55,7 @@ Teks merah [[^field|N/A Type]] pada [[^input|Operand]] berarti tipe data belum d
 
 ### Aturan Operand
 
-- Operator yang memerlukan Operand mewajibkan [[^input|Operand]] memiliki tipe data. [[^input|Operand]] yang dibiarkan [[^field|N/A Type]] menghasilkan [[^flowstate|Fatal Error]].
+- Operator yang memerlukan Operand mewajibkan [[^input|Operand]] memiliki tipe data. [[^input|Operand]] yang dibiarkan [[^field|N/A Type]] menghasilkan [[^flowstate/Fatal Error]].
 - Beberapa operator tidak memerlukan Operand, sehingga [[^input|Operand]] boleh dibiarkan [[^field|N/A Type]].
 - [[^input|Operand]] yang bernilai kosong tetapi tipe datanya sudah ditentukan dianggap valid.
 
@@ -65,31 +65,31 @@ Contoh berikut menambahkan filter pada Query berbasis Table pesanan dengan [[^in
 
 | Kondisi | Output Query | Status |
 | - | - | - |
-| [[^input|AND]] [[^value/boolean/true]] dan [[^input|Operand]] [[^value/number|150000]] | Query dengan tambahan filter yang digabung secara AND | [[^flowstate|Succeed]] |
-| [[^input|AND]] [[^value/boolean/false]] dan [[^input|Operand]] [[^value/number|150000]] | Query dengan tambahan filter yang digabung secara OR | [[^flowstate|Succeed]] |
-| Operator yang tidak memerlukan Operand dan [[^input|Operand]] dibiarkan [[^field|N/A Type]] | Query dengan tambahan filter | [[^flowstate|Succeed]] |
-| [[^input|Operand]] bertipe [[Docs/Tipe Data/Number]] dan dibiarkan kosong | Query dengan tambahan filter | [[^flowstate|Succeed]] |
-| Operator memerlukan Operand dan [[^input|Operand]] dibiarkan [[^field|N/A Type]] | - | [[^flowstate|Fatal Error]] |
-| [[^input|Query]], [[^input|AND]], [[^input|Column]], atau [[^input|Operator]] dibiarkan kosong | - | [[^flowstate|Fatal Error]] |
-| Aturan pengisian [[^input|Operator]] atau [[^input|Operand]] tidak sesuai | - | [[^flowstate|Fatal Error]] |
-| [[^input|Query]] berbasis data selain [[Docs/Tipe Data/Table]] | - | [[^flowstate|Fatal Error]] |
+| [[^input|AND]] [[^value/boolean/true]] dan [[^input|Operand]] [[^value/number|150000]] | Query dengan tambahan filter yang digabung secara AND | [[^flowstate/Succeed]] |
+| [[^input|AND]] [[^value/boolean/false]] dan [[^input|Operand]] [[^value/number|150000]] | Query dengan tambahan filter yang digabung secara OR | [[^flowstate/Succeed]] |
+| Operator yang tidak memerlukan Operand dan [[^input|Operand]] dibiarkan [[^field|N/A Type]] | Query dengan tambahan filter | [[^flowstate/Succeed]] |
+| [[^input|Operand]] bertipe [[Docs/Tipe Data/Number]] dan dibiarkan kosong | Query dengan tambahan filter | [[^flowstate/Succeed]] |
+| Operator memerlukan Operand dan [[^input|Operand]] dibiarkan [[^field|N/A Type]] | - | [[^flowstate/Fatal Error]] |
+| [[^input|Query]], [[^input|AND]], [[^input|Column]], atau [[^input|Operator]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
+| Aturan pengisian [[^input|Operator]] atau [[^input|Operand]] tidak sesuai | - | [[^flowstate/Fatal Error]] |
+| [[^input|Query]] berbasis data selain [[Docs/Tipe Data/Table]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
 - **Rangkai beberapa Add Table Filter Block** untuk kondisi bertingkat. Hubungkan [[^output|Query]] ke [[^input|Query]] block berikutnya agar setiap block menambahkan satu filter.
-- **Sesuaikan tipe data [[^input|Operand]] dengan [[^input|Column]]** dan [[^input|Operator]] yang dipilih, karena aturan yang tidak sesuai menghasilkan [[^flowstate|Fatal Error]].
+- **Sesuaikan tipe data [[^input|Operand]] dengan [[^input|Column]]** dan [[^input|Operator]] yang dipilih, karena aturan yang tidak sesuai menghasilkan [[^flowstate/Fatal Error]].
 - **Pastikan [[^input|Query]] berbasis [[Docs/Tipe Data/Table]]** sebelum menambahkan filter.
 - **Hubungkan [[^output|Query]] ke [[Docs/Modul Logic/Flow/Flow Block/Query/Execute/Table Output|Table Output Block]]** bila Anda membutuhkan [[Docs/Tipe Data/Row]] hasil filter.
 
 ## Batasan dan Catatan
 
 - Satu Add Table Filter Block menambahkan satu filter. Block ini tidak menjalankan Query dan tidak mengeluarkan [[Docs/Tipe Data/Row]].
-- [[^input|Query]] harus berbasis [[Docs/Tipe Data/Table]]. Bila tidak, block berstatus [[^flowstate|Fatal Error]].
-- [[^input|Operand]] boleh dibiarkan [[^field|N/A Type]] hanya bila operator tidak memerlukannya. Bila operator memerlukannya, block berstatus [[^flowstate|Fatal Error]].
-- [[^input|Query]], [[^input|AND]], [[^input|Column]], atau [[^input|Operator]] yang dibiarkan kosong menghasilkan [[^flowstate|Fatal Error]].
-- Aturan pengisian [[^input|Operator]] atau [[^input|Operand]] yang tidak sesuai menghasilkan [[^flowstate|Fatal Error]].
+- [[^input|Query]] harus berbasis [[Docs/Tipe Data/Table]]. Bila tidak, block berstatus [[^flowstate/Fatal Error]].
+- [[^input|Operand]] boleh dibiarkan [[^field|N/A Type]] hanya bila operator tidak memerlukannya. Bila operator memerlukannya, block berstatus [[^flowstate/Fatal Error]].
+- [[^input|Query]], [[^input|AND]], [[^input|Column]], atau [[^input|Operator]] yang dibiarkan kosong menghasilkan [[^flowstate/Fatal Error]].
+- Aturan pengisian [[^input|Operator]] atau [[^input|Operand]] yang tidak sesuai menghasilkan [[^flowstate/Fatal Error]].
 - Add Table Filter Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].
 
 ## Lihat Juga

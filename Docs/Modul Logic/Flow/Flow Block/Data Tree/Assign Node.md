@@ -21,9 +21,9 @@ Assign Node Block memiliki 3 input di sisi kiri, 4 output di sisi kanan dan tida
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Parent]] | [[Docs/Tipe Data/Node]] | Node yang menjadi parent baru. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order Children pada Parent yang baru. Minimal [[^value/number|0]] dan tidak boleh sama dengan Order anak lain milik Parent. Bila bernilai negatif atau dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
-| [[^input|Children]] | [[Docs/Tipe Data/Node]] | Node yang ditempatkan di bawah Parent. Harus berada pada Tree yang sama dengan Parent. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Parent]] | [[Docs/Tipe Data/Node]] | Node yang menjadi parent baru. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Order]] | [[Docs/Tipe Data/Number]] | Order Children pada Parent yang baru. Minimal [[^value/number|0]] dan tidak boleh sama dengan Order anak lain milik Parent. Bila bernilai negatif atau dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
+| [[^input|Children]] | [[Docs/Tipe Data/Node]] | Node yang ditempatkan di bawah Parent. Harus berada pada Tree yang sama dengan Parent. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -45,7 +45,7 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 ## Cara Kerja
 
 1. Isi [[^input|Parent]], [[^input|Order]], dan [[^input|Children]], langsung pada block atau dari output block lain.
-2. Block memeriksa bahwa Parent dan Children berada pada Tree yang sama. Bila tidak, block berstatus [[^flowstate|Error]] dan semua output tidak ada.
+2. Block memeriksa bahwa Parent dan Children berada pada Tree yang sama. Bila tidak, block berstatus [[^flowstate/Error]] dan semua output tidak ada.
 3. Block memeriksa bahwa Children bukan Origin dan Parent bukan keturunan Children, lalu memeriksa Name dan Order Children terhadap anak Parent yang sudah ada.
 4. Bila tidak ada konflik, Children dipindahkan beserta seluruh keturunannya menjadi anak Parent dengan Order yang diinput, dan [[^output|Pass Children]] meneruskan Node tersebut.
 5. Bila ada konflik, Node tidak dipindahkan dan hanya output konflik yang sesuai meneruskan aliran.
@@ -56,16 +56,16 @@ Tabel berikut memakai Tree Kategori Produk. Node [[^value/node|Elektronik]] memi
 
 | Kondisi | Pass Children | Name Conflict | Order Conflict | Relation Conflict | Status |
 | ------- | ------------- | ------------- | -------------- | ----------------- | ------ |
-| Parent [[^value/node|Elektronik]], Children [[^value/node|Aksesori]], Order [[^value/number|2]] belum dipakai | [[^value/node|Aksesori]] | - | - | - | [[^flowstate|Succeed]] |
-| Order [[^value/number|1]] sudah dipakai anak lain milik Parent | - | - | [[^value/boolean/true]] | - | [[^flowstate|Error]] |
-| Name Children sama dengan salah satu anak Parent | - | [[^value/boolean/true]] | - | - | [[^flowstate|Error]] |
-| Parent [[^value/node|Laptop]] adalah keturunan Children [[^value/node|Elektronik]] | - | - | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Children adalah Node Origin | - | - | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Parent dan Children berada pada Tree yang berbeda | - | - | - | - | [[^flowstate|Error]] |
-| [[^input|Order]] bernilai negatif | - | - | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Parent]], [[^input|Order]], atau [[^input|Children]] dibiarkan kosong | - | - | - | - | [[^flowstate|Fatal Error]] |
+| Parent [[^value/node|Elektronik]], Children [[^value/node|Aksesori]], Order [[^value/number|2]] belum dipakai | [[^value/node|Aksesori]] | - | - | - | [[^flowstate/Succeed]] |
+| Order [[^value/number|1]] sudah dipakai anak lain milik Parent | - | - | [[^value/boolean/true]] | - | [[^flowstate/Error]] |
+| Name Children sama dengan salah satu anak Parent | - | [[^value/boolean/true]] | - | - | [[^flowstate/Error]] |
+| Parent [[^value/node|Laptop]] adalah keturunan Children [[^value/node|Elektronik]] | - | - | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Children adalah Node Origin | - | - | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Parent dan Children berada pada Tree yang berbeda | - | - | - | - | [[^flowstate/Error]] |
+| [[^input|Order]] bernilai negatif | - | - | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Parent]], [[^input|Order]], atau [[^input|Children]] dibiarkan kosong | - | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -74,7 +74,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 
 ## Batasan dan Catatan
 
-- [[^input|Order]] bernilai minimal [[^value/number|0]]. Order negatif membuat block berstatus [[^flowstate|Fatal Error]].
+- [[^input|Order]] bernilai minimal [[^value/number|0]]. Order negatif membuat block berstatus [[^flowstate/Fatal Error]].
 - Seluruh keturunan Children ikut berpindah bersama Children.
 - Children tidak dapat ditempatkan di bawah Node keturunannya sendiri, dan Origin tidak dapat dijadikan Children.
 - Menempatkan Children pada Parent yang sudah menjadi parent-nya tidak menghasilkan Relation Conflict dan tidak mengubah hubungan parent-nya.

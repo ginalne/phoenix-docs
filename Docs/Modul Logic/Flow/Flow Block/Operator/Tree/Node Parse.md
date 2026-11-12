@@ -58,16 +58,16 @@ Tanpa kedalaman, hasilnya hanya atribut Node itu sendiri. Anc. Depth menambahkan
 
 | Node | Anc. Depth | Child Depth | Hasil (Object) | Status |
 | ---- | ---------- | ----------- | -------------- | ------ |
-| [[^value/node|Laptop]] | [[^value/empty]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop" }]] | [[^flowstate|Succeed]] |
-| [[^value/node|Laptop]] | [[^value/number|1]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer" } }]] | [[^flowstate|Succeed]] |
-| [[^value/node|Laptop]] | [[^value/number|2]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer", "parent": { "order": 1, "name": "Elektronik" } } }]] | [[^flowstate|Succeed]] |
-| [[^value/node|Laptop]] | [[^value/empty]] | [[^value/number|1]] | [[^value/object|{ "order": 1, "name": "Laptop", "children": [{ "order": 1, "name": "Laptop Gaming" }, { "order": 2, "name": "Laptop Kantor" }] }]] | [[^flowstate|Succeed]] |
-| [[^value/node|Laptop]] | [[^value/number|1]] | [[^value/number|1]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer" }, "children": [{ "order": 1, "name": "Laptop Gaming" }, { "order": 2, "name": "Laptop Kantor" }] }]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | [[^value/number|1]] | [[^value/number|1]] | - | [[^flowstate|Fatal Error]] |
+| [[^value/node|Laptop]] | [[^value/empty]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop" }]] | [[^flowstate/Succeed]] |
+| [[^value/node|Laptop]] | [[^value/number|1]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer" } }]] | [[^flowstate/Succeed]] |
+| [[^value/node|Laptop]] | [[^value/number|2]] | [[^value/empty]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer", "parent": { "order": 1, "name": "Elektronik" } } }]] | [[^flowstate/Succeed]] |
+| [[^value/node|Laptop]] | [[^value/empty]] | [[^value/number|1]] | [[^value/object|{ "order": 1, "name": "Laptop", "children": [{ "order": 1, "name": "Laptop Gaming" }, { "order": 2, "name": "Laptop Kantor" }] }]] | [[^flowstate/Succeed]] |
+| [[^value/node|Laptop]] | [[^value/number|1]] | [[^value/number|1]] | [[^value/object|{ "order": 1, "name": "Laptop", "parent": { "order": 1, "name": "Komputer" }, "children": [{ "order": 1, "name": "Laptop Gaming" }, { "order": 2, "name": "Laptop Kantor" }] }]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | [[^value/number|1]] | [[^value/number|1]] | - | [[^flowstate/Fatal Error]] |
 
 Perhatikan perbedaannya: Anc. Depth bergerak **ke atas** dan menghasilkan `parent` bersarang (Komputer, lalu Elektronik), sedangkan Child Depth bergerak **ke bawah** dan menghasilkan `children` berupa daftar Node (Laptop Gaming dan Laptop Kantor).
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -77,7 +77,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - Node Parse Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
-- [[^input|Node]] yang dibiarkan kosong menghasilkan status [[^flowstate|Fatal Error]].
+- [[^input|Node]] yang dibiarkan kosong menghasilkan status [[^flowstate/Fatal Error]].
 - [[^input|Anc. Depth]] dan [[^input|Child Depth]] yang dibiarkan kosong dianggap bernilai [[^value/number|0]], sehingga atribut `parent` dan `children` tidak muncul pada hasil.
 
 ## Lihat Juga

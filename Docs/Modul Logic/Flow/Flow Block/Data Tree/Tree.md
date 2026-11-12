@@ -21,7 +21,7 @@ Tree Block memiliki 1 input di sisi kiri, 4 output di sisi kanan dan tidak memil
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Tree]] | [[Docs/Tipe Data/Tree]] | Pilih Tree atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Tree]] | [[Docs/Tipe Data/Tree]] | Pilih Tree atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -46,12 +46,12 @@ Tabel berikut menunjukkan hasil Tree Block untuk beberapa kondisi input.
 
 | Kondisi | Pass | Name | Desc | Merger Mode | Status |
 | ------- | ---- | ---- | ---- | ----------- | ------ |
-| Tree terisi, Description terisi, bukan merger | [[^value/tree|Kategori Produk]] | [[^value/string|Kategori Produk]] | [[^value/text|Hierarki kategori produk]] | [[^value/boolean/false]] | [[^flowstate|Succeed]] |
-| Tree terisi, Description kosong | [[^value/tree|Kategori Produk]] | [[^value/string|Kategori Produk]] | [[^value/empty]] | [[^value/boolean/false]] | [[^flowstate|Succeed]] |
-| Tree terisi dan bersifat merger | [[^value/tree|Kategori Gabungan]] | [[^value/string|Kategori Gabungan]] | [[^value/text|Gabungan beberapa Tree]] | [[^value/boolean/true]] | [[^flowstate|Succeed]] |
-| [[^input|Tree]] dibiarkan kosong | - | - | - | - | [[^flowstate|Fatal Error]] |
+| Tree terisi, Description terisi, bukan merger | [[^value/tree|Kategori Produk]] | [[^value/string|Kategori Produk]] | [[^value/text|Hierarki kategori produk]] | [[^value/boolean/false]] | [[^flowstate/Succeed]] |
+| Tree terisi, Description kosong | [[^value/tree|Kategori Produk]] | [[^value/string|Kategori Produk]] | [[^value/empty]] | [[^value/boolean/false]] | [[^flowstate/Succeed]] |
+| Tree terisi dan bersifat merger | [[^value/tree|Kategori Gabungan]] | [[^value/string|Kategori Gabungan]] | [[^value/text|Gabungan beberapa Tree]] | [[^value/boolean/true]] | [[^flowstate/Succeed]] |
+| [[^input|Tree]] dibiarkan kosong | - | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -61,7 +61,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - Tree Block hanya membaca atribut Tree. Untuk atribut [[Docs/Tipe Data/Node]], gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node|Node Block]].
-- [[^input|Tree]] yang kosong membuat block berstatus [[^flowstate|Fatal Error]] dan semua output tidak ada.
+- [[^input|Tree]] yang kosong membuat block berstatus [[^flowstate/Fatal Error]] dan semua output tidak ada.
 - Karena bukan Flow Block Event, Tree Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

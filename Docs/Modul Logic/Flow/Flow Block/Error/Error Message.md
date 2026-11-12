@@ -25,7 +25,7 @@ Error Message Block memiliki satu input di sisi kiri, tidak memiliki output dan 
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Message]] | [[Docs/Tipe Data/Text]] | Pesan error yang akan tampil di [[Docs/Modul Logic/Flow/Flow Activity]]. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Message]] | [[Docs/Tipe Data/Text]] | Pesan error yang akan tampil di [[Docs/Modul Logic/Flow/Flow Activity]]. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 Block ini tidak memiliki output, sehingga tidak meneruskan aliran ke block lain. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
@@ -42,10 +42,10 @@ Block ini tidak memiliki output, sehingga tidak meneruskan aliran ke block lain.
 
 | Kondisi | Hasil | Status |
 | - | - | - |
-| [[^input|Message]] berisi [[^value/text|Stok tidak mencukupi]] dan block dieksekusi | Aliran dihentikan dan pesan [[^value/text|Stok tidak mencukupi]] tampil di [[Docs/Modul Logic/Flow/Flow Activity]]. Perubahan dari block sebelumnya tidak dikembalikan | [[^flowstate|Abort]] |
-| [[^input|Message]] dibiarkan kosong | - | [[^flowstate|Fatal Error]] |
+| [[^input|Message]] berisi [[^value/text|Stok tidak mencukupi]] dan block dieksekusi | Aliran dihentikan dan pesan [[^value/text|Stok tidak mencukupi]] tampil di [[Docs/Modul Logic/Flow/Flow Activity]]. Perubahan dari block sebelumnya tidak dikembalikan | [[^flowstate/Abort]] |
+| [[^input|Message]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Abort]] menghentikan aliran dan menampilkan pesan error di [[Docs/Modul Logic/Flow/Flow Activity]], tanpa mengembalikan perubahan yang sudah dilakukan block sebelumnya. Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Abort]] menghentikan aliran dan menampilkan pesan error di [[Docs/Modul Logic/Flow/Flow Activity]], tanpa mengembalikan perubahan yang sudah dilakukan block sebelumnya. Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -57,7 +57,7 @@ Status [[^flowstate|Abort]] menghentikan aliran dan menampilkan pesan error di [
 
 - Error Message Block tidak memiliki output, sehingga tidak ada block yang dapat dihubungkan setelahnya.
 - Saat dieksekusi, block menghentikan aliran pada Activity yang sedang berjalan. Perubahan yang sudah dilakukan block sebelumnya yang berhasil tereksekusi tidak dapat dikembalikan.
-- [[^input|Message]] yang dibiarkan kosong menghasilkan [[^flowstate|Fatal Error]].
+- [[^input|Message]] yang dibiarkan kosong menghasilkan [[^flowstate/Fatal Error]].
 - Pesan error hanya terlihat di [[Docs/Modul Logic/Flow/Flow Activity]].
 - Error Message Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].
 

@@ -46,11 +46,11 @@ Tidak semua output meneruskan aliran Flow. Block yang terhubung ke output yang t
 
 | Text | Object | Error | Status |
 | ---- | ------ | ----- | ------ |
-| [[^value/text|{ "nama": "Kopi", "harga": 15000 }]] | [[^value/object|{ "nama": "Kopi", "harga": 15000 }]] | - | [[^flowstate|Succeed]] |
-| [[^value/text|{ nama: Kopi]] | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| [[^value/empty]] | - | - | [[^flowstate|Fatal Error]] |
+| [[^value/text|{ "nama": "Kopi", "harga": 15000 }]] | [[^value/object|{ "nama": "Kopi", "harga": 15000 }]] | - | [[^flowstate/Succeed]] |
+| [[^value/text|{ nama: Kopi]] | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| [[^value/empty]] | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -60,7 +60,7 @@ Status [[^flowstate|Error]] dan [[^flowstate|Fatal Error]] akan menghasilkan err
 ## Batasan dan Catatan
 
 - Parse Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
-- [[^input|Text]] yang dibiarkan kosong menghasilkan status [[^flowstate|Fatal Error]], berbeda dengan Text yang terisi tetapi tidak sesuai kaidah Object yang mengeluarkan output [[^output|Error]].
+- [[^input|Text]] yang dibiarkan kosong menghasilkan status [[^flowstate/Fatal Error]], berbeda dengan Text yang terisi tetapi tidak sesuai kaidah Object yang mengeluarkan output [[^output|Error]].
 
 ## Lihat Juga
 

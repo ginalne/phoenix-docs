@@ -43,10 +43,10 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 | String (pertama) | String (kedua) | Result | Status |
 | ---------------- | -------------- | ------ | ------ |
-| [[^value/string|PSN-]] | [[^value/string|001]] | [[^value/string|PSN-001]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | [[^value/string|001]] | [[^value/string|001]] | [[^flowstate|Succeed]] |
-| [[^value/string|PSN-]] | [[^value/empty]] | [[^value/string|PSN-]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | [[^value/empty]] | [[^value/empty]] | [[^flowstate|Succeed]] |
+| [[^value/string|PSN-]] | [[^value/string|001]] | [[^value/string|PSN-001]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | [[^value/string|001]] | [[^value/string|001]] | [[^flowstate/Succeed]] |
+| [[^value/string|PSN-]] | [[^value/empty]] | [[^value/string|PSN-]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | [[^value/empty]] | [[^value/empty]] | [[^flowstate/Succeed]] |
 
 ## Praktik Terbaik
 
@@ -58,7 +58,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 - Concatenate Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 - Block ini hanya menerima dua input. Penggabungan lebih banyak String dilakukan dengan merangkai block.
-- Block ini tidak menghasilkan status [[^flowstate|Error]] maupun [[^flowstate|Fatal Error]] karena input kosong tetap menghasilkan output yang valid.
+- Block ini tidak menghasilkan status [[^flowstate/Error]] maupun [[^flowstate/Fatal Error]] karena input kosong tetap menghasilkan output yang valid.
 
 ## Lihat Juga
 

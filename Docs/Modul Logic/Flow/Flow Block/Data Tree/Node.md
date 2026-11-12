@@ -21,7 +21,7 @@ Node Block memiliki 1 input di sisi kiri, 4 output di sisi kanan dan tidak memil
 
 | Input | Tipe Data | Keterangan |
 | ----- | --------- | ---------- |
-| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Pilih Node atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate|Fatal Error]]. |
+| [[^input|Node]] | [[Docs/Tipe Data/Node]] | Pilih Node atau hubungkan dari output block lain. Bila dibiarkan kosong, block berstatus [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -46,11 +46,11 @@ Tabel berikut menunjukkan hasil Node Block pada Tree Kategori Produk.
 
 | Kondisi | Pass | Tree | Order | Name | Status |
 | ------- | ---- | ---- | ----- | ---- | ------ |
-| Node yang berada di bawah Node lain | [[^value/node|Ponsel]] | [[^value/tree|Kategori Produk]] | [[^value/number|1]] | [[^value/string|Ponsel]] | [[^flowstate|Succeed]] |
-| Node yang menjadi anak pertama | [[^value/node|Komputer]] | [[^value/tree|Kategori Produk]] | [[^value/number|0]] | [[^value/string|Komputer]] | [[^flowstate|Succeed]] |
-| [[^input|Node]] dibiarkan kosong | - | - | - | - | [[^flowstate|Fatal Error]] |
+| Node yang berada di bawah Node lain | [[^value/node|Ponsel]] | [[^value/tree|Kategori Produk]] | [[^value/number|1]] | [[^value/string|Ponsel]] | [[^flowstate/Succeed]] |
+| Node yang menjadi anak pertama | [[^value/node|Komputer]] | [[^value/tree|Kategori Produk]] | [[^value/number|0]] | [[^value/string|Komputer]] | [[^flowstate/Succeed]] |
+| [[^input|Node]] dibiarkan kosong | - | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -60,7 +60,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - Node Block tidak mengeluarkan parent maupun anak Node. Untuk menelusuri hubungan Node, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Parent|Node Get Parent Block]], [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Children|Node Get Children Block]], atau [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Node Get Ancestor|Node Get Ancestor Block]].
-- [[^input|Node]] yang kosong membuat block berstatus [[^flowstate|Fatal Error]] dan semua output tidak ada.
+- [[^input|Node]] yang kosong membuat block berstatus [[^flowstate/Fatal Error]] dan semua output tidak ada.
 - Karena bukan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]], Node Block hanya dieksekusi bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
 ## Lihat Juga

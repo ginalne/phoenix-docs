@@ -43,11 +43,11 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 | Objects | Result | Status |
 | ------- | ------ | ------ |
-| `[{ "produk": "Kopi", "harga": 15000 }, { "harga": 18000, "stok": 20 }]` | [[^value/object|{ "produk": "Kopi", "harga": 18000, "stok": 20 }]] | [[^flowstate|Succeed]] |
-| `[{ "job": { "judul": "staf" } }, { "job": { "level": "2" } }]` | [[^value/object|{ "job": { "judul": "staf", "level": "2" } }]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | - | [[^flowstate|Fatal Error]] |
+| `[{ "produk": "Kopi", "harga": 15000 }, { "harga": 18000, "stok": 20 }]` | [[^value/object|{ "produk": "Kopi", "harga": 18000, "stok": 20 }]] | [[^flowstate/Succeed]] |
+| `[{ "job": { "judul": "staf" } }, { "job": { "level": "2" } }]` | [[^value/object|{ "job": { "judul": "staf", "level": "2" } }]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -57,7 +57,7 @@ Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil d
 ## Batasan dan Catatan
 
 - Merge Block adalah Flow Block non-Event sehingga hanya diproses bila memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
-- [[^input|Objects]] yang dibiarkan kosong menghasilkan status [[^flowstate|Fatal Error]].
+- [[^input|Objects]] yang dibiarkan kosong menghasilkan status [[^flowstate/Fatal Error]].
 - Penimpaan hanya terjadi pada atribut yang sama persis. Atribut yang berbeda pada kedalaman mana pun tetap dipertahankan.
 
 ## Lihat Juga

@@ -19,7 +19,7 @@ Table Row Block memiliki satu input di sisi kiri, tiga output di sisi kanan dan 
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Row]] | [[Docs/Tipe Data/Row]] | Row yang atributnya akan diambil. Isi dengan Row atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
+| [[^input|Row]] | [[Docs/Tipe Data/Row]] | Row yang atributnya akan diambil. Isi dengan Row atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
 
 ### Output
 
@@ -29,11 +29,11 @@ Table Row Block memiliki satu input di sisi kiri, tiga output di sisi kanan dan 
 | [[^output|Index]] | [[Docs/Tipe Data/Number]] | ID Row pada tampilan [[Docs/Modul Data/Table/Apa itu Table|Table]]. |
 | [[^output|Table]] | [[Docs/Tipe Data/Table]] | Table tempat Row berada. |
 
-Ketiga output meneruskan aliran bila [[^input|Row]] terisi, dan tidak meneruskan aliran bila terjadi [[^flowstate|Fatal Error]]. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
+Ketiga output meneruskan aliran bila [[^input|Row]] terisi, dan tidak meneruskan aliran bila terjadi [[^flowstate/Fatal Error]]. Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Output Flow Block]].
 
 ## Cara Kerja
 
-1. Block memeriksa [[^input|Row]]. Bila kosong, block berhenti dengan [[^flowstate|Fatal Error]].
+1. Block memeriksa [[^input|Row]]. Bila kosong, block berhenti dengan [[^flowstate/Fatal Error]].
 2. Block membaca atribut [[Docs/Tipe Data/Row]] yang diinput.
 3. [[^output|Pass]], [[^output|Index]], dan [[^output|Table]] diteruskan bersamaan ke block yang terhubung.
 
@@ -43,8 +43,8 @@ Mengenali Row pesanan yang baru ditambahkan agar nomornya dapat dipakai pada lan
 
 | Kondisi | [[^output|Pass]] | [[^output|Index]] | [[^output|Table]] | Status |
 | - | - | - | - | - |
-| [[^input|Row]] berisi Row dari Table pesanan | [[Docs/Tipe Data/Row]] | [[^value/number|12]] | [[Docs/Tipe Data/Table]] | [[^flowstate|Succeed]] |
-| [[^input|Row]] dibiarkan kosong | - | - | - | [[^flowstate|Fatal Error]] |
+| [[^input|Row]] berisi Row dari Table pesanan | [[Docs/Tipe Data/Row]] | [[^value/number|12]] | [[Docs/Tipe Data/Table]] | [[^flowstate/Succeed]] |
+| [[^input|Row]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
 Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 

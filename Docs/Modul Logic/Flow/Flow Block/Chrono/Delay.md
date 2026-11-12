@@ -36,7 +36,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 ## Cara Kerja
 
 1. Isi [[^input|Duration]] dalam satuan detik, langsung pada block atau dari output block lain.
-2. Setelah memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat eksekusi]], block mulai menunggu. Selama menunggu, status pada [[Docs/Modul Logic/Flow/Flow Activity]] terlihat [[^flowstate|Waiting]].
+2. Setelah memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat eksekusi]], block mulai menunggu. Selama menunggu, status pada [[Docs/Modul Logic/Flow/Flow Activity]] terlihat [[^flowstate/Waiting]].
 3. Setelah waktu tunggu selesai, [[^output|Finish]] mengeluarkan [[^value/boolean/true]] dan aliran dilanjutkan ke block yang terhubung.
 
 ## Contoh Penggunaan
@@ -45,25 +45,25 @@ Contoh berikut memakai [[^input|Duration]] [[^value/number|5]].
 
 | Kondisi | Finish | Status |
 | - | - | - |
-| Selama 5 detik menunggu | - | [[^flowstate|Waiting]] |
-| Setelah 5 detik berlalu | [[^value/boolean/true]] | [[^flowstate|Succeed]] |
-| [[^input|Duration]] [[^value/number|0.5]] dan 0.5 detik berlalu | [[^value/boolean/true]] | [[^flowstate|Succeed]] |
-| [[^input|Duration]] dibiarkan kosong | - | [[^flowstate|Fatal Error]] |
-| [[^input|Duration]] bernilai 0 atau negatif | - | [[^flowstate|Fatal Error]] |
+| Selama 5 detik menunggu | - | [[^flowstate/Waiting]] |
+| Setelah 5 detik berlalu | [[^value/boolean/true]] | [[^flowstate/Succeed]] |
+| [[^input|Duration]] [[^value/number|0.5]] dan 0.5 detik berlalu | [[^value/boolean/true]] | [[^flowstate/Succeed]] |
+| [[^input|Duration]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
+| [[^input|Duration]] bernilai 0 atau negatif | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
 - **Isi [[^input|Duration]] dalam detik dan lebih dari 0.** Pastikan nilainya sudah dikonversi ke detik sebelum diisi.
 - **Gunakan angka pecahan untuk waktu tunggu kurang dari satu detik**, misalnya [[^value/number|0.5]] untuk setengah detik.
-- **Pantau status [[^flowstate|Waiting]] pada [[Docs/Modul Logic/Flow/Flow Activity]]** untuk memastikan Delay Block sedang menunggu dan belum selesai.
+- **Pantau status [[^flowstate/Waiting]] pada [[Docs/Modul Logic/Flow/Flow Activity]]** untuk memastikan Delay Block sedang menunggu dan belum selesai.
 - **Gunakan Delay Block untuk menjeda aliran** sebelum block yang perlu menunggu waktu tertentu, misalnya sebelum memanggil sistem lain lewat [[Docs/Modul Logic/Flow/Flow Block/Modular/API/HTTP Request|HTTP Request API Block]].
 
 ## Batasan dan Catatan
 
-- [[^input|Duration]] yang dibiarkan kosong menghasilkan [[^flowstate|Fatal Error]].
-- Satuan [[^input|Duration]] adalah detik, dan nilainya harus lebih dari 0. Nilai 0 atau negatif menghasilkan [[^flowstate|Fatal Error]].
+- [[^input|Duration]] yang dibiarkan kosong menghasilkan [[^flowstate/Fatal Error]].
+- Satuan [[^input|Duration]] adalah detik, dan nilainya harus lebih dari 0. Nilai 0 atau negatif menghasilkan [[^flowstate/Fatal Error]].
 - Tidak ada batas maksimum untuk [[^input|Duration]]. Angka pecahan diperbolehkan dengan akurasi milidetik.
 - Selama menunggu, [[^output|Finish]] belum keluar sehingga block yang terhubung ke [[^output|Finish]] belum dieksekusi.
 - Delay Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].

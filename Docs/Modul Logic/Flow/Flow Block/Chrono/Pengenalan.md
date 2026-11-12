@@ -23,7 +23,7 @@ Phoenix menyediakan satu Flow Block Chrono.
 
 | Block | Fungsi |
 | --- | --- |
-| [[Docs/Modul Logic/Flow/Flow Block/Chrono/Delay|Delay Chrono Block]] | Menunda aliran dengan waktu yang dapat ditentukan. Selama penundaan, block berstatus [[^flowstate|Waiting]]. |
+| [[Docs/Modul Logic/Flow/Flow Block/Chrono/Delay|Delay Chrono Block]] | Menunda aliran dengan waktu yang dapat ditentukan. Selama penundaan, block berstatus [[^flowstate/Waiting]]. |
 
 ## Memilih Flow Block Chrono
 

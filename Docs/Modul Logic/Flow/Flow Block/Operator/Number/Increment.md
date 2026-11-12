@@ -42,12 +42,12 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 | Data | Adders | Result | Status |
 | ---- | ------ | ------ | ------ |
-| [[^value/number|10]] | [[^value/number|1]] | [[^value/number|11]] | [[^flowstate|Succeed]] |
-| [[^value/number|100]] | [[^value/number|25]] | [[^value/number|125]] | [[^flowstate|Succeed]] |
-| [[^value/empty]] | [[^value/number|1]] | - | [[^flowstate|Fatal Error]] |
-| [[^value/number|10]] | [[^value/empty]] | - | [[^flowstate|Fatal Error]] |
+| [[^value/number|10]] | [[^value/number|1]] | [[^value/number|11]] | [[^flowstate/Succeed]] |
+| [[^value/number|100]] | [[^value/number|25]] | [[^value/number|125]] | [[^flowstate/Succeed]] |
+| [[^value/empty]] | [[^value/number|1]] | - | [[^flowstate/Fatal Error]] |
+| [[^value/number|10]] | [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

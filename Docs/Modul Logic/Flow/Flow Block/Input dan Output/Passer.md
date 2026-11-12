@@ -72,26 +72,26 @@ Contoh berikut memakai Passer 3 dengan [[^input|Data 1]] bertipe [[Docs/Tipe Dat
 
 | Kondisi | Pass 1 | Pass 2 | Pass 3 | Status |
 | - | - | - | - | - |
-| Ketiga Pass terhubung | [[^value/string|PSN-001]] | [[^value/number|150000]] | [[^value/boolean/true]] | [[^flowstate|Succeed]] |
-| Pass 2 tidak terhubung | [[^value/string|PSN-001]] | - | [[^value/boolean/true]] | [[^flowstate|Succeed]] |
-| Data 2 dibiarkan [[^field|N/A Type]] dan Pass 2 tidak terhubung | [[^value/string|PSN-001]] | - | [[^value/boolean/true]] | [[^flowstate|Succeed]] |
-| Data 2 dibiarkan [[^field|N/A Type]] dan Pass 2 terhubung | - | - | - | [[^flowstate|Fatal Error]] |
+| Ketiga Pass terhubung | [[^value/string|PSN-001]] | [[^value/number|150000]] | [[^value/boolean/true]] | [[^flowstate/Succeed]] |
+| Pass 2 tidak terhubung | [[^value/string|PSN-001]] | - | [[^value/boolean/true]] | [[^flowstate/Succeed]] |
+| Data 2 dibiarkan [[^field|N/A Type]] dan Pass 2 tidak terhubung | [[^value/string|PSN-001]] | - | [[^value/boolean/true]] | [[^flowstate/Succeed]] |
+| Data 2 dibiarkan [[^field|N/A Type]] dan Pass 2 terhubung | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate|Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
 - **Pilih varian sesuai jumlah data.** Gunakan Passer Block dengan jumlah pasangan [[^input|Data]] dan [[^output|Pass]] yang sama dengan kebutuhan agar tidak ada pasangan yang tidak terpakai.
 - **Hubungkan [[^output|Pass]] hanya untuk [[^input|Data]] yang dibutuhkan.** [[^input|Data]] yang diisi langsung tetapi [[^output|Pass]]-nya tidak terhubung tidak memberi manfaat.
-- **Tentukan tipe data setiap [[^input|Data]] yang [[^output|Pass]]-nya terhubung.** [[^field|N/A Type]] pada pasangan tersebut menghasilkan [[^flowstate|Fatal Error]].
+- **Tentukan tipe data setiap [[^input|Data]] yang [[^output|Pass]]-nya terhubung.** [[^field|N/A Type]] pada pasangan tersebut menghasilkan [[^flowstate/Fatal Error]].
 - **Gunakan Passer Block untuk menahan aliran** hingga seluruh aliran yang terhubung ke [[^input|Data]] selesai, lalu lanjutkan ke block berikutnya lewat [[^output|Pass]].
 
 ## Batasan dan Catatan
 
 - Passer Block meneruskan data tanpa mengubahnya, dan nomor [[^output|Pass]] selalu sesuai dengan nomor [[^input|Data]].
 - [[^input|Data]] bisa menjadi tidak berguna bila [[^output|Pass]] pasangannya tidak memiliki koneksi.
-- Bila [[^output|Pass]] memiliki koneksi tetapi [[^input|Data]] pasangannya dibiarkan [[^field|N/A Type]], block berstatus [[^flowstate|Fatal Error]].
-- Passer Block tidak berstatus [[^flowstate|Error]].
+- Bila [[^output|Pass]] memiliki koneksi tetapi [[^input|Data]] pasangannya dibiarkan [[^field|N/A Type]], block berstatus [[^flowstate/Fatal Error]].
+- Passer Block tidak berstatus [[^flowstate/Error]].
 - Passer Block tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat Flow Block diproses]].
 
 ## Lihat Juga

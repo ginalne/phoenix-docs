@@ -22,9 +22,9 @@ TableData Setter Block memiliki tiga input di sisi kiri, dua output di sisi kana
 
 | Input | Tipe Data | Keterangan |
 | - | - | - |
-| [[^input|Column]] | [[Docs/Tipe Data/Column]] | Column tempat [[Docs/Tipe Data/TableData]] berada. Isi dengan Column atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
-| [[^input|Row]] | [[Docs/Tipe Data/Row]], [[Docs/Tipe Data/Number]], atau [[Docs/Tipe Data/String]] | Row tempat [[Docs/Tipe Data/TableData]] berada. Dapat diganti dengan [[Docs/Tipe Data/Number]] atau [[Docs/Tipe Data/String]] yang berisi Index Row (lihat [[#Menentukan Tipe Data Row]]). Dibiarkan kosong menimbulkan [[^flowstate|Fatal Error]]. |
-| [[^input|Value]] | [[^field|N/A Type]] sampai tipe ditentukan | Nilai baru untuk [[Docs/Tipe Data/TableData]]. Tipe data harus ditentukan lebih dulu (lihat [[#Menentukan Tipe Data Value]]). Value yang masih [[^field|N/A Type]] menimbulkan [[^flowstate|Fatal Error]]. |
+| [[^input|Column]] | [[Docs/Tipe Data/Column]] | Column tempat [[Docs/Tipe Data/TableData]] berada. Isi dengan Column atau hubungkan dari output block lain. Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
+| [[^input|Row]] | [[Docs/Tipe Data/Row]], [[Docs/Tipe Data/Number]], atau [[Docs/Tipe Data/String]] | Row tempat [[Docs/Tipe Data/TableData]] berada. Dapat diganti dengan [[Docs/Tipe Data/Number]] atau [[Docs/Tipe Data/String]] yang berisi Index Row (lihat [[#Menentukan Tipe Data Row]]). Dibiarkan kosong menimbulkan [[^flowstate/Fatal Error]]. |
+| [[^input|Value]] | [[^field|N/A Type]] sampai tipe ditentukan | Nilai baru untuk [[Docs/Tipe Data/TableData]]. Tipe data harus ditentukan lebih dulu (lihat [[#Menentukan Tipe Data Value]]). Value yang masih [[^field|N/A Type]] menimbulkan [[^flowstate/Fatal Error]]. |
 
 [[^input|Column]] dan [[^input|Row]] harus berasal dari [[Docs/Modul Data/Table/Apa itu Table|Table]] yang sama.
 
@@ -55,8 +55,8 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 
 ## Cara Kerja
 
-1. Block memeriksa [[^input|Column]], [[^input|Row]], dan [[^input|Value]]. Bila [[^input|Column]] atau [[^input|Row]] kosong, atau [[^input|Value]] masih [[^field|N/A Type]], block berhenti dengan [[^flowstate|Fatal Error]].
-2. Block mencari [[Docs/Tipe Data/TableData]] pada [[Docs/Tipe Data/Column]] dan [[Docs/Tipe Data/Row]] yang ditentukan. Bila [[^input|Row]] berupa [[Docs/Tipe Data/Number]] atau [[Docs/Tipe Data/String]], nilainya dicocokkan dengan Index Row. Bila tidak ditemukan, block berstatus [[^flowstate|Error]].
+1. Block memeriksa [[^input|Column]], [[^input|Row]], dan [[^input|Value]]. Bila [[^input|Column]] atau [[^input|Row]] kosong, atau [[^input|Value]] masih [[^field|N/A Type]], block berhenti dengan [[^flowstate/Fatal Error]].
+2. Block mencari [[Docs/Tipe Data/TableData]] pada [[Docs/Tipe Data/Column]] dan [[Docs/Tipe Data/Row]] yang ditentukan. Bila [[^input|Row]] berupa [[Docs/Tipe Data/Number]] atau [[Docs/Tipe Data/String]], nilainya dicocokkan dengan Index Row. Bila tidak ditemukan, block berstatus [[^flowstate/Error]].
 3. Bila [[^input|Value]] berisi, block membandingkan tipe datanya dengan tipe data Column. Bila tidak sesuai, [[^output|Value Conflict]] meneruskan [[^value/boolean/true]] dan [[Docs/Tipe Data/TableData]] tidak berubah.
 4. Bila [[^input|Value]] sesuai, nilai disimpan dan [[^output|Pass]] meneruskan [[^input|Value]].
 5. Bila [[^input|Value]] kosong, block tidak memeriksa tipe datanya. Nilai kosong selalu valid, sehingga [[Docs/Tipe Data/TableData]] menjadi kosong dan [[^output|Pass]] meneruskan nilai [[^value/empty]].
@@ -69,13 +69,13 @@ Mengisi status pada Row pesanan yang baru ditambahkan.
 
 | Kondisi | [[^output|Pass]] | [[^output|Value Conflict]] | Status |
 | - | - | - | - |
-| [[^input|Value]] sesuai tipe data Column | [[^input|Value]] yang diinput | - | [[^flowstate|Succeed]] |
-| [[^input|Value]] kosong, tipe data sudah ditentukan | [[^value/empty]] | - | [[^flowstate|Succeed]] |
-| [[^input|Value]] berisi tetapi tipenya tidak sesuai tipe data Column | - | [[^value/boolean/true]] | [[^flowstate|Error]] |
-| Row dengan Index yang diisi tidak ditemukan | - | - | [[^flowstate|Error]] |
-| [[^input|Column]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Row]] dibiarkan kosong | - | - | [[^flowstate|Fatal Error]] |
-| [[^input|Value]] masih [[^field|N/A Type]] | - | - | [[^flowstate|Fatal Error]] |
+| [[^input|Value]] sesuai tipe data Column | [[^input|Value]] yang diinput | - | [[^flowstate/Succeed]] |
+| [[^input|Value]] kosong, tipe data sudah ditentukan | [[^value/empty]] | - | [[^flowstate/Succeed]] |
+| [[^input|Value]] berisi tetapi tipenya tidak sesuai tipe data Column | - | [[^value/boolean/true]] | [[^flowstate/Error]] |
+| Row dengan Index yang diisi tidak ditemukan | - | - | [[^flowstate/Error]] |
+| [[^input|Column]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Row]] dibiarkan kosong | - | - | [[^flowstate/Fatal Error]] |
+| [[^input|Value]] masih [[^field|N/A Type]] | - | - | [[^flowstate/Fatal Error]] |
 
 Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
@@ -88,7 +88,7 @@ Status [[^flowstate/Error]] dan [[^flowstate/Fatal Error]] akan menghasilkan err
 ## Batasan dan Catatan
 
 - Satu eksekusi hanya mengubah satu [[Docs/Tipe Data/TableData]].
-- [[^input|Value]] kosong selalu valid dan mengosongkan [[Docs/Tipe Data/TableData]], tetapi [[^field|N/A Type]] tetap menimbulkan [[^flowstate|Fatal Error]] walaupun kosong.
+- [[^input|Value]] kosong selalu valid dan mengosongkan [[Docs/Tipe Data/TableData]], tetapi [[^field|N/A Type]] tetap menimbulkan [[^flowstate/Fatal Error]] walaupun kosong.
 - [[^output|Value Conflict]] tidak mengubah [[Docs/Tipe Data/TableData]].
 - Block ini tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]].
 
