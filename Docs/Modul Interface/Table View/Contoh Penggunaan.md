@@ -6,7 +6,7 @@
       tree:
         priority: -3
 ---
-# Contoh Penggunaan Kanban
+# Contoh Penggunaan Table View
 
 ## Studi Kasus : Memantau Pesanan per Status dalam Satu Halaman
 
