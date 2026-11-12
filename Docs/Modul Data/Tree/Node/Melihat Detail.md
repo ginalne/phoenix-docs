@@ -1,13 +1,14 @@
 ---
+    status: release
+    title: "Melihat Detail Node"
+    description: 
 status: draft
 title: Melihat Detail Node
 description: Cara membuka detail Node untuk melihat atributnya tanpa mengubah data.
 pageDecoration:
-  icon: x
   tree:
     priority: 6
 ---
-
 # Melihat Detail Node
 
 Detail menampilkan atribut [[Docs/Tipe Data/Node|Node]] tanpa mengubahnya. Gunakan [[^field|Detail]] untuk memeriksa Node anak dan posisi Node dalam silsilahnya, sedangkan perubahan dilakukan lewat [[^field/edit|Edit]].

@@ -51,7 +51,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 
 |Konteks|Format|Variasi|Contoh|
 |-|-|-|-|
-| Halaman konsep umum | - | `[[Inisialisasi/Apa itu Pro?|Pro]]`, `[[Docs/Apa itu Komponen?|Komponen]]`, `[[Docs/Folder/Apa itu Folder?]]` | - |
+| Halaman konsep umum | - | `[[Docs/Dasar/Apa itu Pro|Pro]]`, `[[Docs/Dasar/Apa itu Komponen|Komponen]]`, `[[Docs/Dasar/Apa itu Folder|Folder]]` | - |
 | Penjelasan Antarmuka Utama |`[[Docs/Antar Muka#<Anchor>]]` | Bilah Navigasi (Header Navigation Phoenix), Area Manajemen Folder (bagian pengelolaan folder dan komponen), Halaman Kerja (antarmuka kerja komponen)| `[[Docs/Antarmuka#Area Manajemen Folder]]` |
 | Penjelasan Modul |`[[Docs/Modul <Nama>/Pengenalan|<Nama>]]`  | Data, Interface, Logic, Developer | `[[Docs/Modul Developer/Pengenalan|Developer]]` |
 | Halaman Styling | - |`[[Docs/Styling/Styling Class]]`| - |
@@ -106,7 +106,7 @@ Bagian ini merangkum pola yang berulang dari revisi penulis. Pahami alasannya ag
 | Tombol ikon kecil tanpa label| `[[^button/nolabel/<icon>]]` | gear, q (Query)  | `[[^button/nolabel/gear]]` |
 | Nama komponen/folder/data pada baris tabel|`[[^field/<slug>|<Nama>]]`|slug: folder, variable, enum, table, canvas, form, gallery, kanban, space, tableview, timeline, flow, group, workspace, model|`[[^field/tableview|Daftar Pelanggan]]`|
 | Nilai Boolean|`[[^value/boolean/allow]]`, `[[^value/boolean/disallow]]`, `[[^value/boolean/true]]`, `[[^value/boolean/disallow]]`|Gunakan di dalam tabel dan kalimat, bukan teks tebal|`[[^value/boolean/false]]`  |
-| Pilihan radio atau toggle | `[[^value/radio|<Label>]]`|full, half, quarter pada Table View, static, bind pada Space|`[[^value/radio|full]]`|
+| Pilihan radio atau toggle | `[[^value/radio|<Label>]]`|full, half, quarter pada Table View, static, bind pada Space, move pada Area Manajemen Folder|`[[^value/radio|full]]`|
 | Nama Column pada baris tabel atau kalimat| `[[^field/column|<Nama>]]`|Dipakai di tabel Komponen yang terlibat|`[[^field/column|Status]]`|
 | Nilai EnumData pada baris tabel atau kalimat| `[[^value/enumdata|<Nama>]]`|Nilai dari Enum, bukan nama Enum|`[[^value/enumdata|Menunggu]]`|
 | Nilai Contoh bertipedata | `[[^value/<Tipe>|<Nama atau Nilai>]]`|boolean, color, column, complex, date, datetime, datetimezone, enum, enumdata, expression, file, matrices, month, monthyear, node, number, object, query, row, string, table, tabledata, text, thing, time, tree, variable, year |`[[^value/enumdata|Menunggu]]`|

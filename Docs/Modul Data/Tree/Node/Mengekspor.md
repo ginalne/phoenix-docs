@@ -1,11 +1,10 @@
 ---
-status: draft
-title: Mengekspor Node
-description: Cara mengekspor Node beserta keturunannya dari Tree menjadi file.
-pageDecoration:
-  icon: x
-  tree:
-    priority: 4
+    status: release
+    title: Mengekspor Node
+    description: Cara mengekspor Node beserta keturunannya dari Tree menjadi file.
+    pageDecoration:
+      tree:
+        priority: 4
 ---
 # Mengekspor Node
 

@@ -1,9 +1,11 @@
 ---
+    status: release
+    title: "Mengatur Tampilan Node"
+    description: 
 status: draft
 title: Mengatur Tampilan Node
 description: Cara melipat, memperluas, menyembunyikan Node, dan mengganti arah tampilan Tree.
 pageDecoration:
-  icon: x
   tree:
     priority: 5
 ---

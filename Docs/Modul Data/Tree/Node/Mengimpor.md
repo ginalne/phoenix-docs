@@ -1,13 +1,13 @@
 ---
-status: draft
-title: Mengimpor Node
-description: Cara mengimpor Node dari file ke Tree sebagai anak dari Node terpilih.
-pageDecoration:
-  icon: x
-  tree:
-    priority: 3
+    status: release
+    title: Mengimpor Node
+    description: Cara mengimpor Node dari file ke Tree sebagai anak dari Node terpilih.
+    pageDecoration:
+      tree:
+        priority: 3
 ---
 # Mengimpor Node
+
 
 Mengimpor menambahkan banyak [[Docs/Tipe Data/Node|Node]] sekaligus dari file, misalnya file hasil [[Docs/Modul Data/Tree/Node/Mengekspor|Mengekspor]]. Node dari file ditambahkan sebagai anak dari Node yang Anda pilih.
 

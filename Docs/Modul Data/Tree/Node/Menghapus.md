@@ -1,9 +1,11 @@
 ---
+    status: release
+    title: "Menghapus Node"
+    description: 
 status: draft
 title: Menghapus Node
 description: Cara menghapus Node dari Tree beserta dampaknya pada Node anak.
 pageDecoration:
-  icon: x
   tree:
     priority: 7
 ---
