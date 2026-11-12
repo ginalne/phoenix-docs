@@ -10,7 +10,7 @@
 
 Halaman kerja Table terdiri dari bilah navigasi di bagian atas dan tabel data di bagian bawah.
 
-![[Docs/Modul Data/Table/halaman-kerja-table.png]]
+![[Docs/Modul Data/Table/preview-table.png]]
 Tabel data memiliki dua kolom tambahan di luar Column yang Anda buat: [[^field|ID]] di bagian awal (terisi otomatis) dan [[^field|Action]] di bagian akhir. Ikon kecil pada header setiap Column menunjukkan format Column tersebut.
 
 ### Bilah navigasi Table terdiri dari:

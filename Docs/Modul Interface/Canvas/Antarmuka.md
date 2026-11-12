@@ -8,7 +8,7 @@
 ---
 # Antarmuka Canvas
 
-![[Docs/Modul Interface/Canvas/interface-canvas.png]]
+![[Docs/Modul Interface/Canvas/preview-canvas.png]]
 Halaman kerja Canvas terdiri dari bilah navigasi di bagian atas dan area kerja di bagian bawah. Bilah navigasi memuat judul Canvas (ikon Canvas dan Header Name) di sisi kiri serta tombol aksi di sisi kanan. Area kerja menampilkan isi Canvas, atau pesan Canvas kosong bila belum ada Layout dan widget. Tidak ada perbedaan signifikan antara tampilan desktop dan mobile.
 
 ### Bilah navigasi Canvas terdiri dari:

@@ -8,7 +8,7 @@
 ---
 # Antarmuka Workspace
 
-![[Docs/Modul Developer/Workspace/antarmuka-workspace.png]]
+![[Docs/Modul Developer/Workspace/preview-workspace.png]]
 Halaman kerja Workspace menampilkan seluruh struktur ruang kerja dalam satu tabel. Kolom paling kiri berisi daftar [[^field|Folder/ Component]], sedangkan kolom di sebelah kanannya berisi hak akses yang dikelompokkan menjadi [[^field|Component Access]], [[^field|Data Access]], dan [[^field|Function Access]].
 
 Bilah navigasi Workspace hanya memiliki dua tombol:

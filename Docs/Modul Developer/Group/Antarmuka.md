@@ -8,7 +8,7 @@
 ---
 # Antarmuka Group
 
-![[Docs/Modul Developer/Group/interface-group.png]]
+![[Docs/Modul Developer/Group/preview-group.png]]
 Contoh gambar di atas merupakan halaman kerja Group dengan satu Group induk dan dua Group anak.
 
 Halaman kerja Group terdiri dari bilah navigasi di bagian atas dan daftar Group di bagian bawah. Setiap Group menampilkan judul, deskripsi, kolom [[^field|Workspace]] di sebelah kiri, dan kolom [[^field|User]] di sebelah kanan. Group anak tersusun di bawah Group induknya.

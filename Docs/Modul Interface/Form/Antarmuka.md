@@ -8,7 +8,7 @@
 ---
 # Antarmuka Form
 
-![[Docs/Modul Interface/Form/interface-form.png]]
+![[Docs/Modul Interface/Form/preview-form.png]]
 
 Halaman kerja Form terdiri dari bilah navigasi di bagian atas, area kerja di bagian tengah, dan panel [[^field|form flow]] di bagian bawah yang menampilkan daftar [[#Mengelola Page Form|Page]].
 

@@ -8,7 +8,7 @@
 ---
 # Antarmuka Kanban
 
-![[Docs/Modul Interface/Kanban/interface-kanban.png]]
+![[Docs/Modul Interface/Kanban/preview-kanban.png]]
 
 Halaman kerja Kanban terdiri dari bilah navigasi di bagian atas dan area kolom di bagian bawah. Setiap kolom mewakili satu [[Docs/Tipe Data/EnumData]], dan kartu berada di dalam kolom sesuai nilai [[Docs/Tipe Data/EnumData]] pada [[Docs/Tipe Data/Row]]-nya.
 

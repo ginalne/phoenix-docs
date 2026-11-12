@@ -8,7 +8,7 @@
 ---
 # Antarmuka Tree
 
-![[Docs/Modul Data/Tree/antarmuka-tree.png]]
+![[Docs/Modul Data/Tree/preview-tree.png]]
 Halaman kerja Tree terdiri dari bilah navigasi di bagian atas dan area kerja di bagian bawah yang menampilkan pohon beserta Node-nya. Di sudut bawah area kerja terdapat informasi [[^field|context _]], [[^field|mode _]], koordinat [[^field|x _ y _]], dan [[^field|scale _]].
 
 ## Bilah navigasi Tree terdiri dari:

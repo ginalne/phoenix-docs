@@ -1,13 +1,10 @@
 ---
     status: release
-    title: "Format Import dan Export"
-    description: 
-status: draft
-title: Format Import dan Export
-description: Format file JSON untuk mengekspor dan mengimpor Node pada Tree.
-pageDecoration:
-  tree:
-    priority: 2
+    title: Format Import dan Export
+    description: Format file JSON untuk mengekspor dan mengimpor Node pada Tree.
+    pageDecoration:
+      tree:
+        priority: 2
 ---
 # Format Import dan Export
 

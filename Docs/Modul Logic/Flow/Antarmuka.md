@@ -8,7 +8,7 @@
 ---
 ## Antarmuka Flow
 
-![[Docs/Modul Logic/Flow/blueprint-flow.png]]
+![[Docs/Modul Logic/Flow/preview-flow.png]]
 Antarmuka Flow menampilkan seluruh struktur ruang kerja, yaitu bilah navigasi di bagian atas, dan kolom blueprint di bagian bawah.
 
 Bilah navigasi Flow terdiri dari:

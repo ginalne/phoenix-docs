@@ -8,7 +8,7 @@
 ---
 # Antarmuka Table View
 
-![[Docs/Modul Interface/Table View/interface-tableview.png]]
+![[Docs/Modul Interface/Table View/preview-tableview.png]]
 Halaman kerja Table View terdiri dari bilah navigasi di bagian atas dan area Data di bagian bawah. Setiap Data tampil sebagai tabel yang dapat dilipat, dan Data baru ditambahkan lewat tombol [[^button/add|Add Data]] di bagian paling bawah.
 
 Contoh gambar diatas merupakan halaman kerja Table View dengan dua Data bernama [[^field|On Progress...]] dan [[^field|Done belum diambil]].

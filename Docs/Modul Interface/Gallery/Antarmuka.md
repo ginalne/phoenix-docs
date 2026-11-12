@@ -8,7 +8,7 @@
 ---
 # Antarmuka Gallery
 
-![[Docs/Modul Interface/Gallery/interface-gallery2.png]]
+![[Docs/Modul Interface/Gallery/preview-gallery.png]]
 Halaman kerja Gallery terdiri dari bilah navigasi di bagian atas dan area kartu di bagian bawah. Setiap Row pada Table tampil sebagai satu kartu di area kartu.
 
 ### Bilah navigasi Gallery terdiri dari:

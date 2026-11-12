@@ -8,7 +8,7 @@
 ---
 # Antarmuka Space
 
-![[Docs/Modul Interface/Space/interface-space.png]]
+![[Docs/Modul Interface/Space/preview-space.png]]
 Halaman kerja Space terdiri dari bilah navigasi di bagian atas dan area kerja di bagian bawah. Bilah navigasi menampilkan ikon Space dan [[^field|Header Name]] di sisi kiri.
 
 ### Bilah navigasi Space terdiri dari:

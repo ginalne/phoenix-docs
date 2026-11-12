@@ -7,7 +7,7 @@
         priority: 0
 ---
 # Antarmuka Timeline
- ![[Docs/Modul Interface/Timeline/interface-timeline.png]]
+ ![[Docs/Modul Interface/Timeline/preview-timeline.png]]
 Halaman kerja Timeline terdiri dari bilah navigasi di bagian atas dan area kerja di bagian bawah.
 
 ## Bilah navigasi Timeline terdiri dari:

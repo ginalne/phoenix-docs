@@ -8,7 +8,7 @@
 ---
 # Antarmuka Enum
 
-![[Docs/Modul Data/Variable/interface-variable.png]]
+![[Docs/Modul Data/Variable/preview-variable.png]]
 Halaman kerja Variable terdiri dari bilah navigasi di bagian atas dan tabel Variable di bagian bawah.
 
 Bilah navigasi Variable terdiri dari:

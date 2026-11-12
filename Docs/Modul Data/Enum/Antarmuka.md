@@ -8,8 +8,7 @@
 ---
 # Antarmuka Enum
 
-![[Docs/Modul Data/Enum/halaman-kerja-enum.png]]
-
+![[Docs/Modul Data/Enum/preview-enum.png]]
 Halaman kerja Enum terdiri dari bilah navigasi di bagian atas dan tabel data di bagian bawah.
 
 ### Bilah navigasi Enum terdiri dari:
