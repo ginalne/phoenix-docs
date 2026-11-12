@@ -32,7 +32,7 @@ Atribut tambahan yang bisa dapat diisi, diakses dan berguna dalam proses logika 
 
 ### Selectable
 
-Atribut Enum berbentuk [[Docs/Tipe Data/Boolean]] dalam EnumData sebagai status pemilihan, jika [[value/boolean/true|Yes]] maka EnumData ini akan muncul dalam pilihan saat dipilih.
+Atribut Enum berbentuk [[Docs/Tipe Data/Boolean]] dalam EnumData sebagai status pemilihan, jika [[^value/boolean/true|Yes]] maka EnumData ini akan muncul dalam pilihan saat dipilih.
 
 ## Penggunaan dalam Interface
 

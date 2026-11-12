@@ -35,7 +35,7 @@ Atribut yang terisi otomatis dan sesuai dengan Type dalam [[Docs/Tipe Data/Colum
 Atribut tambahan yang bisa dapat diisi, diakses dan berguna dalam proses logika seperti komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
 
 ### Selectable
-Atribut Enum berbentuk [[Docs/Tipe Data/Boolean]] dalam EnumData sebagai status pemilihan, jika [[value/boolean/true|Yes]] maka EnumData ini akan muncul dalam pilihan saat dipilih.
+Atribut Enum berbentuk [[Docs/Tipe Data/Boolean]] dalam EnumData sebagai status pemilihan, jika [[^value/boolean/true|Yes]] maka EnumData ini akan muncul dalam pilihan saat dipilih.
 
 ## Penggunaan dalam Interface
 EnumData cukup baik dalam menyimpan data opsional, sehingga dapat digunakan secara interaktif dengan interface seperti [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]]
