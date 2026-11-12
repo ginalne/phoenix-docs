@@ -29,7 +29,7 @@ Di dalam satu Pro, data, tampilan, logika, dan hak akses saling terhubung. Anda 
 
 ## Isi Pro Saat Dimulai
 
-Saat sebuah Pro dimulai, Phoenix menyiapkan tiga hal berikut secara otomatis. Langkah memulai Pro dijelaskan di [[Inisialisasi/Pengenalan|Inisialisasi Pro]].
+Saat sebuah Pro dimulai, Phoenix menyiapkan tiga hal berikut secara otomatis. Langkah memulai Pro dijelaskan di [[Docs/Inisialisasi/2 - Membuat Pro|Inisialisasi Pro]].
 
 | Bawaan | Fungsi | Hal yang perlu diketahui |
 | --- | --- | --- |

@@ -38,8 +38,8 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 
 | Fungsi | Penjelasan |
 | --- | --- |
-| Memicu Flow | Menekan tombol menjalankan [[Docs/Modul Logic/Flow/Apa itu Flow\|Flow]] melalui Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser\|Pulser]]. |
-| Membuka komponen | Menekan tombol membuka komponen apa pun. Tombol dapat membuka [[Docs/Modul Interface/Canvas/Apa itu Canvas\|Canvas]] dengan [[Docs/Modul Interface/Canvas/Apa itu Canvas#Binding Canvas\|Binding]] sebagai parameter. |
+| Memicu Flow | Menekan tombol menjalankan [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] melalui Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]]. |
+| Membuka komponen | Menekan tombol membuka komponen apa pun. Tombol dapat membuka [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] dengan [[Docs/Modul Interface/Canvas/Apa itu Canvas#Binding Canvas\|Binding]] sebagai parameter. |
 
 >**warning** Button pada Canvas yang dipublikasikan dapat ditekan publik
 > Jika Canvas dipublikasikan dengan Status [[^value/radio|Active]], siapa pun yang memiliki tautan dapat menekan widget Button. Pastikan Flow atau komponen yang dipicu aman dijalankan oleh publik.

@@ -28,7 +28,7 @@ Anda membangun sistem dengan menggabungkan komponen. Data disimpan di satu kompo
 | [[Docs/Antarmuka#Halaman Kerja|Halaman Kerja]] | Antarmuka kerja sebuah komponen. |
 | [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]] | Tempat Anda membuat dan membuka komponen. |
 | [[Docs/Tipe Data/Query|Query]] | Cara komponen Interface mengambil dan menampilkan data dari komponen lain. |
-| [[Docs/Event/Apa itu Event|Event]] | Cara data yang berubah memicu Flow. |
+| [[Docs/Dasar/Apa itu Event|Event]] | Cara data yang berubah memicu Flow. |
 | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] | Komponen yang mengatur akses ke komponen lain. |
 
 ## Modul dan Komponen di Phoenix
@@ -106,7 +106,7 @@ flowchart TB
 | Hubungan | Cara | Selengkapnya |
 | --- | --- | --- |
 | Interface membaca Data | Komponen Interface mengisi [[Docs/Tipe Data/Query|Query]] untuk mengambil dan menampilkan data. | [[Docs/Modul Interface/Pengenalan|Modul Interface]] |
-| Data memicu Logic | Perubahan data pada Table, Enum, Tree, dan Timeline Event dapat memicu Flow lewat tombol [[^button/event|Event]]. | [[Docs/Event/Menghubungkan Event|Menghubungkan Event]] |
+| Data memicu Logic | Perubahan data pada Table, Enum, Tree, dan Timeline Event dapat memicu Flow lewat tombol [[^button/event|Event]]. | [[Docs/Dasar/Menghubungkan Event]] |
 | Logic mengubah Data | Flow mengubah data lewat Flow Block Data seperti Add, Delete, Getter, dan Setter. | [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] |
 | Interface memicu Logic | Widget Button pada Canvas dan Timeline Event memicu Flow lewat Pulser. | [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser Event Block]] |
 | Komponen merujuk Variable | Nilai Variable dapat dirujuk dari komponen mana pun lewat Name. | [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] |
@@ -188,8 +188,8 @@ Menghapus komponen dapat menghilangkan isinya dan memutus relasi dari komponen l
 | Menata komponen dalam struktur | [[Docs/Dasar/Apa itu Folder|Folder]] |
 | Mengenali bagian layar Phoenix | [[Docs/Antarmuka|Antarmuka]] |
 | Memahami jenis data yang dipakai komponen | [[Docs/Tipe Data/Pengenalan|Tipe Data]] dan [[Docs/Format Data/Pengenalan|Format Data]] |
-| Menghubungkan data dengan otomasi | [[Docs/Event/Apa itu Event|Event]] dan [[Docs/Event/Menghubungkan Event|Menghubungkan Event]] |
-| Mengatur tampilan komponen | [[Docs/Styling/Styling Class|Styling Class]] |
+| Menghubungkan data dengan otomasi | [[Docs/Dasar/Apa itu Event|Event]] dan [[Docs/Dasar/Menghubungkan Event]] |
+| Mengatur tampilan komponen | [[Docs/Styling/Pengenalan|Styling Class]] |
 | Mengatur akses ke komponen | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dan [[Docs/Modul Developer/Group/Apa itu Group|Group]] |
 
 ## Praktik Terbaik

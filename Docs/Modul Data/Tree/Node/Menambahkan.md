@@ -38,14 +38,14 @@ Bila [[^field|Name]] atau [[^field|Order]] bentrok dengan saudara kandung, Node 
 
 ## Menambahkan Node dari Tree Lain
 
-Langkah ini hanya tersedia pada Tree dengan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]] aktif. Tree non-merger tidak dapat menambahkan Node dari Tree lain.
+Langkah ini hanya tersedia pada Tree dengan [[Docs/Modul Data/Tree/Merger Mode]] aktif. Tree non-merger tidak dapat menambahkan Node dari Tree lain.
 
 1. Klik kanan [[Docs/Tipe Data/Node|Node]] induk di Tree merger ➜ [[^field/edit|Edit]].
 2. Pada bagian [[^field|Children]], klik [[^button/add|Add Children]] dan pilih Node dari Tree non-merger yang akan ditambahkan.
 3. Tentukan apakah Node hasil *clone* mengikuti perubahan Node asal.
 4. Klik [[^button|Update]].
 
-Pengaruh perubahan Node asal pada Node hasil *clone* diatur oleh [[Docs/Modul Data/Tree/Konfigurasi External Read Only|External Read Only]].
+Pengaruh perubahan Node asal pada Node hasil *clone* diatur oleh [[Docs/Modul Data/Tree/External Read Only]].
 
 >**note** Hak akses dan Event
 > Menambahkan Node memerlukan [[Docs/Modul Developer/Workspace/Data Access#Data yang Diatur pada Setiap Komponen|Data Access]] Add pada Tree: Node bernilai [[^value/boolean/allow]]. Setiap Node baru, termasuk Node hasil *clone*, memicu event [[^value/string|create]] pada [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]].

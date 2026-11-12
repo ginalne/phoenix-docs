@@ -31,7 +31,7 @@ Contoh: mengganti [[^field|Name]] [[^value/node|Aksesori]] menjadi [[^value/stri
 Bila [[^field|Name]] bentrok dengan saudara kandung, perubahan tidak tersimpan dan sistem menampilkan pesan Error [[^field|Name sudah digunakan oleh Node lain pada parent yang sama]].
 
 >**warning** Node hasil clone di Tree merger
-> Bila Node berada di Tree non-merger dan sudah di-*clone* oleh Tree merger, perubahan [[^field|Name]] ikut diterapkan pada Node hasil *clone* yang mengikuti perubahan Node asal. Perubahan tidak ikut diterapkan bila [[^field|Name]] pada [[Docs/Modul Data/Tree/Konfigurasi External Read Only|External Read Only]] di Tree merger bernilai [[^value/radio|Active]].
+> Bila Node berada di Tree non-merger dan sudah di-*clone* oleh Tree merger, perubahan [[^field|Name]] ikut diterapkan pada Node hasil *clone* yang mengikuti perubahan Node asal. Perubahan tidak ikut diterapkan bila [[^field|Name]] pada [[Docs/Modul Data/Tree/External Read Only]] di Tree merger bernilai [[^value/radio|Active]].
 
 >**note** Hak akses dan Event
 > Mengubah [[^field|Name]] memerlukan [[Docs/Modul Developer/Workspace/Data Access#Data yang Diatur pada Setiap Komponen|Data Access]] Update pada Tree: Node bernilai [[^value/boolean/allow]]. Perubahan memicu event [[^value/string|update]] pada [[Docs/Modul Logic/Flow/Flow Block/Event/Tree Node Event|Tree Node Event Block]], dan `Old` hanya berisi [[^field|Name]] sebelumnya.

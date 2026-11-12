@@ -1,10 +1,13 @@
 ---
     status: release
-    title: Format Import dan Export
-    description: Format file JSON untuk mengekspor dan mengimpor Node pada Tree.
-    pageDecoration:
-      tree:
-        priority: 2
+    title: "Format Import dan Export"
+    description: 
+status: draft
+title: Format Import dan Export
+description: Format file JSON untuk mengekspor dan mengimpor Node pada Tree.
+pageDecoration:
+  tree:
+    priority: 2
 ---
 # Format Import dan Export
 
@@ -12,13 +15,13 @@
 
 ## Atribut Node
 
-Setiap Node dalam file memiliki tiga atribut.
+Setiap Node dalam file memiliki tiga atribut. Kolom Tipe merujuk pada tipe JSON, bukan tipe data Phoenix.
 
 | Atribut | Tipe | Keterangan |
 | ------- | ---- | ---------- |
-| [[^field|order]] | [[Docs/Tipe Data/Number|Number]] | Urutan Node di antara saudara kandung. Angka minimal [[^value/number|0]]. |
-| [[^field|name]] | [[Docs/Tipe Data/String|String]] | Nama Node. |
-| [[^field|children]] | [[Docs/Tipe Data/Array|Array]] | Daftar Node anak langsung. Setiap anggota memiliki atribut yang sama dengan Node induknya. |
+| [[^field|order]] | Number | Urutan Node di antara saudara kandung. Angka minimal [[^value/number|0]]. |
+| [[^field|name]] | String | Nama Node. |
+| [[^field|children]] | Array | Daftar Node anak langsung. Wajib ada, dan berisi array kosong bila Node tidak memiliki anak. Setiap anggota memiliki atribut yang sama dengan Node induknya. |
 
 File tidak memiliki atribut induk. Hubungan induk dan anak ditentukan oleh posisi Node di dalam [[^field|children]].
 
@@ -51,13 +54,15 @@ Contoh berikut adalah hasil ekspor Node [[^value/node|Elektronik]] yang memiliki
 }
 ```
 
-Node tanpa anak memiliki [[^field|children]] berupa array kosong.
+Node tanpa anak tetap memiliki [[^field|children]] berupa array kosong.
 
 ## Aturan Isi File
 
 - [[^field|name]] harus unik di antara saudara kandung, yaitu Node dalam [[^field|children]] yang sama.
 - [[^field|order]] berupa angka minimal [[^value/number|0]] dan harus unik di antara saudara kandung.
-- Node terluar pada file adalah Node yang Anda ekspor. Saat diimpor, Node ini menjadi anak dari Node yang Anda pilih, sehingga [[^field|name]] dan [[^field|order]]-nya juga harus unik terhadap saudara kandung di bawah Node tersebut.
+- [[^field|children]] wajib ada pada setiap Node, termasuk Node tanpa anak.
+- Atribut selain [[^field|order]], [[^field|name]], dan [[^field|children]] diabaikan saat impor.
+- Node terluar pada file berbentuk satu objek, yaitu Node yang Anda ekspor. Saat diimpor, Node ini menjadi anak dari Node yang Anda pilih, sehingga [[^field|name]] dan [[^field|order]]-nya juga harus unik terhadap saudara kandung di bawah Node tersebut.
 
 >**warning** Name dan Order yang bentrok
 > Bila satu saja Node dalam file bentrok dengan aturan di atas atau dengan Node yang sudah ada di bawah induk yang sama, impor ditolak seluruhnya dan tidak ada Node yang ditambahkan.
