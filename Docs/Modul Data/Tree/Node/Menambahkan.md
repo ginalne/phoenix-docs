@@ -1,9 +1,8 @@
 ---
-    status: draft
+    status: release
     title: Menambahkan Node
     description: Cara menambahkan Node baru sebagai anak dari Node lain pada Tree.
     pageDecoration:
-      icon: x
       tree:
         priority: 9
 ---

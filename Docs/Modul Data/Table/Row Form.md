@@ -3,6 +3,8 @@
     pageDecoration:
       icon: x
       tree:
-        priority: -2
+        priority: 0
+    tags:
+      draft
 ---
 # Row Form
