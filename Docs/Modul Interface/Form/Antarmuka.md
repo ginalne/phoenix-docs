@@ -21,8 +21,8 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 | Judul Form | Menampilkan ikon Form dan nama Form. |
 | [[^button/edit|Edit]] | Mengubah atribut Form ([[^field|Name]] dan [[^field|Description]]). Lihat [[#Mengubah Form]]. |
 | [[^button/publish|Publish]] | Membuka konfigurasi publikasi Form. Lihat [[#Mempublikasikan Form]]. |
-| [[mode/view|View]] | Saklar saat Form berada di mode View. Klik untuk beralih ke Edit Mode agar isi Form dapat disunting. Lihat [[#Mode View dan Edit Mode]]. |
-| [[mode/edit|Edit]] | Saklar saat Form berada di Edit Mode. Klik untuk beralih ke mode View agar isi Form hanya dapat dilihat. Lihat [[#Mode View dan Edit Mode]]. |
+| [[^mode/view|View]] | Saklar saat Form berada di mode View. Klik untuk beralih ke Edit Mode agar isi Form dapat disunting. Lihat [[#Mode View dan Edit Mode]]. |
+| [[^mode/edit|Edit]] | Saklar saat Form berada di Edit Mode. Klik untuk beralih ke mode View agar isi Form hanya dapat dilihat. Lihat [[#Mode View dan Edit Mode]]. |
 | [[^button/save|Save]] | Menyimpan perubahan isi Form. Aktif saat ada perubahan, dan perubahan juga tersimpan otomatis (*auto save*) setelah sekitar 3 detik. |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan Form. |
 | [[^button/submission|Informasi Submission]] | Menampilkan jumlah Submission sukses, menunggu, dan gagal. Klik untuk membuka [[#Mengelola Submission|Submission List]]. |

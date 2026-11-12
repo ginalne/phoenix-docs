@@ -12,11 +12,11 @@
 
 ## Melakukan Merge
 
-Anda dapat mengaturnya melalui tombol [[button/merge|Merge]] dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Komponen Enum]].
+Anda dapat mengaturnya melalui tombol [[^button/merge|Merge]] dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Komponen Enum]].
 
 ![[Docs/Modul Data/Enum/enum-test.png|EnumData Merge]]
 Setelah Mode Merge aktif, maka Anda dapat memilih [[Docs/Tipe Data/EnumData]] yang ingin digabungkan.
 
 ![[Docs/Modul Data/Enum/merge-select.png|EnumData Merge Select]]
-Lalu jika sudah selesai, selanjutnya klik tombol [[button/merge|Select Merge (*)]] (`*` adalah total [[Docs/Tipe Data/EnumData]] yang akan dimerge).
+Lalu jika sudah selesai, selanjutnya klik tombol [[^button/merge|Select Merge (*)]] (`*` adalah total [[Docs/Tipe Data/EnumData]] yang akan dimerge).
 

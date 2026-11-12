@@ -12,12 +12,12 @@
 
 ## Mengatur Konfigurasi
 
-Anda dapat mengaturnya melalui tombol [[button/edit|Edit]] dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] atau saat membuat [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] pertama kali.
+Anda dapat mengaturnya melalui tombol [[^button/edit|Edit]] dalam halaman kerja [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] atau saat membuat [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] pertama kali.
 
 ![[Docs/Modul Data/Enum/create-new-enum.png|Modal Tambah Enum Baru]]
-Kolom [[field|Strict On Selected]] dapat diubah dengan implikasi seperti berikut:
-1. [[field|Disabled to insert externally]] : Ketat, EnumData tidak bisa ditambahkan saat pengguna atau Anda melakukan input bebas terhadap Enum ini.
-2. [[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
+Kolom [[^field|Strict On Selected]] dapat diubah dengan implikasi seperti berikut:
+1. [[^field|Disabled to insert externally]] : Ketat, EnumData tidak bisa ditambahkan saat pengguna atau Anda melakukan input bebas terhadap Enum ini.
+2. [[^field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna atau Anda saat melakukan input bebas terhadap Enum ini.
 
 ## Arti dari “Externally”
 

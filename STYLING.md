@@ -99,9 +99,9 @@ lihat selengkapnya [[Docs/Modul Interface/Table View/Apa itu Table View]].
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-* [[field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna...
+* [[^field|Enable to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna...
 
-[[field|Disabled to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna...
+[[^field|Disabled to insert externally]] : Tidak ketat, Enum Data bisa ditambahkan oleh pengguna...
 
 ```space-style
 #sb-main .cm-editor a[href^="field"] {
@@ -136,10 +136,10 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 ```
 
 1. Klik kanan pada [[Docs/Dasar/Antarmuka#Area Manajemen Folder]].
-2. Pilih [[field/add|Add]] > [[field|Developer]] > [[field/group| Group]]
-3. Isi [[field|Name]] dan [[field|Description]] Group.
+2. Pilih [[^field/add|Add]] > [[^field|Developer]] > [[field/group| Group]]
+3. Isi [[^field|Name]] dan [[^field|Description]] Group.
 4. Tambahkan anggota ke dalam Group dengan cara *drag and drop*.
-5. Isi [[field|Search workspace to add...]]  dan pilih Workspace yang ingin ditambahkan.
+5. Isi [[^field|Search workspace to add...]]  dan pilih Workspace yang ingin ditambahkan.
 6. Selesai
 
 
@@ -193,17 +193,17 @@ Run ${widgets.commandButton "System: Reload"} to reload.
 
 |  |  |
 |----------|----------|
-| [[mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
+| [[^mode/view|View]] | Saklar dengan mode View agar konten Form dapat di sunting. |
 
-[[mode/edit|Edit]]
+[[^mode/edit|Edit]]
 
 Run ${widgets.commandButton "System: Reload"} to reload.
 
-test [[button/edit|Edit]] [[button|Create]]
-1. Caranya klik [[button/edit|Edit]]
-2. lalu klik [[button|Submit]]
+test [[^button/edit|Edit]] [[^button|Create]]
+1. Caranya klik [[^button/edit|Edit]]
+2. lalu klik [[^button|Submit]]
 > **warning** Warning
-> Harap hati-hati saat [[button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[button/save|Save]]masih aktif, berarti perubahan belum disimpan.
+> Harap hati-hati saat [[^button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[^button/save|Save]]masih aktif, berarti perubahan belum disimpan.
 
 | Langkah | Flow Block | Peran dalam alur | Hasil |
 | --- | --- | --- | --- |
