@@ -93,7 +93,7 @@ Setiap aktifitas eksekusi dalam Flow dinamakan Flow Activity. Selengkapnya lihat
 - Tombol [[^button/edit|Edit]] hanya mengubah atribut Flow ([[^field|Directory]], [[^field|Name]], dan [[^field|Description]]), bukan Flow Block pada blueprint. Pengaturan Flow Block dijelaskan di [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Konfigurasi Flow Block|Konfigurasi Flow Block]].
 - Kolom [[^field|Search]] pada bilah navigasi hanya mencari Flow Block. Untuk mencari proses, gunakan [[^field|Search Activity]] pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
 - Mengubah posisi dan skala panning hanya memengaruhi tampilan blueprint, bukan logika Flow.
-- Informasi total activity, done, waiting, dan failure pada tombol [[^button/submission|Submission]] hanya terlihat pada mode desktop.
+- Informasi total activity, done, waiting, dan failure pada tombol [[^button/send|Submission]] hanya terlihat pada mode desktop.
 - Menghapus Flow menghilangkan Flow Block dan riwayat Activity, serta memutus Flow Block Action yang sudah digunakan komponen (lihat [[#Menghapus Flow]]).
 - Daftar Flow Block yang tersedia mengikuti menu [[^field/add|Add]] pada blueprint (lihat [[Docs/Modul Logic/Flow/Flow Block/Pengenalan]]).
 - Akses ke Flow mengikuti hak akses komponen yang diatur melalui [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].

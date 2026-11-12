@@ -18,11 +18,11 @@ Bilah navigasi Flow terdiri dari:
 | [[^field/flow|Judul Flow]] | Ikon Flow dalam Phoenix serta [[^field|Header Name]] Flow. |
 | [[^button/edit|Edit]] | Mengubah atribut Flow seperti [[^field|Directory]], [[^field|Name]] dan [[^field|Description]]. |
 | [[^button/refresh|Refresh]] | Memuat ulang halaman kerja. |
-| [[^button/submission|Submission]] | Tombol yang berfungsi untuk membuka bilik submission. |
+| [[^button/send|Submission]] | Tombol yang berfungsi untuk membuka bilik submission. |
 | [[^field|Search]] | Kolom pencarian untuk mencari Flow Block. |
 
 >**note** Perbedaan Icon
->Dalam mode desktop, tombol [[^button/submission|Submission]] sedikit berbeda. Tombol terlihat dengan susunan informasi submission, yaitu total activity, done, waiting, dan failure.
+>Dalam mode desktop, tombol [[^button/send|Submission]] sedikit berbeda. Tombol terlihat dengan susunan informasi submission, yaitu total activity, done, waiting, dan failure.
 
 ### Informasi Area Kerja
 

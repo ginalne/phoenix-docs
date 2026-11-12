@@ -25,11 +25,11 @@ Berikut penjelasan terkait beberapa fungsi halaman kerja Form:
 | [[^mode/edit|Edit]] | Saklar saat Form berada di Edit Mode. Klik untuk beralih ke mode View agar isi Form hanya dapat dilihat. Lihat [[#Mode View dan Edit Mode]]. |
 | [[^button/save|Save]] | Menyimpan perubahan isi Form. Aktif saat ada perubahan, dan perubahan juga tersimpan otomatis (*auto save*) setelah sekitar 3 detik. |
 | [[^button/refresh|Refresh]] | Memuat ulang tampilan Form. |
-| [[^button/submission|Informasi Submission]] | Menampilkan jumlah Submission sukses, menunggu, dan gagal. Klik untuk membuka [[#Mengelola Submission|Submission List]]. |
+| [[^button/send|Informasi Submission]] | Menampilkan jumlah Submission sukses, menunggu, dan gagal. Klik untuk membuka [[#Mengelola Submission|Submission List]]. |
 
 >**note** Perbedaan Icon
-> Pada tampilan desktop, tombol [[^button/submission|Submission]] menampilkan susunan informasi Submission sekaligus, yaitu Submitted, Waiting, dan Failure.
-> Pada tampilan mobile, tombol [[^button/submission|Submission]] didalam menu navigasi.
+> Pada tampilan desktop, tombol [[^button/send|Submission]] menampilkan susunan informasi Submission sekaligus, yaitu Submitted, Waiting, dan Failure.
+> Pada tampilan mobile, tombol [[^button/send|Submission]] didalam menu navigasi.
 
 > **warning** Harap hati-hati
 > Saat melakukan [[^button/refresh|Refresh]] halaman, pastikan bahwa perubahan Anda saat ini sudah disimpan. Jika tombol [[^button/save|Save]] masih aktif, berarti perubahan belum disimpan.

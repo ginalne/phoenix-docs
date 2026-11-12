@@ -1,9 +1,9 @@
 
 # Mengelola Submission
 
-Setiap kali Form dibuka oleh audiens, Phoenix mencatatnya sebagai Submission dengan status sukses (*Submitted*), menunggu (*Waiting*), atau gagal (*Failure*). Ringkasan jumlahnya ada pada [[^button/submission|Informasi Submission]] di bilah navigasi.
+Setiap kali Form dibuka oleh audiens, Phoenix mencatatnya sebagai Submission dengan status sukses (*Submitted*), menunggu (*Waiting*), atau gagal (*Failure*). Ringkasan jumlahnya ada pada [[^button/send|Informasi Submission]] di bilah navigasi.
 
-Klik [[^button/submission|Informasi Submission]] untuk membuka **Submission List** di sebelah kanan.
+Klik [[^button/send|Informasi Submission]] untuk membuka **Submission List** di sebelah kanan.
 
 ![[Docs/Modul Interface/Form/submission-form.png]]
 | Bagian | Fungsi |
