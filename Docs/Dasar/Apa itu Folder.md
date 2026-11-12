@@ -85,7 +85,7 @@ Penjelasan lengkap area ini ada di [[Docs/Antarmuka#Area Manajemen Folder|Antarm
 | Membuat folder | Klik kanan ➜ [[^field/add|New Folder]], selengkapnya lihat [[Docs/Dasar/Membuat Folder]].
 | Mengubah nama folder | Klik kanan folder ➜ [[^field/rename|Rename]], selengkapnya lihat [[Docs/Dasar/Mengubah Nama Folder]] |
 | Menghapus folder atau komponen | Klik kanan folder atau komponen ➜ [[^button/delete|Delete]], selengkapnya lihat [[Docs/Dasar/Menghapus Folder]]. |
-| Memindahkan folder atau komponen | Nyalakan toggle [[^field/move]] di bagian atas Area Manajemen Folder, lalu *drag and drop*. Selengkapnya lihat [[Docs/Dasar/Memindahkan Komponen dan Folder]] |
+| Memindahkan folder atau komponen | Nyalakan toggle [[^toggle/move]] di bagian atas Area Manajemen Folder, lalu *drag and drop*. Selengkapnya lihat [[Docs/Dasar/Memindahkan Komponen dan Folder]] |
 | Berpindah Workspace | Klik tombol berisi nama Workspace aktif, lalu pilih Workspace pada popup. |
 
 ## Praktik Terbaik
@@ -109,7 +109,7 @@ Penjelasan lengkap area ini ada di [[Docs/Antarmuka#Area Manajemen Folder|Antarm
 - Folder adalah penata di dalam [[Docs/Dasar/Apa itu Pro|Pro]] yang berisi [[Docs/Dasar/Apa itu Komponen|Komponen]] dan folder lain secara bertingkat, dan tidak menyimpan data.
 - Folder dikelola di [[Docs/Antarmuka#Area Manajemen Folder|Area Manajemen Folder]]: dibuat dengan [[^field/add|New Folder]] dan diubah namanya dengan [[^field/rename|Rename]].
 - Komponen tanpa folder tujuan berada di folder *root*.
-- Folder dan komponen dipindahkan dengan *drag and drop* setelah toggle [[^field/move]] dinyalakan, atau di halaman kerja Workspace, dan relasinya tetap terhubung.
+- Folder dan komponen dipindahkan dengan *drag and drop* setelah toggle [[^toggle/move]] dinyalakan, atau di halaman kerja Workspace, dan relasinya tetap terhubung.
 - [[Docs/Modul Developer/Workspace/Component Access|Component Access]] mengatur Visible, Add, Update, dan Delete pada folder, dan Visible tidak berjenjang.
 - Izin memindahkan ke folder lain sama dengan izin menghapus, dan penghapusan folder beserta isinya tidak dapat dikembalikan.
 
@@ -123,7 +123,7 @@ Penjelasan lengkap area ini ada di [[Docs/Antarmuka#Area Manajemen Folder|Antarm
 > **Dapatkah komponen ditempatkan di luar folder?**
 > Komponen tanpa folder tujuan, yaitu [[Docs/Dasar/Apa itu Komponen#Membuat Komponen|Directory]] yang dikosongkan, berada di folder *root*.
 > **Mengapa saya tidak dapat memindahkan komponen ke folder lain?**
-> Pastikan toggle [[^field/move]] di Area Manajemen Folder sudah menyala. Pemindahan juga memerlukan [[^field|Delete]] pada komponen yang dipindahkan dan [[^field|Add]] pada folder tujuan. Periksa [[Docs/Modul Developer/Workspace/Component Access|Component Access]] pada Workspace Anda.
+> Pastikan toggle [[^toggle/move]] di Area Manajemen Folder sudah menyala. Pemindahan juga memerlukan [[^field|Delete]] pada komponen yang dipindahkan dan [[^field|Add]] pada folder tujuan. Periksa [[Docs/Modul Developer/Workspace/Component Access|Component Access]] pada Workspace Anda.
 > **Apakah memindahkan komponen memutus relasinya dengan komponen lain?**
 > Tidak. Komponen tetap terhubung, misalnya lewat Query atau Flow Block. Selengkapnya lihat [[#Memindahkan Folder dan Komponen]].
 > **Apakah folder yang sudah dihapus dapat dikembalikan?**
