@@ -5,6 +5,34 @@ pageDecoration:
 description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi phoenix.
 ---
 
+# Konsep Dasar: Pro, Folder, Komponen
+
+- **Path:** `Docs/Dasar/Apa itu Pro`, `Docs/Dasar/Apa itu Folder`, `Docs/Dasar/Apa itu Komponen`. Judul memakai tanda tanya, path tidak. Halaman Dasar tidak memiliki Contoh Penggunaan (contoh ada di halaman rinci tiap komponen).
+- **Hubungan:** Pro adalah wadah, Folder menata, Komponen menjadi isi.
+- **Pro:**
+  - Definisi "wadah utama" sudah benar menurut penulis.
+  - Saat dimulai otomatis ada Group Administrator, Workspace Origin, dan komponen Variable. Pengguna baru memperoleh akses penuh (Administrator terhubung ke Origin yang seluruhnya allow). Terkonfirmasi.
+  - Halaman Inisialisasi (`Inisialisasi/Pengenalan`) dan halaman pengenalan modul, Tipe Data, Format Data, serta Antarmuka sudah ada.
+- **Folder:**
+  - Menu klik kanan di Area Manajemen Folder: **New Folder** (membuat folder, isian Name, tombol Create) dan **Rename** (mengubah nama, tombol Update). Menu komponen tetap Add ➜ Modul ➜ Komponen.
+  - Memindahkan folder atau komponen juga bisa di Area Manajemen Folder dengan menyalakan **toggle Move** di bagian atas, selain di halaman kerja Workspace.
+  - **Relasi komponen tetap terhubung** setelah dipindahkan.
+  - Tidak ada pembatasan jenis komponen per folder.
+  - Pemindahan komponen tidak mengubah isi dan fungsinya.
+  - Memindahkan ke folder *root* di Area Manajemen Folder: seret ke barisan di level root (menyisipkan di antara komponen atau folder yang sudah ada) atau ke bagian kosong, biasanya di bawah kolom manajemen folder.
+  - Dampak hapus folder: isi folder terdampak (komponen dan folder di dalamnya) dan **penghapusan folder beserta isinya tidak dapat dikembalikan**.
+  - Penulisan toggle Move: `[[^field/move]]`.
+  - Rekomendasi pola penataan folder (per area bisnis, per tim, per sistem, per jenis komponen, arsip, dan folder "Bersama") sudah disetujui penulis.
+  - Belum terkonfirmasi: apakah toggle Move perlu dimatikan setelah memindahkan, dan cara memindahkan ke root di halaman kerja Workspace.
+- **Komponen:**
+  - Daftar komponen Interface sudah lengkap (Table View, Gallery, Kanban, Timeline, Canvas, Space, Form). Gantt belum ada sebagai komponen.
+  - Definisi Form sudah benar. Model: komponen kompleks yang menyimpan konfigurasi aset 3D beserta animasi dan logikanya. Definisi lengkap akan ditulis penulis di halaman Model.
+  - Label modul pada menu Add: Data, Interface, Logic, Developer.
+  - Kolom pencarian bilah navigasi berpola `Search <Nama Komponen> Data...`. Tombol Submission juga ada pada Form.
+  - **Penghapusan komponen saat ini tidak dapat dikembalikan.**
+  - Dampak hapus Timeline: hanya konfigurasi hilang, data sumber aman. Dampak hapus Model: seluruh data yang tersimpan di Model hilang dan Space Object yang memakai Model tersebut ikut terdampak. Row sumber Kanban dan Gallery tidak terhapus.
+  - Event dari komponen Data dijelaskan di `Docs/Modul Data/<Komponen>/Mengotomasi`.
+
 # Group (Modul Developer)
 
 *   **Definisi (versi penulis):** Group adalah komponen untuk mengatur komposisi tim dan akses Workspace yang diberikan kepada setiap anggota. Akses tidak diatur per orang, melainkan anggota dikelompokkan ke Group lalu ditentukan Workspace yang dapat diakses Group tersebut.

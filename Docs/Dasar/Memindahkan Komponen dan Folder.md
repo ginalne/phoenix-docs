@@ -12,7 +12,7 @@ Anda dapat memindahkan folder atau komponen ke folder lain, atau hanya mengubah 
 
 ## Memindahkan di Area Manajemen Folder
 
-1. Nyalakan toggle [[^field/move]] di bagian atas [[Docs/Antarmuka#Area Manajemen Folder]]
+1. Nyalakan toggle [[^toggle/move]] di bagian atas [[Docs/Antarmuka#Area Manajemen Folder]]
 2. Tekan dan tahan folder atau komponen yang ingin dipindahkan
 3. Seret ke folder tujuan atau ke posisi baru, lalu lepaskan
 
