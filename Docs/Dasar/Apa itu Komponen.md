@@ -1,13 +1,11 @@
 ---
-status: draft
-title: Apa itu Komponen?
-description: Komponen adalah unit fungsional penyusun sistem di Phoenix yang dikelompokkan dalam empat modul dan ditempatkan di dalam folder.
-pageDecoration:
-  icon: x
-  tree:
-    priority: 18
+    status: release
+    title: Apa itu Komponen?
+    description: Komponen adalah unit fungsional penyusun sistem di Phoenix yang dikelompokkan dalam empat modul dan ditempatkan di dalam folder.
+    pageDecoration:
+      tree:
+        priority: 18
 ---
-
 # Apa itu Komponen?
 
 >**note** Komponen merupakan salah satu konsep dasar di Phoenix, bersama [[Docs/Dasar/Apa itu Pro|Pro]] dan [[Docs/Dasar/Apa itu Folder|Folder]]. Pro adalah wadahnya, Folder menatanya, dan Komponen menjadi isinya.
