@@ -1,11 +1,10 @@
 ---
-status: draft
-title: Apa itu Folder?
-description: Folder adalah penata di dalam Pro yang mengelompokkan komponen dan folder lain dalam struktur bertingkat.
-pageDecoration:
-  icon: x
-  tree:
-    priority: 19
+    status: release
+    title: Apa itu Folder?
+    description: Folder adalah penata di dalam Pro yang mengelompokkan komponen dan folder lain dalam struktur bertingkat.
+    pageDecoration:
+      tree:
+        priority: 19
 ---
 # Apa itu Folder?
 
