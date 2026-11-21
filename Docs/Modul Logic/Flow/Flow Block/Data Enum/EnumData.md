@@ -1,15 +1,12 @@
 ---
-    status: draft
+    status: release
     title: EnumData
     description: Flow Block untuk mengambil atribut sebuah EnumData, yaitu Name, Description, Value, dan Selectable, agar dapat dipakai block lain.
     pageDecoration:
       icon: grid
       tree:
         priority: 4
-    tags:
-      draft
 ---
-
 # EnumData
 
 >**note** EnumData merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan|Flow Block Data Enum]] di Phoenix.

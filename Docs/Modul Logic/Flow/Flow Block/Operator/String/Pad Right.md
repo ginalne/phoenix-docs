@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: Pad Right Operator Block
     description: Menambahkan Pad String di sebelah kanan String sampai mencapai panjang tertentu pada Flow Block Operator Pad Right.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

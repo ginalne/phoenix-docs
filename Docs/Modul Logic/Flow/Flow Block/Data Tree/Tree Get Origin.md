@@ -8,7 +8,6 @@
     tags:
       draft
 ---
-
 # Tree Get Origin Block
 
 >**note** Tree Get Origin Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.

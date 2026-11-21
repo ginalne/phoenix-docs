@@ -1,5 +1,5 @@
 ---
-    status: draft
+    status: release
     title: Flow Block Data Variable
     description: Pengenalan kelompok Flow Block Data Variable, block untuk menambah, membaca, mengubah, dan menghapus Variable Data lewat logika Flow.
     pageDecoration:
@@ -7,7 +7,6 @@
         priority: 10
     tags:
       flowblock-category
-      draft
 ---
 # Flow Block Data Variable
 

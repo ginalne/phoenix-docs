@@ -1,15 +1,12 @@
 ---
-    status: draft
+    status: release
     title: EnumData Getter
     description: Flow Block untuk mengambil EnumData dari sebuah Enum berdasarkan Name.
     pageDecoration:
       icon: search
       tree:
         priority: 4
-    tags:
-      draft
 ---
-
 # EnumData Getter
 
 >**note** EnumData Getter merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan|Flow Block Data Enum]] di Phoenix.

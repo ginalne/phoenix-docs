@@ -3,12 +3,12 @@
     title: HTTP Request Block
     description: Flow Block untuk mengirim permintaan HTTP ke sistem lain dan menerima responsnya pada komponen Flow.
     pageDecoration:
+      icon: x
       tree:
         priority: 2
     tags:
       draft
 ---
-
 # HTTP Request Block
 
 >**note** HTTP Request Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Flow Block Modular]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.

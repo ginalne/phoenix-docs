@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: TableRow Parse Operator Block
     description: Mengubah Row menjadi Object dan Text dengan penelusuran relasi sesuai Rel. Depth pada Flow Block Operator TableRow Parse.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

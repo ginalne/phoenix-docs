@@ -1,13 +1,11 @@
 ---
-    status: draft
+    status: release
     title: Variable
     description: Flow Block untuk mengurai Variable Data menjadi nilai atributnya.
     pageDecoration:
       icon: grid
       tree:
         priority: 4
-    tags:
-      draft
 ---
 # Variable
 

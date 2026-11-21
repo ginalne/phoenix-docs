@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: Increment Operator Block
     description: Menambahkan nilai Number dengan langkah yang ditentukan dan mengeluarkan hasilnya.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

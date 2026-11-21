@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: If Operator Block
     description: Membandingkan dua nilai dengan operator dan melanjutkan aliran sesuai hasilnya pada Flow Block Operator If.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

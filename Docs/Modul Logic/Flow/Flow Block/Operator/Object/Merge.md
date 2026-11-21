@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: Merge Operator Block
     description: Menggabungkan beberapa Object menjadi satu Object pada Flow Block Operator Merge.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

@@ -3,12 +3,12 @@
     title: Delay Block
     description: Flow Block untuk menunda aliran selama waktu yang ditentukan pada komponen Flow.
     pageDecoration:
+      icon: x
       tree:
         priority: 1
     tags:
       draft
 ---
-
 # Delay Block
 
 >**note** Delay Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Chrono/Pengenalan|Flow Block Chrono]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.

@@ -1,5 +1,5 @@
 ---
-    status: draft
+    status: release
     title: Flow Block Query
     description: Pengenalan kategori Flow Block Query, block yang membangun dan menjalankan Query di Blueprint Flow.
     pageDecoration:

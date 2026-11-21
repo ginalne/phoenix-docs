@@ -1,5 +1,5 @@
 ---
-    status: draft
+    status: release
     title: Flow Block Data Table
     description: Pengenalan kelompok Flow Block Data Table, block untuk menambah, membaca, mengubah, dan menghapus Row serta TableData lewat logika Flow.
     pageDecoration:
@@ -7,7 +7,6 @@
         priority: 10
     tags:
       flowblock-category
-      draft
 ---
 # Flow Block Data Table
 

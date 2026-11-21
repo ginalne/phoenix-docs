@@ -1,15 +1,12 @@
 ---
-    status: draft
+    status: release
     title: EnumData Value
     description: Flow Block untuk mengambil Value sebuah EnumData sebagai data langsung.
     pageDecoration:
       icon: grid
       tree:
         priority: 3
-    tags:
-      draft
 ---
-
 # EnumData Value
 
 >**note** EnumData Value merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan|Flow Block Data Enum]] di Phoenix.

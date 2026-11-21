@@ -1,12 +1,12 @@
 ---
-    status: release
+    status: draft
     title: Node Parse Operator Block
     description: Mengubah Node menjadi Object dan Text dengan atribut parent dan children sesuai kedalaman pada Flow Block Operator Node Parse.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---
-
 # Node Parse Operator Block
 
 >**note** Node Parse Block merupakan salah satu Flow Block kelompok Tree pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.

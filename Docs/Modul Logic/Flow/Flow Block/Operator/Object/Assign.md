@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: Assign Operator Block
     description: Menambahkan satu atribut pada Object dengan Key dan Value pada Flow Block Operator Assign.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

@@ -1,15 +1,12 @@
 ---
-    status: draft
+    status: release
     title: Delete EnumData
     description: Flow Block untuk menghapus EnumData dari sebuah Enum, dengan opsi hapus paksa.
     pageDecoration:
       icon: trash
       tree:
         priority: 6
-    tags:
-      draft
 ---
-
 # Delete EnumData
 
 >**note** Delete EnumData merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan|Flow Block Data Enum]] di Phoenix.

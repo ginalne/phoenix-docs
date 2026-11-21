@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: Stringify Operator Block
     description: Mengubah Object menjadi Text pada Flow Block Operator Stringify.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

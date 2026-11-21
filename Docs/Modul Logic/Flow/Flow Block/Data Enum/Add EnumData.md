@@ -1,15 +1,12 @@
 ---
-    status: draft
+    status: release
     title: Add EnumData
     description: Flow Block untuk menambahkan EnumData baru ke sebuah Enum dari dalam Flow.
     pageDecoration:
       icon: plus
       tree:
         priority: 7
-    tags:
-      draft
 ---
-
 # Add EnumData
 
 >**note** Add EnumData merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan|Flow Block Data Enum]] di Phoenix.

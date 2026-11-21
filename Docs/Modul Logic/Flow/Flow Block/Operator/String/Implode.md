@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: Implode Operator Block
     description: Menggabungkan String atau Array berisi String menjadi satu String dengan pemisah pada Flow Block Operator Implode.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

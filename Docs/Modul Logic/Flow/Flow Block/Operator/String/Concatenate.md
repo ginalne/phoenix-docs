@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: Concatenate Operator Block
     description: Menghubungkan dua string input menjadi satu string pada Flow Block Operator Concatenate.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---

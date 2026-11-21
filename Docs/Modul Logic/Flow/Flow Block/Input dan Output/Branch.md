@@ -8,7 +8,6 @@
     tags:
       draft
 ---
-
 # Branch Block
 
 >**note** Branch Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Pengenalan|Flow Block Input dan Output]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.

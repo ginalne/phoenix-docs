@@ -3,13 +3,12 @@
     title: EnumData Value Setter
     description: Flow Block untuk mengubah Value sebuah EnumData dari dalam Flow.
     pageDecoration:
-      icon: save
+      icon: x
       tree:
         priority: 4
     tags:
       draft
 ---
-
 # EnumData Value Setter
 
 >**note** EnumData Value Setter merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Enum/Pengenalan|Flow Block Data Enum]] di Phoenix.

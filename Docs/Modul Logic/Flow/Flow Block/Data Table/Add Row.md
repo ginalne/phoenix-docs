@@ -5,7 +5,6 @@
     tags:
       draft
 ---
-
 # Add Row Block
 
 >**note** Add Row Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.

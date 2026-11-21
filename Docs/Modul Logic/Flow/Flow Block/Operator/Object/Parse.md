@@ -1,8 +1,9 @@
 ---
-    status: release
+    status: draft
     title: Parse Operator Block
     description: Mengubah Text menjadi Object pada Flow Block Operator Parse.
     pageDecoration:
+      icon: x
       tree:
         priority: 0
 ---
