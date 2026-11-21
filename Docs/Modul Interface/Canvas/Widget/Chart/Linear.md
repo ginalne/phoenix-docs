@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Chart Linear
-description: Widget Chart Linear menampilkan data Table sebagai bar linear dengan track, marker, threshold, dan animasi pada Canvas.
+    status: draft
+    title: Widget Chart Linear
+    description: Widget Chart Linear menampilkan data Table sebagai bar linear dengan track, marker, threshold, dan animasi pada Canvas.
+    tags:
+      draft
 ---
 # Widget Chart Linear
 

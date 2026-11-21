@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 13
+    tags:
+      draft
 ---
 
 # Tree Get Origin Block

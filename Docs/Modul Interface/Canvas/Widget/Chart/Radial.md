@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Chart Radial
-description: Widget Chart Radial menampilkan data Table sebagai bar melingkar dengan needle, ruler, threshold, dan animasi pada Canvas.
+    status: draft
+    title: Widget Chart Radial
+    description: Widget Chart Radial menampilkan data Table sebagai bar melingkar dengan needle, ruler, threshold, dan animasi pada Canvas.
+    tags:
+      draft
 ---
 # Widget Chart Radial
 

@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Variable Value
-description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
+    status: draft
+    title: Variable Value
+    description: Flow Block untuk mengambil Value dari Variable Data secara langsung.
+    tags:
+      draft
 ---
 # Variable Value
 

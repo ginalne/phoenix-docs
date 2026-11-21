@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Gallery
-description: Widget Gallery menampilkan data Table sebagai kartu visual yang menonjolkan gambar atau konten pada Canvas.
+    status: draft
+    title: Widget Gallery
+    description: Widget Gallery menampilkan data Table sebagai kartu visual yang menonjolkan gambar atau konten pada Canvas.
+    tags:
+      draft
 ---
 # Widget Gallery
 

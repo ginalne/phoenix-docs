@@ -2,6 +2,8 @@
     status: draft
     title: Widget Chart Pie
     description: Widget Chart Pie menampilkan data Table sebagai diagram pie pada Canvas, lengkap dengan pengaturan lubang, warna, label, legenda, dan total.
+    tags:
+      draft
 ---
 # Widget Chart Pie
 

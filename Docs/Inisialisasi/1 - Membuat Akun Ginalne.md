@@ -4,5 +4,7 @@
       icon: x
       tree:
         priority: 10
+    tags:
+      draft
 ---
 # Membuat  Akun Ginalne

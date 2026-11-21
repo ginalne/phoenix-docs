@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Timeline
-description: Widget Timeline menampilkan satu data Table dalam urutan waktu pada Canvas.
+    status: draft
+    title: Widget Timeline
+    description: Widget Timeline menampilkan satu data Table dalam urutan waktu pada Canvas.
+    tags:
+      draft
 ---
 # Widget Timeline
 

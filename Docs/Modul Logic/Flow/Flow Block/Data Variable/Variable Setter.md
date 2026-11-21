@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Variable Setter
-description: Flow Block untuk memperbarui Value pada Variable Data.
+    status: draft
+    title: Variable Setter
+    description: Flow Block untuk memperbarui Value pada Variable Data.
+    tags:
+      draft
 ---
 # Variable Setter
 

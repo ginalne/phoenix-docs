@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Chart Line
-description: Widget Chart Line menampilkan data Table sebagai grafik garis dengan area, titik data, dan sumbu yang dapat diatur pada Canvas.
+    status: draft
+    title: Widget Chart Line
+    description: Widget Chart Line menampilkan data Table sebagai grafik garis dengan area, titik data, dan sumbu yang dapat diatur pada Canvas.
+    tags:
+      draft
 ---
 # Widget Chart Line
 

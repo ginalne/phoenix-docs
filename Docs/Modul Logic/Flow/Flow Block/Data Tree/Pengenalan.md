@@ -6,6 +6,8 @@
     pageDecoration:
       tree:
         priority: 20
+    tags:
+      draft
 ---
 # Flow Block Data Tree
 

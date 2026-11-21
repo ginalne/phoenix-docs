@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Space
-description: Widget Space menampilkan data Table sebagai Space pada Canvas.
+    status: draft
+    title: Widget Space
+    description: Widget Space menampilkan data Table sebagai Space pada Canvas.
+    tags:
+      draft
 ---
 # Widget Space
 

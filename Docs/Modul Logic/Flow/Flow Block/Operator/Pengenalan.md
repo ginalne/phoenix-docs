@@ -1,11 +1,13 @@
 ---
-status: draft
-title: Flow Block Operator
-description: Pengenalan kategori Flow Block Operator, block yang mengolah data di Blueprint Flow berdasarkan tipe data input utamanya.
-pageDecoration:
-  tree:
-    priority: 13
-tags: flowblock-category
+    status: draft
+    title: Flow Block Operator
+    description: Pengenalan kategori Flow Block Operator, block yang mengolah data di Blueprint Flow berdasarkan tipe data input utamanya.
+    pageDecoration:
+      tree:
+        priority: 13
+    tags:
+      flowblock-category
+      draft
 ---
 # Flow Block Operator
 

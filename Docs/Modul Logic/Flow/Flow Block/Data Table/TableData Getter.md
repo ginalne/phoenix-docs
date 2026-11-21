@@ -1,7 +1,9 @@
 ---
-status: draft
-title: TableData Getter Block
-description: Flow Block Data Table untuk mengambil nilai TableData berdasarkan Column dan Row.
+    status: draft
+    title: TableData Getter Block
+    description: Flow Block Data Table untuk mengambil nilai TableData berdasarkan Column dan Row.
+    tags:
+      draft
 ---
 
 # TableData Getter Block

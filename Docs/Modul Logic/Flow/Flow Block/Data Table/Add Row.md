@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Add Row Block
-description: Flow Block Data Table untuk menambahkan Row baru yang masih kosong ke sebuah Table.
+    status: draft
+    title: Add Row Block
+    description: Flow Block Data Table untuk menambahkan Row baru yang masih kosong ke sebuah Table.
+    tags:
+      draft
 ---
 
 # Add Row Block

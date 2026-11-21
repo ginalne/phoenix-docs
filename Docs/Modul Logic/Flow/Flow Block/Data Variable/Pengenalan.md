@@ -5,7 +5,9 @@
     pageDecoration:
       tree:
         priority: 10
-    tags: flowblock-category
+    tags:
+      flowblock-category
+      draft
 ---
 # Flow Block Data Variable
 

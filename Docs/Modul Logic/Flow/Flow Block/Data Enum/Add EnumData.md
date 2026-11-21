@@ -1,11 +1,13 @@
 ---
-status: draft
-title: Add EnumData
-description: Flow Block untuk menambahkan EnumData baru ke sebuah Enum dari dalam Flow.
-pageDecoration:
-  icon: plus
-  tree:
-    priority: 7
+    status: draft
+    title: Add EnumData
+    description: Flow Block untuk menambahkan EnumData baru ke sebuah Enum dari dalam Flow.
+    pageDecoration:
+      icon: plus
+      tree:
+        priority: 7
+    tags:
+      draft
 ---
 
 # Add EnumData

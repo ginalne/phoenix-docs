@@ -1,11 +1,13 @@
 ---
-status: draft
-title: Flow Block Input dan Output
-description: Pengenalan kategori Flow Block Input dan Output, block yang membantu mengelola aliran data di Blueprint Flow.
-pageDecoration:
-  tree:
-    priority: 11
-tags: flowblock-category
+    status: draft
+    title: Flow Block Input dan Output
+    description: Pengenalan kategori Flow Block Input dan Output, block yang membantu mengelola aliran data di Blueprint Flow.
+    pageDecoration:
+      tree:
+        priority: 11
+    tags:
+      flowblock-category
+      draft
 ---
 # Flow Block Input dan Output
 

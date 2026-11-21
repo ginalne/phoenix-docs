@@ -1,10 +1,12 @@
 ---
-status: draft
-title: "Apa itu Flow Block?"
-description: Flow Block adalah unit terkecil penyusun Flow yang tersusun dari Trigger, Input, Control, dan Output untuk membangun logika.
-pageDecoration:
-  tree:
-    priority: 10
+    status: draft
+    title: "Apa itu Flow Block?"
+    description: Flow Block adalah unit terkecil penyusun Flow yang tersusun dari Trigger, Input, Control, dan Output untuk membangun logika.
+    pageDecoration:
+      tree:
+        priority: 10
+    tags:
+      draft
 ---
 
 # Apa itu Flow Block?

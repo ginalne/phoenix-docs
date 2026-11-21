@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Table
-description: Widget Table menampilkan data Table dalam bentuk tabel pada Canvas, lengkap dengan pagination dan toolbar search yang dapat diaktifkan.
+    status: draft
+    title: Widget Table
+    description: Widget Table menampilkan data Table dalam bentuk tabel pada Canvas, lengkap dengan pagination dan toolbar search yang dapat diaktifkan.
+    tags:
+      draft
 ---
 # Widget Table
 

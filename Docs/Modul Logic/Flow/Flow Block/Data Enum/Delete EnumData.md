@@ -1,11 +1,13 @@
 ---
-status: draft
-title: Delete EnumData
-description: Flow Block untuk menghapus EnumData dari sebuah Enum, dengan opsi hapus paksa.
-pageDecoration:
-  icon: trash
-  tree:
-    priority: 6
+    status: draft
+    title: Delete EnumData
+    description: Flow Block untuk menghapus EnumData dari sebuah Enum, dengan opsi hapus paksa.
+    pageDecoration:
+      icon: trash
+      tree:
+        priority: 6
+    tags:
+      draft
 ---
 
 # Delete EnumData

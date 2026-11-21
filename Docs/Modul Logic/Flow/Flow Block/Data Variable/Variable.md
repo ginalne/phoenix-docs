@@ -6,6 +6,8 @@
       icon: grid
       tree:
         priority: 4
+    tags:
+      draft
 ---
 # Variable
 

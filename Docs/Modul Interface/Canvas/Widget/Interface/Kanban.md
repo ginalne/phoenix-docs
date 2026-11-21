@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Kanban
-description: Widget Kanban menampilkan data Table sebagai kolom dan kartu berdasarkan status atau kategori pada Canvas.
+    status: draft
+    title: Widget Kanban
+    description: Widget Kanban menampilkan data Table sebagai kolom dan kartu berdasarkan status atau kategori pada Canvas.
+    tags:
+      draft
 ---
 # Widget Kanban
 

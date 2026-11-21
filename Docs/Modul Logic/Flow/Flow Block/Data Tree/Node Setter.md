@@ -1,10 +1,12 @@
 ---
-status: draft
-title: Node Setter Block
-description: Flow Block Data Tree yang mengubah Name dan Order sebuah Node.
-pageDecoration:
-  tree:
-    priority: 17
+    status: draft
+    title: Node Setter Block
+    description: Flow Block Data Tree yang mengubah Name dan Order sebuah Node.
+    pageDecoration:
+      tree:
+        priority: 17
+    tags:
+      draft
 ---
 
 # Node Setter Block

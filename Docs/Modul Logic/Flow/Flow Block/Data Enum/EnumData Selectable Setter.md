@@ -1,11 +1,13 @@
 ---
-status: draft
-title: EnumData Selectable Setter
-description: Flow Block untuk mengubah Selectable pada satu atau beberapa EnumData sekaligus dari dalam Flow.
-pageDecoration:
-  icon: save
-  tree:
-    priority: 4
+    status: draft
+    title: EnumData Selectable Setter
+    description: Flow Block untuk mengubah Selectable pada satu atau beberapa EnumData sekaligus dari dalam Flow.
+    pageDecoration:
+      icon: save
+      tree:
+        priority: 4
+    tags:
+      draft
 ---
 
 # EnumData Selectable Setter

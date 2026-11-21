@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Table Row Block
-description: Flow Block Data Table untuk mengambil atribut dari sebuah Row, yaitu Index dan Table asalnya.
+    status: draft
+    title: Table Row Block
+    description: Flow Block Data Table untuk mengambil atribut dari sebuah Row, yaitu Index dan Table asalnya.
+    tags:
+      draft
 ---
 
 # Table Row Block

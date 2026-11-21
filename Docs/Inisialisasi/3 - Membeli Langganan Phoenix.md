@@ -4,4 +4,6 @@
       icon: x
       tree:
         priority: 8
+    tags:
+      draft
 ---

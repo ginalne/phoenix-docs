@@ -11,6 +11,8 @@
 '
       tree:
         priority: 10
+    tags:
+      draft
 ---
 # Apa itu Workspace?
 

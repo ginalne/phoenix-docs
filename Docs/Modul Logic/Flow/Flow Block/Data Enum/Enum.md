@@ -1,11 +1,13 @@
 ---
-status: draft
-title: Enum
-description: Flow Block untuk mengambil atribut sebuah Enum, yaitu Name dan Description, agar dapat dipakai block lain.
-pageDecoration:
-  icon: grid
-  tree:
-    priority: 5
+    status: draft
+    title: Enum
+    description: Flow Block untuk mengambil atribut sebuah Enum, yaitu Name dan Description, agar dapat dipakai block lain.
+    pageDecoration:
+      icon: grid
+      tree:
+        priority: 5
+    tags:
+      draft
 ---
 
 # Enum

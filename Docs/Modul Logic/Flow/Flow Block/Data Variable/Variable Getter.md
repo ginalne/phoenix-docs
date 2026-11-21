@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Variable Getter
-description: Flow Block untuk mengambil Variable Data berdasarkan Name.
+    status: draft
+    title: Variable Getter
+    description: Flow Block untuk mengambil Variable Data berdasarkan Name.
+    tags:
+      draft
 ---
 # Variable Getter
 

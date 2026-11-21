@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Add Variable
-description: Flow Block untuk menambahkan Variable Data baru dari dalam Flow.
+    status: draft
+    title: Add Variable
+    description: Flow Block untuk menambahkan Variable Data baru dari dalam Flow.
+    tags:
+      draft
 ---
 # Add Variable
 

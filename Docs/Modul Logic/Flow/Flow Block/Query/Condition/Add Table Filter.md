@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 2
+    tags:
+      draft
 ---
 # Add Table Filter Block
 

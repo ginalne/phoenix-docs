@@ -4,6 +4,8 @@
       icon: zap
       tree:
         priority: 17
+    tags:
+      draft
 ---
 # Event
 

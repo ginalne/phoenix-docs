@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 10
+    tags:
+      draft
 ---
 # Node Get Ancestor Block
 

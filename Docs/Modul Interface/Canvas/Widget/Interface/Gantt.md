@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Widget Gantt
-description: Widget Gantt menampilkan data Table sebagai bilah jadwal pada sumbu waktu di Canvas.
+    status: draft
+    title: Widget Gantt
+    description: Widget Gantt menampilkan data Table sebagai bilah jadwal pada sumbu waktu di Canvas.
+    tags:
+      draft
 ---
 # Widget Gantt
 

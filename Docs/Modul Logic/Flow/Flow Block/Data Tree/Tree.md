@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 19
+    tags:
+      draft
 ---
 # Tree Block
 

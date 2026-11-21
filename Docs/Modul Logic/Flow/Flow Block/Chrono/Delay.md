@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 1
+    tags:
+      draft
 ---
 
 # Delay Block

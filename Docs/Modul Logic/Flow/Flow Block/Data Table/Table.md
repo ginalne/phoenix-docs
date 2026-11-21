@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Table Block
-description: Flow Block Data Table untuk mengambil atribut dari sebuah Table, yaitu Name dan Description.
+    status: draft
+    title: Table Block
+    description: Flow Block Data Table untuk mengambil atribut dari sebuah Table, yaitu Name dan Description.
+    tags:
+      draft
 ---
 # Table Block
 

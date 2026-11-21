@@ -1,7 +1,9 @@
 ---
-status: draft
-title: TableData Setter Block
-description: Flow Block Data Table untuk mengubah satu nilai TableData berdasarkan Column dan Row.
+    status: draft
+    title: TableData Setter Block
+    description: Flow Block Data Table untuk mengubah satu nilai TableData berdasarkan Column dan Row.
+    tags:
+      draft
 ---
 
 # TableData Setter Block

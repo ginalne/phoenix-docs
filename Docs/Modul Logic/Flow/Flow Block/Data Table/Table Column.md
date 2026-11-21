@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Table Column Block
-description: Flow Block Data Table untuk mengambil atribut dari sebuah Column, yaitu Name, Description, Header, dan Table asalnya.
+    status: draft
+    title: Table Column Block
+    description: Flow Block Data Table untuk mengambil atribut dari sebuah Column, yaitu Name, Description, Header, dan Table asalnya.
+    tags:
+      draft
 ---
 
 # Table Column Block

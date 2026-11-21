@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 12
+    tags:
+      draft
 ---
 
 # Node Get Parent Block

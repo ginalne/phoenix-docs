@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Delete Variable
-description: Flow Block untuk menghapus Variable Data yang ditunjuk, dengan opsi hapus paksa.
+    status: draft
+    title: Delete Variable
+    description: Flow Block untuk menghapus Variable Data yang ditunjuk, dengan opsi hapus paksa.
+    tags:
+      draft
 ---
 # Delete Variable
 

@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 14
+    tags:
+      draft
 ---
 
 # Delete Node Block

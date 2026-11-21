@@ -1,7 +1,9 @@
 ---
-status: draft
-title: Delete Row Block
-description: Flow Block Data Table untuk menghapus Row dari Table, dengan pilihan hapus paksa untuk Row yang sudah digunakan.
+    status: draft
+    title: Delete Row Block
+    description: Flow Block Data Table untuk menghapus Row dari Table, dengan pilihan hapus paksa untuk Row yang sudah digunakan.
+    tags:
+      draft
 ---
 # Delete Row Block
 

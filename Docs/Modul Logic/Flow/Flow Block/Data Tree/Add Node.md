@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 16
+    tags:
+      draft
 ---
 # Add Node Block
 

@@ -5,6 +5,8 @@
     pageDecoration:
       tree:
         priority: 4
+    tags:
+      draft
 ---
 # Validator dalam Elemen Form
 
