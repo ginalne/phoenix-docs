@@ -194,7 +194,7 @@ Timeline dapat berubah berdasarkan kompleksitas kebutuhan, ketersediaan data, da
 |     | **Subtotal** |     | **Rp 57.000.000** |
 |     | Pajak (PPN 11%, jika berlaku) |     | Rp 6.270.000 |
 |     | **Total Investment (termasuk PPN)** |     | **Rp 63.270.000** |
-
+HIl
 Jika pajak tidak berlaku, Total Investment adalah Rp 57.000.000.
 
 **Opsi tambahan (tidak termasuk dalam total di atas):**
