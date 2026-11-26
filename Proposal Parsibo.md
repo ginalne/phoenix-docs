@@ -89,7 +89,6 @@ Platform ini memiliki empat kelompok kemampuan utama:
 *   **Interface:** Menyediakan berbagai cara untuk berinteraksi dengan data.
 *   **Logic:** Menghubungkan proses melalui workflow dan otomatisasi.
 *   **Developer:** Mengelola akses, workspace, dan pengembangan sistem.
-
 ### 4.3 Pilot Scope
 
 Agar nilai solusi dapat dibuktikan dengan risiko dan biaya yang terukur, pilot dibatasi sebagai berikut: \[ASUMSI\]
