@@ -140,7 +140,6 @@ Item yang tidak termasuk dalam kesepakatan proyek akan diperlakukan sebagai peke
 ## 6\. Project Deliverables
 
 Pada akhir proyek, klien akan menerima:
-
 *   Struktur data silsilah (Tree) dan data anggota (Table, Enum) yang telah dikonfigurasi.
 *   Form pendaftaran anggota, Table View pencarian anggota, dan Canvas dashboard ringkasan.
 *   Alur kerja otomatis untuk pendaftaran, validasi, verifikasi, dan penempatan pada silsilah.
