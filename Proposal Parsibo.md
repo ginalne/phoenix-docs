@@ -78,7 +78,7 @@ Phoenix akan membantu Komunitas Parsibo membangun ekosistem digital yang disesua
 | Interface | Form pendaftaran, Table View, dan Canvas dashboard | Form untuk pendaftaran dan pembaruan data, Table View untuk pencarian dan penyaringan anggota, Canvas untuk ringkasan jumlah anggota dan status verifikasi. |
 | Workflow & Automation | Flow untuk validasi dan alur verifikasi | Data yang masuk diperiksa otomatis (kelengkapan, duplikasi, kewajaran tanggal), diarahkan ke verifikator, lalu ditempatkan ke posisi yang benar pada silsilah setelah disetujui. |
 | Integration | Opsional, di luar paket inti pilot | Koneksi ke layanan eksternal, misalnya pengiriman notifikasi, melalui HTTP Request pada Flow. Lihat Bagian 8.1 (Opsi Tambahan). |
-| Access Management | Group dan Workspace per peran | Admin pusat, verifikator, dan pengurus memiliki ruang kerja dan hak akses (Data, Component, Function) yang berbed
+| Access Management | Group dan Workspace per peran | Admin pusat, verifikator, dan pengurus memiliki ruang kerja dan hak akses (Data, Component, Function) yang berbeda.
 ### 4.2 Phoenix Platform
 
 Phoenix merupakan platform teknologi untuk membangun ekosistem operasional yang fleksibel dan terintegrasi.
@@ -88,7 +88,7 @@ Platform ini memiliki empat kelompok kemampuan utama:
 *   **Data:** Mengatur struktur, relasi, dan pengelolaan data.
 *   **Interface:** Menyediakan berbagai cara untuk berinteraksi dengan data.
 *   **Logic:** Menghubungkan proses melalui workflow dan otomatisasi.
-*   **Developer:** Mengelola akses, workspace, dan pengembangan sistem.
+*   **Developer:** Mengelola akses, workspace, dan pengembangan sistem. “
 ### 4.3 Pilot Scope
 
 Agar nilai solusi dapat dibuktikan dengan risiko dan biaya yang terukur, pilot dibatasi sebagai berikut: \[ASUMSI\]
