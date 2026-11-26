@@ -79,8 +79,7 @@ Phoenix akan membantu Komunitas Parsibo membangun ekosistem digital yang disesua
 | Workflow & Automation | Flow untuk validasi dan alur verifikasi | Data yang masuk diperiksa otomatis (kelengkapan, duplikasi, kewajaran tanggal), diarahkan ke verifikator, lalu ditempatkan ke posisi yang benar pada silsilah setelah disetujui. |
 | Integration | Opsional, di luar paket inti pilot | Koneksi ke layanan eksternal, misalnya pengiriman notifikasi, melalui HTTP Request pada Flow. Lihat Bagian 8.1 (Opsi Tambahan). |
 | Access Management | Group dan Workspace per peran | Admin pusat, verifikator, dan pengurus memiliki ruang kerja dan hak akses (Data, Component, Function) yang berbeda.
-### 4.2 Phoenix Platform
-
+###  4.2 Phoenix Platform
 Phoenix merupakan platform teknologi untuk membangun ekosistem operasional yang fleksibel dan terintegrasi.
 
 Platform ini memiliki empat kelompok kemampuan utama:
