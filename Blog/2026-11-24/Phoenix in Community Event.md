@@ -57,10 +57,10 @@ Phoenix dirancang supaya data komunitas punya satu rumah, lalu bisa dilihat dan 
 - **Pendaftaran lewat satu tautan.** Calon peserta mengisi formulir (Form), dan setiap pengisian langsung masuk ke daftar peserta tanpa perlu disalin siapa pun.
 - **Daftar acara dan peserta yang selalu terbaru.** Semuanya tersimpan di satu tempat (Table), dan setiap peserta terhubung ke acaranya masing-masing.
 - **Papan status acara.** Dari rencana sampai selesai, pengurus melihat posisi tiap acara sekilas dan menggesernya ke tahap berikutnya (Kanban).
-- **Jadwal yang terlihat jelas.** Seluruh acara tersusun di garis waktu, lengkap dengan penanda mana yang akan datang, sedang berlangsung, atau sudah selesai (Timeline).
+- **Jadwal yang terlihat jes.** Seluruh acara tersusun di garis waktu, lengkap dengan penanda mana yang akan datang, sedang berlangsung, atau sudah selesai (Timeline).
 - **Daftar kerja untuk panitia dan relawan.** Peserta per acara bisa disaring dan ditampilkan sesuai kebutuhan, termasuk untuk menandai kehadiran saat check-in (Table View).
 - **Dokumentasi yang rapi.** Foto dan materi acara tampil sebagai kartu visual yang enak dijelajahi (Gallery).
 - **Pembagian peran yang jelas.** Pengurus, panitia, dan relawan hanya melihat dan mengubah bagian yang menjadi tanggung jawabnya. Fungsi di luar izin tidak muncul di layar mereka (Group dan Workspace).
 - **Pengingat yang berjalan sendiri.** Pesan pengingat sehari sebelum acara, atau sambutan untuk pendaftar baru, bisa berjalan otomatis, dan setiap jalannya tercatat (Flow).
 
-Tidak perlu menyiapkan semuanya sekaligus. Mulailah dari satu formulir pendaftaran dan satu daftar peserta untuk acara berikutnya. Setelah berjalan, tambahkan papan status, jadwal, dan pengingat sesuai kebutuhan. Ketika tiga hari sebelum acara ada yang bertanya “berapa yang sudah daftar?”, jawabannya tinggal satu.
+Tidak perlu menyiapkan semuanya sekaligus. Mulailah dari satu formulir pendaftaran dan satu daftar peserta untuk acara berikutnya. Setelah berjalan, tambahkan papan status, jadwal, dan pengingat sesuai kebutuhan. Ketika tiga hari sebelum acara ada yang bertanya “berapa yang sudah daftar?”, jawabannya tinggal satu.la
