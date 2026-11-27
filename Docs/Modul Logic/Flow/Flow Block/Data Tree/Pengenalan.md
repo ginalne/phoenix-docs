@@ -10,13 +10,13 @@
 ---
 # Flow Block Data Tree
 
->**note** Flow Block Data Tree merupakan salah satu kelompok [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori Data dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Flow Block Data Tree merupakan salah satu kelompok [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori Data dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
-Flow Block Data Tree adalah kelompok [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang dipakai untuk mengakses komponen [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] melalui logika [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. Dengan kelompok ini, alur Anda dapat membaca atribut [[Docs/Tipe Data/Tree]] dan [[Docs/Tipe Data/Node]], menelusuri hubungan antar Node (induk, anak, dan leluhur), serta menambah, menetapkan, mengubah, dan menghapus Node secara otomatis, tanpa membuka halaman kerja Tree.
+Flow Block Data Tree adalah kelompok [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang dipakai untuk mengakses komponen [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] melalui logika [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]]. Dengan kelompok ini, alur Anda dapat membaca atribut [[Docs/Tipe Data/Tree]] dan [[Docs/Tipe Data/Node]], menelusuri hubungan antar Node (induk, anak, dan leluhur), serta menambah, menetapkan, mengubah, dan menghapus Node secara otomatis, tanpa membuka halaman kerja Tree.
 
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur dan memiliki Control serta output yang mirip, block Data bekerja setelah menerima data dari block sebelumnya sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Setiap block pada kelompok ini juga unik sesuai fungsinya: ada yang membaca atribut Tree atau Node, ada yang menelusuri hubungan Node, dan ada yang mengelola Node. Karena itu Anda memilih block berdasarkan peran yang dibutuhkan di alur, bukan berdasarkan pola input dan output yang seragam.
 
-![[Docs/Modul Logic/Flow/Flow Block/Data Tree/data-tree-block-flow.png|Sepuluh Flow Block Data Tree pada Blueprint: Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, dan Tree Get Origin]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Tree/data-tree-block-flow.png|Sepuluh Flow Block Data Tree pada Blueprint: Add Node, Assign Node, Delete Node, Node, Node Get Ancestor, Node Get Children, Node Get Parent, Node Setter, Tree, dan Tree Get Origin]]
 
 Block Data Tree umumnya berada di tengah atau di ujung alur. Misalnya, alur mengambil [[Docs/Tipe Data/Node]] Origin dari sebuah Tree, menelusuri anak-anaknya, lalu meneruskan hasilnya ke block lain.
 

@@ -9,7 +9,7 @@
 ---
 # Assign Operator Block
 
->**note** Assign Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Assign Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Assign Block adalah Flow Block Operator yang menambahkan atribut pada [[Docs/Tipe Data/Object]]. [[^input|Key]] menjadi nama atribut dan [[^input|Value]] menjadi isinya. Block ini hanya mengisi satu atribut pada setiap eksekusi, dan hasilnya dikeluarkan lewat [[^output|Object]].
 

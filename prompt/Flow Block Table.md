@@ -8,7 +8,7 @@
 ---
 2026-11-07 02:00
 
-![[Docs/Modul Logic/Flow/Flow Block/Data Table/data-table-block-flow.png|Tujuh Flow Block Data Table pada Blueprint: Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, dan TableData Setter]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Table/data-table-block-flow.png|Tujuh Flow Block Data Table pada Blueprint: Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, dan TableData Setter]]
 /phoenix-docs-silverbullet /phoenix-docs-knowledge 
 
 Tolong saya membuat 7 halaman flow block untuk data enum:

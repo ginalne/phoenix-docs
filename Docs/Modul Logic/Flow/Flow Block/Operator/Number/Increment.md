@@ -9,7 +9,7 @@
 ---
 # Increment Operator Block
 
->**note** Increment Block merupakan salah satu Flow Block kelompok Number pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Increment Block merupakan salah satu Flow Block kelompok Number pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Increment Block adalah Flow Block Operator yang menambahkan [[^input|Data]] dengan langkah yang ditentukan pada [[^input|Adders]], lalu mengeluarkan hasilnya lewat [[^output|Result]]. Block ini berguna untuk menghitung nomor urut, penghitung, atau nilai yang bertambah pada setiap eksekusi Flow.
 
@@ -48,7 +48,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 | [[^value/empty]] | [[^value/number|1]] | - | [[^flowstate/Fatal Error]] |
 | [[^value/number|10]] | [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
@@ -64,4 +64,4 @@ Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil d
 
 - [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]]
 - [[Docs/Tipe Data/Number]]
-- [[Docs/Modul Logic/Flow/Flow Activity]]
+- [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]]

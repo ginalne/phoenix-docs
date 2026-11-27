@@ -9,7 +9,7 @@
 ---
 # Stringify Operator Block
 
->**note** Stringify Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Stringify Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Stringify Block adalah Flow Block Operator yang mengubah [[^input|Object]] bertipe [[Docs/Tipe Data/Object]] menjadi [[Docs/Tipe Data/Text]] lewat [[^output|Text]]. Block ini tidak menghasilkan error pada format Object karena Object yang valid pasti sesuai kaidah Object (JSON).
 
@@ -45,7 +45,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 | [[^value/object|{ "nama": "Kopi", "harga": 15000 }]] | [[^value/text|{ "nama": "Kopi", "harga": 15000 }]] | [[^flowstate/Succeed]] |
 | [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

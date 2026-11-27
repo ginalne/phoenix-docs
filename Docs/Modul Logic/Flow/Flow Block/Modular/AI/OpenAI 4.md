@@ -9,7 +9,7 @@
 ---
 # OpenAI 4 Block
 
->**note** OpenAI 4 Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Flow Block Modular]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** OpenAI 4 Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Flow Block Modular]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 OpenAI 4 Block adalah Flow Block yang mengirim permintaan ke OpenAI dan menerima hasilnya sebagai [[Docs/Tipe Data/Text]] atau sebagai Function yang dapat diproses block berikutnya. Block ini memungkinkan Flow memanfaatkan AI di tengah alur, misalnya untuk menjawab atau mengolah teks dari data yang sedang diproses.
 

@@ -7,7 +7,7 @@
 ---
 # Delete Row Block
 
->**note** Delete Row Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Delete Row Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Delete Row Block adalah Flow Block yang menghapus [[Docs/Tipe Data/Row]] dari [[Docs/Tipe Data/Table]]. Block ini memiliki input [[^input|Force]] untuk menghapus Row secara paksa, termasuk Row yang sudah digunakan.
 

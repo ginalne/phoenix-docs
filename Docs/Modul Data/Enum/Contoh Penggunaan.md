@@ -47,9 +47,9 @@ flowchart TB
 
 | Jenis nilai | Contoh integrasi |
 | --- | --- |
-| Status pesanan | Menjadi kolom pengelompokan pada [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] dan pemicu notifikasi di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. |
+| Status pesanan | Menjadi kolom pengelompokan pada [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] dan pemicu notifikasi di [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]]. |
 | Kategori produk | Menjadi pilihan di [[Docs/Modul Interface/Form/Apa itu Form|Form]] input produk dan penyaring pada [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]]. |
-| Tingkat prioritas | Menjadi dasar percabangan alur penanganan di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]]. |
+| Tingkat prioritas | Menjadi dasar percabangan alur penanganan di [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]]. |
 | Wilayah layanan | Menjadi pilihan seragam di berbagai Table sehingga laporan antarwilayah konsisten. |
 
 Dengan satu daftar yang terhubung ke data dan logika, Enum membuat pilihan yang sama dapat dipakai konsisten di seluruh Phoenix.

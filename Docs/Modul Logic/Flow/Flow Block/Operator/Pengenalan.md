@@ -10,13 +10,13 @@
 ---
 # Flow Block Operator
 
->**note** Flow Block Operator merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Flow Block Operator merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Flow Block Operator adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang digunakan untuk **mengolah data** di dalam Flow, seperti aritmatika, pengolahan teks, konversi, maupun translasi data. Setiap block dikelompokkan berdasarkan tipe data input utamanya, sehingga Anda dapat menemukan block yang tepat dari tipe data yang sedang diolah.
 
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur, block Operator bekerja setelah menerima data dari block sebelumnya, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Berbeda pula dengan block yang membaca atau mengubah data pada komponen seperti [[Docs/Modul Data/Variable/Apa itu Variable|Variable]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], [[Docs/Modul Data/Table/Apa itu Table|Table]], dan [[Docs/Modul Data/Tree/Apa itu Tree|Tree]], block Operator hanya mengolah data yang sudah mengalir di dalam Flow.
 
-![[Docs/Modul Logic/Flow/Flow Block/Operator/operator-block-flow.png|Flow Block Operator pada Blueprint: Increment, Concatenate, Implode, Pad Left, Pad Right, TableRow Parse, Assign, Merge, Parse, Stringify, If, dan Node Parse]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Operator/operator-block-flow.png|Flow Block Operator pada Blueprint: Increment, Concatenate, Implode, Pad Left, Pad Right, TableRow Parse, Assign, Merge, Parse, Stringify, If, dan Node Parse]]
 
 Block Operator umumnya ditempatkan di tengah alur, di antara block yang menghasilkan data dan block yang memakainya. Hasil olahan dapat diteruskan ke block lain untuk disimpan, dikirim ke sistem lain, atau diolah lebih lanjut.
 

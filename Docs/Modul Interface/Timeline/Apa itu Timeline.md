@@ -71,7 +71,7 @@ Penjelasan antarmuka lihat selengkapnya di [[Docs/Modul Interface/Timeline/Antar
 
 ## Batasan dan Catatan
 
-- Timeline Event hanya memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]]. Proses setelahnya diatur di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
+- Timeline Event hanya memicu [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]]. Proses setelahnya diatur di [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]].
 - Field [[^field|End]] dan [[^field|Interval]] hilang bila [[^field|Repeat]] [[^value/boolean/false]], sehingga Timeline Event hanya terpicu satu kali.
 - Pengelolaan Timeline Event dibatasi Function Access [[^field|Modify Event]] di [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]].
 - Query Timeline Data mengikuti kaidah Timeline Output. Label [[^field|Name]] dan [[^field|End]] wajib, dan Column untuk [[^field|Start]] serta [[^field|End]] harus berformat DateTime, Date, atau DateTimeZone. Bila tidak terpenuhi, Timeline Data menampilkan [[^field|Error]].

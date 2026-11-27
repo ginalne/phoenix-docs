@@ -3,7 +3,7 @@
     pageDecoration:
       icon: home
       tree:
-        priority: -3
+        priority: 1
 ---
 # Welcome to Phoenix Docs
 

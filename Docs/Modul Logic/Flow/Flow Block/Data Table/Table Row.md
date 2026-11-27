@@ -8,7 +8,7 @@
 
 # Table Row Block
 
->**note** Table Row Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Table Row Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Table Row Block adalah Flow Block yang menerima [[Docs/Tipe Data/Row]] dan mengeluarkan atributnya, yaitu [[^output|Index]] (ID Row pada tampilan [[Docs/Modul Data/Table/Apa itu Table|Table]]) serta [[Docs/Tipe Data/Table]] tempat Row berada. Gunakan block ini saat alur Anda perlu mengenali Row yang sedang diproses, misalnya Row dari [[Docs/Modul Logic/Flow/Flow Block/Event/Table Row Event|Table Row Event Block]] atau [[Docs/Modul Logic/Flow/Flow Block/Data Table/Add Row|Add Row Block]].
 
@@ -48,7 +48,7 @@ Mengenali Row pesanan yang baru ditambahkan agar nomornya dapat dipakai pada lan
 | [[^input|Row]] berisi Row dari Table pesanan | [[Docs/Tipe Data/Row]] | [[^value/number|12]] | [[Docs/Tipe Data/Table]] | [[^flowstate/Succeed]] |
 | [[^input|Row]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

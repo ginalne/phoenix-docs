@@ -7,11 +7,11 @@
 ---
 # Delete Variable
 
->**note** Delete Variable merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Delete Variable merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Delete Variable adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk menghapus [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dari dalam Flow. Block ini memiliki dua input di sisi kiri dan dua output di sisi kanan yang memberi tahu Anda apakah penghapusan berhasil.
 
-![[Docs/Modul Logic/Flow/Flow Block/Data Variable/delete-variable-block-flow.png|Flow Block Delete Variable dengan dua input dan dua output]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Variable/delete-variable-block-flow.png|Flow Block Delete Variable dengan dua input dan dua output]]
 >**danger** Penghapusan tidak dapat dikembalikan
 > Variable Data yang dihapus lewat Delete Variable tidak dapat dikembalikan. Pastikan [[^field|Variable]] menunjuk Variable Data yang benar sebelum Flow dijalankan.
 

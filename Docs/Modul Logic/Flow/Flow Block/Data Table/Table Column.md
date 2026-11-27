@@ -8,7 +8,7 @@
 
 # Table Column Block
 
->**note** Table Column Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Table Column Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Table Column Block adalah Flow Block yang menerima [[Docs/Tipe Data/Column]] dan mengeluarkan atributnya, yaitu [[^field|Name]], [[^field|Description]], [[^field|Header]], serta [[Docs/Tipe Data/Table]] tempat Column berada. Gunakan block ini saat alur Anda perlu mengenali Column yang sedang diproses.
 

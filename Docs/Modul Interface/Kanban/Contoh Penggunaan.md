@@ -48,9 +48,9 @@ flowchart TB
 
 | Variasi | Contoh integrasi |
 | ------- | ---------------- |
-| Kartu masuk ke tahap persetujuan | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] mengirim pemberitahuan kepada penyetuju melalui [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]. |
-| Kartu menumpuk pada satu tahap | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] menghitung jumlah [[Docs/Tipe Data/Row]] per [[^field/column|Status]] lalu menyimpannya ke [[^field/variable|Variable]] untuk dipantau. |
-| [[Docs/Tipe Data/Row]] baru ditambahkan | [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] mengisi [[^field/column|Status]] awal otomatis agar kartu langsung muncul di kolom pertama. |
+| Kartu masuk ke tahap persetujuan | [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] mengirim pemberitahuan kepada penyetuju melalui [[Docs/Modul Logic/Flow/Flow Block/Modular/HTTP Request|HTTP Request]]. |
+| Kartu menumpuk pada satu tahap | [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] menghitung jumlah [[Docs/Tipe Data/Row]] per [[^field/column|Status]] lalu menyimpannya ke [[^field/variable|Variable]] untuk dipantau. |
+| [[Docs/Tipe Data/Row]] baru ditambahkan | [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] mengisi [[^field/column|Status]] awal otomatis agar kartu langsung muncul di kolom pertama. |
 
 Skenario ini menunjukkan Kanban sebagai tampilan data bertahap yang tersambung dengan data dan logika Phoenix, bukan sekadar papan visual.
 

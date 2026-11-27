@@ -10,7 +10,7 @@
 ---
 # Passer Block
 
->**note** Passer Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Pengenalan|Flow Block Input dan Output]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Passer Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Pengenalan|Flow Block Input dan Output]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Passer Block adalah Flow Block yang meneruskan data dari setiap [[^input|Data]] ke [[^output|Pass]] dengan nomor yang sama tanpa mengubahnya. Data 1 diteruskan ke Pass 1, Data 2 ke Pass 2, dan seterusnya.
 

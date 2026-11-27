@@ -9,7 +9,7 @@
 ---
 # Parse Operator Block
 
->**note** Parse Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Parse Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Parse Block adalah Flow Block Operator yang mengubah [[^input|Text]] bertipe [[Docs/Tipe Data/Text]] menjadi data bertipe [[Docs/Tipe Data/Object]] lewat [[^output|Object]]. Bila Text tidak sesuai kaidah Object (JSON), block mengeluarkan [[^output|Error]] sehingga Anda dapat menanganinya di Flow.
 

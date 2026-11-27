@@ -224,7 +224,7 @@ Masuk dengan satu pengguna dari setiap Group, lalu pastikan hal berikut.
 | Kepala Sekolah | Membuka seluruh komponen | Semua terlihat, tidak ada yang dapat diubah kecuali Event |
 | Orang tua | Membuka *Publish Link* | Hanya pengumuman yang terlihat |
 
-Pantau proses Flow pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. Tombol **Submission** pada bilah navigasi Flow menampilkan total *activity*, *done*, *waiting*, dan *failure*.
+Pantau proses Flow pada [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity|Flow Activity]]. Tombol **Submission** pada bilah navigasi Flow menampilkan total *activity*, *done*, *waiting*, dan *failure*.
 
 ---
 
@@ -234,13 +234,13 @@ Pantau proses Flow pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. T
 |---|---|---|
 | Komponen tidak terlihat oleh sebuah Group | **Visible** pada folder induk bernilai `disallow` | Ubah nilai pada folder induk menjadi `allow` |
 | Flow tidak berjalan saat skor ditambahkan | Event belum dihubungkan ke Flow | Ulangi [[Docs/Event/Menghubungkan Event]] |
-| Baris tidak masuk ke **Daftar Remedial** | Pemetaan kolom pada blok Data belum lengkap | Periksa konfigurasi blok dan lihat status di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]] |
+| Baris tidak masuk ke **Daftar Remedial** | Pemetaan kolom pada blok Data belum lengkap | Periksa konfigurasi blok dan lihat status di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity|Flow Activity]] |
 | Pengguna tidak dapat membuka Phoenix | Group tidak memiliki Workspace | Petakan Group ke satu Workspace |
 | Tombol **Publish** tidak muncul | Group hanya memiliki **View Publish** | Beri **Publish** `allow` pada Group Tata Usaha |
 
 ## Praktik Terbaik
 
-- Kerjakan data lebih dulu, lalu [[Docs/Modul Developer/Group/Apa itu Group|Group]] dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], terakhir [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
+- Kerjakan data lebih dulu, lalu [[Docs/Modul Developer/Group/Apa itu Group|Group]] dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], terakhir [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]].
 - Gunakan relasi pada kolom **Siswa** agar nama tidak ganda.
 - Uji Flow dengan satu baris contoh sebelum dipakai seluruh guru.
 - Beri **Visible** saja bila peran hanya perlu membaca.
@@ -248,7 +248,7 @@ Pantau proses Flow pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. T
 ## Batasan dan Catatan
 
 - [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] mengatur akses per komponen, bukan per baris. Pisahkan tabel **Nilai** per kelas bila perlu.
-- Menghapus [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dapat menghilangkan Flow Block dan riwayat [[Docs/Modul Logic/Flow/Flow Activity|Activity]].
+- Menghapus [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] dapat menghilangkan Flow Block dan riwayat [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity|Activity]].
 - Pastikan setiap Group tetap memiliki minimal satu Workspace.
 
 ## Langkah Selanjutnya
@@ -259,7 +259,7 @@ Pantau proses Flow pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]. T
 
 ## TL;DR
 
-Buat [[Docs/Folder/Pengenalan|Folder]] dan tabel [[Docs/Modul Data/Table View/Apa itu Table View|Table View]] lebih dulu, lalu [[Docs/Modul Developer/Group/Apa itu Group|Group]] dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] untuk mengatur **Visible**, **Add**, **Update**, dan **Delete**. Bangun [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] agar skor di bawah **Batas Tuntas** masuk ke **Daftar Remedial**, dan bagikan pengumuman lewat [[Docs/Publish/Pengenalan|Publish]].
+Buat [[Docs/Folder/Pengenalan|Folder]] dan tabel [[Docs/Modul Data/Table View/Apa itu Table View|Table View]] lebih dulu, lalu [[Docs/Modul Developer/Group/Apa itu Group|Group]] dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] untuk mengatur **Visible**, **Add**, **Update**, dan **Delete**. Bangun [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] agar skor di bawah **Batas Tuntas** masuk ke **Daftar Remedial**, dan bagikan pengumuman lewat [[Docs/Publish/Pengenalan|Publish]].
 
 * [ ] TODO (konsolidasi): Halaman ini ditulis dengan asumsi. Mohon dicek: (1) menu **Add > Folder**, **Add > Data > Table View**, **Add > Data > Timeline**, dan **Add > Developer > Group**; (2) nama dan tipe kolom, termasuk Relasi, Pilihan, dan Teks panjang; (3) langkah impor data; (4) pemilihan Event penambahan baris pada Table View dan kategori Flow Block (Event, Operator, Data) beserta pemetaan kolomnya; (5) langkah Publish dan penyalinan *Publish Link*; (6) path wikilink, termasuk subhalaman yang perlu dibuat (Menambahkan Kolom, Mengimpor Data, Relasi Antar Tabel, Menambahkan Pengguna).
 * [ ] TODO: Tabel **Daftar Remedial** ditambahkan pada tutorial ini dan belum ada di studi kasus awal. Perbarui struktur folder studi kasus bila disetujui.

@@ -11,13 +11,13 @@
 ---
 # Flow Block Query
 
->**note** Flow Block Query merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Flow Block Query merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Flow Block Query adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang digunakan untuk **membangun dan menjalankan [[Docs/Tipe Data/Query|Query]]** di dalam Flow. Dengan block Query, Anda dapat menyusun kondisi dari data yang mengalir di Flow, merangkainya menjadi [[Docs/Tipe Data/Query|Query]], lalu menjalankannya untuk mendapatkan data yang dibutuhkan oleh alur berikutnya.
 
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur, block Query bekerja setelah menerima data dari block sebelumnya, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Kedua block pada kategori ini saling melengkapi: Condition membangun bagian kondisi yang kemudian dirangkai menjadi [[Docs/Tipe Data/Query|Query]], dan Execute menjalankannya.
 
-![[Docs/Modul Logic/Flow/Flow Block/Query/query-block-flow.png|Dua Flow Block Query pada Blueprint: Condition dan Execute]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Query/query-block-flow.png|Dua Flow Block Query pada Blueprint: Condition dan Execute]]
 
 Block Query umumnya ditempatkan di tengah alur. Hasil dari Execute diteruskan ke block lain, misalnya untuk diolah oleh [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] atau dikirim ke sistem lain lewat [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Flow Block Modular]].
 
@@ -41,4 +41,4 @@ Phoenix menyediakan dua Flow Block Query. Setiap block memiliki fungsi yang unik
 
 - [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]
-- [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]
+- [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity|Flow Activity]]

@@ -11,7 +11,7 @@
 ---
 # Delay Block
 
->**note** Delay Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Chrono/Pengenalan|Flow Block Chrono]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Delay Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Chrono/Pengenalan|Flow Block Chrono]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Delay Block adalah Flow Block yang menunda aliran selama waktu yang ditentukan. Setelah waktu tunggu selesai, block mengeluarkan [[^output|Finish]] sehingga block berikutnya dapat dilanjutkan.
 
@@ -38,7 +38,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 ## Cara Kerja
 
 1. Isi [[^input|Duration]] dalam satuan detik, langsung pada block atau dari output block lain.
-2. Setelah memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat eksekusi]], block mulai menunggu. Selama menunggu, status pada [[Docs/Modul Logic/Flow/Flow Activity]] terlihat [[^flowstate/Waiting]].
+2. Setelah memenuhi [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|syarat eksekusi]], block mulai menunggu. Selama menunggu, status pada [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]] terlihat [[^flowstate/Waiting]].
 3. Setelah waktu tunggu selesai, [[^output|Finish]] mengeluarkan [[^value/boolean/true]] dan aliran dilanjutkan ke block yang terhubung.
 
 ## Contoh Penggunaan
@@ -53,13 +53,13 @@ Contoh berikut memakai [[^input|Duration]] [[^value/number|5]].
 | [[^input|Duration]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 | [[^input|Duration]] bernilai 0 atau negatif | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 
 - **Isi [[^input|Duration]] dalam detik dan lebih dari 0.** Pastikan nilainya sudah dikonversi ke detik sebelum diisi.
 - **Gunakan angka pecahan untuk waktu tunggu kurang dari satu detik**, misalnya [[^value/number|0.5]] untuk setengah detik.
-- **Pantau status [[^flowstate/Waiting]] pada [[Docs/Modul Logic/Flow/Flow Activity]]** untuk memastikan Delay Block sedang menunggu dan belum selesai.
+- **Pantau status [[^flowstate/Waiting]] pada [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]]** untuk memastikan Delay Block sedang menunggu dan belum selesai.
 - **Gunakan Delay Block untuk menjeda aliran** sebelum block yang perlu menunggu waktu tertentu, misalnya sebelum memanggil sistem lain lewat [[Docs/Modul Logic/Flow/Flow Block/Modular/API/HTTP Request|HTTP Request API Block]].
 
 ## Batasan dan Catatan
@@ -74,4 +74,4 @@ Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil d
 
 - [[Docs/Modul Logic/Flow/Flow Block/Chrono/Pengenalan|Flow Block Chrono]]
 - [[Docs/Modul Logic/Flow/Flow Block/Modular/API/HTTP Request|HTTP Request API Block]]
-- [[Docs/Modul Logic/Flow/Flow Activity]]
+- [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]]

@@ -14,7 +14,7 @@ pageDecoration:
 
 Pro adalah wadah utama di Phoenix. Seluruh [[Docs/Dasar/Apa itu Folder|Folder]], [[Docs/Dasar/Apa itu Komponen|Komponen]], data, pengguna, [[Docs/Modul Developer/Group/Apa itu Group|Group]], dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang Anda kelola berada di dalam satu Pro.
 
-Di dalam satu Pro, data, tampilan, logika, dan hak akses saling terhubung. Anda dapat menyimpan data di [[Docs/Modul Data/Table/Apa itu Table|Table]], menampilkannya lewat komponen modul [[Docs/Modul Interface/Pengenalan|Interface]], menjalankan otomasi dengan [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], lalu mengatur siapa yang boleh melihat dan mengubahnya lewat modul [[Docs/Modul Developer/Pengenalan|Developer]].
+Di dalam satu Pro, data, tampilan, logika, dan hak akses saling terhubung. Anda dapat menyimpan data di [[Docs/Modul Data/Table/Apa itu Table|Table]], menampilkannya lewat komponen modul [[Docs/Modul Interface/Pengenalan|Interface]], menjalankan otomasi dengan [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]], lalu mengatur siapa yang boleh melihat dan mengubahnya lewat modul [[Docs/Modul Developer/Pengenalan|Developer]].
 
 ## Konsep Utama
 

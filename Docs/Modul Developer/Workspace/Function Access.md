@@ -18,7 +18,7 @@ Berbeda dengan [[Docs/Modul Developer/Workspace/Component Access]] dan [[Docs/Mo
 
 - **Membatasi fungsi yang sensitif.** Fungsi seperti publikasi dan perubahan Event dapat dibatasi hanya untuk [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang bertanggung jawab.
 - **Memisahkan melihat dan mengubah.** [[^field|View Publish]] hanya mengizinkan menyalin atau membuka tautan, sedangkan [[^field|Publish]] mengizinkan perubahan konfigurasi.
-- **Menjaga alur otomasi.** Anggota tetap dapat bekerja dengan data tanpa dapat mengubah [[Docs/Dasar/Apa itu Event|Event]] yang terhubung ke [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
+- **Menjaga alur otomasi.** Anggota tetap dapat bekerja dengan data tanpa dapat mengubah [[Docs/Dasar/Apa itu Event|Event]] yang terhubung ke [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]].
 - **Antarmuka yang bersih.** Fungsi yang tidak diizinkan hilang dari antarmuka, sehingga anggota tidak mencoba aksi yang tidak dapat mereka lakukan.
 - **Mudah diperiksa.** Ikon kunci di samping nama komponen memperlihatkan hak akses yang diizinkan oleh Workspace.
 
@@ -72,7 +72,7 @@ Aturan penting:
 | Fungsi | Komponen | Penjelasan |
 | --- | --- | --- |
 | [[^field|Merge]] | [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] | Lihat [[Docs/Modul Data/Table/Merge]] dan [[Docs/Modul Data/Enum/Merge]]. |
-| [[^field|Modify Event]] | [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], [[Docs/Modul Data/Tree/Apa itu Tree|Tree]], [[Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event|Timeline Event]] | Mengubah Event yang terhubung ke [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]], termasuk tombol Event untuk menghubungkan Flow Block Event dari komponen. Lihat [[Docs/Event/Menghubungkan Event]]. |
+| [[^field|Modify Event]] | [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], [[Docs/Modul Data/Tree/Apa itu Tree|Tree]], [[Docs/Modul Interface/Timeline/Apa itu Timeline#Mengelola Timeline Event|Timeline Event]] | Mengubah Event yang terhubung ke [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]], termasuk tombol Event untuk menghubungkan Flow Block Event dari komponen. Lihat [[Docs/Event/Menghubungkan Event]]. |
 | [[^field|View Publish]] dan [[^field|Publish]] | [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Data/Tree/Apa itu Tree|Tree]], [[Docs/Modul Interface/Canvas/Apa itu Canvas#Mempublikasikan Canvas|Canvas]], [[Docs/Modul Interface/Form/Apa itu Form|Form]] | Mengatur tautan publikasi komponen. |
 
 ## Publish dan View Publish
@@ -86,7 +86,7 @@ Aturan penting:
 | Memperbarui konfigurasi publikasi, termasuk mengubah status publikasi | [[^value/boolean/disallow]] | [[^value/boolean/allow]] |
 
 >**warning** Publish membuka akses ke publik
->Tautan hasil [[^field|Publish]] dapat dibuka oleh publik. Pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang dipublikasikan, widget Button yang sudah disetup dapat memicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] dan dipakai oleh siapa pun yang membuka tautan. Berikan [[^field|Publish]] hanya kepada [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang tepercaya, dan gunakan [[^field|View Publish]] bagi anggota yang hanya perlu menyalin tautan.
+>Tautan hasil [[^field|Publish]] dapat dibuka oleh publik. Pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang dipublikasikan, widget Button yang sudah disetup dapat memicu [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] dan dipakai oleh siapa pun yang membuka tautan. Berikan [[^field|Publish]] hanya kepada [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang tepercaya, dan gunakan [[^field|View Publish]] bagi anggota yang hanya perlu menyalin tautan.
 
 >**note** Pengunjung tautan tidak diatur oleh Workspace
 >Pengisi [[Docs/Modul Interface/Form/Apa itu Form|Form]] dan pengunjung tautan publikasi tidak dibatasi Workspace. Akses mereka ditentukan oleh pembuat komponen saat mempublikasikannya.
@@ -130,8 +130,8 @@ Dengan Function Access, fungsi yang berdampak luas hanya dapat dijalankan oleh p
 ## Praktik Terbaik
 
 - **Pisahkan [[^field|Publish]] dan [[^field|View Publish]]**, sehingga tidak semua anggota dapat mengubah konfigurasi publikasi.
-- **Berikan [[^field|Publish]] dengan hati-hati** karena tautan publikasi dapat dibuka publik, terutama pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang memiliki widget Button untuk memicu [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
-- **Batasi [[^field|Modify Event]]** hanya untuk [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang mengelola otomasi, karena perubahan Event memengaruhi [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] yang terhubung.
+- **Berikan [[^field|Publish]] dengan hati-hati** karena tautan publikasi dapat dibuka publik, terutama pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] yang memiliki widget Button untuk memicu [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]].
+- **Batasi [[^field|Modify Event]]** hanya untuk [[Docs/Modul Developer/Group/Apa itu Group|Group]] yang mengelola otomasi, karena perubahan Event memengaruhi [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] yang terhubung.
 - **Berikan [[^field|Merge]] dengan hati-hati** pada data yang sulit dipulihkan.
 - **Berhati-hati saat mengubah akses Group yang sedang aktif**, karena perubahan langsung berlaku tanpa perlu memuat ulang.
 - **Periksa ikon kunci** saat anggota melaporkan tombol yang tidak tersedia.

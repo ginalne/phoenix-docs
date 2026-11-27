@@ -2,6 +2,8 @@
 name: phoenix-docs-knowledge
 pageDecoration:
   icon: info
+  tree:
+    priority: -1
 description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi phoenix.
 ---
 

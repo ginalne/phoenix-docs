@@ -9,7 +9,7 @@
 ---
 # Concatenate Operator Block
 
->**note** Concatenate Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Concatenate Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Concatenate Block adalah Flow Block Operator yang menghubungkan dua [[Docs/Tipe Data/String]] input menjadi satu String. Block ini tidak dapat menghasilkan error: bila salah satu input dibiarkan kosong, hasilnya adalah input yang lain.
 

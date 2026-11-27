@@ -10,7 +10,7 @@
 ---
 # Node Block
 
->**note** Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Node Block adalah Flow Block yang menerima sebuah [[Docs/Tipe Data/Node]] lalu mengeluarkan atribut Node tersebut, yaitu Order, Name, dan Tree tempat Node berada. Gunakan block ini bila Flow membutuhkan informasi sebuah Node sebelum memprosesnya lebih lanjut.
 
@@ -52,7 +52,7 @@ Tabel berikut menunjukkan hasil Node Block pada Tree Kategori Produk.
 | Node yang menjadi anak pertama | [[^value/node|Komputer]] | [[^value/tree|Kategori Produk]] | [[^value/number|0]] | [[^value/string|Komputer]] | [[^flowstate/Succeed]] |
 | [[^input|Node]] dibiarkan kosong | - | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

@@ -20,7 +20,7 @@ _Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pen
 * **Logika tersusun secara visual.** Anda merangkai Flow Block pada blueprint sehingga alur proses mudah dibaca dan dipahami.
 * **Otomasi berbasis Event.** Flow Block Event memicu proses, lalu hasilnya mengalir ke block berikutnya melalui koneksi.
 * **Mudah diuji.** Anda dapat menjalankan proses secara manual dari antarmuka Flow tanpa menunggu pemicu yang sebenarnya.
-* **Proses dapat dipantau.** Setiap proses yang berjalan tercatat dan dapat dilihat melalui [[Docs/Modul Logic/Flow/Flow Activity|Activity]].
+* **Proses dapat dipantau.** Setiap proses yang berjalan tercatat dan dapat dilihat melalui [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity|Activity]].
 * **Terhubung dengan data Phoenix.** Flow Block tersedia untuk terhubung dengan [[Docs/Modul Data/Variable/Apa itu Variable|Variable]], [[Docs/Modul Data/Enum/Apa itu Enum|Enum]], [[Docs/Modul Data/Table/Apa itu Table|Table]], dan [[Docs/Modul Data/Tree/Apa itu Tree|Tree]].
 * **Terhubung dengan sistem lain.** Flow Block [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Modular]] seperti HTTP Request dan OpenAI 4 memungkinkan data Phoenix dikirim ke aplikasi lain atau diolah oleh AI.
 
@@ -33,11 +33,11 @@ _Flow_ adalah komponen yang dapat digunakan untuk mengatur logika dan proses pen
 | [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Antarmuka Flow Block|Input dan Output]] | Titik penghubung pada Flow Block. Output berada di sisi kanan block, input berada di sisi kiri block. |
 | [[Docs/Modul Logic/Flow/Flow Block/Pengenalan#Antarmuka Flow Block|Koneksi]] | Garis penghubung dari output sebuah block ke input block lain. Koneksi menentukan arah aliran proses. |
 | [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] | Flow Block pemicu proses, misalnya Pulser dan Variable Event. Block ini juga memiliki tombol untuk eksekusi manual. Selengkapnya lihat [[Docs/Dasar/Apa itu Event|Event]]. |
-| [[Docs/Modul Logic/Flow/Flow Activity]] | Tampilan pemantauan proses yang sedang atau sudah berjalan di dalam Flow. |
+| [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]] | Tampilan pemantauan proses yang sedang atau sudah berjalan di dalam Flow. |
 
 ## Cara Kerja
 
-Penjelasan cara kerja Flow lihat selengkap nya di [[Docs/Modul Logic/Flow/Cara Kerja|Cara Kerja Flow]].
+Penjelasan cara kerja Flow lihat selengkap nya di [[Docs/Modul Developer/Modul Logic/Flow/Cara Kerja|Cara Kerja Flow]].
 
 ## Mengelola Flow
 
@@ -49,7 +49,7 @@ Berikut adalah halaman yang menjelaskan cara untuk mengelola Flow:
 
 ## Antarmuka
 
-Penjelasan antarmuka Flow lihat selengkap nya di [[Docs/Modul Logic/Flow/Antarmuka|Antarmuka Flow]].
+Penjelasan antarmuka Flow lihat selengkap nya di [[Docs/Modul Developer/Modul Logic/Flow/Antarmuka|Antarmuka Flow]].
 
 ## Membangun Logika Flow
 

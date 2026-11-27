@@ -9,13 +9,13 @@
 ---
 # Flow Block Error
 
->**note** Flow Block Error merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Flow Block Error merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Flow Block Error adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang digunakan untuk **mengelola atau menangani error**, atau sekadar mengatur bagaimana error ditampilkan. Ketika proses dalam alur gagal, error dicatat di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]] dengan status [[^flowstate/Error]] atau [[^flowstate/Fatal Error]]. Dengan block Error, Anda dapat menimbulkan error secara sengaja dengan pesan yang ditentukan sendiri, sehingga penyebab kegagalan lebih mudah dipahami.
 
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur, block Error bekerja setelah menerima data dari block sebelumnya, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Block Error tidak mengolah data bisnis, melainkan berfokus pada penghentian alur dan penyampaian informasi kegagalan.
 
-![[Docs/Modul Logic/Flow/Flow Block/Error/error-block-flow.png|Satu Flow Block Error pada Blueprint: Error Message]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Error/error-block-flow.png|Satu Flow Block Error pada Blueprint: Error Message]]
 
 Block Error umumnya ditempatkan di titik alur yang perlu dihentikan secara sengaja ketika terjadi kondisi yang tidak diinginkan, misalnya data yang tidak valid. Saat block ini tereksekusi, seluruh aliran dihentikan dan pesan error tampil di [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
 

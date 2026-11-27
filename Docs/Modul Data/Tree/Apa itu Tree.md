@@ -25,7 +25,7 @@ Tree juga dapat dijadikan bersifat Merger. Dengan Merger Mode, satu Tree dapat m
 - **Menggabungkan Node dari banyak Tree.** Tree dengan [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] menghimpun Node dari Tree lain dalam satu tempat.
 - **Perubahan terkendali.** [[Docs/Modul Data/Tree/External Read Only]] menentukan atribut Node mana yang boleh ikut berubah dari Tree lain.
 - **Tampilan mudah disesuaikan.** Pohon dapat ditampilkan secara horizontal atau vertikal, dan cabangnya dapat dilipat atau dibuka.
-- **Terhubung dengan komponen lain.** Tree dapat dipublikasikan dan dihubungkan ke Event untuk otomasi di [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]].
+- **Terhubung dengan komponen lain.** Tree dapat dipublikasikan dan dihubungkan ke Event untuk otomasi di [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]].
 
 ## Konsep Utama
 

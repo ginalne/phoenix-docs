@@ -10,7 +10,7 @@
 ---
 # Tree Get Origin Block
 
->**note** Tree Get Origin Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Tree Get Origin Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Tree Get Origin Block adalah Flow Block yang mengambil [[Docs/Tipe Data/Node]] Origin dari sebuah [[Docs/Tipe Data/Tree]]. Setiap Tree yang baru dibuat otomatis memiliki Node Origin sebagai Node awal, dan block ini menjadikannya titik awal bagi Flow, misalnya untuk menambahkan Node langsung di bawah Origin.
 
@@ -48,7 +48,7 @@ Tabel berikut menunjukkan hasil Tree Get Origin Block pada Tree Kategori Produk.
 | Tree terisi | [[^value/node|Origin]] | [[^flowstate/Succeed]] |
 | [[^input|Tree]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

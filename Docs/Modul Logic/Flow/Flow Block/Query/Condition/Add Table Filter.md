@@ -10,7 +10,7 @@
 ---
 # Add Table Filter Block
 
->**note** Add Table Filter Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan|Flow Block Query]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Add Table Filter Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan|Flow Block Query]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Add Table Filter Block adalah Flow Block yang menambahkan satu filter ke [[Docs/Tipe Data/Query]] berbasis [[Docs/Tipe Data/Table]]. Filter dibentuk dari [[^input|Column]], [[^input|Operator]], dan [[^input|Operand]] sebagai pembanding nilai Column, lalu block mengeluarkan Query baru yang sudah memuat filter tersebut.
 

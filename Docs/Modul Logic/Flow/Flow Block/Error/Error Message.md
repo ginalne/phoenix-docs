@@ -11,7 +11,7 @@
 ---
 # Error Message Block
 
->**note** Error Message Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Error/Pengenalan|Flow Block Error]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Error Message Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Error/Pengenalan|Flow Block Error]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Error Message Block adalah Flow Block yang membuat error baru dengan pesan yang Anda tentukan. Saat dieksekusi, block menghentikan aliran pada Activity yang sedang berjalan dan menampilkan pesan error di [[Docs/Modul Logic/Flow/Flow Activity]]. Perubahan yang sudah dilakukan block sebelumnya yang berhasil tereksekusi tidak dapat dikembalikan.
 

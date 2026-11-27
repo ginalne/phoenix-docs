@@ -13,7 +13,7 @@
 
 EnumData adalah Flow Block yang mengubah sebuah [[Docs/Tipe Data/EnumData]] menjadi atribut-atributnya, yaitu [[^field|Name]], [[^field|Description]], [[^field|Value]], dan [[^field|Selectable]]. Dengan block ini, Anda dapat memakai isi EnumData sebagai data biasa pada block lain di Flow.
 
-![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-block-flow.png|Flow Block EnumData dengan satu input dan lima output]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Enum/enumdata-block-flow.png|Flow Block EnumData dengan satu input dan lima output]]
 
 
 ## Input dan Output

@@ -13,7 +13,7 @@
 
 Enum adalah Flow Block yang mengubah sebuah [[Docs/Tipe Data/Enum]] menjadi atribut-atributnya, yaitu [[^field|Name]] dan [[^field|Description]]. Dengan block ini, Anda dapat memakai nama dan deskripsi Enum sebagai data biasa pada block lain di Flow.
 
-![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enum-block-flow.png|Flow Block Enum dengan satu input dan tiga output]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Enum/enum-block-flow.png|Flow Block Enum dengan satu input dan tiga output]]
 
 ## Input dan Output
 
@@ -48,7 +48,7 @@ Contoh berikut memakai Enum bernama [[^value/string|Status Pesanan]] dengan desk
 | [[^field|Enum]] terisi | Enum [[^field/enum|Status Pesanan]] | [[^value/string|Status Pesanan]] | [[^value/text|Daftar status pesanan]] | [[^flowstate/Succeed]] |
 | [[^field|Enum]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

@@ -15,7 +15,7 @@ EnumData Setter adalah Flow Block yang memperbarui seluruh atribut pada [[Docs/T
 
 Gunakan block ini bila Anda ingin mengubah beberapa atribut sekaligus. Bila hanya satu kelompok atribut yang berubah, gunakan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Value Setter|EnumData Value Setter Block]], [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Header Setter|EnumData Header Setter Block]], atau [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData Selectable Setter|EnumData Selectable Setter Block]].
 
-![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-setter-block-flow.png|Flow Block EnumData Setter dengan lima input dan tiga output]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Enum/enumdata-setter-block-flow.png|Flow Block EnumData Setter dengan lima input dan tiga output]]
 ## Input dan Output
 
 EnumData Setter memiliki lima input di sisi kiri dan tiga output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output.

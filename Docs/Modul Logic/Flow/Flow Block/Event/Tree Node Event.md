@@ -9,13 +9,13 @@ pageDecoration:
 ---
 # Tree Node Event
 
->**note** Tree Node Event merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Tree Node Event merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Tree Node Event adalah Flow Block Event yang memulai alur setiap kali [[Docs/Tipe Data/Node]] pada komponen [[Docs/Modul Data/Tree/Apa itu Tree|Tree]] ditambahkan, diperbarui, atau dihapus. Block ini menghasilkan tiga output: [[^output|Node]] yang berubah, [[^output|Event]] yang menjelaskan jenis perubahannya, dan [[^output|Old]] yang berisi nilai sebelum perubahan.
 
 Karena Tree menyimpan data berbentuk hierarki, block ini berguna untuk menjaga struktur di sistem lain, seperti struktur organisasi atau kategori bertingkat, tetap sama dengan di Phoenix.
 
-![[Docs/Modul Logic/Flow/Flow Block/Event/tree-node-event.png|Tree Node Event Block pada Blueprint]]
+![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Event/tree-node-event.png|Tree Node Event Block pada Blueprint]]
 ## Kapan Tree Node Event Terpicu
 
 Tree Node Event terpicu ketika Node pada Tree yang terhubung mengalami salah satu dari tiga peristiwa berikut.

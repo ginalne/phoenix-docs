@@ -9,7 +9,7 @@
 ---
 # Merge Operator Block
 
->**note** Merge Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Merge Block merupakan salah satu Flow Block kelompok Object pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Merge Block adalah Flow Block Operator yang menggabungkan [[^input|Objects]], yaitu input bertipe [[Docs/Tipe Data/Array]] dengan isi [[Docs/Tipe Data/Object]], menjadi satu Object lewat [[^output|Result]]. Data yang berada lebih akhir menimpa data sebelumnya hanya pada atribut yang sama persis, sehingga data yang saling melengkapi tidak saling menghapus.
 
@@ -48,7 +48,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 | `[{ "job": { "judul": "staf" } }, { "job": { "level": "2" } }]` | [[^value/object|{ "job": { "judul": "staf", "level": "2" } }]] | [[^flowstate/Succeed]] |
 | [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

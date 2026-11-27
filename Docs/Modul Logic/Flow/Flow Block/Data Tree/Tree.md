@@ -10,7 +10,7 @@
 ---
 # Tree Block
 
->**note** Tree Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Tree Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Tree Block adalah Flow Block yang menerima sebuah [[Docs/Tipe Data/Tree]] lalu mengeluarkan atribut Tree tersebut, yaitu Name, Description, dan [[Docs/Modul Data/Tree/Konfigurasi Merger Mode|Merger Mode]]. Gunakan block ini bila Flow membutuhkan informasi sebuah [[Docs/Modul Data/Tree/Apa itu Tree|Tree]], misalnya untuk menampilkan nama Tree pada pesan atau memeriksa apakah Tree bersifat merger sebelum menambahkan Node.
 

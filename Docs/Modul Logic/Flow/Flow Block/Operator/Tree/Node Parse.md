@@ -9,7 +9,7 @@
 ---
 # Node Parse Operator Block
 
->**note** Node Parse Block merupakan salah satu Flow Block kelompok Tree pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Node Parse Block merupakan salah satu Flow Block kelompok Tree pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
 
 Node Parse Block adalah Flow Block Operator yang mengubah [[^input|Node]] ([[Docs/Tipe Data/Node]]) menjadi [[Docs/Tipe Data/Object]] dan [[Docs/Tipe Data/Text]] berformat JSON. Atribut Node menjadi dasar hasilnya, lalu atribut `parent` dan `children` ditambahkan sesuai [[^input|Anc. Depth]] dan [[^input|Child Depth]] yang Anda isi.
 

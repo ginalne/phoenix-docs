@@ -74,7 +74,7 @@ Harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]]
 - Header [[^field|Name]] "Variables" tidak dapat diganti.
 - Atribut [[^field|Name]] dari Variable Data harus unik.
 - [[^field|Created At]] dan [[^field|Updated At]] terisi otomatis dan tidak perlu Anda isi.
-- Menghapus baris Variable dapat membuat [[Docs/Modul Logic/Flow/Apa itu Flow|Flow]] atau komponen yang memanggil Name tersebut menghasilkan error.
+- Menghapus baris Variable dapat membuat [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] atau komponen yang memanggil Name tersebut menghasilkan error.
 - Isi [[^field|Value]] ditampilkan secara terbuka pada halaman kerja komponen Variable, sehingga hanya anggota yang memiliki akses komponen Variable yang dapat melihatnya.
 
 ## TL:DR
