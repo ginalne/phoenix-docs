@@ -9,23 +9,9 @@
       role: Communication
       bio: Stories and updates from the people building Phoenix
     updated: 2026-11-27
+    user: community
     tags:
-      community
----
-# Bagaimana cara komunitas mengatur data acaranya dalam satu tempat
-!---
-    status: release
-    title: "Bagaimana cara komunitas mengatur data acaranya dalam satu tempat"
-    description: "Sebuah cerita pendek tentang menggantikan spredsheet yang berceceran dengan satu sistem terkoneksi, dan apa yang berubah setelah semuanya menjadi di satu tempat"
-    cta: Ingin melihat Phoenix bekerja untuk komunitas Anda?
-    readMinutes: 4
-    author:
-      name: Phoenix Team
-      role: Communication
-      bio: Stories and updates from the people building Phoenix
-    updated: 2026-11-27
-    tags:
-      community
+      Events
 ---
 # Bagaimana cara komunitas mengatur data acaranya dalam satu tempat
 ![[Blog/2026-11-24/how-to-use-phoenix-in-education.png|A community group planning an event around a table]]
