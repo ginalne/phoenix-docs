@@ -6,7 +6,6 @@ pageDecoration:
     priority: -1
 description: knowledge-base phoenix untuk AI Agent selama membuat dokumentasi phoenix.
 ---
-
 # Konsep Dasar: Pro, Folder, Komponen
 
 - **Path:** `Docs/Dasar/Apa itu Pro`, `Docs/Dasar/Apa itu Folder`, `Docs/Dasar/Apa itu Komponen`. Judul memakai tanda tanya, path tidak. Halaman Dasar tidak memiliki Contoh Penggunaan (contoh ada di halaman rinci tiap komponen).

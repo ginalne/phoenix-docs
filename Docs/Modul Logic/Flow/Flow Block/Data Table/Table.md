@@ -7,7 +7,7 @@
 ---
 # Table Block
 
->**note** Table Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Table Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Table Block adalah Flow Block yang menerima [[Docs/Tipe Data/Table]] dan mengeluarkan atributnya, yaitu [[^field|Name]] dan [[^field|Description]]. Gunakan block ini saat alur Anda membutuhkan identitas [[Docs/Tipe Data/Table]], misalnya untuk menyusun pesan atau menentukan tujuan proses berikutnya.
 
@@ -48,7 +48,7 @@ Mengambil nama dan deskripsi [[^field/table|Pesanan]] untuk dicantumkan pada cat
 | [[^input|Table]] berisi Table pesanan tanpa deskripsi | [[Docs/Tipe Data/Table]] | Nama Table | [[^value/empty]] | [[^flowstate/Succeed]] |
 | [[^input|Table]] dibiarkan kosong | - | - | - | [[^flowstate/Fatal Error]] |
 
-Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
+Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

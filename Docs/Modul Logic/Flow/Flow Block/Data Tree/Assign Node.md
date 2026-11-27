@@ -10,7 +10,7 @@
 ---
 # Assign Node Block
 
->**note** Assign Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Assign Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Assign Node Block adalah Flow Block yang menempatkan sebuah [[Docs/Tipe Data/Node]] (Children) di bawah Node lain (Parent). Gunakan block ini untuk memindahkan Node beserta seluruh keturunannya ke posisi baru dalam [[Docs/Tipe Data/Tree]], misalnya memindahkan sebuah kategori ke kategori induk yang lain.
 

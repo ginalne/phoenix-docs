@@ -9,11 +9,11 @@ pageDecoration:
 ---
 # Pulser
 
->**note** Pulser merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Pulser merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Pulser adalah Flow Block Event yang memulai alur dengan **denyut pemicu**. Berbeda dengan block Event lainnya, Pulser tidak memantau perubahan data, melainkan menunggu perintah untuk dijalankan: dari tombol [[^button/empty|Trigger]] di Blueprint, dari jadwal [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]], atau dari [[Docs/Modul Interface/Canvas/Widget/Basic/Button|Widget Button]] pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]].
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Event/pulser.png|Pulser Event Block pada Blueprint]]
+![[Docs/Modul Logic/Flow/Flow Block/Event/pulser.png|Pulser Event Block pada Blueprint]]
 ## Kapan Pulser Terpicu
 
 Pulser terpicu ketika salah satu sumber berikut menjalankannya.

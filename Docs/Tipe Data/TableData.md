@@ -32,7 +32,7 @@ Atribut yang berelasi dengan [[Docs/Tipe Data/Column]] dalam [[Docs/Modul Data/T
 Atribut yang terisi otomatis dan sesuai dengan Type dalam [[Docs/Tipe Data/Column]]. Perubahan Type dalam TabelData tidak dapat diubah secara langsung, akan tetapi harus dengan mengubahnya melalui [[Docs/Tipe Data/Column]] yang terelasi. 
 
 ### Value
-Atribut tambahan yang bisa dapat diisi, diakses dan berguna dalam proses logika seperti komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]].
+Atribut tambahan yang bisa dapat diisi, diakses dan berguna dalam proses logika seperti komponen [[Docs/Modul Logic/Apa itu Flow|Flow]].
 
 ### Selectable
 Atribut Enum berbentuk [[Docs/Tipe Data/Boolean]] dalam EnumData sebagai status pemilihan, jika [[^value/boolean/true|Yes]] maka EnumData ini akan muncul dalam pilihan saat dipilih.

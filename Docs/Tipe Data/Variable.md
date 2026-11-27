@@ -27,7 +27,7 @@ Variable adalah [[Docs/Tipe Data/Pengenalan|Tipe Data]] yang hanya bisa dibuat, 
 
 Karena keunikannya, komponen lain dapat memilih Variable lewat field bertipe Variable sebagai pilihan (tanpa menentukan [[^field|Header]], sehingga dapat dianalogikan sebagai konstanta dalam ekosistem.
 
-Selain sebagai konstanta, Variable juga dapat berfungsi sebagai *alias*. Komponen dalam [[Docs/Modul Logic/Pengenalan|Modul Logic]] dapat mengakses isi [[^field|Value]] hanya lewat nilai [[^field|Name]], sehingga isi [[^field|Value]] tidak harus diketahui oleh tim, tetapi tetap dapat dipakai untuk kebutuhan otomasi.
+Selain sebagai konstanta, Variable juga dapat berfungsi sebagai *alias*. Komponen dalam [[Docs/Modul Logic/Flow/Pengenalan|Modul Logic]] dapat mengakses isi [[^field|Value]] hanya lewat nilai [[^field|Name]], sehingga isi [[^field|Value]] tidak harus diketahui oleh tim, tetapi tetap dapat dipakai untuk kebutuhan otomasi.
 
 Dengan Variable, nilai konfigurasi dan nilai sensitif di [[Docs/Dasar/Apa itu Pro|Pro]] tersimpan di satu sumber yang terhubung ke semua komponen, tanpa mengorbankan keamanan maupun konsistensi data.
 

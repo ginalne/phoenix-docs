@@ -11,7 +11,7 @@
 
 # Node Get Parent Block
 
->**note** Node Get Parent Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Node Get Parent Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Node Get Parent Block adalah Flow Block yang menelusuri parent sebuah [[Docs/Tipe Data/Node]] ke arah Origin sejauh Depth yang ditentukan. Gunakan block ini untuk mengetahui induk sebuah Node, misalnya mencari kategori induk dari sebuah kategori.
 

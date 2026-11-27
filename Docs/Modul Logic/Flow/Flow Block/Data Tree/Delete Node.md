@@ -11,7 +11,7 @@
 
 # Delete Node Block
 
->**note** Delete Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Delete Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Delete Node Block adalah Flow Block yang menghapus sebuah [[Docs/Tipe Data/Node]] beserta seluruh anaknya. Gunakan block ini untuk membersihkan hierarki [[Docs/Tipe Data/Tree]] secara otomatis dari Flow, misalnya menghapus kategori yang sudah tidak dipakai.
 

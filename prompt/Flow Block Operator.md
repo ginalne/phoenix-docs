@@ -8,7 +8,7 @@
 ---
 2026-11-09 02:00
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Operator/operator-block-flow.png|Flow Block Operator pada Blueprint: Increment, Concatenate, Implode, Pad Left, Pad Right, TableRow Parse, Assign, Merge, Parse, Stringify, If, dan Node Parse]]
+![[Docs/Modul Logic/Flow/Flow Block/Operator/operator-block-flow.png|Flow Block Operator pada Blueprint: Increment, Concatenate, Implode, Pad Left, Pad Right, TableRow Parse, Assign, Merge, Parse, Stringify, If, dan Node Parse]]
 /phoenix-docs-silverbullet /phoenix-docs-knowledge 
 
 Tolong buatkan **12 halaman Flow Block** untuk dokumentasi Phoenix, yaitu halaman per block yang menjadi tujuan tautan pada halaman Pengenalan kategori Flow Block Operator.

@@ -8,9 +8,9 @@
 ---
 # Apa itu Flow Block?
 
->**note** Flow Block merupakan bagian dari komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] dalam modul [[Docs/Modul Logic/Pengenalan|Logic]] di Phoenix.
+>**note** Flow Block merupakan bagian dari komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] dalam modul [[Docs/Modul Logic/Flow/Pengenalan|Logic]] di Phoenix.
 
-Flow Block adalah unit terkecil penyusun Flow. Setiap block memiliki fungsi, masukan, proses, dan keluaran yang berbeda-beda, dan dapat dihubungkan dengan block lain di [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow#Antarmuka Flow|Blueprint]] untuk membentuk logika.
+Flow Block adalah unit terkecil penyusun Flow. Setiap block memiliki fungsi, masukan, proses, dan keluaran yang berbeda-beda, dan dapat dihubungkan dengan block lain di [[Docs/Modul Logic/Apa itu Flow#Antarmuka Flow|Blueprint]] untuk membentuk logika.
 
 Setiap Flow Block tersusun dari [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Trigger]], [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Input]], [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Control]], dan [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output]]. Prinsip pada halaman ini berlaku untuk semua jenis Flow Block, sehingga halaman setiap jenis hanya menjelaskan bagian yang khas bagi block tersebut.
 

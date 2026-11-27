@@ -9,7 +9,7 @@
 ---
 # If Operator Block
 
->**note** If Block merupakan salah satu Flow Block kelompok Boolean pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** If Block merupakan salah satu Flow Block kelompok Boolean pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 If Block adalah Flow Block Operator yang membandingkan [[^input|A]] dan [[^input|B]] dengan [[^input|Operator]], lalu melanjutkan aliran lewat [[^output|True]] atau [[^output|False]] sesuai hasil perbandingannya. Hasil tersebut juga dapat dikeluarkan sebagai nilai [[Docs/Tipe Data/Boolean]] lewat [[^output|Boolean]].
 

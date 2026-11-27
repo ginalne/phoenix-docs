@@ -47,7 +47,7 @@ Jika anda malas mendengarkan saya menyombongkan diri tentang Phoenix, anda tingg
 
 * [[Docs/Modul Data/Pengenalan|Modul Data]] Dokumentasi Modul Data
 * [[Docs/Modul Interface/Pengenalan|Module Interface]] Dokumentasi Modul Interface
-* [[Docs/Modul Logic/Pengenalan|Modul Logic]] Dokumentasi Modul Logic
+* [[Docs/Modul Logic/Flow/Pengenalan|Modul Logic]] Dokumentasi Modul Logic
 * [[Docs/Modul Developer/Pengenalan|Module Developer]] Dokumentasi Modul Developer
 
 Sudah siap? Langsung mulai saja — atau gunakan navigasi di sebelah kiri untuk menjelajahi seluruh dokumentasi!

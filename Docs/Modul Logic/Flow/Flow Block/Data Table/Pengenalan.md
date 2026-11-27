@@ -10,13 +10,13 @@
 ---
 # Flow Block Data Table
 
->**note** Flow Block Data Table merupakan salah satu kelompok [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori Data dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Flow Block Data Table merupakan salah satu kelompok [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori Data dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
-Flow Block Data Table adalah kelompok [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang dipakai untuk mengakses komponen [[Docs/Modul Data/Table/Apa itu Table|Table]] melalui logika [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]]. Dengan kelompok ini, alur Anda dapat membaca atribut [[Docs/Tipe Data/Table]], [[Docs/Tipe Data/Column]], dan [[Docs/Tipe Data/Row]], membaca atau mengubah [[Docs/Tipe Data/TableData]], serta menambah dan menghapus Row secara otomatis, tanpa membuka halaman kerja Table.
+Flow Block Data Table adalah kelompok [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang dipakai untuk mengakses komponen [[Docs/Modul Data/Table/Apa itu Table|Table]] melalui logika [[Docs/Modul Logic/Apa itu Flow|Flow]]. Dengan kelompok ini, alur Anda dapat membaca atribut [[Docs/Tipe Data/Table]], [[Docs/Tipe Data/Column]], dan [[Docs/Tipe Data/Row]], membaca atau mengubah [[Docs/Tipe Data/TableData]], serta menambah dan menghapus Row secara otomatis, tanpa membuka halaman kerja Table.
 
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur dan memiliki Control serta output yang mirip, block Data bekerja setelah menerima data dari block sebelumnya sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Setiap block pada kelompok ini juga unik sesuai fungsinya: ada yang membaca atribut Table, Column, atau Row, ada yang membaca dan mengubah TableData, dan ada yang menambah atau menghapus Row. Karena itu Anda memilih block berdasarkan peran yang dibutuhkan di alur, bukan berdasarkan pola input dan output yang seragam.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Table/data-table-block-flow.png|Tujuh Flow Block Data Table pada Blueprint: Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, dan TableData Setter]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Table/data-table-block-flow.png|Tujuh Flow Block Data Table pada Blueprint: Add Row, Delete Row, Table, Table Column, Table Row, TableData Getter, dan TableData Setter]]
 
 Block Data Table umumnya berada di tengah atau di ujung alur. Misalnya, alur dimulai dari perubahan [[Docs/Tipe Data/Row]] pada sebuah Table, membaca [[Docs/Tipe Data/TableData]] dari Row tersebut, mengolahnya, lalu menambahkan Row baru ke Table lain.
 

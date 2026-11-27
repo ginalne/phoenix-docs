@@ -7,7 +7,7 @@
 ---
 # Add Row Block
 
->**note** Add Row Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Add Row Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Add Row Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Row]] baru ke sebuah [[Docs/Tipe Data/Table]]. Row yang dihasilkan belum memiliki [[Docs/Tipe Data/TableData]], sehingga seluruh kolomnya kosong dan siap diisi oleh block lain, misalnya [[Docs/Modul Logic/Flow/Flow Block/Data Table/TableData Setter|TableData Setter Block]].
 
@@ -48,7 +48,7 @@ Menambahkan Row ke [[^field/table|Pesanan]] saat sebuah proses dimulai.
 | [[^input|Table]] berisi Table pesanan | Row baru dengan Index otomatis dan [[Docs/Tipe Data/TableData]] kosong | [[^flowstate/Succeed]] |
 | [[^input|Table]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 
-Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
+Status  [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

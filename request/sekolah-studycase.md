@@ -19,7 +19,7 @@
 | **Organisasi** | SMA Nusantara Mandiri (fiktif) |
 | **Skala** | 600 siswa, 45 guru, 4 staf tata usaha, 1 kepala sekolah |
 | **Masalah utama** | Data tersebar di banyak file dan tidak ada kontrol akses |
-| **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]], [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]], [[Docs/Publish/Pengenalan|Publish]] |
+| **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]], [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Logic/Apa itu Flow|Flow]], [[Docs/Publish/Pengenalan|Publish]] |
 | **Hasil yang dituju** | Satu sumber data, akses sesuai peran, pengingat berjalan otomatis |
 
 ## Latar Belakang
@@ -100,7 +100,7 @@ Selengkapnya tentang membuat tabel dan menentukan tipe kolom lihat [[Docs/Modul 
 
 ### Otomasi dengan Flow
 
-[[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] **Tindak Lanjut Nilai** menyusun alur komposit pada Blueprint:
+[[Docs/Modul Logic/Apa itu Flow|Flow]] **Tindak Lanjut Nilai** menyusun alur komposit pada Blueprint:
 
 1. Sebuah [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] terpicu saat baris baru ditambahkan di tabel Nilai.
 2. Alur memeriksa apakah skor berada di bawah batas tuntas mata pelajaran.
@@ -160,7 +160,7 @@ Kepala Sekolah membuka **Nilai** dan **Kehadiran** langsung dari Workspace, tanp
 
 ## TL;DR
 
-Satu [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dengan empat [[Docs/Modul Developer/Group/Apa itu Group|Group]] menjaga akses sesuai peran. [[Docs/Modul Data/Table View/Apa itu Table View|Table View]] dan [[Docs/Modul Data/Timeline/Apa itu Timeline|Timeline]] menyimpan data akademik. [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] menandai siswa yang perlu tindak lanjut, dan [[Docs/Publish/Pengenalan|Publish]] membagikan pengumuman lewat tautan.
+Satu [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dengan empat [[Docs/Modul Developer/Group/Apa itu Group|Group]] menjaga akses sesuai peran. [[Docs/Modul Data/Table View/Apa itu Table View|Table View]] dan [[Docs/Modul Data/Timeline/Apa itu Timeline|Timeline]] menyimpan data akademik. [[Docs/Modul Logic/Apa itu Flow|Flow]] menandai siswa yang perlu tindak lanjut, dan [[Docs/Publish/Pengenalan|Publish]] membagikan pengumuman lewat tautan.
 
 * [ ] TODO (konsolidasi): Path wikilink untuk Workspace, Group, Table View, Timeline, Publish, Folder, dan Pro adalah tebakan mengikuti pola yang ada. Mohon dicek dan disesuaikan.
 * [ ] TODO: Pastikan Flow dapat dipicu oleh penambahan baris pada Table View dan dapat memeriksa kondisi skor. Penjelasan Flow di atas masih tingkat konsep.

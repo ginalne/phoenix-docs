@@ -9,7 +9,7 @@
 ---
 # Pad Left Operator Block
 
->**note** Pad Left Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Pad Left Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Pad Left Block adalah Flow Block Operator yang menambahkan [[^input|Pad String]] di sebelah kiri [[^input|String]] sampai panjang String sesuai dengan [[^input|Length]]. Block ini berguna untuk menyusun nomor atau kode dengan panjang tetap, misalnya nomor urut yang diawali angka nol.
 
@@ -49,7 +49,7 @@ Selengkapnya lihat [[Docs/Modul Logic/Flow/Flow Block/Antarmuka#Output|aturan Ou
 | [[^value/empty]] | [[^value/number|5]] | [[^value/string|0]] | - | [[^flowstate/Fatal Error]] |
 | [[^value/string|42]] | [[^value/number|5]] | [[^value/empty]] | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

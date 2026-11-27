@@ -13,7 +13,7 @@
 
 EnumData Value adalah Flow Block yang mengambil [[^field|Value]] dari sebuah [[Docs/Tipe Data/EnumData]] dan mengeluarkannya sebagai data langsung. Tipe data output mengikuti sumber nilainya, sehingga Anda dapat langsung menghubungkannya ke block lain tanpa mengambil atribut yang tidak dibutuhkan.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Enum/enumdata-value-block-flow.png|Flow Block EnumData Value dengan satu input dan satu output]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-value-block-flow.png|Flow Block EnumData Value dengan satu input dan satu output]]
 
 ## Input dan Output
 
@@ -37,7 +37,7 @@ Saat dieksekusi, EnumData Value membaca [[^field|Value]] pada EnumData di input 
 
 Perbedaannya dengan [[Docs/Modul Logic/Flow/Flow Block/Data Enum/EnumData|EnumData Block]]: EnumData Block mengeluarkan beberapa atribut sekaligus, sedangkan EnumData Value hanya mengeluarkan [[^field|Value]].
 
-Tipe data output [[^output|Value]] tidak ditampilkan di halaman kerja dan tidak memengaruhi block yang dihubungkan. Bila tipenya tidak cocok dengan input block berikutnya, ketidakcocokan dilaporkan di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]] saat Flow berjalan.
+Tipe data output [[^output|Value]] tidak ditampilkan di halaman kerja dan tidak memengaruhi block yang dihubungkan. Bila tipenya tidak cocok dengan input block berikutnya, ketidakcocokan dilaporkan di [[Docs/Modul Logic/Flow/Flow Activity]] saat Flow berjalan.
 
 ## Contoh Penggunaan
 
@@ -49,7 +49,7 @@ Contoh berikut memakai EnumData [[^value/enumdata|Menunggu]] pada Enum [[^field/
 | EnumData berada di Enum bertipe [[Docs/Tipe Data/String]] dengan [[^field|Value]] `MENUNGGU` | [[^value/string|MENUNGGU]] | [[^flowstate/Succeed]] |
 | [[^field|EnumData]] dibiarkan kosong | - | [[^flowstate/Fatal Error]] |
 
-Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity]].
+Status [[^flowstate/Fatal Error]] akan menghasilkan error yang pesannya tampil di [[Docs/Modul Logic/Flow/Flow Activity]].
 
 ## Praktik Terbaik
 

@@ -13,7 +13,7 @@
 
 Delete EnumData adalah Flow Block yang menghapus [[Docs/Tipe Data/EnumData]] yang Anda tentukan saat Flow berjalan. Bila EnumData sudah digunakan, penghapusan hanya berhasil jika [[^field|Force]] bernilai [[^value/boolean/true]]. Hasilnya dilaporkan lewat output [[^output|Succeed]] dan [[^output|Error]].
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Enum/delete-enumdata-block-flow.png|Flow Block Delete EnumData dengan dua input dan dua output]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Enum/delete-enumdata-block-flow.png|Flow Block Delete EnumData dengan dua input dan dua output]]
 
 ## Input dan Output
 

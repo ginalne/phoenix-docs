@@ -7,11 +7,11 @@
 ---
 # Variable Getter
 
->**note** Variable Getter merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Variable Getter merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Variable Getter adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk mengambil [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dengan mengisi Name. Block ini menjadi pintu masuk bagi block Variable lain yang membutuhkan Variable Data sebagai input. Block ini memiliki satu input di sisi kiri dan dua output di sisi kanan.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Variable/variable-getter-block-flow.png|Flow Block Variable Getter dengan satu input dan dua output]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Variable/variable-getter-block-flow.png|Flow Block Variable Getter dengan satu input dan dua output]]
 ## Input dan Output
 
 Variable Getter memiliki satu input di sisi kiri dan dua output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

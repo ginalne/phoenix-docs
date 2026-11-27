@@ -8,7 +8,7 @@
 
 # TableData Getter Block
 
->**note** TableData Getter Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** TableData Getter Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 TableData Getter Block adalah Flow Block yang mengambil nilai [[Docs/Tipe Data/TableData]] pada pertemuan sebuah [[Docs/Tipe Data/Column]] dan [[Docs/Tipe Data/Row]]. Block ini juga memberi tahu bila [[Docs/Tipe Data/TableData]] tidak berisi atau tidak ditemukan, sehingga alur Anda dapat menyiapkan penanganannya.
 

@@ -9,13 +9,13 @@
 ---
 # Flow Block Chrono
 
->**note** Flow Block Chrono merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Flow Block Chrono merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Flow Block Chrono adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang digunakan untuk **mengelola aliran berdasarkan waktu**, sehingga proses dalam alur dapat berjalan dalam rentang waktu yang lebih lama. Dengan block Chrono, sebuah alur tidak harus selesai seketika, tetapi dapat menunggu terlebih dahulu sebelum melanjutkan ke block berikutnya.
 
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur, block Chrono bekerja setelah menerima data dari block sebelumnya, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Block Chrono juga berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser Event Block]] yang memulai alur pada waktu tertentu lewat [[Docs/Modul Interface/Timeline/Timeline Event/Pengenalan|Timeline Event]]: Pulser menentukan kapan alur dimulai, sedangkan block Chrono mengatur jeda di tengah alur yang sedang berjalan.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Chrono/chrono-block-flow.png|Satu Flow Block Chrono pada Blueprint: Delay]]
+![[Docs/Modul Logic/Flow/Flow Block/Chrono/chrono-block-flow.png|Satu Flow Block Chrono pada Blueprint: Delay]]
 
 ## Jenis Flow Block Chrono
 
@@ -36,4 +36,4 @@ Phoenix menyediakan satu Flow Block Chrono.
 
 - [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]]
 - [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]
-- [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity|Flow Activity]]
+- [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]]

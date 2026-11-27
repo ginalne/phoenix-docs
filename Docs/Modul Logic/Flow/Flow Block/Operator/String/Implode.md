@@ -9,7 +9,7 @@
 ---
 # Implode Operator Block
 
->**note** Implode Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Implode Block merupakan salah satu Flow Block kelompok String pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Implode Block adalah Flow Block Operator yang menggabungkan input bertipe [[Docs/Tipe Data/String]] atau [[Docs/Tipe Data/Array]] dengan isi String menjadi satu String, dengan [[^input|Separator]] sebagai pemisah di antara setiap isinya.
 

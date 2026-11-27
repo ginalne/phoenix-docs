@@ -8,7 +8,7 @@
 ---
 # Menghapus Flow Block
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/delete-flow-block.png]]
+![[Docs/Modul Logic/Flow/Flow Block/delete-flow-block.png]]
 1. Klik kanan pada Flow Block yang akan dihapus
 2. Klik  [[^field/delete|Delete]]
 3. Konfirmasi dengan [[^button|Remove]]

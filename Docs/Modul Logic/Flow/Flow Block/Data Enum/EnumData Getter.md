@@ -13,7 +13,7 @@
 
 EnumData Getter adalah Flow Block yang mengambil [[Docs/Tipe Data/EnumData]] dari sebuah [[Docs/Tipe Data/Enum]] dengan mengisi [[^field|Name]] sebagai alias. Block ini juga memberi tahu bila EnumData tidak ditemukan, sehingga Flow dapat menangani kondisi tersebut.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Enum/enumdata-getter-block-flow.png|Flow Block EnumData Getter dengan dua input dan dua output]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Enum/enumdata-getter-block-flow.png|Flow Block EnumData Getter dengan dua input dan dua output]]
 
 ## Input dan Output
 

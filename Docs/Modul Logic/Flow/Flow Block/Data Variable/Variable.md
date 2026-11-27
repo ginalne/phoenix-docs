@@ -9,11 +9,11 @@
 ---
 # Variable
 
->**note** Variable merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Variable merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Variable adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk mengubah satu [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] menjadi nilai atributnya, yaitu [[^field|Name]], [[^field|Description]], dan [[^field|Value]]. Block ini memiliki satu input di sisi kiri dan empat output di sisi kanan.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Variable/variable-block-flow.png|Flow Block Variable dengan satu input dan empat output]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Variable/variable-block-flow.png|Flow Block Variable dengan satu input dan empat output]]
 
 ## Input dan Output
 

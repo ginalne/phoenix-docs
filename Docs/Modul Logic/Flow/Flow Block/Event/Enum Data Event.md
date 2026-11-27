@@ -9,13 +9,13 @@ pageDecoration:
 ---
 # Enum Data Event
 
->**note** Enum Data Event merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Enum Data Event merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Enum Data Event adalah Flow Block Event yang memulai alur setiap kali [[Docs/Tipe Data/EnumData]] pada komponen [[Docs/Modul Data/Enum/Apa itu Enum|Enum]] ditambahkan, diperbarui, atau dihapus. Block ini menghasilkan tiga output: [[^output|EnumData]] yang berubah, [[^output|Event]] yang menjelaskan jenis perubahannya, dan [[^output|Old]] yang berisi nilai sebelum perubahan.
 
 Karena Enum menyimpan data master seperti pilihan, menu, dan kategori, block ini berguna untuk menjaga sistem lain tetap selaras ketika daftar pilihan berubah.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Event/enum-data-event.png|Enum Data Event Block pada Blueprint]]
+![[Docs/Modul Logic/Flow/Flow Block/Event/enum-data-event.png|Enum Data Event Block pada Blueprint]]
 ## Kapan Enum Data Event Terpicu
 
 Enum Data Event terpicu ketika EnumData pada Enum yang terhubung mengalami salah satu dari tiga peristiwa berikut.

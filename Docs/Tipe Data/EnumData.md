@@ -28,7 +28,7 @@ Atribut Enum berbentuk [[Docs/Tipe Data/Text]] yang menjadi keterangan pada item
 
 ### Value
 
-Atribut tambahan yang bisa dapat diisi, diakses dan berguna dalam proses logika seperti komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]].
+Atribut tambahan yang bisa dapat diisi, diakses dan berguna dalam proses logika seperti komponen [[Docs/Modul Logic/Apa itu Flow|Flow]].
 
 ### Selectable
 

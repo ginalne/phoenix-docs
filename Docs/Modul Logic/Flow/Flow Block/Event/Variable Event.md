@@ -9,12 +9,12 @@ pageDecoration:
 ---
 # Variable Event
 
->**note** Variable Event merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Variable Event merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Variable Event adalah Flow Block Event yang memulai alur ketika Value pada Variable Data di komponen [[Docs/Modul Data/Variable/Apa itu Variable|Variable]] berubah atau Variable Data dihapus. Block ini menghasilkan tiga output: [[^output|Variable]] yang berubah, [[^output|Event]] yang menjelaskan jenis perubahannya, dan [[^output|Old]] yang berisi nilai sebelum perubahan.
 
 Dengan Variable Event, perubahan pada pengaturan global, seperti batas nilai, mode, atau tautan layanan, dapat langsung memicu otomasi tanpa Anda perlu memeriksanya secara manual.
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Event/variable-event.png|Variable Event Block pada Blueprint]]
+![[Docs/Modul Logic/Flow/Flow Block/Event/variable-event.png|Variable Event Block pada Blueprint]]
 
 ## Kapan Variable Event Terpicu
 

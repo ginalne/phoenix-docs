@@ -20,7 +20,7 @@
       seminar
 ---
 # Pohon Silsilah Keluarga Siboro Menggunakan Phoenix oleh Parsibo
-![[family-tree-parsibo.jpeg]]
+![[News/2026-04-19/family-tree-parsibo.jpeg]]
 
 > **takeaways** Sekilas
 > The session focused on organizing events and members in one place.

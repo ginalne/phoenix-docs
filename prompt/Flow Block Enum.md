@@ -8,7 +8,7 @@
 ---
 2026-11-06 02:00
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Enum/data-enum-block-flow.png|Tujuh Flow Block Data Enum pada Blueprint: Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, dan EnumData Value]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Enum/data-enum-block-flow.png|Tujuh Flow Block Data Enum pada Blueprint: Add EnumData, Delete EnumData, Enum, EnumData, EnumData Getter, EnumData Setter, dan EnumData Value]]
 
 /phoenix-docs-silverbullet /phoenix-docs-knowledge 
 

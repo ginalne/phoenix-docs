@@ -10,7 +10,7 @@
 
 ## Studi Kasus : Menjaga API Key Penyedia AI Tetap Aman dalam Otomasi Flow
 
-Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh AI. Layanan AI membutuhkan API Key, tetapi kunci tersebut tidak boleh diketahui seluruh anggota tim. Dengan Variable, kunci disimpan sekali, dan [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] memanggilnya lewat nama untuk kebutuhan integrasi.
+Sebuah tim ingin setiap tiket baru yang masuk ke tabel diringkas otomatis oleh AI. Layanan AI membutuhkan API Key, tetapi kunci tersebut tidak boleh diketahui seluruh anggota tim. Dengan Variable, kunci disimpan sekali, dan [[Docs/Modul Logic/Apa itu Flow|Flow]] memanggilnya lewat nama untuk kebutuhan integrasi.
 
 ## Komponen yang terlibat
 
@@ -46,7 +46,7 @@ flowchart LR
 
 | Jenis nilai | Contoh integrasi |
 | --- | --- |
-| Alamat IP server *hub* | Beberapa [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] mengirim data ke perangkat atau layanan yang sama tanpa menuliskan alamatnya berulang kali. |
-| Alamat layanan atau URL dasar | [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] yang memanggil layanan eksternal merujuk satu Name, sehingga perpindahan alamat cukup diubah sekali. |
-| Parameter bisnis | Ambang batas atau batas waktu dipakai bersama oleh beberapa [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] dan tetap konsisten. |
+| Alamat IP server *hub* | Beberapa [[Docs/Modul Logic/Apa itu Flow|Flow]] mengirim data ke perangkat atau layanan yang sama tanpa menuliskan alamatnya berulang kali. |
+| Alamat layanan atau URL dasar | [[Docs/Modul Logic/Apa itu Flow|Flow]] yang memanggil layanan eksternal merujuk satu Name, sehingga perpindahan alamat cukup diubah sekali. |
+| Parameter bisnis | Ambang batas atau batas waktu dipakai bersama oleh beberapa [[Docs/Modul Logic/Apa itu Flow|Flow]] dan tetap konsisten. |
 | Konfigurasi notifikasi | data berisi tujuan notifikasi yang dipakai banyak proses. |

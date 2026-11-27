@@ -28,5 +28,5 @@ Berikut adalah pertanyaan yang sering diajukan pada komponen Canvas:
 > **Apakah Canvas yang dipublikasikan dapat dibuka siapa saja?**
 > Ya. Tautan [[^field|Link]] dengan Status [[^value/radio|Active]] dapat dibuka publik dalam View Mode, termasuk menekan widget Button. Pastikan Flow yang dipicu aman dijalankan publik.
 > **Apa yang dapat dilakukan widget Button?**
-> Widget [[#Widget Canvas|Button]] dapat memicu [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] melalui Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]], atau membuka komponen apa pun.
+> Widget [[#Widget Canvas|Button]] dapat memicu [[Docs/Modul Logic/Apa itu Flow|Flow]] melalui Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]], atau membuka komponen apa pun.
 

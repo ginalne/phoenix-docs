@@ -7,11 +7,11 @@
 ---
 # Variable Setter
 
->**note** Variable Setter merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Variable Setter merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
-Variable Setter adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk memperbarui [[^field|Value]] pada [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dari dalam [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]]. Dengan block ini, nilai yang menjadi sumber kebenaran dapat berubah otomatis tanpa Anda membuka halaman kerja [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]. Block ini memiliki dua input di sisi kiri dan satu output di sisi kanan.
+Variable Setter adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk memperbarui [[^field|Value]] pada [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] dari dalam [[Docs/Modul Logic/Apa itu Flow|Flow]]. Dengan block ini, nilai yang menjadi sumber kebenaran dapat berubah otomatis tanpa Anda membuka halaman kerja [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]. Block ini memiliki dua input di sisi kiri dan satu output di sisi kanan.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Variable/variable-setter-block-flow.png|Flow Block Variable Setter dengan dua input dan satu output]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Variable/variable-setter-block-flow.png|Flow Block Variable Setter dengan dua input dan satu output]]
 ## Input dan Output
 
 Add Variable memiliki dua input di sisi kiri dan satu output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

@@ -8,7 +8,7 @@
 ---
 # Flow Activity
 
-![[Docs/Modul Developer/Modul Logic/Flow/flow-activity-list.png]]
+![[Docs/Modul Logic/Flow/flow-activity-list.png]]
 ## Membuka Daftar Activity
 
 1. Pada halaman kerja Flow, klik menu [[^button/activity|Activity]] atau tombol di sebelah kanan [[^button/refresh|Refresh]] (mode desktop)

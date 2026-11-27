@@ -11,7 +11,7 @@
 ---
 # HTTP Request Block
 
->**note** HTTP Request Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Flow Block Modular]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** HTTP Request Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Modular/Pengenalan|Flow Block Modular]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 HTTP Request Block adalah Flow Block yang mengirim permintaan HTTP ke sistem lain dan menerima responsnya sebagai data yang dapat diproses block berikutnya. Block ini mendukung seluruh metode HTTP, sehingga Flow dapat terhubung dengan layanan atau API di luar Phoenix.
 

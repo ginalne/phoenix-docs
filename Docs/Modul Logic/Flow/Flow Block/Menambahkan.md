@@ -8,7 +8,7 @@
 ---
 # Menambahkan Flow Block
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/add-flow-block.png]]
+![[Docs/Modul Logic/Flow/Flow Block/add-flow-block.png]]
 1. Buka halaman kerja Flow
 2. Klik kanan pada blueprint ➜ [[^field/add|Add]]
 3. Pilih kategori Flow Block, misalnya [[^field/event|Event]]

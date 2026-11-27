@@ -8,7 +8,7 @@
 ---
 2026-11-04 21:00
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Variable/data-variable-block-flow.png|Enam Flow Block Data Variable pada Blueprint: Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, dan Variable Value]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Variable/data-variable-block-flow.png|Enam Flow Block Data Variable pada Blueprint: Add Variable, Delete Variable, Variable, Variable Getter, Variable Setter, dan Variable Value]]
 /phoenix-docs-silverbullet /phoenix-docs-knowledge 
 
 Tolong saya membuat 6 halaman flow block untuk data variable:

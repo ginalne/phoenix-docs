@@ -10,5 +10,5 @@ Password adalah [[Docs/Format Data/Pengenalan|Format Data]] dalam tipe data [[Do
 Format ini bagus untuk penginputan yang bersifat tidak bisa dilihat.
 
 >**warning** Peringatan
->Jangan gunakan form ini untuk mengisi privasi penting seperti password akun tertentu. Karena meskipun tidak dilihat saat proses input, namun tidak dipastikan aman saat proses mengirim dan monitoring di [[Docs/Modul Logic/Pengenalan|Komponen di Modul Logic]].
+>Jangan gunakan form ini untuk mengisi privasi penting seperti password akun tertentu. Karena meskipun tidak dilihat saat proses input, namun tidak dipastikan aman saat proses mengirim dan monitoring di [[Docs/Modul Logic/Flow/Pengenalan|Komponen di Modul Logic]].
 

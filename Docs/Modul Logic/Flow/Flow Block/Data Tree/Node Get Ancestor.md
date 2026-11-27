@@ -10,7 +10,7 @@
 ---
 # Node Get Ancestor Block
 
->**note** Node Get Ancestor Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Node Get Ancestor Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Node Get Ancestor Block adalah Flow Block yang mengambil leluhur sebuah [[Docs/Tipe Data/Node]] pada silsilah dari Origin menuju Node tersebut. Gunakan block ini untuk mengetahui Node yang berada pada tingkat tertentu dalam silsilah, misalnya kategori utama dari sebuah kategori.
 

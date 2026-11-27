@@ -10,7 +10,7 @@
 
 >**note** Widget Button merupakan salah satu widget pada [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Daftar widget lainnya ada di [[Docs/Modul Interface/Canvas/Widget/Pengenalan|Widget Canvas]].
 
-Widget Button adalah [[Docs/Modul Interface/Canvas/Widget/Pengenalan|Widget]] untuk menambahkan tombol di dalam [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Aksi tombol didefinisikan melalui field [[^field|Action]] pada Header Toolbar, dan tombol dapat berfungsi sebagai pemicu [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] atau membuka komponen lain.
+Widget Button adalah [[Docs/Modul Interface/Canvas/Widget/Pengenalan|Widget]] untuk menambahkan tombol di dalam [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]]. Aksi tombol didefinisikan melalui field [[^field|Action]] pada Header Toolbar, dan tombol dapat berfungsi sebagai pemicu [[Docs/Modul Logic/Apa itu Flow|Flow]] atau membuka komponen lain.
 
 ## Menambahkan Widget Button
 
@@ -38,7 +38,7 @@ Mengubah ukuran, *padding*, dan *margin* pada widget dilakukan lewat Layout Pane
 
 | Fungsi | Penjelasan |
 | --- | --- |
-| Memicu Flow | Menekan tombol menjalankan [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] melalui Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]]. |
+| Memicu Flow | Menekan tombol menjalankan [[Docs/Modul Logic/Apa itu Flow|Flow]] melalui Flow Block [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]]. |
 | Membuka komponen | Menekan tombol membuka komponen apa pun. Tombol dapat membuka [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] dengan [[Docs/Modul Interface/Canvas/Apa itu Canvas#Binding Canvas\|Binding]] sebagai parameter. |
 
 >**warning** Button pada Canvas yang dipublikasikan dapat ditekan publik
@@ -63,7 +63,7 @@ Langkah menghapus Widget Button sama dengan menghapus widget lain. Lihat [[Docs/
 > **Di mana aksi tombol diatur?**
 > Pada field [[^field|Action]] di [[Docs/Modul Interface/Canvas/Widget/Mengonfigurasi#Header Toolbar|Header Toolbar]], dengan Tipe Data [[Docs/Tipe Data/Action]].
 > **Apa yang dapat dilakukan widget Button?**
-> Widget Button dapat menjalankan aksi yang didefinisikan pada [[^field|Action]], memicu [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]], atau membuka komponen lain.
+> Widget Button dapat menjalankan aksi yang didefinisikan pada [[^field|Action]], memicu [[Docs/Modul Logic/Apa itu Flow|Flow]], atau membuka komponen lain.
 > **Flow Block apa yang menerima pemicu dari Button?**
 > Flow Block Event yang menerima pemicu dari Button adalah [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]].
 > **Komponen apa saja yang dapat dibuka oleh Button?**

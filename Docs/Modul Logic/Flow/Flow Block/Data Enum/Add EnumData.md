@@ -13,7 +13,7 @@
 
 Add EnumData adalah Flow Block yang menambahkan [[Docs/Tipe Data/EnumData]] baru ke sebuah [[Docs/Tipe Data/Enum]] saat Flow berjalan. Anda menentukan Enum tujuan dan atribut EnumData baru, yaitu [[^field|Name]], [[^field|Value]], [[^field|Description]], dan [[^field|Selectable]]. Block ini juga melaporkan apakah penambahan gagal karena Name sudah digunakan atau Value tidak sesuai dengan Enum.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Enum/add-enumdata-block-flow.png|Flow Block Add EnumData dengan lima input dan tiga output]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Enum/add-enumdata-block-flow.png|Flow Block Add EnumData dengan lima input dan tiga output]]
 ## Input dan Output
 
 Add EnumData memiliki lima input di sisi kiri dan tiga output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output.

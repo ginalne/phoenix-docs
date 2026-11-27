@@ -14,7 +14,7 @@ pageDecoration:
 
 Pro adalah wadah utama di Phoenix. Seluruh [[Docs/Dasar/Apa itu Folder|Folder]], [[Docs/Dasar/Apa itu Komponen|Komponen]], data, pengguna, [[Docs/Modul Developer/Group/Apa itu Group|Group]], dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] yang Anda kelola berada di dalam satu Pro.
 
-Di dalam satu Pro, data, tampilan, logika, dan hak akses saling terhubung. Anda dapat menyimpan data di [[Docs/Modul Data/Table/Apa itu Table|Table]], menampilkannya lewat komponen modul [[Docs/Modul Interface/Pengenalan|Interface]], menjalankan otomasi dengan [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]], lalu mengatur siapa yang boleh melihat dan mengubahnya lewat modul [[Docs/Modul Developer/Pengenalan|Developer]].
+Di dalam satu Pro, data, tampilan, logika, dan hak akses saling terhubung. Anda dapat menyimpan data di [[Docs/Modul Data/Table/Apa itu Table|Table]], menampilkannya lewat komponen modul [[Docs/Modul Interface/Pengenalan|Interface]], menjalankan otomasi dengan [[Docs/Modul Logic/Apa itu Flow|Flow]], lalu mengatur siapa yang boleh melihat dan mengubahnya lewat modul [[Docs/Modul Developer/Pengenalan|Developer]].
 
 ## Konsep Utama
 
@@ -84,7 +84,7 @@ Struktur folder Pro dan Workspace saling berkesinambungan. Memindahkan folder at
 | Memahami unit penyusun sistem | [[Docs/Dasar/Apa itu Komponen|Komponen]] |
 | Menyimpan data | Modul [[Docs/Modul Data/Pengenalan|Data]] |
 | Menampilkan dan mengelola data | Modul [[Docs/Modul Interface/Pengenalan|Interface]] |
-| Mengotomasi proses | Modul [[Docs/Modul Logic/Pengenalan|Logic]] dan [[Docs/Dasar/Apa itu Event|Event]] |
+| Mengotomasi proses | Modul [[Docs/Modul Logic/Flow/Pengenalan|Logic]] dan [[Docs/Dasar/Apa itu Event|Event]] |
 | Mengatur tim dan hak akses | Modul [[Docs/Modul Developer/Pengenalan|Developer]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], dan [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] |
 | Mengenali bagian layar Phoenix | [[Docs/Antarmuka|Antarmuka]] |
 | Memahami jenis data yang dipakai komponen | [[Docs/Tipe Data/Pengenalan|Tipe Data]] |

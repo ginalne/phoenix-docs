@@ -64,7 +64,7 @@ Harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]]
 - **Isi [[^field|Description]]** untuk menjelaskan kegunaan Variable agar pengelola lain memahami fungsinya.
 - **Pilih [[^field|Type]] yang sesuai** dengan Value agar nilai dapat dipakai dengan benar oleh komponen yang memanggilnya.
 - **Simpan satu nilai di satu Variable** dan hindari menyalin nilai yang sama ke komponen lain.
-- **Periksa pemakaian sebelum menghapus** Variable, terutama yang dipanggil oleh komponen di [[Docs/Modul Logic/Pengenalan|Modul Logic]].
+- **Periksa pemakaian sebelum menghapus** Variable, terutama yang dipanggil oleh komponen di [[Docs/Modul Logic/Flow/Pengenalan|Modul Logic]].
 - **Batasi pihak yang dapat melihat komponen Variable** bila [[^field|Value]] berisi nilai sensitif.
 
 ## Batasan dan Catatan
@@ -74,7 +74,7 @@ Harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]]
 - Header [[^field|Name]] "Variables" tidak dapat diganti.
 - Atribut [[^field|Name]] dari Variable Data harus unik.
 - [[^field|Created At]] dan [[^field|Updated At]] terisi otomatis dan tidak perlu Anda isi.
-- Menghapus baris Variable dapat membuat [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] atau komponen yang memanggil Name tersebut menghasilkan error.
+- Menghapus baris Variable dapat membuat [[Docs/Modul Logic/Apa itu Flow|Flow]] atau komponen yang memanggil Name tersebut menghasilkan error.
 - Isi [[^field|Value]] ditampilkan secara terbuka pada halaman kerja komponen Variable, sehingga hanya anggota yang memiliki akses komponen Variable yang dapat melihatnya.
 
 ## TL:DR
@@ -82,6 +82,6 @@ Harap pastikan Anda memiliki akses dan dapat [[#Membuka Halaman Kerja Variable]]
 - Variable adalah komponen bawaan Pro yang menjadi satu sumber data universal, dibuat otomatis di folder root dan tidak dapat dihapus.
 - Isi Variable dikelola di halaman kerja berbentuk tabel dengan kolom [[^field|Name]], [[^field|Type]], [[^field|Value]], [[^field|Description]], [[^field|Created At]] , dan [[^field|Updated At]].
 - [[^field|Name]] harus unik, sedangkan [[^field|Created At]] dan [[^field|Updated At]] terisi otomatis.
-- Field bertipe Variable menampilkan daftar dari [[Docs/Tipe Data/Variable|Variable Data]], dan Komponen [[Docs/Modul Logic/Pengenalan|Modul Logic]] dapat memanggil Variable cukup dengan [[^field|Alias]].
+- Field bertipe Variable menampilkan daftar dari [[Docs/Tipe Data/Variable|Variable Data]], dan Komponen [[Docs/Modul Logic/Flow/Pengenalan|Modul Logic]] dapat memanggil Variable cukup dengan [[^field|Alias]].
 - Variable memilki akses yang ketat sehingga [[^field|Value]] yang sensitif dapat dipakai untuk integrasi tanpa perlu diketahui tim.
 - Hati-hati saat menghapus [[Docs/Tipe Data/Variable|Variable Data]], karena komponen yang memanggilnya akan menghasilkan nilai kosong atau error.

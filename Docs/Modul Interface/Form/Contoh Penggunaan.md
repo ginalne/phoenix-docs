@@ -39,14 +39,14 @@ flowchart LR
 
 - Pendaftar cukup membuka tautan dan mengisi Form, tanpa perlu akun.
 - Data pendaftar tersimpan rapi di [[Docs/Modul Data/Table/Apa itu Table|Table]] tanpa input ulang oleh panitia.
-- Panitia langsung tahu setiap ada pendaftar baru lewat [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]].
+- Panitia langsung tahu setiap ada pendaftar baru lewat [[Docs/Modul Logic/Apa itu Flow|Flow]].
 
 ## Ide skenario lain
 
 | Jenis kebutuhan | Contoh integrasi |
 | --- | --- |
 | Pengumpulan data | Survei kepuasan yang hasilnya dirangkum di [[Docs/Modul Interface/Table View/Apa itu Table View|Table View]]. |
-| Permintaan layanan | Form permintaan yang otomatis membuat tugas bagi tim lewat [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]]. |
+| Permintaan layanan | Form permintaan yang otomatis membuat tugas bagi tim lewat [[Docs/Modul Logic/Apa itu Flow|Flow]]. |
 | Kuis | Form dengan Elemen [[Docs/Modul Interface/Form/Elemen/Input/Quiz|Quiz]] untuk menguji pemahaman peserta pelatihan. |
 | Pelaporan | Form laporan lapangan yang datanya tampil di [[Docs/Modul Interface/Kanban/Apa itu Kanban|Kanban]] sesuai statusnya. |
 

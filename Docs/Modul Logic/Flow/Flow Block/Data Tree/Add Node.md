@@ -10,7 +10,7 @@
 ---
 # Add Node Block
 
->**note** Add Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Add Node Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Add Node Block adalah Flow Block yang menambahkan [[Docs/Tipe Data/Node]] baru sebagai anak dari Node lain. Gunakan block ini untuk membangun hierarki [[Docs/Tipe Data/Tree]] secara otomatis dari Flow, misalnya menambahkan kategori baru ketika data baru masuk.
 

@@ -5,11 +5,11 @@
 ---
 # Add Variable
 
->**note** Add Variable merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Add Variable merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Variable/Pengenalan|Flow Block Data Variable]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Add Variable adalah [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] untuk menambahkan [[Docs/Modul Data/Variable/Apa itu Variable|Variable Data]] baru dari dalam Flow, tanpa membuka halaman kerja [[Docs/Modul Data/Variable/Apa itu Variable|Variable]]. Block ini memiliki tiga input di sisi kiri dan dua output di sisi kanan.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Data Variable/add-variable-block-flow.png|Flow Block Add Variable dengan tiga input dan dua output]]
+![[Docs/Modul Logic/Flow/Flow Block/Data Variable/add-variable-block-flow.png|Flow Block Add Variable dengan tiga input dan dua output]]
 ## Input dan Output
 
 Add Variable memiliki tiga input di sisi kiri dan dua output di sisi kanan. Block ini tidak memiliki Control. Output hanya keluar bila kondisinya terpenuhi, dan tanda `-` pada tabel berarti tidak ada output. Setiap input dapat diisi langsung pada block atau diisi dari output block lain lewat [[Docs/Modul Logic/Flow/Flow Block/Menghubungkan Koneksi|koneksi]].

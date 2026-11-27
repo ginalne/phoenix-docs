@@ -60,11 +60,11 @@ Modul [[Docs/Modul Interface/Pengenalan|Interface]] berisi komponen untuk menamp
 
 ### Modul Logic
 
-Modul [[Docs/Modul Logic/Pengenalan|Logic]] berisi komponen untuk mengotomasi proses.
+Modul [[Docs/Modul Logic/Flow/Pengenalan|Logic]] berisi komponen untuk mengotomasi proses.
 
 | Komponen | Fungsi | Data di dalamnya |
 | --- | --- | --- |
-| [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] | Mengatur logika dan proses pengelolaan data dengan alur komposit, yaitu menghubungkan block demi block. | [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] |
+| [[Docs/Modul Logic/Apa itu Flow|Flow]] | Mengatur logika dan proses pengelolaan data dengan alur komposit, yaitu menghubungkan block demi block. | [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] |
 
 ### Modul Developer
 
@@ -169,7 +169,7 @@ Menghapus komponen dapat menghilangkan isinya dan memutus relasi dari komponen l
 | [[Docs/Modul Interface/Canvas/Apa itu Canvas|Canvas]] | Template dan properti, termasuk Query. | Data sumber aman, tetapi tautan yang sudah dibagikan menjadi tidak valid. |
 | [[Docs/Modul Interface/Space/Apa itu Space|Space]] | Seluruh data dan konfigurasi Space, termasuk file 3D Environment. | Row sumber tidak terhapus. |
 | [[Docs/Modul Interface/Form/Apa itu Form|Form]] | Templat Form dan riwayat Submission. | Data yang sudah tersimpan tidak langsung terhapus, tautan publish menjadi tidak valid, dan pengisi yang sedang mengisi akan mengalami error saat mengirim. |
-| [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] | Flow Block dan riwayat Activity. | Flow Block Action yang sudah digunakan komponen lain terputus. |
+| [[Docs/Modul Logic/Apa itu Flow|Flow]] | Flow Block dan riwayat Activity. | Flow Block Action yang sudah digunakan komponen lain terputus. |
 | [[Docs/Modul Developer/Group/Apa itu Group|Group]] | Daftar Workspace pada Group. | Group anak ikut terhapus dan Group tidak boleh masih memiliki pengguna. |
 | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] | Pengaturan akses Workspace. | Pemetaan pada Group terputus, tetapi komponen dan data tidak terhapus. Workspace *root* terakhir yang terhubung ke Group tidak dapat dihapus. |
 | [[Docs/Modul Developer/Model/Apa itu Model|Model]] | Seluruh data yang tersimpan di Model, yaitu konfigurasi aset 3D beserta animasi dan logikanya. | Space Object yang memakai Model ini ikut terdampak. |
@@ -192,7 +192,7 @@ Menghapus komponen dapat menghilangkan isinya dan memutus relasi dari komponen l
 
 ## Praktik Terbaik
 
-- Pilih komponen **sesuai peran**: simpan data di modul [[Docs/Modul Data/Pengenalan|Data]], tampilkan lewat modul [[Docs/Modul Interface/Pengenalan|Interface]], dan otomasi lewat modul [[Docs/Modul Logic/Pengenalan|Logic]].
+- Pilih komponen **sesuai peran**: simpan data di modul [[Docs/Modul Data/Pengenalan|Data]], tampilkan lewat modul [[Docs/Modul Interface/Pengenalan|Interface]], dan otomasi lewat modul [[Docs/Modul Logic/Flow/Pengenalan|Logic]].
 - Beri [[^field|Name]] dan [[^field|Description]] yang jelas karena nama komponen tidak boleh sama dengan komponen sejenis di folder yang sama.
 - Tinjau **dampak penghapusan** pada [[#Menghapus Komponen]] sebelum menghapus, karena penghapusan tidak dapat dikembalikan. Hapus relasi dari komponen lain terlebih dahulu bila diperlukan, misalnya pada Enum.
 - Atur [[Docs/Modul Developer/Workspace/Component Access|Component Access]], [[Docs/Modul Developer/Workspace/Data Access|Data Access]], dan [[Docs/Modul Developer/Workspace/Function Access|Function Access]] bersamaan agar anggota hanya mendapat akses yang dibutuhkan.

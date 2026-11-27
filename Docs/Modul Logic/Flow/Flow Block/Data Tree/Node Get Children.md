@@ -10,7 +10,7 @@
 ---
 # Node Get Children Block
 
->**note** Node Get Children Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Node Get Children Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Tree/Pengenalan|Flow Block Data Tree]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Node Get Children Block adalah Flow Block yang mengambil anak langsung sebuah [[Docs/Tipe Data/Node]] berdasarkan Order yang ditentukan. Gunakan block ini untuk membaca isi satu tingkat di bawah Node, misalnya mengambil subkategori pertama dari sebuah kategori.
 

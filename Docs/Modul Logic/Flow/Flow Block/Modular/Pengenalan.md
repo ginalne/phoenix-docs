@@ -9,13 +9,13 @@
 ---
 # Flow Block Modular
 
->**note** Flow Block Modular merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Flow Block Modular merupakan salah satu kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Flow Block Modular adalah kategori [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] yang digunakan untuk **mengeksekusi proses yang kompleks**, seperti memanggil permintaan HTTP atau menghubungi provider jasa tertentu. Dengan block Modular, Flow dapat terhubung ke sistem dan layanan di luar Phoenix, lalu hasilnya diteruskan ke block lain untuk diolah atau disimpan.
 
 Berbeda dengan [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] yang menjadi titik awal alur, block Modular bekerja setelah menerima data dari block sebelumnya, sehingga tunduk pada [[Docs/Modul Logic/Flow/Flow Block/Syarat Eksekusi|Syarat Flow Block Diproses]]. Berbeda pula dengan [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] yang mengolah data di dalam Flow, block Modular bekerja dengan sistem atau layanan di luar Flow. Block Modular dikelompokkan berdasarkan jenis layanannya, yaitu API dan AI.
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/Modular/modular-block-flow.png|Dua Flow Block Modular pada Blueprint: HTTP Request dan OpenAI 4]]
+![[Docs/Modul Logic/Flow/Flow Block/Modular/modular-block-flow.png|Dua Flow Block Modular pada Blueprint: HTTP Request dan OpenAI 4]]
 
 Block Modular umumnya ditempatkan di tengah atau di ujung alur. Data dari block sebelumnya dikirim ke layanan yang dituju, kemudian respons layanan diteruskan ke block berikutnya, misalnya untuk diurai oleh [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] lalu disimpan ke [[Docs/Modul Data/Table/Apa itu Table|Table]].
 

@@ -8,7 +8,7 @@
 
 # TableData Setter Block
 
->**note** TableData Setter Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** TableData Setter Block merupakan salah satu Flow Block pada kelompok [[Docs/Modul Logic/Flow/Flow Block/Data Table/Pengenalan|Flow Block Data Table]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 TableData Setter Block adalah Flow Block yang mengisi atau mengubah satu nilai [[Docs/Tipe Data/TableData]] pada pertemuan sebuah [[Docs/Tipe Data/Column]] dan [[Docs/Tipe Data/Row]]. Block ini memeriksa kesesuaian nilai dengan tipe data Column, sehingga data pada [[Docs/Modul Data/Table/Apa itu Table|Table]] tetap konsisten.
 

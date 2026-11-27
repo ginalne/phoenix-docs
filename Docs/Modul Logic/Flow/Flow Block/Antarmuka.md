@@ -8,7 +8,7 @@
 ---
 # Antarmuka Flow Block
 
-![[Docs/Modul Developer/Modul Logic/Flow/Flow Block/flow-block-anatomy.png]]
+![[Docs/Modul Logic/Flow/Flow Block/flow-block-anatomy.png]]
 Bagian-bagian Flow Block ditempatkan pada posisi berikut:
 
 | Bagian | Posisi pada block |
@@ -37,11 +37,11 @@ Tidak semua jenis Flow Block memiliki keempat bagian ini. Variasinya dijelaskan 
 - Input yang tidak terhubung menampilkan field isian sehingga nilainya dapat diisi langsung. Field ini hilang ketika Input terhubung dari [[#Output]] block lain.
 - Bila satu Input menerima banyak koneksi, seluruh data dari koneksi tersebut dibaca sebagai [[Docs/Tipe Data/Array]] dalam proses block.
 - Bila salah satu koneksi bersifat rekursif, yaitu ketika ditelusuri mundur akan kembali ke block yang sama, Input dibaca sebagai satu data dari aliran terakhir dan koneksi lainnya diabaikan.
-- Block dapat berjalan walaupun Input-nya dibiarkan kosong bergantung pada aturan block itu sendiri. Jika Input wajib diisi, kondisi kosong menghasilkan error pada [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity|Flow Activity]].
+- Block dapat berjalan walaupun Input-nya dibiarkan kosong bergantung pada aturan block itu sendiri. Jika Input wajib diisi, kondisi kosong menghasilkan error pada [[Docs/Modul Logic/Flow/Flow Activity|Flow Activity]].
 
 ## Control
 
-[[#Control]] adalah antarmuka interaktif di badan block yang dapat dioperasikan langsung di Blueprint. Control dapat memengaruhi proses yang terjadi pada Flow Block, atau memicu [[Docs/Modul Developer/Modul Logic/Flow/Flow Activity|Activity]] baru.
+[[#Control]] adalah antarmuka interaktif di badan block yang dapat dioperasikan langsung di Blueprint. Control dapat memengaruhi proses yang terjadi pada Flow Block, atau memicu [[Docs/Modul Logic/Flow/Flow Activity|Activity]] baru.
 
 - Saat ini Control yang tersedia berupa tombol [[^button/empty|Trigger]], misalnya pada [[Docs/Modul Logic/Flow/Flow Block/Event/Pulser|Pulser]] untuk menjalankan Flow secara manual.
 - Tidak semua Flow Block memiliki Control.

@@ -10,7 +10,7 @@
 ---
 # Branch Block
 
->**note** Branch Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Pengenalan|Flow Block Input dan Output]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Branch Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Input dan Output/Pengenalan|Flow Block Input dan Output]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Branch Block adalah Flow Block yang meneruskan satu data [[^input|Input]] ke beberapa [[^output|Output]] sekaligus. Setiap Output membawa data yang sama dengan Input, sehingga satu data dapat dipakai oleh banyak block tanpa perlu diisi berulang.
 

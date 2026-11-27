@@ -11,7 +11,7 @@
 
 # Table Output Block
 
->**note** Table Output Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan|Flow Block Query]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** Table Output Block merupakan salah satu [[Docs/Modul Logic/Flow/Flow Block/Pengenalan|Flow Block]] pada kategori [[Docs/Modul Logic/Flow/Flow Block/Query/Pengenalan|Flow Block Query]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 Table Output Block adalah Flow Block yang menjalankan [[Docs/Tipe Data/Query]] berkaidah [[Docs/Query/Output/Table|Table Output]] dan mengeluarkan hasilnya berupa [[Docs/Tipe Data/Array]] yang berisi [[Docs/Tipe Data/Row]]. Bila hasil Query kosong, block mengeluarkan penanda bahwa hasilnya kosong.
 

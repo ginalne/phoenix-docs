@@ -9,7 +9,7 @@
 ---
 # TableRow Parse Operator Block
 
->**note** TableRow Parse Block merupakan salah satu Flow Block kelompok Table pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix.
+>**note** TableRow Parse Block merupakan salah satu Flow Block kelompok Table pada kategori [[Docs/Modul Logic/Flow/Flow Block/Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix.
 
 TableRow Parse Block adalah Flow Block Operator yang mengubah [[^input|Row]] ([[Docs/Tipe Data/Row]]) menjadi data [[Docs/Tipe Data/Object]] dan [[Docs/Tipe Data/Text]]. [[^input|Rel. Depth]] menentukan kedalaman relasi: bila kolom pada Row memiliki relasi ke data lain, hasil kolom tersebut ditelusuri sehingga data menjadi semakin rinci.
 

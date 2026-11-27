@@ -23,7 +23,7 @@ Dengan Enum, Anda mengelola daftar pilihan di satu tempat saja. Field di kompone
 - **Pilihan yang seragam.** [[^field|Name]] tidak boleh sama di dalam satu Enum, sehingga tidak ada pilihan ganda yang membingungkan.
 - **Kontrol per baris.** Anda menentukan [[Docs/Tipe Data/EnumData]] mana yang tampil sebagai pilihan dengan kolom [[^field|Selectable]].
 - **Value fleksibel.** Kolom [[^field|Value]] mengikuti [[^field|Format]] yang Anda pilih pada konfigurasi Enum.
-- **Siap terhubung.** Enum dapat dihubungkan dengan [[Docs/Dasar/Apa itu Event|Event]] dan logika di [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] sehingga perubahan pilihan dapat memicu otomasi.
+- **Siap terhubung.** Enum dapat dihubungkan dengan [[Docs/Dasar/Apa itu Event|Event]] dan logika di [[Docs/Modul Logic/Apa itu Flow|Flow]] sehingga perubahan pilihan dapat memicu otomasi.
 
 ## Konsep Utama
 

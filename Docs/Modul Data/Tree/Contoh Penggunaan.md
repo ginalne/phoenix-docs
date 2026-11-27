@@ -19,7 +19,7 @@ Setiap divisi menyusun kategori produknya sendiri dalam bentuk pohon, tetapi tim
 | [[^field/tree|Tree Divisi A]] | Tree non-merger yang menyimpan kategori milik divisi pertama. |
 | [[^field/tree|Tree Divisi B]] | Tree non-merger yang menyimpan kategori milik divisi kedua. |
 | [[^field/tree|Katalog Terpadu]] | Tree dengan [[Docs/Modul Data/Tree/Merger Mode|Merger Mode]] yang menambahkan (*clone*) Node dari kedua Tree divisi. |
-| [[^field/flow|Sinkronisasi Katalog]] | [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] yang meneruskan perubahan katalog ke sistem lain. |
+| [[^field/flow|Sinkronisasi Katalog]] | [[Docs/Modul Logic/Apa itu Flow|Flow]] yang meneruskan perubahan katalog ke sistem lain. |
 
 ## Alur di Flow
 ```mermaid

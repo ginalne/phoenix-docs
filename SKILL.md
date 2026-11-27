@@ -443,7 +443,7 @@ Koreksi penulis pada halaman Data Table: draf pertama kekurangan deskripsi pada 
 ### Halaman block Operator
 - Path: `Docs/Modul Logic/Flow/Flow Block/Operator/<Tipe Data>/<Nama Block>` (Number, String, Table, Object, Boolean, Tree). Tidak ada Pengenalan per kelompok tipe data. Gambar: `<nama-block>-block-flow.png` di folder yang sama (contoh `tablerow-parse-block-flow.png`, `node-parse-block-flow.png`).
 - Block Operator tidak memiliki Control. Heading **Input dan Output**, paragraf pembuka mengikuti pola block Data. Kalimat "tanda `-` berarti tidak ada output" hanya ditulis bila block punya output yang tidak selalu meneruskan aliran (If, Parse).
-- Callout pembuka: "salah satu Flow Block kelompok <Tipe Data> pada kategori [[.../Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] di Phoenix."
+- Callout pembuka: "salah satu Flow Block kelompok <Tipe Data> pada kategori [[.../Operator/Pengenalan|Flow Block Operator]] dalam komponen [[Docs/Modul Logic/Apa itu Flow|Flow]] di Phoenix."
 - Output yang bergantung koneksi (TableRow Parse: Object dan Text; Node Parse: Object dan Text; If: Boolean) ditulis "Aliran diteruskan bila output terhubung."
 - Input yang tipenya dapat diganti (Assign: Value berawal Object dan dapat diganti ke String; If: A dan B berawal N/A Type) memakai subbagian "Menentukan Tipe Data <Input>" dengan langkah klik kanan ➜ Change Type.
 - Input Number berupa kedalaman (Rel. Depth, Anc. Depth, Child Depth) yang dibiarkan kosong dianggap bernilai 0 dan **bukan** Fatal Error. Ditulis di tabel Input, Contoh Penggunaan, dan Batasan dan Catatan.

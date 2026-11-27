@@ -35,7 +35,7 @@ Tiga hal yang membuat situasi ini sulit dibiarkan:
 | **Organisasi** | SMA Nusantara Mandiri (fiktif) |
 | **Skala** | 600 siswa, 45 guru, 4 staf tata usaha, 1 kepala sekolah |
 | **Masalah utama** | Data tersebar di banyak file dan tidak ada kontrol akses |
-| **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] |
+| **Komponen yang dipakai** | [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]], [[Docs/Modul Developer/Group/Apa itu Group|Group]], [[Docs/Modul Data/Table/Apa itu Table|Table]], [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]], [[Docs/Modul Logic/Apa itu Flow|Flow]] |
 | **Hasil yang dituju** | Satu sumber data, akses sesuai peran, pengingat yang berjalan otomatis |
 
 ### Tujuan
@@ -107,7 +107,7 @@ Pengaturan **Visible** pada folder induk berlaku untuk seluruh isinya, jadi ranc
 Selengkapnya tentang membuat tabel dan menentukan tipe kolom lihat [[Docs/Modul Data/Table/Apa itu Table|Table]].
 
 ### Otomasi dengan Flow
-[[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] **Tindak Lanjut Nilai** menyusun alur komposit pada Blueprint:
+[[Docs/Modul Logic/Apa itu Flow|Flow]] **Tindak Lanjut Nilai** menyusun alur komposit pada Blueprint:
 1. Sebuah [[Docs/Modul Logic/Flow/Flow Block/Event/Pengenalan|Flow Block Event]] terpicu saat baris baru ditambahkan di tabel Nilai.
 2. Alur memeriksa apakah skor berada di bawah batas tuntas mata pelajaran.
 3. Jika ya, alur menambahkan catatan ke daftar tindak lanjut yang dipantau wali kelas.
@@ -160,5 +160,5 @@ Kepala Sekolah membuka **Nilai** dan **Kehadiran** langsung dari Workspace, tanp
 
 ---
 ## TL;DR
-Satu [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dengan empat [[Docs/Modul Developer/Group/Apa itu Group|Group]] menjaga akses sesuai peran. [[Docs/Modul Data/Table/Apa itu Table|Table]] dan [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] menyimpan data akademik. [[Docs/Modul Developer/Modul Logic/Flow/Apa itu Flow|Flow]] menandai siswa yang perlu tindak lanjut, dan [[Docs/Modul Data/Table/Mempublikasi|Publish]] membagikan pengumuman lewat tautan.
+Satu [[Docs/Modul Developer/Workspace/Apa itu Workspace|Workspace]] dengan empat [[Docs/Modul Developer/Group/Apa itu Group|Group]] menjaga akses sesuai peran. [[Docs/Modul Data/Table/Apa itu Table|Table]] dan [[Docs/Modul Interface/Timeline/Apa itu Timeline|Timeline]] menyimpan data akademik. [[Docs/Modul Logic/Apa itu Flow|Flow]] menandai siswa yang perlu tindak lanjut, dan [[Docs/Modul Data/Table/Mempublikasi|Publish]] membagikan pengumuman lewat tautan.
 
