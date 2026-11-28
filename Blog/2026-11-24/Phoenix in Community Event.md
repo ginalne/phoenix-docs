@@ -15,7 +15,7 @@
 ---
 # Bagaimana cara komunitas mengatur data acaranya dalam satu tempat
 ![[Blog/2026-11-24/how-to-use-phoenix-in-education.png|A community group planning an event around a table]]
-*Planning an event together. Photo: ChatGPT AI generated*
+*Merencanakan acara bersama. Photo: ChatGPT AI generated*
 
 >Bayangkan tiga hari sebelum kopdar. Ketua komunitas bertanya di grup, “Jadi sudah berapa yang daftar?” Bendahara menjawab dari catatan transfernya. Seksi acara menjawab dari formulir. Seorang relawan menimpali, “Di chat pribadiku ada beberapa lagi.”
 >

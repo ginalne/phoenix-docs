@@ -15,7 +15,7 @@ tags:
 ---
 # Apa yang berubah ketika perangkat lunak sekolah menjadi lebih fleksibel
 ![[Blog/2026-11-27/how-to-use-phoenix-in-education.png|A school administrator and a teacher reviewing student and activity records together]]
-*Reviewing student and activity records together. Photo: ChatGPT AI generated*
+*Evaluasi murid dan aktifitas pendataan bersamaan. Photo: ChatGPT AI generated*
 
 >Bayangkan minggu pertama semester baru. Seorang staf tata usaha membuka berkas pendataan siswa dari semester lalu, lalu berhenti di tengah jalan. Kepala sekolah baru saja meminta data tambahan: siapa saja yang mengikuti kegiatan pengembangan diri, dan siapa pembinanya. “Kolomnya tidak ada, Bu,” katanya. “Saya buat berkas baru saja, ya?”
 >
