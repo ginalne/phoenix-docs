@@ -11,7 +11,7 @@ author:
 updated: 2026-11-27
 user: education
 tags:
-  Perencanaan
+  Planning
 ---
 # Apa yang berubah ketika perangkat lunak sekolah menjadi lebih fleksibel
 ![[Blog/2026-11-27/how-to-use-phoenix-in-education.png|A school administrator and a teacher reviewing student and activity records together]]

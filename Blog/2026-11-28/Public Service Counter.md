@@ -11,10 +11,10 @@ author:
 updated: 2026-11-28
 user: government
 tags:
-  Layanan Publik
+  Public Service
 ---
 # Mengapa layanan publik membutuhkan struktur yang dapat menyesuaikan diri
-![[Blog/2026-11-28/public-service-counter.png]|petugas dan warga di loket layanan publik]]
+![[Blog/2026-11-28/public-service-counter.png|petugas dan warga di loket layanan publik]]
 *Pengumpulan data publik. Photo: ChatGPT AI generated*
 
 Bayangkan sebuah formulir permohonan layanan di loket kantor pelayanan. Ini hanya ilustrasi, tetapi kerepotannya mungkin Anda kenal. Suatu hari ketentuan administrasi berubah, dan formulir itu harus meminta satu keterangan tambahan dari pemohon.
