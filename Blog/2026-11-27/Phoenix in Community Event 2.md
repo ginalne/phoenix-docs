@@ -1,4 +1,4 @@
----
+------
     status: release
     title: "Bagaimana sebuah komunitas mengelola seluruh acaranya dalam satu tempat"
     description: "Sebuah cerita pendek tentang informasi acara yang tercecer di grup obrolan, spreadsheet, dan dokumen pribadi, dan apa yang berubah setelah tugas, peserta, dan jadwal terhubung dalam satu ruang kerja"
